@@ -1,0 +1,28 @@
+# Third-party ROS packages (managed via .repos)
+src/insta360_ros_driver/
+src/ouster-ros/
+src/shared_link_bridge/
+src/sick-basic/
+
+
+# ROS 2 build artifacts
+build/
+install/
+log/
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.egg-info/
+
+# Editor / OS
+.vscode/
+.idea/
+*.swp
+.DS_Store
+
+# Large data
+*.bag
+*.db3
+*.mcap
