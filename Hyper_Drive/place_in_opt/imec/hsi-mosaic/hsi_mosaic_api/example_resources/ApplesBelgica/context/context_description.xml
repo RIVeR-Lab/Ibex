@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<context_description version="1">
+    <meta_data version="1" kind="roi frame">
+        <data_format byte_depth="4" data_type="float" kind="roi_frame_data_format" max_value="1023" no_data_value="3.402823466e+38" nr_cols="2048" nr_rows="1088" offset_sensor_x="0" offset_sensor_y="0" saturation_value="1023" version="1">
+	      <rois_sensor>
+	         <roi nr_cols="2048" nr_rows="1088" offset_sensor_x="0" offset_sensor_y="0" version="1"/>
+	      </rois_sensor>
+		</data_format>
+   		<data_info data_source="HSI Matlab v1.2.0-rc" integration_time_ms="2000" kind="image_data_info" system_id="13.13.3.8" version="1"/>
+    </meta_data>
+</context_description>

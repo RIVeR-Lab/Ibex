@@ -1,0 +1,56 @@
+#!/bin/sh
+# 
+# KEYLOK Linux install: configure 'udev'/'hotplug' for KEYLOK dongle
+# version 2: works for both 'udev' and 'hotplug' configurations
+#
+# 'udev' tends to be for kernel 2.6 and 'hotplug' for 2.4
+#
+# usage from root: keylok_install
+#
+# copy the rules file to the /etc/udev/rules.d directory, and
+# copy the two hotplug files to the /etc/hotplug/usb directory
+# verify that the destination directory exists before copy
+# verify that the file/files were copied
+#
+echo '*'
+echo '* Note: This script must be run with 'root' permissions'
+echo '*'
+# hotplug
+USB_PATH_HOTPLUG=/etc/hotplug/usb
+OK=0
+if [ -d $USB_PATH_HOTPLUG ]
+then
+    cp keylok $USB_PATH_HOTPLUG
+    cp keylok.usermap $USB_PATH_HOTPLUG
+    if [ ! -s $USB_PATH_HOTPLUG/keylok ]
+    then
+        echo "error: $USB_PATH_HOTPLUG/keylok did not install correctly" 
+        exit -1
+    fi
+    if [ ! -s $USB_PATH_HOTPLUG/keylok.usermap ]
+    then
+        echo "error: $USB_PATH_HOTPLUG/keylok.usermap did not install correctly" 
+        exit -1
+    fi
+    echo 'hotplug files installed!' 
+    OK=1
+fi
+#
+# udev
+USB_PATH_UDEV=/etc/udev/rules.d
+if [ -d $USB_PATH_UDEV ]
+then
+    cp z95_keylok.rules $USB_PATH_UDEV
+    if [ ! -s $USB_PATH_UDEV/z95_keylok.rules ]
+    then
+        echo "error: $USB_PATH_UDEV/z95_keylok.rules did not install correctly" 
+        exit -1
+    fi
+    echo 'udev file installed!' 
+    OK=1
+fi
+if [ $OK -eq 0 ]
+then
+    echo 'error: nothing installed!'
+fi
+# end of keylok_install

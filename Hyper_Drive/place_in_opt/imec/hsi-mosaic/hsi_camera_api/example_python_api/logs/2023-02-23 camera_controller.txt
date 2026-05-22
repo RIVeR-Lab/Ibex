@@ -1,0 +1,1250 @@
+2023-02-23T01:46:19.526233Z VERBOSE - driver connecting...
+2023-02-23T01:49:26.985938Z VERBOSE - driver connecting...
+2023-02-23T01:49:30.647817Z VERBOSE - driver connected
+2023-02-23T01:49:30.648633Z VERBOSE - driver initializing...
+2023-02-23T01:49:30.648635Z VERBOSE -    trying to initialize...
+2023-02-23T01:49:31.037292Z VERBOSE -    initalization successful...
+2023-02-23T01:49:31.037297Z VERBOSE - driver initialization finished
+2023-02-23T01:49:31.037360Z DEBUG   - _AcquisitionLoop (1648) - Starting wakeup condition
+2023-02-23T01:49:31.083729Z VERBOSE - driver starting...
+2023-02-23T01:49:31.106393Z VERBOSE - driver starting finished
+2023-02-23T01:49:31.106432Z VERBOSE - Trigger (1172) - -->
+2023-02-23T01:49:31.106435Z VERBOSE - Trigger (1179) - <--
+2023-02-23T01:49:31.106438Z DEBUG   - _AcquisitionLoop (1658) - Condition interrupted.
+2023-02-23T01:49:31.135585Z DEBUG   - _CameraParametersCallbackReceiver (907) - me index params: 0 hdr index params: 0
+2023-02-23T01:49:31.135608Z VERBOSE - _CallbackReceiver (1201) - Frame received
+2023-02-23T01:49:31.135609Z VERBOSE - _CallbackReceiver (1217) - Obtaining handle...
+2023-02-23T01:49:31.135625Z VERBOSE - _CallbackReceiver (1221) - Handle obtained
+2023-02-23T01:49:31.135627Z VERBOSE - _CallbackReceiver (1224) - Copying data...
+2023-02-23T01:49:31.135660Z VERBOSE - _CallbackReceiver (1254) - Data copied
+2023-02-23T01:49:31.135675Z DEBUG   - me frame index: 0 me index: 0 HDR frame index: 0 HDR index: 0
+2023-02-23T01:49:31.135677Z DEBUG   - [_CallbackReceiver] Notifying wakeup condition
+2023-02-23T01:49:31.136236Z VERBOSE - Pause (504) - driver pauzing...
+2023-02-23T01:49:31.136238Z DEBUG   - virtual void ihspt::drivers::CM_Controller::_Pause(std::unique_lock<std::mutex>&) (783) - -->
+2023-02-23T01:49:31.136256Z DEBUG   - _AcquisitionLoop (1648) - Starting wakeup condition
+2023-02-23T01:49:31.136262Z DEBUG   - _Pause (816) - Creating trigger lock
+2023-02-23T01:49:31.136264Z DEBUG   - _Pause (818) - Passed trigger lock
+2023-02-23T01:49:31.136266Z DEBUG   - pausing the camera
+2023-02-23T01:49:31.255178Z DEBUG   - camera paused
+2023-02-23T01:49:31.255189Z DEBUG   - virtual void ihspt::drivers::CM_Controller::_Pause(std::unique_lock<std::mutex>&) (833) - <--
+2023-02-23T01:49:31.255192Z VERBOSE - Pause (529) - driver pauzing finished
+2023-02-23T01:49:31.255259Z VERBOSE - driver stopping...
+2023-02-23T01:49:31.308657Z DEBUG   - _AcquisitionLoop (1658) - Condition interrupted.
+2023-02-23T01:49:31.308662Z INFO    - [CameraController::_AcquisitionLoop] thread finished
+2023-02-23T01:49:31.308735Z VERBOSE - driver stopping finished
+2023-02-23T01:49:31.308775Z VERBOSE - driver forcing disconnect...
+2023-02-23T01:49:31.418878Z VERBOSE - driver forcing disconnect finished
+2023-02-23T01:49:32.929875Z VERBOSE - driver connecting...
+2023-02-23T01:49:36.556900Z VERBOSE - driver connected
+2023-02-23T01:49:36.557268Z VERBOSE - driver initializing...
+2023-02-23T01:49:36.557270Z VERBOSE -    trying to initialize...
+2023-02-23T01:49:36.820178Z VERBOSE -    initalization successful...
+2023-02-23T01:49:36.820182Z VERBOSE - driver initialization finished
+2023-02-23T01:49:36.820209Z DEBUG   - _AcquisitionLoop (1648) - Starting wakeup condition
+2023-02-23T01:49:36.858486Z VERBOSE - driver starting...
+2023-02-23T01:49:36.882959Z VERBOSE - driver starting finished
+2023-02-23T01:49:36.883108Z DEBUG   - _AcquisitionLoop (1658) - Condition interrupted.
+2023-02-23T01:49:36.883356Z VERBOSE - driver connecting...
+2023-02-23T01:49:36.883358Z VERBOSE - driver connected
+2023-02-23T01:49:36.883532Z VERBOSE - driver initializing...
+2023-02-23T01:49:36.883534Z VERBOSE -    trying to initialize...
+2023-02-23T01:49:36.888968Z VERBOSE -    initalization successful...
+2023-02-23T01:49:36.888972Z VERBOSE - driver initialization finished
+2023-02-23T01:49:36.888991Z DEBUG   - _AcquisitionLoop (1648) - Starting wakeup condition
+2023-02-23T01:49:36.896022Z VERBOSE - driver starting...
+2023-02-23T01:49:36.896035Z VERBOSE - driver starting finished
+2023-02-23T01:49:36.896093Z DEBUG   - _AcquisitionLoop (1658) - Condition interrupted.
+2023-02-23T01:49:36.896689Z DEBUG   - _CameraParametersCallbackReceiver (907) - me index params: 0 hdr index params: 0
+2023-02-23T01:49:36.896712Z VERBOSE - _CallbackReceiver (1201) - Frame received
+2023-02-23T01:49:36.896714Z VERBOSE - _CallbackReceiver (1217) - Obtaining handle...
+2023-02-23T01:49:36.896751Z VERBOSE - _CallbackReceiver (1221) - Handle obtained
+2023-02-23T01:49:36.896752Z VERBOSE - _CallbackReceiver (1224) - Copying data...
+2023-02-23T01:49:36.896786Z VERBOSE - _CallbackReceiver (1254) - Data copied
+2023-02-23T01:49:36.897493Z DEBUG   - me frame index: 0 me index: 0 HDR frame index: 0 HDR index: 0
+2023-02-23T01:49:36.897496Z DEBUG   - [_CallbackReceiver] Notifying wakeup condition
+2023-02-23T01:49:36.904873Z DEBUG   - _CameraParametersCallbackReceiver (907) - me index params: 0 hdr index params: 0
+2023-02-23T01:49:36.904884Z VERBOSE - _CallbackReceiver (1201) - Frame received
+2023-02-23T01:49:36.904885Z VERBOSE - _CallbackReceiver (1217) - Obtaining handle...
+2023-02-23T01:49:36.904901Z VERBOSE - _CallbackReceiver (1221) - Handle obtained
+2023-02-23T01:49:36.904902Z VERBOSE - _CallbackReceiver (1224) - Copying data...
+2023-02-23T01:49:36.904947Z VERBOSE - _CallbackReceiver (1254) - Data copied
+2023-02-23T01:49:36.904954Z DEBUG   - me frame index: 0 me index: 0 HDR frame index: 0 HDR index: 0
+2023-02-23T01:49:36.904955Z DEBUG   - [_CallbackReceiver] Notifying wakeup condition
+2023-02-23T01:49:36.964883Z DEBUG   - _CameraParametersCallbackReceiver (907) - me index params: 0 hdr index params: 0
+2023-02-23T01:49:36.964891Z VERBOSE - _CallbackReceiver (1201) - Frame received
+2023-02-23T01:49:36.964893Z VERBOSE - _CallbackReceiver (1217) - Obtaining handle...
+2023-02-23T01:49:36.964906Z VERBOSE - _CallbackReceiver (1221) - Handle obtained
+2023-02-23T01:49:36.964908Z VERBOSE - _CallbackReceiver (1224) - Copying data...
+2023-02-23T01:49:36.964939Z VERBOSE - _CallbackReceiver (1254) - Data copied
+2023-02-23T01:49:36.964948Z DEBUG   - me frame index: 0 me index: 0 HDR frame index: 0 HDR index: 0
+2023-02-23T01:49:36.964949Z DEBUG   - [_CallbackReceiver] Notifying wakeup condition
+2023-02-23T01:49:36.972067Z DEBUG   - _CameraParametersCallbackReceiver (907) - me index params: 0 hdr index params: 0
+2023-02-23T01:49:36.972081Z VERBOSE - _CallbackReceiver (1201) - Frame received
+2023-02-23T01:49:36.972084Z VERBOSE - _CallbackReceiver (1217) - Obtaining handle...
+2023-02-23T01:49:36.972094Z VERBOSE - _CallbackReceiver (1221) - Handle obtained
+2023-02-23T01:49:36.972096Z VERBOSE - _CallbackReceiver (1224) - Copying data...
+2023-02-23T01:49:36.972167Z VERBOSE - _CallbackReceiver (1254) - Data copied
+2023-02-23T01:49:36.972178Z DEBUG   - me frame index: 0 me index: 0 HDR frame index: 0 HDR index: 0
+2023-02-23T01:49:36.972179Z DEBUG   - [_CallbackReceiver] Notifying wakeup condition
+2023-02-23T01:49:37.032327Z DEBUG   - _CameraParametersCallbackReceiver (907) - me index params: 0 hdr index params: 0
+2023-02-23T01:49:37.032335Z VERBOSE - _CallbackReceiver (1201) - Frame received
+2023-02-23T01:49:37.032336Z VERBOSE - _CallbackReceiver (1217) - Obtaining handle...
+2023-02-23T01:49:37.032349Z VERBOSE - _CallbackReceiver (1221) - Handle obtained
+2023-02-23T01:49:37.032350Z VERBOSE - _CallbackReceiver (1224) - Copying data...
+2023-02-23T01:49:37.032380Z VERBOSE - _CallbackReceiver (1254) - Data copied
+2023-02-23T01:49:37.032388Z DEBUG   - me frame index: 0 me index: 0 HDR frame index: 0 HDR index: 0
+2023-02-23T01:49:37.032389Z DEBUG   - [_CallbackReceiver] Notifying wakeup condition
+2023-02-23T01:49:37.039108Z DEBUG   - _CameraParametersCallbackReceiver (907) - me index params: 0 hdr index params: 0
+2023-02-23T01:49:37.039119Z VERBOSE - _CallbackReceiver (1201) - Frame received
+2023-02-23T01:49:37.039120Z VERBOSE - _CallbackReceiver (1217) - Obtaining handle...
+2023-02-23T01:49:37.039128Z VERBOSE - _CallbackReceiver (1221) - Handle obtained
+2023-02-23T01:49:37.039129Z VERBOSE - _CallbackReceiver (1224) - Copying data...
+2023-02-23T01:49:37.039162Z VERBOSE - _CallbackReceiver (1254) - Data copied
+2023-02-23T01:49:37.039168Z DEBUG   - me frame index: 0 me index: 0 HDR frame index: 0 HDR index: 0
+2023-02-23T01:49:37.039169Z DEBUG   - [_CallbackReceiver] Notifying wakeup condition
+2023-02-23T01:49:37.100100Z DEBUG   - _CameraParametersCallbackReceiver (907) - me index params: 0 hdr index params: 0
+2023-02-23T01:49:37.100112Z VERBOSE - _CallbackReceiver (1201) - Frame received
+2023-02-23T01:49:37.100114Z VERBOSE - _CallbackReceiver (1217) - Obtaining handle...
+2023-02-23T01:49:37.100134Z VERBOSE - _CallbackReceiver (1221) - Handle obtained
+2023-02-23T01:49:37.100137Z VERBOSE - _CallbackReceiver (1224) - Copying data...
+2023-02-23T01:49:37.100176Z VERBOSE - _CallbackReceiver (1254) - Data copied
+2023-02-23T01:49:37.100189Z DEBUG   - me frame index: 0 me index: 0 HDR frame index: 0 HDR index: 0
+2023-02-23T01:49:37.100190Z DEBUG   - [_CallbackReceiver] Notifying wakeup condition
+2023-02-23T01:49:37.106267Z DEBUG   - _CameraParametersCallbackReceiver (907) - me index params: 0 hdr index params: 0
+2023-02-23T01:49:37.106277Z VERBOSE - _CallbackReceiver (1201) - Frame received
+2023-02-23T01:49:37.106279Z VERBOSE - _CallbackReceiver (1217) - Obtaining handle...
+2023-02-23T01:49:37.106293Z VERBOSE - _CallbackReceiver (1221) - Handle obtained
+2023-02-23T01:49:37.106294Z VERBOSE - _CallbackReceiver (1224) - Copying data...
+2023-02-23T01:49:37.106330Z VERBOSE - _CallbackReceiver (1254) - Data copied
+2023-02-23T01:49:37.106338Z DEBUG   - me frame index: 0 me index: 0 HDR frame index: 0 HDR index: 0
+2023-02-23T01:49:37.106339Z DEBUG   - [_CallbackReceiver] Notifying wakeup condition
+2023-02-23T01:49:37.167487Z DEBUG   - _CameraParametersCallbackReceiver (907) - me index params: 0 hdr index params: 0
+2023-02-23T01:49:37.167495Z VERBOSE - _CallbackReceiver (1201) - Frame received
+2023-02-23T01:49:37.167497Z VERBOSE - _CallbackReceiver (1217) - Obtaining handle...
+2023-02-23T01:49:37.167512Z VERBOSE - _CallbackReceiver (1221) - Handle obtained
+2023-02-23T01:49:37.167513Z VERBOSE - _CallbackReceiver (1224) - Copying data...
+2023-02-23T01:49:37.167544Z VERBOSE - _CallbackReceiver (1254) - Data copied
+2023-02-23T01:49:37.167553Z DEBUG   - me frame index: 0 me index: 0 HDR frame index: 0 HDR index: 0
+2023-02-23T01:49:37.167554Z DEBUG   - [_CallbackReceiver] Notifying wakeup condition
+2023-02-23T01:49:37.173175Z DEBUG   - _CameraParametersCallbackReceiver (907) - me index params: 0 hdr index params: 0
+2023-02-23T01:49:37.173186Z VERBOSE - _CallbackReceiver (1201) - Frame received
+2023-02-23T01:49:37.173188Z VERBOSE - _CallbackReceiver (1217) - Obtaining handle...
+2023-02-23T01:49:37.173199Z VERBOSE - _CallbackReceiver (1221) - Handle obtained
+2023-02-23T01:49:37.173200Z VERBOSE - _CallbackReceiver (1224) - Copying data...
+2023-02-23T01:49:37.173236Z VERBOSE - _CallbackReceiver (1254) - Data copied
+2023-02-23T01:49:37.173243Z DEBUG   - me frame index: 0 me index: 0 HDR frame index: 0 HDR index: 0
+2023-02-23T01:49:37.173244Z DEBUG   - [_CallbackReceiver] Notifying wakeup condition
+2023-02-23T01:49:37.234878Z DEBUG   - _CameraParametersCallbackReceiver (907) - me index params: 0 hdr index params: 0
+2023-02-23T01:49:37.234888Z VERBOSE - _CallbackReceiver (1201) - Frame received
+2023-02-23T01:49:37.234891Z VERBOSE - _CallbackReceiver (1217) - Obtaining handle...
+2023-02-23T01:49:37.234909Z VERBOSE - _CallbackReceiver (1221) - Handle obtained
+2023-02-23T01:49:37.234911Z VERBOSE - _CallbackReceiver (1224) - Copying data...
+2023-02-23T01:49:37.234950Z VERBOSE - _CallbackReceiver (1254) - Data copied
+2023-02-23T01:49:37.234962Z DEBUG   - me frame index: 0 me index: 0 HDR frame index: 0 HDR index: 0
+2023-02-23T01:49:37.234963Z DEBUG   - [_CallbackReceiver] Notifying wakeup condition
+2023-02-23T01:49:37.240504Z DEBUG   - _CameraParametersCallbackReceiver (907) - me index params: 0 hdr index params: 0
+2023-02-23T01:49:37.240513Z VERBOSE - _CallbackReceiver (1201) - Frame received
+2023-02-23T01:49:37.240514Z VERBOSE - _CallbackReceiver (1217) - Obtaining handle...
+2023-02-23T01:49:37.240524Z VERBOSE - _CallbackReceiver (1221) - Handle obtained
+2023-02-23T01:49:37.240526Z VERBOSE - _CallbackReceiver (1224) - Copying data...
+2023-02-23T01:49:37.240573Z VERBOSE - _CallbackReceiver (1254) - Data copied
+2023-02-23T01:49:37.240579Z DEBUG   - me frame index: 0 me index: 0 HDR frame index: 0 HDR index: 0
+2023-02-23T01:49:37.240580Z DEBUG   - [_CallbackReceiver] Notifying wakeup condition
+2023-02-23T01:49:37.302279Z DEBUG   - _CameraParametersCallbackReceiver (907) - me index params: 0 hdr index params: 0
+2023-02-23T01:49:37.302289Z VERBOSE - _CallbackReceiver (1201) - Frame received
+2023-02-23T01:49:37.302291Z VERBOSE - _CallbackReceiver (1217) - Obtaining handle...
+2023-02-23T01:49:37.302311Z VERBOSE - _CallbackReceiver (1221) - Handle obtained
+2023-02-23T01:49:37.302313Z VERBOSE - _CallbackReceiver (1224) - Copying data...
+2023-02-23T01:49:37.302355Z VERBOSE - _CallbackReceiver (1254) - Data copied
+2023-02-23T01:49:37.302367Z DEBUG   - me frame index: 0 me index: 0 HDR frame index: 0 HDR index: 0
+2023-02-23T01:49:37.302369Z DEBUG   - [_CallbackReceiver] Notifying wakeup condition
+2023-02-23T01:49:37.307477Z DEBUG   - _CameraParametersCallbackReceiver (907) - me index params: 0 hdr index params: 0
+2023-02-23T01:49:37.307488Z VERBOSE - _CallbackReceiver (1201) - Frame received
+2023-02-23T01:49:37.307489Z VERBOSE - _CallbackReceiver (1217) - Obtaining handle...
+2023-02-23T01:49:37.307499Z VERBOSE - _CallbackReceiver (1221) - Handle obtained
+2023-02-23T01:49:37.307500Z VERBOSE - _CallbackReceiver (1224) - Copying data...
+2023-02-23T01:49:37.307535Z VERBOSE - _CallbackReceiver (1254) - Data copied
+2023-02-23T01:49:37.307544Z DEBUG   - me frame index: 0 me index: 0 HDR frame index: 0 HDR index: 0
+2023-02-23T01:49:37.307544Z DEBUG   - [_CallbackReceiver] Notifying wakeup condition
+2023-02-23T01:49:37.369683Z DEBUG   - _CameraParametersCallbackReceiver (907) - me index params: 0 hdr index params: 0
+2023-02-23T01:49:37.369695Z VERBOSE - _CallbackReceiver (1201) - Frame received
+2023-02-23T01:49:37.369697Z VERBOSE - _CallbackReceiver (1217) - Obtaining handle...
+2023-02-23T01:49:37.369716Z VERBOSE - _CallbackReceiver (1221) - Handle obtained
+2023-02-23T01:49:37.369719Z VERBOSE - _CallbackReceiver (1224) - Copying data...
+2023-02-23T01:49:37.369761Z VERBOSE - _CallbackReceiver (1254) - Data copied
+2023-02-23T01:49:37.369773Z DEBUG   - me frame index: 0 me index: 0 HDR frame index: 0 HDR index: 0
+2023-02-23T01:49:37.369774Z DEBUG   - [_CallbackReceiver] Notifying wakeup condition
+2023-02-23T01:49:37.374456Z DEBUG   - _CameraParametersCallbackReceiver (907) - me index params: 0 hdr index params: 0
+2023-02-23T01:49:37.374466Z VERBOSE - _CallbackReceiver (1201) - Frame received
+2023-02-23T01:49:37.374467Z VERBOSE - _CallbackReceiver (1217) - Obtaining handle...
+2023-02-23T01:49:37.374475Z VERBOSE - _CallbackReceiver (1221) - Handle obtained
+2023-02-23T01:49:37.374477Z VERBOSE - _CallbackReceiver (1224) - Copying data...
+2023-02-23T01:49:37.374513Z VERBOSE - _CallbackReceiver (1254) - Data copied
+2023-02-23T01:49:37.374520Z DEBUG   - me frame index: 0 me index: 0 HDR frame index: 0 HDR index: 0
+2023-02-23T01:49:37.374520Z DEBUG   - [_CallbackReceiver] Notifying wakeup condition
+2023-02-23T01:49:37.437140Z DEBUG   - _CameraParametersCallbackReceiver (907) - me index params: 0 hdr index params: 0
+2023-02-23T01:49:37.437150Z VERBOSE - _CallbackReceiver (1201) - Frame received
+2023-02-23T01:49:37.437152Z VERBOSE - _CallbackReceiver (1217) - Obtaining handle...
+2023-02-23T01:49:37.437168Z VERBOSE - _CallbackReceiver (1221) - Handle obtained
+2023-02-23T01:49:37.437170Z VERBOSE - _CallbackReceiver (1224) - Copying data...
+2023-02-23T01:49:37.437212Z VERBOSE - _CallbackReceiver (1254) - Data copied
+2023-02-23T01:49:37.437224Z DEBUG   - me frame index: 0 me index: 0 HDR frame index: 0 HDR index: 0
+2023-02-23T01:49:37.437224Z DEBUG   - [_CallbackReceiver] Notifying wakeup condition
+2023-02-23T01:49:37.442032Z DEBUG   - _CameraParametersCallbackReceiver (907) - me index params: 0 hdr index params: 0
+2023-02-23T01:49:37.442041Z VERBOSE - _CallbackReceiver (1201) - Frame received
+2023-02-23T01:49:37.442043Z VERBOSE - _CallbackReceiver (1217) - Obtaining handle...
+2023-02-23T01:49:37.442049Z VERBOSE - _CallbackReceiver (1221) - Handle obtained
+2023-02-23T01:49:37.442051Z VERBOSE - _CallbackReceiver (1224) - Copying data...
+2023-02-23T01:49:37.442085Z VERBOSE - _CallbackReceiver (1254) - Data copied
+2023-02-23T01:49:37.442091Z DEBUG   - me frame index: 0 me index: 0 HDR frame index: 0 HDR index: 0
+2023-02-23T01:49:37.442092Z DEBUG   - [_CallbackReceiver] Notifying wakeup condition
+2023-02-23T01:49:37.504746Z DEBUG   - _CameraParametersCallbackReceiver (907) - me index params: 0 hdr index params: 0
+2023-02-23T01:49:37.504756Z VERBOSE - _CallbackReceiver (1201) - Frame received
+2023-02-23T01:49:37.504759Z VERBOSE - _CallbackReceiver (1217) - Obtaining handle...
+2023-02-23T01:49:37.504780Z VERBOSE - _CallbackReceiver (1221) - Handle obtained
+2023-02-23T01:49:37.504782Z VERBOSE - _CallbackReceiver (1224) - Copying data...
+2023-02-23T01:49:37.504829Z VERBOSE - _CallbackReceiver (1254) - Data copied
+2023-02-23T01:49:37.504841Z DEBUG   - me frame index: 0 me index: 0 HDR frame index: 0 HDR index: 0
+2023-02-23T01:49:37.504841Z DEBUG   - [_CallbackReceiver] Notifying wakeup condition
+2023-02-23T01:49:37.508788Z DEBUG   - _CameraParametersCallbackReceiver (907) - me index params: 0 hdr index params: 0
+2023-02-23T01:49:37.508798Z VERBOSE - _CallbackReceiver (1201) - Frame received
+2023-02-23T01:49:37.508799Z VERBOSE - _CallbackReceiver (1217) - Obtaining handle...
+2023-02-23T01:49:37.508807Z VERBOSE - _CallbackReceiver (1221) - Handle obtained
+2023-02-23T01:49:37.508808Z VERBOSE - _CallbackReceiver (1224) - Copying data...
+2023-02-23T01:49:37.508847Z VERBOSE - _CallbackReceiver (1254) - Data copied
+2023-02-23T01:49:37.508854Z DEBUG   - me frame index: 0 me index: 0 HDR frame index: 0 HDR index: 0
+2023-02-23T01:49:37.508854Z DEBUG   - [_CallbackReceiver] Notifying wakeup condition
+2023-02-23T01:49:37.572238Z DEBUG   - _CameraParametersCallbackReceiver (907) - me index params: 0 hdr index params: 0
+2023-02-23T01:49:37.572245Z VERBOSE - _CallbackReceiver (1201) - Frame received
+2023-02-23T01:49:37.572247Z VERBOSE - _CallbackReceiver (1217) - Obtaining handle...
+2023-02-23T01:49:37.572262Z VERBOSE - _CallbackReceiver (1221) - Handle obtained
+2023-02-23T01:49:37.572263Z VERBOSE - _CallbackReceiver (1224) - Copying data...
+2023-02-23T01:49:37.572293Z VERBOSE - _CallbackReceiver (1254) - Data copied
+2023-02-23T01:49:37.572301Z DEBUG   - me frame index: 0 me index: 0 HDR frame index: 0 HDR index: 0
+2023-02-23T01:49:37.572302Z DEBUG   - [_CallbackReceiver] Notifying wakeup condition
+2023-02-23T01:49:37.575727Z DEBUG   - _CameraParametersCallbackReceiver (907) - me index params: 0 hdr index params: 0
+2023-02-23T01:49:37.575741Z VERBOSE - _CallbackReceiver (1201) - Frame received
+2023-02-23T01:49:37.575743Z VERBOSE - _CallbackReceiver (1217) - Obtaining handle...
+2023-02-23T01:49:37.575755Z VERBOSE - _CallbackReceiver (1221) - Handle obtained
+2023-02-23T01:49:37.575757Z VERBOSE - _CallbackReceiver (1224) - Copying data...
+2023-02-23T01:49:37.575800Z VERBOSE - _CallbackReceiver (1254) - Data copied
+2023-02-23T01:49:37.575809Z DEBUG   - me frame index: 0 me index: 0 HDR frame index: 0 HDR index: 0
+2023-02-23T01:49:37.575810Z DEBUG   - [_CallbackReceiver] Notifying wakeup condition
+2023-02-23T01:49:37.639620Z DEBUG   - _CameraParametersCallbackReceiver (907) - me index params: 0 hdr index params: 0
+2023-02-23T01:49:37.639630Z VERBOSE - _CallbackReceiver (1201) - Frame received
+2023-02-23T01:49:37.639632Z VERBOSE - _CallbackReceiver (1217) - Obtaining handle...
+2023-02-23T01:49:37.639650Z VERBOSE - _CallbackReceiver (1221) - Handle obtained
+2023-02-23T01:49:37.639652Z VERBOSE - _CallbackReceiver (1224) - Copying data...
+2023-02-23T01:49:37.639692Z VERBOSE - _CallbackReceiver (1254) - Data copied
+2023-02-23T01:49:37.639704Z DEBUG   - me frame index: 0 me index: 0 HDR frame index: 0 HDR index: 0
+2023-02-23T01:49:37.639705Z DEBUG   - [_CallbackReceiver] Notifying wakeup condition
+2023-02-23T01:49:37.642925Z DEBUG   - _CameraParametersCallbackReceiver (907) - me index params: 0 hdr index params: 0
+2023-02-23T01:49:37.642941Z VERBOSE - _CallbackReceiver (1201) - Frame received
+2023-02-23T01:49:37.642944Z VERBOSE - _CallbackReceiver (1217) - Obtaining handle...
+2023-02-23T01:49:37.642954Z VERBOSE - _CallbackReceiver (1221) - Handle obtained
+2023-02-23T01:49:37.642956Z VERBOSE - _CallbackReceiver (1224) - Copying data...
+2023-02-23T01:49:37.642996Z VERBOSE - _CallbackReceiver (1254) - Data copied
+2023-02-23T01:49:37.643003Z DEBUG   - me frame index: 0 me index: 0 HDR frame index: 0 HDR index: 0
+2023-02-23T01:49:37.643004Z DEBUG   - [_CallbackReceiver] Notifying wakeup condition
+2023-02-23T01:49:37.707143Z DEBUG   - _CameraParametersCallbackReceiver (907) - me index params: 0 hdr index params: 0
+2023-02-23T01:49:37.707169Z VERBOSE - _CallbackReceiver (1201) - Frame received
+2023-02-23T01:49:37.707171Z VERBOSE - _CallbackReceiver (1217) - Obtaining handle...
+2023-02-23T01:49:37.707194Z VERBOSE - _CallbackReceiver (1221) - Handle obtained
+2023-02-23T01:49:37.707196Z VERBOSE - _CallbackReceiver (1224) - Copying data...
+2023-02-23T01:49:37.707246Z VERBOSE - _CallbackReceiver (1254) - Data copied
+2023-02-23T01:49:37.707262Z DEBUG   - me frame index: 0 me index: 0 HDR frame index: 0 HDR index: 0
+2023-02-23T01:49:37.707265Z DEBUG   - [_CallbackReceiver] Notifying wakeup condition
+2023-02-23T01:49:37.710068Z DEBUG   - _CameraParametersCallbackReceiver (907) - me index params: 0 hdr index params: 0
+2023-02-23T01:49:37.710077Z VERBOSE - _CallbackReceiver (1201) - Frame received
+2023-02-23T01:49:37.710079Z VERBOSE - _CallbackReceiver (1217) - Obtaining handle...
+2023-02-23T01:49:37.710090Z VERBOSE - _CallbackReceiver (1221) - Handle obtained
+2023-02-23T01:49:37.710091Z VERBOSE - _CallbackReceiver (1224) - Copying data...
+2023-02-23T01:49:37.710137Z VERBOSE - _CallbackReceiver (1254) - Data copied
+2023-02-23T01:49:37.710143Z DEBUG   - me frame index: 0 me index: 0 HDR frame index: 0 HDR index: 0
+2023-02-23T01:49:37.710144Z DEBUG   - [_CallbackReceiver] Notifying wakeup condition
+2023-02-23T01:49:37.774759Z DEBUG   - _CameraParametersCallbackReceiver (907) - me index params: 0 hdr index params: 0
+2023-02-23T01:49:37.774766Z VERBOSE - _CallbackReceiver (1201) - Frame received
+2023-02-23T01:49:37.774767Z VERBOSE - _CallbackReceiver (1217) - Obtaining handle...
+2023-02-23T01:49:37.774784Z VERBOSE - _CallbackReceiver (1221) - Handle obtained
+2023-02-23T01:49:37.774786Z VERBOSE - _CallbackReceiver (1224) - Copying data...
+2023-02-23T01:49:37.774819Z VERBOSE - _CallbackReceiver (1254) - Data copied
+2023-02-23T01:49:37.774828Z DEBUG   - me frame index: 0 me index: 0 HDR frame index: 0 HDR index: 0
+2023-02-23T01:49:37.774828Z DEBUG   - [_CallbackReceiver] Notifying wakeup condition
+2023-02-23T01:49:37.777241Z DEBUG   - _CameraParametersCallbackReceiver (907) - me index params: 0 hdr index params: 0
+2023-02-23T01:49:37.777250Z VERBOSE - _CallbackReceiver (1201) - Frame received
+2023-02-23T01:49:37.777251Z VERBOSE - _CallbackReceiver (1217) - Obtaining handle...
+2023-02-23T01:49:37.777259Z VERBOSE - _CallbackReceiver (1221) - Handle obtained
+2023-02-23T01:49:37.777260Z VERBOSE - _CallbackReceiver (1224) - Copying data...
+2023-02-23T01:49:37.777295Z VERBOSE - _CallbackReceiver (1254) - Data copied
+2023-02-23T01:49:37.777303Z DEBUG   - me frame index: 0 me index: 0 HDR frame index: 0 HDR index: 0
+2023-02-23T01:49:37.777304Z DEBUG   - [_CallbackReceiver] Notifying wakeup condition
+2023-02-23T01:49:37.842122Z DEBUG   - _CameraParametersCallbackReceiver (907) - me index params: 0 hdr index params: 0
+2023-02-23T01:49:37.842140Z VERBOSE - _CallbackReceiver (1201) - Frame received
+2023-02-23T01:49:37.842141Z VERBOSE - _CallbackReceiver (1217) - Obtaining handle...
+2023-02-23T01:49:37.842153Z VERBOSE - _CallbackReceiver (1221) - Handle obtained
+2023-02-23T01:49:37.842155Z VERBOSE - _CallbackReceiver (1224) - Copying data...
+2023-02-23T01:49:37.842188Z VERBOSE - _CallbackReceiver (1254) - Data copied
+2023-02-23T01:49:37.842197Z DEBUG   - me frame index: 0 me index: 0 HDR frame index: 0 HDR index: 0
+2023-02-23T01:49:37.842198Z DEBUG   - [_CallbackReceiver] Notifying wakeup condition
+2023-02-23T01:49:37.844215Z DEBUG   - _CameraParametersCallbackReceiver (907) - me index params: 0 hdr index params: 0
+2023-02-23T01:49:37.844225Z VERBOSE - _CallbackReceiver (1201) - Frame received
+2023-02-23T01:49:37.844226Z VERBOSE - _CallbackReceiver (1217) - Obtaining handle...
+2023-02-23T01:49:37.844235Z VERBOSE - _CallbackReceiver (1221) - Handle obtained
+2023-02-23T01:49:37.844236Z VERBOSE - _CallbackReceiver (1224) - Copying data...
+2023-02-23T01:49:37.844268Z VERBOSE - _CallbackReceiver (1254) - Data copied
+2023-02-23T01:49:37.844276Z DEBUG   - me frame index: 0 me index: 0 HDR frame index: 0 HDR index: 0
+2023-02-23T01:49:37.844277Z DEBUG   - [_CallbackReceiver] Notifying wakeup condition
+2023-02-23T01:49:37.909468Z DEBUG   - _CameraParametersCallbackReceiver (907) - me index params: 0 hdr index params: 0
+2023-02-23T01:49:37.909475Z VERBOSE - _CallbackReceiver (1201) - Frame received
+2023-02-23T01:49:37.909476Z VERBOSE - _CallbackReceiver (1217) - Obtaining handle...
+2023-02-23T01:49:37.909489Z VERBOSE - _CallbackReceiver (1221) - Handle obtained
+2023-02-23T01:49:37.909490Z VERBOSE - _CallbackReceiver (1224) - Copying data...
+2023-02-23T01:49:37.909521Z VERBOSE - _CallbackReceiver (1254) - Data copied
+2023-02-23T01:49:37.909529Z DEBUG   - me frame index: 0 me index: 0 HDR frame index: 0 HDR index: 0
+2023-02-23T01:49:37.909530Z DEBUG   - [_CallbackReceiver] Notifying wakeup condition
+2023-02-23T01:49:37.911226Z DEBUG   - _CameraParametersCallbackReceiver (907) - me index params: 0 hdr index params: 0
+2023-02-23T01:49:37.911235Z VERBOSE - _CallbackReceiver (1201) - Frame received
+2023-02-23T01:49:37.911237Z VERBOSE - _CallbackReceiver (1217) - Obtaining handle...
+2023-02-23T01:49:37.911244Z VERBOSE - _CallbackReceiver (1221) - Handle obtained
+2023-02-23T01:49:37.911246Z VERBOSE - _CallbackReceiver (1224) - Copying data...
+2023-02-23T01:49:37.911280Z VERBOSE - _CallbackReceiver (1254) - Data copied
+2023-02-23T01:49:37.911287Z DEBUG   - me frame index: 0 me index: 0 HDR frame index: 0 HDR index: 0
+2023-02-23T01:49:37.911288Z DEBUG   - [_CallbackReceiver] Notifying wakeup condition
+2023-02-23T01:49:37.976796Z DEBUG   - _CameraParametersCallbackReceiver (907) - me index params: 0 hdr index params: 0
+2023-02-23T01:49:37.976801Z VERBOSE - _CallbackReceiver (1201) - Frame received
+2023-02-23T01:49:37.976803Z VERBOSE - _CallbackReceiver (1217) - Obtaining handle...
+2023-02-23T01:49:37.976812Z VERBOSE - _CallbackReceiver (1221) - Handle obtained
+2023-02-23T01:49:37.976813Z VERBOSE - _CallbackReceiver (1224) - Copying data...
+2023-02-23T01:49:37.976845Z VERBOSE - _CallbackReceiver (1254) - Data copied
+2023-02-23T01:49:37.976853Z DEBUG   - me frame index: 0 me index: 0 HDR frame index: 0 HDR index: 0
+2023-02-23T01:49:37.976854Z DEBUG   - [_CallbackReceiver] Notifying wakeup condition
+2023-02-23T01:49:37.978202Z DEBUG   - _CameraParametersCallbackReceiver (907) - me index params: 0 hdr index params: 0
+2023-02-23T01:49:37.978217Z VERBOSE - _CallbackReceiver (1201) - Frame received
+2023-02-23T01:49:37.978220Z VERBOSE - _CallbackReceiver (1217) - Obtaining handle...
+2023-02-23T01:49:37.978230Z VERBOSE - _CallbackReceiver (1221) - Handle obtained
+2023-02-23T01:49:37.978232Z VERBOSE - _CallbackReceiver (1224) - Copying data...
+2023-02-23T01:49:37.978269Z VERBOSE - _CallbackReceiver (1254) - Data copied
+2023-02-23T01:49:37.978275Z DEBUG   - me frame index: 0 me index: 0 HDR frame index: 0 HDR index: 0
+2023-02-23T01:49:37.978276Z DEBUG   - [_CallbackReceiver] Notifying wakeup condition
+2023-02-23T01:49:38.044127Z DEBUG   - _CameraParametersCallbackReceiver (907) - me index params: 0 hdr index params: 0
+2023-02-23T01:49:38.044134Z VERBOSE - _CallbackReceiver (1201) - Frame received
+2023-02-23T01:49:38.044136Z VERBOSE - _CallbackReceiver (1217) - Obtaining handle...
+2023-02-23T01:49:38.044150Z VERBOSE - _CallbackReceiver (1221) - Handle obtained
+2023-02-23T01:49:38.044152Z VERBOSE - _CallbackReceiver (1224) - Copying data...
+2023-02-23T01:49:38.044182Z VERBOSE - _CallbackReceiver (1254) - Data copied
+2023-02-23T01:49:38.044191Z DEBUG   - me frame index: 0 me index: 0 HDR frame index: 0 HDR index: 0
+2023-02-23T01:49:38.044191Z DEBUG   - [_CallbackReceiver] Notifying wakeup condition
+2023-02-23T01:49:38.045481Z DEBUG   - _CameraParametersCallbackReceiver (907) - me index params: 0 hdr index params: 0
+2023-02-23T01:49:38.045490Z VERBOSE - _CallbackReceiver (1201) - Frame received
+2023-02-23T01:49:38.045492Z VERBOSE - _CallbackReceiver (1217) - Obtaining handle...
+2023-02-23T01:49:38.045500Z VERBOSE - _CallbackReceiver (1221) - Handle obtained
+2023-02-23T01:49:38.045502Z VERBOSE - _CallbackReceiver (1224) - Copying data...
+2023-02-23T01:49:38.045536Z VERBOSE - _CallbackReceiver (1254) - Data copied
+2023-02-23T01:49:38.045543Z DEBUG   - me frame index: 0 me index: 0 HDR frame index: 0 HDR index: 0
+2023-02-23T01:49:38.045544Z DEBUG   - [_CallbackReceiver] Notifying wakeup condition
+2023-02-23T01:49:38.111486Z DEBUG   - _CameraParametersCallbackReceiver (907) - me index params: 0 hdr index params: 0
+2023-02-23T01:49:38.111495Z VERBOSE - _CallbackReceiver (1201) - Frame received
+2023-02-23T01:49:38.111496Z VERBOSE - _CallbackReceiver (1217) - Obtaining handle...
+2023-02-23T01:49:38.111512Z VERBOSE - _CallbackReceiver (1221) - Handle obtained
+2023-02-23T01:49:38.111513Z VERBOSE - _CallbackReceiver (1224) - Copying data...
+2023-02-23T01:49:38.111543Z VERBOSE - _CallbackReceiver (1254) - Data copied
+2023-02-23T01:49:38.111552Z DEBUG   - me frame index: 0 me index: 0 HDR frame index: 0 HDR index: 0
+2023-02-23T01:49:38.111553Z DEBUG   - [_CallbackReceiver] Notifying wakeup condition
+2023-02-23T01:49:38.112508Z DEBUG   - _CameraParametersCallbackReceiver (907) - me index params: 0 hdr index params: 0
+2023-02-23T01:49:38.112517Z VERBOSE - _CallbackReceiver (1201) - Frame received
+2023-02-23T01:49:38.112519Z VERBOSE - _CallbackReceiver (1217) - Obtaining handle...
+2023-02-23T01:49:38.112526Z VERBOSE - _CallbackReceiver (1221) - Handle obtained
+2023-02-23T01:49:38.112527Z VERBOSE - _CallbackReceiver (1224) - Copying data...
+2023-02-23T01:49:38.112564Z VERBOSE - _CallbackReceiver (1254) - Data copied
+2023-02-23T01:49:38.112571Z DEBUG   - me frame index: 0 me index: 0 HDR frame index: 0 HDR index: 0
+2023-02-23T01:49:38.112571Z DEBUG   - [_CallbackReceiver] Notifying wakeup condition
+2023-02-23T01:49:38.178842Z DEBUG   - _CameraParametersCallbackReceiver (907) - me index params: 0 hdr index params: 0
+2023-02-23T01:49:38.178850Z VERBOSE - _CallbackReceiver (1201) - Frame received
+2023-02-23T01:49:38.178852Z VERBOSE - _CallbackReceiver (1217) - Obtaining handle...
+2023-02-23T01:49:38.178867Z VERBOSE - _CallbackReceiver (1221) - Handle obtained
+2023-02-23T01:49:38.178869Z VERBOSE - _CallbackReceiver (1224) - Copying data...
+2023-02-23T01:49:38.178899Z VERBOSE - _CallbackReceiver (1254) - Data copied
+2023-02-23T01:49:38.178910Z DEBUG   - me frame index: 0 me index: 0 HDR frame index: 0 HDR index: 0
+2023-02-23T01:49:38.178911Z DEBUG   - [_CallbackReceiver] Notifying wakeup condition
+2023-02-23T01:49:38.179652Z DEBUG   - _CameraParametersCallbackReceiver (907) - me index params: 0 hdr index params: 0
+2023-02-23T01:49:38.179668Z VERBOSE - _CallbackReceiver (1201) - Frame received
+2023-02-23T01:49:38.179671Z VERBOSE - _CallbackReceiver (1217) - Obtaining handle...
+2023-02-23T01:49:38.179680Z VERBOSE - _CallbackReceiver (1221) - Handle obtained
+2023-02-23T01:49:38.179683Z VERBOSE - _CallbackReceiver (1224) - Copying data...
+2023-02-23T01:49:38.179726Z VERBOSE - _CallbackReceiver (1254) - Data copied
+2023-02-23T01:49:38.179735Z DEBUG   - me frame index: 0 me index: 0 HDR frame index: 0 HDR index: 0
+2023-02-23T01:49:38.179736Z DEBUG   - [_CallbackReceiver] Notifying wakeup condition
+2023-02-23T01:49:38.246238Z DEBUG   - _CameraParametersCallbackReceiver (907) - me index params: 0 hdr index params: 0
+2023-02-23T01:49:38.246260Z VERBOSE - _CallbackReceiver (1201) - Frame received
+2023-02-23T01:49:38.246261Z VERBOSE - _CallbackReceiver (1217) - Obtaining handle...
+2023-02-23T01:49:38.246276Z VERBOSE - _CallbackReceiver (1221) - Handle obtained
+2023-02-23T01:49:38.246278Z VERBOSE - _CallbackReceiver (1224) - Copying data...
+2023-02-23T01:49:38.246309Z VERBOSE - _CallbackReceiver (1254) - Data copied
+2023-02-23T01:49:38.246318Z DEBUG   - me frame index: 0 me index: 0 HDR frame index: 0 HDR index: 0
+2023-02-23T01:49:38.246318Z DEBUG   - [_CallbackReceiver] Notifying wakeup condition
+2023-02-23T01:49:38.246983Z DEBUG   - _CameraParametersCallbackReceiver (907) - me index params: 0 hdr index params: 0
+2023-02-23T01:49:38.246999Z VERBOSE - _CallbackReceiver (1201) - Frame received
+2023-02-23T01:49:38.247001Z VERBOSE - _CallbackReceiver (1217) - Obtaining handle...
+2023-02-23T01:49:38.247012Z VERBOSE - _CallbackReceiver (1221) - Handle obtained
+2023-02-23T01:49:38.247015Z VERBOSE - _CallbackReceiver (1224) - Copying data...
+2023-02-23T01:49:38.247057Z VERBOSE - _CallbackReceiver (1254) - Data copied
+2023-02-23T01:49:38.247066Z DEBUG   - me frame index: 0 me index: 0 HDR frame index: 0 HDR index: 0
+2023-02-23T01:49:38.247066Z DEBUG   - [_CallbackReceiver] Notifying wakeup condition
+2023-02-23T01:49:38.313605Z DEBUG   - _CameraParametersCallbackReceiver (907) - me index params: 0 hdr index params: 0
+2023-02-23T01:49:38.313613Z VERBOSE - _CallbackReceiver (1201) - Frame received
+2023-02-23T01:49:38.313615Z VERBOSE - _CallbackReceiver (1217) - Obtaining handle...
+2023-02-23T01:49:38.313630Z VERBOSE - _CallbackReceiver (1221) - Handle obtained
+2023-02-23T01:49:38.313631Z VERBOSE - _CallbackReceiver (1224) - Copying data...
+2023-02-23T01:49:38.313663Z VERBOSE - _CallbackReceiver (1254) - Data copied
+2023-02-23T01:49:38.313674Z DEBUG   - me frame index: 0 me index: 0 HDR frame index: 0 HDR index: 0
+2023-02-23T01:49:38.313676Z DEBUG   - [_CallbackReceiver] Notifying wakeup condition
+2023-02-23T01:49:38.313863Z DEBUG   - _CameraParametersCallbackReceiver (907) - me index params: 0 hdr index params: 0
+2023-02-23T01:49:38.313878Z VERBOSE - _CallbackReceiver (1201) - Frame received
+2023-02-23T01:49:38.313881Z VERBOSE - _CallbackReceiver (1217) - Obtaining handle...
+2023-02-23T01:49:38.313891Z VERBOSE - _CallbackReceiver (1221) - Handle obtained
+2023-02-23T01:49:38.313894Z VERBOSE - _CallbackReceiver (1224) - Copying data...
+2023-02-23T01:49:38.313937Z VERBOSE - _CallbackReceiver (1254) - Data copied
+2023-02-23T01:49:38.313946Z DEBUG   - me frame index: 0 me index: 0 HDR frame index: 0 HDR index: 0
+2023-02-23T01:49:38.313947Z DEBUG   - [_CallbackReceiver] Notifying wakeup condition
+2023-02-23T01:49:38.380906Z DEBUG   - _CameraParametersCallbackReceiver (907) - me index params: 0 hdr index params: 0
+2023-02-23T01:49:38.380923Z VERBOSE - _CallbackReceiver (1201) - Frame received
+2023-02-23T01:49:38.380926Z VERBOSE - _CallbackReceiver (1217) - Obtaining handle...
+2023-02-23T01:49:38.380946Z VERBOSE - _CallbackReceiver (1221) - Handle obtained
+2023-02-23T01:49:38.380949Z VERBOSE - _CallbackReceiver (1224) - Copying data...
+2023-02-23T01:49:38.380987Z DEBUG   - _CameraParametersCallbackReceiver (907) - me index params: 0 hdr index params: 0
+2023-02-23T01:49:38.380997Z VERBOSE - _CallbackReceiver (1201) - Frame received
+2023-02-23T01:49:38.380998Z VERBOSE - _CallbackReceiver (1217) - Obtaining handle...
+2023-02-23T01:49:38.381006Z VERBOSE - _CallbackReceiver (1221) - Handle obtained
+2023-02-23T01:49:38.381010Z VERBOSE - _CallbackReceiver (1224) - Copying data...
+2023-02-23T01:49:38.380993Z VERBOSE - _CallbackReceiver (1254) - Data copied
+2023-02-23T01:49:38.381005Z DEBUG   - me frame index: 0 me index: 0 HDR frame index: 0 HDR index: 0
+2023-02-23T01:49:38.381011Z DEBUG   - [_CallbackReceiver] Notifying wakeup condition
+2023-02-23T01:49:38.381041Z VERBOSE - _CallbackReceiver (1254) - Data copied
+2023-02-23T01:49:38.381049Z DEBUG   - me frame index: 0 me index: 0 HDR frame index: 0 HDR index: 0
+2023-02-23T01:49:38.381049Z DEBUG   - [_CallbackReceiver] Notifying wakeup condition
+2023-02-23T01:49:38.448011Z DEBUG   - _CameraParametersCallbackReceiver (907) - me index params: 0 hdr index params: 0
+2023-02-23T01:49:38.448025Z VERBOSE - _CallbackReceiver (1201) - Frame received
+2023-02-23T01:49:38.448027Z VERBOSE - _CallbackReceiver (1217) - Obtaining handle...
+2023-02-23T01:49:38.448043Z VERBOSE - _CallbackReceiver (1221) - Handle obtained
+2023-02-23T01:49:38.448045Z VERBOSE - _CallbackReceiver (1224) - Copying data...
+2023-02-23T01:49:38.448090Z VERBOSE - _CallbackReceiver (1254) - Data copied
+2023-02-23T01:49:38.448100Z DEBUG   - me frame index: 0 me index: 0 HDR frame index: 0 HDR index: 0
+2023-02-23T01:49:38.448102Z DEBUG   - [_CallbackReceiver] Notifying wakeup condition
+2023-02-23T01:49:38.448389Z DEBUG   - _CameraParametersCallbackReceiver (907) - me index params: 0 hdr index params: 0
+2023-02-23T01:49:38.448394Z VERBOSE - _CallbackReceiver (1201) - Frame received
+2023-02-23T01:49:38.448396Z VERBOSE - _CallbackReceiver (1217) - Obtaining handle...
+2023-02-23T01:49:38.448403Z VERBOSE - _CallbackReceiver (1221) - Handle obtained
+2023-02-23T01:49:38.448404Z VERBOSE - _CallbackReceiver (1224) - Copying data...
+2023-02-23T01:49:38.448435Z VERBOSE - _CallbackReceiver (1254) - Data copied
+2023-02-23T01:49:38.448441Z DEBUG   - me frame index: 0 me index: 0 HDR frame index: 0 HDR index: 0
+2023-02-23T01:49:38.448442Z DEBUG   - [_CallbackReceiver] Notifying wakeup condition
+2023-02-23T01:49:38.515256Z DEBUG   - _CameraParametersCallbackReceiver (907) - me index params: 0 hdr index params: 0
+2023-02-23T01:49:38.515270Z VERBOSE - _CallbackReceiver (1201) - Frame received
+2023-02-23T01:49:38.515273Z VERBOSE - _CallbackReceiver (1217) - Obtaining handle...
+2023-02-23T01:49:38.515294Z VERBOSE - _CallbackReceiver (1221) - Handle obtained
+2023-02-23T01:49:38.515296Z VERBOSE - _CallbackReceiver (1224) - Copying data...
+2023-02-23T01:49:38.515336Z VERBOSE - _CallbackReceiver (1254) - Data copied
+2023-02-23T01:49:38.515349Z DEBUG   - me frame index: 0 me index: 0 HDR frame index: 0 HDR index: 0
+2023-02-23T01:49:38.515351Z DEBUG   - [_CallbackReceiver] Notifying wakeup condition
+2023-02-23T01:49:38.515801Z DEBUG   - _CameraParametersCallbackReceiver (907) - me index params: 0 hdr index params: 0
+2023-02-23T01:49:38.515807Z VERBOSE - _CallbackReceiver (1201) - Frame received
+2023-02-23T01:49:38.515808Z VERBOSE - _CallbackReceiver (1217) - Obtaining handle...
+2023-02-23T01:49:38.515816Z VERBOSE - _CallbackReceiver (1221) - Handle obtained
+2023-02-23T01:49:38.515817Z VERBOSE - _CallbackReceiver (1224) - Copying data...
+2023-02-23T01:49:38.515849Z VERBOSE - _CallbackReceiver (1254) - Data copied
+2023-02-23T01:49:38.515856Z DEBUG   - me frame index: 0 me index: 0 HDR frame index: 0 HDR index: 0
+2023-02-23T01:49:38.515857Z DEBUG   - [_CallbackReceiver] Notifying wakeup condition
+2023-02-23T01:49:38.582167Z DEBUG   - _CameraParametersCallbackReceiver (907) - me index params: 0 hdr index params: 0
+2023-02-23T01:49:38.582185Z VERBOSE - _CallbackReceiver (1201) - Frame received
+2023-02-23T01:49:38.582187Z VERBOSE - _CallbackReceiver (1217) - Obtaining handle...
+2023-02-23T01:49:38.582207Z VERBOSE - _CallbackReceiver (1221) - Handle obtained
+2023-02-23T01:49:38.582209Z VERBOSE - _CallbackReceiver (1224) - Copying data...
+2023-02-23T01:49:38.582246Z VERBOSE - _CallbackReceiver (1254) - Data copied
+2023-02-23T01:49:38.582256Z DEBUG   - me frame index: 0 me index: 0 HDR frame index: 0 HDR index: 0
+2023-02-23T01:49:38.582257Z DEBUG   - [_CallbackReceiver] Notifying wakeup condition
+2023-02-23T01:49:38.583145Z DEBUG   - _CameraParametersCallbackReceiver (907) - me index params: 0 hdr index params: 0
+2023-02-23T01:49:38.583152Z VERBOSE - _CallbackReceiver (1201) - Frame received
+2023-02-23T01:49:38.583153Z VERBOSE - _CallbackReceiver (1217) - Obtaining handle...
+2023-02-23T01:49:38.583161Z VERBOSE - _CallbackReceiver (1221) - Handle obtained
+2023-02-23T01:49:38.583163Z VERBOSE - _CallbackReceiver (1224) - Copying data...
+2023-02-23T01:49:38.583194Z VERBOSE - _CallbackReceiver (1254) - Data copied
+2023-02-23T01:49:38.583201Z DEBUG   - me frame index: 0 me index: 0 HDR frame index: 0 HDR index: 0
+2023-02-23T01:49:38.583202Z DEBUG   - [_CallbackReceiver] Notifying wakeup condition
+2023-02-23T01:49:38.649201Z DEBUG   - _CameraParametersCallbackReceiver (907) - me index params: 0 hdr index params: 0
+2023-02-23T01:49:38.649212Z VERBOSE - _CallbackReceiver (1201) - Frame received
+2023-02-23T01:49:38.649213Z VERBOSE - _CallbackReceiver (1217) - Obtaining handle...
+2023-02-23T01:49:38.649224Z VERBOSE - _CallbackReceiver (1221) - Handle obtained
+2023-02-23T01:49:38.649225Z VERBOSE - _CallbackReceiver (1224) - Copying data...
+2023-02-23T01:49:38.649257Z VERBOSE - _CallbackReceiver (1254) - Data copied
+2023-02-23T01:49:38.649265Z DEBUG   - me frame index: 0 me index: 0 HDR frame index: 0 HDR index: 0
+2023-02-23T01:49:38.649265Z DEBUG   - [_CallbackReceiver] Notifying wakeup condition
+2023-02-23T01:49:38.650479Z DEBUG   - _CameraParametersCallbackReceiver (907) - me index params: 0 hdr index params: 0
+2023-02-23T01:49:38.650484Z VERBOSE - _CallbackReceiver (1201) - Frame received
+2023-02-23T01:49:38.650485Z VERBOSE - _CallbackReceiver (1217) - Obtaining handle...
+2023-02-23T01:49:38.650492Z VERBOSE - _CallbackReceiver (1221) - Handle obtained
+2023-02-23T01:49:38.650493Z VERBOSE - _CallbackReceiver (1224) - Copying data...
+2023-02-23T01:49:38.650526Z VERBOSE - _CallbackReceiver (1254) - Data copied
+2023-02-23T01:49:38.650534Z DEBUG   - me frame index: 0 me index: 0 HDR frame index: 0 HDR index: 0
+2023-02-23T01:49:38.650535Z DEBUG   - [_CallbackReceiver] Notifying wakeup condition
+2023-02-23T01:49:38.716568Z DEBUG   - _CameraParametersCallbackReceiver (907) - me index params: 0 hdr index params: 0
+2023-02-23T01:49:38.716579Z VERBOSE - _CallbackReceiver (1201) - Frame received
+2023-02-23T01:49:38.716580Z VERBOSE - _CallbackReceiver (1217) - Obtaining handle...
+2023-02-23T01:49:38.716595Z VERBOSE - _CallbackReceiver (1221) - Handle obtained
+2023-02-23T01:49:38.716597Z VERBOSE - _CallbackReceiver (1224) - Copying data...
+2023-02-23T01:49:38.716629Z VERBOSE - _CallbackReceiver (1254) - Data copied
+2023-02-23T01:49:38.716637Z DEBUG   - me frame index: 0 me index: 0 HDR frame index: 0 HDR index: 0
+2023-02-23T01:49:38.716638Z DEBUG   - [_CallbackReceiver] Notifying wakeup condition
+2023-02-23T01:49:38.717827Z DEBUG   - _CameraParametersCallbackReceiver (907) - me index params: 0 hdr index params: 0
+2023-02-23T01:49:38.717833Z VERBOSE - _CallbackReceiver (1201) - Frame received
+2023-02-23T01:49:38.717834Z VERBOSE - _CallbackReceiver (1217) - Obtaining handle...
+2023-02-23T01:49:38.717841Z VERBOSE - _CallbackReceiver (1221) - Handle obtained
+2023-02-23T01:49:38.717842Z VERBOSE - _CallbackReceiver (1224) - Copying data...
+2023-02-23T01:49:38.717872Z VERBOSE - _CallbackReceiver (1254) - Data copied
+2023-02-23T01:49:38.717879Z DEBUG   - me frame index: 0 me index: 0 HDR frame index: 0 HDR index: 0
+2023-02-23T01:49:38.717880Z DEBUG   - [_CallbackReceiver] Notifying wakeup condition
+2023-02-23T01:49:38.783760Z DEBUG   - _CameraParametersCallbackReceiver (907) - me index params: 0 hdr index params: 0
+2023-02-23T01:49:38.783771Z VERBOSE - _CallbackReceiver (1201) - Frame received
+2023-02-23T01:49:38.783772Z VERBOSE - _CallbackReceiver (1217) - Obtaining handle...
+2023-02-23T01:49:38.783788Z VERBOSE - _CallbackReceiver (1221) - Handle obtained
+2023-02-23T01:49:38.783789Z VERBOSE - _CallbackReceiver (1224) - Copying data...
+2023-02-23T01:49:38.783822Z VERBOSE - _CallbackReceiver (1254) - Data copied
+2023-02-23T01:49:38.783831Z DEBUG   - me frame index: 0 me index: 0 HDR frame index: 0 HDR index: 0
+2023-02-23T01:49:38.783832Z DEBUG   - [_CallbackReceiver] Notifying wakeup condition
+2023-02-23T01:49:38.785242Z DEBUG   - _CameraParametersCallbackReceiver (907) - me index params: 0 hdr index params: 0
+2023-02-23T01:49:38.785248Z VERBOSE - _CallbackReceiver (1201) - Frame received
+2023-02-23T01:49:38.785249Z VERBOSE - _CallbackReceiver (1217) - Obtaining handle...
+2023-02-23T01:49:38.785256Z VERBOSE - _CallbackReceiver (1221) - Handle obtained
+2023-02-23T01:49:38.785258Z VERBOSE - _CallbackReceiver (1224) - Copying data...
+2023-02-23T01:49:38.785287Z VERBOSE - _CallbackReceiver (1254) - Data copied
+2023-02-23T01:49:38.785295Z DEBUG   - me frame index: 0 me index: 0 HDR frame index: 0 HDR index: 0
+2023-02-23T01:49:38.785296Z DEBUG   - [_CallbackReceiver] Notifying wakeup condition
+2023-02-23T01:49:38.850542Z DEBUG   - _CameraParametersCallbackReceiver (907) - me index params: 0 hdr index params: 0
+2023-02-23T01:49:38.850565Z VERBOSE - _CallbackReceiver (1201) - Frame received
+2023-02-23T01:49:38.850569Z VERBOSE - _CallbackReceiver (1217) - Obtaining handle...
+2023-02-23T01:49:38.850600Z VERBOSE - _CallbackReceiver (1221) - Handle obtained
+2023-02-23T01:49:38.850604Z VERBOSE - _CallbackReceiver (1224) - Copying data...
+2023-02-23T01:49:38.850703Z VERBOSE - _CallbackReceiver (1254) - Data copied
+2023-02-23T01:49:38.850716Z DEBUG   - me frame index: 0 me index: 0 HDR frame index: 0 HDR index: 0
+2023-02-23T01:49:38.850717Z DEBUG   - [_CallbackReceiver] Notifying wakeup condition
+2023-02-23T01:49:38.852579Z DEBUG   - _CameraParametersCallbackReceiver (907) - me index params: 0 hdr index params: 0
+2023-02-23T01:49:38.852586Z VERBOSE - _CallbackReceiver (1201) - Frame received
+2023-02-23T01:49:38.852587Z VERBOSE - _CallbackReceiver (1217) - Obtaining handle...
+2023-02-23T01:49:38.852592Z VERBOSE - _CallbackReceiver (1221) - Handle obtained
+2023-02-23T01:49:38.852593Z VERBOSE - _CallbackReceiver (1224) - Copying data...
+2023-02-23T01:49:38.852621Z VERBOSE - _CallbackReceiver (1254) - Data copied
+2023-02-23T01:49:38.852627Z DEBUG   - me frame index: 0 me index: 0 HDR frame index: 0 HDR index: 0
+2023-02-23T01:49:38.852628Z DEBUG   - [_CallbackReceiver] Notifying wakeup condition
+2023-02-23T01:49:38.917805Z DEBUG   - _CameraParametersCallbackReceiver (907) - me index params: 0 hdr index params: 0
+2023-02-23T01:49:38.917815Z VERBOSE - _CallbackReceiver (1201) - Frame received
+2023-02-23T01:49:38.917816Z VERBOSE - _CallbackReceiver (1217) - Obtaining handle...
+2023-02-23T01:49:38.917836Z VERBOSE - _CallbackReceiver (1221) - Handle obtained
+2023-02-23T01:49:38.917838Z VERBOSE - _CallbackReceiver (1224) - Copying data...
+2023-02-23T01:49:38.917868Z VERBOSE - _CallbackReceiver (1254) - Data copied
+2023-02-23T01:49:38.917877Z DEBUG   - me frame index: 0 me index: 0 HDR frame index: 0 HDR index: 0
+2023-02-23T01:49:38.917878Z DEBUG   - [_CallbackReceiver] Notifying wakeup condition
+2023-02-23T01:49:38.919930Z DEBUG   - _CameraParametersCallbackReceiver (907) - me index params: 0 hdr index params: 0
+2023-02-23T01:49:38.919936Z VERBOSE - _CallbackReceiver (1201) - Frame received
+2023-02-23T01:49:38.919937Z VERBOSE - _CallbackReceiver (1217) - Obtaining handle...
+2023-02-23T01:49:38.919945Z VERBOSE - _CallbackReceiver (1221) - Handle obtained
+2023-02-23T01:49:38.919946Z VERBOSE - _CallbackReceiver (1224) - Copying data...
+2023-02-23T01:49:38.919976Z VERBOSE - _CallbackReceiver (1254) - Data copied
+2023-02-23T01:49:38.919984Z DEBUG   - me frame index: 0 me index: 0 HDR frame index: 0 HDR index: 0
+2023-02-23T01:49:38.919984Z DEBUG   - [_CallbackReceiver] Notifying wakeup condition
+2023-02-23T01:49:38.984706Z DEBUG   - _CameraParametersCallbackReceiver (907) - me index params: 0 hdr index params: 0
+2023-02-23T01:49:38.984716Z VERBOSE - _CallbackReceiver (1201) - Frame received
+2023-02-23T01:49:38.984718Z VERBOSE - _CallbackReceiver (1217) - Obtaining handle...
+2023-02-23T01:49:38.984733Z VERBOSE - _CallbackReceiver (1221) - Handle obtained
+2023-02-23T01:49:38.984735Z VERBOSE - _CallbackReceiver (1224) - Copying data...
+2023-02-23T01:49:38.984766Z VERBOSE - _CallbackReceiver (1254) - Data copied
+2023-02-23T01:49:38.984775Z DEBUG   - me frame index: 0 me index: 0 HDR frame index: 0 HDR index: 0
+2023-02-23T01:49:38.984776Z DEBUG   - [_CallbackReceiver] Notifying wakeup condition
+2023-02-23T01:49:38.987263Z DEBUG   - _CameraParametersCallbackReceiver (907) - me index params: 0 hdr index params: 0
+2023-02-23T01:49:38.987270Z VERBOSE - _CallbackReceiver (1201) - Frame received
+2023-02-23T01:49:38.987271Z VERBOSE - _CallbackReceiver (1217) - Obtaining handle...
+2023-02-23T01:49:38.987279Z VERBOSE - _CallbackReceiver (1221) - Handle obtained
+2023-02-23T01:49:38.987280Z VERBOSE - _CallbackReceiver (1224) - Copying data...
+2023-02-23T01:49:38.987309Z VERBOSE - _CallbackReceiver (1254) - Data copied
+2023-02-23T01:49:38.987316Z DEBUG   - me frame index: 0 me index: 0 HDR frame index: 0 HDR index: 0
+2023-02-23T01:49:38.987317Z DEBUG   - [_CallbackReceiver] Notifying wakeup condition
+2023-02-23T01:49:39.051978Z DEBUG   - _CameraParametersCallbackReceiver (907) - me index params: 0 hdr index params: 0
+2023-02-23T01:49:39.051999Z VERBOSE - _CallbackReceiver (1201) - Frame received
+2023-02-23T01:49:39.052017Z VERBOSE - _CallbackReceiver (1217) - Obtaining handle...
+2023-02-23T01:49:39.052035Z VERBOSE - _CallbackReceiver (1221) - Handle obtained
+2023-02-23T01:49:39.052037Z VERBOSE - _CallbackReceiver (1224) - Copying data...
+2023-02-23T01:49:39.052073Z VERBOSE - _CallbackReceiver (1254) - Data copied
+2023-02-23T01:49:39.052082Z DEBUG   - me frame index: 0 me index: 0 HDR frame index: 0 HDR index: 0
+2023-02-23T01:49:39.052083Z DEBUG   - [_CallbackReceiver] Notifying wakeup condition
+2023-02-23T01:49:39.054965Z DEBUG   - _CameraParametersCallbackReceiver (907) - me index params: 0 hdr index params: 0
+2023-02-23T01:49:39.054972Z VERBOSE - _CallbackReceiver (1201) - Frame received
+2023-02-23T01:49:39.054973Z VERBOSE - _CallbackReceiver (1217) - Obtaining handle...
+2023-02-23T01:49:39.054982Z VERBOSE - _CallbackReceiver (1221) - Handle obtained
+2023-02-23T01:49:39.054984Z VERBOSE - _CallbackReceiver (1224) - Copying data...
+2023-02-23T01:49:39.055014Z VERBOSE - _CallbackReceiver (1254) - Data copied
+2023-02-23T01:49:39.055021Z DEBUG   - me frame index: 0 me index: 0 HDR frame index: 0 HDR index: 0
+2023-02-23T01:49:39.055022Z DEBUG   - [_CallbackReceiver] Notifying wakeup condition
+2023-02-23T01:49:39.119066Z DEBUG   - _CameraParametersCallbackReceiver (907) - me index params: 0 hdr index params: 0
+2023-02-23T01:49:39.119087Z VERBOSE - _CallbackReceiver (1201) - Frame received
+2023-02-23T01:49:39.119090Z VERBOSE - _CallbackReceiver (1217) - Obtaining handle...
+2023-02-23T01:49:39.119124Z VERBOSE - _CallbackReceiver (1221) - Handle obtained
+2023-02-23T01:49:39.119126Z VERBOSE - _CallbackReceiver (1224) - Copying data...
+2023-02-23T01:49:39.119161Z VERBOSE - _CallbackReceiver (1254) - Data copied
+2023-02-23T01:49:39.119169Z DEBUG   - me frame index: 0 me index: 0 HDR frame index: 0 HDR index: 0
+2023-02-23T01:49:39.119170Z DEBUG   - [_CallbackReceiver] Notifying wakeup condition
+2023-02-23T01:49:39.122318Z DEBUG   - _CameraParametersCallbackReceiver (907) - me index params: 0 hdr index params: 0
+2023-02-23T01:49:39.122325Z VERBOSE - _CallbackReceiver (1201) - Frame received
+2023-02-23T01:49:39.122326Z VERBOSE - _CallbackReceiver (1217) - Obtaining handle...
+2023-02-23T01:49:39.122356Z VERBOSE - _CallbackReceiver (1221) - Handle obtained
+2023-02-23T01:49:39.122357Z VERBOSE - _CallbackReceiver (1224) - Copying data...
+2023-02-23T01:49:39.122400Z VERBOSE - _CallbackReceiver (1254) - Data copied
+2023-02-23T01:49:39.122407Z DEBUG   - me frame index: 0 me index: 0 HDR frame index: 0 HDR index: 0
+2023-02-23T01:49:39.122407Z DEBUG   - [_CallbackReceiver] Notifying wakeup condition
+2023-02-23T01:49:39.186260Z DEBUG   - _CameraParametersCallbackReceiver (907) - me index params: 0 hdr index params: 0
+2023-02-23T01:49:39.186276Z VERBOSE - _CallbackReceiver (1201) - Frame received
+2023-02-23T01:49:39.186279Z VERBOSE - _CallbackReceiver (1217) - Obtaining handle...
+2023-02-23T01:49:39.186298Z VERBOSE - _CallbackReceiver (1221) - Handle obtained
+2023-02-23T01:49:39.186301Z VERBOSE - _CallbackReceiver (1224) - Copying data...
+2023-02-23T01:49:39.186333Z VERBOSE - _CallbackReceiver (1254) - Data copied
+2023-02-23T01:49:39.186343Z DEBUG   - me frame index: 0 me index: 0 HDR frame index: 0 HDR index: 0
+2023-02-23T01:49:39.186344Z DEBUG   - [_CallbackReceiver] Notifying wakeup condition
+2023-02-23T01:49:39.189725Z DEBUG   - _CameraParametersCallbackReceiver (907) - me index params: 0 hdr index params: 0
+2023-02-23T01:49:39.189751Z VERBOSE - _CallbackReceiver (1201) - Frame received
+2023-02-23T01:49:39.189753Z VERBOSE - _CallbackReceiver (1217) - Obtaining handle...
+2023-02-23T01:49:39.189762Z VERBOSE - _CallbackReceiver (1221) - Handle obtained
+2023-02-23T01:49:39.189763Z VERBOSE - _CallbackReceiver (1224) - Copying data...
+2023-02-23T01:49:39.189792Z VERBOSE - _CallbackReceiver (1254) - Data copied
+2023-02-23T01:49:39.189800Z DEBUG   - me frame index: 0 me index: 0 HDR frame index: 0 HDR index: 0
+2023-02-23T01:49:39.189801Z DEBUG   - [_CallbackReceiver] Notifying wakeup condition
+2023-02-23T01:49:39.253166Z DEBUG   - _CameraParametersCallbackReceiver (907) - me index params: 0 hdr index params: 0
+2023-02-23T01:49:39.253177Z VERBOSE - _CallbackReceiver (1201) - Frame received
+2023-02-23T01:49:39.253179Z VERBOSE - _CallbackReceiver (1217) - Obtaining handle...
+2023-02-23T01:49:39.253214Z VERBOSE - _CallbackReceiver (1221) - Handle obtained
+2023-02-23T01:49:39.253215Z VERBOSE - _CallbackReceiver (1224) - Copying data...
+2023-02-23T01:49:39.253251Z VERBOSE - _CallbackReceiver (1254) - Data copied
+2023-02-23T01:49:39.253259Z DEBUG   - me frame index: 0 me index: 0 HDR frame index: 0 HDR index: 0
+2023-02-23T01:49:39.253259Z DEBUG   - [_CallbackReceiver] Notifying wakeup condition
+2023-02-23T01:49:39.257250Z DEBUG   - _CameraParametersCallbackReceiver (907) - me index params: 0 hdr index params: 0
+2023-02-23T01:49:39.257256Z VERBOSE - _CallbackReceiver (1201) - Frame received
+2023-02-23T01:49:39.257258Z VERBOSE - _CallbackReceiver (1217) - Obtaining handle...
+2023-02-23T01:49:39.257264Z VERBOSE - _CallbackReceiver (1221) - Handle obtained
+2023-02-23T01:49:39.257265Z VERBOSE - _CallbackReceiver (1224) - Copying data...
+2023-02-23T01:49:39.257308Z VERBOSE - _CallbackReceiver (1254) - Data copied
+2023-02-23T01:49:39.257315Z DEBUG   - me frame index: 0 me index: 0 HDR frame index: 0 HDR index: 0
+2023-02-23T01:49:39.257316Z DEBUG   - [_CallbackReceiver] Notifying wakeup condition
+2023-02-23T01:49:39.320244Z DEBUG   - _CameraParametersCallbackReceiver (907) - me index params: 0 hdr index params: 0
+2023-02-23T01:49:39.320256Z VERBOSE - _CallbackReceiver (1201) - Frame received
+2023-02-23T01:49:39.320258Z VERBOSE - _CallbackReceiver (1217) - Obtaining handle...
+2023-02-23T01:49:39.320274Z VERBOSE - _CallbackReceiver (1221) - Handle obtained
+2023-02-23T01:49:39.320275Z VERBOSE - _CallbackReceiver (1224) - Copying data...
+2023-02-23T01:49:39.320311Z VERBOSE - _CallbackReceiver (1254) - Data copied
+2023-02-23T01:49:39.320320Z DEBUG   - me frame index: 0 me index: 0 HDR frame index: 0 HDR index: 0
+2023-02-23T01:49:39.320321Z DEBUG   - [_CallbackReceiver] Notifying wakeup condition
+2023-02-23T01:49:39.324580Z DEBUG   - _CameraParametersCallbackReceiver (907) - me index params: 0 hdr index params: 0
+2023-02-23T01:49:39.324586Z VERBOSE - _CallbackReceiver (1201) - Frame received
+2023-02-23T01:49:39.324587Z VERBOSE - _CallbackReceiver (1217) - Obtaining handle...
+2023-02-23T01:49:39.324604Z VERBOSE - _CallbackReceiver (1221) - Handle obtained
+2023-02-23T01:49:39.324606Z VERBOSE - _CallbackReceiver (1224) - Copying data...
+2023-02-23T01:49:39.324636Z VERBOSE - _CallbackReceiver (1254) - Data copied
+2023-02-23T01:49:39.324642Z DEBUG   - me frame index: 0 me index: 0 HDR frame index: 0 HDR index: 0
+2023-02-23T01:49:39.324643Z DEBUG   - [_CallbackReceiver] Notifying wakeup condition
+2023-02-23T01:49:39.387410Z DEBUG   - _CameraParametersCallbackReceiver (907) - me index params: 0 hdr index params: 0
+2023-02-23T01:49:39.387421Z VERBOSE - _CallbackReceiver (1201) - Frame received
+2023-02-23T01:49:39.387423Z VERBOSE - _CallbackReceiver (1217) - Obtaining handle...
+2023-02-23T01:49:39.387438Z VERBOSE - _CallbackReceiver (1221) - Handle obtained
+2023-02-23T01:49:39.387439Z VERBOSE - _CallbackReceiver (1224) - Copying data...
+2023-02-23T01:49:39.387476Z VERBOSE - _CallbackReceiver (1254) - Data copied
+2023-02-23T01:49:39.387485Z DEBUG   - me frame index: 0 me index: 0 HDR frame index: 0 HDR index: 0
+2023-02-23T01:49:39.387485Z DEBUG   - [_CallbackReceiver] Notifying wakeup condition
+2023-02-23T01:49:39.391932Z DEBUG   - _CameraParametersCallbackReceiver (907) - me index params: 0 hdr index params: 0
+2023-02-23T01:49:39.391938Z VERBOSE - _CallbackReceiver (1201) - Frame received
+2023-02-23T01:49:39.391939Z VERBOSE - _CallbackReceiver (1217) - Obtaining handle...
+2023-02-23T01:49:39.391945Z VERBOSE - _CallbackReceiver (1221) - Handle obtained
+2023-02-23T01:49:39.391946Z VERBOSE - _CallbackReceiver (1224) - Copying data...
+2023-02-23T01:49:39.391989Z VERBOSE - _CallbackReceiver (1254) - Data copied
+2023-02-23T01:49:39.391994Z DEBUG   - me frame index: 0 me index: 0 HDR frame index: 0 HDR index: 0
+2023-02-23T01:49:39.391994Z DEBUG   - [_CallbackReceiver] Notifying wakeup condition
+2023-02-23T01:49:39.454578Z DEBUG   - _CameraParametersCallbackReceiver (907) - me index params: 0 hdr index params: 0
+2023-02-23T01:49:39.454589Z VERBOSE - _CallbackReceiver (1201) - Frame received
+2023-02-23T01:49:39.454590Z VERBOSE - _CallbackReceiver (1217) - Obtaining handle...
+2023-02-23T01:49:39.454605Z VERBOSE - _CallbackReceiver (1221) - Handle obtained
+2023-02-23T01:49:39.454607Z VERBOSE - _CallbackReceiver (1224) - Copying data...
+2023-02-23T01:49:39.454642Z VERBOSE - _CallbackReceiver (1254) - Data copied
+2023-02-23T01:49:39.454651Z DEBUG   - me frame index: 0 me index: 0 HDR frame index: 0 HDR index: 0
+2023-02-23T01:49:39.454652Z DEBUG   - [_CallbackReceiver] Notifying wakeup condition
+2023-02-23T01:49:39.459272Z DEBUG   - _CameraParametersCallbackReceiver (907) - me index params: 0 hdr index params: 0
+2023-02-23T01:49:39.459278Z VERBOSE - _CallbackReceiver (1201) - Frame received
+2023-02-23T01:49:39.459279Z VERBOSE - _CallbackReceiver (1217) - Obtaining handle...
+2023-02-23T01:49:39.459300Z VERBOSE - _CallbackReceiver (1221) - Handle obtained
+2023-02-23T01:49:39.459302Z VERBOSE - _CallbackReceiver (1224) - Copying data...
+2023-02-23T01:49:39.459332Z VERBOSE - _CallbackReceiver (1254) - Data copied
+2023-02-23T01:49:39.459337Z DEBUG   - me frame index: 0 me index: 0 HDR frame index: 0 HDR index: 0
+2023-02-23T01:49:39.459338Z DEBUG   - [_CallbackReceiver] Notifying wakeup condition
+2023-02-23T01:49:39.521683Z DEBUG   - _CameraParametersCallbackReceiver (907) - me index params: 0 hdr index params: 0
+2023-02-23T01:49:39.521694Z VERBOSE - _CallbackReceiver (1201) - Frame received
+2023-02-23T01:49:39.521696Z VERBOSE - _CallbackReceiver (1217) - Obtaining handle...
+2023-02-23T01:49:39.521710Z VERBOSE - _CallbackReceiver (1221) - Handle obtained
+2023-02-23T01:49:39.521712Z VERBOSE - _CallbackReceiver (1224) - Copying data...
+2023-02-23T01:49:39.521744Z VERBOSE - _CallbackReceiver (1254) - Data copied
+2023-02-23T01:49:39.521752Z DEBUG   - me frame index: 0 me index: 0 HDR frame index: 0 HDR index: 0
+2023-02-23T01:49:39.521754Z DEBUG   - [_CallbackReceiver] Notifying wakeup condition
+2023-02-23T01:49:39.526738Z DEBUG   - _CameraParametersCallbackReceiver (907) - me index params: 0 hdr index params: 0
+2023-02-23T01:49:39.526748Z VERBOSE - _CallbackReceiver (1201) - Frame received
+2023-02-23T01:49:39.526750Z VERBOSE - _CallbackReceiver (1217) - Obtaining handle...
+2023-02-23T01:49:39.526761Z VERBOSE - _CallbackReceiver (1221) - Handle obtained
+2023-02-23T01:49:39.526763Z VERBOSE - _CallbackReceiver (1224) - Copying data...
+2023-02-23T01:49:39.526805Z VERBOSE - _CallbackReceiver (1254) - Data copied
+2023-02-23T01:49:39.526818Z DEBUG   - me frame index: 0 me index: 0 HDR frame index: 0 HDR index: 0
+2023-02-23T01:49:39.526819Z DEBUG   - [_CallbackReceiver] Notifying wakeup condition
+2023-02-23T01:49:39.588553Z DEBUG   - _CameraParametersCallbackReceiver (907) - me index params: 0 hdr index params: 0
+2023-02-23T01:49:39.588571Z VERBOSE - _CallbackReceiver (1201) - Frame received
+2023-02-23T01:49:39.588574Z VERBOSE - _CallbackReceiver (1217) - Obtaining handle...
+2023-02-23T01:49:39.588594Z VERBOSE - _CallbackReceiver (1221) - Handle obtained
+2023-02-23T01:49:39.588596Z VERBOSE - _CallbackReceiver (1224) - Copying data...
+2023-02-23T01:49:39.588636Z VERBOSE - _CallbackReceiver (1254) - Data copied
+2023-02-23T01:49:39.588650Z DEBUG   - me frame index: 0 me index: 0 HDR frame index: 0 HDR index: 0
+2023-02-23T01:49:39.588653Z DEBUG   - [_CallbackReceiver] Notifying wakeup condition
+2023-02-23T01:49:39.594115Z DEBUG   - _CameraParametersCallbackReceiver (907) - me index params: 0 hdr index params: 0
+2023-02-23T01:49:39.594122Z VERBOSE - _CallbackReceiver (1201) - Frame received
+2023-02-23T01:49:39.594123Z VERBOSE - _CallbackReceiver (1217) - Obtaining handle...
+2023-02-23T01:49:39.594132Z VERBOSE - _CallbackReceiver (1221) - Handle obtained
+2023-02-23T01:49:39.594133Z VERBOSE - _CallbackReceiver (1224) - Copying data...
+2023-02-23T01:49:39.594162Z VERBOSE - _CallbackReceiver (1254) - Data copied
+2023-02-23T01:49:39.594169Z DEBUG   - me frame index: 0 me index: 0 HDR frame index: 0 HDR index: 0
+2023-02-23T01:49:39.594170Z DEBUG   - [_CallbackReceiver] Notifying wakeup condition
+2023-02-23T01:49:39.655887Z DEBUG   - _CameraParametersCallbackReceiver (907) - me index params: 0 hdr index params: 0
+2023-02-23T01:49:39.655898Z VERBOSE - _CallbackReceiver (1201) - Frame received
+2023-02-23T01:49:39.655900Z VERBOSE - _CallbackReceiver (1217) - Obtaining handle...
+2023-02-23T01:49:39.655915Z VERBOSE - _CallbackReceiver (1221) - Handle obtained
+2023-02-23T01:49:39.655916Z VERBOSE - _CallbackReceiver (1224) - Copying data...
+2023-02-23T01:49:39.655949Z VERBOSE - _CallbackReceiver (1254) - Data copied
+2023-02-23T01:49:39.655959Z DEBUG   - me frame index: 0 me index: 0 HDR frame index: 0 HDR index: 0
+2023-02-23T01:49:39.655961Z DEBUG   - [_CallbackReceiver] Notifying wakeup condition
+2023-02-23T01:49:39.661526Z DEBUG   - _CameraParametersCallbackReceiver (907) - me index params: 0 hdr index params: 0
+2023-02-23T01:49:39.661532Z VERBOSE - _CallbackReceiver (1201) - Frame received
+2023-02-23T01:49:39.661534Z VERBOSE - _CallbackReceiver (1217) - Obtaining handle...
+2023-02-23T01:49:39.661541Z VERBOSE - _CallbackReceiver (1221) - Handle obtained
+2023-02-23T01:49:39.661543Z VERBOSE - _CallbackReceiver (1224) - Copying data...
+2023-02-23T01:49:39.661573Z VERBOSE - _CallbackReceiver (1254) - Data copied
+2023-02-23T01:49:39.661580Z DEBUG   - me frame index: 0 me index: 0 HDR frame index: 0 HDR index: 0
+2023-02-23T01:49:39.661580Z DEBUG   - [_CallbackReceiver] Notifying wakeup condition
+2023-02-23T01:49:39.723052Z DEBUG   - _CameraParametersCallbackReceiver (907) - me index params: 0 hdr index params: 0
+2023-02-23T01:49:39.723070Z VERBOSE - _CallbackReceiver (1201) - Frame received
+2023-02-23T01:49:39.723072Z VERBOSE - _CallbackReceiver (1217) - Obtaining handle...
+2023-02-23T01:49:39.723094Z VERBOSE - _CallbackReceiver (1221) - Handle obtained
+2023-02-23T01:49:39.723096Z VERBOSE - _CallbackReceiver (1224) - Copying data...
+2023-02-23T01:49:39.723144Z VERBOSE - _CallbackReceiver (1254) - Data copied
+2023-02-23T01:49:39.723157Z DEBUG   - me frame index: 0 me index: 0 HDR frame index: 0 HDR index: 0
+2023-02-23T01:49:39.723158Z DEBUG   - [_CallbackReceiver] Notifying wakeup condition
+2023-02-23T01:49:39.729598Z DEBUG   - _CameraParametersCallbackReceiver (907) - me index params: 0 hdr index params: 0
+2023-02-23T01:49:39.729609Z VERBOSE - _CallbackReceiver (1201) - Frame received
+2023-02-23T01:49:39.729612Z VERBOSE - _CallbackReceiver (1217) - Obtaining handle...
+2023-02-23T01:49:39.729631Z VERBOSE - _CallbackReceiver (1221) - Handle obtained
+2023-02-23T01:49:39.729634Z VERBOSE - _CallbackReceiver (1224) - Copying data...
+2023-02-23T01:49:39.729671Z VERBOSE - _CallbackReceiver (1254) - Data copied
+2023-02-23T01:49:39.729684Z DEBUG   - me frame index: 0 me index: 0 HDR frame index: 0 HDR index: 0
+2023-02-23T01:49:39.729685Z DEBUG   - [_CallbackReceiver] Notifying wakeup condition
+2023-02-23T01:49:39.789869Z DEBUG   - _CameraParametersCallbackReceiver (907) - me index params: 0 hdr index params: 0
+2023-02-23T01:49:39.789879Z VERBOSE - _CallbackReceiver (1201) - Frame received
+2023-02-23T01:49:39.789881Z VERBOSE - _CallbackReceiver (1217) - Obtaining handle...
+2023-02-23T01:49:39.789896Z VERBOSE - _CallbackReceiver (1221) - Handle obtained
+2023-02-23T01:49:39.789897Z VERBOSE - _CallbackReceiver (1224) - Copying data...
+2023-02-23T01:49:39.789939Z VERBOSE - _CallbackReceiver (1254) - Data copied
+2023-02-23T01:49:39.789947Z DEBUG   - me frame index: 0 me index: 0 HDR frame index: 0 HDR index: 0
+2023-02-23T01:49:39.789948Z DEBUG   - [_CallbackReceiver] Notifying wakeup condition
+2023-02-23T01:49:39.796974Z DEBUG   - _CameraParametersCallbackReceiver (907) - me index params: 0 hdr index params: 0
+2023-02-23T01:49:39.796980Z VERBOSE - _CallbackReceiver (1201) - Frame received
+2023-02-23T01:49:39.796982Z VERBOSE - _CallbackReceiver (1217) - Obtaining handle...
+2023-02-23T01:49:39.796988Z VERBOSE - _CallbackReceiver (1221) - Handle obtained
+2023-02-23T01:49:39.796989Z VERBOSE - _CallbackReceiver (1224) - Copying data...
+2023-02-23T01:49:39.797018Z VERBOSE - _CallbackReceiver (1254) - Data copied
+2023-02-23T01:49:39.797024Z DEBUG   - me frame index: 0 me index: 0 HDR frame index: 0 HDR index: 0
+2023-02-23T01:49:39.797025Z DEBUG   - [_CallbackReceiver] Notifying wakeup condition
+2023-02-23T01:49:39.856955Z DEBUG   - _CameraParametersCallbackReceiver (907) - me index params: 0 hdr index params: 0
+2023-02-23T01:49:39.856968Z VERBOSE - _CallbackReceiver (1201) - Frame received
+2023-02-23T01:49:39.856969Z VERBOSE - _CallbackReceiver (1217) - Obtaining handle...
+2023-02-23T01:49:39.856986Z VERBOSE - _CallbackReceiver (1221) - Handle obtained
+2023-02-23T01:49:39.856987Z VERBOSE - _CallbackReceiver (1224) - Copying data...
+2023-02-23T01:49:39.857041Z VERBOSE - _CallbackReceiver (1254) - Data copied
+2023-02-23T01:49:39.857050Z DEBUG   - me frame index: 0 me index: 0 HDR frame index: 0 HDR index: 0
+2023-02-23T01:49:39.857051Z DEBUG   - [_CallbackReceiver] Notifying wakeup condition
+2023-02-23T01:49:39.864298Z DEBUG   - _CameraParametersCallbackReceiver (907) - me index params: 0 hdr index params: 0
+2023-02-23T01:49:39.864305Z VERBOSE - _CallbackReceiver (1201) - Frame received
+2023-02-23T01:49:39.864306Z VERBOSE - _CallbackReceiver (1217) - Obtaining handle...
+2023-02-23T01:49:39.864313Z VERBOSE - _CallbackReceiver (1221) - Handle obtained
+2023-02-23T01:49:39.864315Z VERBOSE - _CallbackReceiver (1224) - Copying data...
+2023-02-23T01:49:39.864342Z VERBOSE - _CallbackReceiver (1254) - Data copied
+2023-02-23T01:49:39.864347Z DEBUG   - me frame index: 0 me index: 0 HDR frame index: 0 HDR index: 0
+2023-02-23T01:49:39.864348Z DEBUG   - [_CallbackReceiver] Notifying wakeup condition
+2023-02-23T01:49:39.924246Z DEBUG   - _CameraParametersCallbackReceiver (907) - me index params: 0 hdr index params: 0
+2023-02-23T01:49:39.924257Z VERBOSE - _CallbackReceiver (1201) - Frame received
+2023-02-23T01:49:39.924259Z VERBOSE - _CallbackReceiver (1217) - Obtaining handle...
+2023-02-23T01:49:39.924274Z VERBOSE - _CallbackReceiver (1221) - Handle obtained
+2023-02-23T01:49:39.924275Z VERBOSE - _CallbackReceiver (1224) - Copying data...
+2023-02-23T01:49:39.924306Z VERBOSE - _CallbackReceiver (1254) - Data copied
+2023-02-23T01:49:39.924315Z DEBUG   - me frame index: 0 me index: 0 HDR frame index: 0 HDR index: 0
+2023-02-23T01:49:39.924315Z DEBUG   - [_CallbackReceiver] Notifying wakeup condition
+2023-02-23T01:49:39.931638Z DEBUG   - _CameraParametersCallbackReceiver (907) - me index params: 0 hdr index params: 0
+2023-02-23T01:49:39.931644Z VERBOSE - _CallbackReceiver (1201) - Frame received
+2023-02-23T01:49:39.931646Z VERBOSE - _CallbackReceiver (1217) - Obtaining handle...
+2023-02-23T01:49:39.931656Z VERBOSE - _CallbackReceiver (1221) - Handle obtained
+2023-02-23T01:49:39.931657Z VERBOSE - _CallbackReceiver (1224) - Copying data...
+2023-02-23T01:49:39.931686Z VERBOSE - _CallbackReceiver (1254) - Data copied
+2023-02-23T01:49:39.931693Z DEBUG   - me frame index: 0 me index: 0 HDR frame index: 0 HDR index: 0
+2023-02-23T01:49:39.931693Z DEBUG   - [_CallbackReceiver] Notifying wakeup condition
+2023-02-23T01:49:39.991189Z DEBUG   - _CameraParametersCallbackReceiver (907) - me index params: 0 hdr index params: 0
+2023-02-23T01:49:39.991209Z VERBOSE - _CallbackReceiver (1201) - Frame received
+2023-02-23T01:49:39.991213Z VERBOSE - _CallbackReceiver (1217) - Obtaining handle...
+2023-02-23T01:49:39.991242Z VERBOSE - _CallbackReceiver (1221) - Handle obtained
+2023-02-23T01:49:39.991244Z VERBOSE - _CallbackReceiver (1224) - Copying data...
+2023-02-23T01:49:39.991323Z VERBOSE - _CallbackReceiver (1254) - Data copied
+2023-02-23T01:49:39.991338Z DEBUG   - me frame index: 0 me index: 0 HDR frame index: 0 HDR index: 0
+2023-02-23T01:49:39.991339Z DEBUG   - [_CallbackReceiver] Notifying wakeup condition
+2023-02-23T01:49:39.999023Z DEBUG   - _CameraParametersCallbackReceiver (907) - me index params: 0 hdr index params: 0
+2023-02-23T01:49:39.999031Z VERBOSE - _CallbackReceiver (1201) - Frame received
+2023-02-23T01:49:39.999032Z VERBOSE - _CallbackReceiver (1217) - Obtaining handle...
+2023-02-23T01:49:39.999047Z VERBOSE - _CallbackReceiver (1221) - Handle obtained
+2023-02-23T01:49:39.999049Z VERBOSE - _CallbackReceiver (1224) - Copying data...
+2023-02-23T01:49:39.999079Z VERBOSE - _CallbackReceiver (1254) - Data copied
+2023-02-23T01:49:39.999089Z DEBUG   - me frame index: 0 me index: 0 HDR frame index: 0 HDR index: 0
+2023-02-23T01:49:39.999090Z DEBUG   - [_CallbackReceiver] Notifying wakeup condition
+2023-02-23T01:49:40.058262Z DEBUG   - _CameraParametersCallbackReceiver (907) - me index params: 0 hdr index params: 0
+2023-02-23T01:49:40.058280Z VERBOSE - _CallbackReceiver (1201) - Frame received
+2023-02-23T01:49:40.058283Z VERBOSE - _CallbackReceiver (1217) - Obtaining handle...
+2023-02-23T01:49:40.058304Z VERBOSE - _CallbackReceiver (1221) - Handle obtained
+2023-02-23T01:49:40.058306Z VERBOSE - _CallbackReceiver (1224) - Copying data...
+2023-02-23T01:49:40.058354Z VERBOSE - _CallbackReceiver (1254) - Data copied
+2023-02-23T01:49:40.058368Z DEBUG   - me frame index: 0 me index: 0 HDR frame index: 0 HDR index: 0
+2023-02-23T01:49:40.058371Z DEBUG   - [_CallbackReceiver] Notifying wakeup condition
+2023-02-23T01:49:40.066459Z DEBUG   - _CameraParametersCallbackReceiver (907) - me index params: 0 hdr index params: 0
+2023-02-23T01:49:40.066469Z VERBOSE - _CallbackReceiver (1201) - Frame received
+2023-02-23T01:49:40.066471Z VERBOSE - _CallbackReceiver (1217) - Obtaining handle...
+2023-02-23T01:49:40.066485Z VERBOSE - _CallbackReceiver (1221) - Handle obtained
+2023-02-23T01:49:40.066487Z VERBOSE - _CallbackReceiver (1224) - Copying data...
+2023-02-23T01:49:40.066527Z VERBOSE - _CallbackReceiver (1254) - Data copied
+2023-02-23T01:49:40.066537Z DEBUG   - me frame index: 0 me index: 0 HDR frame index: 0 HDR index: 0
+2023-02-23T01:49:40.066538Z DEBUG   - [_CallbackReceiver] Notifying wakeup condition
+2023-02-23T01:49:40.125326Z DEBUG   - _CameraParametersCallbackReceiver (907) - me index params: 0 hdr index params: 0
+2023-02-23T01:49:40.125346Z VERBOSE - _CallbackReceiver (1201) - Frame received
+2023-02-23T01:49:40.125349Z VERBOSE - _CallbackReceiver (1217) - Obtaining handle...
+2023-02-23T01:49:40.125374Z VERBOSE - _CallbackReceiver (1221) - Handle obtained
+2023-02-23T01:49:40.125378Z VERBOSE - _CallbackReceiver (1224) - Copying data...
+2023-02-23T01:49:40.125424Z VERBOSE - _CallbackReceiver (1254) - Data copied
+2023-02-23T01:49:40.125438Z DEBUG   - me frame index: 0 me index: 0 HDR frame index: 0 HDR index: 0
+2023-02-23T01:49:40.125440Z DEBUG   - [_CallbackReceiver] Notifying wakeup condition
+2023-02-23T01:49:40.133855Z DEBUG   - _CameraParametersCallbackReceiver (907) - me index params: 0 hdr index params: 0
+2023-02-23T01:49:40.133864Z VERBOSE - _CallbackReceiver (1201) - Frame received
+2023-02-23T01:49:40.133867Z VERBOSE - _CallbackReceiver (1217) - Obtaining handle...
+2023-02-23T01:49:40.133887Z VERBOSE - _CallbackReceiver (1221) - Handle obtained
+2023-02-23T01:49:40.133889Z VERBOSE - _CallbackReceiver (1224) - Copying data...
+2023-02-23T01:49:40.133931Z VERBOSE - _CallbackReceiver (1254) - Data copied
+2023-02-23T01:49:40.133944Z DEBUG   - me frame index: 0 me index: 0 HDR frame index: 0 HDR index: 0
+2023-02-23T01:49:40.133945Z DEBUG   - [_CallbackReceiver] Notifying wakeup condition
+2023-02-23T01:49:40.192436Z DEBUG   - _CameraParametersCallbackReceiver (907) - me index params: 0 hdr index params: 0
+2023-02-23T01:49:40.192468Z VERBOSE - _CallbackReceiver (1201) - Frame received
+2023-02-23T01:49:40.192471Z VERBOSE - _CallbackReceiver (1217) - Obtaining handle...
+2023-02-23T01:49:40.192491Z VERBOSE - _CallbackReceiver (1221) - Handle obtained
+2023-02-23T01:49:40.192493Z VERBOSE - _CallbackReceiver (1224) - Copying data...
+2023-02-23T01:49:40.192535Z VERBOSE - _CallbackReceiver (1254) - Data copied
+2023-02-23T01:49:40.192547Z DEBUG   - me frame index: 0 me index: 0 HDR frame index: 0 HDR index: 0
+2023-02-23T01:49:40.192550Z DEBUG   - [_CallbackReceiver] Notifying wakeup condition
+2023-02-23T01:49:40.201349Z DEBUG   - _CameraParametersCallbackReceiver (907) - me index params: 0 hdr index params: 0
+2023-02-23T01:49:40.201359Z VERBOSE - _CallbackReceiver (1201) - Frame received
+2023-02-23T01:49:40.201361Z VERBOSE - _CallbackReceiver (1217) - Obtaining handle...
+2023-02-23T01:49:40.201373Z VERBOSE - _CallbackReceiver (1221) - Handle obtained
+2023-02-23T01:49:40.201375Z VERBOSE - _CallbackReceiver (1224) - Copying data...
+2023-02-23T01:49:40.201415Z VERBOSE - _CallbackReceiver (1254) - Data copied
+2023-02-23T01:49:40.201425Z DEBUG   - me frame index: 0 me index: 0 HDR frame index: 0 HDR index: 0
+2023-02-23T01:49:40.201425Z DEBUG   - [_CallbackReceiver] Notifying wakeup condition
+2023-02-23T01:49:40.259675Z DEBUG   - _CameraParametersCallbackReceiver (907) - me index params: 0 hdr index params: 0
+2023-02-23T01:49:40.259693Z VERBOSE - _CallbackReceiver (1201) - Frame received
+2023-02-23T01:49:40.259696Z VERBOSE - _CallbackReceiver (1217) - Obtaining handle...
+2023-02-23T01:49:40.259717Z VERBOSE - _CallbackReceiver (1221) - Handle obtained
+2023-02-23T01:49:40.259719Z VERBOSE - _CallbackReceiver (1224) - Copying data...
+2023-02-23T01:49:40.259774Z VERBOSE - _CallbackReceiver (1254) - Data copied
+2023-02-23T01:49:40.259789Z DEBUG   - me frame index: 0 me index: 0 HDR frame index: 0 HDR index: 0
+2023-02-23T01:49:40.259806Z DEBUG   - [_CallbackReceiver] Notifying wakeup condition
+2023-02-23T01:49:40.268784Z DEBUG   - _CameraParametersCallbackReceiver (907) - me index params: 0 hdr index params: 0
+2023-02-23T01:49:40.268793Z VERBOSE - _CallbackReceiver (1201) - Frame received
+2023-02-23T01:49:40.268796Z VERBOSE - _CallbackReceiver (1217) - Obtaining handle...
+2023-02-23T01:49:40.268806Z VERBOSE - _CallbackReceiver (1221) - Handle obtained
+2023-02-23T01:49:40.268809Z VERBOSE - _CallbackReceiver (1224) - Copying data...
+2023-02-23T01:49:40.268848Z VERBOSE - _CallbackReceiver (1254) - Data copied
+2023-02-23T01:49:40.268857Z DEBUG   - me frame index: 0 me index: 0 HDR frame index: 0 HDR index: 0
+2023-02-23T01:49:40.268858Z DEBUG   - [_CallbackReceiver] Notifying wakeup condition
+2023-02-23T01:49:40.326612Z DEBUG   - _CameraParametersCallbackReceiver (907) - me index params: 0 hdr index params: 0
+2023-02-23T01:49:40.326623Z VERBOSE - _CallbackReceiver (1201) - Frame received
+2023-02-23T01:49:40.326624Z VERBOSE - _CallbackReceiver (1217) - Obtaining handle...
+2023-02-23T01:49:40.326640Z VERBOSE - _CallbackReceiver (1221) - Handle obtained
+2023-02-23T01:49:40.326641Z VERBOSE - _CallbackReceiver (1224) - Copying data...
+2023-02-23T01:49:40.326678Z VERBOSE - _CallbackReceiver (1254) - Data copied
+2023-02-23T01:49:40.326693Z DEBUG   - me frame index: 0 me index: 0 HDR frame index: 0 HDR index: 0
+2023-02-23T01:49:40.326694Z DEBUG   - [_CallbackReceiver] Notifying wakeup condition
+2023-02-23T01:49:40.336161Z DEBUG   - _CameraParametersCallbackReceiver (907) - me index params: 0 hdr index params: 0
+2023-02-23T01:49:40.336171Z VERBOSE - _CallbackReceiver (1201) - Frame received
+2023-02-23T01:49:40.336175Z VERBOSE - _CallbackReceiver (1217) - Obtaining handle...
+2023-02-23T01:49:40.336190Z VERBOSE - _CallbackReceiver (1221) - Handle obtained
+2023-02-23T01:49:40.336192Z VERBOSE - _CallbackReceiver (1224) - Copying data...
+2023-02-23T01:49:40.336231Z VERBOSE - _CallbackReceiver (1254) - Data copied
+2023-02-23T01:49:40.336242Z DEBUG   - me frame index: 0 me index: 0 HDR frame index: 0 HDR index: 0
+2023-02-23T01:49:40.336243Z DEBUG   - [_CallbackReceiver] Notifying wakeup condition
+2023-02-23T01:49:40.393849Z DEBUG   - _CameraParametersCallbackReceiver (907) - me index params: 0 hdr index params: 0
+2023-02-23T01:49:40.393868Z VERBOSE - _CallbackReceiver (1201) - Frame received
+2023-02-23T01:49:40.393872Z VERBOSE - _CallbackReceiver (1217) - Obtaining handle...
+2023-02-23T01:49:40.393892Z VERBOSE - _CallbackReceiver (1221) - Handle obtained
+2023-02-23T01:49:40.393894Z VERBOSE - _CallbackReceiver (1224) - Copying data...
+2023-02-23T01:49:40.393936Z VERBOSE - _CallbackReceiver (1254) - Data copied
+2023-02-23T01:49:40.393948Z DEBUG   - me frame index: 0 me index: 0 HDR frame index: 0 HDR index: 0
+2023-02-23T01:49:40.393949Z DEBUG   - [_CallbackReceiver] Notifying wakeup condition
+2023-02-23T01:49:40.403520Z DEBUG   - _CameraParametersCallbackReceiver (907) - me index params: 0 hdr index params: 0
+2023-02-23T01:49:40.403529Z VERBOSE - _CallbackReceiver (1201) - Frame received
+2023-02-23T01:49:40.403532Z VERBOSE - _CallbackReceiver (1217) - Obtaining handle...
+2023-02-23T01:49:40.403546Z VERBOSE - _CallbackReceiver (1221) - Handle obtained
+2023-02-23T01:49:40.403549Z VERBOSE - _CallbackReceiver (1224) - Copying data...
+2023-02-23T01:49:40.403585Z VERBOSE - _CallbackReceiver (1254) - Data copied
+2023-02-23T01:49:40.403595Z DEBUG   - me frame index: 0 me index: 0 HDR frame index: 0 HDR index: 0
+2023-02-23T01:49:40.403596Z DEBUG   - [_CallbackReceiver] Notifying wakeup condition
+2023-02-23T01:49:40.460798Z DEBUG   - _CameraParametersCallbackReceiver (907) - me index params: 0 hdr index params: 0
+2023-02-23T01:49:40.460815Z VERBOSE - _CallbackReceiver (1201) - Frame received
+2023-02-23T01:49:40.460817Z VERBOSE - _CallbackReceiver (1217) - Obtaining handle...
+2023-02-23T01:49:40.460836Z VERBOSE - _CallbackReceiver (1221) - Handle obtained
+2023-02-23T01:49:40.460838Z VERBOSE - _CallbackReceiver (1224) - Copying data...
+2023-02-23T01:49:40.460880Z VERBOSE - _CallbackReceiver (1254) - Data copied
+2023-02-23T01:49:40.460893Z DEBUG   - me frame index: 0 me index: 0 HDR frame index: 0 HDR index: 0
+2023-02-23T01:49:40.460894Z DEBUG   - [_CallbackReceiver] Notifying wakeup condition
+2023-02-23T01:49:40.471154Z DEBUG   - _CameraParametersCallbackReceiver (907) - me index params: 0 hdr index params: 0
+2023-02-23T01:49:40.471164Z VERBOSE - _CallbackReceiver (1201) - Frame received
+2023-02-23T01:49:40.471167Z VERBOSE - _CallbackReceiver (1217) - Obtaining handle...
+2023-02-23T01:49:40.471187Z VERBOSE - _CallbackReceiver (1221) - Handle obtained
+2023-02-23T01:49:40.471189Z VERBOSE - _CallbackReceiver (1224) - Copying data...
+2023-02-23T01:49:40.471242Z VERBOSE - _CallbackReceiver (1254) - Data copied
+2023-02-23T01:49:40.471255Z DEBUG   - me frame index: 0 me index: 0 HDR frame index: 0 HDR index: 0
+2023-02-23T01:49:40.471256Z DEBUG   - [_CallbackReceiver] Notifying wakeup condition
+2023-02-23T01:49:40.528001Z DEBUG   - _CameraParametersCallbackReceiver (907) - me index params: 0 hdr index params: 0
+2023-02-23T01:49:40.528012Z VERBOSE - _CallbackReceiver (1201) - Frame received
+2023-02-23T01:49:40.528013Z VERBOSE - _CallbackReceiver (1217) - Obtaining handle...
+2023-02-23T01:49:40.528028Z VERBOSE - _CallbackReceiver (1221) - Handle obtained
+2023-02-23T01:49:40.528030Z VERBOSE - _CallbackReceiver (1224) - Copying data...
+2023-02-23T01:49:40.528064Z VERBOSE - _CallbackReceiver (1254) - Data copied
+2023-02-23T01:49:40.528072Z DEBUG   - me frame index: 0 me index: 0 HDR frame index: 0 HDR index: 0
+2023-02-23T01:49:40.528073Z DEBUG   - [_CallbackReceiver] Notifying wakeup condition
+2023-02-23T01:49:40.538624Z DEBUG   - _CameraParametersCallbackReceiver (907) - me index params: 0 hdr index params: 0
+2023-02-23T01:49:40.538631Z VERBOSE - _CallbackReceiver (1201) - Frame received
+2023-02-23T01:49:40.538632Z VERBOSE - _CallbackReceiver (1217) - Obtaining handle...
+2023-02-23T01:49:40.538641Z VERBOSE - _CallbackReceiver (1221) - Handle obtained
+2023-02-23T01:49:40.538643Z VERBOSE - _CallbackReceiver (1224) - Copying data...
+2023-02-23T01:49:40.538671Z VERBOSE - _CallbackReceiver (1254) - Data copied
+2023-02-23T01:49:40.538678Z DEBUG   - me frame index: 0 me index: 0 HDR frame index: 0 HDR index: 0
+2023-02-23T01:49:40.538679Z DEBUG   - [_CallbackReceiver] Notifying wakeup condition
+2023-02-23T01:49:40.595096Z DEBUG   - _CameraParametersCallbackReceiver (907) - me index params: 0 hdr index params: 0
+2023-02-23T01:49:40.595107Z VERBOSE - _CallbackReceiver (1201) - Frame received
+2023-02-23T01:49:40.595108Z VERBOSE - _CallbackReceiver (1217) - Obtaining handle...
+2023-02-23T01:49:40.595123Z VERBOSE - _CallbackReceiver (1221) - Handle obtained
+2023-02-23T01:49:40.595124Z VERBOSE - _CallbackReceiver (1224) - Copying data...
+2023-02-23T01:49:40.595157Z VERBOSE - _CallbackReceiver (1254) - Data copied
+2023-02-23T01:49:40.595165Z DEBUG   - me frame index: 0 me index: 0 HDR frame index: 0 HDR index: 0
+2023-02-23T01:49:40.595166Z DEBUG   - [_CallbackReceiver] Notifying wakeup condition
+2023-02-23T01:49:40.606065Z DEBUG   - _CameraParametersCallbackReceiver (907) - me index params: 0 hdr index params: 0
+2023-02-23T01:49:40.606073Z VERBOSE - _CallbackReceiver (1201) - Frame received
+2023-02-23T01:49:40.606074Z VERBOSE - _CallbackReceiver (1217) - Obtaining handle...
+2023-02-23T01:49:40.606085Z VERBOSE - _CallbackReceiver (1221) - Handle obtained
+2023-02-23T01:49:40.606086Z VERBOSE - _CallbackReceiver (1224) - Copying data...
+2023-02-23T01:49:40.606115Z VERBOSE - _CallbackReceiver (1254) - Data copied
+2023-02-23T01:49:40.606122Z DEBUG   - me frame index: 0 me index: 0 HDR frame index: 0 HDR index: 0
+2023-02-23T01:49:40.606123Z DEBUG   - [_CallbackReceiver] Notifying wakeup condition
+2023-02-23T01:49:40.662781Z DEBUG   - _CameraParametersCallbackReceiver (907) - me index params: 0 hdr index params: 0
+2023-02-23T01:49:40.662801Z VERBOSE - _CallbackReceiver (1201) - Frame received
+2023-02-23T01:49:40.662804Z VERBOSE - _CallbackReceiver (1217) - Obtaining handle...
+2023-02-23T01:49:40.662829Z VERBOSE - _CallbackReceiver (1221) - Handle obtained
+2023-02-23T01:49:40.662832Z VERBOSE - _CallbackReceiver (1224) - Copying data...
+2023-02-23T01:49:40.662921Z VERBOSE - _CallbackReceiver (1254) - Data copied
+2023-02-23T01:49:40.662948Z DEBUG   - me frame index: 0 me index: 0 HDR frame index: 0 HDR index: 0
+2023-02-23T01:49:40.662949Z DEBUG   - [_CallbackReceiver] Notifying wakeup condition
+2023-02-23T01:49:40.673444Z DEBUG   - _CameraParametersCallbackReceiver (907) - me index params: 0 hdr index params: 0
+2023-02-23T01:49:40.673452Z VERBOSE - _CallbackReceiver (1201) - Frame received
+2023-02-23T01:49:40.673453Z VERBOSE - _CallbackReceiver (1217) - Obtaining handle...
+2023-02-23T01:49:40.673464Z VERBOSE - _CallbackReceiver (1221) - Handle obtained
+2023-02-23T01:49:40.673465Z VERBOSE - _CallbackReceiver (1224) - Copying data...
+2023-02-23T01:49:40.673495Z VERBOSE - _CallbackReceiver (1254) - Data copied
+2023-02-23T01:49:40.673502Z DEBUG   - me frame index: 0 me index: 0 HDR frame index: 0 HDR index: 0
+2023-02-23T01:49:40.673503Z DEBUG   - [_CallbackReceiver] Notifying wakeup condition
+2023-02-23T01:49:40.729150Z DEBUG   - _CameraParametersCallbackReceiver (907) - me index params: 0 hdr index params: 0
+2023-02-23T01:49:40.729161Z VERBOSE - _CallbackReceiver (1201) - Frame received
+2023-02-23T01:49:40.729162Z VERBOSE - _CallbackReceiver (1217) - Obtaining handle...
+2023-02-23T01:49:40.729177Z VERBOSE - _CallbackReceiver (1221) - Handle obtained
+2023-02-23T01:49:40.729178Z VERBOSE - _CallbackReceiver (1224) - Copying data...
+2023-02-23T01:49:40.729217Z VERBOSE - _CallbackReceiver (1254) - Data copied
+2023-02-23T01:49:40.729226Z DEBUG   - me frame index: 0 me index: 0 HDR frame index: 0 HDR index: 0
+2023-02-23T01:49:40.729227Z DEBUG   - [_CallbackReceiver] Notifying wakeup condition
+2023-02-23T01:49:40.740769Z DEBUG   - _CameraParametersCallbackReceiver (907) - me index params: 0 hdr index params: 0
+2023-02-23T01:49:40.740775Z VERBOSE - _CallbackReceiver (1201) - Frame received
+2023-02-23T01:49:40.740776Z VERBOSE - _CallbackReceiver (1217) - Obtaining handle...
+2023-02-23T01:49:40.740786Z VERBOSE - _CallbackReceiver (1221) - Handle obtained
+2023-02-23T01:49:40.740787Z VERBOSE - _CallbackReceiver (1224) - Copying data...
+2023-02-23T01:49:40.740816Z VERBOSE - _CallbackReceiver (1254) - Data copied
+2023-02-23T01:49:40.740822Z DEBUG   - me frame index: 0 me index: 0 HDR frame index: 0 HDR index: 0
+2023-02-23T01:49:40.740823Z DEBUG   - [_CallbackReceiver] Notifying wakeup condition
+2023-02-23T01:49:40.796410Z DEBUG   - _CameraParametersCallbackReceiver (907) - me index params: 0 hdr index params: 0
+2023-02-23T01:49:40.796430Z VERBOSE - _CallbackReceiver (1201) - Frame received
+2023-02-23T01:49:40.796433Z VERBOSE - _CallbackReceiver (1217) - Obtaining handle...
+2023-02-23T01:49:40.796473Z VERBOSE - _CallbackReceiver (1221) - Handle obtained
+2023-02-23T01:49:40.796475Z VERBOSE - _CallbackReceiver (1224) - Copying data...
+2023-02-23T01:49:40.796523Z VERBOSE - _CallbackReceiver (1254) - Data copied
+2023-02-23T01:49:40.796540Z DEBUG   - me frame index: 0 me index: 0 HDR frame index: 0 HDR index: 0
+2023-02-23T01:49:40.796542Z DEBUG   - [_CallbackReceiver] Notifying wakeup condition
+2023-02-23T01:49:40.808121Z DEBUG   - _CameraParametersCallbackReceiver (907) - me index params: 0 hdr index params: 0
+2023-02-23T01:49:40.808129Z VERBOSE - _CallbackReceiver (1201) - Frame received
+2023-02-23T01:49:40.808130Z VERBOSE - _CallbackReceiver (1217) - Obtaining handle...
+2023-02-23T01:49:40.808145Z VERBOSE - _CallbackReceiver (1221) - Handle obtained
+2023-02-23T01:49:40.808146Z VERBOSE - _CallbackReceiver (1224) - Copying data...
+2023-02-23T01:49:40.808176Z VERBOSE - _CallbackReceiver (1254) - Data copied
+2023-02-23T01:49:40.808187Z DEBUG   - me frame index: 0 me index: 0 HDR frame index: 0 HDR index: 0
+2023-02-23T01:49:40.808187Z DEBUG   - [_CallbackReceiver] Notifying wakeup condition
+2023-02-23T01:49:40.863302Z DEBUG   - _CameraParametersCallbackReceiver (907) - me index params: 0 hdr index params: 0
+2023-02-23T01:49:40.863320Z VERBOSE - _CallbackReceiver (1201) - Frame received
+2023-02-23T01:49:40.863322Z VERBOSE - _CallbackReceiver (1217) - Obtaining handle...
+2023-02-23T01:49:40.863343Z VERBOSE - _CallbackReceiver (1221) - Handle obtained
+2023-02-23T01:49:40.863345Z VERBOSE - _CallbackReceiver (1224) - Copying data...
+2023-02-23T01:49:40.863405Z VERBOSE - _CallbackReceiver (1254) - Data copied
+2023-02-23T01:49:40.863417Z DEBUG   - me frame index: 0 me index: 0 HDR frame index: 0 HDR index: 0
+2023-02-23T01:49:40.863418Z DEBUG   - [_CallbackReceiver] Notifying wakeup condition
+2023-02-23T01:49:40.875462Z DEBUG   - _CameraParametersCallbackReceiver (907) - me index params: 0 hdr index params: 0
+2023-02-23T01:49:40.875469Z VERBOSE - _CallbackReceiver (1201) - Frame received
+2023-02-23T01:49:40.875470Z VERBOSE - _CallbackReceiver (1217) - Obtaining handle...
+2023-02-23T01:49:40.875480Z VERBOSE - _CallbackReceiver (1221) - Handle obtained
+2023-02-23T01:49:40.875481Z VERBOSE - _CallbackReceiver (1224) - Copying data...
+2023-02-23T01:49:40.875511Z VERBOSE - _CallbackReceiver (1254) - Data copied
+2023-02-23T01:49:40.875518Z DEBUG   - me frame index: 0 me index: 0 HDR frame index: 0 HDR index: 0
+2023-02-23T01:49:40.875519Z DEBUG   - [_CallbackReceiver] Notifying wakeup condition
+2023-02-23T01:49:40.930327Z DEBUG   - _CameraParametersCallbackReceiver (907) - me index params: 0 hdr index params: 0
+2023-02-23T01:49:40.930343Z VERBOSE - _CallbackReceiver (1201) - Frame received
+2023-02-23T01:49:40.930345Z VERBOSE - _CallbackReceiver (1217) - Obtaining handle...
+2023-02-23T01:49:40.930365Z VERBOSE - _CallbackReceiver (1221) - Handle obtained
+2023-02-23T01:49:40.930368Z VERBOSE - _CallbackReceiver (1224) - Copying data...
+2023-02-23T01:49:40.930404Z VERBOSE - _CallbackReceiver (1254) - Data copied
+2023-02-23T01:49:40.930417Z DEBUG   - me frame index: 0 me index: 0 HDR frame index: 0 HDR index: 0
+2023-02-23T01:49:40.930419Z DEBUG   - [_CallbackReceiver] Notifying wakeup condition
+2023-02-23T01:49:40.942839Z DEBUG   - _CameraParametersCallbackReceiver (907) - me index params: 0 hdr index params: 0
+2023-02-23T01:49:40.942845Z VERBOSE - _CallbackReceiver (1201) - Frame received
+2023-02-23T01:49:40.942847Z VERBOSE - _CallbackReceiver (1217) - Obtaining handle...
+2023-02-23T01:49:40.942858Z VERBOSE - _CallbackReceiver (1221) - Handle obtained
+2023-02-23T01:49:40.942860Z VERBOSE - _CallbackReceiver (1224) - Copying data...
+2023-02-23T01:49:40.942888Z VERBOSE - _CallbackReceiver (1254) - Data copied
+2023-02-23T01:49:40.942896Z DEBUG   - me frame index: 0 me index: 0 HDR frame index: 0 HDR index: 0
+2023-02-23T01:49:40.942896Z DEBUG   - [_CallbackReceiver] Notifying wakeup condition
+2023-02-23T01:49:40.997416Z DEBUG   - _CameraParametersCallbackReceiver (907) - me index params: 0 hdr index params: 0
+2023-02-23T01:49:40.997434Z VERBOSE - _CallbackReceiver (1201) - Frame received
+2023-02-23T01:49:40.997437Z VERBOSE - _CallbackReceiver (1217) - Obtaining handle...
+2023-02-23T01:49:40.997456Z VERBOSE - _CallbackReceiver (1221) - Handle obtained
+2023-02-23T01:49:40.997459Z VERBOSE - _CallbackReceiver (1224) - Copying data...
+2023-02-23T01:49:40.997498Z VERBOSE - _CallbackReceiver (1254) - Data copied
+2023-02-23T01:49:40.997510Z DEBUG   - me frame index: 0 me index: 0 HDR frame index: 0 HDR index: 0
+2023-02-23T01:49:40.997512Z DEBUG   - [_CallbackReceiver] Notifying wakeup condition
+2023-02-23T01:49:41.010170Z DEBUG   - _CameraParametersCallbackReceiver (907) - me index params: 0 hdr index params: 0
+2023-02-23T01:49:41.010177Z VERBOSE - _CallbackReceiver (1201) - Frame received
+2023-02-23T01:49:41.010179Z VERBOSE - _CallbackReceiver (1217) - Obtaining handle...
+2023-02-23T01:49:41.010188Z VERBOSE - _CallbackReceiver (1221) - Handle obtained
+2023-02-23T01:49:41.010190Z VERBOSE - _CallbackReceiver (1224) - Copying data...
+2023-02-23T01:49:41.010220Z VERBOSE - _CallbackReceiver (1254) - Data copied
+2023-02-23T01:49:41.010227Z DEBUG   - me frame index: 0 me index: 0 HDR frame index: 0 HDR index: 0
+2023-02-23T01:49:41.010228Z DEBUG   - [_CallbackReceiver] Notifying wakeup condition
+2023-02-23T01:49:41.064451Z DEBUG   - _CameraParametersCallbackReceiver (907) - me index params: 0 hdr index params: 0
+2023-02-23T01:49:41.064462Z VERBOSE - _CallbackReceiver (1201) - Frame received
+2023-02-23T01:49:41.064463Z VERBOSE - _CallbackReceiver (1217) - Obtaining handle...
+2023-02-23T01:49:41.064478Z VERBOSE - _CallbackReceiver (1221) - Handle obtained
+2023-02-23T01:49:41.064479Z VERBOSE - _CallbackReceiver (1224) - Copying data...
+2023-02-23T01:49:41.064512Z VERBOSE - _CallbackReceiver (1254) - Data copied
+2023-02-23T01:49:41.064520Z DEBUG   - me frame index: 0 me index: 0 HDR frame index: 0 HDR index: 0
+2023-02-23T01:49:41.064521Z DEBUG   - [_CallbackReceiver] Notifying wakeup condition
+2023-02-23T01:49:41.077590Z DEBUG   - _CameraParametersCallbackReceiver (907) - me index params: 0 hdr index params: 0
+2023-02-23T01:49:41.077597Z VERBOSE - _CallbackReceiver (1201) - Frame received
+2023-02-23T01:49:41.077599Z VERBOSE - _CallbackReceiver (1217) - Obtaining handle...
+2023-02-23T01:49:41.077609Z VERBOSE - _CallbackReceiver (1221) - Handle obtained
+2023-02-23T01:49:41.077611Z VERBOSE - _CallbackReceiver (1224) - Copying data...
+2023-02-23T01:49:41.077640Z VERBOSE - _CallbackReceiver (1254) - Data copied
+2023-02-23T01:49:41.077647Z DEBUG   - me frame index: 0 me index: 0 HDR frame index: 0 HDR index: 0
+2023-02-23T01:49:41.077648Z DEBUG   - [_CallbackReceiver] Notifying wakeup condition
+2023-02-23T01:49:41.131866Z DEBUG   - _CameraParametersCallbackReceiver (907) - me index params: 0 hdr index params: 0
+2023-02-23T01:49:41.131880Z VERBOSE - _CallbackReceiver (1201) - Frame received
+2023-02-23T01:49:41.131881Z VERBOSE - _CallbackReceiver (1217) - Obtaining handle...
+2023-02-23T01:49:41.131897Z VERBOSE - _CallbackReceiver (1221) - Handle obtained
+2023-02-23T01:49:41.131898Z VERBOSE - _CallbackReceiver (1224) - Copying data...
+2023-02-23T01:49:41.131934Z VERBOSE - _CallbackReceiver (1254) - Data copied
+2023-02-23T01:49:41.131942Z DEBUG   - me frame index: 0 me index: 0 HDR frame index: 0 HDR index: 0
+2023-02-23T01:49:41.131943Z DEBUG   - [_CallbackReceiver] Notifying wakeup condition
+2023-02-23T01:49:41.144967Z DEBUG   - _CameraParametersCallbackReceiver (907) - me index params: 0 hdr index params: 0
+2023-02-23T01:49:41.144975Z VERBOSE - _CallbackReceiver (1201) - Frame received
+2023-02-23T01:49:41.144977Z VERBOSE - _CallbackReceiver (1217) - Obtaining handle...
+2023-02-23T01:49:41.144992Z VERBOSE - _CallbackReceiver (1221) - Handle obtained
+2023-02-23T01:49:41.144993Z VERBOSE - _CallbackReceiver (1224) - Copying data...
+2023-02-23T01:49:41.145027Z VERBOSE - _CallbackReceiver (1254) - Data copied
+2023-02-23T01:49:41.145036Z DEBUG   - me frame index: 0 me index: 0 HDR frame index: 0 HDR index: 0
+2023-02-23T01:49:41.145036Z DEBUG   - [_CallbackReceiver] Notifying wakeup condition
+2023-02-23T01:49:41.198904Z DEBUG   - _CameraParametersCallbackReceiver (907) - me index params: 0 hdr index params: 0
+2023-02-23T01:49:41.198914Z VERBOSE - _CallbackReceiver (1201) - Frame received
+2023-02-23T01:49:41.198916Z VERBOSE - _CallbackReceiver (1217) - Obtaining handle...
+2023-02-23T01:49:41.198930Z VERBOSE - _CallbackReceiver (1221) - Handle obtained
+2023-02-23T01:49:41.198932Z VERBOSE - _CallbackReceiver (1224) - Copying data...
+2023-02-23T01:49:41.198964Z VERBOSE - _CallbackReceiver (1254) - Data copied
+2023-02-23T01:49:41.198972Z DEBUG   - me frame index: 0 me index: 0 HDR frame index: 0 HDR index: 0
+2023-02-23T01:49:41.198973Z DEBUG   - [_CallbackReceiver] Notifying wakeup condition
+2023-02-23T01:49:41.212333Z DEBUG   - _CameraParametersCallbackReceiver (907) - me index params: 0 hdr index params: 0
+2023-02-23T01:49:41.212340Z VERBOSE - _CallbackReceiver (1201) - Frame received
+2023-02-23T01:49:41.212342Z VERBOSE - _CallbackReceiver (1217) - Obtaining handle...
+2023-02-23T01:49:41.212350Z VERBOSE - _CallbackReceiver (1221) - Handle obtained
+2023-02-23T01:49:41.212352Z VERBOSE - _CallbackReceiver (1224) - Copying data...
+2023-02-23T01:49:41.212382Z VERBOSE - _CallbackReceiver (1254) - Data copied
+2023-02-23T01:49:41.212390Z DEBUG   - me frame index: 0 me index: 0 HDR frame index: 0 HDR index: 0
+2023-02-23T01:49:41.212391Z DEBUG   - [_CallbackReceiver] Notifying wakeup condition
+2023-02-23T01:49:41.265756Z DEBUG   - _CameraParametersCallbackReceiver (907) - me index params: 0 hdr index params: 0
+2023-02-23T01:49:41.265767Z VERBOSE - _CallbackReceiver (1201) - Frame received
+2023-02-23T01:49:41.265768Z VERBOSE - _CallbackReceiver (1217) - Obtaining handle...
+2023-02-23T01:49:41.265783Z VERBOSE - _CallbackReceiver (1221) - Handle obtained
+2023-02-23T01:49:41.265785Z VERBOSE - _CallbackReceiver (1224) - Copying data...
+2023-02-23T01:49:41.265819Z VERBOSE - _CallbackReceiver (1254) - Data copied
+2023-02-23T01:49:41.265827Z DEBUG   - me frame index: 0 me index: 0 HDR frame index: 0 HDR index: 0
+2023-02-23T01:49:41.265828Z DEBUG   - [_CallbackReceiver] Notifying wakeup condition
+2023-02-23T01:49:41.280043Z DEBUG   - _CameraParametersCallbackReceiver (907) - me index params: 0 hdr index params: 0
+2023-02-23T01:49:41.280054Z VERBOSE - _CallbackReceiver (1201) - Frame received
+2023-02-23T01:49:41.280057Z VERBOSE - _CallbackReceiver (1217) - Obtaining handle...
+2023-02-23T01:49:41.280077Z VERBOSE - _CallbackReceiver (1221) - Handle obtained
+2023-02-23T01:49:41.280080Z VERBOSE - _CallbackReceiver (1224) - Copying data...
+2023-02-23T01:49:41.280120Z VERBOSE - _CallbackReceiver (1254) - Data copied
+2023-02-23T01:49:41.280132Z DEBUG   - me frame index: 0 me index: 0 HDR frame index: 0 HDR index: 0
+2023-02-23T01:49:41.280134Z DEBUG   - [_CallbackReceiver] Notifying wakeup condition
+2023-02-23T01:49:41.332869Z DEBUG   - _CameraParametersCallbackReceiver (907) - me index params: 0 hdr index params: 0
+2023-02-23T01:49:41.332886Z VERBOSE - _CallbackReceiver (1201) - Frame received
+2023-02-23T01:49:41.332889Z VERBOSE - _CallbackReceiver (1217) - Obtaining handle...
+2023-02-23T01:49:41.332912Z VERBOSE - _CallbackReceiver (1221) - Handle obtained
+2023-02-23T01:49:41.332915Z VERBOSE - _CallbackReceiver (1224) - Copying data...
+2023-02-23T01:49:41.332970Z VERBOSE - _CallbackReceiver (1254) - Data copied
+2023-02-23T01:49:41.332982Z DEBUG   - me frame index: 0 me index: 0 HDR frame index: 0 HDR index: 0
+2023-02-23T01:49:41.332984Z DEBUG   - [_CallbackReceiver] Notifying wakeup condition
+2023-02-23T01:49:41.347477Z DEBUG   - _CameraParametersCallbackReceiver (907) - me index params: 0 hdr index params: 0
+2023-02-23T01:49:41.347487Z VERBOSE - _CallbackReceiver (1201) - Frame received
+2023-02-23T01:49:41.347489Z VERBOSE - _CallbackReceiver (1217) - Obtaining handle...
+2023-02-23T01:49:41.347506Z VERBOSE - _CallbackReceiver (1221) - Handle obtained
+2023-02-23T01:49:41.347508Z VERBOSE - _CallbackReceiver (1224) - Copying data...
+2023-02-23T01:49:41.347548Z VERBOSE - _CallbackReceiver (1254) - Data copied
+2023-02-23T01:49:41.347560Z DEBUG   - me frame index: 0 me index: 0 HDR frame index: 0 HDR index: 0
+2023-02-23T01:49:41.347561Z DEBUG   - [_CallbackReceiver] Notifying wakeup condition
+2023-02-23T01:49:41.399955Z DEBUG   - _CameraParametersCallbackReceiver (907) - me index params: 0 hdr index params: 0
+2023-02-23T01:49:41.399972Z VERBOSE - _CallbackReceiver (1201) - Frame received
+2023-02-23T01:49:41.399974Z VERBOSE - _CallbackReceiver (1217) - Obtaining handle...
+2023-02-23T01:49:41.399993Z VERBOSE - _CallbackReceiver (1221) - Handle obtained
+2023-02-23T01:49:41.399995Z VERBOSE - _CallbackReceiver (1224) - Copying data...
+2023-02-23T01:49:41.400038Z VERBOSE - _CallbackReceiver (1254) - Data copied
+2023-02-23T01:49:41.400052Z DEBUG   - me frame index: 0 me index: 0 HDR frame index: 0 HDR index: 0
+2023-02-23T01:49:41.400053Z DEBUG   - [_CallbackReceiver] Notifying wakeup condition
+2023-02-23T01:49:41.414894Z DEBUG   - _CameraParametersCallbackReceiver (907) - me index params: 0 hdr index params: 0
+2023-02-23T01:49:41.414901Z VERBOSE - _CallbackReceiver (1201) - Frame received
+2023-02-23T01:49:41.414902Z VERBOSE - _CallbackReceiver (1217) - Obtaining handle...
+2023-02-23T01:49:41.414912Z VERBOSE - _CallbackReceiver (1221) - Handle obtained
+2023-02-23T01:49:41.414913Z VERBOSE - _CallbackReceiver (1224) - Copying data...
+2023-02-23T01:49:41.414944Z VERBOSE - _CallbackReceiver (1254) - Data copied
+2023-02-23T01:49:41.414951Z DEBUG   - me frame index: 0 me index: 0 HDR frame index: 0 HDR index: 0
+2023-02-23T01:49:41.414952Z DEBUG   - [_CallbackReceiver] Notifying wakeup condition
+2023-02-23T01:49:41.467884Z DEBUG   - _CameraParametersCallbackReceiver (907) - me index params: 0 hdr index params: 0
+2023-02-23T01:49:41.467912Z VERBOSE - _CallbackReceiver (1201) - Frame received
+2023-02-23T01:49:41.467914Z VERBOSE - _CallbackReceiver (1217) - Obtaining handle...
+2023-02-23T01:49:41.467932Z VERBOSE - _CallbackReceiver (1221) - Handle obtained
+2023-02-23T01:49:41.467933Z VERBOSE - _CallbackReceiver (1224) - Copying data...
+2023-02-23T01:49:41.467988Z VERBOSE - _CallbackReceiver (1254) - Data copied
+2023-02-23T01:49:41.467999Z DEBUG   - me frame index: 0 me index: 0 HDR frame index: 0 HDR index: 0
+2023-02-23T01:49:41.468000Z DEBUG   - [_CallbackReceiver] Notifying wakeup condition
+2023-02-23T01:49:41.475908Z VERBOSE - Pause (504) - driver pauzing...
+2023-02-23T01:49:41.475912Z DEBUG   - virtual void ihspt::drivers::CM_Controller::_Pause(std::unique_lock<std::mutex>&) (783) - -->
+2023-02-23T01:49:41.475917Z DEBUG   - _AcquisitionLoop (1648) - Starting wakeup condition
+2023-02-23T01:49:41.475927Z DEBUG   - _Pause (816) - Creating trigger lock
+2023-02-23T01:49:41.475929Z DEBUG   - _Pause (818) - Passed trigger lock
+2023-02-23T01:49:41.475932Z DEBUG   - pausing the camera
+2023-02-23T01:49:41.482331Z DEBUG   - _CameraParametersCallbackReceiver (907) - me index params: 0 hdr index params: 0
+2023-02-23T01:49:41.482337Z VERBOSE - _CallbackReceiver (1201) - Frame received
+2023-02-23T01:49:41.482339Z VERBOSE - _CallbackReceiver (1217) - Obtaining handle...
+2023-02-23T01:49:41.482348Z VERBOSE - _CallbackReceiver (1221) - Handle obtained
+2023-02-23T01:49:41.482349Z VERBOSE - _CallbackReceiver (1224) - Copying data...
+2023-02-23T01:49:41.482379Z VERBOSE - _CallbackReceiver (1254) - Data copied
+2023-02-23T01:49:41.482386Z DEBUG   - me frame index: 0 me index: 0 HDR frame index: 0 HDR index: 0
+2023-02-23T01:49:41.482388Z DEBUG   - [_CallbackReceiver] Notifying wakeup condition
+2023-02-23T01:49:41.549776Z DEBUG   - _CameraParametersCallbackReceiver (907) - me index params: 0 hdr index params: 0
+2023-02-23T01:49:41.549784Z VERBOSE - _CallbackReceiver (1201) - Frame received
+2023-02-23T01:49:41.549786Z VERBOSE - _CallbackReceiver (1217) - Obtaining handle...
+2023-02-23T01:49:41.549793Z VERBOSE - _CallbackReceiver (1221) - Handle obtained
+2023-02-23T01:49:41.549795Z VERBOSE - _CallbackReceiver (1224) - Copying data...
+2023-02-23T01:49:41.549825Z VERBOSE - _CallbackReceiver (1254) - Data copied
+2023-02-23T01:49:41.549832Z DEBUG   - me frame index: 0 me index: 0 HDR frame index: 0 HDR index: 0
+2023-02-23T01:49:41.549833Z DEBUG   - [_CallbackReceiver] Notifying wakeup condition
+2023-02-23T01:49:41.617149Z DEBUG   - _CameraParametersCallbackReceiver (907) - me index params: 0 hdr index params: 0
+2023-02-23T01:49:41.617155Z VERBOSE - _CallbackReceiver (1201) - Frame received
+2023-02-23T01:49:41.617156Z VERBOSE - _CallbackReceiver (1217) - Obtaining handle...
+2023-02-23T01:49:41.617163Z VERBOSE - _CallbackReceiver (1221) - Handle obtained
+2023-02-23T01:49:41.617164Z VERBOSE - _CallbackReceiver (1224) - Copying data...
+2023-02-23T01:49:41.617193Z VERBOSE - _CallbackReceiver (1254) - Data copied
+2023-02-23T01:49:41.617200Z DEBUG   - me frame index: 0 me index: 0 HDR frame index: 0 HDR index: 0
+2023-02-23T01:49:41.617201Z DEBUG   - [_CallbackReceiver] Notifying wakeup condition
+2023-02-23T01:49:41.684458Z DEBUG   - _CameraParametersCallbackReceiver (907) - me index params: 0 hdr index params: 0
+2023-02-23T01:49:41.684464Z VERBOSE - _CallbackReceiver (1201) - Frame received
+2023-02-23T01:49:41.684465Z VERBOSE - _CallbackReceiver (1217) - Obtaining handle...
+2023-02-23T01:49:41.684472Z VERBOSE - _CallbackReceiver (1221) - Handle obtained
+2023-02-23T01:49:41.684473Z VERBOSE - _CallbackReceiver (1224) - Copying data...
+2023-02-23T01:49:41.684505Z VERBOSE - _CallbackReceiver (1254) - Data copied
+2023-02-23T01:49:41.684512Z DEBUG   - me frame index: 0 me index: 0 HDR frame index: 0 HDR index: 0
+2023-02-23T01:49:41.684513Z DEBUG   - [_CallbackReceiver] Notifying wakeup condition
+2023-02-23T01:49:41.751805Z DEBUG   - _CameraParametersCallbackReceiver (907) - me index params: 0 hdr index params: 0
+2023-02-23T01:49:41.751812Z VERBOSE - _CallbackReceiver (1201) - Frame received
+2023-02-23T01:49:41.751814Z VERBOSE - _CallbackReceiver (1217) - Obtaining handle...
+2023-02-23T01:49:41.751825Z VERBOSE - _CallbackReceiver (1221) - Handle obtained
+2023-02-23T01:49:41.751826Z VERBOSE - _CallbackReceiver (1224) - Copying data...
+2023-02-23T01:49:41.751851Z VERBOSE - _CallbackReceiver (1254) - Data copied
+2023-02-23T01:49:41.751860Z DEBUG   - me frame index: 0 me index: 0 HDR frame index: 0 HDR index: 0
+2023-02-23T01:49:41.751861Z DEBUG   - [_CallbackReceiver] Notifying wakeup condition
+2023-02-23T01:49:41.796921Z DEBUG   - camera paused
+2023-02-23T01:49:41.796926Z DEBUG   - virtual void ihspt::drivers::CM_Controller::_Pause(std::unique_lock<std::mutex>&) (833) - <--
+2023-02-23T01:49:41.796928Z VERBOSE - Pause (529) - driver pauzing finished
+2023-02-23T01:49:41.796941Z DEBUG   - _AcquisitionLoop (1658) - Condition interrupted.
+2023-02-23T01:49:41.796944Z DEBUG   - _AcquisitionLoop (1648) - Starting wakeup condition
+2023-02-23T01:49:41.796957Z VERBOSE - driver stopping...
+2023-02-23T01:49:41.819359Z DEBUG   - _CameraParametersCallbackReceiver (907) - me index params: 0 hdr index params: 0
+2023-02-23T01:49:41.819368Z VERBOSE - _CallbackReceiver (1201) - Frame received
+2023-02-23T01:49:41.819370Z VERBOSE - _CallbackReceiver (1217) - Obtaining handle...
+2023-02-23T01:49:41.819386Z VERBOSE - _CallbackReceiver (1221) - Handle obtained
+2023-02-23T01:49:41.819388Z VERBOSE - _CallbackReceiver (1224) - Copying data...
+2023-02-23T01:49:41.819417Z VERBOSE - _CallbackReceiver (1254) - Data copied
+2023-02-23T01:49:41.819427Z DEBUG   - me frame index: 0 me index: 0 HDR frame index: 0 HDR index: 0
+2023-02-23T01:49:41.819428Z DEBUG   - [_CallbackReceiver] Notifying wakeup condition
+2023-02-23T01:49:41.849703Z DEBUG   - _AcquisitionLoop (1658) - Condition interrupted.
+2023-02-23T01:49:41.849706Z INFO    - [CameraController::_AcquisitionLoop] thread finished
+2023-02-23T01:49:41.849747Z VERBOSE - driver stopping finished
+2023-02-23T01:49:41.849767Z VERBOSE - driver forcing disconnect...
+2023-02-23T01:49:41.886724Z DEBUG   - _CameraParametersCallbackReceiver (907) - me index params: 0 hdr index params: 0
+2023-02-23T01:49:41.886732Z VERBOSE - _CallbackReceiver (1201) - Frame received
+2023-02-23T01:49:41.886734Z VERBOSE - _CallbackReceiver (1217) - Obtaining handle...
+2023-02-23T01:49:41.886744Z VERBOSE - _CallbackReceiver (1221) - Handle obtained
+2023-02-23T01:49:41.886746Z VERBOSE - _CallbackReceiver (1224) - Copying data...
+2023-02-23T01:49:41.886775Z VERBOSE - _CallbackReceiver (1254) - Data copied
+2023-02-23T01:49:41.886784Z DEBUG   - me frame index: 0 me index: 0 HDR frame index: 0 HDR index: 0
+2023-02-23T01:49:41.886786Z DEBUG   - [_CallbackReceiver] Notifying wakeup condition
+2023-02-23T01:49:41.954075Z DEBUG   - _CameraParametersCallbackReceiver (907) - me index params: 0 hdr index params: 0
+2023-02-23T01:49:41.954083Z VERBOSE - _CallbackReceiver (1201) - Frame received
+2023-02-23T01:49:41.954084Z VERBOSE - _CallbackReceiver (1217) - Obtaining handle...
+2023-02-23T01:49:41.954108Z VERBOSE - _CallbackReceiver (1221) - Handle obtained
+2023-02-23T01:49:41.954110Z VERBOSE - _CallbackReceiver (1224) - Copying data...
+2023-02-23T01:49:41.954142Z VERBOSE - _CallbackReceiver (1254) - Data copied
+2023-02-23T01:49:41.954149Z DEBUG   - me frame index: 0 me index: 0 HDR frame index: 0 HDR index: 0
+2023-02-23T01:49:41.954150Z DEBUG   - [_CallbackReceiver] Notifying wakeup condition
+2023-02-23T01:49:41.959872Z VERBOSE - driver forcing disconnect finished
+2023-02-23T01:49:41.960093Z VERBOSE - Pause (504) - driver pauzing...
+2023-02-23T01:49:41.960097Z DEBUG   - virtual void ihspt::drivers::CM_Controller::_Pause(std::unique_lock<std::mutex>&) (783) - -->
+2023-02-23T01:49:41.960104Z DEBUG   - _AcquisitionLoop (1648) - Starting wakeup condition
+2023-02-23T01:49:41.960111Z DEBUG   - _Pause (816) - Creating trigger lock
+2023-02-23T01:49:41.960113Z DEBUG   - _Pause (818) - Passed trigger lock
+2023-02-23T01:49:41.960115Z DEBUG   - pausing the camera
+2023-02-23T01:49:42.021027Z DEBUG   - camera paused
+2023-02-23T01:49:42.021034Z DEBUG   - virtual void ihspt::drivers::CM_Controller::_Pause(std::unique_lock<std::mutex>&) (833) - <--
+2023-02-23T01:49:42.021045Z VERBOSE - Pause (529) - driver pauzing finished
+2023-02-23T01:49:42.021061Z DEBUG   - _AcquisitionLoop (1658) - Condition interrupted.
+2023-02-23T01:49:42.021068Z DEBUG   - _AcquisitionLoop (1648) - Starting wakeup condition
+2023-02-23T01:49:42.021075Z VERBOSE - driver stopping...
+2023-02-23T01:49:42.021295Z DEBUG   - _AcquisitionLoop (1658) - Condition interrupted.
+2023-02-23T01:49:42.021303Z INFO    - [CameraController::_AcquisitionLoop] thread finished
+2023-02-23T01:49:42.021378Z VERBOSE - driver stopping finished
+2023-02-23T01:49:42.021427Z VERBOSE - driver forcing disconnect...
+2023-02-23T01:49:42.021437Z VERBOSE - driver forcing disconnect finished

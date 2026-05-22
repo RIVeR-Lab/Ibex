@@ -1,0 +1,37 @@
+ENVI
+acquisition time = 2020-03-09T12:59:22.211502Z
+band names = { 606.224551, 618.856885, 640.398391, 658.563021, 676.142057, 692.001926, 710.499836, 728.252207, 746.489499, 762.584915, 778.837633, 794.385663, 809.914799, 825.358697, 833.931466 }
+bands = 15
+byte order = 0
+data type = 4
+file type = ENVI Standard
+fwhm = { 6.404958678, 5.103305785, 4.731404959, 5.103305785, 7.148760331, 8.450413223, 11.23966942, 8.078512397, 12.54132231, 10.12396694, 10.8677686, 10.49586777, 10.8677686, 14.21487603, 14.21487603 }
+header offset = 0
+interleave = BIP
+lines = 540
+samples = 1020
+wavelength = {
+    606.2245508, 618.8568848, 640.3983906, 658.5630214, 676.142057, 692.001926, 710.4998357, 728.2522065, 746.4894994, 762.5849147, 778.8376334, 794.3856634, 809.9147993, 825.358697, 833.9314659
+}
+wavelength units = nm
+; imec extensions
+integration time = 4
+max value = 4.233841062
+saturation value = 1
+no data value = 3.402823466e+38
+data source = HSI Matlab v1.2.0-rc
+system id = 13.13.3.8
+corrected data = 1
+reflectance data = 1
+alignment = 1
+angularity correction = 1
+correction matrix name = hsi_irradiance
+exit_pupil_distance_mm = 21
+f_number = 4
+index = 0
+non-uniformity = 1
+sensor_refractive_index = 1.7
+spatial median filter size = 3
+spatial median filtering = 1
+spatial resampling = 1
+white value = 0.75

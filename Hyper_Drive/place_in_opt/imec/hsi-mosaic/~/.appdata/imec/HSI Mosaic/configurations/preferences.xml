@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<parameter_container version="1" type="DefaultGeneric" name="main controller" description="main controller parameters">
+  <parameters>
+    <parameter version="0" type="0" name="Language" description="ISO 639 code" group="runtime">
+      <value>en_US</value>
+      <validators>
+        <regex>
+          <regex>.*</regex>
+        </regex>
+      </validators>
+    </parameter>
+    <parameter version="0" type="3" name="Expertise level" description="Simplify or extend the features' list according to the expertise level" group="runtime">
+      <value>0</value>
+      <validators>
+        <criterium>
+          <value>0</value>
+          <name>BEGINNER</name>
+        </criterium>
+        <criterium>
+          <value>1</value>
+          <name>EXPERT</name>
+        </criterium>
+        <criterium>
+          <value>2</value>
+          <name>GURU</name>
+        </criterium>
+      </validators>
+    </parameter>
+    <parameter version="0" type="3" name="Log verbosity" description="Threshold the severity of the logged information" group="runtime">
+      <value>2</value>
+      <validators>
+        <criterium>
+          <value>6</value>
+          <name>NONE</name>
+        </criterium>
+        <criterium>
+          <value>4</value>
+          <name>DEBUG</name>
+        </criterium>
+        <criterium>
+          <value>5</value>
+          <name>VERBOSE</name>
+        </criterium>
+        <criterium>
+          <value>3</value>
+          <name>INFO</name>
+        </criterium>
+        <criterium>
+          <value>2</value>
+          <name>WARNING</name>
+        </criterium>
+        <criterium>
+          <value>1</value>
+          <name>ERROR</name>
+        </criterium>
+      </validators>
+    </parameter>
+    <parameter version="0" type="4" name="Log path" description="Path to the log folder" group="configuration">
+      <value>~/.appdata/imec/HSI Mosaic/logs</value>
+      <validators/>
+    </parameter>
+    <parameter version="0" type="4" name="Cache path" description="Path to the cache folder" group="configuration">
+      <value>~/.appdata/imec/HSI Mosaic/cache</value>
+      <validators/>
+    </parameter>
+    <parameter version="0" type="4" name="Export path" description="Path to the export folder" group="configuration">
+      <value>~/.mydocuments/imec/HSI Mosaic</value>
+      <validators/>
+    </parameter>
+    <parameter version="0" type="4" name="Configurations path" description="Path to the conigurations folder" group="configuration">
+      <value>~/.appdata/imec/HSI Mosaic/configurations</value>
+      <validators/>
+    </parameter>
+    <parameter version="0" type="4" name="Screenshot path" description="Path to the screenshot folder" group="configuration">
+      <value>~/.appdata/imec/HSI Mosaic/screenshots</value>
+      <validators/>
+    </parameter>
+    <parameter version="0" type="4" name="Pipeline parameters folder" description="Folder to use for pipeline parameters xml" group="initialize">
+      <value>~/.appdata/imec/HSI Mosaic/pipeline_parameters</value>
+      <validators/>
+    </parameter>
+    <parameter version="0" type="4" name="System configurations folder" description="Folder containing all the system configurations" group="initialize">
+      <value>~/.appdata/imec/HSI Mosaic/system_configurations</value>
+      <validators/>
+    </parameter>
+    <parameter version="0" type="4" name="Optical setups folder" description="Folder to use for defaulting optical setups per camera" group="initialize">
+      <value>~/.appdata/imec/HSI Mosaic/optical_setups</value>
+      <validators/>
+    </parameter>
+    <parameter version="0" type="4" name="Lens properties folder" description="Folder to use for storing lens properties" group="initialize">
+      <value>~/.appdata/imec/HSI Mosaic/optical_setups/lens_properties</value>
+      <validators/>
+    </parameter>
+    <parameter version="0" type="4" name="Non uniformity folder" description="Folder to use for storing per-system non-uniformity" group="initialize">
+      <value>~/.appdata/imec/HSI Mosaic/non_uniformity</value>
+      <validators/>
+    </parameter>
+  </parameters>
+  <sub_containers>
+    <parameter_container version="1" type="DefaultGeneric" name="analyze_controller" description="N.A.">
+      <parameters>
+        <parameter version="0" type="3" name="Pipeline selector" description="Pipeline enum case" group="runtime">
+          <value>1</value>
+          <validators>
+            <criterium>
+              <value>0</value>
+              <name>FULL_COVERAGE</name>
+            </criterium>
+            <criterium>
+              <value>1</value>
+              <name>REFERENCE_SPECTRUM</name>
+            </criterium>
+          </validators>
+        </parameter>
+      </parameters>
+      <sub_containers/>
+    </parameter_container>
+  </sub_containers>
+</parameter_container>

@@ -1,0 +1,8 @@
+{
+	"3D03": ["PFToolkit2DGUI"],
+	"3D06": ["PFToolkit3DGUI","PFToolkit2DGUI"],
+	"3D07": ["PFToolkit3DGUI","PFToolkit2DGUI"],
+    "3DFS01": ["PFToolkit3DGUI","PFToolkit2DGUI"],
+	"Polarized": ["PFToolkitPolarizedGUI","PFToolkit2DGUI"],
+	"2D": ["PFToolkit2DGUI"]
+}

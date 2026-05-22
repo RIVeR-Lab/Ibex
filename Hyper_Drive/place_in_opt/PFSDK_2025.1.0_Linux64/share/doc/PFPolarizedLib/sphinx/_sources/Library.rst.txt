@@ -1,0 +1,21 @@
+.. _Library-Files:
+
+Library files
+=============
+ 
+Here is a list of all files with brief descriptions:
+
+:ref:`Mono Camera Algorithms <Mono_Algorithms>`
+
+:ref:`Color Camera Algorithms <Color_Algorithms>`
+
+:ref:`Errors-Definitions`
+
+.. toctree::
+   :caption: Modules
+   :titlesonly:
+   :maxdepth: 1
+   :hidden:
+   
+   Library/Library
+  

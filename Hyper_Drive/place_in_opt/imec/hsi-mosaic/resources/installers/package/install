@@ -1,0 +1,39 @@
+#!/bin/bash
+
+echo Installing XIMEA Linux Software Package
+
+start_params=$*
+
+if [ -e /currera/status/version_LINUX_IMG.txt ]
+then
+    echo
+    echo This is CURRERA - Linux
+    echo If you are prompted for password, just enter: password
+	start_params="-cam_currera"
+fi
+
+arch=$(uname -m)
+bits=$(getconf LONG_BIT)
+
+if [ "$bits" != "32" -a "$bits" != "64" ]
+then
+	echo ERROR: Cannot detect architecture
+	echo getconf returned $bits, expected 32 or 64
+	sleep 5
+	exit 2
+fi
+
+if [ "$arch" == "i686" -o "$arch" == "x86_64" ]
+then
+	echo Instaling x$bits bit version
+	sudo scripts/install_steps -x$bits $start_params
+elif [ "${arch:0:3}" == "arm" -o "$arch" == "aarch64" ]
+then
+	echo Instaling ARM$bits version
+	sudo scripts/install_steps -arm$bits $start_params
+else
+	echo ERROR: Unsupported architecture $arch detected
+	echo Supported architectures: i686, x86_64, arm, aarch64
+	sleep 5
+	exit 1
+fi

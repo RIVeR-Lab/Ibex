@@ -1,0 +1,29 @@
+
+.. _Mono_Algorithms:
+
+Mono Camera Polarized Algorithms
+================================
+
+.. doxygenfile:: pfcPolarizedAlgorithms.h
+
+.. _Color_Algorithms:
+
+Color Camera Polarized Algorithms
+=================================
+
+.. doxygenfile:: pfcPolarizedColorAlgorithms.h
+
+.. _Errors-Definitions:
+
+Errors and Definitions
+======================
+
+.. doxygenfile:: pfcPolarizedErrors.h
+.. doxygenfile:: pfcPolarizedDefs.h
+
+.. toctree::
+   :caption: Modules
+   :titlesonly:
+   :maxdepth: 1
+   :hidden:
+  

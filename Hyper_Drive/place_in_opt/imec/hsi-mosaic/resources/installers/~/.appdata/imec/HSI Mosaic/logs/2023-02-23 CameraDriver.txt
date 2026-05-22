@@ -1,0 +1,4 @@
+2023-02-23T01:41:33.546016Z WARNING - _SetConnectionParameters (361) - Cannot cast to local parameters.
+2023-02-23T01:41:33.546031Z WARNING - Cannot cast to local parameters.
+2023-02-23T01:41:34.881756Z ERROR   - [virtual void ihspt::drivers::CM_XimeaXiq::_Connect()] xiOpenDeviceBy(XI_OPEN_BY_SN, _identification_string.c_str(), &_device) : Unknown hardware
+2023-02-23T01:41:34.882440Z WARNING - [virtual void ihspt::drivers::CM_XimeaXiq::_Disconnect()] xiCloseDevice (_device) : Unknown hardware

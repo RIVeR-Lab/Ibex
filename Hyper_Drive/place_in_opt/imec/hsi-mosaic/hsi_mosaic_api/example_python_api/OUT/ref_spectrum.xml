@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<spectrum version="0">
+  <values nr_elements="15">319.844, 346.185, 404.656, 437.614, 467.493, 495.07, 550.808, 633.42, 721.972, 754.297, 818.711, 850.721, 838.063, 831.922, 850.97</values>
+  <wavelengths nr_elements="15">606.225, 618.857, 640.398, 658.563, 676.142, 692.002, 710.5, 728.252, 746.489, 762.585, 778.838, 794.386, 809.915, 825.359, 833.931</wavelengths>
+  <spectrum_info version="0">
+    <analog_gain>1</analog_gain>
+    <integration_time_ms>4</integration_time_ms>
+    <acquisition_time_us>1583758762211502</acquisition_time_us>
+    <value_max>4803.829150621786</value_max>
+    <value_saturation>4803.829150621786</value_saturation>
+    <value_no_data>3.402823466e+38</value_no_data>
+    <value_min>0</value_min>
+    <valid>true</valid>
+    <dark_field_corrected>true</dark_field_corrected>
+    <vignetting_corrected>false</vignetting_corrected>
+    <white_balanced>false</white_balanced>
+    <spectral_corrected>true</spectral_corrected>
+  </spectrum_info>
+</spectrum>

@@ -1,0 +1,6 @@
+# KEYLOK Security Dongle Rules to remove root/su restriction
+ATTRS{idVendor}=="07f2", ATTRS{idProduct}=="0001", MODE="0666"
+ATTRS{idVendor}=="0471", ATTRS{idProduct}=="485d", MODE="0666"
+SUBSYSTEMS=="usb", ATTRS{idVendor}=="07f2", ATTRS{idProduct}=="0003", MODE="0666"
+SUBSYSTEMS=="usb", ATTRS{idVendor}=="0471", ATTRS{idProduct}=="485e", MODE="0666"
+SUBSYSTEMS=="usb", ATTRS{idVendor}=="0471", ATTRS{idProduct}=="485d", MODE="0666"

@@ -1,0 +1,40 @@
+2023-03-31T14:11:57.655197Z INFO    - ProcessingUnit::_PropagateDataTypes()
+2023-03-31T14:11:57.655212Z INFO    - OutputPort: non_uniformity_pipeline.frame_processing_group.source_unit.out; Actual kind: AK_ROI_FRAME; Minimal kind: AK_ARRAY
+2023-03-31T14:11:57.655219Z INFO    - InputPort: non_uniformity_pipeline.frame_processing_group.bias_correction_unit.in; Actual kind: AK_ROI_FRAME; Minimal kind: AK_IMAGE
+2023-03-31T14:11:57.883138Z INFO    - ProcessingUnit::Process
+2023-03-31T14:11:57.887286Z INFO    - ProcessingUnit::Process
+2023-03-31T14:11:58.135142Z INFO    - ProcessingUnit::_PropagateDataTypes()
+2023-03-31T14:11:58.135161Z INFO    - OutputPort: reference_spectrum_pipeline.frame_processing_group.source_unit.out; Actual kind: AK_ROI_FRAME; Minimal kind: AK_ARRAY
+2023-03-31T14:11:58.135166Z INFO    - InputPort: reference_spectrum_pipeline.frame_processing_group.bias_correction_unit.in; Actual kind: AK_ROI_FRAME; Minimal kind: AK_IMAGE
+2023-03-31T14:11:58.363724Z INFO    - ProcessingUnit::Process
+2023-03-31T14:11:58.394504Z INFO    - ProcessingUnit::Process
+2023-03-31T14:11:58.632519Z INFO    - ProcessingUnit::_PropagateDataTypes()
+2023-03-31T14:11:58.632538Z INFO    - OutputPort: non_uniformity_pipeline.frame_processing_group.source_unit.out; Actual kind: AK_ROI_FRAME; Minimal kind: AK_ARRAY
+2023-03-31T14:11:58.632547Z INFO    - InputPort: non_uniformity_pipeline.frame_processing_group.bias_correction_unit.in; Actual kind: AK_ROI_FRAME; Minimal kind: AK_IMAGE
+2023-03-31T14:11:58.851264Z INFO    - ProcessingUnit::Process
+2023-03-31T14:11:58.855515Z INFO    - ProcessingUnit::Process
+2023-03-31T14:11:59.101592Z INFO    - ProcessingUnit::_PropagateDataTypes()
+2023-03-31T14:11:59.101617Z INFO    - OutputPort: reference_spectrum_pipeline.frame_processing_group.source_unit.out; Actual kind: AK_ROI_FRAME; Minimal kind: AK_ARRAY
+2023-03-31T14:11:59.101624Z INFO    - InputPort: reference_spectrum_pipeline.frame_processing_group.bias_correction_unit.in; Actual kind: AK_ROI_FRAME; Minimal kind: AK_IMAGE
+2023-03-31T14:11:59.336674Z INFO    - ProcessingUnit::Process
+2023-03-31T14:11:59.346591Z INFO    - ProcessingUnit::Process
+2023-03-31T14:14:58.365670Z INFO    - ProcessingUnit::_PropagateDataTypes()
+2023-03-31T14:14:58.365689Z INFO    - OutputPort: non_uniformity_pipeline.frame_processing_group.source_unit.out; Actual kind: AK_ROI_FRAME; Minimal kind: AK_ARRAY
+2023-03-31T14:14:58.365694Z INFO    - InputPort: non_uniformity_pipeline.frame_processing_group.bias_correction_unit.in; Actual kind: AK_ROI_FRAME; Minimal kind: AK_IMAGE
+2023-03-31T14:14:58.588467Z INFO    - ProcessingUnit::Process
+2023-03-31T14:14:58.592152Z INFO    - ProcessingUnit::Process
+2023-03-31T14:14:58.850747Z INFO    - ProcessingUnit::_PropagateDataTypes()
+2023-03-31T14:14:58.850774Z INFO    - OutputPort: reference_spectrum_pipeline.frame_processing_group.source_unit.out; Actual kind: AK_ROI_FRAME; Minimal kind: AK_ARRAY
+2023-03-31T14:14:58.850781Z INFO    - InputPort: reference_spectrum_pipeline.frame_processing_group.bias_correction_unit.in; Actual kind: AK_ROI_FRAME; Minimal kind: AK_IMAGE
+2023-03-31T14:14:59.084496Z INFO    - ProcessingUnit::Process
+2023-03-31T14:14:59.097237Z INFO    - ProcessingUnit::Process
+2023-03-31T14:14:59.366518Z INFO    - ProcessingUnit::_PropagateDataTypes()
+2023-03-31T14:14:59.366540Z INFO    - OutputPort: non_uniformity_pipeline.frame_processing_group.source_unit.out; Actual kind: AK_ROI_FRAME; Minimal kind: AK_ARRAY
+2023-03-31T14:14:59.366548Z INFO    - InputPort: non_uniformity_pipeline.frame_processing_group.bias_correction_unit.in; Actual kind: AK_ROI_FRAME; Minimal kind: AK_IMAGE
+2023-03-31T14:14:59.583884Z INFO    - ProcessingUnit::Process
+2023-03-31T14:14:59.587509Z INFO    - ProcessingUnit::Process
+2023-03-31T14:14:59.856507Z INFO    - ProcessingUnit::_PropagateDataTypes()
+2023-03-31T14:14:59.856529Z INFO    - OutputPort: reference_spectrum_pipeline.frame_processing_group.source_unit.out; Actual kind: AK_ROI_FRAME; Minimal kind: AK_ARRAY
+2023-03-31T14:14:59.856535Z INFO    - InputPort: reference_spectrum_pipeline.frame_processing_group.bias_correction_unit.in; Actual kind: AK_ROI_FRAME; Minimal kind: AK_IMAGE
+2023-03-31T14:15:00.091936Z INFO    - ProcessingUnit::Process
+2023-03-31T14:15:00.104122Z INFO    - ProcessingUnit::Process

@@ -1,0 +1,27 @@
+var class_pv_session_info_s_d_p =
+[
+    [ "~PvSessionInfoSDP", "class_pv_session_info_s_d_p.html#a5e8c12da5cfb34d53edc52ba31feac18", null ],
+    [ "Copy", "class_pv_session_info_s_d_p.html#ac1abd0085b366bbf3fa57ce68fbaffe2", null ],
+    [ "GetConnectionID", "class_pv_session_info_s_d_p.html#a24ae9d229e0fe87f3646013ac5f40173", null ],
+    [ "GetConnectionIP", "class_pv_session_info_s_d_p.html#aef503a68fb55a1cdb13a7c5ea83261c9", null ],
+    [ "GetContent", "class_pv_session_info_s_d_p.html#a9c3d023eee7a1e62b4a506e8e03c9608", null ],
+    [ "GetDisplayID", "class_pv_session_info_s_d_p.html#aff4c3ca22a60980465a734308a5f5060", null ],
+    [ "GetInterface", "class_pv_session_info_s_d_p.html#a74b583f653fbf9933c95d0ad448ba4e6", null ],
+    [ "GetLicenseMessage", "class_pv_session_info_s_d_p.html#ac99c26bff53baa5f7975ae0ce5d581af", null ],
+    [ "GetMediaColorimetry", "class_pv_session_info_s_d_p.html#a6daafed46010139ab68fccd84a4d4890", null ],
+    [ "GetMediaDepth", "class_pv_session_info_s_d_p.html#a1290c13fd78c95a9395fe00d3a71f32e", null ],
+    [ "GetMediaFramerate", "class_pv_session_info_s_d_p.html#a34e92c47e5a18e5c3d681383fa386114", null ],
+    [ "GetMediaHeight", "class_pv_session_info_s_d_p.html#a78a8b579ab50e434166dac80d30c9ffc", null ],
+    [ "GetMediaInterlaced", "class_pv_session_info_s_d_p.html#ab0b46fa61bfeb279d299407f130435e3", null ],
+    [ "GetMediaSampling", "class_pv_session_info_s_d_p.html#a5d14041f5f33e5ff34d098c1fbb10578", null ],
+    [ "GetMediaTransportPort", "class_pv_session_info_s_d_p.html#a39ebe5979b1b59d59a52c5b1a614fc0b", null ],
+    [ "GetMediaType", "class_pv_session_info_s_d_p.html#a05a5be689347df17ae073579c315461f", null ],
+    [ "GetMediaWidth", "class_pv_session_info_s_d_p.html#ab2a53c5c4b246ff7e2ae8cf2d7444878", null ],
+    [ "GetSessionID", "class_pv_session_info_s_d_p.html#aacea10aecd2e463d5ffa135619cfc9a0", null ],
+    [ "GetSessionInfo", "class_pv_session_info_s_d_p.html#ad133f9a3f3ad6fec9947e7f5c8b69c03", null ],
+    [ "GetSessionName", "class_pv_session_info_s_d_p.html#ac08cf207733382b315e10b8533759b06", null ],
+    [ "GetSessionVersion", "class_pv_session_info_s_d_p.html#ac184744333e1fca9a1fd2f201278ebb1", null ],
+    [ "GetUniqueID", "class_pv_session_info_s_d_p.html#aa3c61f70c7df05c9bea619fb0202b0df", null ],
+    [ "IsConfigurationValid", "class_pv_session_info_s_d_p.html#a3613a92e1f687d892b1b56f18821eead", null ],
+    [ "IsLicenseValid", "class_pv_session_info_s_d_p.html#a58817e8d4f6fba5d811c545b83c34807", null ]
+];

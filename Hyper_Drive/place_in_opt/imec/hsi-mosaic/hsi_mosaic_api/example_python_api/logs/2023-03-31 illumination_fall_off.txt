@@ -1,0 +1,16 @@
+2023-03-31T14:11:57.743632Z INFO    - ProcessingUnit::_PropagateDataTypes()
+2023-03-31T14:11:57.743639Z INFO    - OutputPort: non_uniformity_pipeline.spatial_processing_group.illumination_fall_off.out; Actual kind: AK_BAND_IMAGE_BSQ; Minimal kind: AK_ARRAY
+2023-03-31T14:11:57.743645Z INFO    - InputPort: non_uniformity_pipeline.spatial_processing_group.spatial_processing_group_out.in; Actual kind: AK_BAND_IMAGE_BSQ; Minimal kind: AK_BAND_IMAGE_BSQ
+2023-03-31T14:11:58.022687Z INFO    - ProcessingUnit::Process
+2023-03-31T14:11:58.690335Z INFO    - ProcessingUnit::_PropagateDataTypes()
+2023-03-31T14:11:58.690340Z INFO    - OutputPort: non_uniformity_pipeline.spatial_processing_group.illumination_fall_off.out; Actual kind: AK_BAND_IMAGE_BSQ; Minimal kind: AK_ARRAY
+2023-03-31T14:11:58.690346Z INFO    - InputPort: non_uniformity_pipeline.spatial_processing_group.spatial_processing_group_out.in; Actual kind: AK_BAND_IMAGE_BSQ; Minimal kind: AK_BAND_IMAGE_BSQ
+2023-03-31T14:11:58.990062Z INFO    - ProcessingUnit::Process
+2023-03-31T14:14:58.443957Z INFO    - ProcessingUnit::_PropagateDataTypes()
+2023-03-31T14:14:58.443963Z INFO    - OutputPort: non_uniformity_pipeline.spatial_processing_group.illumination_fall_off.out; Actual kind: AK_BAND_IMAGE_BSQ; Minimal kind: AK_ARRAY
+2023-03-31T14:14:58.443969Z INFO    - InputPort: non_uniformity_pipeline.spatial_processing_group.spatial_processing_group_out.in; Actual kind: AK_BAND_IMAGE_BSQ; Minimal kind: AK_BAND_IMAGE_BSQ
+2023-03-31T14:14:58.733485Z INFO    - ProcessingUnit::Process
+2023-03-31T14:14:59.422689Z INFO    - ProcessingUnit::_PropagateDataTypes()
+2023-03-31T14:14:59.422692Z INFO    - OutputPort: non_uniformity_pipeline.spatial_processing_group.illumination_fall_off.out; Actual kind: AK_BAND_IMAGE_BSQ; Minimal kind: AK_ARRAY
+2023-03-31T14:14:59.422696Z INFO    - InputPort: non_uniformity_pipeline.spatial_processing_group.spatial_processing_group_out.in; Actual kind: AK_BAND_IMAGE_BSQ; Minimal kind: AK_BAND_IMAGE_BSQ
+2023-03-31T14:14:59.731696Z INFO    - ProcessingUnit::Process

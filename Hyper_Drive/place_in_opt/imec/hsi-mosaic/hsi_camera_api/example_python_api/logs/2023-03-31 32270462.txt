@@ -1,0 +1,1021 @@
+2023-03-31T14:16:22.617403Z INFO    - CM_XimeaXiq::_SetConfigurationParameters() 0 1 # 0 0 0 0 2.8 1.2
+2023-03-31T14:16:22.617433Z INFO    - CM_XimeaXiq::_SetConfigurationParameters() 0 1 # 10000 15 0 0 2.8 1.2
+2023-03-31T14:16:22.617438Z WARNING - _SetConnectionParameters (361) - Cannot cast to local parameters.
+2023-03-31T14:16:22.617439Z WARNING - Cannot cast to local parameters.
+2023-03-31T14:16:22.617475Z VERBOSE - driver connecting...
+2023-03-31T14:16:22.874828Z INFO    - device info - name: MQ022HG-IM-SM5X5-NIR2
+2023-03-31T14:16:22.874834Z INFO    - device info - type: USB3.0
+2023-03-31T14:16:22.874835Z INFO    - device info - model: 1009
+2023-03-31T14:16:22.874835Z INFO    - device info - serial number: 32270462
+2023-03-31T14:16:22.877155Z INFO    - device info - sensor width: 2048
+2023-03-31T14:16:22.877159Z INFO    - device info - sensor height: 1088
+2023-03-31T14:16:22.877161Z INFO    - device info - min integration time (us): 21
+2023-03-31T14:16:22.877162Z INFO    - device info - max integration time (us): 999995
+2023-03-31T14:16:22.877183Z VERBOSE - _SyncSensorRegisters (2814) - -->
+2023-03-31T14:16:22.913866Z VERBOSE - _SyncSensorRegisters (2838) - <--
+2023-03-31T14:16:22.913877Z DEBUG   - _LogSensorParameters (975) - Inte_sync: 1
+2023-03-31T14:16:22.913879Z DEBUG   - _LogSensorParameters (976) - Exp_ext: 0
+2023-03-31T14:16:22.913881Z DEBUG   - _LogSensorParameters (977) - Col_calib: 0
+2023-03-31T14:16:22.913883Z DEBUG   - _LogSensorParameters (978) - ADC_calib: 0
+2023-03-31T14:16:22.913885Z DEBUG   - _LogSensorParameters (979) - I_col: 4
+2023-03-31T14:16:22.913896Z DEBUG   - _LogSensorParameters (980) - I_col_prech: 1
+2023-03-31T14:16:22.913898Z DEBUG   - _LogSensorParameters (981) - I_amp: 12
+2023-03-31T14:16:22.913899Z DEBUG   - _LogSensorParameters (982) - Vtf_l1: 64
+2023-03-31T14:16:22.913901Z DEBUG   - _LogSensorParameters (983) - Vres_low: 64
+2023-03-31T14:16:22.913903Z DEBUG   - _LogSensorParameters (984) - V_prech: 101
+2023-03-31T14:16:22.913904Z DEBUG   - _LogSensorParameters (985) - V_ref: 106
+2023-03-31T14:16:22.913907Z DEBUG   - _LogSensorParameters (986) - Dummy: 4
+2023-03-31T14:16:22.913909Z DEBUG   - _LogSensorParameters (987) - V_blacksun: 34
+2023-03-31T14:16:22.913911Z DEBUG   - _LogSensorParameters (988) - black_level: 16300
+2023-03-31T14:16:22.913912Z DEBUG   - _LogSensorParameters (989) - V_ramp1: 109
+2023-03-31T14:16:22.913915Z DEBUG   - _LogSensorParameters (990) - V_ramp2: 109
+2023-03-31T14:16:22.913916Z DEBUG   - _LogSensorParameters (991) - adc_gain: 46
+2023-03-31T14:16:22.913918Z DEBUG   - _LogSensorParameters (992) - pga_gain: 1
+2023-03-31T14:16:22.913920Z DEBUG   - _LogSensorParameters (993) - pga_gain_2: 0
+2023-03-31T14:16:22.913922Z DEBUG   - _LogSensorParameters (994) - Output_mode: 1
+2023-03-31T14:16:22.913924Z DEBUG   - _LogSensorParameters (995) - Image flipping: 2
+2023-03-31T14:16:22.913926Z VERBOSE - driver connected
+2023-03-31T14:16:22.914305Z VERBOSE - driver initializing...
+2023-03-31T14:16:22.914305Z VERBOSE -    trying to initialize...
+2023-03-31T14:16:23.143121Z INFO    - sensor bit depth: 10; output bit depth: 10
+2023-03-31T14:16:24.607383Z INFO    - _Initialize (1693) - Acquisition buffer size is set to: 132120576
+2023-03-31T14:16:24.607400Z INFO    - _Initialize (1699) - Requested minimum acq buffer queue length: 64
+2023-03-31T14:16:24.607527Z INFO    - _Initialize (1712) - Allocated acq buffer queue length: 107
+2023-03-31T14:16:24.607548Z INFO    - _Initialize (1740) - clock frequency: 48000000
+2023-03-31T14:16:25.795954Z INFO    - CM_XimeaXiq::_SetRuntimeParameters() Start 0 1 exp: 10000 fr: 15 0 bl.off: 50 0 0
+2023-03-31T14:16:25.938034Z INFO    - CM_XimeaXiq::_SetRuntimeParameters() End 0 1 exp: 9998 fr: 15 0 bl.off: 50 AG: 2.8 DG: 1.2 0 0
+2023-03-31T14:16:25.938060Z VERBOSE - _StartAcquisition (1049) - -->
+2023-03-31T14:16:25.988097Z INFO    - CM_XimeaXiq::_SetSensorParameters entered
+2023-03-31T14:16:25.988120Z INFO    - _UploadSensorRegisters (2754) - --->
+2023-03-31T14:16:25.988127Z DEBUG   - _UploadSensorRegisters (2770) - Changing register 100 to value 236
+2023-03-31T14:16:25.988265Z DEBUG   - _UploadSensorRegisters (2770) - Changing register 101 to value 63
+2023-03-31T14:16:25.988409Z DEBUG   - _UploadSensorRegisters (2770) - Changing register 102 to value 2
+2023-03-31T14:16:25.988553Z DEBUG   - _UploadSensorRegisters (2770) - Changing register 103 to value 44
+2023-03-31T14:16:25.988701Z DEBUG   - _UploadSensorRegisters (2770) - Changing register 118 to value 1
+2023-03-31T14:16:25.988851Z DEBUG   - _UploadSensorRegisters (2770) - Changing register 121 to value 1
+2023-03-31T14:16:25.988997Z INFO    - _UploadSensorRegisters (2780) - <---
+2023-03-31T14:16:25.989006Z INFO    - CM_XimeaXiq::_SetSensorParameters() End Black level offset 50 analog gain 2.8 digital gain 1.20465
+2023-03-31T14:16:25.989007Z INFO    - CM_XimeaXiq::_SetSensorParameters exited
+2023-03-31T14:16:25.990997Z DEBUG   - _UpdateSensorRegisters (1395) - AG: 2.8 DG: 1.20465 BlO: 50 Vramp: 109
+2023-03-31T14:16:25.991001Z VERBOSE - _StartAcquisition (1066) - <--
+2023-03-31T14:16:25.991004Z DEBUG   - _Initialize (1846) - Grabbing sensor parameters after initialization
+2023-03-31T14:16:25.991008Z INFO    - CM_XimeaXiq::_DownloadSensorRegisters() Start Black level offset 50 analog gain 2.8 digital gain 1.20465
+2023-03-31T14:16:25.991010Z VERBOSE - _SyncSensorRegisters (2814) - -->
+2023-03-31T14:16:26.027717Z VERBOSE - _SyncSensorRegisters (2838) - <--
+2023-03-31T14:16:26.027745Z INFO    - CM_XimeaXiq::_DownloadSensorRegisters() End Black level offset 50 analog gain 2.8 digital gain 1.20465
+2023-03-31T14:16:26.027749Z INFO    - DM_Camera::_GetSensorParameters entered
+2023-03-31T14:16:26.027752Z INFO    - DM_Camera::_GetSensorParameters exited
+2023-03-31T14:16:26.027759Z DEBUG   - _LogSensorParameters (975) - Inte_sync: 1
+2023-03-31T14:16:26.027762Z DEBUG   - _LogSensorParameters (976) - Exp_ext: 0
+2023-03-31T14:16:26.027765Z DEBUG   - _LogSensorParameters (977) - Col_calib: 0
+2023-03-31T14:16:26.027768Z DEBUG   - _LogSensorParameters (978) - ADC_calib: 0
+2023-03-31T14:16:26.027771Z DEBUG   - _LogSensorParameters (979) - I_col: 4
+2023-03-31T14:16:26.027775Z DEBUG   - _LogSensorParameters (980) - I_col_prech: 1
+2023-03-31T14:16:26.027777Z DEBUG   - _LogSensorParameters (981) - I_amp: 12
+2023-03-31T14:16:26.027778Z DEBUG   - _LogSensorParameters (982) - Vtf_l1: 64
+2023-03-31T14:16:26.027781Z DEBUG   - _LogSensorParameters (983) - Vres_low: 64
+2023-03-31T14:16:26.027783Z DEBUG   - _LogSensorParameters (984) - V_prech: 101
+2023-03-31T14:16:26.027785Z DEBUG   - _LogSensorParameters (985) - V_ref: 106
+2023-03-31T14:16:26.027787Z DEBUG   - _LogSensorParameters (986) - Dummy: 1
+2023-03-31T14:16:26.027788Z DEBUG   - _LogSensorParameters (987) - V_blacksun: 34
+2023-03-31T14:16:26.027791Z DEBUG   - _LogSensorParameters (988) - black_level: 16364
+2023-03-31T14:16:26.027793Z DEBUG   - _LogSensorParameters (989) - V_ramp1: 109
+2023-03-31T14:16:26.027795Z DEBUG   - _LogSensorParameters (990) - V_ramp2: 109
+2023-03-31T14:16:26.027797Z DEBUG   - _LogSensorParameters (991) - adc_gain: 44
+2023-03-31T14:16:26.027798Z DEBUG   - _LogSensorParameters (992) - pga_gain: 2
+2023-03-31T14:16:26.027800Z DEBUG   - _LogSensorParameters (993) - pga_gain_2: 1
+2023-03-31T14:16:26.027802Z DEBUG   - _LogSensorParameters (994) - Output_mode: 1
+2023-03-31T14:16:26.027804Z DEBUG   - _LogSensorParameters (995) - Image flipping: 2
+2023-03-31T14:16:26.027806Z VERBOSE -    initalization successful...
+2023-03-31T14:16:26.027806Z VERBOSE - driver initialization finished
+2023-03-31T14:16:26.029544Z INFO    - CM_XimeaXiq::_SetRuntimeParameters() Start 0 1 exp: 9998 fr: 15 0 bl.off: 50 0 0
+2023-03-31T14:16:26.029553Z INFO    - CM_XimeaXiq::_SetRuntimeParameters() End 0 1 exp: 9998 fr: 15 0 bl.off: 50 AG: 2.8 DG: 1.20465 0 0
+2023-03-31T14:16:26.029885Z INFO    - CM_XimeaXiq::_SetRuntimeParameters() Start 0 1 exp: 9998 fr: 15 0 bl.off: 50 0 0
+2023-03-31T14:16:26.029892Z INFO    - CM_XimeaXiq::_SetRuntimeParameters() End 0 1 exp: 9998 fr: 15 0 bl.off: 50 AG: 2.8 DG: 1.20465 0 0
+2023-03-31T14:16:26.029897Z INFO    - CM_XimeaXiq::_SetRuntimeParameters() Start 0 1 exp: 9998 fr: 15 1 bl.off: 50 0 0
+2023-03-31T14:16:26.198125Z VERBOSE - _StartAcquisition (1049) - -->
+2023-03-31T14:16:26.248043Z INFO    - CM_XimeaXiq::_SetSensorParameters entered
+2023-03-31T14:16:26.248064Z INFO    - _UploadSensorRegisters (2754) - --->
+2023-03-31T14:16:26.248070Z DEBUG   - _UploadSensorRegisters (2770) - Changing register 102 to value 2
+2023-03-31T14:16:26.248214Z DEBUG   - _UploadSensorRegisters (2770) - Changing register 118 to value 1
+2023-03-31T14:16:26.248358Z DEBUG   - _UploadSensorRegisters (2770) - Changing register 121 to value 1
+2023-03-31T14:16:26.248526Z INFO    - _UploadSensorRegisters (2780) - <---
+2023-03-31T14:16:26.248534Z INFO    - CM_XimeaXiq::_SetSensorParameters() End Black level offset 50 analog gain 2.8 digital gain 1.20465
+2023-03-31T14:16:26.248534Z INFO    - CM_XimeaXiq::_SetSensorParameters exited
+2023-03-31T14:16:26.250552Z DEBUG   - _UpdateSensorRegisters (1395) - AG: 2.8 DG: 1.20465 BlO: 50 Vramp: 109
+2023-03-31T14:16:26.250556Z VERBOSE - _StartAcquisition (1066) - <--
+2023-03-31T14:16:26.276602Z INFO    - CM_XimeaXiq::_SetSensorParameters entered
+2023-03-31T14:16:26.276624Z INFO    - _UploadSensorRegisters (2754) - --->
+2023-03-31T14:16:26.276631Z DEBUG   - _UploadSensorRegisters (2770) - Changing register 102 to value 2
+2023-03-31T14:16:26.276772Z DEBUG   - _UploadSensorRegisters (2770) - Changing register 118 to value 1
+2023-03-31T14:16:26.276916Z DEBUG   - _UploadSensorRegisters (2770) - Changing register 121 to value 1
+2023-03-31T14:16:26.277059Z INFO    - _UploadSensorRegisters (2780) - <---
+2023-03-31T14:16:26.277070Z INFO    - CM_XimeaXiq::_SetSensorParameters() End Black level offset 50 analog gain 2.8 digital gain 1.20465
+2023-03-31T14:16:26.277072Z INFO    - CM_XimeaXiq::_SetSensorParameters exited
+2023-03-31T14:16:26.279054Z DEBUG   - _UpdateSensorRegisters (1395) - AG: 2.8 DG: 1.20465 BlO: 50 Vramp: 109
+2023-03-31T14:16:26.279064Z INFO    - CM_XimeaXiq::_SetRuntimeParameters() End 0 1 exp: 9998 fr: 15 1 bl.off: 50 AG: 2.8 DG: 1.20465 0 0
+2023-03-31T14:16:26.279624Z INFO    - CM_XimeaXiq::_SetRuntimeParameters() Start 0 1 exp: 9998 fr: 15 1 bl.off: 50 0 0
+2023-03-31T14:16:26.279631Z INFO    - CM_XimeaXiq::_SetRuntimeParameters() End 0 1 exp: 9998 fr: 15 1 bl.off: 50 AG: 2.8 DG: 1.20465 0 0
+2023-03-31T14:16:26.279632Z VERBOSE - driver starting...
+2023-03-31T14:16:26.285103Z VERBOSE - driver starting finished
+2023-03-31T14:16:26.285209Z DEBUG   - Trigger (1123) - Triggering camera
+2023-03-31T14:16:26.285218Z INFO    - Trigger (1136) - 0/1
+2023-03-31T14:16:26.285233Z VERBOSE - _AcquisitionLoop (2153) - Triggering camera
+2023-03-31T14:16:26.285683Z DEBUG   - _AcquisitionLoop (2178) - Waiting for image...
+2023-03-31T14:16:26.299246Z DEBUG   - nframe: 0; acq_nframe: 1; Previous acq_nframe: 0; Acq. time: 2023-03-31T14:16:26.299211Z; crnt. burst counter: 0; burst frames: 1
+2023-03-31T14:16:26.299383Z WARNING - [virtual double ihspt::drivers::CM_XimeaXiq::_GetTemperature()] xiSetParamInt (_device, XI_PRM_TEMP_SELECTOR, XI_TEMP_IMAGE_SENSOR_DIE) : Not supported
+2023-03-31T14:16:26.299679Z DEBUG   - _AcquisitionLoop (2257) - Entering update of parameters...
+2023-03-31T14:16:26.299709Z INFO    - CM_XimeaXiq::_SetRuntimeParameters() Start 0 1 exp: 9998 fr: 15 1 bl.off: 50 0 0
+2023-03-31T14:16:26.299719Z INFO    - CM_XimeaXiq::_SetRuntimeParameters() End 0 1 exp: 9998 fr: 15 1 bl.off: 50 AG: 2.8 DG: 1.20465 0 0
+2023-03-31T14:16:26.299722Z DEBUG   - _AcquisitionLoop (2262) - Update of parameters finished
+2023-03-31T14:16:26.300629Z VERBOSE - Pause (504) - driver pauzing...
+2023-03-31T14:16:26.300645Z DEBUG   - unlocking driver
+2023-03-31T14:16:26.300660Z DEBUG   - driver unlocked
+2023-03-31T14:16:26.300676Z DEBUG   - ...trying to lock driver
+2023-03-31T14:16:26.300690Z DEBUG   - ...driver unlocked
+2023-03-31T14:16:26.300706Z DEBUG   - ...wakeup condition called
+2023-03-31T14:16:26.300724Z VERBOSE - Pause (529) - driver pauzing finished
+2023-03-31T14:16:26.300873Z INFO    - CM_XimeaXiq::_SetRuntimeParameters() Start 0 1 exp: 9998 fr: 1 1 bl.off: 50 0 0
+2023-03-31T14:16:26.358696Z INFO    - CM_XimeaXiq::_SetSensorParameters entered
+2023-03-31T14:16:26.358719Z INFO    - _UploadSensorRegisters (2754) - --->
+2023-03-31T14:16:26.358727Z DEBUG   - _UploadSensorRegisters (2770) - Changing register 102 to value 2
+2023-03-31T14:16:26.358869Z DEBUG   - _UploadSensorRegisters (2770) - Changing register 118 to value 1
+2023-03-31T14:16:26.359011Z DEBUG   - _UploadSensorRegisters (2770) - Changing register 121 to value 1
+2023-03-31T14:16:26.359153Z INFO    - _UploadSensorRegisters (2780) - <---
+2023-03-31T14:16:26.359164Z INFO    - CM_XimeaXiq::_SetSensorParameters() End Black level offset 50 analog gain 2.8 digital gain 1.20465
+2023-03-31T14:16:26.359165Z INFO    - CM_XimeaXiq::_SetSensorParameters exited
+2023-03-31T14:16:26.361160Z DEBUG   - _UpdateSensorRegisters (1395) - AG: 2.8 DG: 1.20465 BlO: 50 Vramp: 109
+2023-03-31T14:16:26.361173Z INFO    - CM_XimeaXiq::_SetRuntimeParameters() End 0 1 exp: 9998 fr: 1 1 bl.off: 50 AG: 2.8 DG: 1.20465 0 0
+2023-03-31T14:16:26.361187Z INFO    - CM_XimeaXiq::_SetRuntimeParameters() Start 0 1 exp: 9998 fr: 1 1 bl.off: 50 0 0
+2023-03-31T14:16:26.361195Z INFO    - CM_XimeaXiq::_SetRuntimeParameters() End 0 1 exp: 9998 fr: 1 1 bl.off: 50 AG: 2.8 DG: 1.20465 0 0
+2023-03-31T14:16:26.361300Z INFO    - CM_XimeaXiq::_SetRuntimeParameters() Start 0 1 exp: 10000 fr: 1 1 bl.off: 50 0 0
+2023-03-31T14:16:26.402425Z INFO    - CM_XimeaXiq::_SetSensorParameters entered
+2023-03-31T14:16:26.402450Z INFO    - _UploadSensorRegisters (2754) - --->
+2023-03-31T14:16:26.402457Z DEBUG   - _UploadSensorRegisters (2770) - Changing register 102 to value 2
+2023-03-31T14:16:26.402599Z DEBUG   - _UploadSensorRegisters (2770) - Changing register 118 to value 1
+2023-03-31T14:16:26.402744Z DEBUG   - _UploadSensorRegisters (2770) - Changing register 121 to value 1
+2023-03-31T14:16:26.402927Z INFO    - _UploadSensorRegisters (2780) - <---
+2023-03-31T14:16:26.402961Z INFO    - CM_XimeaXiq::_SetSensorParameters() End Black level offset 50 analog gain 2.8 digital gain 1.20465
+2023-03-31T14:16:26.402977Z INFO    - CM_XimeaXiq::_SetSensorParameters exited
+2023-03-31T14:16:26.404997Z DEBUG   - _UpdateSensorRegisters (1395) - AG: 2.8 DG: 1.20465 BlO: 50 Vramp: 109
+2023-03-31T14:16:26.405033Z INFO    - CM_XimeaXiq::_SetRuntimeParameters() End 0 1 exp: 9998 fr: 1 1 bl.off: 50 AG: 2.8 DG: 1.20465 0 0
+2023-03-31T14:16:26.405066Z INFO    - CM_XimeaXiq::_SetRuntimeParameters() Start 0 1 exp: 9998 fr: 1 1 bl.off: 50 0 0
+2023-03-31T14:16:26.405089Z INFO    - CM_XimeaXiq::_SetRuntimeParameters() End 0 1 exp: 9998 fr: 1 1 bl.off: 50 AG: 2.8 DG: 1.20465 0 0
+2023-03-31T14:16:26.405204Z INFO    - CM_XimeaXiq::_SetRuntimeParameters() Start 0 1 exp: 9998 fr: 50 1 bl.off: 50 0 0
+2023-03-31T14:16:26.458705Z INFO    - CM_XimeaXiq::_SetSensorParameters entered
+2023-03-31T14:16:26.458734Z INFO    - _UploadSensorRegisters (2754) - --->
+2023-03-31T14:16:26.458743Z DEBUG   - _UploadSensorRegisters (2770) - Changing register 102 to value 2
+2023-03-31T14:16:26.458893Z DEBUG   - _UploadSensorRegisters (2770) - Changing register 118 to value 1
+2023-03-31T14:16:26.459036Z DEBUG   - _UploadSensorRegisters (2770) - Changing register 121 to value 1
+2023-03-31T14:16:26.459183Z INFO    - _UploadSensorRegisters (2780) - <---
+2023-03-31T14:16:26.459200Z INFO    - CM_XimeaXiq::_SetSensorParameters() End Black level offset 50 analog gain 2.8 digital gain 1.20465
+2023-03-31T14:16:26.459203Z INFO    - CM_XimeaXiq::_SetSensorParameters exited
+2023-03-31T14:16:26.461333Z DEBUG   - _UpdateSensorRegisters (1395) - AG: 2.8 DG: 1.20465 BlO: 50 Vramp: 109
+2023-03-31T14:16:26.461352Z INFO    - CM_XimeaXiq::_SetRuntimeParameters() End 0 1 exp: 9998 fr: 50 1 bl.off: 50 AG: 2.8 DG: 1.20465 0 0
+2023-03-31T14:16:26.461368Z INFO    - CM_XimeaXiq::_SetRuntimeParameters() Start 0 1 exp: 9998 fr: 50 1 bl.off: 50 0 0
+2023-03-31T14:16:26.461376Z INFO    - CM_XimeaXiq::_SetRuntimeParameters() End 0 1 exp: 9998 fr: 50 1 bl.off: 50 AG: 2.8 DG: 1.20465 0 0
+2023-03-31T14:16:26.461467Z INFO    - CM_XimeaXiq::_SetRuntimeParameters() Start 0 1 exp: 9998 fr: 50 1 bl.off: 50 0 0
+2023-03-31T14:16:26.461474Z INFO    - CM_XimeaXiq::_SetRuntimeParameters() End 0 1 exp: 9998 fr: 50 1 bl.off: 50 AG: 2.8 DG: 1.20465 0 0
+2023-03-31T14:16:26.461476Z VERBOSE - driver starting...
+2023-03-31T14:16:26.469087Z VERBOSE - driver starting finished
+2023-03-31T14:16:26.469210Z DEBUG   - Trigger (1123) - Triggering camera
+2023-03-31T14:16:26.469218Z INFO    - Trigger (1136) - 0/1
+2023-03-31T14:16:26.469228Z VERBOSE - _AcquisitionLoop (2153) - Triggering camera
+2023-03-31T14:16:26.469706Z DEBUG   - _AcquisitionLoop (2178) - Waiting for image...
+2023-03-31T14:16:26.482867Z DEBUG   - nframe: 0; acq_nframe: 2; Previous acq_nframe: 1; Acq. time: 2023-03-31T14:16:26.482830Z; crnt. burst counter: 0; burst frames: 1
+2023-03-31T14:16:26.483064Z WARNING - [virtual double ihspt::drivers::CM_XimeaXiq::_GetTemperature()] xiSetParamInt (_device, XI_PRM_TEMP_SELECTOR, XI_TEMP_IMAGE_SENSOR_DIE) : Not supported
+2023-03-31T14:16:26.483432Z DEBUG   - _AcquisitionLoop (2257) - Entering update of parameters...
+2023-03-31T14:16:26.483471Z INFO    - CM_XimeaXiq::_SetRuntimeParameters() Start 0 1 exp: 9998 fr: 50 1 bl.off: 50 0 0
+2023-03-31T14:16:26.483481Z INFO    - CM_XimeaXiq::_SetRuntimeParameters() End 0 1 exp: 9998 fr: 50 1 bl.off: 50 AG: 2.8 DG: 1.20465 0 0
+2023-03-31T14:16:26.483484Z DEBUG   - _AcquisitionLoop (2262) - Update of parameters finished
+2023-03-31T14:16:26.484265Z VERBOSE - Pause (504) - driver pauzing...
+2023-03-31T14:16:26.484267Z DEBUG   - unlocking driver
+2023-03-31T14:16:26.484267Z DEBUG   - driver unlocked
+2023-03-31T14:16:26.484268Z DEBUG   - ...trying to lock driver
+2023-03-31T14:16:26.484269Z DEBUG   - ...driver unlocked
+2023-03-31T14:16:26.484272Z DEBUG   - ...wakeup condition called
+2023-03-31T14:16:26.484275Z VERBOSE - Pause (529) - driver pauzing finished
+2023-03-31T14:16:26.484292Z VERBOSE - driver stopping...
+2023-03-31T14:16:26.800136Z INFO    - [CM_XimeaXiq::_AcquisitionLoop] thread finished
+2023-03-31T14:16:26.800243Z VERBOSE - driver stopping finished
+2023-03-31T14:16:26.800509Z VERBOSE - driver forcing disconnect...
+2023-03-31T14:16:26.803102Z VERBOSE - driver forcing disconnect finished
+2023-03-31T14:16:26.803329Z VERBOSE - driver forcing disconnect...
+2023-03-31T14:16:26.803379Z DEBUG   - driver already disconnected
+2023-03-31T14:16:40.501160Z INFO    - CM_XimeaXiq::_SetConfigurationParameters() 0 1 # 0 0 0 0 2.8 1.2
+2023-03-31T14:16:40.501208Z INFO    - CM_XimeaXiq::_SetConfigurationParameters() 0 1 # 10000 15 0 0 2.8 1.2
+2023-03-31T14:16:40.501214Z WARNING - _SetConnectionParameters (361) - Cannot cast to local parameters.
+2023-03-31T14:16:40.501215Z WARNING - Cannot cast to local parameters.
+2023-03-31T14:16:40.501252Z VERBOSE - driver connecting...
+2023-03-31T14:16:40.771757Z INFO    - device info - name: MQ022HG-IM-SM5X5-NIR2
+2023-03-31T14:16:40.771763Z INFO    - device info - type: USB3.0
+2023-03-31T14:16:40.771764Z INFO    - device info - model: 1009
+2023-03-31T14:16:40.771764Z INFO    - device info - serial number: 32270462
+2023-03-31T14:16:40.773592Z INFO    - device info - sensor width: 2048
+2023-03-31T14:16:40.773597Z INFO    - device info - sensor height: 1088
+2023-03-31T14:16:40.773598Z INFO    - device info - min integration time (us): 21
+2023-03-31T14:16:40.773599Z INFO    - device info - max integration time (us): 999995
+2023-03-31T14:16:40.773622Z VERBOSE - _SyncSensorRegisters (2814) - -->
+2023-03-31T14:16:40.810330Z VERBOSE - _SyncSensorRegisters (2838) - <--
+2023-03-31T14:16:40.810341Z DEBUG   - _LogSensorParameters (975) - Inte_sync: 1
+2023-03-31T14:16:40.810343Z DEBUG   - _LogSensorParameters (976) - Exp_ext: 0
+2023-03-31T14:16:40.810345Z DEBUG   - _LogSensorParameters (977) - Col_calib: 0
+2023-03-31T14:16:40.810347Z DEBUG   - _LogSensorParameters (978) - ADC_calib: 0
+2023-03-31T14:16:40.810348Z DEBUG   - _LogSensorParameters (979) - I_col: 4
+2023-03-31T14:16:40.810350Z DEBUG   - _LogSensorParameters (980) - I_col_prech: 1
+2023-03-31T14:16:40.810352Z DEBUG   - _LogSensorParameters (981) - I_amp: 12
+2023-03-31T14:16:40.810353Z DEBUG   - _LogSensorParameters (982) - Vtf_l1: 64
+2023-03-31T14:16:40.810356Z DEBUG   - _LogSensorParameters (983) - Vres_low: 64
+2023-03-31T14:16:40.810358Z DEBUG   - _LogSensorParameters (984) - V_prech: 101
+2023-03-31T14:16:40.810359Z DEBUG   - _LogSensorParameters (985) - V_ref: 106
+2023-03-31T14:16:40.810361Z DEBUG   - _LogSensorParameters (986) - Dummy: 4
+2023-03-31T14:16:40.810363Z DEBUG   - _LogSensorParameters (987) - V_blacksun: 34
+2023-03-31T14:16:40.810365Z DEBUG   - _LogSensorParameters (988) - black_level: 16300
+2023-03-31T14:16:40.810367Z DEBUG   - _LogSensorParameters (989) - V_ramp1: 109
+2023-03-31T14:16:40.810369Z DEBUG   - _LogSensorParameters (990) - V_ramp2: 109
+2023-03-31T14:16:40.810370Z DEBUG   - _LogSensorParameters (991) - adc_gain: 46
+2023-03-31T14:16:40.810372Z DEBUG   - _LogSensorParameters (992) - pga_gain: 1
+2023-03-31T14:16:40.810375Z DEBUG   - _LogSensorParameters (993) - pga_gain_2: 0
+2023-03-31T14:16:40.810376Z DEBUG   - _LogSensorParameters (994) - Output_mode: 1
+2023-03-31T14:16:40.810378Z DEBUG   - _LogSensorParameters (995) - Image flipping: 2
+2023-03-31T14:16:40.810379Z VERBOSE - driver connected
+2023-03-31T14:16:40.810876Z VERBOSE - driver initializing...
+2023-03-31T14:16:40.810877Z VERBOSE -    trying to initialize...
+2023-03-31T14:16:41.047500Z INFO    - sensor bit depth: 10; output bit depth: 10
+2023-03-31T14:16:42.511995Z INFO    - _Initialize (1693) - Acquisition buffer size is set to: 132120576
+2023-03-31T14:16:42.512010Z INFO    - _Initialize (1699) - Requested minimum acq buffer queue length: 64
+2023-03-31T14:16:42.512094Z INFO    - _Initialize (1712) - Allocated acq buffer queue length: 107
+2023-03-31T14:16:42.512109Z INFO    - _Initialize (1740) - clock frequency: 48000000
+2023-03-31T14:16:43.699975Z INFO    - CM_XimeaXiq::_SetRuntimeParameters() Start 0 1 exp: 10000 fr: 15 0 bl.off: 50 0 0
+2023-03-31T14:16:43.842049Z INFO    - CM_XimeaXiq::_SetRuntimeParameters() End 0 1 exp: 9998 fr: 15 0 bl.off: 50 AG: 2.8 DG: 1.2 0 0
+2023-03-31T14:16:43.842078Z VERBOSE - _StartAcquisition (1049) - -->
+2023-03-31T14:16:43.892024Z INFO    - CM_XimeaXiq::_SetSensorParameters entered
+2023-03-31T14:16:43.892045Z INFO    - _UploadSensorRegisters (2754) - --->
+2023-03-31T14:16:43.892052Z DEBUG   - _UploadSensorRegisters (2770) - Changing register 100 to value 236
+2023-03-31T14:16:43.892189Z DEBUG   - _UploadSensorRegisters (2770) - Changing register 101 to value 63
+2023-03-31T14:16:43.892334Z DEBUG   - _UploadSensorRegisters (2770) - Changing register 102 to value 2
+2023-03-31T14:16:43.892477Z DEBUG   - _UploadSensorRegisters (2770) - Changing register 103 to value 44
+2023-03-31T14:16:43.892625Z DEBUG   - _UploadSensorRegisters (2770) - Changing register 118 to value 1
+2023-03-31T14:16:43.892769Z DEBUG   - _UploadSensorRegisters (2770) - Changing register 121 to value 1
+2023-03-31T14:16:43.892912Z INFO    - _UploadSensorRegisters (2780) - <---
+2023-03-31T14:16:43.892920Z INFO    - CM_XimeaXiq::_SetSensorParameters() End Black level offset 50 analog gain 2.8 digital gain 1.20465
+2023-03-31T14:16:43.892921Z INFO    - CM_XimeaXiq::_SetSensorParameters exited
+2023-03-31T14:16:43.894916Z DEBUG   - _UpdateSensorRegisters (1395) - AG: 2.8 DG: 1.20465 BlO: 50 Vramp: 109
+2023-03-31T14:16:43.894921Z VERBOSE - _StartAcquisition (1066) - <--
+2023-03-31T14:16:43.894925Z DEBUG   - _Initialize (1846) - Grabbing sensor parameters after initialization
+2023-03-31T14:16:43.894928Z INFO    - CM_XimeaXiq::_DownloadSensorRegisters() Start Black level offset 50 analog gain 2.8 digital gain 1.20465
+2023-03-31T14:16:43.894931Z VERBOSE - _SyncSensorRegisters (2814) - -->
+2023-03-31T14:16:43.931774Z VERBOSE - _SyncSensorRegisters (2838) - <--
+2023-03-31T14:16:43.931787Z INFO    - CM_XimeaXiq::_DownloadSensorRegisters() End Black level offset 50 analog gain 2.8 digital gain 1.20465
+2023-03-31T14:16:43.931790Z INFO    - DM_Camera::_GetSensorParameters entered
+2023-03-31T14:16:43.931792Z INFO    - DM_Camera::_GetSensorParameters exited
+2023-03-31T14:16:43.931796Z DEBUG   - _LogSensorParameters (975) - Inte_sync: 1
+2023-03-31T14:16:43.931798Z DEBUG   - _LogSensorParameters (976) - Exp_ext: 0
+2023-03-31T14:16:43.931800Z DEBUG   - _LogSensorParameters (977) - Col_calib: 0
+2023-03-31T14:16:43.931802Z DEBUG   - _LogSensorParameters (978) - ADC_calib: 0
+2023-03-31T14:16:43.931804Z DEBUG   - _LogSensorParameters (979) - I_col: 4
+2023-03-31T14:16:43.931807Z DEBUG   - _LogSensorParameters (980) - I_col_prech: 1
+2023-03-31T14:16:43.931808Z DEBUG   - _LogSensorParameters (981) - I_amp: 12
+2023-03-31T14:16:43.931810Z DEBUG   - _LogSensorParameters (982) - Vtf_l1: 64
+2023-03-31T14:16:43.931812Z DEBUG   - _LogSensorParameters (983) - Vres_low: 64
+2023-03-31T14:16:43.931814Z DEBUG   - _LogSensorParameters (984) - V_prech: 101
+2023-03-31T14:16:43.931816Z DEBUG   - _LogSensorParameters (985) - V_ref: 106
+2023-03-31T14:16:43.931818Z DEBUG   - _LogSensorParameters (986) - Dummy: 1
+2023-03-31T14:16:43.931819Z DEBUG   - _LogSensorParameters (987) - V_blacksun: 34
+2023-03-31T14:16:43.931821Z DEBUG   - _LogSensorParameters (988) - black_level: 16364
+2023-03-31T14:16:43.931823Z DEBUG   - _LogSensorParameters (989) - V_ramp1: 109
+2023-03-31T14:16:43.931824Z DEBUG   - _LogSensorParameters (990) - V_ramp2: 109
+2023-03-31T14:16:43.931826Z DEBUG   - _LogSensorParameters (991) - adc_gain: 44
+2023-03-31T14:16:43.931828Z DEBUG   - _LogSensorParameters (992) - pga_gain: 2
+2023-03-31T14:16:43.931829Z DEBUG   - _LogSensorParameters (993) - pga_gain_2: 1
+2023-03-31T14:16:43.931831Z DEBUG   - _LogSensorParameters (994) - Output_mode: 1
+2023-03-31T14:16:43.931833Z DEBUG   - _LogSensorParameters (995) - Image flipping: 2
+2023-03-31T14:16:43.931834Z VERBOSE -    initalization successful...
+2023-03-31T14:16:43.931835Z VERBOSE - driver initialization finished
+2023-03-31T14:16:43.933474Z INFO    - CM_XimeaXiq::_SetRuntimeParameters() Start 0 1 exp: 9998 fr: 15 0 bl.off: 50 0 0
+2023-03-31T14:16:43.933485Z INFO    - CM_XimeaXiq::_SetRuntimeParameters() End 0 1 exp: 9998 fr: 15 0 bl.off: 50 AG: 2.8 DG: 1.20465 0 0
+2023-03-31T14:16:43.933718Z INFO    - CM_XimeaXiq::_SetRuntimeParameters() Start 0 1 exp: 9998 fr: 15 0 bl.off: 50 0 0
+2023-03-31T14:16:43.933726Z INFO    - CM_XimeaXiq::_SetRuntimeParameters() End 0 1 exp: 9998 fr: 15 0 bl.off: 50 AG: 2.8 DG: 1.20465 0 0
+2023-03-31T14:16:43.933730Z INFO    - CM_XimeaXiq::_SetRuntimeParameters() Start 0 1 exp: 9998 fr: 15 1 bl.off: 50 0 0
+2023-03-31T14:16:44.102004Z VERBOSE - _StartAcquisition (1049) - -->
+2023-03-31T14:16:44.151949Z INFO    - CM_XimeaXiq::_SetSensorParameters entered
+2023-03-31T14:16:44.151971Z INFO    - _UploadSensorRegisters (2754) - --->
+2023-03-31T14:16:44.151977Z DEBUG   - _UploadSensorRegisters (2770) - Changing register 102 to value 2
+2023-03-31T14:16:44.152117Z DEBUG   - _UploadSensorRegisters (2770) - Changing register 118 to value 1
+2023-03-31T14:16:44.152269Z DEBUG   - _UploadSensorRegisters (2770) - Changing register 121 to value 1
+2023-03-31T14:16:44.152425Z INFO    - _UploadSensorRegisters (2780) - <---
+2023-03-31T14:16:44.152438Z INFO    - CM_XimeaXiq::_SetSensorParameters() End Black level offset 50 analog gain 2.8 digital gain 1.20465
+2023-03-31T14:16:44.152440Z INFO    - CM_XimeaXiq::_SetSensorParameters exited
+2023-03-31T14:16:44.154472Z DEBUG   - _UpdateSensorRegisters (1395) - AG: 2.8 DG: 1.20465 BlO: 50 Vramp: 109
+2023-03-31T14:16:44.154477Z VERBOSE - _StartAcquisition (1066) - <--
+2023-03-31T14:16:44.180652Z INFO    - CM_XimeaXiq::_SetSensorParameters entered
+2023-03-31T14:16:44.180672Z INFO    - _UploadSensorRegisters (2754) - --->
+2023-03-31T14:16:44.180677Z DEBUG   - _UploadSensorRegisters (2770) - Changing register 102 to value 2
+2023-03-31T14:16:44.180820Z DEBUG   - _UploadSensorRegisters (2770) - Changing register 118 to value 1
+2023-03-31T14:16:44.180963Z DEBUG   - _UploadSensorRegisters (2770) - Changing register 121 to value 1
+2023-03-31T14:16:44.181107Z INFO    - _UploadSensorRegisters (2780) - <---
+2023-03-31T14:16:44.181114Z INFO    - CM_XimeaXiq::_SetSensorParameters() End Black level offset 50 analog gain 2.8 digital gain 1.20465
+2023-03-31T14:16:44.181117Z INFO    - CM_XimeaXiq::_SetSensorParameters exited
+2023-03-31T14:16:44.183102Z DEBUG   - _UpdateSensorRegisters (1395) - AG: 2.8 DG: 1.20465 BlO: 50 Vramp: 109
+2023-03-31T14:16:44.183111Z INFO    - CM_XimeaXiq::_SetRuntimeParameters() End 0 1 exp: 9998 fr: 15 1 bl.off: 50 AG: 2.8 DG: 1.20465 0 0
+2023-03-31T14:16:44.183720Z INFO    - CM_XimeaXiq::_SetRuntimeParameters() Start 0 1 exp: 9998 fr: 15 1 bl.off: 50 0 0
+2023-03-31T14:16:44.183729Z INFO    - CM_XimeaXiq::_SetRuntimeParameters() End 0 1 exp: 9998 fr: 15 1 bl.off: 50 AG: 2.8 DG: 1.20465 0 0
+2023-03-31T14:16:44.183730Z VERBOSE - driver starting...
+2023-03-31T14:16:44.189053Z VERBOSE - driver starting finished
+2023-03-31T14:16:44.189155Z DEBUG   - Trigger (1123) - Triggering camera
+2023-03-31T14:16:44.189162Z INFO    - Trigger (1136) - 0/1
+2023-03-31T14:16:44.189181Z VERBOSE - _AcquisitionLoop (2153) - Triggering camera
+2023-03-31T14:16:44.189657Z DEBUG   - _AcquisitionLoop (2178) - Waiting for image...
+2023-03-31T14:16:44.203204Z DEBUG   - nframe: 0; acq_nframe: 1; Previous acq_nframe: 0; Acq. time: 2023-03-31T14:16:44.203168Z; crnt. burst counter: 0; burst frames: 1
+2023-03-31T14:16:44.203328Z WARNING - [virtual double ihspt::drivers::CM_XimeaXiq::_GetTemperature()] xiSetParamInt (_device, XI_PRM_TEMP_SELECTOR, XI_TEMP_IMAGE_SENSOR_DIE) : Not supported
+2023-03-31T14:16:44.203629Z DEBUG   - _AcquisitionLoop (2257) - Entering update of parameters...
+2023-03-31T14:16:44.203659Z INFO    - CM_XimeaXiq::_SetRuntimeParameters() Start 0 1 exp: 9998 fr: 15 1 bl.off: 50 0 0
+2023-03-31T14:16:44.203669Z INFO    - CM_XimeaXiq::_SetRuntimeParameters() End 0 1 exp: 9998 fr: 15 1 bl.off: 50 AG: 2.8 DG: 1.20465 0 0
+2023-03-31T14:16:44.203672Z DEBUG   - _AcquisitionLoop (2262) - Update of parameters finished
+2023-03-31T14:16:44.205680Z VERBOSE - Pause (504) - driver pauzing...
+2023-03-31T14:16:44.205681Z DEBUG   - unlocking driver
+2023-03-31T14:16:44.205681Z DEBUG   - driver unlocked
+2023-03-31T14:16:44.205682Z DEBUG   - ...trying to lock driver
+2023-03-31T14:16:44.205683Z DEBUG   - ...driver unlocked
+2023-03-31T14:16:44.205687Z DEBUG   - ...wakeup condition called
+2023-03-31T14:16:44.205689Z VERBOSE - Pause (529) - driver pauzing finished
+2023-03-31T14:16:44.205764Z INFO    - CM_XimeaXiq::_SetRuntimeParameters() Start 0 1 exp: 9998 fr: 1 1 bl.off: 50 0 0
+2023-03-31T14:16:44.256757Z INFO    - CM_XimeaXiq::_SetSensorParameters entered
+2023-03-31T14:16:44.256777Z INFO    - _UploadSensorRegisters (2754) - --->
+2023-03-31T14:16:44.256787Z DEBUG   - _UploadSensorRegisters (2770) - Changing register 102 to value 2
+2023-03-31T14:16:44.256945Z DEBUG   - _UploadSensorRegisters (2770) - Changing register 118 to value 1
+2023-03-31T14:16:44.257109Z DEBUG   - _UploadSensorRegisters (2770) - Changing register 121 to value 1
+2023-03-31T14:16:44.257277Z INFO    - _UploadSensorRegisters (2780) - <---
+2023-03-31T14:16:44.257288Z INFO    - CM_XimeaXiq::_SetSensorParameters() End Black level offset 50 analog gain 2.8 digital gain 1.20465
+2023-03-31T14:16:44.257289Z INFO    - CM_XimeaXiq::_SetSensorParameters exited
+2023-03-31T14:16:44.259296Z DEBUG   - _UpdateSensorRegisters (1395) - AG: 2.8 DG: 1.20465 BlO: 50 Vramp: 109
+2023-03-31T14:16:44.259308Z INFO    - CM_XimeaXiq::_SetRuntimeParameters() End 0 1 exp: 9998 fr: 1 1 bl.off: 50 AG: 2.8 DG: 1.20465 0 0
+2023-03-31T14:16:44.259319Z INFO    - CM_XimeaXiq::_SetRuntimeParameters() Start 0 1 exp: 9998 fr: 1 1 bl.off: 50 0 0
+2023-03-31T14:16:44.259324Z INFO    - CM_XimeaXiq::_SetRuntimeParameters() End 0 1 exp: 9998 fr: 1 1 bl.off: 50 AG: 2.8 DG: 1.20465 0 0
+2023-03-31T14:16:44.259416Z INFO    - CM_XimeaXiq::_SetRuntimeParameters() Start 0 1 exp: 10000 fr: 1 1 bl.off: 50 0 0
+2023-03-31T14:16:44.311006Z INFO    - CM_XimeaXiq::_SetSensorParameters entered
+2023-03-31T14:16:44.311028Z INFO    - _UploadSensorRegisters (2754) - --->
+2023-03-31T14:16:44.311036Z DEBUG   - _UploadSensorRegisters (2770) - Changing register 102 to value 2
+2023-03-31T14:16:44.311181Z DEBUG   - _UploadSensorRegisters (2770) - Changing register 118 to value 1
+2023-03-31T14:16:44.311326Z DEBUG   - _UploadSensorRegisters (2770) - Changing register 121 to value 1
+2023-03-31T14:16:44.311472Z INFO    - _UploadSensorRegisters (2780) - <---
+2023-03-31T14:16:44.311484Z INFO    - CM_XimeaXiq::_SetSensorParameters() End Black level offset 50 analog gain 2.8 digital gain 1.20465
+2023-03-31T14:16:44.311485Z INFO    - CM_XimeaXiq::_SetSensorParameters exited
+2023-03-31T14:16:44.313539Z DEBUG   - _UpdateSensorRegisters (1395) - AG: 2.8 DG: 1.20465 BlO: 50 Vramp: 109
+2023-03-31T14:16:44.313555Z INFO    - CM_XimeaXiq::_SetRuntimeParameters() End 0 1 exp: 9998 fr: 1 1 bl.off: 50 AG: 2.8 DG: 1.20465 0 0
+2023-03-31T14:16:44.313572Z INFO    - CM_XimeaXiq::_SetRuntimeParameters() Start 0 1 exp: 9998 fr: 1 1 bl.off: 50 0 0
+2023-03-31T14:16:44.313580Z INFO    - CM_XimeaXiq::_SetRuntimeParameters() End 0 1 exp: 9998 fr: 1 1 bl.off: 50 AG: 2.8 DG: 1.20465 0 0
+2023-03-31T14:16:44.313689Z INFO    - CM_XimeaXiq::_SetRuntimeParameters() Start 0 1 exp: 9998 fr: 50 1 bl.off: 50 0 0
+2023-03-31T14:16:44.368208Z INFO    - CM_XimeaXiq::_SetSensorParameters entered
+2023-03-31T14:16:44.368229Z INFO    - _UploadSensorRegisters (2754) - --->
+2023-03-31T14:16:44.368238Z DEBUG   - _UploadSensorRegisters (2770) - Changing register 102 to value 2
+2023-03-31T14:16:44.368389Z DEBUG   - _UploadSensorRegisters (2770) - Changing register 118 to value 1
+2023-03-31T14:16:44.368535Z DEBUG   - _UploadSensorRegisters (2770) - Changing register 121 to value 1
+2023-03-31T14:16:44.368678Z INFO    - _UploadSensorRegisters (2780) - <---
+2023-03-31T14:16:44.368688Z INFO    - CM_XimeaXiq::_SetSensorParameters() End Black level offset 50 analog gain 2.8 digital gain 1.20465
+2023-03-31T14:16:44.368690Z INFO    - CM_XimeaXiq::_SetSensorParameters exited
+2023-03-31T14:16:44.370719Z DEBUG   - _UpdateSensorRegisters (1395) - AG: 2.8 DG: 1.20465 BlO: 50 Vramp: 109
+2023-03-31T14:16:44.370739Z INFO    - CM_XimeaXiq::_SetRuntimeParameters() End 0 1 exp: 9998 fr: 50 1 bl.off: 50 AG: 2.8 DG: 1.20465 0 0
+2023-03-31T14:16:44.370754Z INFO    - CM_XimeaXiq::_SetRuntimeParameters() Start 0 1 exp: 9998 fr: 50 1 bl.off: 50 0 0
+2023-03-31T14:16:44.370762Z INFO    - CM_XimeaXiq::_SetRuntimeParameters() End 0 1 exp: 9998 fr: 50 1 bl.off: 50 AG: 2.8 DG: 1.20465 0 0
+2023-03-31T14:16:44.370849Z INFO    - CM_XimeaXiq::_SetRuntimeParameters() Start 0 1 exp: 9998 fr: 50 1 bl.off: 50 0 0
+2023-03-31T14:16:44.370856Z INFO    - CM_XimeaXiq::_SetRuntimeParameters() End 0 1 exp: 9998 fr: 50 1 bl.off: 50 AG: 2.8 DG: 1.20465 0 0
+2023-03-31T14:16:44.370857Z VERBOSE - driver starting...
+2023-03-31T14:16:44.376310Z VERBOSE - driver starting finished
+2023-03-31T14:16:44.376406Z DEBUG   - Trigger (1123) - Triggering camera
+2023-03-31T14:16:44.376411Z INFO    - Trigger (1136) - 0/1
+2023-03-31T14:16:44.376420Z VERBOSE - _AcquisitionLoop (2153) - Triggering camera
+2023-03-31T14:16:44.376868Z DEBUG   - _AcquisitionLoop (2178) - Waiting for image...
+2023-03-31T14:16:44.390291Z DEBUG   - nframe: 0; acq_nframe: 2; Previous acq_nframe: 1; Acq. time: 2023-03-31T14:16:44.390252Z; crnt. burst counter: 0; burst frames: 1
+2023-03-31T14:16:44.390429Z WARNING - [virtual double ihspt::drivers::CM_XimeaXiq::_GetTemperature()] xiSetParamInt (_device, XI_PRM_TEMP_SELECTOR, XI_TEMP_IMAGE_SENSOR_DIE) : Not supported
+2023-03-31T14:16:44.390718Z DEBUG   - _AcquisitionLoop (2257) - Entering update of parameters...
+2023-03-31T14:16:44.390763Z INFO    - CM_XimeaXiq::_SetRuntimeParameters() Start 0 1 exp: 9998 fr: 50 1 bl.off: 50 0 0
+2023-03-31T14:16:44.390774Z INFO    - CM_XimeaXiq::_SetRuntimeParameters() End 0 1 exp: 9998 fr: 50 1 bl.off: 50 AG: 2.8 DG: 1.20465 0 0
+2023-03-31T14:16:44.390777Z DEBUG   - _AcquisitionLoop (2262) - Update of parameters finished
+2023-03-31T14:16:44.394236Z VERBOSE - Pause (504) - driver pauzing...
+2023-03-31T14:16:44.394238Z DEBUG   - unlocking driver
+2023-03-31T14:16:44.394239Z DEBUG   - driver unlocked
+2023-03-31T14:16:44.394240Z DEBUG   - ...trying to lock driver
+2023-03-31T14:16:44.394241Z DEBUG   - ...driver unlocked
+2023-03-31T14:16:44.394245Z DEBUG   - ...wakeup condition called
+2023-03-31T14:16:44.394248Z VERBOSE - Pause (529) - driver pauzing finished
+2023-03-31T14:16:44.394275Z VERBOSE - driver stopping...
+2023-03-31T14:16:44.701721Z INFO    - [CM_XimeaXiq::_AcquisitionLoop] thread finished
+2023-03-31T14:16:44.701822Z VERBOSE - driver stopping finished
+2023-03-31T14:16:44.702115Z VERBOSE - driver forcing disconnect...
+2023-03-31T14:16:44.704249Z VERBOSE - driver forcing disconnect finished
+2023-03-31T14:16:44.704375Z VERBOSE - driver forcing disconnect...
+2023-03-31T14:16:44.704380Z DEBUG   - driver already disconnected
+2023-03-31T14:18:46.001135Z INFO    - CM_XimeaXiq::_SetConfigurationParameters() 0 1 # 0 0 0 0 2.8 1.2
+2023-03-31T14:18:46.001168Z INFO    - CM_XimeaXiq::_SetConfigurationParameters() 0 1 # 10000 15 0 0 2.8 1.2
+2023-03-31T14:18:46.001174Z WARNING - _SetConnectionParameters (361) - Cannot cast to local parameters.
+2023-03-31T14:18:46.001175Z WARNING - Cannot cast to local parameters.
+2023-03-31T14:18:46.001206Z VERBOSE - driver connecting...
+2023-03-31T14:18:46.266621Z INFO    - device info - name: MQ022HG-IM-SM5X5-NIR2
+2023-03-31T14:18:46.266626Z INFO    - device info - type: USB3.0
+2023-03-31T14:18:46.266627Z INFO    - device info - model: 1009
+2023-03-31T14:18:46.266627Z INFO    - device info - serial number: 32270462
+2023-03-31T14:18:46.268546Z INFO    - device info - sensor width: 2048
+2023-03-31T14:18:46.268549Z INFO    - device info - sensor height: 1088
+2023-03-31T14:18:46.268550Z INFO    - device info - min integration time (us): 21
+2023-03-31T14:18:46.268550Z INFO    - device info - max integration time (us): 999995
+2023-03-31T14:18:46.268560Z VERBOSE - _SyncSensorRegisters (2814) - -->
+2023-03-31T14:18:46.305248Z VERBOSE - _SyncSensorRegisters (2838) - <--
+2023-03-31T14:18:46.305265Z DEBUG   - _LogSensorParameters (975) - Inte_sync: 1
+2023-03-31T14:18:46.305269Z DEBUG   - _LogSensorParameters (976) - Exp_ext: 0
+2023-03-31T14:18:46.305271Z DEBUG   - _LogSensorParameters (977) - Col_calib: 0
+2023-03-31T14:18:46.305285Z DEBUG   - _LogSensorParameters (978) - ADC_calib: 0
+2023-03-31T14:18:46.305287Z DEBUG   - _LogSensorParameters (979) - I_col: 4
+2023-03-31T14:18:46.305289Z DEBUG   - _LogSensorParameters (980) - I_col_prech: 1
+2023-03-31T14:18:46.305290Z DEBUG   - _LogSensorParameters (981) - I_amp: 12
+2023-03-31T14:18:46.305292Z DEBUG   - _LogSensorParameters (982) - Vtf_l1: 64
+2023-03-31T14:18:46.305294Z DEBUG   - _LogSensorParameters (983) - Vres_low: 64
+2023-03-31T14:18:46.305295Z DEBUG   - _LogSensorParameters (984) - V_prech: 101
+2023-03-31T14:18:46.305297Z DEBUG   - _LogSensorParameters (985) - V_ref: 106
+2023-03-31T14:18:46.305299Z DEBUG   - _LogSensorParameters (986) - Dummy: 4
+2023-03-31T14:18:46.305301Z DEBUG   - _LogSensorParameters (987) - V_blacksun: 34
+2023-03-31T14:18:46.305303Z DEBUG   - _LogSensorParameters (988) - black_level: 16300
+2023-03-31T14:18:46.305305Z DEBUG   - _LogSensorParameters (989) - V_ramp1: 109
+2023-03-31T14:18:46.305307Z DEBUG   - _LogSensorParameters (990) - V_ramp2: 109
+2023-03-31T14:18:46.305324Z DEBUG   - _LogSensorParameters (991) - adc_gain: 46
+2023-03-31T14:18:46.305326Z DEBUG   - _LogSensorParameters (992) - pga_gain: 1
+2023-03-31T14:18:46.305327Z DEBUG   - _LogSensorParameters (993) - pga_gain_2: 0
+2023-03-31T14:18:46.305329Z DEBUG   - _LogSensorParameters (994) - Output_mode: 1
+2023-03-31T14:18:46.305331Z DEBUG   - _LogSensorParameters (995) - Image flipping: 2
+2023-03-31T14:18:46.305333Z VERBOSE - driver connected
+2023-03-31T14:18:46.305746Z VERBOSE - driver initializing...
+2023-03-31T14:18:46.305746Z VERBOSE -    trying to initialize...
+2023-03-31T14:18:46.534857Z INFO    - sensor bit depth: 10; output bit depth: 10
+2023-03-31T14:18:47.995852Z INFO    - _Initialize (1693) - Acquisition buffer size is set to: 132120576
+2023-03-31T14:18:47.995861Z INFO    - _Initialize (1699) - Requested minimum acq buffer queue length: 64
+2023-03-31T14:18:47.995917Z INFO    - _Initialize (1712) - Allocated acq buffer queue length: 107
+2023-03-31T14:18:47.995925Z INFO    - _Initialize (1740) - clock frequency: 48000000
+2023-03-31T14:18:49.183070Z INFO    - CM_XimeaXiq::_SetRuntimeParameters() Start 0 1 exp: 10000 fr: 15 0 bl.off: 50 0 0
+2023-03-31T14:18:49.325851Z INFO    - CM_XimeaXiq::_SetRuntimeParameters() End 0 1 exp: 9998 fr: 15 0 bl.off: 50 AG: 2.8 DG: 1.2 0 0
+2023-03-31T14:18:49.325881Z VERBOSE - _StartAcquisition (1049) - -->
+2023-03-31T14:18:49.376142Z INFO    - CM_XimeaXiq::_SetSensorParameters entered
+2023-03-31T14:18:49.376165Z INFO    - _UploadSensorRegisters (2754) - --->
+2023-03-31T14:18:49.376172Z DEBUG   - _UploadSensorRegisters (2770) - Changing register 100 to value 236
+2023-03-31T14:18:49.376307Z DEBUG   - _UploadSensorRegisters (2770) - Changing register 101 to value 63
+2023-03-31T14:18:49.376455Z DEBUG   - _UploadSensorRegisters (2770) - Changing register 102 to value 2
+2023-03-31T14:18:49.376599Z DEBUG   - _UploadSensorRegisters (2770) - Changing register 103 to value 44
+2023-03-31T14:18:49.376744Z DEBUG   - _UploadSensorRegisters (2770) - Changing register 118 to value 1
+2023-03-31T14:18:49.376886Z DEBUG   - _UploadSensorRegisters (2770) - Changing register 121 to value 1
+2023-03-31T14:18:49.377029Z INFO    - _UploadSensorRegisters (2780) - <---
+2023-03-31T14:18:49.377036Z INFO    - CM_XimeaXiq::_SetSensorParameters() End Black level offset 50 analog gain 2.8 digital gain 1.20465
+2023-03-31T14:18:49.377037Z INFO    - CM_XimeaXiq::_SetSensorParameters exited
+2023-03-31T14:18:49.379023Z DEBUG   - _UpdateSensorRegisters (1395) - AG: 2.8 DG: 1.20465 BlO: 50 Vramp: 109
+2023-03-31T14:18:49.379031Z VERBOSE - _StartAcquisition (1066) - <--
+2023-03-31T14:18:49.379033Z DEBUG   - _Initialize (1846) - Grabbing sensor parameters after initialization
+2023-03-31T14:18:49.379036Z INFO    - CM_XimeaXiq::_DownloadSensorRegisters() Start Black level offset 50 analog gain 2.8 digital gain 1.20465
+2023-03-31T14:18:49.379049Z VERBOSE - _SyncSensorRegisters (2814) - -->
+2023-03-31T14:18:49.415945Z VERBOSE - _SyncSensorRegisters (2838) - <--
+2023-03-31T14:18:49.415960Z INFO    - CM_XimeaXiq::_DownloadSensorRegisters() End Black level offset 50 analog gain 2.8 digital gain 1.20465
+2023-03-31T14:18:49.415963Z INFO    - DM_Camera::_GetSensorParameters entered
+2023-03-31T14:18:49.415965Z INFO    - DM_Camera::_GetSensorParameters exited
+2023-03-31T14:18:49.415969Z DEBUG   - _LogSensorParameters (975) - Inte_sync: 1
+2023-03-31T14:18:49.415977Z DEBUG   - _LogSensorParameters (976) - Exp_ext: 0
+2023-03-31T14:18:49.415980Z DEBUG   - _LogSensorParameters (977) - Col_calib: 0
+2023-03-31T14:18:49.415982Z DEBUG   - _LogSensorParameters (978) - ADC_calib: 0
+2023-03-31T14:18:49.415983Z DEBUG   - _LogSensorParameters (979) - I_col: 4
+2023-03-31T14:18:49.415986Z DEBUG   - _LogSensorParameters (980) - I_col_prech: 1
+2023-03-31T14:18:49.415987Z DEBUG   - _LogSensorParameters (981) - I_amp: 12
+2023-03-31T14:18:49.415989Z DEBUG   - _LogSensorParameters (982) - Vtf_l1: 64
+2023-03-31T14:18:49.415991Z DEBUG   - _LogSensorParameters (983) - Vres_low: 64
+2023-03-31T14:18:49.415993Z DEBUG   - _LogSensorParameters (984) - V_prech: 101
+2023-03-31T14:18:49.415994Z DEBUG   - _LogSensorParameters (985) - V_ref: 106
+2023-03-31T14:18:49.415996Z DEBUG   - _LogSensorParameters (986) - Dummy: 1
+2023-03-31T14:18:49.415998Z DEBUG   - _LogSensorParameters (987) - V_blacksun: 34
+2023-03-31T14:18:49.416000Z DEBUG   - _LogSensorParameters (988) - black_level: 16364
+2023-03-31T14:18:49.416001Z DEBUG   - _LogSensorParameters (989) - V_ramp1: 109
+2023-03-31T14:18:49.416003Z DEBUG   - _LogSensorParameters (990) - V_ramp2: 109
+2023-03-31T14:18:49.416005Z DEBUG   - _LogSensorParameters (991) - adc_gain: 44
+2023-03-31T14:18:49.416006Z DEBUG   - _LogSensorParameters (992) - pga_gain: 2
+2023-03-31T14:18:49.416008Z DEBUG   - _LogSensorParameters (993) - pga_gain_2: 1
+2023-03-31T14:18:49.416010Z DEBUG   - _LogSensorParameters (994) - Output_mode: 1
+2023-03-31T14:18:49.416011Z DEBUG   - _LogSensorParameters (995) - Image flipping: 2
+2023-03-31T14:18:49.416013Z VERBOSE -    initalization successful...
+2023-03-31T14:18:49.416013Z VERBOSE - driver initialization finished
+2023-03-31T14:18:49.417659Z INFO    - CM_XimeaXiq::_SetRuntimeParameters() Start 0 1 exp: 9998 fr: 15 0 bl.off: 50 0 0
+2023-03-31T14:18:49.417669Z INFO    - CM_XimeaXiq::_SetRuntimeParameters() End 0 1 exp: 9998 fr: 15 0 bl.off: 50 AG: 2.8 DG: 1.20465 0 0
+2023-03-31T14:18:49.417924Z INFO    - CM_XimeaXiq::_SetRuntimeParameters() Start 0 1 exp: 15000 fr: 30 0 bl.off: 50 0 0
+2023-03-31T14:18:49.480925Z INFO    - CM_XimeaXiq::_SetSensorParameters entered
+2023-03-31T14:18:49.480955Z INFO    - _UploadSensorRegisters (2754) - --->
+2023-03-31T14:18:49.480962Z DEBUG   - _UploadSensorRegisters (2770) - Changing register 102 to value 2
+2023-03-31T14:18:49.481103Z DEBUG   - _UploadSensorRegisters (2770) - Changing register 118 to value 1
+2023-03-31T14:18:49.481246Z DEBUG   - _UploadSensorRegisters (2770) - Changing register 121 to value 1
+2023-03-31T14:18:49.481416Z INFO    - _UploadSensorRegisters (2780) - <---
+2023-03-31T14:18:49.481429Z INFO    - CM_XimeaXiq::_SetSensorParameters() End Black level offset 50 analog gain 2.8 digital gain 1.20465
+2023-03-31T14:18:49.481430Z INFO    - CM_XimeaXiq::_SetSensorParameters exited
+2023-03-31T14:18:49.487452Z DEBUG   - _UpdateSensorRegisters (1395) - AG: 2.8 DG: 1.20465 BlO: 50 Vramp: 109
+2023-03-31T14:18:49.487470Z INFO    - CM_XimeaXiq::_SetRuntimeParameters() End 0 1 exp: 15002 fr: 30 0 bl.off: 50 AG: 2.8 DG: 1.20465 0 0
+2023-03-31T14:18:49.487486Z INFO    - CM_XimeaXiq::_SetRuntimeParameters() Start 0 1 exp: 15002 fr: 30 1 bl.off: 50 0 0
+2023-03-31T14:18:49.630771Z VERBOSE - _StartAcquisition (1049) - -->
+2023-03-31T14:18:49.680787Z INFO    - CM_XimeaXiq::_SetSensorParameters entered
+2023-03-31T14:18:49.680810Z INFO    - _UploadSensorRegisters (2754) - --->
+2023-03-31T14:18:49.680816Z DEBUG   - _UploadSensorRegisters (2770) - Changing register 102 to value 2
+2023-03-31T14:18:49.680952Z DEBUG   - _UploadSensorRegisters (2770) - Changing register 118 to value 1
+2023-03-31T14:18:49.681097Z DEBUG   - _UploadSensorRegisters (2770) - Changing register 121 to value 1
+2023-03-31T14:18:49.681243Z INFO    - _UploadSensorRegisters (2780) - <---
+2023-03-31T14:18:49.681251Z INFO    - CM_XimeaXiq::_SetSensorParameters() End Black level offset 50 analog gain 2.8 digital gain 1.20465
+2023-03-31T14:18:49.681253Z INFO    - CM_XimeaXiq::_SetSensorParameters exited
+2023-03-31T14:18:49.683245Z DEBUG   - _UpdateSensorRegisters (1395) - AG: 2.8 DG: 1.20465 BlO: 50 Vramp: 109
+2023-03-31T14:18:49.683250Z VERBOSE - _StartAcquisition (1066) - <--
+2023-03-31T14:18:49.709376Z INFO    - CM_XimeaXiq::_SetSensorParameters entered
+2023-03-31T14:18:49.709397Z INFO    - _UploadSensorRegisters (2754) - --->
+2023-03-31T14:18:49.709403Z DEBUG   - _UploadSensorRegisters (2770) - Changing register 102 to value 2
+2023-03-31T14:18:49.709545Z DEBUG   - _UploadSensorRegisters (2770) - Changing register 118 to value 1
+2023-03-31T14:18:49.709690Z DEBUG   - _UploadSensorRegisters (2770) - Changing register 121 to value 1
+2023-03-31T14:18:49.709839Z INFO    - _UploadSensorRegisters (2780) - <---
+2023-03-31T14:18:49.709851Z INFO    - CM_XimeaXiq::_SetSensorParameters() End Black level offset 50 analog gain 2.8 digital gain 1.20465
+2023-03-31T14:18:49.709852Z INFO    - CM_XimeaXiq::_SetSensorParameters exited
+2023-03-31T14:18:49.711861Z DEBUG   - _UpdateSensorRegisters (1395) - AG: 2.8 DG: 1.20465 BlO: 50 Vramp: 109
+2023-03-31T14:18:49.711872Z INFO    - CM_XimeaXiq::_SetRuntimeParameters() End 0 1 exp: 15002 fr: 30 1 bl.off: 50 AG: 2.8 DG: 1.20465 0 0
+2023-03-31T14:18:49.712489Z INFO    - CM_XimeaXiq::_SetRuntimeParameters() Start 0 1 exp: 15002 fr: 30 1 bl.off: 50 0 0
+2023-03-31T14:18:49.712500Z INFO    - CM_XimeaXiq::_SetRuntimeParameters() End 0 1 exp: 15002 fr: 30 1 bl.off: 50 AG: 2.8 DG: 1.20465 0 0
+2023-03-31T14:18:49.712502Z VERBOSE - driver starting...
+2023-03-31T14:18:49.717779Z VERBOSE - driver starting finished
+2023-03-31T14:18:49.717939Z DEBUG   - Trigger (1123) - Triggering camera
+2023-03-31T14:18:49.717952Z INFO    - Trigger (1136) - 0/1
+2023-03-31T14:18:49.717969Z VERBOSE - _AcquisitionLoop (2153) - Triggering camera
+2023-03-31T14:18:49.718444Z DEBUG   - _AcquisitionLoop (2178) - Waiting for image...
+2023-03-31T14:18:49.736975Z DEBUG   - nframe: 0; acq_nframe: 1; Previous acq_nframe: 0; Acq. time: 2023-03-31T14:18:49.736941Z; crnt. burst counter: 0; burst frames: 1
+2023-03-31T14:18:49.737115Z WARNING - [virtual double ihspt::drivers::CM_XimeaXiq::_GetTemperature()] xiSetParamInt (_device, XI_PRM_TEMP_SELECTOR, XI_TEMP_IMAGE_SENSOR_DIE) : Not supported
+2023-03-31T14:18:49.737414Z DEBUG   - _AcquisitionLoop (2257) - Entering update of parameters...
+2023-03-31T14:18:49.737443Z INFO    - CM_XimeaXiq::_SetRuntimeParameters() Start 0 1 exp: 15002 fr: 30 1 bl.off: 50 0 0
+2023-03-31T14:18:49.737452Z INFO    - CM_XimeaXiq::_SetRuntimeParameters() End 0 1 exp: 15002 fr: 30 1 bl.off: 50 AG: 2.8 DG: 1.20465 0 0
+2023-03-31T14:18:49.737454Z DEBUG   - _AcquisitionLoop (2262) - Update of parameters finished
+2023-03-31T14:18:49.738231Z VERBOSE - Pause (504) - driver pauzing...
+2023-03-31T14:18:49.738232Z DEBUG   - unlocking driver
+2023-03-31T14:18:49.738233Z DEBUG   - driver unlocked
+2023-03-31T14:18:49.738234Z DEBUG   - ...trying to lock driver
+2023-03-31T14:18:49.738235Z DEBUG   - ...driver unlocked
+2023-03-31T14:18:49.738240Z DEBUG   - ...wakeup condition called
+2023-03-31T14:18:49.738243Z VERBOSE - Pause (529) - driver pauzing finished
+2023-03-31T14:18:49.738316Z INFO    - CM_XimeaXiq::_SetRuntimeParameters() Start 0 1 exp: 15002 fr: 1 1 bl.off: 50 0 0
+2023-03-31T14:18:49.802849Z INFO    - CM_XimeaXiq::_SetSensorParameters entered
+2023-03-31T14:18:49.802874Z INFO    - _UploadSensorRegisters (2754) - --->
+2023-03-31T14:18:49.802881Z DEBUG   - _UploadSensorRegisters (2770) - Changing register 102 to value 2
+2023-03-31T14:18:49.803018Z DEBUG   - _UploadSensorRegisters (2770) - Changing register 118 to value 1
+2023-03-31T14:18:49.803166Z DEBUG   - _UploadSensorRegisters (2770) - Changing register 121 to value 1
+2023-03-31T14:18:49.803309Z INFO    - _UploadSensorRegisters (2780) - <---
+2023-03-31T14:18:49.803317Z INFO    - CM_XimeaXiq::_SetSensorParameters() End Black level offset 50 analog gain 2.8 digital gain 1.20465
+2023-03-31T14:18:49.803318Z INFO    - CM_XimeaXiq::_SetSensorParameters exited
+2023-03-31T14:18:49.805638Z DEBUG   - _UpdateSensorRegisters (1395) - AG: 2.8 DG: 1.20465 BlO: 50 Vramp: 109
+2023-03-31T14:18:49.805695Z INFO    - CM_XimeaXiq::_SetRuntimeParameters() End 0 1 exp: 15002 fr: 1 1 bl.off: 50 AG: 2.8 DG: 1.20465 0 0
+2023-03-31T14:18:49.805727Z INFO    - CM_XimeaXiq::_SetRuntimeParameters() Start 0 1 exp: 15002 fr: 1 1 bl.off: 50 0 0
+2023-03-31T14:18:49.805751Z INFO    - CM_XimeaXiq::_SetRuntimeParameters() End 0 1 exp: 15002 fr: 1 1 bl.off: 50 AG: 2.8 DG: 1.20465 0 0
+2023-03-31T14:18:49.805866Z INFO    - CM_XimeaXiq::_SetRuntimeParameters() Start 0 1 exp: 15000 fr: 1 1 bl.off: 50 0 0
+2023-03-31T14:18:49.837424Z INFO    - CM_XimeaXiq::_SetSensorParameters entered
+2023-03-31T14:18:49.837447Z INFO    - _UploadSensorRegisters (2754) - --->
+2023-03-31T14:18:49.837455Z DEBUG   - _UploadSensorRegisters (2770) - Changing register 102 to value 2
+2023-03-31T14:18:49.837614Z DEBUG   - _UploadSensorRegisters (2770) - Changing register 118 to value 1
+2023-03-31T14:18:49.837759Z DEBUG   - _UploadSensorRegisters (2770) - Changing register 121 to value 1
+2023-03-31T14:18:49.840260Z INFO    - _UploadSensorRegisters (2780) - <---
+2023-03-31T14:18:49.840279Z INFO    - CM_XimeaXiq::_SetSensorParameters() End Black level offset 50 analog gain 2.8 digital gain 1.20465
+2023-03-31T14:18:49.840281Z INFO    - CM_XimeaXiq::_SetSensorParameters exited
+2023-03-31T14:18:49.846165Z DEBUG   - _UpdateSensorRegisters (1395) - AG: 2.8 DG: 1.20465 BlO: 50 Vramp: 109
+2023-03-31T14:18:49.846241Z INFO    - CM_XimeaXiq::_SetRuntimeParameters() End 0 1 exp: 15002 fr: 1 1 bl.off: 50 AG: 2.8 DG: 1.20465 0 0
+2023-03-31T14:18:49.846275Z INFO    - CM_XimeaXiq::_SetRuntimeParameters() Start 0 1 exp: 15002 fr: 1 1 bl.off: 50 0 0
+2023-03-31T14:18:49.846298Z INFO    - CM_XimeaXiq::_SetRuntimeParameters() End 0 1 exp: 15002 fr: 1 1 bl.off: 50 AG: 2.8 DG: 1.20465 0 0
+2023-03-31T14:18:49.846413Z INFO    - CM_XimeaXiq::_SetRuntimeParameters() Start 0 1 exp: 15002 fr: 30 1 bl.off: 50 0 0
+2023-03-31T14:18:49.899268Z INFO    - CM_XimeaXiq::_SetSensorParameters entered
+2023-03-31T14:18:49.899306Z INFO    - _UploadSensorRegisters (2754) - --->
+2023-03-31T14:18:49.899318Z DEBUG   - _UploadSensorRegisters (2770) - Changing register 102 to value 2
+2023-03-31T14:18:49.899562Z DEBUG   - _UploadSensorRegisters (2770) - Changing register 118 to value 1
+2023-03-31T14:18:49.899719Z DEBUG   - _UploadSensorRegisters (2770) - Changing register 121 to value 1
+2023-03-31T14:18:49.899859Z INFO    - _UploadSensorRegisters (2780) - <---
+2023-03-31T14:18:49.899873Z INFO    - CM_XimeaXiq::_SetSensorParameters() End Black level offset 50 analog gain 2.8 digital gain 1.20465
+2023-03-31T14:18:49.899875Z INFO    - CM_XimeaXiq::_SetSensorParameters exited
+2023-03-31T14:18:49.901936Z DEBUG   - _UpdateSensorRegisters (1395) - AG: 2.8 DG: 1.20465 BlO: 50 Vramp: 109
+2023-03-31T14:18:49.901957Z INFO    - CM_XimeaXiq::_SetRuntimeParameters() End 0 1 exp: 15002 fr: 30 1 bl.off: 50 AG: 2.8 DG: 1.20465 0 0
+2023-03-31T14:18:49.901975Z INFO    - CM_XimeaXiq::_SetRuntimeParameters() Start 0 1 exp: 15002 fr: 30 1 bl.off: 50 0 0
+2023-03-31T14:18:49.901983Z INFO    - CM_XimeaXiq::_SetRuntimeParameters() End 0 1 exp: 15002 fr: 30 1 bl.off: 50 AG: 2.8 DG: 1.20465 0 0
+2023-03-31T14:18:49.902091Z INFO    - CM_XimeaXiq::_SetRuntimeParameters() Start 0 1 exp: 15002 fr: 30 1 bl.off: 50 0 0
+2023-03-31T14:18:49.902099Z INFO    - CM_XimeaXiq::_SetRuntimeParameters() End 0 1 exp: 15002 fr: 30 1 bl.off: 50 AG: 2.8 DG: 1.20465 0 0
+2023-03-31T14:18:49.902102Z VERBOSE - driver starting...
+2023-03-31T14:18:49.910095Z VERBOSE - driver starting finished
+2023-03-31T14:18:49.918530Z DEBUG   - Trigger (1123) - Triggering camera
+2023-03-31T14:18:49.918542Z INFO    - Trigger (1136) - 0/1
+2023-03-31T14:18:49.918555Z VERBOSE - _AcquisitionLoop (2153) - Triggering camera
+2023-03-31T14:18:49.919312Z DEBUG   - _AcquisitionLoop (2178) - Waiting for image...
+2023-03-31T14:18:49.937517Z DEBUG   - nframe: 0; acq_nframe: 2; Previous acq_nframe: 1; Acq. time: 2023-03-31T14:18:49.937477Z; crnt. burst counter: 0; burst frames: 1
+2023-03-31T14:18:49.937724Z WARNING - [virtual double ihspt::drivers::CM_XimeaXiq::_GetTemperature()] xiSetParamInt (_device, XI_PRM_TEMP_SELECTOR, XI_TEMP_IMAGE_SENSOR_DIE) : Not supported
+2023-03-31T14:18:49.938032Z DEBUG   - _AcquisitionLoop (2257) - Entering update of parameters...
+2023-03-31T14:18:49.938060Z INFO    - CM_XimeaXiq::_SetRuntimeParameters() Start 0 1 exp: 15002 fr: 30 1 bl.off: 50 0 0
+2023-03-31T14:18:49.938069Z INFO    - CM_XimeaXiq::_SetRuntimeParameters() End 0 1 exp: 15002 fr: 30 1 bl.off: 50 AG: 2.8 DG: 1.20465 0 0
+2023-03-31T14:18:49.938072Z DEBUG   - _AcquisitionLoop (2262) - Update of parameters finished
+2023-03-31T14:18:49.950900Z VERBOSE - Pause (504) - driver pauzing...
+2023-03-31T14:18:49.950902Z DEBUG   - unlocking driver
+2023-03-31T14:18:49.950903Z DEBUG   - driver unlocked
+2023-03-31T14:18:49.950904Z DEBUG   - ...trying to lock driver
+2023-03-31T14:18:49.951936Z DEBUG   - ...driver unlocked
+2023-03-31T14:18:49.951942Z DEBUG   - ...wakeup condition called
+2023-03-31T14:18:49.951949Z VERBOSE - Pause (529) - driver pauzing finished
+2023-03-31T14:18:49.951984Z VERBOSE - driver stopping...
+2023-03-31T14:18:50.245596Z INFO    - [CM_XimeaXiq::_AcquisitionLoop] thread finished
+2023-03-31T14:18:50.245742Z VERBOSE - driver stopping finished
+2023-03-31T14:18:50.245878Z VERBOSE - driver forcing disconnect...
+2023-03-31T14:18:50.247065Z VERBOSE - driver forcing disconnect finished
+2023-03-31T14:18:50.247111Z VERBOSE - driver forcing disconnect...
+2023-03-31T14:18:50.247112Z DEBUG   - driver already disconnected
+2023-03-31T14:19:28.569390Z INFO    - CM_XimeaXiq::_SetConfigurationParameters() 0 1 # 0 0 0 0 2.8 1.2
+2023-03-31T14:19:28.569451Z INFO    - CM_XimeaXiq::_SetConfigurationParameters() 0 1 # 10000 15 0 0 2.8 1.2
+2023-03-31T14:19:28.569457Z WARNING - _SetConnectionParameters (361) - Cannot cast to local parameters.
+2023-03-31T14:19:28.569458Z WARNING - Cannot cast to local parameters.
+2023-03-31T14:19:28.569487Z VERBOSE - driver connecting...
+2023-03-31T14:19:28.829515Z INFO    - device info - name: MQ022HG-IM-SM5X5-NIR2
+2023-03-31T14:19:28.829520Z INFO    - device info - type: USB3.0
+2023-03-31T14:19:28.829522Z INFO    - device info - model: 1009
+2023-03-31T14:19:28.829522Z INFO    - device info - serial number: 32270462
+2023-03-31T14:19:28.831415Z INFO    - device info - sensor width: 2048
+2023-03-31T14:19:28.831418Z INFO    - device info - sensor height: 1088
+2023-03-31T14:19:28.831419Z INFO    - device info - min integration time (us): 21
+2023-03-31T14:19:28.831420Z INFO    - device info - max integration time (us): 999995
+2023-03-31T14:19:28.831428Z VERBOSE - _SyncSensorRegisters (2814) - -->
+2023-03-31T14:19:28.868230Z VERBOSE - _SyncSensorRegisters (2838) - <--
+2023-03-31T14:19:28.868241Z DEBUG   - _LogSensorParameters (975) - Inte_sync: 1
+2023-03-31T14:19:28.868244Z DEBUG   - _LogSensorParameters (976) - Exp_ext: 0
+2023-03-31T14:19:28.868246Z DEBUG   - _LogSensorParameters (977) - Col_calib: 0
+2023-03-31T14:19:28.868247Z DEBUG   - _LogSensorParameters (978) - ADC_calib: 0
+2023-03-31T14:19:28.868249Z DEBUG   - _LogSensorParameters (979) - I_col: 4
+2023-03-31T14:19:28.868261Z DEBUG   - _LogSensorParameters (980) - I_col_prech: 1
+2023-03-31T14:19:28.868263Z DEBUG   - _LogSensorParameters (981) - I_amp: 12
+2023-03-31T14:19:28.868265Z DEBUG   - _LogSensorParameters (982) - Vtf_l1: 64
+2023-03-31T14:19:28.868267Z DEBUG   - _LogSensorParameters (983) - Vres_low: 64
+2023-03-31T14:19:28.868269Z DEBUG   - _LogSensorParameters (984) - V_prech: 101
+2023-03-31T14:19:28.868270Z DEBUG   - _LogSensorParameters (985) - V_ref: 106
+2023-03-31T14:19:28.868272Z DEBUG   - _LogSensorParameters (986) - Dummy: 4
+2023-03-31T14:19:28.868274Z DEBUG   - _LogSensorParameters (987) - V_blacksun: 34
+2023-03-31T14:19:28.868276Z DEBUG   - _LogSensorParameters (988) - black_level: 16300
+2023-03-31T14:19:28.868278Z DEBUG   - _LogSensorParameters (989) - V_ramp1: 109
+2023-03-31T14:19:28.868279Z DEBUG   - _LogSensorParameters (990) - V_ramp2: 109
+2023-03-31T14:19:28.868281Z DEBUG   - _LogSensorParameters (991) - adc_gain: 46
+2023-03-31T14:19:28.868283Z DEBUG   - _LogSensorParameters (992) - pga_gain: 1
+2023-03-31T14:19:28.868284Z DEBUG   - _LogSensorParameters (993) - pga_gain_2: 0
+2023-03-31T14:19:28.868287Z DEBUG   - _LogSensorParameters (994) - Output_mode: 1
+2023-03-31T14:19:28.868288Z DEBUG   - _LogSensorParameters (995) - Image flipping: 2
+2023-03-31T14:19:28.868290Z VERBOSE - driver connected
+2023-03-31T14:19:28.868660Z VERBOSE - driver initializing...
+2023-03-31T14:19:28.868660Z VERBOSE -    trying to initialize...
+2023-03-31T14:19:29.098406Z INFO    - sensor bit depth: 10; output bit depth: 10
+2023-03-31T14:19:30.566421Z INFO    - _Initialize (1693) - Acquisition buffer size is set to: 132120576
+2023-03-31T14:19:30.566443Z INFO    - _Initialize (1699) - Requested minimum acq buffer queue length: 64
+2023-03-31T14:19:30.566588Z INFO    - _Initialize (1712) - Allocated acq buffer queue length: 107
+2023-03-31T14:19:30.566609Z INFO    - _Initialize (1740) - clock frequency: 48000000
+2023-03-31T14:19:31.763554Z INFO    - CM_XimeaXiq::_SetRuntimeParameters() Start 0 1 exp: 10000 fr: 15 0 bl.off: 50 0 0
+2023-03-31T14:19:31.905580Z INFO    - CM_XimeaXiq::_SetRuntimeParameters() End 0 1 exp: 9998 fr: 15 0 bl.off: 50 AG: 2.8 DG: 1.2 0 0
+2023-03-31T14:19:31.905607Z VERBOSE - _StartAcquisition (1049) - -->
+2023-03-31T14:19:31.955689Z INFO    - CM_XimeaXiq::_SetSensorParameters entered
+2023-03-31T14:19:31.955709Z INFO    - _UploadSensorRegisters (2754) - --->
+2023-03-31T14:19:31.955716Z DEBUG   - _UploadSensorRegisters (2770) - Changing register 100 to value 236
+2023-03-31T14:19:31.955853Z DEBUG   - _UploadSensorRegisters (2770) - Changing register 101 to value 63
+2023-03-31T14:19:31.955996Z DEBUG   - _UploadSensorRegisters (2770) - Changing register 102 to value 2
+2023-03-31T14:19:31.956139Z DEBUG   - _UploadSensorRegisters (2770) - Changing register 103 to value 44
+2023-03-31T14:19:31.956287Z DEBUG   - _UploadSensorRegisters (2770) - Changing register 118 to value 1
+2023-03-31T14:19:31.956431Z DEBUG   - _UploadSensorRegisters (2770) - Changing register 121 to value 1
+2023-03-31T14:19:31.956574Z INFO    - _UploadSensorRegisters (2780) - <---
+2023-03-31T14:19:31.956583Z INFO    - CM_XimeaXiq::_SetSensorParameters() End Black level offset 50 analog gain 2.8 digital gain 1.20465
+2023-03-31T14:19:31.956584Z INFO    - CM_XimeaXiq::_SetSensorParameters exited
+2023-03-31T14:19:31.958572Z DEBUG   - _UpdateSensorRegisters (1395) - AG: 2.8 DG: 1.20465 BlO: 50 Vramp: 109
+2023-03-31T14:19:31.958576Z VERBOSE - _StartAcquisition (1066) - <--
+2023-03-31T14:19:31.958579Z DEBUG   - _Initialize (1846) - Grabbing sensor parameters after initialization
+2023-03-31T14:19:31.958582Z INFO    - CM_XimeaXiq::_DownloadSensorRegisters() Start Black level offset 50 analog gain 2.8 digital gain 1.20465
+2023-03-31T14:19:31.958584Z VERBOSE - _SyncSensorRegisters (2814) - -->
+2023-03-31T14:19:31.995288Z VERBOSE - _SyncSensorRegisters (2838) - <--
+2023-03-31T14:19:31.995305Z INFO    - CM_XimeaXiq::_DownloadSensorRegisters() End Black level offset 50 analog gain 2.8 digital gain 1.20465
+2023-03-31T14:19:31.995309Z INFO    - DM_Camera::_GetSensorParameters entered
+2023-03-31T14:19:31.995312Z INFO    - DM_Camera::_GetSensorParameters exited
+2023-03-31T14:19:31.995318Z DEBUG   - _LogSensorParameters (975) - Inte_sync: 1
+2023-03-31T14:19:31.995321Z DEBUG   - _LogSensorParameters (976) - Exp_ext: 0
+2023-03-31T14:19:31.995324Z DEBUG   - _LogSensorParameters (977) - Col_calib: 0
+2023-03-31T14:19:31.995327Z DEBUG   - _LogSensorParameters (978) - ADC_calib: 0
+2023-03-31T14:19:31.995329Z DEBUG   - _LogSensorParameters (979) - I_col: 4
+2023-03-31T14:19:31.995334Z DEBUG   - _LogSensorParameters (980) - I_col_prech: 1
+2023-03-31T14:19:31.995337Z DEBUG   - _LogSensorParameters (981) - I_amp: 12
+2023-03-31T14:19:31.995340Z DEBUG   - _LogSensorParameters (982) - Vtf_l1: 64
+2023-03-31T14:19:31.995343Z DEBUG   - _LogSensorParameters (983) - Vres_low: 64
+2023-03-31T14:19:31.995346Z DEBUG   - _LogSensorParameters (984) - V_prech: 101
+2023-03-31T14:19:31.995349Z DEBUG   - _LogSensorParameters (985) - V_ref: 106
+2023-03-31T14:19:31.995351Z DEBUG   - _LogSensorParameters (986) - Dummy: 1
+2023-03-31T14:19:31.995354Z DEBUG   - _LogSensorParameters (987) - V_blacksun: 34
+2023-03-31T14:19:31.995357Z DEBUG   - _LogSensorParameters (988) - black_level: 16364
+2023-03-31T14:19:31.995360Z DEBUG   - _LogSensorParameters (989) - V_ramp1: 109
+2023-03-31T14:19:31.995363Z DEBUG   - _LogSensorParameters (990) - V_ramp2: 109
+2023-03-31T14:19:31.995365Z DEBUG   - _LogSensorParameters (991) - adc_gain: 44
+2023-03-31T14:19:31.995368Z DEBUG   - _LogSensorParameters (992) - pga_gain: 2
+2023-03-31T14:19:31.995371Z DEBUG   - _LogSensorParameters (993) - pga_gain_2: 1
+2023-03-31T14:19:31.995374Z DEBUG   - _LogSensorParameters (994) - Output_mode: 1
+2023-03-31T14:19:31.995377Z DEBUG   - _LogSensorParameters (995) - Image flipping: 2
+2023-03-31T14:19:31.995379Z VERBOSE -    initalization successful...
+2023-03-31T14:19:31.995380Z VERBOSE - driver initialization finished
+2023-03-31T14:19:31.997129Z INFO    - CM_XimeaXiq::_SetRuntimeParameters() Start 0 1 exp: 9998 fr: 15 0 bl.off: 50 0 0
+2023-03-31T14:19:31.997141Z INFO    - CM_XimeaXiq::_SetRuntimeParameters() End 0 1 exp: 9998 fr: 15 0 bl.off: 50 AG: 2.8 DG: 1.20465 0 0
+2023-03-31T14:19:31.997370Z INFO    - CM_XimeaXiq::_SetRuntimeParameters() Start 0 1 exp: 15000 fr: 30 0 bl.off: 50 0 0
+2023-03-31T14:19:32.063683Z INFO    - CM_XimeaXiq::_SetSensorParameters entered
+2023-03-31T14:19:32.063708Z INFO    - _UploadSensorRegisters (2754) - --->
+2023-03-31T14:19:32.063716Z DEBUG   - _UploadSensorRegisters (2770) - Changing register 102 to value 2
+2023-03-31T14:19:32.063870Z DEBUG   - _UploadSensorRegisters (2770) - Changing register 118 to value 1
+2023-03-31T14:19:32.064020Z DEBUG   - _UploadSensorRegisters (2770) - Changing register 121 to value 1
+2023-03-31T14:19:32.064168Z INFO    - _UploadSensorRegisters (2780) - <---
+2023-03-31T14:19:32.064179Z INFO    - CM_XimeaXiq::_SetSensorParameters() End Black level offset 50 analog gain 2.8 digital gain 1.20465
+2023-03-31T14:19:32.064181Z INFO    - CM_XimeaXiq::_SetSensorParameters exited
+2023-03-31T14:19:32.066178Z DEBUG   - _UpdateSensorRegisters (1395) - AG: 2.8 DG: 1.20465 BlO: 50 Vramp: 109
+2023-03-31T14:19:32.066191Z INFO    - CM_XimeaXiq::_SetRuntimeParameters() End 0 1 exp: 15002 fr: 30 0 bl.off: 50 AG: 2.8 DG: 1.20465 0 0
+2023-03-31T14:19:32.066209Z INFO    - CM_XimeaXiq::_SetRuntimeParameters() Start 0 1 exp: 15002 fr: 30 0 bl.off: 50 0 0
+2023-03-31T14:19:32.066217Z INFO    - CM_XimeaXiq::_SetRuntimeParameters() End 0 1 exp: 15002 fr: 30 0 bl.off: 50 AG: 2.8 DG: 1.20465 0 0
+2023-03-31T14:19:32.066915Z INFO    - CM_XimeaXiq::_SetRuntimeParameters() Start 0 1 exp: 15002 fr: 30 0 bl.off: 50 0 0
+2023-03-31T14:19:32.066925Z INFO    - CM_XimeaXiq::_SetRuntimeParameters() End 0 1 exp: 15002 fr: 30 0 bl.off: 50 AG: 2.8 DG: 1.20465 0 0
+2023-03-31T14:19:32.066927Z VERBOSE - driver starting...
+2023-03-31T14:19:32.074966Z VERBOSE - driver starting finished
+2023-03-31T14:19:32.075126Z DEBUG   - _AcquisitionLoop (2178) - Waiting for image...
+2023-03-31T14:19:32.079413Z DEBUG   - _AcquisitionLoop (2178) - Waiting for image...
+2023-03-31T14:19:32.126579Z DEBUG   - nframe: 1; acq_nframe: 2; Previous acq_nframe: 0; Acq. time: 2023-03-31T14:19:32.126529Z; crnt. burst counter: 0; burst frames: 1
+2023-03-31T14:19:32.126840Z WARNING - [virtual double ihspt::drivers::CM_XimeaXiq::_GetTemperature()] xiSetParamInt (_device, XI_PRM_TEMP_SELECTOR, XI_TEMP_IMAGE_SENSOR_DIE) : Not supported
+2023-03-31T14:19:32.127152Z DEBUG   - _AcquisitionLoop (2257) - Entering update of parameters...
+2023-03-31T14:19:32.127229Z INFO    - CM_XimeaXiq::_SetRuntimeParameters() Start 0 1 exp: 15002 fr: 30 0 bl.off: 50 0 0
+2023-03-31T14:19:32.127254Z INFO    - CM_XimeaXiq::_SetRuntimeParameters() End 0 1 exp: 15002 fr: 30 0 bl.off: 50 AG: 2.8 DG: 1.20465 0 0
+2023-03-31T14:19:32.127277Z DEBUG   - _AcquisitionLoop (2262) - Update of parameters finished
+2023-03-31T14:19:32.127417Z DEBUG   - _AcquisitionLoop (2178) - Waiting for image...
+2023-03-31T14:19:32.128203Z VERBOSE - Pause (504) - driver pauzing...
+2023-03-31T14:19:32.128204Z DEBUG   - unlocking driver
+2023-03-31T14:19:32.128205Z DEBUG   - driver unlocked
+2023-03-31T14:19:32.128206Z DEBUG   - ...trying to lock driver
+2023-03-31T14:19:32.159913Z DEBUG   - nframe: 2; acq_nframe: 3; Previous acq_nframe: 2; Acq. time: 2023-03-31T14:19:32.159871Z; crnt. burst counter: 0; burst frames: 1
+2023-03-31T14:19:32.160224Z WARNING - [virtual double ihspt::drivers::CM_XimeaXiq::_GetTemperature()] xiSetParamInt (_device, XI_PRM_TEMP_SELECTOR, XI_TEMP_IMAGE_SENSOR_DIE) : Not supported
+2023-03-31T14:19:32.160559Z DEBUG   - _AcquisitionLoop (2257) - Entering update of parameters...
+2023-03-31T14:19:32.160644Z INFO    - CM_XimeaXiq::_SetRuntimeParameters() Start 0 1 exp: 15002 fr: 30 0 bl.off: 50 0 0
+2023-03-31T14:19:32.160671Z INFO    - CM_XimeaXiq::_SetRuntimeParameters() End 0 1 exp: 15002 fr: 30 0 bl.off: 50 AG: 2.8 DG: 1.20465 0 0
+2023-03-31T14:19:32.160689Z DEBUG   - _AcquisitionLoop (2262) - Update of parameters finished
+2023-03-31T14:19:32.160929Z DEBUG   - ...driver unlocked
+2023-03-31T14:19:32.160948Z DEBUG   - ...wakeup condition called
+2023-03-31T14:19:32.160967Z VERBOSE - Pause (529) - driver pauzing finished
+2023-03-31T14:19:32.161249Z INFO    - CM_XimeaXiq::_SetRuntimeParameters() Start 0 1 exp: 15002 fr: 1 0 bl.off: 50 0 0
+2023-03-31T14:19:32.218133Z INFO    - CM_XimeaXiq::_SetSensorParameters entered
+2023-03-31T14:19:32.218157Z INFO    - _UploadSensorRegisters (2754) - --->
+2023-03-31T14:19:32.218165Z DEBUG   - _UploadSensorRegisters (2770) - Changing register 102 to value 2
+2023-03-31T14:19:32.218309Z DEBUG   - _UploadSensorRegisters (2770) - Changing register 118 to value 1
+2023-03-31T14:19:32.219846Z DEBUG   - _UploadSensorRegisters (2770) - Changing register 121 to value 1
+2023-03-31T14:19:32.220040Z INFO    - _UploadSensorRegisters (2780) - <---
+2023-03-31T14:19:32.220054Z INFO    - CM_XimeaXiq::_SetSensorParameters() End Black level offset 50 analog gain 2.8 digital gain 1.20465
+2023-03-31T14:19:32.220057Z INFO    - CM_XimeaXiq::_SetSensorParameters exited
+2023-03-31T14:19:32.222130Z DEBUG   - _UpdateSensorRegisters (1395) - AG: 2.8 DG: 1.20465 BlO: 50 Vramp: 109
+2023-03-31T14:19:32.222151Z INFO    - CM_XimeaXiq::_SetRuntimeParameters() End 0 1 exp: 15002 fr: 1 0 bl.off: 50 AG: 2.8 DG: 1.20465 0 0
+2023-03-31T14:19:32.222167Z INFO    - CM_XimeaXiq::_SetRuntimeParameters() Start 0 1 exp: 15002 fr: 1 0 bl.off: 50 0 0
+2023-03-31T14:19:32.222174Z INFO    - CM_XimeaXiq::_SetRuntimeParameters() End 0 1 exp: 15002 fr: 1 0 bl.off: 50 AG: 2.8 DG: 1.20465 0 0
+2023-03-31T14:19:32.222295Z INFO    - CM_XimeaXiq::_SetRuntimeParameters() Start 0 1 exp: 15000 fr: 1 0 bl.off: 50 0 0
+2023-03-31T14:19:32.230460Z INFO    - CM_XimeaXiq::_SetSensorParameters entered
+2023-03-31T14:19:32.230490Z INFO    - _UploadSensorRegisters (2754) - --->
+2023-03-31T14:19:32.230504Z DEBUG   - _UploadSensorRegisters (2770) - Changing register 118 to value 1
+2023-03-31T14:19:32.230687Z INFO    - _UploadSensorRegisters (2780) - <---
+2023-03-31T14:19:32.230699Z INFO    - CM_XimeaXiq::_SetSensorParameters() End Black level offset 50 analog gain 2.8 digital gain 1.20465
+2023-03-31T14:19:32.230700Z INFO    - CM_XimeaXiq::_SetSensorParameters exited
+2023-03-31T14:19:32.232764Z DEBUG   - _UpdateSensorRegisters (1395) - AG: 2.8 DG: 1.20465 BlO: 50 Vramp: 109
+2023-03-31T14:19:32.232782Z INFO    - CM_XimeaXiq::_SetRuntimeParameters() End 0 1 exp: 15002 fr: 1 0 bl.off: 50 AG: 2.8 DG: 1.20465 0 0
+2023-03-31T14:19:32.232800Z INFO    - CM_XimeaXiq::_SetRuntimeParameters() Start 0 1 exp: 15002 fr: 1 0 bl.off: 50 0 0
+2023-03-31T14:19:32.232807Z INFO    - CM_XimeaXiq::_SetRuntimeParameters() End 0 1 exp: 15002 fr: 1 0 bl.off: 50 AG: 2.8 DG: 1.20465 0 0
+2023-03-31T14:19:32.232941Z INFO    - CM_XimeaXiq::_SetRuntimeParameters() Start 0 1 exp: 15002 fr: 30 0 bl.off: 50 0 0
+2023-03-31T14:19:32.288599Z INFO    - CM_XimeaXiq::_SetSensorParameters entered
+2023-03-31T14:19:32.288708Z INFO    - _UploadSensorRegisters (2754) - --->
+2023-03-31T14:19:32.288719Z DEBUG   - _UploadSensorRegisters (2770) - Changing register 102 to value 2
+2023-03-31T14:19:32.288885Z DEBUG   - _UploadSensorRegisters (2770) - Changing register 118 to value 1
+2023-03-31T14:19:32.289039Z DEBUG   - _UploadSensorRegisters (2770) - Changing register 121 to value 1
+2023-03-31T14:19:32.289187Z INFO    - _UploadSensorRegisters (2780) - <---
+2023-03-31T14:19:32.289200Z INFO    - CM_XimeaXiq::_SetSensorParameters() End Black level offset 50 analog gain 2.8 digital gain 1.20465
+2023-03-31T14:19:32.289203Z INFO    - CM_XimeaXiq::_SetSensorParameters exited
+2023-03-31T14:19:32.291251Z DEBUG   - _UpdateSensorRegisters (1395) - AG: 2.8 DG: 1.20465 BlO: 50 Vramp: 109
+2023-03-31T14:19:32.291267Z INFO    - CM_XimeaXiq::_SetRuntimeParameters() End 0 1 exp: 15002 fr: 30 0 bl.off: 50 AG: 2.8 DG: 1.20465 0 0
+2023-03-31T14:19:32.291282Z INFO    - CM_XimeaXiq::_SetRuntimeParameters() Start 0 1 exp: 15002 fr: 30 0 bl.off: 50 0 0
+2023-03-31T14:19:32.291291Z INFO    - CM_XimeaXiq::_SetRuntimeParameters() End 0 1 exp: 15002 fr: 30 0 bl.off: 50 AG: 2.8 DG: 1.20465 0 0
+2023-03-31T14:19:32.291376Z INFO    - CM_XimeaXiq::_SetRuntimeParameters() Start 0 1 exp: 15002 fr: 30 0 bl.off: 50 0 0
+2023-03-31T14:19:32.291384Z INFO    - CM_XimeaXiq::_SetRuntimeParameters() End 0 1 exp: 15002 fr: 30 0 bl.off: 50 AG: 2.8 DG: 1.20465 0 0
+2023-03-31T14:19:32.291386Z VERBOSE - driver starting...
+2023-03-31T14:19:32.297329Z VERBOSE - driver starting finished
+2023-03-31T14:19:32.297370Z DEBUG   - _AcquisitionLoop (2178) - Waiting for image...
+2023-03-31T14:19:32.297627Z DEBUG   - nframe: 0; acq_nframe: 4; Previous acq_nframe: 3; Acq. time: 2023-03-31T14:19:32.297615Z; crnt. burst counter: 0; burst frames: 1
+2023-03-31T14:19:32.297765Z WARNING - [virtual double ihspt::drivers::CM_XimeaXiq::_GetTemperature()] xiSetParamInt (_device, XI_PRM_TEMP_SELECTOR, XI_TEMP_IMAGE_SENSOR_DIE) : Not supported
+2023-03-31T14:19:32.298079Z DEBUG   - _AcquisitionLoop (2257) - Entering update of parameters...
+2023-03-31T14:19:32.298111Z INFO    - CM_XimeaXiq::_SetRuntimeParameters() Start 0 1 exp: 15002 fr: 30 0 bl.off: 50 0 0
+2023-03-31T14:19:32.298121Z INFO    - CM_XimeaXiq::_SetRuntimeParameters() End 0 1 exp: 15002 fr: 30 0 bl.off: 50 AG: 2.8 DG: 1.20465 0 0
+2023-03-31T14:19:32.298124Z DEBUG   - _AcquisitionLoop (2262) - Update of parameters finished
+2023-03-31T14:19:32.298264Z DEBUG   - _AcquisitionLoop (2178) - Waiting for image...
+2023-03-31T14:19:32.298876Z VERBOSE - Pause (504) - driver pauzing...
+2023-03-31T14:19:32.298877Z DEBUG   - unlocking driver
+2023-03-31T14:19:32.298878Z DEBUG   - driver unlocked
+2023-03-31T14:19:32.298878Z DEBUG   - ...trying to lock driver
+2023-03-31T14:19:32.304061Z DEBUG   - nframe: 0; acq_nframe: 5; Previous acq_nframe: 4; Acq. time: 2023-03-31T14:19:32.304022Z; crnt. burst counter: 0; burst frames: 1
+2023-03-31T14:19:32.304270Z WARNING - [virtual double ihspt::drivers::CM_XimeaXiq::_GetTemperature()] xiSetParamInt (_device, XI_PRM_TEMP_SELECTOR, XI_TEMP_IMAGE_SENSOR_DIE) : Not supported
+2023-03-31T14:19:32.304952Z DEBUG   - _AcquisitionLoop (2257) - Entering update of parameters...
+2023-03-31T14:19:32.304983Z INFO    - CM_XimeaXiq::_SetRuntimeParameters() Start 0 1 exp: 15002 fr: 30 0 bl.off: 50 0 0
+2023-03-31T14:19:32.304994Z INFO    - CM_XimeaXiq::_SetRuntimeParameters() End 0 1 exp: 15002 fr: 30 0 bl.off: 50 AG: 2.8 DG: 1.20465 0 0
+2023-03-31T14:19:32.304997Z DEBUG   - _AcquisitionLoop (2262) - Update of parameters finished
+2023-03-31T14:19:32.305105Z DEBUG   - ...driver unlocked
+2023-03-31T14:19:32.305108Z DEBUG   - ...wakeup condition called
+2023-03-31T14:19:32.305113Z VERBOSE - Pause (529) - driver pauzing finished
+2023-03-31T14:19:32.305161Z VERBOSE - driver stopping...
+2023-03-31T14:19:32.459998Z INFO    - [CM_XimeaXiq::_AcquisitionLoop] thread finished
+2023-03-31T14:19:32.460044Z VERBOSE - driver stopping finished
+2023-03-31T14:19:32.460152Z VERBOSE - driver forcing disconnect...
+2023-03-31T14:19:32.461276Z VERBOSE - driver forcing disconnect finished
+2023-03-31T14:19:32.461328Z VERBOSE - driver forcing disconnect...
+2023-03-31T14:19:32.461330Z DEBUG   - driver already disconnected
+2023-03-31T14:19:44.231843Z INFO    - CM_XimeaXiq::_SetConfigurationParameters() 0 1 # 0 0 0 0 2.8 1.2
+2023-03-31T14:19:44.231908Z INFO    - CM_XimeaXiq::_SetConfigurationParameters() 0 1 # 10000 15 0 0 2.8 1.2
+2023-03-31T14:19:44.231913Z WARNING - _SetConnectionParameters (361) - Cannot cast to local parameters.
+2023-03-31T14:19:44.231915Z WARNING - Cannot cast to local parameters.
+2023-03-31T14:19:44.231952Z VERBOSE - driver connecting...
+2023-03-31T14:19:44.503781Z INFO    - device info - name: MQ022HG-IM-SM5X5-NIR2
+2023-03-31T14:19:44.503786Z INFO    - device info - type: USB3.0
+2023-03-31T14:19:44.503787Z INFO    - device info - model: 1009
+2023-03-31T14:19:44.503788Z INFO    - device info - serial number: 32270462
+2023-03-31T14:19:44.505674Z INFO    - device info - sensor width: 2048
+2023-03-31T14:19:44.505677Z INFO    - device info - sensor height: 1088
+2023-03-31T14:19:44.505677Z INFO    - device info - min integration time (us): 21
+2023-03-31T14:19:44.505678Z INFO    - device info - max integration time (us): 999995
+2023-03-31T14:19:44.505688Z VERBOSE - _SyncSensorRegisters (2814) - -->
+2023-03-31T14:19:44.542335Z VERBOSE - _SyncSensorRegisters (2838) - <--
+2023-03-31T14:19:44.542347Z DEBUG   - _LogSensorParameters (975) - Inte_sync: 1
+2023-03-31T14:19:44.542349Z DEBUG   - _LogSensorParameters (976) - Exp_ext: 0
+2023-03-31T14:19:44.542350Z DEBUG   - _LogSensorParameters (977) - Col_calib: 0
+2023-03-31T14:19:44.542352Z DEBUG   - _LogSensorParameters (978) - ADC_calib: 0
+2023-03-31T14:19:44.542354Z DEBUG   - _LogSensorParameters (979) - I_col: 4
+2023-03-31T14:19:44.542356Z DEBUG   - _LogSensorParameters (980) - I_col_prech: 1
+2023-03-31T14:19:44.542358Z DEBUG   - _LogSensorParameters (981) - I_amp: 12
+2023-03-31T14:19:44.542359Z DEBUG   - _LogSensorParameters (982) - Vtf_l1: 64
+2023-03-31T14:19:44.542361Z DEBUG   - _LogSensorParameters (983) - Vres_low: 64
+2023-03-31T14:19:44.542363Z DEBUG   - _LogSensorParameters (984) - V_prech: 101
+2023-03-31T14:19:44.542365Z DEBUG   - _LogSensorParameters (985) - V_ref: 106
+2023-03-31T14:19:44.542367Z DEBUG   - _LogSensorParameters (986) - Dummy: 4
+2023-03-31T14:19:44.542369Z DEBUG   - _LogSensorParameters (987) - V_blacksun: 34
+2023-03-31T14:19:44.542371Z DEBUG   - _LogSensorParameters (988) - black_level: 16300
+2023-03-31T14:19:44.542373Z DEBUG   - _LogSensorParameters (989) - V_ramp1: 109
+2023-03-31T14:19:44.542375Z DEBUG   - _LogSensorParameters (990) - V_ramp2: 109
+2023-03-31T14:19:44.542377Z DEBUG   - _LogSensorParameters (991) - adc_gain: 46
+2023-03-31T14:19:44.542379Z DEBUG   - _LogSensorParameters (992) - pga_gain: 1
+2023-03-31T14:19:44.542381Z DEBUG   - _LogSensorParameters (993) - pga_gain_2: 0
+2023-03-31T14:19:44.542383Z DEBUG   - _LogSensorParameters (994) - Output_mode: 1
+2023-03-31T14:19:44.542384Z DEBUG   - _LogSensorParameters (995) - Image flipping: 2
+2023-03-31T14:19:44.542387Z VERBOSE - driver connected
+2023-03-31T14:19:44.542768Z VERBOSE - driver initializing...
+2023-03-31T14:19:44.542768Z VERBOSE -    trying to initialize...
+2023-03-31T14:19:44.785006Z INFO    - sensor bit depth: 10; output bit depth: 10
+2023-03-31T14:19:46.254405Z INFO    - _Initialize (1693) - Acquisition buffer size is set to: 132120576
+2023-03-31T14:19:46.254418Z INFO    - _Initialize (1699) - Requested minimum acq buffer queue length: 64
+2023-03-31T14:19:46.254530Z INFO    - _Initialize (1712) - Allocated acq buffer queue length: 107
+2023-03-31T14:19:46.254551Z INFO    - _Initialize (1740) - clock frequency: 48000000
+2023-03-31T14:19:47.449370Z INFO    - CM_XimeaXiq::_SetRuntimeParameters() Start 0 1 exp: 10000 fr: 15 0 bl.off: 50 0 0
+2023-03-31T14:19:47.592026Z INFO    - CM_XimeaXiq::_SetRuntimeParameters() End 0 1 exp: 9998 fr: 15 0 bl.off: 50 AG: 2.8 DG: 1.2 0 0
+2023-03-31T14:19:47.592056Z VERBOSE - _StartAcquisition (1049) - -->
+2023-03-31T14:19:47.642093Z INFO    - CM_XimeaXiq::_SetSensorParameters entered
+2023-03-31T14:19:47.642114Z INFO    - _UploadSensorRegisters (2754) - --->
+2023-03-31T14:19:47.642133Z DEBUG   - _UploadSensorRegisters (2770) - Changing register 100 to value 236
+2023-03-31T14:19:47.642289Z DEBUG   - _UploadSensorRegisters (2770) - Changing register 101 to value 63
+2023-03-31T14:19:47.642423Z DEBUG   - _UploadSensorRegisters (2770) - Changing register 102 to value 2
+2023-03-31T14:19:47.642569Z DEBUG   - _UploadSensorRegisters (2770) - Changing register 103 to value 44
+2023-03-31T14:19:47.642713Z DEBUG   - _UploadSensorRegisters (2770) - Changing register 118 to value 1
+2023-03-31T14:19:47.642856Z DEBUG   - _UploadSensorRegisters (2770) - Changing register 121 to value 1
+2023-03-31T14:19:47.643002Z INFO    - _UploadSensorRegisters (2780) - <---
+2023-03-31T14:19:47.643013Z INFO    - CM_XimeaXiq::_SetSensorParameters() End Black level offset 50 analog gain 2.8 digital gain 1.20465
+2023-03-31T14:19:47.643014Z INFO    - CM_XimeaXiq::_SetSensorParameters exited
+2023-03-31T14:19:47.645025Z DEBUG   - _UpdateSensorRegisters (1395) - AG: 2.8 DG: 1.20465 BlO: 50 Vramp: 109
+2023-03-31T14:19:47.645030Z VERBOSE - _StartAcquisition (1066) - <--
+2023-03-31T14:19:47.645033Z DEBUG   - _Initialize (1846) - Grabbing sensor parameters after initialization
+2023-03-31T14:19:47.645037Z INFO    - CM_XimeaXiq::_DownloadSensorRegisters() Start Black level offset 50 analog gain 2.8 digital gain 1.20465
+2023-03-31T14:19:47.645039Z VERBOSE - _SyncSensorRegisters (2814) - -->
+2023-03-31T14:19:47.681747Z VERBOSE - _SyncSensorRegisters (2838) - <--
+2023-03-31T14:19:47.681762Z INFO    - CM_XimeaXiq::_DownloadSensorRegisters() End Black level offset 50 analog gain 2.8 digital gain 1.20465
+2023-03-31T14:19:47.681765Z INFO    - DM_Camera::_GetSensorParameters entered
+2023-03-31T14:19:47.681768Z INFO    - DM_Camera::_GetSensorParameters exited
+2023-03-31T14:19:47.681774Z DEBUG   - _LogSensorParameters (975) - Inte_sync: 1
+2023-03-31T14:19:47.681776Z DEBUG   - _LogSensorParameters (976) - Exp_ext: 0
+2023-03-31T14:19:47.681779Z DEBUG   - _LogSensorParameters (977) - Col_calib: 0
+2023-03-31T14:19:47.681782Z DEBUG   - _LogSensorParameters (978) - ADC_calib: 0
+2023-03-31T14:19:47.681784Z DEBUG   - _LogSensorParameters (979) - I_col: 4
+2023-03-31T14:19:47.681789Z DEBUG   - _LogSensorParameters (980) - I_col_prech: 1
+2023-03-31T14:19:47.681791Z DEBUG   - _LogSensorParameters (981) - I_amp: 12
+2023-03-31T14:19:47.681793Z DEBUG   - _LogSensorParameters (982) - Vtf_l1: 64
+2023-03-31T14:19:47.681796Z DEBUG   - _LogSensorParameters (983) - Vres_low: 64
+2023-03-31T14:19:47.681799Z DEBUG   - _LogSensorParameters (984) - V_prech: 101
+2023-03-31T14:19:47.681802Z DEBUG   - _LogSensorParameters (985) - V_ref: 106
+2023-03-31T14:19:47.681805Z DEBUG   - _LogSensorParameters (986) - Dummy: 1
+2023-03-31T14:19:47.681808Z DEBUG   - _LogSensorParameters (987) - V_blacksun: 34
+2023-03-31T14:19:47.681811Z DEBUG   - _LogSensorParameters (988) - black_level: 16364
+2023-03-31T14:19:47.681815Z DEBUG   - _LogSensorParameters (989) - V_ramp1: 109
+2023-03-31T14:19:47.681818Z DEBUG   - _LogSensorParameters (990) - V_ramp2: 109
+2023-03-31T14:19:47.681821Z DEBUG   - _LogSensorParameters (991) - adc_gain: 44
+2023-03-31T14:19:47.681824Z DEBUG   - _LogSensorParameters (992) - pga_gain: 2
+2023-03-31T14:19:47.681828Z DEBUG   - _LogSensorParameters (993) - pga_gain_2: 1
+2023-03-31T14:19:47.681830Z DEBUG   - _LogSensorParameters (994) - Output_mode: 1
+2023-03-31T14:19:47.681833Z DEBUG   - _LogSensorParameters (995) - Image flipping: 2
+2023-03-31T14:19:47.681836Z VERBOSE -    initalization successful...
+2023-03-31T14:19:47.681837Z VERBOSE - driver initialization finished
+2023-03-31T14:19:47.683785Z INFO    - CM_XimeaXiq::_SetRuntimeParameters() Start 0 1 exp: 9998 fr: 15 0 bl.off: 50 0 0
+2023-03-31T14:19:47.683800Z INFO    - CM_XimeaXiq::_SetRuntimeParameters() End 0 1 exp: 9998 fr: 15 0 bl.off: 50 AG: 2.8 DG: 1.20465 0 0
+2023-03-31T14:19:47.684099Z INFO    - CM_XimeaXiq::_SetRuntimeParameters() Start 0 1 exp: 15000 fr: 30 0 bl.off: 50 0 0
+2023-03-31T14:19:47.761503Z INFO    - CM_XimeaXiq::_SetSensorParameters entered
+2023-03-31T14:19:47.761527Z INFO    - _UploadSensorRegisters (2754) - --->
+2023-03-31T14:19:47.761535Z DEBUG   - _UploadSensorRegisters (2770) - Changing register 102 to value 2
+2023-03-31T14:19:47.761676Z DEBUG   - _UploadSensorRegisters (2770) - Changing register 118 to value 1
+2023-03-31T14:19:47.761819Z DEBUG   - _UploadSensorRegisters (2770) - Changing register 121 to value 1
+2023-03-31T14:19:47.761962Z INFO    - _UploadSensorRegisters (2780) - <---
+2023-03-31T14:19:47.761974Z INFO    - CM_XimeaXiq::_SetSensorParameters() End Black level offset 50 analog gain 2.8 digital gain 1.20465
+2023-03-31T14:19:47.761975Z INFO    - CM_XimeaXiq::_SetSensorParameters exited
+2023-03-31T14:19:47.764021Z DEBUG   - _UpdateSensorRegisters (1395) - AG: 2.8 DG: 1.20465 BlO: 50 Vramp: 109
+2023-03-31T14:19:47.764065Z INFO    - CM_XimeaXiq::_SetRuntimeParameters() End 0 1 exp: 15002 fr: 30 0 bl.off: 50 AG: 2.8 DG: 1.20465 0 0
+2023-03-31T14:19:47.764098Z INFO    - CM_XimeaXiq::_SetRuntimeParameters() Start 0 1 exp: 15002 fr: 30 0 bl.off: 50 0 0
+2023-03-31T14:19:47.764120Z INFO    - CM_XimeaXiq::_SetRuntimeParameters() End 0 1 exp: 15002 fr: 30 0 bl.off: 50 AG: 2.8 DG: 1.20465 0 0
+2023-03-31T14:19:47.764842Z INFO    - CM_XimeaXiq::_SetRuntimeParameters() Start 0 1 exp: 15002 fr: 30 0 bl.off: 50 0 0
+2023-03-31T14:19:47.764869Z INFO    - CM_XimeaXiq::_SetRuntimeParameters() End 0 1 exp: 15002 fr: 30 0 bl.off: 50 AG: 2.8 DG: 1.20465 0 0
+2023-03-31T14:19:47.764884Z VERBOSE - driver starting...
+2023-03-31T14:19:47.770526Z VERBOSE - driver starting finished
+2023-03-31T14:19:47.770627Z DEBUG   - _AcquisitionLoop (2178) - Waiting for image...
+2023-03-31T14:19:47.776513Z DEBUG   - _AcquisitionLoop (2178) - Waiting for image...
+2023-03-31T14:19:47.822026Z DEBUG   - nframe: 1; acq_nframe: 2; Previous acq_nframe: 0; Acq. time: 2023-03-31T14:19:47.821987Z; crnt. burst counter: 0; burst frames: 1
+2023-03-31T14:19:47.822171Z WARNING - [virtual double ihspt::drivers::CM_XimeaXiq::_GetTemperature()] xiSetParamInt (_device, XI_PRM_TEMP_SELECTOR, XI_TEMP_IMAGE_SENSOR_DIE) : Not supported
+2023-03-31T14:19:47.822472Z DEBUG   - _AcquisitionLoop (2257) - Entering update of parameters...
+2023-03-31T14:19:47.822496Z INFO    - CM_XimeaXiq::_SetRuntimeParameters() Start 0 1 exp: 15002 fr: 30 0 bl.off: 50 0 0
+2023-03-31T14:19:47.822511Z INFO    - CM_XimeaXiq::_SetRuntimeParameters() End 0 1 exp: 15002 fr: 30 0 bl.off: 50 AG: 2.8 DG: 1.20465 0 0
+2023-03-31T14:19:47.822514Z DEBUG   - _AcquisitionLoop (2262) - Update of parameters finished
+2023-03-31T14:19:47.822609Z DEBUG   - _AcquisitionLoop (2178) - Waiting for image...
+2023-03-31T14:19:47.823473Z VERBOSE - Pause (504) - driver pauzing...
+2023-03-31T14:19:47.823475Z DEBUG   - unlocking driver
+2023-03-31T14:19:47.823477Z DEBUG   - driver unlocked
+2023-03-31T14:19:47.823477Z DEBUG   - ...trying to lock driver
+2023-03-31T14:19:47.855357Z DEBUG   - nframe: 2; acq_nframe: 3; Previous acq_nframe: 2; Acq. time: 2023-03-31T14:19:47.855326Z; crnt. burst counter: 0; burst frames: 1
+2023-03-31T14:19:47.855453Z WARNING - [virtual double ihspt::drivers::CM_XimeaXiq::_GetTemperature()] xiSetParamInt (_device, XI_PRM_TEMP_SELECTOR, XI_TEMP_IMAGE_SENSOR_DIE) : Not supported
+2023-03-31T14:19:47.855736Z DEBUG   - _AcquisitionLoop (2257) - Entering update of parameters...
+2023-03-31T14:19:47.855760Z INFO    - CM_XimeaXiq::_SetRuntimeParameters() Start 0 1 exp: 15002 fr: 30 0 bl.off: 50 0 0
+2023-03-31T14:19:47.855767Z INFO    - CM_XimeaXiq::_SetRuntimeParameters() End 0 1 exp: 15002 fr: 30 0 bl.off: 50 AG: 2.8 DG: 1.20465 0 0
+2023-03-31T14:19:47.855769Z DEBUG   - _AcquisitionLoop (2262) - Update of parameters finished
+2023-03-31T14:19:47.855870Z DEBUG   - ...driver unlocked
+2023-03-31T14:19:47.855874Z DEBUG   - ...wakeup condition called
+2023-03-31T14:19:47.855880Z VERBOSE - Pause (529) - driver pauzing finished
+2023-03-31T14:19:47.856092Z INFO    - CM_XimeaXiq::_SetRuntimeParameters() Start 0 1 exp: 15002 fr: 1 0 bl.off: 50 0 0
+2023-03-31T14:19:47.913673Z INFO    - CM_XimeaXiq::_SetSensorParameters entered
+2023-03-31T14:19:47.913696Z INFO    - _UploadSensorRegisters (2754) - --->
+2023-03-31T14:19:47.913705Z DEBUG   - _UploadSensorRegisters (2770) - Changing register 102 to value 2
+2023-03-31T14:19:47.913861Z DEBUG   - _UploadSensorRegisters (2770) - Changing register 118 to value 1
+2023-03-31T14:19:47.914004Z DEBUG   - _UploadSensorRegisters (2770) - Changing register 121 to value 1
+2023-03-31T14:19:47.914147Z INFO    - _UploadSensorRegisters (2780) - <---
+2023-03-31T14:19:47.914158Z INFO    - CM_XimeaXiq::_SetSensorParameters() End Black level offset 50 analog gain 2.8 digital gain 1.20465
+2023-03-31T14:19:47.914161Z INFO    - CM_XimeaXiq::_SetSensorParameters exited
+2023-03-31T14:19:47.916169Z DEBUG   - _UpdateSensorRegisters (1395) - AG: 2.8 DG: 1.20465 BlO: 50 Vramp: 109
+2023-03-31T14:19:47.916220Z INFO    - CM_XimeaXiq::_SetRuntimeParameters() End 0 1 exp: 15002 fr: 1 0 bl.off: 50 AG: 2.8 DG: 1.20465 0 0
+2023-03-31T14:19:47.916252Z INFO    - CM_XimeaXiq::_SetRuntimeParameters() Start 0 1 exp: 15002 fr: 1 0 bl.off: 50 0 0
+2023-03-31T14:19:47.916275Z INFO    - CM_XimeaXiq::_SetRuntimeParameters() End 0 1 exp: 15002 fr: 1 0 bl.off: 50 AG: 2.8 DG: 1.20465 0 0
+2023-03-31T14:19:47.916388Z INFO    - CM_XimeaXiq::_SetRuntimeParameters() Start 0 1 exp: 15000 fr: 1 0 bl.off: 50 0 0
+2023-03-31T14:19:47.924539Z INFO    - CM_XimeaXiq::_SetSensorParameters entered
+2023-03-31T14:19:47.924583Z INFO    - _UploadSensorRegisters (2754) - --->
+2023-03-31T14:19:47.924604Z DEBUG   - _UploadSensorRegisters (2770) - Changing register 118 to value 1
+2023-03-31T14:19:47.924772Z INFO    - _UploadSensorRegisters (2780) - <---
+2023-03-31T14:19:47.924794Z INFO    - CM_XimeaXiq::_SetSensorParameters() End Black level offset 50 analog gain 2.8 digital gain 1.20465
+2023-03-31T14:19:47.924808Z INFO    - CM_XimeaXiq::_SetSensorParameters exited
+2023-03-31T14:19:47.926899Z DEBUG   - _UpdateSensorRegisters (1395) - AG: 2.8 DG: 1.20465 BlO: 50 Vramp: 109
+2023-03-31T14:19:47.926914Z INFO    - CM_XimeaXiq::_SetRuntimeParameters() End 0 1 exp: 15002 fr: 1 0 bl.off: 50 AG: 2.8 DG: 1.20465 0 0
+2023-03-31T14:19:47.926927Z INFO    - CM_XimeaXiq::_SetRuntimeParameters() Start 0 1 exp: 15002 fr: 1 0 bl.off: 50 0 0
+2023-03-31T14:19:47.926931Z INFO    - CM_XimeaXiq::_SetRuntimeParameters() End 0 1 exp: 15002 fr: 1 0 bl.off: 50 AG: 2.8 DG: 1.20465 0 0
+2023-03-31T14:19:47.927019Z INFO    - CM_XimeaXiq::_SetRuntimeParameters() Start 0 1 exp: 15002 fr: 30 0 bl.off: 50 0 0
+2023-03-31T14:19:47.982909Z INFO    - CM_XimeaXiq::_SetSensorParameters entered
+2023-03-31T14:19:47.982936Z INFO    - _UploadSensorRegisters (2754) - --->
+2023-03-31T14:19:47.982943Z DEBUG   - _UploadSensorRegisters (2770) - Changing register 102 to value 2
+2023-03-31T14:19:47.983089Z DEBUG   - _UploadSensorRegisters (2770) - Changing register 118 to value 1
+2023-03-31T14:19:47.983234Z DEBUG   - _UploadSensorRegisters (2770) - Changing register 121 to value 1
+2023-03-31T14:19:47.983381Z INFO    - _UploadSensorRegisters (2780) - <---
+2023-03-31T14:19:47.983393Z INFO    - CM_XimeaXiq::_SetSensorParameters() End Black level offset 50 analog gain 2.8 digital gain 1.20465
+2023-03-31T14:19:47.983394Z INFO    - CM_XimeaXiq::_SetSensorParameters exited
+2023-03-31T14:19:47.985401Z DEBUG   - _UpdateSensorRegisters (1395) - AG: 2.8 DG: 1.20465 BlO: 50 Vramp: 109
+2023-03-31T14:19:47.985416Z INFO    - CM_XimeaXiq::_SetRuntimeParameters() End 0 1 exp: 15002 fr: 30 0 bl.off: 50 AG: 2.8 DG: 1.20465 0 0
+2023-03-31T14:19:47.985430Z INFO    - CM_XimeaXiq::_SetRuntimeParameters() Start 0 1 exp: 15002 fr: 30 0 bl.off: 50 0 0
+2023-03-31T14:19:47.985438Z INFO    - CM_XimeaXiq::_SetRuntimeParameters() End 0 1 exp: 15002 fr: 30 0 bl.off: 50 AG: 2.8 DG: 1.20465 0 0
+2023-03-31T14:19:47.985517Z INFO    - CM_XimeaXiq::_SetRuntimeParameters() Start 0 1 exp: 15002 fr: 30 0 bl.off: 50 0 0
+2023-03-31T14:19:47.985524Z INFO    - CM_XimeaXiq::_SetRuntimeParameters() End 0 1 exp: 15002 fr: 30 0 bl.off: 50 AG: 2.8 DG: 1.20465 0 0
+2023-03-31T14:19:47.985525Z VERBOSE - driver starting...
+2023-03-31T14:19:47.990927Z VERBOSE - driver starting finished
+2023-03-31T14:19:47.990938Z DEBUG   - _AcquisitionLoop (2178) - Waiting for image...
+2023-03-31T14:19:48.042428Z DEBUG   - nframe: 1; acq_nframe: 5; Previous acq_nframe: 3; Acq. time: 2023-03-31T14:19:48.042395Z; crnt. burst counter: 0; burst frames: 1
+2023-03-31T14:19:48.042567Z WARNING - [virtual double ihspt::drivers::CM_XimeaXiq::_GetTemperature()] xiSetParamInt (_device, XI_PRM_TEMP_SELECTOR, XI_TEMP_IMAGE_SENSOR_DIE) : Not supported
+2023-03-31T14:19:48.042843Z DEBUG   - _AcquisitionLoop (2257) - Entering update of parameters...
+2023-03-31T14:19:48.042863Z INFO    - CM_XimeaXiq::_SetRuntimeParameters() Start 0 1 exp: 15002 fr: 30 0 bl.off: 50 0 0
+2023-03-31T14:19:48.042869Z INFO    - CM_XimeaXiq::_SetRuntimeParameters() End 0 1 exp: 15002 fr: 30 0 bl.off: 50 AG: 2.8 DG: 1.20465 0 0
+2023-03-31T14:19:48.042871Z DEBUG   - _AcquisitionLoop (2262) - Update of parameters finished
+2023-03-31T14:19:48.042945Z DEBUG   - _AcquisitionLoop (2178) - Waiting for image...
+2023-03-31T14:19:48.043626Z VERBOSE - Pause (504) - driver pauzing...
+2023-03-31T14:19:48.043627Z DEBUG   - unlocking driver
+2023-03-31T14:19:48.043628Z DEBUG   - driver unlocked
+2023-03-31T14:19:48.043629Z DEBUG   - ...trying to lock driver
+2023-03-31T14:19:48.075945Z DEBUG   - nframe: 2; acq_nframe: 6; Previous acq_nframe: 5; Acq. time: 2023-03-31T14:19:48.075904Z; crnt. burst counter: 0; burst frames: 1
+2023-03-31T14:19:48.076053Z WARNING - [virtual double ihspt::drivers::CM_XimeaXiq::_GetTemperature()] xiSetParamInt (_device, XI_PRM_TEMP_SELECTOR, XI_TEMP_IMAGE_SENSOR_DIE) : Not supported
+2023-03-31T14:19:48.076336Z DEBUG   - _AcquisitionLoop (2257) - Entering update of parameters...
+2023-03-31T14:19:48.076362Z INFO    - CM_XimeaXiq::_SetRuntimeParameters() Start 0 1 exp: 15002 fr: 30 0 bl.off: 50 0 0
+2023-03-31T14:19:48.076372Z INFO    - CM_XimeaXiq::_SetRuntimeParameters() End 0 1 exp: 15002 fr: 30 0 bl.off: 50 AG: 2.8 DG: 1.20465 0 0
+2023-03-31T14:19:48.076375Z DEBUG   - _AcquisitionLoop (2262) - Update of parameters finished
+2023-03-31T14:19:48.076504Z DEBUG   - ...driver unlocked
+2023-03-31T14:19:48.076512Z DEBUG   - ...wakeup condition called
+2023-03-31T14:19:48.076521Z VERBOSE - Pause (529) - driver pauzing finished
+2023-03-31T14:19:48.076571Z VERBOSE - driver stopping...
+2023-03-31T14:19:48.220099Z INFO    - [CM_XimeaXiq::_AcquisitionLoop] thread finished
+2023-03-31T14:19:48.220152Z VERBOSE - driver stopping finished
+2023-03-31T14:19:48.220401Z VERBOSE - driver forcing disconnect...
+2023-03-31T14:19:48.221598Z VERBOSE - driver forcing disconnect finished
+2023-03-31T14:19:48.221658Z VERBOSE - driver forcing disconnect...
+2023-03-31T14:19:48.221660Z DEBUG   - driver already disconnected

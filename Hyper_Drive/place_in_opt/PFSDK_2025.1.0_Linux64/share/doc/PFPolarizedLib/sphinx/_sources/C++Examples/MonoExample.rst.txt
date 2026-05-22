@@ -1,0 +1,30 @@
+.. _Mono-Example:
+
+Mono Example
+============
+ 
+*GetMonoPolarizedImages.cpp*
+ 
+This example shows how to obtain the most relevant images from an initial mono RAW file: Degree of Linear Polarization (DoLP), Angle of Linear Polarization (AoLP) and mono images for each polarization angle, among others. The example starts storing the RAW data in a buffer, and then uses multiple functions to compute all the available results.
+
+The available outputs are:
+	- A 2x2 grid image with the four polarization angles
+	- A single mono image for a specific polarization angle
+	- Degree of Linear Polarization (DoLP) image
+	- Angle of Linear Polarization (AoLP) image, also available in HSV format
+	- A combination of DoLP and AoLP in HSV format, where DoLP is the saturation, and AoLP the hue
+
+To get these images, only the RAW image from the camera is needed.
+
+Images are saved in BMP or RAW format.
+
+:ref:`source-Code-Mono`
+
+.. toctree::
+   :caption: Modules
+   :titlesonly:
+   :maxdepth: 1
+   :hidden:
+
+   SourceCodeMono/MonoExample
+  

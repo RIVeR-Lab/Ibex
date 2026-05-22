@@ -1,0 +1,1740 @@
+2023-02-24T23:20:52.415991Z INFO    - CM_XimeaXiq::_SetConfigurationParameters() 0 1 # 0 0 0 0 2.8 1.2
+2023-02-24T23:20:52.416055Z INFO    - CM_XimeaXiq::_SetConfigurationParameters() 0 1 # 10000 15 0 0 2.8 1.2
+2023-02-24T23:20:52.416065Z WARNING - _SetConnectionParameters (361) - Cannot cast to local parameters.
+2023-02-24T23:20:52.416067Z WARNING - Cannot cast to local parameters.
+2023-02-24T23:20:52.416116Z VERBOSE - driver connecting...
+2023-02-24T23:20:53.947855Z INFO    - device info - name: MQ022HG-IM-SM5X5-NIR2
+2023-02-24T23:20:53.947860Z INFO    - device info - type: USB3.0
+2023-02-24T23:20:53.947862Z INFO    - device info - model: 1009
+2023-02-24T23:20:53.947862Z INFO    - device info - serial number: 32270462
+2023-02-24T23:20:53.949909Z INFO    - device info - sensor width: 2048
+2023-02-24T23:20:53.949911Z INFO    - device info - sensor height: 1088
+2023-02-24T23:20:53.949912Z INFO    - device info - min integration time (us): 77
+2023-02-24T23:20:53.949913Z INFO    - device info - max integration time (us): 999995
+2023-02-24T23:20:53.949920Z VERBOSE - _SyncSensorRegisters (2814) - -->
+2023-02-24T23:20:53.992240Z VERBOSE - _SyncSensorRegisters (2838) - <--
+2023-02-24T23:20:53.992247Z DEBUG   - _LogSensorParameters (975) - Inte_sync: 1
+2023-02-24T23:20:53.992250Z DEBUG   - _LogSensorParameters (976) - Exp_ext: 0
+2023-02-24T23:20:53.992252Z DEBUG   - _LogSensorParameters (977) - Col_calib: 0
+2023-02-24T23:20:53.992254Z DEBUG   - _LogSensorParameters (978) - ADC_calib: 0
+2023-02-24T23:20:53.992257Z DEBUG   - _LogSensorParameters (979) - I_col: 4
+2023-02-24T23:20:53.992260Z DEBUG   - _LogSensorParameters (980) - I_col_prech: 1
+2023-02-24T23:20:53.992263Z DEBUG   - _LogSensorParameters (981) - I_amp: 12
+2023-02-24T23:20:53.992266Z DEBUG   - _LogSensorParameters (982) - Vtf_l1: 64
+2023-02-24T23:20:53.992268Z DEBUG   - _LogSensorParameters (983) - Vres_low: 64
+2023-02-24T23:20:53.992271Z DEBUG   - _LogSensorParameters (984) - V_prech: 101
+2023-02-24T23:20:53.992274Z DEBUG   - _LogSensorParameters (985) - V_ref: 106
+2023-02-24T23:20:53.992277Z DEBUG   - _LogSensorParameters (986) - Dummy: 4
+2023-02-24T23:20:53.992279Z DEBUG   - _LogSensorParameters (987) - V_blacksun: 34
+2023-02-24T23:20:53.992283Z DEBUG   - _LogSensorParameters (988) - black_level: 16300
+2023-02-24T23:20:53.992286Z DEBUG   - _LogSensorParameters (989) - V_ramp1: 109
+2023-02-24T23:20:53.992289Z DEBUG   - _LogSensorParameters (990) - V_ramp2: 109
+2023-02-24T23:20:53.992292Z DEBUG   - _LogSensorParameters (991) - adc_gain: 55
+2023-02-24T23:20:53.992294Z DEBUG   - _LogSensorParameters (992) - pga_gain: 1
+2023-02-24T23:20:53.992297Z DEBUG   - _LogSensorParameters (993) - pga_gain_2: 0
+2023-02-24T23:20:53.992300Z DEBUG   - _LogSensorParameters (994) - Output_mode: 3
+2023-02-24T23:20:53.992303Z DEBUG   - _LogSensorParameters (995) - Image flipping: 2
+2023-02-24T23:20:53.992305Z VERBOSE - driver connected
+2023-02-24T23:20:53.992689Z VERBOSE - driver initializing...
+2023-02-24T23:20:53.992690Z VERBOSE -    trying to initialize...
+2023-02-24T23:20:54.281596Z INFO    - sensor bit depth: 10; output bit depth: 10
+2023-02-24T23:20:55.817642Z INFO    - _Initialize (1693) - Acquisition buffer size is set to: 67108864
+2023-02-24T23:20:55.817675Z INFO    - _Initialize (1699) - Requested minimum acq buffer queue length: 64
+2023-02-24T23:20:55.817757Z INFO    - _Initialize (1712) - Allocated acq buffer queue length: 64
+2023-02-24T23:20:55.817775Z INFO    - _Initialize (1740) - clock frequency: 28000000
+2023-02-24T23:20:57.061140Z INFO    - CM_XimeaXiq::_SetRuntimeParameters() Start 0 1 exp: 10000 fr: 15 0 bl.off: 50 0 0
+2023-02-24T23:20:57.222696Z INFO    - CM_XimeaXiq::_SetRuntimeParameters() End 0 1 exp: 10008 fr: 15 0 bl.off: 50 AG: 2.8 DG: 1.2 0 0
+2023-02-24T23:20:57.222724Z VERBOSE - _StartAcquisition (1049) - -->
+2023-02-24T23:20:57.296564Z INFO    - CM_XimeaXiq::_SetSensorParameters entered
+2023-02-24T23:20:57.296585Z INFO    - _UploadSensorRegisters (2754) - --->
+2023-02-24T23:20:57.296607Z DEBUG   - _UploadSensorRegisters (2770) - Changing register 100 to value 236
+2023-02-24T23:20:57.296768Z DEBUG   - _UploadSensorRegisters (2770) - Changing register 101 to value 63
+2023-02-24T23:20:57.296906Z DEBUG   - _UploadSensorRegisters (2770) - Changing register 102 to value 2
+2023-02-24T23:20:57.297061Z DEBUG   - _UploadSensorRegisters (2770) - Changing register 103 to value 52
+2023-02-24T23:20:57.297208Z DEBUG   - _UploadSensorRegisters (2770) - Changing register 118 to value 1
+2023-02-24T23:20:57.297367Z DEBUG   - _UploadSensorRegisters (2770) - Changing register 121 to value 1
+2023-02-24T23:20:57.297517Z INFO    - _UploadSensorRegisters (2780) - <---
+2023-02-24T23:20:57.297525Z INFO    - CM_XimeaXiq::_SetSensorParameters() End Black level offset 50 analog gain 2.8 digital gain 1.19516
+2023-02-24T23:20:57.297525Z INFO    - CM_XimeaXiq::_SetSensorParameters exited
+2023-02-24T23:20:57.299877Z DEBUG   - _UpdateSensorRegisters (1395) - AG: 2.8 DG: 1.19516 BlO: 50 Vramp: 109
+2023-02-24T23:20:57.299882Z VERBOSE - _StartAcquisition (1066) - <--
+2023-02-24T23:20:57.299888Z DEBUG   - _Initialize (1846) - Grabbing sensor parameters after initialization
+2023-02-24T23:20:57.299891Z INFO    - CM_XimeaXiq::_DownloadSensorRegisters() Start Black level offset 50 analog gain 2.8 digital gain 1.19516
+2023-02-24T23:20:57.299894Z VERBOSE - _SyncSensorRegisters (2814) - -->
+2023-02-24T23:20:57.344331Z VERBOSE - _SyncSensorRegisters (2838) - <--
+2023-02-24T23:20:57.344345Z INFO    - CM_XimeaXiq::_DownloadSensorRegisters() End Black level offset 50 analog gain 2.8 digital gain 1.19516
+2023-02-24T23:20:57.344348Z INFO    - DM_Camera::_GetSensorParameters entered
+2023-02-24T23:20:57.344350Z INFO    - DM_Camera::_GetSensorParameters exited
+2023-02-24T23:20:57.344364Z DEBUG   - _LogSensorParameters (975) - Inte_sync: 1
+2023-02-24T23:20:57.344366Z DEBUG   - _LogSensorParameters (976) - Exp_ext: 0
+2023-02-24T23:20:57.344367Z DEBUG   - _LogSensorParameters (977) - Col_calib: 0
+2023-02-24T23:20:57.344369Z DEBUG   - _LogSensorParameters (978) - ADC_calib: 0
+2023-02-24T23:20:57.344371Z DEBUG   - _LogSensorParameters (979) - I_col: 4
+2023-02-24T23:20:57.344373Z DEBUG   - _LogSensorParameters (980) - I_col_prech: 1
+2023-02-24T23:20:57.344375Z DEBUG   - _LogSensorParameters (981) - I_amp: 12
+2023-02-24T23:20:57.344376Z DEBUG   - _LogSensorParameters (982) - Vtf_l1: 64
+2023-02-24T23:20:57.344378Z DEBUG   - _LogSensorParameters (983) - Vres_low: 64
+2023-02-24T23:20:57.344380Z DEBUG   - _LogSensorParameters (984) - V_prech: 101
+2023-02-24T23:20:57.344381Z DEBUG   - _LogSensorParameters (985) - V_ref: 106
+2023-02-24T23:20:57.344383Z DEBUG   - _LogSensorParameters (986) - Dummy: 1
+2023-02-24T23:20:57.344385Z DEBUG   - _LogSensorParameters (987) - V_blacksun: 34
+2023-02-24T23:20:57.344387Z DEBUG   - _LogSensorParameters (988) - black_level: 16364
+2023-02-24T23:20:57.344389Z DEBUG   - _LogSensorParameters (989) - V_ramp1: 109
+2023-02-24T23:20:57.344391Z DEBUG   - _LogSensorParameters (990) - V_ramp2: 109
+2023-02-24T23:20:57.344392Z DEBUG   - _LogSensorParameters (991) - adc_gain: 52
+2023-02-24T23:20:57.344394Z DEBUG   - _LogSensorParameters (992) - pga_gain: 2
+2023-02-24T23:20:57.344396Z DEBUG   - _LogSensorParameters (993) - pga_gain_2: 1
+2023-02-24T23:20:57.344397Z DEBUG   - _LogSensorParameters (994) - Output_mode: 2
+2023-02-24T23:20:57.344399Z DEBUG   - _LogSensorParameters (995) - Image flipping: 2
+2023-02-24T23:20:57.344401Z VERBOSE -    initalization successful...
+2023-02-24T23:20:57.344402Z VERBOSE - driver initialization finished
+2023-02-24T23:20:57.346029Z INFO    - CM_XimeaXiq::_SetRuntimeParameters() Start 0 1 exp: 10008 fr: 15 0 bl.off: 50 0 0
+2023-02-24T23:20:57.346038Z INFO    - CM_XimeaXiq::_SetRuntimeParameters() End 0 1 exp: 10008 fr: 15 0 bl.off: 50 AG: 2.8 DG: 1.19516 0 0
+2023-02-24T23:20:57.346352Z INFO    - CM_XimeaXiq::_SetRuntimeParameters() Start 0 1 exp: 10008 fr: 15 0 bl.off: 50 0 0
+2023-02-24T23:20:57.346361Z INFO    - CM_XimeaXiq::_SetRuntimeParameters() End 0 1 exp: 10008 fr: 15 0 bl.off: 50 AG: 2.8 DG: 1.19516 0 0
+2023-02-24T23:20:57.346365Z INFO    - CM_XimeaXiq::_SetRuntimeParameters() Start 0 1 exp: 10008 fr: 15 1 bl.off: 50 0 0
+2023-02-24T23:20:57.532235Z VERBOSE - _StartAcquisition (1049) - -->
+2023-02-24T23:20:57.606543Z INFO    - CM_XimeaXiq::_SetSensorParameters entered
+2023-02-24T23:20:57.606567Z INFO    - _UploadSensorRegisters (2754) - --->
+2023-02-24T23:20:57.606574Z DEBUG   - _UploadSensorRegisters (2770) - Changing register 102 to value 2
+2023-02-24T23:20:57.606752Z DEBUG   - _UploadSensorRegisters (2770) - Changing register 118 to value 1
+2023-02-24T23:20:57.606924Z DEBUG   - _UploadSensorRegisters (2770) - Changing register 121 to value 1
+2023-02-24T23:20:57.607085Z INFO    - _UploadSensorRegisters (2780) - <---
+2023-02-24T23:20:57.607094Z INFO    - CM_XimeaXiq::_SetSensorParameters() End Black level offset 50 analog gain 2.8 digital gain 1.19516
+2023-02-24T23:20:57.607095Z INFO    - CM_XimeaXiq::_SetSensorParameters exited
+2023-02-24T23:20:57.609525Z DEBUG   - _UpdateSensorRegisters (1395) - AG: 2.8 DG: 1.19516 BlO: 50 Vramp: 109
+2023-02-24T23:20:57.609532Z VERBOSE - _StartAcquisition (1066) - <--
+2023-02-24T23:20:57.638696Z INFO    - CM_XimeaXiq::_SetSensorParameters entered
+2023-02-24T23:20:57.638716Z INFO    - _UploadSensorRegisters (2754) - --->
+2023-02-24T23:20:57.638723Z DEBUG   - _UploadSensorRegisters (2770) - Changing register 102 to value 2
+2023-02-24T23:20:57.638892Z DEBUG   - _UploadSensorRegisters (2770) - Changing register 118 to value 1
+2023-02-24T23:20:57.639060Z DEBUG   - _UploadSensorRegisters (2770) - Changing register 121 to value 1
+2023-02-24T23:20:57.639241Z INFO    - _UploadSensorRegisters (2780) - <---
+2023-02-24T23:20:57.639249Z INFO    - CM_XimeaXiq::_SetSensorParameters() End Black level offset 50 analog gain 2.8 digital gain 1.19516
+2023-02-24T23:20:57.639249Z INFO    - CM_XimeaXiq::_SetSensorParameters exited
+2023-02-24T23:20:57.641639Z DEBUG   - _UpdateSensorRegisters (1395) - AG: 2.8 DG: 1.19516 BlO: 50 Vramp: 109
+2023-02-24T23:20:57.641652Z INFO    - CM_XimeaXiq::_SetRuntimeParameters() End 0 1 exp: 10008 fr: 15 1 bl.off: 50 AG: 2.8 DG: 1.19516 0 0
+2023-02-24T23:20:57.642158Z INFO    - CM_XimeaXiq::_SetRuntimeParameters() Start 0 1 exp: 10008 fr: 15 1 bl.off: 50 0 0
+2023-02-24T23:20:57.642168Z INFO    - CM_XimeaXiq::_SetRuntimeParameters() End 0 1 exp: 10008 fr: 15 1 bl.off: 50 AG: 2.8 DG: 1.19516 0 0
+2023-02-24T23:20:57.642169Z VERBOSE - driver starting...
+2023-02-24T23:20:57.648213Z VERBOSE - driver starting finished
+2023-02-24T23:20:57.648303Z DEBUG   - Trigger (1123) - Triggering camera
+2023-02-24T23:20:57.648309Z INFO    - Trigger (1136) - 0/1
+2023-02-24T23:20:57.648333Z VERBOSE - _AcquisitionLoop (2153) - Triggering camera
+2023-02-24T23:20:57.648895Z DEBUG   - _AcquisitionLoop (2178) - Waiting for image...
+2023-02-24T23:20:57.669753Z DEBUG   - nframe: 0; acq_nframe: 1; Previous acq_nframe: 0; Acq. time: 2023-02-24T23:20:57.669724Z; crnt. burst counter: 0; burst frames: 1
+2023-02-24T23:20:57.669858Z WARNING - [virtual double ihspt::drivers::CM_XimeaXiq::_GetTemperature()] xiSetParamInt (_device, XI_PRM_TEMP_SELECTOR, XI_TEMP_IMAGE_SENSOR_DIE) : Not supported
+2023-02-24T23:20:57.670235Z DEBUG   - _AcquisitionLoop (2257) - Entering update of parameters...
+2023-02-24T23:20:57.670269Z INFO    - CM_XimeaXiq::_SetRuntimeParameters() Start 0 1 exp: 10008 fr: 15 1 bl.off: 50 0 0
+2023-02-24T23:20:57.670279Z INFO    - CM_XimeaXiq::_SetRuntimeParameters() End 0 1 exp: 10008 fr: 15 1 bl.off: 50 AG: 2.8 DG: 1.19516 0 0
+2023-02-24T23:20:57.670282Z DEBUG   - _AcquisitionLoop (2262) - Update of parameters finished
+2023-02-24T23:20:57.670992Z VERBOSE - Pause (504) - driver pauzing...
+2023-02-24T23:20:57.670994Z DEBUG   - unlocking driver
+2023-02-24T23:20:57.670994Z DEBUG   - driver unlocked
+2023-02-24T23:20:57.670994Z DEBUG   - ...trying to lock driver
+2023-02-24T23:20:57.670995Z DEBUG   - ...driver unlocked
+2023-02-24T23:20:57.670996Z DEBUG   - ...wakeup condition called
+2023-02-24T23:20:57.670998Z VERBOSE - Pause (529) - driver pauzing finished
+2023-02-24T23:20:57.671012Z VERBOSE - driver stopping...
+2023-02-24T23:20:57.996917Z INFO    - [CM_XimeaXiq::_AcquisitionLoop] thread finished
+2023-02-24T23:20:57.996978Z VERBOSE - driver stopping finished
+2023-02-24T23:20:57.997126Z VERBOSE - driver forcing disconnect...
+2023-02-24T23:20:57.998620Z VERBOSE - driver forcing disconnect finished
+2023-02-24T23:20:57.998669Z VERBOSE - driver forcing disconnect...
+2023-02-24T23:20:57.998671Z DEBUG   - driver already disconnected
+2023-02-24T23:21:50.443311Z INFO    - CM_XimeaXiq::_SetConfigurationParameters() 0 1 # 0 0 0 0 2.8 1.2
+2023-02-24T23:21:50.443360Z INFO    - CM_XimeaXiq::_SetConfigurationParameters() 0 1 # 10000 15 0 0 2.8 1.2
+2023-02-24T23:21:50.443369Z WARNING - _SetConnectionParameters (361) - Cannot cast to local parameters.
+2023-02-24T23:21:50.443371Z WARNING - Cannot cast to local parameters.
+2023-02-24T23:21:50.443414Z VERBOSE - driver connecting...
+2023-02-24T23:21:51.922105Z INFO    - device info - name: MQ022HG-IM-SM5X5-NIR2
+2023-02-24T23:21:51.922110Z INFO    - device info - type: USB3.0
+2023-02-24T23:21:51.922111Z INFO    - device info - model: 1009
+2023-02-24T23:21:51.922111Z INFO    - device info - serial number: 32270462
+2023-02-24T23:21:51.924101Z INFO    - device info - sensor width: 2048
+2023-02-24T23:21:51.924102Z INFO    - device info - sensor height: 1088
+2023-02-24T23:21:51.924103Z INFO    - device info - min integration time (us): 77
+2023-02-24T23:21:51.924103Z INFO    - device info - max integration time (us): 999995
+2023-02-24T23:21:51.924110Z VERBOSE - _SyncSensorRegisters (2814) - -->
+2023-02-24T23:21:51.966265Z VERBOSE - _SyncSensorRegisters (2838) - <--
+2023-02-24T23:21:51.966270Z DEBUG   - _LogSensorParameters (975) - Inte_sync: 1
+2023-02-24T23:21:51.966272Z DEBUG   - _LogSensorParameters (976) - Exp_ext: 0
+2023-02-24T23:21:51.966273Z DEBUG   - _LogSensorParameters (977) - Col_calib: 0
+2023-02-24T23:21:51.966275Z DEBUG   - _LogSensorParameters (978) - ADC_calib: 0
+2023-02-24T23:21:51.966277Z DEBUG   - _LogSensorParameters (979) - I_col: 4
+2023-02-24T23:21:51.966279Z DEBUG   - _LogSensorParameters (980) - I_col_prech: 1
+2023-02-24T23:21:51.966280Z DEBUG   - _LogSensorParameters (981) - I_amp: 12
+2023-02-24T23:21:51.966296Z DEBUG   - _LogSensorParameters (982) - Vtf_l1: 64
+2023-02-24T23:21:51.966298Z DEBUG   - _LogSensorParameters (983) - Vres_low: 64
+2023-02-24T23:21:51.966299Z DEBUG   - _LogSensorParameters (984) - V_prech: 101
+2023-02-24T23:21:51.966301Z DEBUG   - _LogSensorParameters (985) - V_ref: 106
+2023-02-24T23:21:51.966303Z DEBUG   - _LogSensorParameters (986) - Dummy: 4
+2023-02-24T23:21:51.966305Z DEBUG   - _LogSensorParameters (987) - V_blacksun: 34
+2023-02-24T23:21:51.966306Z DEBUG   - _LogSensorParameters (988) - black_level: 16300
+2023-02-24T23:21:51.966309Z DEBUG   - _LogSensorParameters (989) - V_ramp1: 109
+2023-02-24T23:21:51.966310Z DEBUG   - _LogSensorParameters (990) - V_ramp2: 109
+2023-02-24T23:21:51.966312Z DEBUG   - _LogSensorParameters (991) - adc_gain: 55
+2023-02-24T23:21:51.966313Z DEBUG   - _LogSensorParameters (992) - pga_gain: 1
+2023-02-24T23:21:51.966315Z DEBUG   - _LogSensorParameters (993) - pga_gain_2: 0
+2023-02-24T23:21:51.966317Z DEBUG   - _LogSensorParameters (994) - Output_mode: 3
+2023-02-24T23:21:51.966319Z DEBUG   - _LogSensorParameters (995) - Image flipping: 2
+2023-02-24T23:21:51.966320Z VERBOSE - driver connected
+2023-02-24T23:21:51.966665Z VERBOSE - driver initializing...
+2023-02-24T23:21:51.966665Z VERBOSE -    trying to initialize...
+2023-02-24T23:21:52.258671Z INFO    - sensor bit depth: 10; output bit depth: 10
+2023-02-24T23:21:53.795684Z INFO    - _Initialize (1693) - Acquisition buffer size is set to: 67108864
+2023-02-24T23:21:53.795717Z INFO    - _Initialize (1699) - Requested minimum acq buffer queue length: 64
+2023-02-24T23:21:53.795791Z INFO    - _Initialize (1712) - Allocated acq buffer queue length: 64
+2023-02-24T23:21:53.795808Z INFO    - _Initialize (1740) - clock frequency: 28000000
+2023-02-24T23:21:55.028395Z INFO    - CM_XimeaXiq::_SetRuntimeParameters() Start 0 1 exp: 10000 fr: 15 0 bl.off: 50 0 0
+2023-02-24T23:21:55.190956Z INFO    - CM_XimeaXiq::_SetRuntimeParameters() End 0 1 exp: 10008 fr: 15 0 bl.off: 50 AG: 2.8 DG: 1.2 0 0
+2023-02-24T23:21:55.190978Z VERBOSE - _StartAcquisition (1049) - -->
+2023-02-24T23:21:55.260148Z INFO    - CM_XimeaXiq::_SetSensorParameters entered
+2023-02-24T23:21:55.260173Z INFO    - _UploadSensorRegisters (2754) - --->
+2023-02-24T23:21:55.260193Z DEBUG   - _UploadSensorRegisters (2770) - Changing register 100 to value 236
+2023-02-24T23:21:55.260407Z DEBUG   - _UploadSensorRegisters (2770) - Changing register 101 to value 63
+2023-02-24T23:21:55.260625Z DEBUG   - _UploadSensorRegisters (2770) - Changing register 102 to value 2
+2023-02-24T23:21:55.260853Z DEBUG   - _UploadSensorRegisters (2770) - Changing register 103 to value 52
+2023-02-24T23:21:55.261062Z DEBUG   - _UploadSensorRegisters (2770) - Changing register 118 to value 1
+2023-02-24T23:21:55.261254Z DEBUG   - _UploadSensorRegisters (2770) - Changing register 121 to value 1
+2023-02-24T23:21:55.261475Z INFO    - _UploadSensorRegisters (2780) - <---
+2023-02-24T23:21:55.261493Z INFO    - CM_XimeaXiq::_SetSensorParameters() End Black level offset 50 analog gain 2.8 digital gain 1.19516
+2023-02-24T23:21:55.261495Z INFO    - CM_XimeaXiq::_SetSensorParameters exited
+2023-02-24T23:21:55.264413Z DEBUG   - _UpdateSensorRegisters (1395) - AG: 2.8 DG: 1.19516 BlO: 50 Vramp: 109
+2023-02-24T23:21:55.264426Z VERBOSE - _StartAcquisition (1066) - <--
+2023-02-24T23:21:55.264434Z DEBUG   - _Initialize (1846) - Grabbing sensor parameters after initialization
+2023-02-24T23:21:55.264443Z INFO    - CM_XimeaXiq::_DownloadSensorRegisters() Start Black level offset 50 analog gain 2.8 digital gain 1.19516
+2023-02-24T23:21:55.264449Z VERBOSE - _SyncSensorRegisters (2814) - -->
+2023-02-24T23:21:55.311957Z VERBOSE - _SyncSensorRegisters (2838) - <--
+2023-02-24T23:21:55.311964Z INFO    - CM_XimeaXiq::_DownloadSensorRegisters() End Black level offset 50 analog gain 2.8 digital gain 1.19516
+2023-02-24T23:21:55.311967Z INFO    - DM_Camera::_GetSensorParameters entered
+2023-02-24T23:21:55.311968Z INFO    - DM_Camera::_GetSensorParameters exited
+2023-02-24T23:21:55.311971Z DEBUG   - _LogSensorParameters (975) - Inte_sync: 1
+2023-02-24T23:21:55.311973Z DEBUG   - _LogSensorParameters (976) - Exp_ext: 0
+2023-02-24T23:21:55.311974Z DEBUG   - _LogSensorParameters (977) - Col_calib: 0
+2023-02-24T23:21:55.311976Z DEBUG   - _LogSensorParameters (978) - ADC_calib: 0
+2023-02-24T23:21:55.311977Z DEBUG   - _LogSensorParameters (979) - I_col: 4
+2023-02-24T23:21:55.311979Z DEBUG   - _LogSensorParameters (980) - I_col_prech: 1
+2023-02-24T23:21:55.311981Z DEBUG   - _LogSensorParameters (981) - I_amp: 12
+2023-02-24T23:21:55.311983Z DEBUG   - _LogSensorParameters (982) - Vtf_l1: 64
+2023-02-24T23:21:55.311984Z DEBUG   - _LogSensorParameters (983) - Vres_low: 64
+2023-02-24T23:21:55.311986Z DEBUG   - _LogSensorParameters (984) - V_prech: 101
+2023-02-24T23:21:55.311987Z DEBUG   - _LogSensorParameters (985) - V_ref: 106
+2023-02-24T23:21:55.311989Z DEBUG   - _LogSensorParameters (986) - Dummy: 1
+2023-02-24T23:21:55.311991Z DEBUG   - _LogSensorParameters (987) - V_blacksun: 34
+2023-02-24T23:21:55.311992Z DEBUG   - _LogSensorParameters (988) - black_level: 16364
+2023-02-24T23:21:55.311994Z DEBUG   - _LogSensorParameters (989) - V_ramp1: 109
+2023-02-24T23:21:55.311996Z DEBUG   - _LogSensorParameters (990) - V_ramp2: 109
+2023-02-24T23:21:55.311997Z DEBUG   - _LogSensorParameters (991) - adc_gain: 52
+2023-02-24T23:21:55.311999Z DEBUG   - _LogSensorParameters (992) - pga_gain: 2
+2023-02-24T23:21:55.312000Z DEBUG   - _LogSensorParameters (993) - pga_gain_2: 1
+2023-02-24T23:21:55.312002Z DEBUG   - _LogSensorParameters (994) - Output_mode: 2
+2023-02-24T23:21:55.312004Z DEBUG   - _LogSensorParameters (995) - Image flipping: 2
+2023-02-24T23:21:55.312005Z VERBOSE -    initalization successful...
+2023-02-24T23:21:55.312005Z VERBOSE - driver initialization finished
+2023-02-24T23:21:55.313471Z INFO    - CM_XimeaXiq::_SetRuntimeParameters() Start 0 1 exp: 10008 fr: 15 0 bl.off: 50 0 0
+2023-02-24T23:21:55.313478Z INFO    - CM_XimeaXiq::_SetRuntimeParameters() End 0 1 exp: 10008 fr: 15 0 bl.off: 50 AG: 2.8 DG: 1.19516 0 0
+2023-02-24T23:21:55.313688Z INFO    - CM_XimeaXiq::_SetRuntimeParameters() Start 0 1 exp: 10008 fr: 15 0 bl.off: 50 0 0
+2023-02-24T23:21:55.313693Z INFO    - CM_XimeaXiq::_SetRuntimeParameters() End 0 1 exp: 10008 fr: 15 0 bl.off: 50 AG: 2.8 DG: 1.19516 0 0
+2023-02-24T23:21:55.313697Z INFO    - CM_XimeaXiq::_SetRuntimeParameters() Start 0 1 exp: 10008 fr: 15 1 bl.off: 50 0 0
+2023-02-24T23:21:55.499370Z VERBOSE - _StartAcquisition (1049) - -->
+2023-02-24T23:21:55.570361Z INFO    - CM_XimeaXiq::_SetSensorParameters entered
+2023-02-24T23:21:55.570399Z INFO    - _UploadSensorRegisters (2754) - --->
+2023-02-24T23:21:55.570415Z DEBUG   - _UploadSensorRegisters (2770) - Changing register 102 to value 2
+2023-02-24T23:21:55.570639Z DEBUG   - _UploadSensorRegisters (2770) - Changing register 118 to value 1
+2023-02-24T23:21:55.570857Z DEBUG   - _UploadSensorRegisters (2770) - Changing register 121 to value 1
+2023-02-24T23:21:55.571110Z INFO    - _UploadSensorRegisters (2780) - <---
+2023-02-24T23:21:55.571134Z INFO    - CM_XimeaXiq::_SetSensorParameters() End Black level offset 50 analog gain 2.8 digital gain 1.19516
+2023-02-24T23:21:55.571137Z INFO    - CM_XimeaXiq::_SetSensorParameters exited
+2023-02-24T23:21:55.574001Z DEBUG   - _UpdateSensorRegisters (1395) - AG: 2.8 DG: 1.19516 BlO: 50 Vramp: 109
+2023-02-24T23:21:55.574014Z VERBOSE - _StartAcquisition (1066) - <--
+2023-02-24T23:21:55.602980Z INFO    - CM_XimeaXiq::_SetSensorParameters entered
+2023-02-24T23:21:55.602991Z INFO    - _UploadSensorRegisters (2754) - --->
+2023-02-24T23:21:55.602995Z DEBUG   - _UploadSensorRegisters (2770) - Changing register 102 to value 2
+2023-02-24T23:21:55.603172Z DEBUG   - _UploadSensorRegisters (2770) - Changing register 118 to value 1
+2023-02-24T23:21:55.603354Z DEBUG   - _UploadSensorRegisters (2770) - Changing register 121 to value 1
+2023-02-24T23:21:55.603508Z INFO    - _UploadSensorRegisters (2780) - <---
+2023-02-24T23:21:55.603513Z INFO    - CM_XimeaXiq::_SetSensorParameters() End Black level offset 50 analog gain 2.8 digital gain 1.19516
+2023-02-24T23:21:55.603514Z INFO    - CM_XimeaXiq::_SetSensorParameters exited
+2023-02-24T23:21:55.605757Z DEBUG   - _UpdateSensorRegisters (1395) - AG: 2.8 DG: 1.19516 BlO: 50 Vramp: 109
+2023-02-24T23:21:55.605768Z INFO    - CM_XimeaXiq::_SetRuntimeParameters() End 0 1 exp: 10008 fr: 15 1 bl.off: 50 AG: 2.8 DG: 1.19516 0 0
+2023-02-24T23:21:55.606237Z INFO    - CM_XimeaXiq::_SetRuntimeParameters() Start 0 1 exp: 10008 fr: 15 1 bl.off: 50 0 0
+2023-02-24T23:21:55.606242Z INFO    - CM_XimeaXiq::_SetRuntimeParameters() End 0 1 exp: 10008 fr: 15 1 bl.off: 50 AG: 2.8 DG: 1.19516 0 0
+2023-02-24T23:21:55.606244Z VERBOSE - driver starting...
+2023-02-24T23:21:55.612731Z VERBOSE - driver starting finished
+2023-02-24T23:21:55.612787Z DEBUG   - Trigger (1123) - Triggering camera
+2023-02-24T23:21:55.612793Z INFO    - Trigger (1136) - 0/1
+2023-02-24T23:21:55.612804Z VERBOSE - _AcquisitionLoop (2153) - Triggering camera
+2023-02-24T23:21:55.613330Z DEBUG   - _AcquisitionLoop (2178) - Waiting for image...
+2023-02-24T23:21:55.634053Z DEBUG   - nframe: 0; acq_nframe: 1; Previous acq_nframe: 0; Acq. time: 2023-02-24T23:21:55.634012Z; crnt. burst counter: 0; burst frames: 1
+2023-02-24T23:21:55.634208Z WARNING - [virtual double ihspt::drivers::CM_XimeaXiq::_GetTemperature()] xiSetParamInt (_device, XI_PRM_TEMP_SELECTOR, XI_TEMP_IMAGE_SENSOR_DIE) : Not supported
+2023-02-24T23:21:55.635011Z DEBUG   - _AcquisitionLoop (2257) - Entering update of parameters...
+2023-02-24T23:21:55.635058Z INFO    - CM_XimeaXiq::_SetRuntimeParameters() Start 0 1 exp: 10008 fr: 15 1 bl.off: 50 0 0
+2023-02-24T23:21:55.635068Z INFO    - CM_XimeaXiq::_SetRuntimeParameters() End 0 1 exp: 10008 fr: 15 1 bl.off: 50 AG: 2.8 DG: 1.19516 0 0
+2023-02-24T23:21:55.635070Z DEBUG   - _AcquisitionLoop (2262) - Update of parameters finished
+2023-02-24T23:21:55.635942Z VERBOSE - Pause (504) - driver pauzing...
+2023-02-24T23:21:55.635944Z DEBUG   - unlocking driver
+2023-02-24T23:21:55.635945Z DEBUG   - driver unlocked
+2023-02-24T23:21:55.635946Z DEBUG   - ...trying to lock driver
+2023-02-24T23:21:55.635947Z DEBUG   - ...driver unlocked
+2023-02-24T23:21:55.635950Z DEBUG   - ...wakeup condition called
+2023-02-24T23:21:55.635968Z VERBOSE - Pause (529) - driver pauzing finished
+2023-02-24T23:21:55.635999Z VERBOSE - driver stopping...
+2023-02-24T23:21:55.968677Z INFO    - [CM_XimeaXiq::_AcquisitionLoop] thread finished
+2023-02-24T23:21:55.968811Z VERBOSE - driver stopping finished
+2023-02-24T23:21:55.969157Z VERBOSE - driver forcing disconnect...
+2023-02-24T23:21:55.972382Z VERBOSE - driver forcing disconnect finished
+2023-02-24T23:21:55.972511Z VERBOSE - driver forcing disconnect...
+2023-02-24T23:21:55.972517Z DEBUG   - driver already disconnected
+2023-02-24T23:22:33.468440Z INFO    - CM_XimeaXiq::_SetConfigurationParameters() 0 1 # 0 0 0 0 2.8 1.2
+2023-02-24T23:22:33.468492Z INFO    - CM_XimeaXiq::_SetConfigurationParameters() 0 1 # 10000 15 0 0 2.8 1.2
+2023-02-24T23:22:33.468501Z WARNING - _SetConnectionParameters (361) - Cannot cast to local parameters.
+2023-02-24T23:22:33.468503Z WARNING - Cannot cast to local parameters.
+2023-02-24T23:22:33.468562Z VERBOSE - driver connecting...
+2023-02-24T23:22:34.947718Z INFO    - device info - name: MQ022HG-IM-SM5X5-NIR2
+2023-02-24T23:22:34.947723Z INFO    - device info - type: USB3.0
+2023-02-24T23:22:34.947725Z INFO    - device info - model: 1009
+2023-02-24T23:22:34.947725Z INFO    - device info - serial number: 32270462
+2023-02-24T23:22:34.949744Z INFO    - device info - sensor width: 2048
+2023-02-24T23:22:34.949746Z INFO    - device info - sensor height: 1088
+2023-02-24T23:22:34.949747Z INFO    - device info - min integration time (us): 77
+2023-02-24T23:22:34.949747Z INFO    - device info - max integration time (us): 999995
+2023-02-24T23:22:34.949754Z VERBOSE - _SyncSensorRegisters (2814) - -->
+2023-02-24T23:22:34.992979Z VERBOSE - _SyncSensorRegisters (2838) - <--
+2023-02-24T23:22:34.992987Z DEBUG   - _LogSensorParameters (975) - Inte_sync: 1
+2023-02-24T23:22:34.992989Z DEBUG   - _LogSensorParameters (976) - Exp_ext: 0
+2023-02-24T23:22:34.992991Z DEBUG   - _LogSensorParameters (977) - Col_calib: 0
+2023-02-24T23:22:34.992992Z DEBUG   - _LogSensorParameters (978) - ADC_calib: 0
+2023-02-24T23:22:34.992994Z DEBUG   - _LogSensorParameters (979) - I_col: 4
+2023-02-24T23:22:34.992995Z DEBUG   - _LogSensorParameters (980) - I_col_prech: 1
+2023-02-24T23:22:34.992997Z DEBUG   - _LogSensorParameters (981) - I_amp: 12
+2023-02-24T23:22:34.992998Z DEBUG   - _LogSensorParameters (982) - Vtf_l1: 64
+2023-02-24T23:22:34.993000Z DEBUG   - _LogSensorParameters (983) - Vres_low: 64
+2023-02-24T23:22:34.993002Z DEBUG   - _LogSensorParameters (984) - V_prech: 101
+2023-02-24T23:22:34.993003Z DEBUG   - _LogSensorParameters (985) - V_ref: 106
+2023-02-24T23:22:34.993005Z DEBUG   - _LogSensorParameters (986) - Dummy: 4
+2023-02-24T23:22:34.993008Z DEBUG   - _LogSensorParameters (987) - V_blacksun: 34
+2023-02-24T23:22:34.993009Z DEBUG   - _LogSensorParameters (988) - black_level: 16300
+2023-02-24T23:22:34.993011Z DEBUG   - _LogSensorParameters (989) - V_ramp1: 109
+2023-02-24T23:22:34.993012Z DEBUG   - _LogSensorParameters (990) - V_ramp2: 109
+2023-02-24T23:22:34.993014Z DEBUG   - _LogSensorParameters (991) - adc_gain: 55
+2023-02-24T23:22:34.993016Z DEBUG   - _LogSensorParameters (992) - pga_gain: 1
+2023-02-24T23:22:34.993017Z DEBUG   - _LogSensorParameters (993) - pga_gain_2: 0
+2023-02-24T23:22:34.993019Z DEBUG   - _LogSensorParameters (994) - Output_mode: 3
+2023-02-24T23:22:34.993020Z DEBUG   - _LogSensorParameters (995) - Image flipping: 2
+2023-02-24T23:22:34.993022Z VERBOSE - driver connected
+2023-02-24T23:22:34.993391Z VERBOSE - driver initializing...
+2023-02-24T23:22:34.993392Z VERBOSE -    trying to initialize...
+2023-02-24T23:22:35.285460Z INFO    - sensor bit depth: 10; output bit depth: 10
+2023-02-24T23:22:36.826721Z INFO    - _Initialize (1693) - Acquisition buffer size is set to: 67108864
+2023-02-24T23:22:36.826766Z INFO    - _Initialize (1699) - Requested minimum acq buffer queue length: 64
+2023-02-24T23:22:36.826860Z INFO    - _Initialize (1712) - Allocated acq buffer queue length: 64
+2023-02-24T23:22:36.826882Z INFO    - _Initialize (1740) - clock frequency: 28000000
+2023-02-24T23:22:38.061073Z INFO    - CM_XimeaXiq::_SetRuntimeParameters() Start 0 1 exp: 10000 fr: 15 0 bl.off: 50 0 0
+2023-02-24T23:22:38.221494Z INFO    - CM_XimeaXiq::_SetRuntimeParameters() End 0 1 exp: 10008 fr: 15 0 bl.off: 50 AG: 2.8 DG: 1.2 0 0
+2023-02-24T23:22:38.221515Z VERBOSE - _StartAcquisition (1049) - -->
+2023-02-24T23:22:38.290581Z INFO    - CM_XimeaXiq::_SetSensorParameters entered
+2023-02-24T23:22:38.290605Z INFO    - _UploadSensorRegisters (2754) - --->
+2023-02-24T23:22:38.290622Z DEBUG   - _UploadSensorRegisters (2770) - Changing register 100 to value 236
+2023-02-24T23:22:38.290824Z DEBUG   - _UploadSensorRegisters (2770) - Changing register 101 to value 63
+2023-02-24T23:22:38.291022Z DEBUG   - _UploadSensorRegisters (2770) - Changing register 102 to value 2
+2023-02-24T23:22:38.291242Z DEBUG   - _UploadSensorRegisters (2770) - Changing register 103 to value 52
+2023-02-24T23:22:38.291462Z DEBUG   - _UploadSensorRegisters (2770) - Changing register 118 to value 1
+2023-02-24T23:22:38.291675Z DEBUG   - _UploadSensorRegisters (2770) - Changing register 121 to value 1
+2023-02-24T23:22:38.291903Z INFO    - _UploadSensorRegisters (2780) - <---
+2023-02-24T23:22:38.291922Z INFO    - CM_XimeaXiq::_SetSensorParameters() End Black level offset 50 analog gain 2.8 digital gain 1.19516
+2023-02-24T23:22:38.291924Z INFO    - CM_XimeaXiq::_SetSensorParameters exited
+2023-02-24T23:22:38.294498Z DEBUG   - _UpdateSensorRegisters (1395) - AG: 2.8 DG: 1.19516 BlO: 50 Vramp: 109
+2023-02-24T23:22:38.294509Z VERBOSE - _StartAcquisition (1066) - <--
+2023-02-24T23:22:38.294516Z DEBUG   - _Initialize (1846) - Grabbing sensor parameters after initialization
+2023-02-24T23:22:38.294526Z INFO    - CM_XimeaXiq::_DownloadSensorRegisters() Start Black level offset 50 analog gain 2.8 digital gain 1.19516
+2023-02-24T23:22:38.294533Z VERBOSE - _SyncSensorRegisters (2814) - -->
+2023-02-24T23:22:38.338693Z VERBOSE - _SyncSensorRegisters (2838) - <--
+2023-02-24T23:22:38.338700Z INFO    - CM_XimeaXiq::_DownloadSensorRegisters() End Black level offset 50 analog gain 2.8 digital gain 1.19516
+2023-02-24T23:22:38.338701Z INFO    - DM_Camera::_GetSensorParameters entered
+2023-02-24T23:22:38.338702Z INFO    - DM_Camera::_GetSensorParameters exited
+2023-02-24T23:22:38.338706Z DEBUG   - _LogSensorParameters (975) - Inte_sync: 1
+2023-02-24T23:22:38.338708Z DEBUG   - _LogSensorParameters (976) - Exp_ext: 0
+2023-02-24T23:22:38.338709Z DEBUG   - _LogSensorParameters (977) - Col_calib: 0
+2023-02-24T23:22:38.338711Z DEBUG   - _LogSensorParameters (978) - ADC_calib: 0
+2023-02-24T23:22:38.338713Z DEBUG   - _LogSensorParameters (979) - I_col: 4
+2023-02-24T23:22:38.338714Z DEBUG   - _LogSensorParameters (980) - I_col_prech: 1
+2023-02-24T23:22:38.338716Z DEBUG   - _LogSensorParameters (981) - I_amp: 12
+2023-02-24T23:22:38.338717Z DEBUG   - _LogSensorParameters (982) - Vtf_l1: 64
+2023-02-24T23:22:38.338719Z DEBUG   - _LogSensorParameters (983) - Vres_low: 64
+2023-02-24T23:22:38.338721Z DEBUG   - _LogSensorParameters (984) - V_prech: 101
+2023-02-24T23:22:38.338722Z DEBUG   - _LogSensorParameters (985) - V_ref: 106
+2023-02-24T23:22:38.338723Z DEBUG   - _LogSensorParameters (986) - Dummy: 1
+2023-02-24T23:22:38.338725Z DEBUG   - _LogSensorParameters (987) - V_blacksun: 34
+2023-02-24T23:22:38.338726Z DEBUG   - _LogSensorParameters (988) - black_level: 16364
+2023-02-24T23:22:38.338729Z DEBUG   - _LogSensorParameters (989) - V_ramp1: 109
+2023-02-24T23:22:38.338730Z DEBUG   - _LogSensorParameters (990) - V_ramp2: 109
+2023-02-24T23:22:38.338731Z DEBUG   - _LogSensorParameters (991) - adc_gain: 52
+2023-02-24T23:22:38.338733Z DEBUG   - _LogSensorParameters (992) - pga_gain: 2
+2023-02-24T23:22:38.338734Z DEBUG   - _LogSensorParameters (993) - pga_gain_2: 1
+2023-02-24T23:22:38.338736Z DEBUG   - _LogSensorParameters (994) - Output_mode: 2
+2023-02-24T23:22:38.338737Z DEBUG   - _LogSensorParameters (995) - Image flipping: 2
+2023-02-24T23:22:38.338738Z VERBOSE -    initalization successful...
+2023-02-24T23:22:38.338739Z VERBOSE - driver initialization finished
+2023-02-24T23:22:38.340185Z INFO    - CM_XimeaXiq::_SetRuntimeParameters() Start 0 1 exp: 10008 fr: 15 0 bl.off: 50 0 0
+2023-02-24T23:22:38.340195Z INFO    - CM_XimeaXiq::_SetRuntimeParameters() End 0 1 exp: 10008 fr: 15 0 bl.off: 50 AG: 2.8 DG: 1.19516 0 0
+2023-02-24T23:22:38.340421Z INFO    - CM_XimeaXiq::_SetRuntimeParameters() Start 0 1 exp: 10008 fr: 15 0 bl.off: 50 0 0
+2023-02-24T23:22:38.340427Z INFO    - CM_XimeaXiq::_SetRuntimeParameters() End 0 1 exp: 10008 fr: 15 0 bl.off: 50 AG: 2.8 DG: 1.19516 0 0
+2023-02-24T23:22:38.340431Z INFO    - CM_XimeaXiq::_SetRuntimeParameters() Start 0 1 exp: 10008 fr: 15 1 bl.off: 50 0 0
+2023-02-24T23:22:38.536560Z VERBOSE - _StartAcquisition (1049) - -->
+2023-02-24T23:22:38.605406Z INFO    - CM_XimeaXiq::_SetSensorParameters entered
+2023-02-24T23:22:38.605424Z INFO    - _UploadSensorRegisters (2754) - --->
+2023-02-24T23:22:38.605437Z DEBUG   - _UploadSensorRegisters (2770) - Changing register 102 to value 2
+2023-02-24T23:22:38.605680Z DEBUG   - _UploadSensorRegisters (2770) - Changing register 118 to value 1
+2023-02-24T23:22:38.605889Z DEBUG   - _UploadSensorRegisters (2770) - Changing register 121 to value 1
+2023-02-24T23:22:38.606078Z INFO    - _UploadSensorRegisters (2780) - <---
+2023-02-24T23:22:38.606095Z INFO    - CM_XimeaXiq::_SetSensorParameters() End Black level offset 50 analog gain 2.8 digital gain 1.19516
+2023-02-24T23:22:38.606098Z INFO    - CM_XimeaXiq::_SetSensorParameters exited
+2023-02-24T23:22:38.608821Z DEBUG   - _UpdateSensorRegisters (1395) - AG: 2.8 DG: 1.19516 BlO: 50 Vramp: 109
+2023-02-24T23:22:38.608834Z VERBOSE - _StartAcquisition (1066) - <--
+2023-02-24T23:22:38.642042Z INFO    - CM_XimeaXiq::_SetSensorParameters entered
+2023-02-24T23:22:38.642056Z INFO    - _UploadSensorRegisters (2754) - --->
+2023-02-24T23:22:38.642065Z DEBUG   - _UploadSensorRegisters (2770) - Changing register 102 to value 2
+2023-02-24T23:22:38.642283Z DEBUG   - _UploadSensorRegisters (2770) - Changing register 118 to value 1
+2023-02-24T23:22:38.642503Z DEBUG   - _UploadSensorRegisters (2770) - Changing register 121 to value 1
+2023-02-24T23:22:38.642724Z INFO    - _UploadSensorRegisters (2780) - <---
+2023-02-24T23:22:38.642736Z INFO    - CM_XimeaXiq::_SetSensorParameters() End Black level offset 50 analog gain 2.8 digital gain 1.19516
+2023-02-24T23:22:38.642738Z INFO    - CM_XimeaXiq::_SetSensorParameters exited
+2023-02-24T23:22:38.645518Z DEBUG   - _UpdateSensorRegisters (1395) - AG: 2.8 DG: 1.19516 BlO: 50 Vramp: 109
+2023-02-24T23:22:38.645547Z INFO    - CM_XimeaXiq::_SetRuntimeParameters() End 0 1 exp: 10008 fr: 15 1 bl.off: 50 AG: 2.8 DG: 1.19516 0 0
+2023-02-24T23:22:38.646812Z INFO    - CM_XimeaXiq::_SetRuntimeParameters() Start 0 1 exp: 10008 fr: 15 1 bl.off: 50 0 0
+2023-02-24T23:22:38.646824Z INFO    - CM_XimeaXiq::_SetRuntimeParameters() End 0 1 exp: 10008 fr: 15 1 bl.off: 50 AG: 2.8 DG: 1.19516 0 0
+2023-02-24T23:22:38.646826Z VERBOSE - driver starting...
+2023-02-24T23:22:38.653173Z VERBOSE - driver starting finished
+2023-02-24T23:22:38.653213Z DEBUG   - Trigger (1123) - Triggering camera
+2023-02-24T23:22:38.653224Z INFO    - Trigger (1136) - 0/1
+2023-02-24T23:22:38.653249Z VERBOSE - _AcquisitionLoop (2153) - Triggering camera
+2023-02-24T23:22:38.653754Z DEBUG   - _AcquisitionLoop (2178) - Waiting for image...
+2023-02-24T23:22:38.674373Z DEBUG   - nframe: 0; acq_nframe: 1; Previous acq_nframe: 0; Acq. time: 2023-02-24T23:22:38.674351Z; crnt. burst counter: 0; burst frames: 1
+2023-02-24T23:22:38.674470Z WARNING - [virtual double ihspt::drivers::CM_XimeaXiq::_GetTemperature()] xiSetParamInt (_device, XI_PRM_TEMP_SELECTOR, XI_TEMP_IMAGE_SENSOR_DIE) : Not supported
+2023-02-24T23:22:38.675013Z DEBUG   - _AcquisitionLoop (2257) - Entering update of parameters...
+2023-02-24T23:22:38.675042Z INFO    - CM_XimeaXiq::_SetRuntimeParameters() Start 0 1 exp: 10008 fr: 15 1 bl.off: 50 0 0
+2023-02-24T23:22:38.675051Z INFO    - CM_XimeaXiq::_SetRuntimeParameters() End 0 1 exp: 10008 fr: 15 1 bl.off: 50 AG: 2.8 DG: 1.19516 0 0
+2023-02-24T23:22:38.675053Z DEBUG   - _AcquisitionLoop (2262) - Update of parameters finished
+2023-02-24T23:22:38.675780Z VERBOSE - Pause (504) - driver pauzing...
+2023-02-24T23:22:38.675782Z DEBUG   - unlocking driver
+2023-02-24T23:22:38.675783Z DEBUG   - driver unlocked
+2023-02-24T23:22:38.675784Z DEBUG   - ...trying to lock driver
+2023-02-24T23:22:38.675785Z DEBUG   - ...driver unlocked
+2023-02-24T23:22:38.675788Z DEBUG   - ...wakeup condition called
+2023-02-24T23:22:38.675791Z VERBOSE - Pause (529) - driver pauzing finished
+2023-02-24T23:22:38.675810Z VERBOSE - driver stopping...
+2023-02-24T23:22:39.007963Z INFO    - [CM_XimeaXiq::_AcquisitionLoop] thread finished
+2023-02-24T23:22:39.008060Z VERBOSE - driver stopping finished
+2023-02-24T23:22:39.008331Z VERBOSE - driver forcing disconnect...
+2023-02-24T23:22:39.011939Z VERBOSE - driver forcing disconnect finished
+2023-02-24T23:22:39.012080Z VERBOSE - driver forcing disconnect...
+2023-02-24T23:22:39.012085Z DEBUG   - driver already disconnected
+2023-02-24T23:22:40.089923Z INFO    - CM_XimeaXiq::_SetConfigurationParameters() 0 1 # 0 0 0 0 2.8 1.2
+2023-02-24T23:22:40.089933Z INFO    - CM_XimeaXiq::_SetConfigurationParameters() 0 1 # 10000 15 0 0 2.8 1.2
+2023-02-24T23:22:40.089938Z WARNING - _SetConnectionParameters (361) - Cannot cast to local parameters.
+2023-02-24T23:22:40.089939Z WARNING - Cannot cast to local parameters.
+2023-02-24T23:22:40.089955Z VERBOSE - driver connecting...
+2023-02-24T23:22:41.557657Z INFO    - device info - name: MQ022HG-IM-SM5X5-NIR2
+2023-02-24T23:22:41.557661Z INFO    - device info - type: USB3.0
+2023-02-24T23:22:41.557663Z INFO    - device info - model: 1009
+2023-02-24T23:22:41.557666Z INFO    - device info - serial number: 32270462
+2023-02-24T23:22:41.559744Z INFO    - device info - sensor width: 2048
+2023-02-24T23:22:41.559745Z INFO    - device info - sensor height: 1088
+2023-02-24T23:22:41.559746Z INFO    - device info - min integration time (us): 77
+2023-02-24T23:22:41.559747Z INFO    - device info - max integration time (us): 999995
+2023-02-24T23:22:41.559756Z VERBOSE - _SyncSensorRegisters (2814) - -->
+2023-02-24T23:22:41.602170Z VERBOSE - _SyncSensorRegisters (2838) - <--
+2023-02-24T23:22:41.602176Z DEBUG   - _LogSensorParameters (975) - Inte_sync: 1
+2023-02-24T23:22:41.602178Z DEBUG   - _LogSensorParameters (976) - Exp_ext: 0
+2023-02-24T23:22:41.602179Z DEBUG   - _LogSensorParameters (977) - Col_calib: 0
+2023-02-24T23:22:41.602181Z DEBUG   - _LogSensorParameters (978) - ADC_calib: 0
+2023-02-24T23:22:41.602182Z DEBUG   - _LogSensorParameters (979) - I_col: 4
+2023-02-24T23:22:41.602184Z DEBUG   - _LogSensorParameters (980) - I_col_prech: 1
+2023-02-24T23:22:41.602186Z DEBUG   - _LogSensorParameters (981) - I_amp: 12
+2023-02-24T23:22:41.602188Z DEBUG   - _LogSensorParameters (982) - Vtf_l1: 64
+2023-02-24T23:22:41.602190Z DEBUG   - _LogSensorParameters (983) - Vres_low: 64
+2023-02-24T23:22:41.602192Z DEBUG   - _LogSensorParameters (984) - V_prech: 101
+2023-02-24T23:22:41.602194Z DEBUG   - _LogSensorParameters (985) - V_ref: 106
+2023-02-24T23:22:41.602196Z DEBUG   - _LogSensorParameters (986) - Dummy: 4
+2023-02-24T23:22:41.602197Z DEBUG   - _LogSensorParameters (987) - V_blacksun: 34
+2023-02-24T23:22:41.602199Z DEBUG   - _LogSensorParameters (988) - black_level: 16300
+2023-02-24T23:22:41.602201Z DEBUG   - _LogSensorParameters (989) - V_ramp1: 109
+2023-02-24T23:22:41.602202Z DEBUG   - _LogSensorParameters (990) - V_ramp2: 109
+2023-02-24T23:22:41.602204Z DEBUG   - _LogSensorParameters (991) - adc_gain: 55
+2023-02-24T23:22:41.602206Z DEBUG   - _LogSensorParameters (992) - pga_gain: 1
+2023-02-24T23:22:41.602208Z DEBUG   - _LogSensorParameters (993) - pga_gain_2: 0
+2023-02-24T23:22:41.602209Z DEBUG   - _LogSensorParameters (994) - Output_mode: 3
+2023-02-24T23:22:41.602211Z DEBUG   - _LogSensorParameters (995) - Image flipping: 2
+2023-02-24T23:22:41.602212Z VERBOSE - driver connected
+2023-02-24T23:22:41.602391Z VERBOSE - driver initializing...
+2023-02-24T23:22:41.602392Z VERBOSE -    trying to initialize...
+2023-02-24T23:22:41.896474Z INFO    - sensor bit depth: 10; output bit depth: 10
+2023-02-24T23:22:43.349462Z INFO    - _Initialize (1693) - Acquisition buffer size is set to: 301989888
+2023-02-24T23:22:43.349507Z INFO    - _Initialize (1699) - Requested minimum acq buffer queue length: 64
+2023-02-24T23:22:43.349603Z INFO    - _Initialize (1712) - Allocated acq buffer queue length: 64
+2023-02-24T23:22:43.349629Z INFO    - _Initialize (1740) - clock frequency: 17000000
+2023-02-24T23:22:44.628641Z INFO    - CM_XimeaXiq::_SetRuntimeParameters() Start 0 1 exp: 10000 fr: 15 0 bl.off: 50 0 0
+2023-02-24T23:22:44.791082Z INFO    - CM_XimeaXiq::_SetRuntimeParameters() End 0 1 exp: 10049 fr: 15 0 bl.off: 50 AG: 2.8 DG: 1.2 0 0
+2023-02-24T23:22:44.791107Z VERBOSE - _StartAcquisition (1049) - -->
+2023-02-24T23:22:44.901747Z INFO    - CM_XimeaXiq::_SetSensorParameters entered
+2023-02-24T23:22:44.901768Z INFO    - _UploadSensorRegisters (2754) - --->
+2023-02-24T23:22:44.901777Z DEBUG   - _UploadSensorRegisters (2770) - Changing register 100 to value 236
+2023-02-24T23:22:44.901985Z DEBUG   - _UploadSensorRegisters (2770) - Changing register 101 to value 63
+2023-02-24T23:22:44.902184Z DEBUG   - _UploadSensorRegisters (2770) - Changing register 102 to value 2
+2023-02-24T23:22:44.902380Z DEBUG   - _UploadSensorRegisters (2770) - Changing register 103 to value 56
+2023-02-24T23:22:44.902564Z DEBUG   - _UploadSensorRegisters (2770) - Changing register 121 to value 1
+2023-02-24T23:22:44.902752Z INFO    - _UploadSensorRegisters (2780) - <---
+2023-02-24T23:22:44.902763Z INFO    - CM_XimeaXiq::_SetSensorParameters() End Black level offset 50 analog gain 2.8 digital gain 1.1662
+2023-02-24T23:22:44.902765Z INFO    - CM_XimeaXiq::_SetSensorParameters exited
+2023-02-24T23:22:44.905297Z DEBUG   - _UpdateSensorRegisters (1395) - AG: 2.8 DG: 1.1662 BlO: 50 Vramp: 109
+2023-02-24T23:22:44.905306Z VERBOSE - _StartAcquisition (1066) - <--
+2023-02-24T23:22:44.905311Z DEBUG   - _Initialize (1846) - Grabbing sensor parameters after initialization
+2023-02-24T23:22:44.905316Z INFO    - CM_XimeaXiq::_DownloadSensorRegisters() Start Black level offset 50 analog gain 2.8 digital gain 1.1662
+2023-02-24T23:22:44.905322Z VERBOSE - _SyncSensorRegisters (2814) - -->
+2023-02-24T23:22:44.953712Z VERBOSE - _SyncSensorRegisters (2838) - <--
+2023-02-24T23:22:44.953715Z INFO    - CM_XimeaXiq::_DownloadSensorRegisters() End Black level offset 50 analog gain 2.8 digital gain 1.1662
+2023-02-24T23:22:44.953716Z INFO    - DM_Camera::_GetSensorParameters entered
+2023-02-24T23:22:44.953717Z INFO    - DM_Camera::_GetSensorParameters exited
+2023-02-24T23:22:44.953720Z DEBUG   - _LogSensorParameters (975) - Inte_sync: 1
+2023-02-24T23:22:44.953722Z DEBUG   - _LogSensorParameters (976) - Exp_ext: 0
+2023-02-24T23:22:44.953724Z DEBUG   - _LogSensorParameters (977) - Col_calib: 0
+2023-02-24T23:22:44.953725Z DEBUG   - _LogSensorParameters (978) - ADC_calib: 0
+2023-02-24T23:22:44.953727Z DEBUG   - _LogSensorParameters (979) - I_col: 4
+2023-02-24T23:22:44.953729Z DEBUG   - _LogSensorParameters (980) - I_col_prech: 1
+2023-02-24T23:22:44.953731Z DEBUG   - _LogSensorParameters (981) - I_amp: 12
+2023-02-24T23:22:44.953733Z DEBUG   - _LogSensorParameters (982) - Vtf_l1: 64
+2023-02-24T23:22:44.953735Z DEBUG   - _LogSensorParameters (983) - Vres_low: 64
+2023-02-24T23:22:44.953736Z DEBUG   - _LogSensorParameters (984) - V_prech: 101
+2023-02-24T23:22:44.953738Z DEBUG   - _LogSensorParameters (985) - V_ref: 106
+2023-02-24T23:22:44.953739Z DEBUG   - _LogSensorParameters (986) - Dummy: 4
+2023-02-24T23:22:44.953749Z DEBUG   - _LogSensorParameters (987) - V_blacksun: 34
+2023-02-24T23:22:44.953751Z DEBUG   - _LogSensorParameters (988) - black_level: 16364
+2023-02-24T23:22:44.953752Z DEBUG   - _LogSensorParameters (989) - V_ramp1: 109
+2023-02-24T23:22:44.953754Z DEBUG   - _LogSensorParameters (990) - V_ramp2: 109
+2023-02-24T23:22:44.953756Z DEBUG   - _LogSensorParameters (991) - adc_gain: 56
+2023-02-24T23:22:44.953758Z DEBUG   - _LogSensorParameters (992) - pga_gain: 2
+2023-02-24T23:22:44.953759Z DEBUG   - _LogSensorParameters (993) - pga_gain_2: 1
+2023-02-24T23:22:44.953761Z DEBUG   - _LogSensorParameters (994) - Output_mode: 3
+2023-02-24T23:22:44.953763Z DEBUG   - _LogSensorParameters (995) - Image flipping: 2
+2023-02-24T23:22:44.953764Z VERBOSE -    initalization successful...
+2023-02-24T23:22:44.953765Z VERBOSE - driver initialization finished
+2023-02-24T23:22:44.964827Z INFO    - CM_XimeaXiq::_SetRuntimeParameters() Start 0 1 exp: 10049 fr: 15 0 bl.off: 50 0 0
+2023-02-24T23:22:44.964835Z INFO    - CM_XimeaXiq::_SetRuntimeParameters() End 0 1 exp: 10049 fr: 15 0 bl.off: 50 AG: 2.8 DG: 1.1662 0 0
+2023-02-24T23:22:44.965114Z INFO    - CM_XimeaXiq::_SetRuntimeParameters() Start 0 1 exp: 1000 fr: 15 0 bl.off: 50 0 0
+2023-02-24T23:22:44.973179Z INFO    - CM_XimeaXiq::_SetRuntimeParameters() End 0 1 exp: 1003 fr: 15 0 bl.off: 50 AG: 2.8 DG: 1.1662 0 0
+2023-02-24T23:22:44.973192Z INFO    - CM_XimeaXiq::_SetRuntimeParameters() Start 0 1 exp: 1003 fr: 15 0 bl.off: 50 0 0
+2023-02-24T23:22:44.973196Z INFO    - CM_XimeaXiq::_SetRuntimeParameters() End 0 1 exp: 1003 fr: 15 0 bl.off: 50 AG: 2.8 DG: 1.1662 0 0
+2023-02-24T23:22:45.013996Z INFO    - CM_XimeaXiq::_SetRuntimeParameters() Start 0 1 exp: 1003 fr: 15 0 bl.off: 50 0 0
+2023-02-24T23:22:45.014003Z INFO    - CM_XimeaXiq::_SetRuntimeParameters() End 0 1 exp: 1003 fr: 15 0 bl.off: 50 AG: 2.8 DG: 1.1662 0 0
+2023-02-24T23:22:45.014005Z VERBOSE - driver starting...
+2023-02-24T23:22:45.018876Z VERBOSE - driver starting finished
+2023-02-24T23:22:45.018889Z DEBUG   - _AcquisitionLoop (2178) - Waiting for image...
+2023-02-24T23:22:45.177377Z DEBUG   - nframe: 1; acq_nframe: 2; Previous acq_nframe: 0; Acq. time: 2023-02-24T23:22:45.177348Z; crnt. burst counter: 0; burst frames: 1
+2023-02-24T23:22:45.177839Z WARNING - [virtual double ihspt::drivers::CM_XimeaXiq::_GetTemperature()] xiSetParamInt (_device, XI_PRM_TEMP_SELECTOR, XI_TEMP_IMAGE_SENSOR_DIE) : Not supported
+2023-02-24T23:22:45.178196Z DEBUG   - _AcquisitionLoop (2257) - Entering update of parameters...
+2023-02-24T23:22:45.178215Z INFO    - CM_XimeaXiq::_SetRuntimeParameters() Start 0 1 exp: 1003 fr: 15 0 bl.off: 50 0 0
+2023-02-24T23:22:45.178237Z INFO    - CM_XimeaXiq::_SetRuntimeParameters() End 0 1 exp: 1003 fr: 15 0 bl.off: 50 AG: 2.8 DG: 1.1662 0 0
+2023-02-24T23:22:45.178239Z DEBUG   - _AcquisitionLoop (2262) - Update of parameters finished
+2023-02-24T23:22:45.178627Z DEBUG   - _AcquisitionLoop (2178) - Waiting for image...
+2023-02-24T23:22:45.239476Z DEBUG   - nframe: 2; acq_nframe: 3; Previous acq_nframe: 2; Acq. time: 2023-02-24T23:22:45.239448Z; crnt. burst counter: 0; burst frames: 1
+2023-02-24T23:22:45.239921Z WARNING - [virtual double ihspt::drivers::CM_XimeaXiq::_GetTemperature()] xiSetParamInt (_device, XI_PRM_TEMP_SELECTOR, XI_TEMP_IMAGE_SENSOR_DIE) : Not supported
+2023-02-24T23:22:45.240270Z DEBUG   - _AcquisitionLoop (2257) - Entering update of parameters...
+2023-02-24T23:22:45.240288Z INFO    - CM_XimeaXiq::_SetRuntimeParameters() Start 0 1 exp: 1003 fr: 15 0 bl.off: 50 0 0
+2023-02-24T23:22:45.240295Z INFO    - CM_XimeaXiq::_SetRuntimeParameters() End 0 1 exp: 1003 fr: 15 0 bl.off: 50 AG: 2.8 DG: 1.1662 0 0
+2023-02-24T23:22:45.240297Z DEBUG   - _AcquisitionLoop (2262) - Update of parameters finished
+2023-02-24T23:22:45.240587Z DEBUG   - _AcquisitionLoop (2178) - Waiting for image...
+2023-02-24T23:22:45.305752Z DEBUG   - nframe: 3; acq_nframe: 4; Previous acq_nframe: 3; Acq. time: 2023-02-24T23:22:45.305724Z; crnt. burst counter: 0; burst frames: 1
+2023-02-24T23:22:45.306200Z WARNING - [virtual double ihspt::drivers::CM_XimeaXiq::_GetTemperature()] xiSetParamInt (_device, XI_PRM_TEMP_SELECTOR, XI_TEMP_IMAGE_SENSOR_DIE) : Not supported
+2023-02-24T23:22:45.306577Z DEBUG   - _AcquisitionLoop (2257) - Entering update of parameters...
+2023-02-24T23:22:45.306597Z INFO    - CM_XimeaXiq::_SetRuntimeParameters() Start 0 1 exp: 1003 fr: 15 0 bl.off: 50 0 0
+2023-02-24T23:22:45.306604Z INFO    - CM_XimeaXiq::_SetRuntimeParameters() End 0 1 exp: 1003 fr: 15 0 bl.off: 50 AG: 2.8 DG: 1.1662 0 0
+2023-02-24T23:22:45.306605Z DEBUG   - _AcquisitionLoop (2262) - Update of parameters finished
+2023-02-24T23:22:45.306881Z DEBUG   - _AcquisitionLoop (2178) - Waiting for image...
+2023-02-24T23:22:45.372040Z DEBUG   - nframe: 4; acq_nframe: 5; Previous acq_nframe: 4; Acq. time: 2023-02-24T23:22:45.372012Z; crnt. burst counter: 0; burst frames: 1
+2023-02-24T23:22:45.372495Z WARNING - [virtual double ihspt::drivers::CM_XimeaXiq::_GetTemperature()] xiSetParamInt (_device, XI_PRM_TEMP_SELECTOR, XI_TEMP_IMAGE_SENSOR_DIE) : Not supported
+2023-02-24T23:22:45.372854Z DEBUG   - _AcquisitionLoop (2257) - Entering update of parameters...
+2023-02-24T23:22:45.372874Z INFO    - CM_XimeaXiq::_SetRuntimeParameters() Start 0 1 exp: 1003 fr: 15 0 bl.off: 50 0 0
+2023-02-24T23:22:45.372880Z INFO    - CM_XimeaXiq::_SetRuntimeParameters() End 0 1 exp: 1003 fr: 15 0 bl.off: 50 AG: 2.8 DG: 1.1662 0 0
+2023-02-24T23:22:45.372882Z DEBUG   - _AcquisitionLoop (2262) - Update of parameters finished
+2023-02-24T23:22:45.373165Z DEBUG   - _AcquisitionLoop (2178) - Waiting for image...
+2023-02-24T23:22:45.438366Z DEBUG   - nframe: 5; acq_nframe: 6; Previous acq_nframe: 5; Acq. time: 2023-02-24T23:22:45.438337Z; crnt. burst counter: 0; burst frames: 1
+2023-02-24T23:22:45.438803Z WARNING - [virtual double ihspt::drivers::CM_XimeaXiq::_GetTemperature()] xiSetParamInt (_device, XI_PRM_TEMP_SELECTOR, XI_TEMP_IMAGE_SENSOR_DIE) : Not supported
+2023-02-24T23:22:45.439161Z DEBUG   - _AcquisitionLoop (2257) - Entering update of parameters...
+2023-02-24T23:22:45.439181Z INFO    - CM_XimeaXiq::_SetRuntimeParameters() Start 0 1 exp: 1003 fr: 15 0 bl.off: 50 0 0
+2023-02-24T23:22:45.439187Z INFO    - CM_XimeaXiq::_SetRuntimeParameters() End 0 1 exp: 1003 fr: 15 0 bl.off: 50 AG: 2.8 DG: 1.1662 0 0
+2023-02-24T23:22:45.439189Z DEBUG   - _AcquisitionLoop (2262) - Update of parameters finished
+2023-02-24T23:22:45.439471Z DEBUG   - _AcquisitionLoop (2178) - Waiting for image...
+2023-02-24T23:22:45.504777Z DEBUG   - nframe: 6; acq_nframe: 7; Previous acq_nframe: 6; Acq. time: 2023-02-24T23:22:45.504732Z; crnt. burst counter: 0; burst frames: 1
+2023-02-24T23:22:45.505224Z WARNING - [virtual double ihspt::drivers::CM_XimeaXiq::_GetTemperature()] xiSetParamInt (_device, XI_PRM_TEMP_SELECTOR, XI_TEMP_IMAGE_SENSOR_DIE) : Not supported
+2023-02-24T23:22:45.505604Z DEBUG   - _AcquisitionLoop (2257) - Entering update of parameters...
+2023-02-24T23:22:45.505640Z INFO    - CM_XimeaXiq::_SetRuntimeParameters() Start 0 1 exp: 1003 fr: 15 0 bl.off: 50 0 0
+2023-02-24T23:22:45.505646Z INFO    - CM_XimeaXiq::_SetRuntimeParameters() End 0 1 exp: 1003 fr: 15 0 bl.off: 50 AG: 2.8 DG: 1.1662 0 0
+2023-02-24T23:22:45.505649Z DEBUG   - _AcquisitionLoop (2262) - Update of parameters finished
+2023-02-24T23:22:45.505936Z DEBUG   - _AcquisitionLoop (2178) - Waiting for image...
+2023-02-24T23:22:45.571046Z DEBUG   - nframe: 7; acq_nframe: 8; Previous acq_nframe: 7; Acq. time: 2023-02-24T23:22:45.571017Z; crnt. burst counter: 0; burst frames: 1
+2023-02-24T23:22:45.571478Z WARNING - [virtual double ihspt::drivers::CM_XimeaXiq::_GetTemperature()] xiSetParamInt (_device, XI_PRM_TEMP_SELECTOR, XI_TEMP_IMAGE_SENSOR_DIE) : Not supported
+2023-02-24T23:22:45.571819Z DEBUG   - _AcquisitionLoop (2257) - Entering update of parameters...
+2023-02-24T23:22:45.571839Z INFO    - CM_XimeaXiq::_SetRuntimeParameters() Start 0 1 exp: 1003 fr: 15 0 bl.off: 50 0 0
+2023-02-24T23:22:45.571846Z INFO    - CM_XimeaXiq::_SetRuntimeParameters() End 0 1 exp: 1003 fr: 15 0 bl.off: 50 AG: 2.8 DG: 1.1662 0 0
+2023-02-24T23:22:45.571848Z DEBUG   - _AcquisitionLoop (2262) - Update of parameters finished
+2023-02-24T23:22:45.572120Z DEBUG   - _AcquisitionLoop (2178) - Waiting for image...
+2023-02-24T23:22:45.637343Z DEBUG   - nframe: 8; acq_nframe: 9; Previous acq_nframe: 8; Acq. time: 2023-02-24T23:22:45.637314Z; crnt. burst counter: 0; burst frames: 1
+2023-02-24T23:22:45.637813Z WARNING - [virtual double ihspt::drivers::CM_XimeaXiq::_GetTemperature()] xiSetParamInt (_device, XI_PRM_TEMP_SELECTOR, XI_TEMP_IMAGE_SENSOR_DIE) : Not supported
+2023-02-24T23:22:45.638184Z DEBUG   - _AcquisitionLoop (2257) - Entering update of parameters...
+2023-02-24T23:22:45.638204Z INFO    - CM_XimeaXiq::_SetRuntimeParameters() Start 0 1 exp: 1003 fr: 15 0 bl.off: 50 0 0
+2023-02-24T23:22:45.638210Z INFO    - CM_XimeaXiq::_SetRuntimeParameters() End 0 1 exp: 1003 fr: 15 0 bl.off: 50 AG: 2.8 DG: 1.1662 0 0
+2023-02-24T23:22:45.638212Z DEBUG   - _AcquisitionLoop (2262) - Update of parameters finished
+2023-02-24T23:22:45.638584Z DEBUG   - _AcquisitionLoop (2178) - Waiting for image...
+2023-02-24T23:22:45.703949Z DEBUG   - nframe: 9; acq_nframe: 10; Previous acq_nframe: 9; Acq. time: 2023-02-24T23:22:45.703921Z; crnt. burst counter: 0; burst frames: 1
+2023-02-24T23:22:45.704399Z WARNING - [virtual double ihspt::drivers::CM_XimeaXiq::_GetTemperature()] xiSetParamInt (_device, XI_PRM_TEMP_SELECTOR, XI_TEMP_IMAGE_SENSOR_DIE) : Not supported
+2023-02-24T23:22:45.704739Z DEBUG   - _AcquisitionLoop (2257) - Entering update of parameters...
+2023-02-24T23:22:45.704757Z INFO    - CM_XimeaXiq::_SetRuntimeParameters() Start 0 1 exp: 1003 fr: 15 0 bl.off: 50 0 0
+2023-02-24T23:22:45.704773Z INFO    - CM_XimeaXiq::_SetRuntimeParameters() End 0 1 exp: 1003 fr: 15 0 bl.off: 50 AG: 2.8 DG: 1.1662 0 0
+2023-02-24T23:22:45.704775Z DEBUG   - _AcquisitionLoop (2262) - Update of parameters finished
+2023-02-24T23:22:45.705043Z DEBUG   - _AcquisitionLoop (2178) - Waiting for image...
+2023-02-24T23:22:45.769912Z DEBUG   - nframe: 10; acq_nframe: 11; Previous acq_nframe: 10; Acq. time: 2023-02-24T23:22:45.769882Z; crnt. burst counter: 0; burst frames: 1
+2023-02-24T23:22:45.770381Z WARNING - [virtual double ihspt::drivers::CM_XimeaXiq::_GetTemperature()] xiSetParamInt (_device, XI_PRM_TEMP_SELECTOR, XI_TEMP_IMAGE_SENSOR_DIE) : Not supported
+2023-02-24T23:22:45.770745Z DEBUG   - _AcquisitionLoop (2257) - Entering update of parameters...
+2023-02-24T23:22:45.770781Z INFO    - CM_XimeaXiq::_SetRuntimeParameters() Start 0 1 exp: 1003 fr: 15 0 bl.off: 50 0 0
+2023-02-24T23:22:45.770787Z INFO    - CM_XimeaXiq::_SetRuntimeParameters() End 0 1 exp: 1003 fr: 15 0 bl.off: 50 AG: 2.8 DG: 1.1662 0 0
+2023-02-24T23:22:45.770790Z DEBUG   - _AcquisitionLoop (2262) - Update of parameters finished
+2023-02-24T23:22:45.771084Z DEBUG   - _AcquisitionLoop (2178) - Waiting for image...
+2023-02-24T23:22:45.836090Z DEBUG   - nframe: 11; acq_nframe: 12; Previous acq_nframe: 11; Acq. time: 2023-02-24T23:22:45.836060Z; crnt. burst counter: 0; burst frames: 1
+2023-02-24T23:22:45.836550Z WARNING - [virtual double ihspt::drivers::CM_XimeaXiq::_GetTemperature()] xiSetParamInt (_device, XI_PRM_TEMP_SELECTOR, XI_TEMP_IMAGE_SENSOR_DIE) : Not supported
+2023-02-24T23:22:45.836946Z DEBUG   - _AcquisitionLoop (2257) - Entering update of parameters...
+2023-02-24T23:22:45.836966Z INFO    - CM_XimeaXiq::_SetRuntimeParameters() Start 0 1 exp: 1003 fr: 15 0 bl.off: 50 0 0
+2023-02-24T23:22:45.836972Z INFO    - CM_XimeaXiq::_SetRuntimeParameters() End 0 1 exp: 1003 fr: 15 0 bl.off: 50 AG: 2.8 DG: 1.1662 0 0
+2023-02-24T23:22:45.836974Z DEBUG   - _AcquisitionLoop (2262) - Update of parameters finished
+2023-02-24T23:22:45.837261Z DEBUG   - _AcquisitionLoop (2178) - Waiting for image...
+2023-02-24T23:22:45.902542Z DEBUG   - nframe: 12; acq_nframe: 13; Previous acq_nframe: 12; Acq. time: 2023-02-24T23:22:45.902505Z; crnt. burst counter: 0; burst frames: 1
+2023-02-24T23:22:45.903003Z WARNING - [virtual double ihspt::drivers::CM_XimeaXiq::_GetTemperature()] xiSetParamInt (_device, XI_PRM_TEMP_SELECTOR, XI_TEMP_IMAGE_SENSOR_DIE) : Not supported
+2023-02-24T23:22:45.903395Z DEBUG   - _AcquisitionLoop (2257) - Entering update of parameters...
+2023-02-24T23:22:45.903415Z INFO    - CM_XimeaXiq::_SetRuntimeParameters() Start 0 1 exp: 1003 fr: 15 0 bl.off: 50 0 0
+2023-02-24T23:22:45.903435Z INFO    - CM_XimeaXiq::_SetRuntimeParameters() End 0 1 exp: 1003 fr: 15 0 bl.off: 50 AG: 2.8 DG: 1.1662 0 0
+2023-02-24T23:22:45.903437Z DEBUG   - _AcquisitionLoop (2262) - Update of parameters finished
+2023-02-24T23:22:45.903738Z DEBUG   - _AcquisitionLoop (2178) - Waiting for image...
+2023-02-24T23:22:45.968777Z DEBUG   - nframe: 13; acq_nframe: 14; Previous acq_nframe: 13; Acq. time: 2023-02-24T23:22:45.968748Z; crnt. burst counter: 0; burst frames: 1
+2023-02-24T23:22:45.969223Z WARNING - [virtual double ihspt::drivers::CM_XimeaXiq::_GetTemperature()] xiSetParamInt (_device, XI_PRM_TEMP_SELECTOR, XI_TEMP_IMAGE_SENSOR_DIE) : Not supported
+2023-02-24T23:22:45.969641Z DEBUG   - _AcquisitionLoop (2257) - Entering update of parameters...
+2023-02-24T23:22:45.969663Z INFO    - CM_XimeaXiq::_SetRuntimeParameters() Start 0 1 exp: 1003 fr: 15 0 bl.off: 50 0 0
+2023-02-24T23:22:45.969669Z INFO    - CM_XimeaXiq::_SetRuntimeParameters() End 0 1 exp: 1003 fr: 15 0 bl.off: 50 AG: 2.8 DG: 1.1662 0 0
+2023-02-24T23:22:45.969671Z DEBUG   - _AcquisitionLoop (2262) - Update of parameters finished
+2023-02-24T23:22:45.969950Z DEBUG   - _AcquisitionLoop (2178) - Waiting for image...
+2023-02-24T23:22:46.035175Z DEBUG   - nframe: 14; acq_nframe: 15; Previous acq_nframe: 14; Acq. time: 2023-02-24T23:22:46.035145Z; crnt. burst counter: 0; burst frames: 1
+2023-02-24T23:22:46.035632Z WARNING - [virtual double ihspt::drivers::CM_XimeaXiq::_GetTemperature()] xiSetParamInt (_device, XI_PRM_TEMP_SELECTOR, XI_TEMP_IMAGE_SENSOR_DIE) : Not supported
+2023-02-24T23:22:46.036027Z DEBUG   - _AcquisitionLoop (2257) - Entering update of parameters...
+2023-02-24T23:22:46.036046Z INFO    - CM_XimeaXiq::_SetRuntimeParameters() Start 0 1 exp: 1003 fr: 15 0 bl.off: 50 0 0
+2023-02-24T23:22:46.036066Z INFO    - CM_XimeaXiq::_SetRuntimeParameters() End 0 1 exp: 1003 fr: 15 0 bl.off: 50 AG: 2.8 DG: 1.1662 0 0
+2023-02-24T23:22:46.036068Z DEBUG   - _AcquisitionLoop (2262) - Update of parameters finished
+2023-02-24T23:22:46.036374Z DEBUG   - _AcquisitionLoop (2178) - Waiting for image...
+2023-02-24T23:22:46.101556Z DEBUG   - nframe: 15; acq_nframe: 16; Previous acq_nframe: 15; Acq. time: 2023-02-24T23:22:46.101527Z; crnt. burst counter: 0; burst frames: 1
+2023-02-24T23:22:46.102003Z WARNING - [virtual double ihspt::drivers::CM_XimeaXiq::_GetTemperature()] xiSetParamInt (_device, XI_PRM_TEMP_SELECTOR, XI_TEMP_IMAGE_SENSOR_DIE) : Not supported
+2023-02-24T23:22:46.102393Z DEBUG   - _AcquisitionLoop (2257) - Entering update of parameters...
+2023-02-24T23:22:46.102413Z INFO    - CM_XimeaXiq::_SetRuntimeParameters() Start 0 1 exp: 1003 fr: 15 0 bl.off: 50 0 0
+2023-02-24T23:22:46.102419Z INFO    - CM_XimeaXiq::_SetRuntimeParameters() End 0 1 exp: 1003 fr: 15 0 bl.off: 50 AG: 2.8 DG: 1.1662 0 0
+2023-02-24T23:22:46.102421Z DEBUG   - _AcquisitionLoop (2262) - Update of parameters finished
+2023-02-24T23:22:46.102700Z DEBUG   - _AcquisitionLoop (2178) - Waiting for image...
+2023-02-24T23:22:46.167691Z DEBUG   - nframe: 16; acq_nframe: 17; Previous acq_nframe: 16; Acq. time: 2023-02-24T23:22:46.167661Z; crnt. burst counter: 0; burst frames: 1
+2023-02-24T23:22:46.168133Z WARNING - [virtual double ihspt::drivers::CM_XimeaXiq::_GetTemperature()] xiSetParamInt (_device, XI_PRM_TEMP_SELECTOR, XI_TEMP_IMAGE_SENSOR_DIE) : Not supported
+2023-02-24T23:22:46.168504Z DEBUG   - _AcquisitionLoop (2257) - Entering update of parameters...
+2023-02-24T23:22:46.168521Z INFO    - CM_XimeaXiq::_SetRuntimeParameters() Start 0 1 exp: 1003 fr: 15 0 bl.off: 50 0 0
+2023-02-24T23:22:46.168529Z INFO    - CM_XimeaXiq::_SetRuntimeParameters() End 0 1 exp: 1003 fr: 15 0 bl.off: 50 AG: 2.8 DG: 1.1662 0 0
+2023-02-24T23:22:46.168531Z DEBUG   - _AcquisitionLoop (2262) - Update of parameters finished
+2023-02-24T23:22:46.168812Z DEBUG   - _AcquisitionLoop (2178) - Waiting for image...
+2023-02-24T23:22:46.234360Z DEBUG   - nframe: 17; acq_nframe: 18; Previous acq_nframe: 17; Acq. time: 2023-02-24T23:22:46.234331Z; crnt. burst counter: 0; burst frames: 1
+2023-02-24T23:22:46.234794Z WARNING - [virtual double ihspt::drivers::CM_XimeaXiq::_GetTemperature()] xiSetParamInt (_device, XI_PRM_TEMP_SELECTOR, XI_TEMP_IMAGE_SENSOR_DIE) : Not supported
+2023-02-24T23:22:46.235124Z DEBUG   - _AcquisitionLoop (2257) - Entering update of parameters...
+2023-02-24T23:22:46.235143Z INFO    - CM_XimeaXiq::_SetRuntimeParameters() Start 0 1 exp: 1003 fr: 15 0 bl.off: 50 0 0
+2023-02-24T23:22:46.235149Z INFO    - CM_XimeaXiq::_SetRuntimeParameters() End 0 1 exp: 1003 fr: 15 0 bl.off: 50 AG: 2.8 DG: 1.1662 0 0
+2023-02-24T23:22:46.235151Z DEBUG   - _AcquisitionLoop (2262) - Update of parameters finished
+2023-02-24T23:22:46.235417Z DEBUG   - _AcquisitionLoop (2178) - Waiting for image...
+2023-02-24T23:22:46.300182Z DEBUG   - nframe: 18; acq_nframe: 19; Previous acq_nframe: 18; Acq. time: 2023-02-24T23:22:46.300154Z; crnt. burst counter: 0; burst frames: 1
+2023-02-24T23:22:46.300638Z WARNING - [virtual double ihspt::drivers::CM_XimeaXiq::_GetTemperature()] xiSetParamInt (_device, XI_PRM_TEMP_SELECTOR, XI_TEMP_IMAGE_SENSOR_DIE) : Not supported
+2023-02-24T23:22:46.300951Z DEBUG   - _AcquisitionLoop (2257) - Entering update of parameters...
+2023-02-24T23:22:46.300972Z INFO    - CM_XimeaXiq::_SetRuntimeParameters() Start 0 1 exp: 1003 fr: 15 0 bl.off: 50 0 0
+2023-02-24T23:22:46.300979Z INFO    - CM_XimeaXiq::_SetRuntimeParameters() End 0 1 exp: 1003 fr: 15 0 bl.off: 50 AG: 2.8 DG: 1.1662 0 0
+2023-02-24T23:22:46.300981Z DEBUG   - _AcquisitionLoop (2262) - Update of parameters finished
+2023-02-24T23:22:46.301247Z DEBUG   - _AcquisitionLoop (2178) - Waiting for image...
+2023-02-24T23:22:46.366537Z DEBUG   - nframe: 19; acq_nframe: 20; Previous acq_nframe: 19; Acq. time: 2023-02-24T23:22:46.366508Z; crnt. burst counter: 0; burst frames: 1
+2023-02-24T23:22:46.366989Z WARNING - [virtual double ihspt::drivers::CM_XimeaXiq::_GetTemperature()] xiSetParamInt (_device, XI_PRM_TEMP_SELECTOR, XI_TEMP_IMAGE_SENSOR_DIE) : Not supported
+2023-02-24T23:22:46.367362Z DEBUG   - _AcquisitionLoop (2257) - Entering update of parameters...
+2023-02-24T23:22:46.367383Z INFO    - CM_XimeaXiq::_SetRuntimeParameters() Start 0 1 exp: 1003 fr: 15 0 bl.off: 50 0 0
+2023-02-24T23:22:46.367389Z INFO    - CM_XimeaXiq::_SetRuntimeParameters() End 0 1 exp: 1003 fr: 15 0 bl.off: 50 AG: 2.8 DG: 1.1662 0 0
+2023-02-24T23:22:46.367390Z DEBUG   - _AcquisitionLoop (2262) - Update of parameters finished
+2023-02-24T23:22:46.367652Z DEBUG   - _AcquisitionLoop (2178) - Waiting for image...
+2023-02-24T23:22:46.432925Z DEBUG   - nframe: 20; acq_nframe: 21; Previous acq_nframe: 20; Acq. time: 2023-02-24T23:22:46.432896Z; crnt. burst counter: 0; burst frames: 1
+2023-02-24T23:22:46.433389Z WARNING - [virtual double ihspt::drivers::CM_XimeaXiq::_GetTemperature()] xiSetParamInt (_device, XI_PRM_TEMP_SELECTOR, XI_TEMP_IMAGE_SENSOR_DIE) : Not supported
+2023-02-24T23:22:46.433805Z DEBUG   - _AcquisitionLoop (2257) - Entering update of parameters...
+2023-02-24T23:22:46.433839Z INFO    - CM_XimeaXiq::_SetRuntimeParameters() Start 0 1 exp: 1003 fr: 15 0 bl.off: 50 0 0
+2023-02-24T23:22:46.433845Z INFO    - CM_XimeaXiq::_SetRuntimeParameters() End 0 1 exp: 1003 fr: 15 0 bl.off: 50 AG: 2.8 DG: 1.1662 0 0
+2023-02-24T23:22:46.433847Z DEBUG   - _AcquisitionLoop (2262) - Update of parameters finished
+2023-02-24T23:22:46.434120Z DEBUG   - _AcquisitionLoop (2178) - Waiting for image...
+2023-02-24T23:22:46.499180Z DEBUG   - nframe: 21; acq_nframe: 22; Previous acq_nframe: 21; Acq. time: 2023-02-24T23:22:46.499151Z; crnt. burst counter: 0; burst frames: 1
+2023-02-24T23:22:46.499624Z WARNING - [virtual double ihspt::drivers::CM_XimeaXiq::_GetTemperature()] xiSetParamInt (_device, XI_PRM_TEMP_SELECTOR, XI_TEMP_IMAGE_SENSOR_DIE) : Not supported
+2023-02-24T23:22:46.499930Z DEBUG   - _AcquisitionLoop (2257) - Entering update of parameters...
+2023-02-24T23:22:46.499952Z INFO    - CM_XimeaXiq::_SetRuntimeParameters() Start 0 1 exp: 1003 fr: 15 0 bl.off: 50 0 0
+2023-02-24T23:22:46.499962Z INFO    - CM_XimeaXiq::_SetRuntimeParameters() End 0 1 exp: 1003 fr: 15 0 bl.off: 50 AG: 2.8 DG: 1.1662 0 0
+2023-02-24T23:22:46.499965Z DEBUG   - _AcquisitionLoop (2262) - Update of parameters finished
+2023-02-24T23:22:46.500262Z DEBUG   - _AcquisitionLoop (2178) - Waiting for image...
+2023-02-24T23:22:46.565925Z DEBUG   - nframe: 22; acq_nframe: 23; Previous acq_nframe: 22; Acq. time: 2023-02-24T23:22:46.565905Z; crnt. burst counter: 0; burst frames: 1
+2023-02-24T23:22:46.566627Z WARNING - [virtual double ihspt::drivers::CM_XimeaXiq::_GetTemperature()] xiSetParamInt (_device, XI_PRM_TEMP_SELECTOR, XI_TEMP_IMAGE_SENSOR_DIE) : Not supported
+2023-02-24T23:22:46.566959Z DEBUG   - _AcquisitionLoop (2257) - Entering update of parameters...
+2023-02-24T23:22:46.566983Z INFO    - CM_XimeaXiq::_SetRuntimeParameters() Start 0 1 exp: 1003 fr: 15 0 bl.off: 50 0 0
+2023-02-24T23:22:46.566993Z INFO    - CM_XimeaXiq::_SetRuntimeParameters() End 0 1 exp: 1003 fr: 15 0 bl.off: 50 AG: 2.8 DG: 1.1662 0 0
+2023-02-24T23:22:46.566996Z DEBUG   - _AcquisitionLoop (2262) - Update of parameters finished
+2023-02-24T23:22:46.567368Z DEBUG   - _AcquisitionLoop (2178) - Waiting for image...
+2023-02-24T23:22:46.631799Z DEBUG   - nframe: 23; acq_nframe: 24; Previous acq_nframe: 23; Acq. time: 2023-02-24T23:22:46.631783Z; crnt. burst counter: 0; burst frames: 1
+2023-02-24T23:22:46.632219Z WARNING - [virtual double ihspt::drivers::CM_XimeaXiq::_GetTemperature()] xiSetParamInt (_device, XI_PRM_TEMP_SELECTOR, XI_TEMP_IMAGE_SENSOR_DIE) : Not supported
+2023-02-24T23:22:46.632517Z DEBUG   - _AcquisitionLoop (2257) - Entering update of parameters...
+2023-02-24T23:22:46.632534Z INFO    - CM_XimeaXiq::_SetRuntimeParameters() Start 0 1 exp: 1003 fr: 15 0 bl.off: 50 0 0
+2023-02-24T23:22:46.632540Z INFO    - CM_XimeaXiq::_SetRuntimeParameters() End 0 1 exp: 1003 fr: 15 0 bl.off: 50 AG: 2.8 DG: 1.1662 0 0
+2023-02-24T23:22:46.632542Z DEBUG   - _AcquisitionLoop (2262) - Update of parameters finished
+2023-02-24T23:22:46.632816Z DEBUG   - _AcquisitionLoop (2178) - Waiting for image...
+2023-02-24T23:22:46.698109Z DEBUG   - nframe: 24; acq_nframe: 25; Previous acq_nframe: 24; Acq. time: 2023-02-24T23:22:46.698080Z; crnt. burst counter: 0; burst frames: 1
+2023-02-24T23:22:46.698549Z WARNING - [virtual double ihspt::drivers::CM_XimeaXiq::_GetTemperature()] xiSetParamInt (_device, XI_PRM_TEMP_SELECTOR, XI_TEMP_IMAGE_SENSOR_DIE) : Not supported
+2023-02-24T23:22:46.698883Z DEBUG   - _AcquisitionLoop (2257) - Entering update of parameters...
+2023-02-24T23:22:46.698927Z INFO    - CM_XimeaXiq::_SetRuntimeParameters() Start 0 1 exp: 1003 fr: 15 0 bl.off: 50 0 0
+2023-02-24T23:22:46.698937Z INFO    - CM_XimeaXiq::_SetRuntimeParameters() End 0 1 exp: 1003 fr: 15 0 bl.off: 50 AG: 2.8 DG: 1.1662 0 0
+2023-02-24T23:22:46.698940Z DEBUG   - _AcquisitionLoop (2262) - Update of parameters finished
+2023-02-24T23:22:46.699252Z DEBUG   - _AcquisitionLoop (2178) - Waiting for image...
+2023-02-24T23:22:46.763653Z DEBUG   - nframe: 25; acq_nframe: 26; Previous acq_nframe: 25; Acq. time: 2023-02-24T23:22:46.763622Z; crnt. burst counter: 0; burst frames: 1
+2023-02-24T23:22:46.764105Z WARNING - [virtual double ihspt::drivers::CM_XimeaXiq::_GetTemperature()] xiSetParamInt (_device, XI_PRM_TEMP_SELECTOR, XI_TEMP_IMAGE_SENSOR_DIE) : Not supported
+2023-02-24T23:22:46.764450Z DEBUG   - _AcquisitionLoop (2257) - Entering update of parameters...
+2023-02-24T23:22:46.764471Z INFO    - CM_XimeaXiq::_SetRuntimeParameters() Start 0 1 exp: 1003 fr: 15 0 bl.off: 50 0 0
+2023-02-24T23:22:46.764477Z INFO    - CM_XimeaXiq::_SetRuntimeParameters() End 0 1 exp: 1003 fr: 15 0 bl.off: 50 AG: 2.8 DG: 1.1662 0 0
+2023-02-24T23:22:46.764479Z DEBUG   - _AcquisitionLoop (2262) - Update of parameters finished
+2023-02-24T23:22:46.764785Z DEBUG   - _AcquisitionLoop (2178) - Waiting for image...
+2023-02-24T23:22:46.829850Z DEBUG   - nframe: 26; acq_nframe: 27; Previous acq_nframe: 26; Acq. time: 2023-02-24T23:22:46.829819Z; crnt. burst counter: 0; burst frames: 1
+2023-02-24T23:22:46.830284Z WARNING - [virtual double ihspt::drivers::CM_XimeaXiq::_GetTemperature()] xiSetParamInt (_device, XI_PRM_TEMP_SELECTOR, XI_TEMP_IMAGE_SENSOR_DIE) : Not supported
+2023-02-24T23:22:46.830624Z DEBUG   - _AcquisitionLoop (2257) - Entering update of parameters...
+2023-02-24T23:22:46.830645Z INFO    - CM_XimeaXiq::_SetRuntimeParameters() Start 0 1 exp: 1003 fr: 15 0 bl.off: 50 0 0
+2023-02-24T23:22:46.830651Z INFO    - CM_XimeaXiq::_SetRuntimeParameters() End 0 1 exp: 1003 fr: 15 0 bl.off: 50 AG: 2.8 DG: 1.1662 0 0
+2023-02-24T23:22:46.830653Z DEBUG   - _AcquisitionLoop (2262) - Update of parameters finished
+2023-02-24T23:22:46.830939Z DEBUG   - _AcquisitionLoop (2178) - Waiting for image...
+2023-02-24T23:22:46.896046Z DEBUG   - nframe: 27; acq_nframe: 28; Previous acq_nframe: 27; Acq. time: 2023-02-24T23:22:46.896015Z; crnt. burst counter: 0; burst frames: 1
+2023-02-24T23:22:46.896660Z WARNING - [virtual double ihspt::drivers::CM_XimeaXiq::_GetTemperature()] xiSetParamInt (_device, XI_PRM_TEMP_SELECTOR, XI_TEMP_IMAGE_SENSOR_DIE) : Not supported
+2023-02-24T23:22:46.897000Z DEBUG   - _AcquisitionLoop (2257) - Entering update of parameters...
+2023-02-24T23:22:46.897024Z INFO    - CM_XimeaXiq::_SetRuntimeParameters() Start 0 1 exp: 1003 fr: 15 0 bl.off: 50 0 0
+2023-02-24T23:22:46.897032Z INFO    - CM_XimeaXiq::_SetRuntimeParameters() End 0 1 exp: 1003 fr: 15 0 bl.off: 50 AG: 2.8 DG: 1.1662 0 0
+2023-02-24T23:22:46.897033Z DEBUG   - _AcquisitionLoop (2262) - Update of parameters finished
+2023-02-24T23:22:46.897348Z DEBUG   - _AcquisitionLoop (2178) - Waiting for image...
+2023-02-24T23:22:46.962431Z DEBUG   - nframe: 28; acq_nframe: 29; Previous acq_nframe: 28; Acq. time: 2023-02-24T23:22:46.962401Z; crnt. burst counter: 0; burst frames: 1
+2023-02-24T23:22:46.962889Z WARNING - [virtual double ihspt::drivers::CM_XimeaXiq::_GetTemperature()] xiSetParamInt (_device, XI_PRM_TEMP_SELECTOR, XI_TEMP_IMAGE_SENSOR_DIE) : Not supported
+2023-02-24T23:22:46.963269Z DEBUG   - _AcquisitionLoop (2257) - Entering update of parameters...
+2023-02-24T23:22:46.963292Z INFO    - CM_XimeaXiq::_SetRuntimeParameters() Start 0 1 exp: 1003 fr: 15 0 bl.off: 50 0 0
+2023-02-24T23:22:46.963299Z INFO    - CM_XimeaXiq::_SetRuntimeParameters() End 0 1 exp: 1003 fr: 15 0 bl.off: 50 AG: 2.8 DG: 1.1662 0 0
+2023-02-24T23:22:46.963301Z DEBUG   - _AcquisitionLoop (2262) - Update of parameters finished
+2023-02-24T23:22:46.963569Z DEBUG   - _AcquisitionLoop (2178) - Waiting for image...
+2023-02-24T23:22:47.028564Z DEBUG   - nframe: 29; acq_nframe: 30; Previous acq_nframe: 29; Acq. time: 2023-02-24T23:22:47.028533Z; crnt. burst counter: 0; burst frames: 1
+2023-02-24T23:22:47.029094Z WARNING - [virtual double ihspt::drivers::CM_XimeaXiq::_GetTemperature()] xiSetParamInt (_device, XI_PRM_TEMP_SELECTOR, XI_TEMP_IMAGE_SENSOR_DIE) : Not supported
+2023-02-24T23:22:47.029504Z DEBUG   - _AcquisitionLoop (2257) - Entering update of parameters...
+2023-02-24T23:22:47.029527Z INFO    - CM_XimeaXiq::_SetRuntimeParameters() Start 0 1 exp: 1003 fr: 15 0 bl.off: 50 0 0
+2023-02-24T23:22:47.029533Z INFO    - CM_XimeaXiq::_SetRuntimeParameters() End 0 1 exp: 1003 fr: 15 0 bl.off: 50 AG: 2.8 DG: 1.1662 0 0
+2023-02-24T23:22:47.029536Z DEBUG   - _AcquisitionLoop (2262) - Update of parameters finished
+2023-02-24T23:22:47.029866Z DEBUG   - _AcquisitionLoop (2178) - Waiting for image...
+2023-02-24T23:22:47.095050Z DEBUG   - nframe: 30; acq_nframe: 31; Previous acq_nframe: 30; Acq. time: 2023-02-24T23:22:47.095020Z; crnt. burst counter: 0; burst frames: 1
+2023-02-24T23:22:47.095517Z WARNING - [virtual double ihspt::drivers::CM_XimeaXiq::_GetTemperature()] xiSetParamInt (_device, XI_PRM_TEMP_SELECTOR, XI_TEMP_IMAGE_SENSOR_DIE) : Not supported
+2023-02-24T23:22:47.095903Z DEBUG   - _AcquisitionLoop (2257) - Entering update of parameters...
+2023-02-24T23:22:47.095926Z INFO    - CM_XimeaXiq::_SetRuntimeParameters() Start 0 1 exp: 1003 fr: 15 0 bl.off: 50 0 0
+2023-02-24T23:22:47.095933Z INFO    - CM_XimeaXiq::_SetRuntimeParameters() End 0 1 exp: 1003 fr: 15 0 bl.off: 50 AG: 2.8 DG: 1.1662 0 0
+2023-02-24T23:22:47.095936Z DEBUG   - _AcquisitionLoop (2262) - Update of parameters finished
+2023-02-24T23:22:47.096209Z DEBUG   - _AcquisitionLoop (2178) - Waiting for image...
+2023-02-24T23:22:47.161349Z DEBUG   - nframe: 31; acq_nframe: 32; Previous acq_nframe: 31; Acq. time: 2023-02-24T23:22:47.161320Z; crnt. burst counter: 0; burst frames: 1
+2023-02-24T23:22:47.161824Z WARNING - [virtual double ihspt::drivers::CM_XimeaXiq::_GetTemperature()] xiSetParamInt (_device, XI_PRM_TEMP_SELECTOR, XI_TEMP_IMAGE_SENSOR_DIE) : Not supported
+2023-02-24T23:22:47.162222Z DEBUG   - _AcquisitionLoop (2257) - Entering update of parameters...
+2023-02-24T23:22:47.162245Z INFO    - CM_XimeaXiq::_SetRuntimeParameters() Start 0 1 exp: 1003 fr: 15 0 bl.off: 50 0 0
+2023-02-24T23:22:47.162265Z INFO    - CM_XimeaXiq::_SetRuntimeParameters() End 0 1 exp: 1003 fr: 15 0 bl.off: 50 AG: 2.8 DG: 1.1662 0 0
+2023-02-24T23:22:47.162267Z DEBUG   - _AcquisitionLoop (2262) - Update of parameters finished
+2023-02-24T23:22:47.162586Z DEBUG   - _AcquisitionLoop (2178) - Waiting for image...
+2023-02-24T23:22:47.227545Z DEBUG   - nframe: 32; acq_nframe: 33; Previous acq_nframe: 32; Acq. time: 2023-02-24T23:22:47.227516Z; crnt. burst counter: 0; burst frames: 1
+2023-02-24T23:22:47.227975Z WARNING - [virtual double ihspt::drivers::CM_XimeaXiq::_GetTemperature()] xiSetParamInt (_device, XI_PRM_TEMP_SELECTOR, XI_TEMP_IMAGE_SENSOR_DIE) : Not supported
+2023-02-24T23:22:47.228305Z DEBUG   - _AcquisitionLoop (2257) - Entering update of parameters...
+2023-02-24T23:22:47.228333Z INFO    - CM_XimeaXiq::_SetRuntimeParameters() Start 0 1 exp: 1003 fr: 15 0 bl.off: 50 0 0
+2023-02-24T23:22:47.228339Z INFO    - CM_XimeaXiq::_SetRuntimeParameters() End 0 1 exp: 1003 fr: 15 0 bl.off: 50 AG: 2.8 DG: 1.1662 0 0
+2023-02-24T23:22:47.228341Z DEBUG   - _AcquisitionLoop (2262) - Update of parameters finished
+2023-02-24T23:22:47.228621Z DEBUG   - _AcquisitionLoop (2178) - Waiting for image...
+2023-02-24T23:22:47.294293Z DEBUG   - nframe: 33; acq_nframe: 34; Previous acq_nframe: 33; Acq. time: 2023-02-24T23:22:47.294264Z; crnt. burst counter: 0; burst frames: 1
+2023-02-24T23:22:47.294783Z WARNING - [virtual double ihspt::drivers::CM_XimeaXiq::_GetTemperature()] xiSetParamInt (_device, XI_PRM_TEMP_SELECTOR, XI_TEMP_IMAGE_SENSOR_DIE) : Not supported
+2023-02-24T23:22:47.295127Z DEBUG   - _AcquisitionLoop (2257) - Entering update of parameters...
+2023-02-24T23:22:47.295148Z INFO    - CM_XimeaXiq::_SetRuntimeParameters() Start 0 1 exp: 1003 fr: 15 0 bl.off: 50 0 0
+2023-02-24T23:22:47.295171Z INFO    - CM_XimeaXiq::_SetRuntimeParameters() End 0 1 exp: 1003 fr: 15 0 bl.off: 50 AG: 2.8 DG: 1.1662 0 0
+2023-02-24T23:22:47.295173Z DEBUG   - _AcquisitionLoop (2262) - Update of parameters finished
+2023-02-24T23:22:47.295444Z DEBUG   - _AcquisitionLoop (2178) - Waiting for image...
+2023-02-24T23:22:47.360318Z DEBUG   - nframe: 34; acq_nframe: 35; Previous acq_nframe: 34; Acq. time: 2023-02-24T23:22:47.360289Z; crnt. burst counter: 0; burst frames: 1
+2023-02-24T23:22:47.360824Z WARNING - [virtual double ihspt::drivers::CM_XimeaXiq::_GetTemperature()] xiSetParamInt (_device, XI_PRM_TEMP_SELECTOR, XI_TEMP_IMAGE_SENSOR_DIE) : Not supported
+2023-02-24T23:22:47.361241Z DEBUG   - _AcquisitionLoop (2257) - Entering update of parameters...
+2023-02-24T23:22:47.361277Z INFO    - CM_XimeaXiq::_SetRuntimeParameters() Start 0 1 exp: 1003 fr: 15 0 bl.off: 50 0 0
+2023-02-24T23:22:47.361284Z INFO    - CM_XimeaXiq::_SetRuntimeParameters() End 0 1 exp: 1003 fr: 15 0 bl.off: 50 AG: 2.8 DG: 1.1662 0 0
+2023-02-24T23:22:47.361286Z DEBUG   - _AcquisitionLoop (2262) - Update of parameters finished
+2023-02-24T23:22:47.361578Z DEBUG   - _AcquisitionLoop (2178) - Waiting for image...
+2023-02-24T23:22:47.426584Z DEBUG   - nframe: 35; acq_nframe: 36; Previous acq_nframe: 35; Acq. time: 2023-02-24T23:22:47.426555Z; crnt. burst counter: 0; burst frames: 1
+2023-02-24T23:22:47.427120Z WARNING - [virtual double ihspt::drivers::CM_XimeaXiq::_GetTemperature()] xiSetParamInt (_device, XI_PRM_TEMP_SELECTOR, XI_TEMP_IMAGE_SENSOR_DIE) : Not supported
+2023-02-24T23:22:47.427523Z DEBUG   - _AcquisitionLoop (2257) - Entering update of parameters...
+2023-02-24T23:22:47.427562Z INFO    - CM_XimeaXiq::_SetRuntimeParameters() Start 0 1 exp: 1003 fr: 15 0 bl.off: 50 0 0
+2023-02-24T23:22:47.427568Z INFO    - CM_XimeaXiq::_SetRuntimeParameters() End 0 1 exp: 1003 fr: 15 0 bl.off: 50 AG: 2.8 DG: 1.1662 0 0
+2023-02-24T23:22:47.427570Z DEBUG   - _AcquisitionLoop (2262) - Update of parameters finished
+2023-02-24T23:22:47.427943Z DEBUG   - _AcquisitionLoop (2178) - Waiting for image...
+2023-02-24T23:22:47.493064Z DEBUG   - nframe: 36; acq_nframe: 37; Previous acq_nframe: 36; Acq. time: 2023-02-24T23:22:47.493034Z; crnt. burst counter: 0; burst frames: 1
+2023-02-24T23:22:47.493543Z WARNING - [virtual double ihspt::drivers::CM_XimeaXiq::_GetTemperature()] xiSetParamInt (_device, XI_PRM_TEMP_SELECTOR, XI_TEMP_IMAGE_SENSOR_DIE) : Not supported
+2023-02-24T23:22:47.493946Z DEBUG   - _AcquisitionLoop (2257) - Entering update of parameters...
+2023-02-24T23:22:47.493983Z INFO    - CM_XimeaXiq::_SetRuntimeParameters() Start 0 1 exp: 1003 fr: 15 0 bl.off: 50 0 0
+2023-02-24T23:22:47.493989Z INFO    - CM_XimeaXiq::_SetRuntimeParameters() End 0 1 exp: 1003 fr: 15 0 bl.off: 50 AG: 2.8 DG: 1.1662 0 0
+2023-02-24T23:22:47.493991Z DEBUG   - _AcquisitionLoop (2262) - Update of parameters finished
+2023-02-24T23:22:47.494297Z DEBUG   - _AcquisitionLoop (2178) - Waiting for image...
+2023-02-24T23:22:47.559208Z DEBUG   - nframe: 37; acq_nframe: 38; Previous acq_nframe: 37; Acq. time: 2023-02-24T23:22:47.559179Z; crnt. burst counter: 0; burst frames: 1
+2023-02-24T23:22:47.559706Z WARNING - [virtual double ihspt::drivers::CM_XimeaXiq::_GetTemperature()] xiSetParamInt (_device, XI_PRM_TEMP_SELECTOR, XI_TEMP_IMAGE_SENSOR_DIE) : Not supported
+2023-02-24T23:22:47.560056Z DEBUG   - _AcquisitionLoop (2257) - Entering update of parameters...
+2023-02-24T23:22:47.560080Z INFO    - CM_XimeaXiq::_SetRuntimeParameters() Start 0 1 exp: 1003 fr: 15 0 bl.off: 50 0 0
+2023-02-24T23:22:47.560088Z INFO    - CM_XimeaXiq::_SetRuntimeParameters() End 0 1 exp: 1003 fr: 15 0 bl.off: 50 AG: 2.8 DG: 1.1662 0 0
+2023-02-24T23:22:47.560090Z DEBUG   - _AcquisitionLoop (2262) - Update of parameters finished
+2023-02-24T23:22:47.560368Z DEBUG   - _AcquisitionLoop (2178) - Waiting for image...
+2023-02-24T23:22:47.625540Z DEBUG   - nframe: 38; acq_nframe: 39; Previous acq_nframe: 38; Acq. time: 2023-02-24T23:22:47.625511Z; crnt. burst counter: 0; burst frames: 1
+2023-02-24T23:22:47.626046Z WARNING - [virtual double ihspt::drivers::CM_XimeaXiq::_GetTemperature()] xiSetParamInt (_device, XI_PRM_TEMP_SELECTOR, XI_TEMP_IMAGE_SENSOR_DIE) : Not supported
+2023-02-24T23:22:47.626428Z DEBUG   - _AcquisitionLoop (2257) - Entering update of parameters...
+2023-02-24T23:22:47.626467Z INFO    - CM_XimeaXiq::_SetRuntimeParameters() Start 0 1 exp: 1003 fr: 15 0 bl.off: 50 0 0
+2023-02-24T23:22:47.626473Z INFO    - CM_XimeaXiq::_SetRuntimeParameters() End 0 1 exp: 1003 fr: 15 0 bl.off: 50 AG: 2.8 DG: 1.1662 0 0
+2023-02-24T23:22:47.626475Z DEBUG   - _AcquisitionLoop (2262) - Update of parameters finished
+2023-02-24T23:22:47.626767Z DEBUG   - _AcquisitionLoop (2178) - Waiting for image...
+2023-02-24T23:22:47.691663Z DEBUG   - nframe: 39; acq_nframe: 40; Previous acq_nframe: 39; Acq. time: 2023-02-24T23:22:47.691634Z; crnt. burst counter: 0; burst frames: 1
+2023-02-24T23:22:47.692179Z WARNING - [virtual double ihspt::drivers::CM_XimeaXiq::_GetTemperature()] xiSetParamInt (_device, XI_PRM_TEMP_SELECTOR, XI_TEMP_IMAGE_SENSOR_DIE) : Not supported
+2023-02-24T23:22:47.692518Z DEBUG   - _AcquisitionLoop (2257) - Entering update of parameters...
+2023-02-24T23:22:47.692541Z INFO    - CM_XimeaXiq::_SetRuntimeParameters() Start 0 1 exp: 1003 fr: 15 0 bl.off: 50 0 0
+2023-02-24T23:22:47.692547Z INFO    - CM_XimeaXiq::_SetRuntimeParameters() End 0 1 exp: 1003 fr: 15 0 bl.off: 50 AG: 2.8 DG: 1.1662 0 0
+2023-02-24T23:22:47.692549Z DEBUG   - _AcquisitionLoop (2262) - Update of parameters finished
+2023-02-24T23:22:47.692840Z DEBUG   - _AcquisitionLoop (2178) - Waiting for image...
+2023-02-24T23:22:47.762738Z DEBUG   - nframe: 40; acq_nframe: 41; Previous acq_nframe: 40; Acq. time: 2023-02-24T23:22:47.762708Z; crnt. burst counter: 0; burst frames: 1
+2023-02-24T23:22:47.763211Z WARNING - [virtual double ihspt::drivers::CM_XimeaXiq::_GetTemperature()] xiSetParamInt (_device, XI_PRM_TEMP_SELECTOR, XI_TEMP_IMAGE_SENSOR_DIE) : Not supported
+2023-02-24T23:22:47.763578Z DEBUG   - _AcquisitionLoop (2257) - Entering update of parameters...
+2023-02-24T23:22:47.763602Z INFO    - CM_XimeaXiq::_SetRuntimeParameters() Start 0 1 exp: 1003 fr: 15 0 bl.off: 50 0 0
+2023-02-24T23:22:47.763609Z INFO    - CM_XimeaXiq::_SetRuntimeParameters() End 0 1 exp: 1003 fr: 15 0 bl.off: 50 AG: 2.8 DG: 1.1662 0 0
+2023-02-24T23:22:47.763611Z DEBUG   - _AcquisitionLoop (2262) - Update of parameters finished
+2023-02-24T23:22:47.763892Z DEBUG   - _AcquisitionLoop (2178) - Waiting for image...
+2023-02-24T23:22:47.824566Z DEBUG   - nframe: 41; acq_nframe: 42; Previous acq_nframe: 41; Acq. time: 2023-02-24T23:22:47.824545Z; crnt. burst counter: 0; burst frames: 1
+2023-02-24T23:22:47.825039Z WARNING - [virtual double ihspt::drivers::CM_XimeaXiq::_GetTemperature()] xiSetParamInt (_device, XI_PRM_TEMP_SELECTOR, XI_TEMP_IMAGE_SENSOR_DIE) : Not supported
+2023-02-24T23:22:47.825377Z DEBUG   - _AcquisitionLoop (2257) - Entering update of parameters...
+2023-02-24T23:22:47.825393Z INFO    - CM_XimeaXiq::_SetRuntimeParameters() Start 0 1 exp: 1003 fr: 15 0 bl.off: 50 0 0
+2023-02-24T23:22:47.825400Z INFO    - CM_XimeaXiq::_SetRuntimeParameters() End 0 1 exp: 1003 fr: 15 0 bl.off: 50 AG: 2.8 DG: 1.1662 0 0
+2023-02-24T23:22:47.825402Z DEBUG   - _AcquisitionLoop (2262) - Update of parameters finished
+2023-02-24T23:22:47.825676Z DEBUG   - _AcquisitionLoop (2178) - Waiting for image...
+2023-02-24T23:22:47.890678Z DEBUG   - nframe: 42; acq_nframe: 43; Previous acq_nframe: 42; Acq. time: 2023-02-24T23:22:47.890647Z; crnt. burst counter: 0; burst frames: 1
+2023-02-24T23:22:47.891165Z WARNING - [virtual double ihspt::drivers::CM_XimeaXiq::_GetTemperature()] xiSetParamInt (_device, XI_PRM_TEMP_SELECTOR, XI_TEMP_IMAGE_SENSOR_DIE) : Not supported
+2023-02-24T23:22:47.891526Z DEBUG   - _AcquisitionLoop (2257) - Entering update of parameters...
+2023-02-24T23:22:47.891548Z INFO    - CM_XimeaXiq::_SetRuntimeParameters() Start 0 1 exp: 1003 fr: 15 0 bl.off: 50 0 0
+2023-02-24T23:22:47.891554Z INFO    - CM_XimeaXiq::_SetRuntimeParameters() End 0 1 exp: 1003 fr: 15 0 bl.off: 50 AG: 2.8 DG: 1.1662 0 0
+2023-02-24T23:22:47.891556Z DEBUG   - _AcquisitionLoop (2262) - Update of parameters finished
+2023-02-24T23:22:47.891902Z DEBUG   - _AcquisitionLoop (2178) - Waiting for image...
+2023-02-24T23:22:47.956982Z DEBUG   - nframe: 43; acq_nframe: 44; Previous acq_nframe: 43; Acq. time: 2023-02-24T23:22:47.956952Z; crnt. burst counter: 0; burst frames: 1
+2023-02-24T23:22:47.957465Z WARNING - [virtual double ihspt::drivers::CM_XimeaXiq::_GetTemperature()] xiSetParamInt (_device, XI_PRM_TEMP_SELECTOR, XI_TEMP_IMAGE_SENSOR_DIE) : Not supported
+2023-02-24T23:22:47.957866Z DEBUG   - _AcquisitionLoop (2257) - Entering update of parameters...
+2023-02-24T23:22:47.957888Z INFO    - CM_XimeaXiq::_SetRuntimeParameters() Start 0 1 exp: 1003 fr: 15 0 bl.off: 50 0 0
+2023-02-24T23:22:47.957894Z INFO    - CM_XimeaXiq::_SetRuntimeParameters() End 0 1 exp: 1003 fr: 15 0 bl.off: 50 AG: 2.8 DG: 1.1662 0 0
+2023-02-24T23:22:47.957896Z DEBUG   - _AcquisitionLoop (2262) - Update of parameters finished
+2023-02-24T23:22:47.958163Z DEBUG   - _AcquisitionLoop (2178) - Waiting for image...
+2023-02-24T23:22:48.023660Z DEBUG   - nframe: 44; acq_nframe: 45; Previous acq_nframe: 44; Acq. time: 2023-02-24T23:22:48.023631Z; crnt. burst counter: 0; burst frames: 1
+2023-02-24T23:22:48.024416Z WARNING - [virtual double ihspt::drivers::CM_XimeaXiq::_GetTemperature()] xiSetParamInt (_device, XI_PRM_TEMP_SELECTOR, XI_TEMP_IMAGE_SENSOR_DIE) : Not supported
+2023-02-24T23:22:48.024835Z DEBUG   - _AcquisitionLoop (2257) - Entering update of parameters...
+2023-02-24T23:22:48.024869Z INFO    - CM_XimeaXiq::_SetRuntimeParameters() Start 0 1 exp: 1003 fr: 15 0 bl.off: 50 0 0
+2023-02-24T23:22:48.024878Z INFO    - CM_XimeaXiq::_SetRuntimeParameters() End 0 1 exp: 1003 fr: 15 0 bl.off: 50 AG: 2.8 DG: 1.1662 0 0
+2023-02-24T23:22:48.024881Z DEBUG   - _AcquisitionLoop (2262) - Update of parameters finished
+2023-02-24T23:22:48.025281Z DEBUG   - _AcquisitionLoop (2178) - Waiting for image...
+2023-02-24T23:22:48.089604Z DEBUG   - nframe: 45; acq_nframe: 46; Previous acq_nframe: 45; Acq. time: 2023-02-24T23:22:48.089573Z; crnt. burst counter: 0; burst frames: 1
+2023-02-24T23:22:48.090105Z WARNING - [virtual double ihspt::drivers::CM_XimeaXiq::_GetTemperature()] xiSetParamInt (_device, XI_PRM_TEMP_SELECTOR, XI_TEMP_IMAGE_SENSOR_DIE) : Not supported
+2023-02-24T23:22:48.090499Z DEBUG   - _AcquisitionLoop (2257) - Entering update of parameters...
+2023-02-24T23:22:48.090519Z INFO    - CM_XimeaXiq::_SetRuntimeParameters() Start 0 1 exp: 1003 fr: 15 0 bl.off: 50 0 0
+2023-02-24T23:22:48.090539Z INFO    - CM_XimeaXiq::_SetRuntimeParameters() End 0 1 exp: 1003 fr: 15 0 bl.off: 50 AG: 2.8 DG: 1.1662 0 0
+2023-02-24T23:22:48.090542Z DEBUG   - _AcquisitionLoop (2262) - Update of parameters finished
+2023-02-24T23:22:48.090849Z DEBUG   - _AcquisitionLoop (2178) - Waiting for image...
+2023-02-24T23:22:48.155901Z DEBUG   - nframe: 46; acq_nframe: 47; Previous acq_nframe: 46; Acq. time: 2023-02-24T23:22:48.155871Z; crnt. burst counter: 0; burst frames: 1
+2023-02-24T23:22:48.156407Z WARNING - [virtual double ihspt::drivers::CM_XimeaXiq::_GetTemperature()] xiSetParamInt (_device, XI_PRM_TEMP_SELECTOR, XI_TEMP_IMAGE_SENSOR_DIE) : Not supported
+2023-02-24T23:22:48.156740Z DEBUG   - _AcquisitionLoop (2257) - Entering update of parameters...
+2023-02-24T23:22:48.156778Z INFO    - CM_XimeaXiq::_SetRuntimeParameters() Start 0 1 exp: 1003 fr: 15 0 bl.off: 50 0 0
+2023-02-24T23:22:48.156785Z INFO    - CM_XimeaXiq::_SetRuntimeParameters() End 0 1 exp: 1003 fr: 15 0 bl.off: 50 AG: 2.8 DG: 1.1662 0 0
+2023-02-24T23:22:48.156787Z DEBUG   - _AcquisitionLoop (2262) - Update of parameters finished
+2023-02-24T23:22:48.157069Z DEBUG   - _AcquisitionLoop (2178) - Waiting for image...
+2023-02-24T23:22:48.223495Z DEBUG   - nframe: 47; acq_nframe: 48; Previous acq_nframe: 47; Acq. time: 2023-02-24T23:22:48.223465Z; crnt. burst counter: 0; burst frames: 1
+2023-02-24T23:22:48.223993Z WARNING - [virtual double ihspt::drivers::CM_XimeaXiq::_GetTemperature()] xiSetParamInt (_device, XI_PRM_TEMP_SELECTOR, XI_TEMP_IMAGE_SENSOR_DIE) : Not supported
+2023-02-24T23:22:48.224357Z DEBUG   - _AcquisitionLoop (2257) - Entering update of parameters...
+2023-02-24T23:22:48.224377Z INFO    - CM_XimeaXiq::_SetRuntimeParameters() Start 0 1 exp: 1003 fr: 15 0 bl.off: 50 0 0
+2023-02-24T23:22:48.224384Z INFO    - CM_XimeaXiq::_SetRuntimeParameters() End 0 1 exp: 1003 fr: 15 0 bl.off: 50 AG: 2.8 DG: 1.1662 0 0
+2023-02-24T23:22:48.224386Z DEBUG   - _AcquisitionLoop (2262) - Update of parameters finished
+2023-02-24T23:22:48.224659Z DEBUG   - _AcquisitionLoop (2178) - Waiting for image...
+2023-02-24T23:22:48.288550Z DEBUG   - nframe: 48; acq_nframe: 49; Previous acq_nframe: 48; Acq. time: 2023-02-24T23:22:48.288519Z; crnt. burst counter: 0; burst frames: 1
+2023-02-24T23:22:48.289066Z WARNING - [virtual double ihspt::drivers::CM_XimeaXiq::_GetTemperature()] xiSetParamInt (_device, XI_PRM_TEMP_SELECTOR, XI_TEMP_IMAGE_SENSOR_DIE) : Not supported
+2023-02-24T23:22:48.289434Z DEBUG   - _AcquisitionLoop (2257) - Entering update of parameters...
+2023-02-24T23:22:48.289473Z INFO    - CM_XimeaXiq::_SetRuntimeParameters() Start 0 1 exp: 1003 fr: 15 0 bl.off: 50 0 0
+2023-02-24T23:22:48.289479Z INFO    - CM_XimeaXiq::_SetRuntimeParameters() End 0 1 exp: 1003 fr: 15 0 bl.off: 50 AG: 2.8 DG: 1.1662 0 0
+2023-02-24T23:22:48.289481Z DEBUG   - _AcquisitionLoop (2262) - Update of parameters finished
+2023-02-24T23:22:48.289779Z DEBUG   - _AcquisitionLoop (2178) - Waiting for image...
+2023-02-24T23:22:48.355168Z DEBUG   - nframe: 49; acq_nframe: 50; Previous acq_nframe: 49; Acq. time: 2023-02-24T23:22:48.355136Z; crnt. burst counter: 0; burst frames: 1
+2023-02-24T23:22:48.355761Z WARNING - [virtual double ihspt::drivers::CM_XimeaXiq::_GetTemperature()] xiSetParamInt (_device, XI_PRM_TEMP_SELECTOR, XI_TEMP_IMAGE_SENSOR_DIE) : Not supported
+2023-02-24T23:22:48.356105Z DEBUG   - _AcquisitionLoop (2257) - Entering update of parameters...
+2023-02-24T23:22:48.356126Z INFO    - CM_XimeaXiq::_SetRuntimeParameters() Start 0 1 exp: 1003 fr: 15 0 bl.off: 50 0 0
+2023-02-24T23:22:48.356132Z INFO    - CM_XimeaXiq::_SetRuntimeParameters() End 0 1 exp: 1003 fr: 15 0 bl.off: 50 AG: 2.8 DG: 1.1662 0 0
+2023-02-24T23:22:48.356135Z DEBUG   - _AcquisitionLoop (2262) - Update of parameters finished
+2023-02-24T23:22:48.356535Z DEBUG   - _AcquisitionLoop (2178) - Waiting for image...
+2023-02-24T23:22:48.421669Z DEBUG   - nframe: 50; acq_nframe: 51; Previous acq_nframe: 50; Acq. time: 2023-02-24T23:22:48.421631Z; crnt. burst counter: 0; burst frames: 1
+2023-02-24T23:22:48.422190Z WARNING - [virtual double ihspt::drivers::CM_XimeaXiq::_GetTemperature()] xiSetParamInt (_device, XI_PRM_TEMP_SELECTOR, XI_TEMP_IMAGE_SENSOR_DIE) : Not supported
+2023-02-24T23:22:48.422506Z DEBUG   - _AcquisitionLoop (2257) - Entering update of parameters...
+2023-02-24T23:22:48.422530Z INFO    - CM_XimeaXiq::_SetRuntimeParameters() Start 0 1 exp: 1003 fr: 15 0 bl.off: 50 0 0
+2023-02-24T23:22:48.422536Z INFO    - CM_XimeaXiq::_SetRuntimeParameters() End 0 1 exp: 1003 fr: 15 0 bl.off: 50 AG: 2.8 DG: 1.1662 0 0
+2023-02-24T23:22:48.422538Z DEBUG   - _AcquisitionLoop (2262) - Update of parameters finished
+2023-02-24T23:22:48.422839Z DEBUG   - _AcquisitionLoop (2178) - Waiting for image...
+2023-02-24T23:22:48.488120Z DEBUG   - nframe: 51; acq_nframe: 52; Previous acq_nframe: 51; Acq. time: 2023-02-24T23:22:48.488091Z; crnt. burst counter: 0; burst frames: 1
+2023-02-24T23:22:48.488619Z WARNING - [virtual double ihspt::drivers::CM_XimeaXiq::_GetTemperature()] xiSetParamInt (_device, XI_PRM_TEMP_SELECTOR, XI_TEMP_IMAGE_SENSOR_DIE) : Not supported
+2023-02-24T23:22:48.489023Z DEBUG   - _AcquisitionLoop (2257) - Entering update of parameters...
+2023-02-24T23:22:48.489059Z INFO    - CM_XimeaXiq::_SetRuntimeParameters() Start 0 1 exp: 1003 fr: 15 0 bl.off: 50 0 0
+2023-02-24T23:22:48.489065Z INFO    - CM_XimeaXiq::_SetRuntimeParameters() End 0 1 exp: 1003 fr: 15 0 bl.off: 50 AG: 2.8 DG: 1.1662 0 0
+2023-02-24T23:22:48.489067Z DEBUG   - _AcquisitionLoop (2262) - Update of parameters finished
+2023-02-24T23:22:48.489366Z DEBUG   - _AcquisitionLoop (2178) - Waiting for image...
+2023-02-24T23:22:48.554745Z DEBUG   - nframe: 52; acq_nframe: 53; Previous acq_nframe: 52; Acq. time: 2023-02-24T23:22:48.554714Z; crnt. burst counter: 0; burst frames: 1
+2023-02-24T23:22:48.555253Z WARNING - [virtual double ihspt::drivers::CM_XimeaXiq::_GetTemperature()] xiSetParamInt (_device, XI_PRM_TEMP_SELECTOR, XI_TEMP_IMAGE_SENSOR_DIE) : Not supported
+2023-02-24T23:22:48.555654Z DEBUG   - _AcquisitionLoop (2257) - Entering update of parameters...
+2023-02-24T23:22:48.555692Z INFO    - CM_XimeaXiq::_SetRuntimeParameters() Start 0 1 exp: 1003 fr: 15 0 bl.off: 50 0 0
+2023-02-24T23:22:48.555698Z INFO    - CM_XimeaXiq::_SetRuntimeParameters() End 0 1 exp: 1003 fr: 15 0 bl.off: 50 AG: 2.8 DG: 1.1662 0 0
+2023-02-24T23:22:48.555714Z DEBUG   - _AcquisitionLoop (2262) - Update of parameters finished
+2023-02-24T23:22:48.555981Z DEBUG   - _AcquisitionLoop (2178) - Waiting for image...
+2023-02-24T23:22:48.621476Z DEBUG   - nframe: 53; acq_nframe: 54; Previous acq_nframe: 53; Acq. time: 2023-02-24T23:22:48.621446Z; crnt. burst counter: 0; burst frames: 1
+2023-02-24T23:22:48.621989Z WARNING - [virtual double ihspt::drivers::CM_XimeaXiq::_GetTemperature()] xiSetParamInt (_device, XI_PRM_TEMP_SELECTOR, XI_TEMP_IMAGE_SENSOR_DIE) : Not supported
+2023-02-24T23:22:48.622543Z DEBUG   - _AcquisitionLoop (2257) - Entering update of parameters...
+2023-02-24T23:22:48.622568Z INFO    - CM_XimeaXiq::_SetRuntimeParameters() Start 0 1 exp: 1003 fr: 15 0 bl.off: 50 0 0
+2023-02-24T23:22:48.622575Z INFO    - CM_XimeaXiq::_SetRuntimeParameters() End 0 1 exp: 1003 fr: 15 0 bl.off: 50 AG: 2.8 DG: 1.1662 0 0
+2023-02-24T23:22:48.622577Z DEBUG   - _AcquisitionLoop (2262) - Update of parameters finished
+2023-02-24T23:22:48.622865Z DEBUG   - _AcquisitionLoop (2178) - Waiting for image...
+2023-02-24T23:22:48.688135Z DEBUG   - nframe: 54; acq_nframe: 55; Previous acq_nframe: 54; Acq. time: 2023-02-24T23:22:48.688108Z; crnt. burst counter: 0; burst frames: 1
+2023-02-24T23:22:48.688596Z WARNING - [virtual double ihspt::drivers::CM_XimeaXiq::_GetTemperature()] xiSetParamInt (_device, XI_PRM_TEMP_SELECTOR, XI_TEMP_IMAGE_SENSOR_DIE) : Not supported
+2023-02-24T23:22:48.689024Z DEBUG   - _AcquisitionLoop (2257) - Entering update of parameters...
+2023-02-24T23:22:48.689060Z INFO    - CM_XimeaXiq::_SetRuntimeParameters() Start 0 1 exp: 1003 fr: 15 0 bl.off: 50 0 0
+2023-02-24T23:22:48.689066Z INFO    - CM_XimeaXiq::_SetRuntimeParameters() End 0 1 exp: 1003 fr: 15 0 bl.off: 50 AG: 2.8 DG: 1.1662 0 0
+2023-02-24T23:22:48.689068Z DEBUG   - _AcquisitionLoop (2262) - Update of parameters finished
+2023-02-24T23:22:48.689349Z DEBUG   - _AcquisitionLoop (2178) - Waiting for image...
+2023-02-24T23:22:48.758984Z DEBUG   - nframe: 55; acq_nframe: 56; Previous acq_nframe: 55; Acq. time: 2023-02-24T23:22:48.758953Z; crnt. burst counter: 0; burst frames: 1
+2023-02-24T23:22:48.759473Z WARNING - [virtual double ihspt::drivers::CM_XimeaXiq::_GetTemperature()] xiSetParamInt (_device, XI_PRM_TEMP_SELECTOR, XI_TEMP_IMAGE_SENSOR_DIE) : Not supported
+2023-02-24T23:22:48.759874Z DEBUG   - _AcquisitionLoop (2257) - Entering update of parameters...
+2023-02-24T23:22:48.759909Z INFO    - CM_XimeaXiq::_SetRuntimeParameters() Start 0 1 exp: 1003 fr: 15 0 bl.off: 50 0 0
+2023-02-24T23:22:48.759916Z INFO    - CM_XimeaXiq::_SetRuntimeParameters() End 0 1 exp: 1003 fr: 15 0 bl.off: 50 AG: 2.8 DG: 1.1662 0 0
+2023-02-24T23:22:48.759917Z DEBUG   - _AcquisitionLoop (2262) - Update of parameters finished
+2023-02-24T23:22:48.760212Z DEBUG   - _AcquisitionLoop (2178) - Waiting for image...
+2023-02-24T23:22:48.821537Z DEBUG   - nframe: 56; acq_nframe: 57; Previous acq_nframe: 56; Acq. time: 2023-02-24T23:22:48.821500Z; crnt. burst counter: 0; burst frames: 1
+2023-02-24T23:22:48.822233Z WARNING - [virtual double ihspt::drivers::CM_XimeaXiq::_GetTemperature()] xiSetParamInt (_device, XI_PRM_TEMP_SELECTOR, XI_TEMP_IMAGE_SENSOR_DIE) : Not supported
+2023-02-24T23:22:48.822583Z DEBUG   - _AcquisitionLoop (2257) - Entering update of parameters...
+2023-02-24T23:22:48.822609Z INFO    - CM_XimeaXiq::_SetRuntimeParameters() Start 0 1 exp: 1003 fr: 15 0 bl.off: 50 0 0
+2023-02-24T23:22:48.822619Z INFO    - CM_XimeaXiq::_SetRuntimeParameters() End 0 1 exp: 1003 fr: 15 0 bl.off: 50 AG: 2.8 DG: 1.1662 0 0
+2023-02-24T23:22:48.822623Z DEBUG   - _AcquisitionLoop (2262) - Update of parameters finished
+2023-02-24T23:22:48.822936Z DEBUG   - _AcquisitionLoop (2178) - Waiting for image...
+2023-02-24T23:22:48.888339Z DEBUG   - nframe: 57; acq_nframe: 58; Previous acq_nframe: 57; Acq. time: 2023-02-24T23:22:48.888313Z; crnt. burst counter: 0; burst frames: 1
+2023-02-24T23:22:48.888791Z WARNING - [virtual double ihspt::drivers::CM_XimeaXiq::_GetTemperature()] xiSetParamInt (_device, XI_PRM_TEMP_SELECTOR, XI_TEMP_IMAGE_SENSOR_DIE) : Not supported
+2023-02-24T23:22:48.889113Z DEBUG   - _AcquisitionLoop (2257) - Entering update of parameters...
+2023-02-24T23:22:48.889152Z INFO    - CM_XimeaXiq::_SetRuntimeParameters() Start 0 1 exp: 1003 fr: 15 0 bl.off: 50 0 0
+2023-02-24T23:22:48.889158Z INFO    - CM_XimeaXiq::_SetRuntimeParameters() End 0 1 exp: 1003 fr: 15 0 bl.off: 50 AG: 2.8 DG: 1.1662 0 0
+2023-02-24T23:22:48.889160Z DEBUG   - _AcquisitionLoop (2262) - Update of parameters finished
+2023-02-24T23:22:48.889458Z DEBUG   - _AcquisitionLoop (2178) - Waiting for image...
+2023-02-24T23:22:48.954795Z DEBUG   - nframe: 58; acq_nframe: 59; Previous acq_nframe: 58; Acq. time: 2023-02-24T23:22:48.954765Z; crnt. burst counter: 0; burst frames: 1
+2023-02-24T23:22:48.955282Z WARNING - [virtual double ihspt::drivers::CM_XimeaXiq::_GetTemperature()] xiSetParamInt (_device, XI_PRM_TEMP_SELECTOR, XI_TEMP_IMAGE_SENSOR_DIE) : Not supported
+2023-02-24T23:22:48.955652Z DEBUG   - _AcquisitionLoop (2257) - Entering update of parameters...
+2023-02-24T23:22:48.955689Z INFO    - CM_XimeaXiq::_SetRuntimeParameters() Start 0 1 exp: 1003 fr: 15 0 bl.off: 50 0 0
+2023-02-24T23:22:48.955696Z INFO    - CM_XimeaXiq::_SetRuntimeParameters() End 0 1 exp: 1003 fr: 15 0 bl.off: 50 AG: 2.8 DG: 1.1662 0 0
+2023-02-24T23:22:48.955699Z DEBUG   - _AcquisitionLoop (2262) - Update of parameters finished
+2023-02-24T23:22:48.955977Z DEBUG   - _AcquisitionLoop (2178) - Waiting for image...
+2023-02-24T23:22:49.021513Z DEBUG   - nframe: 59; acq_nframe: 60; Previous acq_nframe: 59; Acq. time: 2023-02-24T23:22:49.021484Z; crnt. burst counter: 0; burst frames: 1
+2023-02-24T23:22:49.021996Z WARNING - [virtual double ihspt::drivers::CM_XimeaXiq::_GetTemperature()] xiSetParamInt (_device, XI_PRM_TEMP_SELECTOR, XI_TEMP_IMAGE_SENSOR_DIE) : Not supported
+2023-02-24T23:22:49.022386Z DEBUG   - _AcquisitionLoop (2257) - Entering update of parameters...
+2023-02-24T23:22:49.022417Z INFO    - CM_XimeaXiq::_SetRuntimeParameters() Start 0 1 exp: 1003 fr: 15 0 bl.off: 50 0 0
+2023-02-24T23:22:49.022440Z INFO    - CM_XimeaXiq::_SetRuntimeParameters() End 0 1 exp: 1003 fr: 15 0 bl.off: 50 AG: 2.8 DG: 1.1662 0 0
+2023-02-24T23:22:49.022442Z DEBUG   - _AcquisitionLoop (2262) - Update of parameters finished
+2023-02-24T23:22:49.022761Z DEBUG   - _AcquisitionLoop (2178) - Waiting for image...
+2023-02-24T23:22:49.088037Z DEBUG   - nframe: 60; acq_nframe: 61; Previous acq_nframe: 60; Acq. time: 2023-02-24T23:22:49.088007Z; crnt. burst counter: 0; burst frames: 1
+2023-02-24T23:22:49.088504Z WARNING - [virtual double ihspt::drivers::CM_XimeaXiq::_GetTemperature()] xiSetParamInt (_device, XI_PRM_TEMP_SELECTOR, XI_TEMP_IMAGE_SENSOR_DIE) : Not supported
+2023-02-24T23:22:49.088921Z DEBUG   - _AcquisitionLoop (2257) - Entering update of parameters...
+2023-02-24T23:22:49.088956Z INFO    - CM_XimeaXiq::_SetRuntimeParameters() Start 0 1 exp: 1003 fr: 15 0 bl.off: 50 0 0
+2023-02-24T23:22:49.088962Z INFO    - CM_XimeaXiq::_SetRuntimeParameters() End 0 1 exp: 1003 fr: 15 0 bl.off: 50 AG: 2.8 DG: 1.1662 0 0
+2023-02-24T23:22:49.088964Z DEBUG   - _AcquisitionLoop (2262) - Update of parameters finished
+2023-02-24T23:22:49.089257Z DEBUG   - _AcquisitionLoop (2178) - Waiting for image...
+2023-02-24T23:22:49.154742Z DEBUG   - nframe: 61; acq_nframe: 62; Previous acq_nframe: 61; Acq. time: 2023-02-24T23:22:49.154713Z; crnt. burst counter: 0; burst frames: 1
+2023-02-24T23:22:49.155200Z WARNING - [virtual double ihspt::drivers::CM_XimeaXiq::_GetTemperature()] xiSetParamInt (_device, XI_PRM_TEMP_SELECTOR, XI_TEMP_IMAGE_SENSOR_DIE) : Not supported
+2023-02-24T23:22:49.155544Z DEBUG   - _AcquisitionLoop (2257) - Entering update of parameters...
+2023-02-24T23:22:49.155565Z INFO    - CM_XimeaXiq::_SetRuntimeParameters() Start 0 1 exp: 1003 fr: 15 0 bl.off: 50 0 0
+2023-02-24T23:22:49.155571Z INFO    - CM_XimeaXiq::_SetRuntimeParameters() End 0 1 exp: 1003 fr: 15 0 bl.off: 50 AG: 2.8 DG: 1.1662 0 0
+2023-02-24T23:22:49.155573Z DEBUG   - _AcquisitionLoop (2262) - Update of parameters finished
+2023-02-24T23:22:49.155851Z DEBUG   - _AcquisitionLoop (2178) - Waiting for image...
+2023-02-24T23:22:49.221369Z DEBUG   - nframe: 62; acq_nframe: 63; Previous acq_nframe: 62; Acq. time: 2023-02-24T23:22:49.221340Z; crnt. burst counter: 0; burst frames: 1
+2023-02-24T23:22:49.221847Z WARNING - [virtual double ihspt::drivers::CM_XimeaXiq::_GetTemperature()] xiSetParamInt (_device, XI_PRM_TEMP_SELECTOR, XI_TEMP_IMAGE_SENSOR_DIE) : Not supported
+2023-02-24T23:22:49.222268Z DEBUG   - _AcquisitionLoop (2257) - Entering update of parameters...
+2023-02-24T23:22:49.222302Z INFO    - CM_XimeaXiq::_SetRuntimeParameters() Start 0 1 exp: 1003 fr: 15 0 bl.off: 50 0 0
+2023-02-24T23:22:49.222309Z INFO    - CM_XimeaXiq::_SetRuntimeParameters() End 0 1 exp: 1003 fr: 15 0 bl.off: 50 AG: 2.8 DG: 1.1662 0 0
+2023-02-24T23:22:49.222311Z DEBUG   - _AcquisitionLoop (2262) - Update of parameters finished
+2023-02-24T23:22:49.222624Z DEBUG   - _AcquisitionLoop (2178) - Waiting for image...
+2023-02-24T23:22:49.288186Z DEBUG   - nframe: 63; acq_nframe: 64; Previous acq_nframe: 63; Acq. time: 2023-02-24T23:22:49.288156Z; crnt. burst counter: 0; burst frames: 1
+2023-02-24T23:22:49.288675Z WARNING - [virtual double ihspt::drivers::CM_XimeaXiq::_GetTemperature()] xiSetParamInt (_device, XI_PRM_TEMP_SELECTOR, XI_TEMP_IMAGE_SENSOR_DIE) : Not supported
+2023-02-24T23:22:49.289066Z DEBUG   - _AcquisitionLoop (2257) - Entering update of parameters...
+2023-02-24T23:22:49.289101Z INFO    - CM_XimeaXiq::_SetRuntimeParameters() Start 0 1 exp: 1003 fr: 15 0 bl.off: 50 0 0
+2023-02-24T23:22:49.289107Z INFO    - CM_XimeaXiq::_SetRuntimeParameters() End 0 1 exp: 1003 fr: 15 0 bl.off: 50 AG: 2.8 DG: 1.1662 0 0
+2023-02-24T23:22:49.289109Z DEBUG   - _AcquisitionLoop (2262) - Update of parameters finished
+2023-02-24T23:22:49.289400Z DEBUG   - _AcquisitionLoop (2178) - Waiting for image...
+2023-02-24T23:22:49.354844Z DEBUG   - nframe: 64; acq_nframe: 65; Previous acq_nframe: 64; Acq. time: 2023-02-24T23:22:49.354812Z; crnt. burst counter: 0; burst frames: 1
+2023-02-24T23:22:49.355326Z WARNING - [virtual double ihspt::drivers::CM_XimeaXiq::_GetTemperature()] xiSetParamInt (_device, XI_PRM_TEMP_SELECTOR, XI_TEMP_IMAGE_SENSOR_DIE) : Not supported
+2023-02-24T23:22:49.355656Z DEBUG   - _AcquisitionLoop (2257) - Entering update of parameters...
+2023-02-24T23:22:49.355676Z INFO    - CM_XimeaXiq::_SetRuntimeParameters() Start 0 1 exp: 1003 fr: 15 0 bl.off: 50 0 0
+2023-02-24T23:22:49.355697Z INFO    - CM_XimeaXiq::_SetRuntimeParameters() End 0 1 exp: 1003 fr: 15 0 bl.off: 50 AG: 2.8 DG: 1.1662 0 0
+2023-02-24T23:22:49.355699Z DEBUG   - _AcquisitionLoop (2262) - Update of parameters finished
+2023-02-24T23:22:49.355988Z DEBUG   - _AcquisitionLoop (2178) - Waiting for image...
+2023-02-24T23:22:49.422831Z DEBUG   - nframe: 65; acq_nframe: 66; Previous acq_nframe: 65; Acq. time: 2023-02-24T23:22:49.422802Z; crnt. burst counter: 0; burst frames: 1
+2023-02-24T23:22:49.423302Z WARNING - [virtual double ihspt::drivers::CM_XimeaXiq::_GetTemperature()] xiSetParamInt (_device, XI_PRM_TEMP_SELECTOR, XI_TEMP_IMAGE_SENSOR_DIE) : Not supported
+2023-02-24T23:22:49.423630Z DEBUG   - _AcquisitionLoop (2257) - Entering update of parameters...
+2023-02-24T23:22:49.423647Z INFO    - CM_XimeaXiq::_SetRuntimeParameters() Start 0 1 exp: 1003 fr: 15 0 bl.off: 50 0 0
+2023-02-24T23:22:49.423653Z INFO    - CM_XimeaXiq::_SetRuntimeParameters() End 0 1 exp: 1003 fr: 15 0 bl.off: 50 AG: 2.8 DG: 1.1662 0 0
+2023-02-24T23:22:49.423654Z DEBUG   - _AcquisitionLoop (2262) - Update of parameters finished
+2023-02-24T23:22:49.423975Z DEBUG   - _AcquisitionLoop (2178) - Waiting for image...
+2023-02-24T23:22:49.489177Z DEBUG   - nframe: 66; acq_nframe: 67; Previous acq_nframe: 66; Acq. time: 2023-02-24T23:22:49.489149Z; crnt. burst counter: 0; burst frames: 1
+2023-02-24T23:22:49.489607Z WARNING - [virtual double ihspt::drivers::CM_XimeaXiq::_GetTemperature()] xiSetParamInt (_device, XI_PRM_TEMP_SELECTOR, XI_TEMP_IMAGE_SENSOR_DIE) : Not supported
+2023-02-24T23:22:49.489996Z DEBUG   - _AcquisitionLoop (2257) - Entering update of parameters...
+2023-02-24T23:22:49.490018Z INFO    - CM_XimeaXiq::_SetRuntimeParameters() Start 0 1 exp: 1003 fr: 15 0 bl.off: 50 0 0
+2023-02-24T23:22:49.490024Z INFO    - CM_XimeaXiq::_SetRuntimeParameters() End 0 1 exp: 1003 fr: 15 0 bl.off: 50 AG: 2.8 DG: 1.1662 0 0
+2023-02-24T23:22:49.490026Z DEBUG   - _AcquisitionLoop (2262) - Update of parameters finished
+2023-02-24T23:22:49.490298Z DEBUG   - _AcquisitionLoop (2178) - Waiting for image...
+2023-02-24T23:22:49.555876Z DEBUG   - nframe: 67; acq_nframe: 68; Previous acq_nframe: 67; Acq. time: 2023-02-24T23:22:49.555848Z; crnt. burst counter: 0; burst frames: 1
+2023-02-24T23:22:49.556342Z WARNING - [virtual double ihspt::drivers::CM_XimeaXiq::_GetTemperature()] xiSetParamInt (_device, XI_PRM_TEMP_SELECTOR, XI_TEMP_IMAGE_SENSOR_DIE) : Not supported
+2023-02-24T23:22:49.556719Z DEBUG   - _AcquisitionLoop (2257) - Entering update of parameters...
+2023-02-24T23:22:49.556742Z INFO    - CM_XimeaXiq::_SetRuntimeParameters() Start 0 1 exp: 1003 fr: 15 0 bl.off: 50 0 0
+2023-02-24T23:22:49.556749Z INFO    - CM_XimeaXiq::_SetRuntimeParameters() End 0 1 exp: 1003 fr: 15 0 bl.off: 50 AG: 2.8 DG: 1.1662 0 0
+2023-02-24T23:22:49.556751Z DEBUG   - _AcquisitionLoop (2262) - Update of parameters finished
+2023-02-24T23:22:49.557043Z DEBUG   - _AcquisitionLoop (2178) - Waiting for image...
+2023-02-24T23:22:49.622607Z DEBUG   - nframe: 68; acq_nframe: 69; Previous acq_nframe: 68; Acq. time: 2023-02-24T23:22:49.622579Z; crnt. burst counter: 0; burst frames: 1
+2023-02-24T23:22:49.623092Z WARNING - [virtual double ihspt::drivers::CM_XimeaXiq::_GetTemperature()] xiSetParamInt (_device, XI_PRM_TEMP_SELECTOR, XI_TEMP_IMAGE_SENSOR_DIE) : Not supported
+2023-02-24T23:22:49.623481Z DEBUG   - _AcquisitionLoop (2257) - Entering update of parameters...
+2023-02-24T23:22:49.623514Z INFO    - CM_XimeaXiq::_SetRuntimeParameters() Start 0 1 exp: 1003 fr: 15 0 bl.off: 50 0 0
+2023-02-24T23:22:49.623520Z INFO    - CM_XimeaXiq::_SetRuntimeParameters() End 0 1 exp: 1003 fr: 15 0 bl.off: 50 AG: 2.8 DG: 1.1662 0 0
+2023-02-24T23:22:49.623522Z DEBUG   - _AcquisitionLoop (2262) - Update of parameters finished
+2023-02-24T23:22:49.623813Z DEBUG   - _AcquisitionLoop (2178) - Waiting for image...
+2023-02-24T23:22:49.689327Z DEBUG   - nframe: 69; acq_nframe: 70; Previous acq_nframe: 69; Acq. time: 2023-02-24T23:22:49.689297Z; crnt. burst counter: 0; burst frames: 1
+2023-02-24T23:22:49.689825Z WARNING - [virtual double ihspt::drivers::CM_XimeaXiq::_GetTemperature()] xiSetParamInt (_device, XI_PRM_TEMP_SELECTOR, XI_TEMP_IMAGE_SENSOR_DIE) : Not supported
+2023-02-24T23:22:49.690196Z DEBUG   - _AcquisitionLoop (2257) - Entering update of parameters...
+2023-02-24T23:22:49.690216Z INFO    - CM_XimeaXiq::_SetRuntimeParameters() Start 0 1 exp: 1003 fr: 15 0 bl.off: 50 0 0
+2023-02-24T23:22:49.690223Z INFO    - CM_XimeaXiq::_SetRuntimeParameters() End 0 1 exp: 1003 fr: 15 0 bl.off: 50 AG: 2.8 DG: 1.1662 0 0
+2023-02-24T23:22:49.690225Z DEBUG   - _AcquisitionLoop (2262) - Update of parameters finished
+2023-02-24T23:22:49.690574Z DEBUG   - _AcquisitionLoop (2178) - Waiting for image...
+2023-02-24T23:22:49.755860Z DEBUG   - nframe: 70; acq_nframe: 71; Previous acq_nframe: 70; Acq. time: 2023-02-24T23:22:49.755832Z; crnt. burst counter: 0; burst frames: 1
+2023-02-24T23:22:49.756371Z WARNING - [virtual double ihspt::drivers::CM_XimeaXiq::_GetTemperature()] xiSetParamInt (_device, XI_PRM_TEMP_SELECTOR, XI_TEMP_IMAGE_SENSOR_DIE) : Not supported
+2023-02-24T23:22:49.756696Z DEBUG   - _AcquisitionLoop (2257) - Entering update of parameters...
+2023-02-24T23:22:49.756726Z INFO    - CM_XimeaXiq::_SetRuntimeParameters() Start 0 1 exp: 1003 fr: 15 0 bl.off: 50 0 0
+2023-02-24T23:22:49.756733Z INFO    - CM_XimeaXiq::_SetRuntimeParameters() End 0 1 exp: 1003 fr: 15 0 bl.off: 50 AG: 2.8 DG: 1.1662 0 0
+2023-02-24T23:22:49.756735Z DEBUG   - _AcquisitionLoop (2262) - Update of parameters finished
+2023-02-24T23:22:49.757029Z DEBUG   - _AcquisitionLoop (2178) - Waiting for image...
+2023-02-24T23:22:49.822413Z DEBUG   - nframe: 71; acq_nframe: 72; Previous acq_nframe: 71; Acq. time: 2023-02-24T23:22:49.822384Z; crnt. burst counter: 0; burst frames: 1
+2023-02-24T23:22:49.822884Z WARNING - [virtual double ihspt::drivers::CM_XimeaXiq::_GetTemperature()] xiSetParamInt (_device, XI_PRM_TEMP_SELECTOR, XI_TEMP_IMAGE_SENSOR_DIE) : Not supported
+2023-02-24T23:22:49.823208Z DEBUG   - _AcquisitionLoop (2257) - Entering update of parameters...
+2023-02-24T23:22:49.823226Z INFO    - CM_XimeaXiq::_SetRuntimeParameters() Start 0 1 exp: 1003 fr: 15 0 bl.off: 50 0 0
+2023-02-24T23:22:49.823232Z INFO    - CM_XimeaXiq::_SetRuntimeParameters() End 0 1 exp: 1003 fr: 15 0 bl.off: 50 AG: 2.8 DG: 1.1662 0 0
+2023-02-24T23:22:49.823234Z DEBUG   - _AcquisitionLoop (2262) - Update of parameters finished
+2023-02-24T23:22:49.823535Z DEBUG   - _AcquisitionLoop (2178) - Waiting for image...
+2023-02-24T23:22:49.889292Z DEBUG   - nframe: 72; acq_nframe: 73; Previous acq_nframe: 72; Acq. time: 2023-02-24T23:22:49.889263Z; crnt. burst counter: 0; burst frames: 1
+2023-02-24T23:22:49.889771Z WARNING - [virtual double ihspt::drivers::CM_XimeaXiq::_GetTemperature()] xiSetParamInt (_device, XI_PRM_TEMP_SELECTOR, XI_TEMP_IMAGE_SENSOR_DIE) : Not supported
+2023-02-24T23:22:49.890147Z DEBUG   - _AcquisitionLoop (2257) - Entering update of parameters...
+2023-02-24T23:22:49.890186Z INFO    - CM_XimeaXiq::_SetRuntimeParameters() Start 0 1 exp: 1003 fr: 15 0 bl.off: 50 0 0
+2023-02-24T23:22:49.890192Z INFO    - CM_XimeaXiq::_SetRuntimeParameters() End 0 1 exp: 1003 fr: 15 0 bl.off: 50 AG: 2.8 DG: 1.1662 0 0
+2023-02-24T23:22:49.890194Z DEBUG   - _AcquisitionLoop (2262) - Update of parameters finished
+2023-02-24T23:22:49.890511Z DEBUG   - _AcquisitionLoop (2178) - Waiting for image...
+2023-02-24T23:22:49.956297Z DEBUG   - nframe: 73; acq_nframe: 74; Previous acq_nframe: 73; Acq. time: 2023-02-24T23:22:49.956268Z; crnt. burst counter: 0; burst frames: 1
+2023-02-24T23:22:49.956798Z WARNING - [virtual double ihspt::drivers::CM_XimeaXiq::_GetTemperature()] xiSetParamInt (_device, XI_PRM_TEMP_SELECTOR, XI_TEMP_IMAGE_SENSOR_DIE) : Not supported
+2023-02-24T23:22:49.957171Z DEBUG   - _AcquisitionLoop (2257) - Entering update of parameters...
+2023-02-24T23:22:49.957209Z INFO    - CM_XimeaXiq::_SetRuntimeParameters() Start 0 1 exp: 1003 fr: 15 0 bl.off: 50 0 0
+2023-02-24T23:22:49.957217Z INFO    - CM_XimeaXiq::_SetRuntimeParameters() End 0 1 exp: 1003 fr: 15 0 bl.off: 50 AG: 2.8 DG: 1.1662 0 0
+2023-02-24T23:22:49.957219Z DEBUG   - _AcquisitionLoop (2262) - Update of parameters finished
+2023-02-24T23:22:49.957509Z DEBUG   - _AcquisitionLoop (2178) - Waiting for image...
+2023-02-24T23:22:49.987858Z VERBOSE - Pause (504) - driver pauzing...
+2023-02-24T23:22:49.987861Z DEBUG   - unlocking driver
+2023-02-24T23:22:49.987862Z DEBUG   - driver unlocked
+2023-02-24T23:22:49.987862Z DEBUG   - ...trying to lock driver
+2023-02-24T23:22:50.026000Z DEBUG   - nframe: 74; acq_nframe: 75; Previous acq_nframe: 74; Acq. time: 2023-02-24T23:22:50.025961Z; crnt. burst counter: 0; burst frames: 1
+2023-02-24T23:22:50.026848Z WARNING - [virtual double ihspt::drivers::CM_XimeaXiq::_GetTemperature()] xiSetParamInt (_device, XI_PRM_TEMP_SELECTOR, XI_TEMP_IMAGE_SENSOR_DIE) : Not supported
+2023-02-24T23:22:50.027359Z DEBUG   - _AcquisitionLoop (2257) - Entering update of parameters...
+2023-02-24T23:22:50.027406Z INFO    - CM_XimeaXiq::_SetRuntimeParameters() Start 0 1 exp: 1003 fr: 15 0 bl.off: 50 0 0
+2023-02-24T23:22:50.027423Z INFO    - CM_XimeaXiq::_SetRuntimeParameters() End 0 1 exp: 1003 fr: 15 0 bl.off: 50 AG: 2.8 DG: 1.1662 0 0
+2023-02-24T23:22:50.027429Z DEBUG   - _AcquisitionLoop (2262) - Update of parameters finished
+2023-02-24T23:22:50.028182Z DEBUG   - ...driver unlocked
+2023-02-24T23:22:50.028194Z DEBUG   - ...wakeup condition called
+2023-02-24T23:22:50.028213Z VERBOSE - Pause (529) - driver pauzing finished
+2023-02-24T23:22:50.028298Z VERBOSE - driver stopping...
+2023-02-24T23:22:50.171268Z INFO    - [CM_XimeaXiq::_AcquisitionLoop] thread finished
+2023-02-24T23:22:50.171453Z VERBOSE - driver stopping finished
+2023-02-24T23:22:50.172438Z VERBOSE - driver forcing disconnect...
+2023-02-24T23:22:50.174769Z VERBOSE - driver forcing disconnect finished
+2023-02-24T23:22:50.174816Z VERBOSE - driver forcing disconnect...
+2023-02-24T23:22:50.174817Z DEBUG   - driver already disconnected
+2023-02-24T23:27:25.561321Z INFO    - CM_XimeaXiq::_SetConfigurationParameters() 0 1 # 0 0 0 0 2.8 1.2
+2023-02-24T23:27:25.561346Z INFO    - CM_XimeaXiq::_SetConfigurationParameters() 0 1 # 10000 15 0 0 2.8 1.2
+2023-02-24T23:27:25.561349Z WARNING - _SetConnectionParameters (361) - Cannot cast to local parameters.
+2023-02-24T23:27:25.561350Z WARNING - Cannot cast to local parameters.
+2023-02-24T23:27:25.561371Z VERBOSE - driver connecting...
+2023-02-24T23:27:27.115219Z INFO    - device info - name: MQ022HG-IM-SM5X5-NIR2
+2023-02-24T23:27:27.115224Z INFO    - device info - type: USB3.0
+2023-02-24T23:27:27.115225Z INFO    - device info - model: 1009
+2023-02-24T23:27:27.115226Z INFO    - device info - serial number: 32270462
+2023-02-24T23:27:27.117131Z INFO    - device info - sensor width: 2048
+2023-02-24T23:27:27.117133Z INFO    - device info - sensor height: 1088
+2023-02-24T23:27:27.117133Z INFO    - device info - min integration time (us): 77
+2023-02-24T23:27:27.117134Z INFO    - device info - max integration time (us): 999995
+2023-02-24T23:27:27.117143Z VERBOSE - _SyncSensorRegisters (2814) - -->
+2023-02-24T23:27:27.159729Z VERBOSE - _SyncSensorRegisters (2838) - <--
+2023-02-24T23:27:27.159734Z DEBUG   - _LogSensorParameters (975) - Inte_sync: 1
+2023-02-24T23:27:27.159736Z DEBUG   - _LogSensorParameters (976) - Exp_ext: 0
+2023-02-24T23:27:27.159737Z DEBUG   - _LogSensorParameters (977) - Col_calib: 0
+2023-02-24T23:27:27.159738Z DEBUG   - _LogSensorParameters (978) - ADC_calib: 0
+2023-02-24T23:27:27.159740Z DEBUG   - _LogSensorParameters (979) - I_col: 4
+2023-02-24T23:27:27.159741Z DEBUG   - _LogSensorParameters (980) - I_col_prech: 1
+2023-02-24T23:27:27.159743Z DEBUG   - _LogSensorParameters (981) - I_amp: 12
+2023-02-24T23:27:27.159744Z DEBUG   - _LogSensorParameters (982) - Vtf_l1: 64
+2023-02-24T23:27:27.159746Z DEBUG   - _LogSensorParameters (983) - Vres_low: 64
+2023-02-24T23:27:27.159748Z DEBUG   - _LogSensorParameters (984) - V_prech: 101
+2023-02-24T23:27:27.159749Z DEBUG   - _LogSensorParameters (985) - V_ref: 106
+2023-02-24T23:27:27.159751Z DEBUG   - _LogSensorParameters (986) - Dummy: 4
+2023-02-24T23:27:27.159753Z DEBUG   - _LogSensorParameters (987) - V_blacksun: 34
+2023-02-24T23:27:27.159755Z DEBUG   - _LogSensorParameters (988) - black_level: 16300
+2023-02-24T23:27:27.159756Z DEBUG   - _LogSensorParameters (989) - V_ramp1: 109
+2023-02-24T23:27:27.159758Z DEBUG   - _LogSensorParameters (990) - V_ramp2: 109
+2023-02-24T23:27:27.159759Z DEBUG   - _LogSensorParameters (991) - adc_gain: 55
+2023-02-24T23:27:27.159761Z DEBUG   - _LogSensorParameters (992) - pga_gain: 1
+2023-02-24T23:27:27.159762Z DEBUG   - _LogSensorParameters (993) - pga_gain_2: 0
+2023-02-24T23:27:27.159764Z DEBUG   - _LogSensorParameters (994) - Output_mode: 3
+2023-02-24T23:27:27.159765Z DEBUG   - _LogSensorParameters (995) - Image flipping: 2
+2023-02-24T23:27:27.159767Z VERBOSE - driver connected
+2023-02-24T23:27:27.160145Z VERBOSE - driver initializing...
+2023-02-24T23:27:27.160146Z VERBOSE -    trying to initialize...
+2023-02-24T23:27:27.449555Z INFO    - sensor bit depth: 10; output bit depth: 10
+2023-02-24T23:27:28.985957Z INFO    - _Initialize (1693) - Acquisition buffer size is set to: 67108864
+2023-02-24T23:27:28.986007Z INFO    - _Initialize (1699) - Requested minimum acq buffer queue length: 64
+2023-02-24T23:27:28.986112Z INFO    - _Initialize (1712) - Allocated acq buffer queue length: 64
+2023-02-24T23:27:28.986135Z INFO    - _Initialize (1740) - clock frequency: 28000000
+2023-02-24T23:27:30.220828Z INFO    - CM_XimeaXiq::_SetRuntimeParameters() Start 0 1 exp: 10000 fr: 15 0 bl.off: 50 0 0
+2023-02-24T23:27:30.382603Z INFO    - CM_XimeaXiq::_SetRuntimeParameters() End 0 1 exp: 10008 fr: 15 0 bl.off: 50 AG: 2.8 DG: 1.2 0 0
+2023-02-24T23:27:30.382698Z VERBOSE - _StartAcquisition (1049) - -->
+2023-02-24T23:27:30.452302Z INFO    - CM_XimeaXiq::_SetSensorParameters entered
+2023-02-24T23:27:30.452341Z INFO    - _UploadSensorRegisters (2754) - --->
+2023-02-24T23:27:30.452356Z DEBUG   - _UploadSensorRegisters (2770) - Changing register 100 to value 236
+2023-02-24T23:27:30.452569Z DEBUG   - _UploadSensorRegisters (2770) - Changing register 101 to value 63
+2023-02-24T23:27:30.452779Z DEBUG   - _UploadSensorRegisters (2770) - Changing register 102 to value 2
+2023-02-24T23:27:30.452975Z DEBUG   - _UploadSensorRegisters (2770) - Changing register 103 to value 52
+2023-02-24T23:27:30.453192Z DEBUG   - _UploadSensorRegisters (2770) - Changing register 118 to value 1
+2023-02-24T23:27:30.453427Z DEBUG   - _UploadSensorRegisters (2770) - Changing register 121 to value 1
+2023-02-24T23:27:30.453626Z INFO    - _UploadSensorRegisters (2780) - <---
+2023-02-24T23:27:30.453648Z INFO    - CM_XimeaXiq::_SetSensorParameters() End Black level offset 50 analog gain 2.8 digital gain 1.19516
+2023-02-24T23:27:30.453650Z INFO    - CM_XimeaXiq::_SetSensorParameters exited
+2023-02-24T23:27:30.456129Z DEBUG   - _UpdateSensorRegisters (1395) - AG: 2.8 DG: 1.19516 BlO: 50 Vramp: 109
+2023-02-24T23:27:30.456144Z VERBOSE - _StartAcquisition (1066) - <--
+2023-02-24T23:27:30.456150Z DEBUG   - _Initialize (1846) - Grabbing sensor parameters after initialization
+2023-02-24T23:27:30.456160Z INFO    - CM_XimeaXiq::_DownloadSensorRegisters() Start Black level offset 50 analog gain 2.8 digital gain 1.19516
+2023-02-24T23:27:30.456179Z VERBOSE - _SyncSensorRegisters (2814) - -->
+2023-02-24T23:27:30.500178Z VERBOSE - _SyncSensorRegisters (2838) - <--
+2023-02-24T23:27:30.500182Z INFO    - CM_XimeaXiq::_DownloadSensorRegisters() End Black level offset 50 analog gain 2.8 digital gain 1.19516
+2023-02-24T23:27:30.500184Z INFO    - DM_Camera::_GetSensorParameters entered
+2023-02-24T23:27:30.500185Z INFO    - DM_Camera::_GetSensorParameters exited
+2023-02-24T23:27:30.500188Z DEBUG   - _LogSensorParameters (975) - Inte_sync: 1
+2023-02-24T23:27:30.500190Z DEBUG   - _LogSensorParameters (976) - Exp_ext: 0
+2023-02-24T23:27:30.500191Z DEBUG   - _LogSensorParameters (977) - Col_calib: 0
+2023-02-24T23:27:30.500193Z DEBUG   - _LogSensorParameters (978) - ADC_calib: 0
+2023-02-24T23:27:30.500195Z DEBUG   - _LogSensorParameters (979) - I_col: 4
+2023-02-24T23:27:30.500199Z DEBUG   - _LogSensorParameters (980) - I_col_prech: 1
+2023-02-24T23:27:30.500200Z DEBUG   - _LogSensorParameters (981) - I_amp: 12
+2023-02-24T23:27:30.500202Z DEBUG   - _LogSensorParameters (982) - Vtf_l1: 64
+2023-02-24T23:27:30.500203Z DEBUG   - _LogSensorParameters (983) - Vres_low: 64
+2023-02-24T23:27:30.500205Z DEBUG   - _LogSensorParameters (984) - V_prech: 101
+2023-02-24T23:27:30.500207Z DEBUG   - _LogSensorParameters (985) - V_ref: 106
+2023-02-24T23:27:30.500208Z DEBUG   - _LogSensorParameters (986) - Dummy: 1
+2023-02-24T23:27:30.500210Z DEBUG   - _LogSensorParameters (987) - V_blacksun: 34
+2023-02-24T23:27:30.500212Z DEBUG   - _LogSensorParameters (988) - black_level: 16364
+2023-02-24T23:27:30.500214Z DEBUG   - _LogSensorParameters (989) - V_ramp1: 109
+2023-02-24T23:27:30.500216Z DEBUG   - _LogSensorParameters (990) - V_ramp2: 109
+2023-02-24T23:27:30.500217Z DEBUG   - _LogSensorParameters (991) - adc_gain: 52
+2023-02-24T23:27:30.500219Z DEBUG   - _LogSensorParameters (992) - pga_gain: 2
+2023-02-24T23:27:30.500221Z DEBUG   - _LogSensorParameters (993) - pga_gain_2: 1
+2023-02-24T23:27:30.500222Z DEBUG   - _LogSensorParameters (994) - Output_mode: 2
+2023-02-24T23:27:30.500225Z DEBUG   - _LogSensorParameters (995) - Image flipping: 2
+2023-02-24T23:27:30.500226Z VERBOSE -    initalization successful...
+2023-02-24T23:27:30.500226Z VERBOSE - driver initialization finished
+2023-02-24T23:27:30.501735Z INFO    - CM_XimeaXiq::_SetRuntimeParameters() Start 0 1 exp: 10008 fr: 15 0 bl.off: 50 0 0
+2023-02-24T23:27:30.501742Z INFO    - CM_XimeaXiq::_SetRuntimeParameters() End 0 1 exp: 10008 fr: 15 0 bl.off: 50 AG: 2.8 DG: 1.19516 0 0
+2023-02-24T23:27:30.501974Z INFO    - CM_XimeaXiq::_SetRuntimeParameters() Start 0 1 exp: 10008 fr: 15 0 bl.off: 50 0 0
+2023-02-24T23:27:30.501979Z INFO    - CM_XimeaXiq::_SetRuntimeParameters() End 0 1 exp: 10008 fr: 15 0 bl.off: 50 AG: 2.8 DG: 1.19516 0 0
+2023-02-24T23:27:30.501985Z INFO    - CM_XimeaXiq::_SetRuntimeParameters() Start 0 1 exp: 10008 fr: 15 1 bl.off: 50 0 0
+2023-02-24T23:27:30.693013Z VERBOSE - _StartAcquisition (1049) - -->
+2023-02-24T23:27:30.762259Z INFO    - CM_XimeaXiq::_SetSensorParameters entered
+2023-02-24T23:27:30.762284Z INFO    - _UploadSensorRegisters (2754) - --->
+2023-02-24T23:27:30.762300Z DEBUG   - _UploadSensorRegisters (2770) - Changing register 102 to value 2
+2023-02-24T23:27:30.762501Z DEBUG   - _UploadSensorRegisters (2770) - Changing register 118 to value 1
+2023-02-24T23:27:30.762719Z DEBUG   - _UploadSensorRegisters (2770) - Changing register 121 to value 1
+2023-02-24T23:27:30.762942Z INFO    - _UploadSensorRegisters (2780) - <---
+2023-02-24T23:27:30.762962Z INFO    - CM_XimeaXiq::_SetSensorParameters() End Black level offset 50 analog gain 2.8 digital gain 1.19516
+2023-02-24T23:27:30.762964Z INFO    - CM_XimeaXiq::_SetSensorParameters exited
+2023-02-24T23:27:30.765433Z DEBUG   - _UpdateSensorRegisters (1395) - AG: 2.8 DG: 1.19516 BlO: 50 Vramp: 109
+2023-02-24T23:27:30.765436Z VERBOSE - _StartAcquisition (1066) - <--
+2023-02-24T23:27:30.794325Z INFO    - CM_XimeaXiq::_SetSensorParameters entered
+2023-02-24T23:27:30.794328Z INFO    - _UploadSensorRegisters (2754) - --->
+2023-02-24T23:27:30.794331Z DEBUG   - _UploadSensorRegisters (2770) - Changing register 102 to value 2
+2023-02-24T23:27:30.794498Z DEBUG   - _UploadSensorRegisters (2770) - Changing register 118 to value 1
+2023-02-24T23:27:30.794676Z DEBUG   - _UploadSensorRegisters (2770) - Changing register 121 to value 1
+2023-02-24T23:27:30.794825Z INFO    - _UploadSensorRegisters (2780) - <---
+2023-02-24T23:27:30.794828Z INFO    - CM_XimeaXiq::_SetSensorParameters() End Black level offset 50 analog gain 2.8 digital gain 1.19516
+2023-02-24T23:27:30.794829Z INFO    - CM_XimeaXiq::_SetSensorParameters exited
+2023-02-24T23:27:30.797072Z DEBUG   - _UpdateSensorRegisters (1395) - AG: 2.8 DG: 1.19516 BlO: 50 Vramp: 109
+2023-02-24T23:27:30.797079Z INFO    - CM_XimeaXiq::_SetRuntimeParameters() End 0 1 exp: 10008 fr: 15 1 bl.off: 50 AG: 2.8 DG: 1.19516 0 0
+2023-02-24T23:27:30.797540Z INFO    - CM_XimeaXiq::_SetRuntimeParameters() Start 0 1 exp: 10008 fr: 15 1 bl.off: 50 0 0
+2023-02-24T23:27:30.797545Z INFO    - CM_XimeaXiq::_SetRuntimeParameters() End 0 1 exp: 10008 fr: 15 1 bl.off: 50 AG: 2.8 DG: 1.19516 0 0
+2023-02-24T23:27:30.797545Z VERBOSE - driver starting...
+2023-02-24T23:27:30.803199Z VERBOSE - driver starting finished
+2023-02-24T23:27:30.803270Z DEBUG   - Trigger (1123) - Triggering camera
+2023-02-24T23:27:30.803275Z INFO    - Trigger (1136) - 0/1
+2023-02-24T23:27:30.803330Z VERBOSE - _AcquisitionLoop (2153) - Triggering camera
+2023-02-24T23:27:30.803861Z DEBUG   - _AcquisitionLoop (2178) - Waiting for image...
+2023-02-24T23:27:30.824629Z DEBUG   - nframe: 0; acq_nframe: 1; Previous acq_nframe: 0; Acq. time: 2023-02-24T23:27:30.824610Z; crnt. burst counter: 0; burst frames: 1
+2023-02-24T23:27:30.824715Z WARNING - [virtual double ihspt::drivers::CM_XimeaXiq::_GetTemperature()] xiSetParamInt (_device, XI_PRM_TEMP_SELECTOR, XI_TEMP_IMAGE_SENSOR_DIE) : Not supported
+2023-02-24T23:27:30.825177Z DEBUG   - _AcquisitionLoop (2257) - Entering update of parameters...
+2023-02-24T23:27:30.825196Z INFO    - CM_XimeaXiq::_SetRuntimeParameters() Start 0 1 exp: 10008 fr: 15 1 bl.off: 50 0 0
+2023-02-24T23:27:30.825206Z INFO    - CM_XimeaXiq::_SetRuntimeParameters() End 0 1 exp: 10008 fr: 15 1 bl.off: 50 AG: 2.8 DG: 1.19516 0 0
+2023-02-24T23:27:30.825218Z DEBUG   - _AcquisitionLoop (2262) - Update of parameters finished
+2023-02-24T23:27:30.826105Z VERBOSE - Pause (504) - driver pauzing...
+2023-02-24T23:27:30.826106Z DEBUG   - unlocking driver
+2023-02-24T23:27:30.826108Z DEBUG   - driver unlocked
+2023-02-24T23:27:30.826108Z DEBUG   - ...trying to lock driver
+2023-02-24T23:27:30.826109Z DEBUG   - ...driver unlocked
+2023-02-24T23:27:30.826112Z DEBUG   - ...wakeup condition called
+2023-02-24T23:27:30.826115Z VERBOSE - Pause (529) - driver pauzing finished
+2023-02-24T23:27:30.826127Z VERBOSE - driver stopping...
+2023-02-24T23:27:31.159458Z INFO    - [CM_XimeaXiq::_AcquisitionLoop] thread finished
+2023-02-24T23:27:31.159598Z VERBOSE - driver stopping finished
+2023-02-24T23:27:31.159940Z VERBOSE - driver forcing disconnect...
+2023-02-24T23:27:31.163692Z VERBOSE - driver forcing disconnect finished
+2023-02-24T23:27:31.163848Z VERBOSE - driver forcing disconnect...
+2023-02-24T23:27:31.163853Z DEBUG   - driver already disconnected
+2023-02-24T23:27:32.249845Z INFO    - CM_XimeaXiq::_SetConfigurationParameters() 0 1 # 0 0 0 0 2.8 1.2
+2023-02-24T23:27:32.249857Z INFO    - CM_XimeaXiq::_SetConfigurationParameters() 0 1 # 10000 15 0 0 2.8 1.2
+2023-02-24T23:27:32.249862Z WARNING - _SetConnectionParameters (361) - Cannot cast to local parameters.
+2023-02-24T23:27:32.249863Z WARNING - Cannot cast to local parameters.
+2023-02-24T23:27:32.249885Z VERBOSE - driver connecting...
+2023-02-24T23:27:33.731503Z INFO    - device info - name: MQ022HG-IM-SM5X5-NIR2
+2023-02-24T23:27:33.731508Z INFO    - device info - type: USB3.0
+2023-02-24T23:27:33.731509Z INFO    - device info - model: 1009
+2023-02-24T23:27:33.731510Z INFO    - device info - serial number: 32270462
+2023-02-24T23:27:33.733588Z INFO    - device info - sensor width: 2048
+2023-02-24T23:27:33.733590Z INFO    - device info - sensor height: 1088
+2023-02-24T23:27:33.733590Z INFO    - device info - min integration time (us): 77
+2023-02-24T23:27:33.733591Z INFO    - device info - max integration time (us): 999995
+2023-02-24T23:27:33.733597Z VERBOSE - _SyncSensorRegisters (2814) - -->
+2023-02-24T23:27:33.776606Z VERBOSE - _SyncSensorRegisters (2838) - <--
+2023-02-24T23:27:33.776613Z DEBUG   - _LogSensorParameters (975) - Inte_sync: 1
+2023-02-24T23:27:33.776615Z DEBUG   - _LogSensorParameters (976) - Exp_ext: 0
+2023-02-24T23:27:33.776616Z DEBUG   - _LogSensorParameters (977) - Col_calib: 0
+2023-02-24T23:27:33.776618Z DEBUG   - _LogSensorParameters (978) - ADC_calib: 0
+2023-02-24T23:27:33.776619Z DEBUG   - _LogSensorParameters (979) - I_col: 4
+2023-02-24T23:27:33.776620Z DEBUG   - _LogSensorParameters (980) - I_col_prech: 1
+2023-02-24T23:27:33.776622Z DEBUG   - _LogSensorParameters (981) - I_amp: 12
+2023-02-24T23:27:33.776624Z DEBUG   - _LogSensorParameters (982) - Vtf_l1: 64
+2023-02-24T23:27:33.776626Z DEBUG   - _LogSensorParameters (983) - Vres_low: 64
+2023-02-24T23:27:33.776628Z DEBUG   - _LogSensorParameters (984) - V_prech: 101
+2023-02-24T23:27:33.776630Z DEBUG   - _LogSensorParameters (985) - V_ref: 106
+2023-02-24T23:27:33.776632Z DEBUG   - _LogSensorParameters (986) - Dummy: 4
+2023-02-24T23:27:33.776634Z DEBUG   - _LogSensorParameters (987) - V_blacksun: 34
+2023-02-24T23:27:33.776636Z DEBUG   - _LogSensorParameters (988) - black_level: 16300
+2023-02-24T23:27:33.776646Z DEBUG   - _LogSensorParameters (989) - V_ramp1: 109
+2023-02-24T23:27:33.776648Z DEBUG   - _LogSensorParameters (990) - V_ramp2: 109
+2023-02-24T23:27:33.776650Z DEBUG   - _LogSensorParameters (991) - adc_gain: 55
+2023-02-24T23:27:33.776652Z DEBUG   - _LogSensorParameters (992) - pga_gain: 1
+2023-02-24T23:27:33.776653Z DEBUG   - _LogSensorParameters (993) - pga_gain_2: 0
+2023-02-24T23:27:33.776655Z DEBUG   - _LogSensorParameters (994) - Output_mode: 3
+2023-02-24T23:27:33.776657Z DEBUG   - _LogSensorParameters (995) - Image flipping: 2
+2023-02-24T23:27:33.776658Z VERBOSE - driver connected
+2023-02-24T23:27:33.776850Z VERBOSE - driver initializing...
+2023-02-24T23:27:33.776850Z VERBOSE -    trying to initialize...
+2023-02-24T23:27:34.065359Z INFO    - sensor bit depth: 10; output bit depth: 10
+2023-02-24T23:27:35.519646Z INFO    - _Initialize (1693) - Acquisition buffer size is set to: 301989888
+2023-02-24T23:27:35.519689Z INFO    - _Initialize (1699) - Requested minimum acq buffer queue length: 64
+2023-02-24T23:27:35.519785Z INFO    - _Initialize (1712) - Allocated acq buffer queue length: 64
+2023-02-24T23:27:35.519806Z INFO    - _Initialize (1740) - clock frequency: 17000000
+2023-02-24T23:27:36.797685Z INFO    - CM_XimeaXiq::_SetRuntimeParameters() Start 0 1 exp: 10000 fr: 15 0 bl.off: 50 0 0
+2023-02-24T23:27:36.966839Z INFO    - CM_XimeaXiq::_SetRuntimeParameters() End 0 1 exp: 10049 fr: 15 0 bl.off: 50 AG: 2.8 DG: 1.2 0 0
+2023-02-24T23:27:36.966874Z VERBOSE - _StartAcquisition (1049) - -->
+2023-02-24T23:27:37.081861Z INFO    - CM_XimeaXiq::_SetSensorParameters entered
+2023-02-24T23:27:37.081896Z INFO    - _UploadSensorRegisters (2754) - --->
+2023-02-24T23:27:37.081902Z DEBUG   - _UploadSensorRegisters (2770) - Changing register 100 to value 236
+2023-02-24T23:27:37.082070Z DEBUG   - _UploadSensorRegisters (2770) - Changing register 101 to value 63
+2023-02-24T23:27:37.082230Z DEBUG   - _UploadSensorRegisters (2770) - Changing register 102 to value 2
+2023-02-24T23:27:37.082383Z DEBUG   - _UploadSensorRegisters (2770) - Changing register 103 to value 56
+2023-02-24T23:27:37.082539Z DEBUG   - _UploadSensorRegisters (2770) - Changing register 121 to value 1
+2023-02-24T23:27:37.082688Z INFO    - _UploadSensorRegisters (2780) - <---
+2023-02-24T23:27:37.082695Z INFO    - CM_XimeaXiq::_SetSensorParameters() End Black level offset 50 analog gain 2.8 digital gain 1.1662
+2023-02-24T23:27:37.082696Z INFO    - CM_XimeaXiq::_SetSensorParameters exited
+2023-02-24T23:27:37.084983Z DEBUG   - _UpdateSensorRegisters (1395) - AG: 2.8 DG: 1.1662 BlO: 50 Vramp: 109
+2023-02-24T23:27:37.084986Z VERBOSE - _StartAcquisition (1066) - <--
+2023-02-24T23:27:37.084988Z DEBUG   - _Initialize (1846) - Grabbing sensor parameters after initialization
+2023-02-24T23:27:37.084990Z INFO    - CM_XimeaXiq::_DownloadSensorRegisters() Start Black level offset 50 analog gain 2.8 digital gain 1.1662
+2023-02-24T23:27:37.084993Z VERBOSE - _SyncSensorRegisters (2814) - -->
+2023-02-24T23:27:37.131378Z VERBOSE - _SyncSensorRegisters (2838) - <--
+2023-02-24T23:27:37.131388Z INFO    - CM_XimeaXiq::_DownloadSensorRegisters() End Black level offset 50 analog gain 2.8 digital gain 1.1662
+2023-02-24T23:27:37.131389Z INFO    - DM_Camera::_GetSensorParameters entered
+2023-02-24T23:27:37.131391Z INFO    - DM_Camera::_GetSensorParameters exited
+2023-02-24T23:27:37.131396Z DEBUG   - _LogSensorParameters (975) - Inte_sync: 1
+2023-02-24T23:27:37.131398Z DEBUG   - _LogSensorParameters (976) - Exp_ext: 0
+2023-02-24T23:27:37.131399Z DEBUG   - _LogSensorParameters (977) - Col_calib: 0
+2023-02-24T23:27:37.131401Z DEBUG   - _LogSensorParameters (978) - ADC_calib: 0
+2023-02-24T23:27:37.131403Z DEBUG   - _LogSensorParameters (979) - I_col: 4
+2023-02-24T23:27:37.131419Z DEBUG   - _LogSensorParameters (980) - I_col_prech: 1
+2023-02-24T23:27:37.131421Z DEBUG   - _LogSensorParameters (981) - I_amp: 12
+2023-02-24T23:27:37.131422Z DEBUG   - _LogSensorParameters (982) - Vtf_l1: 64
+2023-02-24T23:27:37.131425Z DEBUG   - _LogSensorParameters (983) - Vres_low: 64
+2023-02-24T23:27:37.131427Z DEBUG   - _LogSensorParameters (984) - V_prech: 101
+2023-02-24T23:27:37.131428Z DEBUG   - _LogSensorParameters (985) - V_ref: 106
+2023-02-24T23:27:37.131430Z DEBUG   - _LogSensorParameters (986) - Dummy: 4
+2023-02-24T23:27:37.131433Z DEBUG   - _LogSensorParameters (987) - V_blacksun: 34
+2023-02-24T23:27:37.131435Z DEBUG   - _LogSensorParameters (988) - black_level: 16364
+2023-02-24T23:27:37.131436Z DEBUG   - _LogSensorParameters (989) - V_ramp1: 109
+2023-02-24T23:27:37.131438Z DEBUG   - _LogSensorParameters (990) - V_ramp2: 109
+2023-02-24T23:27:37.131440Z DEBUG   - _LogSensorParameters (991) - adc_gain: 56
+2023-02-24T23:27:37.131442Z DEBUG   - _LogSensorParameters (992) - pga_gain: 2
+2023-02-24T23:27:37.131444Z DEBUG   - _LogSensorParameters (993) - pga_gain_2: 1
+2023-02-24T23:27:37.131446Z DEBUG   - _LogSensorParameters (994) - Output_mode: 3
+2023-02-24T23:27:37.131448Z DEBUG   - _LogSensorParameters (995) - Image flipping: 2
+2023-02-24T23:27:37.131449Z VERBOSE -    initalization successful...
+2023-02-24T23:27:37.131450Z VERBOSE - driver initialization finished
+2023-02-24T23:27:37.142578Z INFO    - CM_XimeaXiq::_SetRuntimeParameters() Start 0 1 exp: 10049 fr: 15 0 bl.off: 50 0 0
+2023-02-24T23:27:37.142586Z INFO    - CM_XimeaXiq::_SetRuntimeParameters() End 0 1 exp: 10049 fr: 15 0 bl.off: 50 AG: 2.8 DG: 1.1662 0 0
+2023-02-24T23:27:37.142786Z INFO    - CM_XimeaXiq::_SetRuntimeParameters() Start 0 1 exp: 1000 fr: 15 0 bl.off: 50 0 0
+2023-02-24T23:27:37.150578Z INFO    - CM_XimeaXiq::_SetRuntimeParameters() End 0 1 exp: 1003 fr: 15 0 bl.off: 50 AG: 2.8 DG: 1.1662 0 0
+2023-02-24T23:27:37.150591Z INFO    - CM_XimeaXiq::_SetRuntimeParameters() Start 0 1 exp: 1003 fr: 15 0 bl.off: 50 0 0
+2023-02-24T23:27:37.150598Z INFO    - CM_XimeaXiq::_SetRuntimeParameters() End 0 1 exp: 1003 fr: 15 0 bl.off: 50 AG: 2.8 DG: 1.1662 0 0
+2023-02-24T23:27:37.191945Z INFO    - CM_XimeaXiq::_SetRuntimeParameters() Start 0 1 exp: 1003 fr: 15 0 bl.off: 50 0 0
+2023-02-24T23:27:37.191952Z INFO    - CM_XimeaXiq::_SetRuntimeParameters() End 0 1 exp: 1003 fr: 15 0 bl.off: 50 AG: 2.8 DG: 1.1662 0 0
+2023-02-24T23:27:37.191954Z VERBOSE - driver starting...
+2023-02-24T23:27:37.196566Z VERBOSE - driver starting finished
+2023-02-24T23:27:37.196695Z DEBUG   - _AcquisitionLoop (2178) - Waiting for image...
+2023-02-24T23:27:37.356736Z DEBUG   - nframe: 1; acq_nframe: 2; Previous acq_nframe: 0; Acq. time: 2023-02-24T23:27:37.356706Z; crnt. burst counter: 0; burst frames: 1
+2023-02-24T23:27:37.357208Z WARNING - [virtual double ihspt::drivers::CM_XimeaXiq::_GetTemperature()] xiSetParamInt (_device, XI_PRM_TEMP_SELECTOR, XI_TEMP_IMAGE_SENSOR_DIE) : Not supported
+2023-02-24T23:27:37.357566Z DEBUG   - _AcquisitionLoop (2257) - Entering update of parameters...
+2023-02-24T23:27:37.357587Z INFO    - CM_XimeaXiq::_SetRuntimeParameters() Start 0 1 exp: 1003 fr: 15 0 bl.off: 50 0 0
+2023-02-24T23:27:37.357594Z INFO    - CM_XimeaXiq::_SetRuntimeParameters() End 0 1 exp: 1003 fr: 15 0 bl.off: 50 AG: 2.8 DG: 1.1662 0 0
+2023-02-24T23:27:37.357597Z DEBUG   - _AcquisitionLoop (2262) - Update of parameters finished
+2023-02-24T23:27:37.357936Z DEBUG   - _AcquisitionLoop (2178) - Waiting for image...
+2023-02-24T23:27:37.419114Z DEBUG   - nframe: 2; acq_nframe: 3; Previous acq_nframe: 2; Acq. time: 2023-02-24T23:27:37.419086Z; crnt. burst counter: 0; burst frames: 1
+2023-02-24T23:27:37.419540Z WARNING - [virtual double ihspt::drivers::CM_XimeaXiq::_GetTemperature()] xiSetParamInt (_device, XI_PRM_TEMP_SELECTOR, XI_TEMP_IMAGE_SENSOR_DIE) : Not supported
+2023-02-24T23:27:37.419911Z DEBUG   - _AcquisitionLoop (2257) - Entering update of parameters...
+2023-02-24T23:27:37.419934Z INFO    - CM_XimeaXiq::_SetRuntimeParameters() Start 0 1 exp: 1003 fr: 15 0 bl.off: 50 0 0
+2023-02-24T23:27:37.419940Z INFO    - CM_XimeaXiq::_SetRuntimeParameters() End 0 1 exp: 1003 fr: 15 0 bl.off: 50 AG: 2.8 DG: 1.1662 0 0
+2023-02-24T23:27:37.419943Z DEBUG   - _AcquisitionLoop (2262) - Update of parameters finished
+2023-02-24T23:27:37.420286Z DEBUG   - _AcquisitionLoop (2178) - Waiting for image...
+2023-02-24T23:27:37.485405Z DEBUG   - nframe: 3; acq_nframe: 4; Previous acq_nframe: 3; Acq. time: 2023-02-24T23:27:37.485377Z; crnt. burst counter: 0; burst frames: 1
+2023-02-24T23:27:37.485864Z WARNING - [virtual double ihspt::drivers::CM_XimeaXiq::_GetTemperature()] xiSetParamInt (_device, XI_PRM_TEMP_SELECTOR, XI_TEMP_IMAGE_SENSOR_DIE) : Not supported
+2023-02-24T23:27:37.486278Z DEBUG   - _AcquisitionLoop (2257) - Entering update of parameters...
+2023-02-24T23:27:37.486302Z INFO    - CM_XimeaXiq::_SetRuntimeParameters() Start 0 1 exp: 1003 fr: 15 0 bl.off: 50 0 0
+2023-02-24T23:27:37.486312Z INFO    - CM_XimeaXiq::_SetRuntimeParameters() End 0 1 exp: 1003 fr: 15 0 bl.off: 50 AG: 2.8 DG: 1.1662 0 0
+2023-02-24T23:27:37.486315Z DEBUG   - _AcquisitionLoop (2262) - Update of parameters finished
+2023-02-24T23:27:37.486601Z DEBUG   - _AcquisitionLoop (2178) - Waiting for image...
+2023-02-24T23:27:37.552005Z DEBUG   - nframe: 4; acq_nframe: 5; Previous acq_nframe: 4; Acq. time: 2023-02-24T23:27:37.551970Z; crnt. burst counter: 0; burst frames: 1
+2023-02-24T23:27:37.552644Z WARNING - [virtual double ihspt::drivers::CM_XimeaXiq::_GetTemperature()] xiSetParamInt (_device, XI_PRM_TEMP_SELECTOR, XI_TEMP_IMAGE_SENSOR_DIE) : Not supported
+2023-02-24T23:27:37.553021Z DEBUG   - _AcquisitionLoop (2257) - Entering update of parameters...
+2023-02-24T23:27:37.553044Z INFO    - CM_XimeaXiq::_SetRuntimeParameters() Start 0 1 exp: 1003 fr: 15 0 bl.off: 50 0 0
+2023-02-24T23:27:37.553053Z INFO    - CM_XimeaXiq::_SetRuntimeParameters() End 0 1 exp: 1003 fr: 15 0 bl.off: 50 AG: 2.8 DG: 1.1662 0 0
+2023-02-24T23:27:37.553056Z DEBUG   - _AcquisitionLoop (2262) - Update of parameters finished
+2023-02-24T23:27:37.553319Z DEBUG   - _AcquisitionLoop (2178) - Waiting for image...
+2023-02-24T23:27:37.618229Z DEBUG   - nframe: 5; acq_nframe: 6; Previous acq_nframe: 5; Acq. time: 2023-02-24T23:27:37.618201Z; crnt. burst counter: 0; burst frames: 1
+2023-02-24T23:27:37.618864Z WARNING - [virtual double ihspt::drivers::CM_XimeaXiq::_GetTemperature()] xiSetParamInt (_device, XI_PRM_TEMP_SELECTOR, XI_TEMP_IMAGE_SENSOR_DIE) : Not supported
+2023-02-24T23:27:37.619240Z DEBUG   - _AcquisitionLoop (2257) - Entering update of parameters...
+2023-02-24T23:27:37.619261Z INFO    - CM_XimeaXiq::_SetRuntimeParameters() Start 0 1 exp: 1003 fr: 15 0 bl.off: 50 0 0
+2023-02-24T23:27:37.619271Z INFO    - CM_XimeaXiq::_SetRuntimeParameters() End 0 1 exp: 1003 fr: 15 0 bl.off: 50 AG: 2.8 DG: 1.1662 0 0
+2023-02-24T23:27:37.619274Z DEBUG   - _AcquisitionLoop (2262) - Update of parameters finished
+2023-02-24T23:27:37.619544Z DEBUG   - _AcquisitionLoop (2178) - Waiting for image...
+2023-02-24T23:27:37.684569Z DEBUG   - nframe: 6; acq_nframe: 7; Previous acq_nframe: 6; Acq. time: 2023-02-24T23:27:37.684536Z; crnt. burst counter: 0; burst frames: 1
+2023-02-24T23:27:37.685215Z WARNING - [virtual double ihspt::drivers::CM_XimeaXiq::_GetTemperature()] xiSetParamInt (_device, XI_PRM_TEMP_SELECTOR, XI_TEMP_IMAGE_SENSOR_DIE) : Not supported
+2023-02-24T23:27:37.685646Z DEBUG   - _AcquisitionLoop (2257) - Entering update of parameters...
+2023-02-24T23:27:37.685673Z INFO    - CM_XimeaXiq::_SetRuntimeParameters() Start 0 1 exp: 1003 fr: 15 0 bl.off: 50 0 0
+2023-02-24T23:27:37.685682Z INFO    - CM_XimeaXiq::_SetRuntimeParameters() End 0 1 exp: 1003 fr: 15 0 bl.off: 50 AG: 2.8 DG: 1.1662 0 0
+2023-02-24T23:27:37.685684Z DEBUG   - _AcquisitionLoop (2262) - Update of parameters finished
+2023-02-24T23:27:37.685944Z DEBUG   - _AcquisitionLoop (2178) - Waiting for image...
+2023-02-24T23:27:37.750891Z DEBUG   - nframe: 7; acq_nframe: 8; Previous acq_nframe: 7; Acq. time: 2023-02-24T23:27:37.750859Z; crnt. burst counter: 0; burst frames: 1
+2023-02-24T23:27:37.751559Z WARNING - [virtual double ihspt::drivers::CM_XimeaXiq::_GetTemperature()] xiSetParamInt (_device, XI_PRM_TEMP_SELECTOR, XI_TEMP_IMAGE_SENSOR_DIE) : Not supported
+2023-02-24T23:27:37.751932Z DEBUG   - _AcquisitionLoop (2257) - Entering update of parameters...
+2023-02-24T23:27:37.751955Z INFO    - CM_XimeaXiq::_SetRuntimeParameters() Start 0 1 exp: 1003 fr: 15 0 bl.off: 50 0 0
+2023-02-24T23:27:37.751964Z INFO    - CM_XimeaXiq::_SetRuntimeParameters() End 0 1 exp: 1003 fr: 15 0 bl.off: 50 AG: 2.8 DG: 1.1662 0 0
+2023-02-24T23:27:37.751967Z DEBUG   - _AcquisitionLoop (2262) - Update of parameters finished
+2023-02-24T23:27:37.752354Z DEBUG   - _AcquisitionLoop (2178) - Waiting for image...
+2023-02-24T23:27:37.817210Z DEBUG   - nframe: 8; acq_nframe: 9; Previous acq_nframe: 8; Acq. time: 2023-02-24T23:27:37.817176Z; crnt. burst counter: 0; burst frames: 1
+2023-02-24T23:27:37.817830Z WARNING - [virtual double ihspt::drivers::CM_XimeaXiq::_GetTemperature()] xiSetParamInt (_device, XI_PRM_TEMP_SELECTOR, XI_TEMP_IMAGE_SENSOR_DIE) : Not supported
+2023-02-24T23:27:37.818235Z DEBUG   - _AcquisitionLoop (2257) - Entering update of parameters...
+2023-02-24T23:27:37.818255Z INFO    - CM_XimeaXiq::_SetRuntimeParameters() Start 0 1 exp: 1003 fr: 15 0 bl.off: 50 0 0
+2023-02-24T23:27:37.818264Z INFO    - CM_XimeaXiq::_SetRuntimeParameters() End 0 1 exp: 1003 fr: 15 0 bl.off: 50 AG: 2.8 DG: 1.1662 0 0
+2023-02-24T23:27:37.818266Z DEBUG   - _AcquisitionLoop (2262) - Update of parameters finished
+2023-02-24T23:27:37.818535Z DEBUG   - _AcquisitionLoop (2178) - Waiting for image...
+2023-02-24T23:27:37.883642Z DEBUG   - nframe: 9; acq_nframe: 10; Previous acq_nframe: 9; Acq. time: 2023-02-24T23:27:37.883614Z; crnt. burst counter: 0; burst frames: 1
+2023-02-24T23:27:37.884282Z WARNING - [virtual double ihspt::drivers::CM_XimeaXiq::_GetTemperature()] xiSetParamInt (_device, XI_PRM_TEMP_SELECTOR, XI_TEMP_IMAGE_SENSOR_DIE) : Not supported
+2023-02-24T23:27:37.884631Z DEBUG   - _AcquisitionLoop (2257) - Entering update of parameters...
+2023-02-24T23:27:37.884656Z INFO    - CM_XimeaXiq::_SetRuntimeParameters() Start 0 1 exp: 1003 fr: 15 0 bl.off: 50 0 0
+2023-02-24T23:27:37.884665Z INFO    - CM_XimeaXiq::_SetRuntimeParameters() End 0 1 exp: 1003 fr: 15 0 bl.off: 50 AG: 2.8 DG: 1.1662 0 0
+2023-02-24T23:27:37.884668Z DEBUG   - _AcquisitionLoop (2262) - Update of parameters finished
+2023-02-24T23:27:37.884962Z DEBUG   - _AcquisitionLoop (2178) - Waiting for image...
+2023-02-24T23:27:37.949623Z DEBUG   - nframe: 10; acq_nframe: 11; Previous acq_nframe: 10; Acq. time: 2023-02-24T23:27:37.949595Z; crnt. burst counter: 0; burst frames: 1
+2023-02-24T23:27:37.950053Z WARNING - [virtual double ihspt::drivers::CM_XimeaXiq::_GetTemperature()] xiSetParamInt (_device, XI_PRM_TEMP_SELECTOR, XI_TEMP_IMAGE_SENSOR_DIE) : Not supported
+2023-02-24T23:27:37.950454Z DEBUG   - _AcquisitionLoop (2257) - Entering update of parameters...
+2023-02-24T23:27:37.950480Z INFO    - CM_XimeaXiq::_SetRuntimeParameters() Start 0 1 exp: 1003 fr: 15 0 bl.off: 50 0 0
+2023-02-24T23:27:37.950486Z INFO    - CM_XimeaXiq::_SetRuntimeParameters() End 0 1 exp: 1003 fr: 15 0 bl.off: 50 AG: 2.8 DG: 1.1662 0 0
+2023-02-24T23:27:37.950488Z DEBUG   - _AcquisitionLoop (2262) - Update of parameters finished
+2023-02-24T23:27:37.950759Z DEBUG   - _AcquisitionLoop (2178) - Waiting for image...
+2023-02-24T23:27:38.015972Z DEBUG   - nframe: 11; acq_nframe: 12; Previous acq_nframe: 11; Acq. time: 2023-02-24T23:27:38.015945Z; crnt. burst counter: 0; burst frames: 1
+2023-02-24T23:27:38.016420Z WARNING - [virtual double ihspt::drivers::CM_XimeaXiq::_GetTemperature()] xiSetParamInt (_device, XI_PRM_TEMP_SELECTOR, XI_TEMP_IMAGE_SENSOR_DIE) : Not supported
+2023-02-24T23:27:38.016823Z DEBUG   - _AcquisitionLoop (2257) - Entering update of parameters...
+2023-02-24T23:27:38.016846Z INFO    - CM_XimeaXiq::_SetRuntimeParameters() Start 0 1 exp: 1003 fr: 15 0 bl.off: 50 0 0
+2023-02-24T23:27:38.016858Z INFO    - CM_XimeaXiq::_SetRuntimeParameters() End 0 1 exp: 1003 fr: 15 0 bl.off: 50 AG: 2.8 DG: 1.1662 0 0
+2023-02-24T23:27:38.016861Z DEBUG   - _AcquisitionLoop (2262) - Update of parameters finished
+2023-02-24T23:27:38.017155Z DEBUG   - _AcquisitionLoop (2178) - Waiting for image...
+2023-02-24T23:27:38.082379Z DEBUG   - nframe: 12; acq_nframe: 13; Previous acq_nframe: 12; Acq. time: 2023-02-24T23:27:38.082351Z; crnt. burst counter: 0; burst frames: 1
+2023-02-24T23:27:38.082811Z WARNING - [virtual double ihspt::drivers::CM_XimeaXiq::_GetTemperature()] xiSetParamInt (_device, XI_PRM_TEMP_SELECTOR, XI_TEMP_IMAGE_SENSOR_DIE) : Not supported
+2023-02-24T23:27:38.083264Z DEBUG   - _AcquisitionLoop (2257) - Entering update of parameters...
+2023-02-24T23:27:38.083284Z INFO    - CM_XimeaXiq::_SetRuntimeParameters() Start 0 1 exp: 1003 fr: 15 0 bl.off: 50 0 0
+2023-02-24T23:27:38.083292Z INFO    - CM_XimeaXiq::_SetRuntimeParameters() End 0 1 exp: 1003 fr: 15 0 bl.off: 50 AG: 2.8 DG: 1.1662 0 0
+2023-02-24T23:27:38.083293Z DEBUG   - _AcquisitionLoop (2262) - Update of parameters finished
+2023-02-24T23:27:38.083567Z DEBUG   - _AcquisitionLoop (2178) - Waiting for image...
+2023-02-24T23:27:38.148458Z DEBUG   - nframe: 13; acq_nframe: 14; Previous acq_nframe: 13; Acq. time: 2023-02-24T23:27:38.148429Z; crnt. burst counter: 0; burst frames: 1
+2023-02-24T23:27:38.148908Z WARNING - [virtual double ihspt::drivers::CM_XimeaXiq::_GetTemperature()] xiSetParamInt (_device, XI_PRM_TEMP_SELECTOR, XI_TEMP_IMAGE_SENSOR_DIE) : Not supported
+2023-02-24T23:27:38.149334Z DEBUG   - _AcquisitionLoop (2257) - Entering update of parameters...
+2023-02-24T23:27:38.149353Z INFO    - CM_XimeaXiq::_SetRuntimeParameters() Start 0 1 exp: 1003 fr: 15 0 bl.off: 50 0 0
+2023-02-24T23:27:38.149360Z INFO    - CM_XimeaXiq::_SetRuntimeParameters() End 0 1 exp: 1003 fr: 15 0 bl.off: 50 AG: 2.8 DG: 1.1662 0 0
+2023-02-24T23:27:38.149361Z DEBUG   - _AcquisitionLoop (2262) - Update of parameters finished
+2023-02-24T23:27:38.149646Z DEBUG   - _AcquisitionLoop (2178) - Waiting for image...
+2023-02-24T23:27:38.214719Z DEBUG   - nframe: 14; acq_nframe: 15; Previous acq_nframe: 14; Acq. time: 2023-02-24T23:27:38.214692Z; crnt. burst counter: 0; burst frames: 1
+2023-02-24T23:27:38.215137Z WARNING - [virtual double ihspt::drivers::CM_XimeaXiq::_GetTemperature()] xiSetParamInt (_device, XI_PRM_TEMP_SELECTOR, XI_TEMP_IMAGE_SENSOR_DIE) : Not supported
+2023-02-24T23:27:38.215504Z DEBUG   - _AcquisitionLoop (2257) - Entering update of parameters...
+2023-02-24T23:27:38.215521Z INFO    - CM_XimeaXiq::_SetRuntimeParameters() Start 0 1 exp: 1003 fr: 15 0 bl.off: 50 0 0
+2023-02-24T23:27:38.215527Z INFO    - CM_XimeaXiq::_SetRuntimeParameters() End 0 1 exp: 1003 fr: 15 0 bl.off: 50 AG: 2.8 DG: 1.1662 0 0
+2023-02-24T23:27:38.215529Z DEBUG   - _AcquisitionLoop (2262) - Update of parameters finished
+2023-02-24T23:27:38.215816Z DEBUG   - _AcquisitionLoop (2178) - Waiting for image...
+2023-02-24T23:27:38.281089Z DEBUG   - nframe: 15; acq_nframe: 16; Previous acq_nframe: 15; Acq. time: 2023-02-24T23:27:38.281061Z; crnt. burst counter: 0; burst frames: 1
+2023-02-24T23:27:38.281521Z WARNING - [virtual double ihspt::drivers::CM_XimeaXiq::_GetTemperature()] xiSetParamInt (_device, XI_PRM_TEMP_SELECTOR, XI_TEMP_IMAGE_SENSOR_DIE) : Not supported
+2023-02-24T23:27:38.281982Z DEBUG   - _AcquisitionLoop (2257) - Entering update of parameters...
+2023-02-24T23:27:38.282003Z INFO    - CM_XimeaXiq::_SetRuntimeParameters() Start 0 1 exp: 1003 fr: 15 0 bl.off: 50 0 0
+2023-02-24T23:27:38.282009Z INFO    - CM_XimeaXiq::_SetRuntimeParameters() End 0 1 exp: 1003 fr: 15 0 bl.off: 50 AG: 2.8 DG: 1.1662 0 0
+2023-02-24T23:27:38.282012Z DEBUG   - _AcquisitionLoop (2262) - Update of parameters finished
+2023-02-24T23:27:38.282293Z DEBUG   - _AcquisitionLoop (2178) - Waiting for image...
+2023-02-24T23:27:38.347477Z DEBUG   - nframe: 16; acq_nframe: 17; Previous acq_nframe: 16; Acq. time: 2023-02-24T23:27:38.347449Z; crnt. burst counter: 0; burst frames: 1
+2023-02-24T23:27:38.347910Z WARNING - [virtual double ihspt::drivers::CM_XimeaXiq::_GetTemperature()] xiSetParamInt (_device, XI_PRM_TEMP_SELECTOR, XI_TEMP_IMAGE_SENSOR_DIE) : Not supported
+2023-02-24T23:27:38.348279Z DEBUG   - _AcquisitionLoop (2257) - Entering update of parameters...
+2023-02-24T23:27:38.348304Z INFO    - CM_XimeaXiq::_SetRuntimeParameters() Start 0 1 exp: 1003 fr: 15 0 bl.off: 50 0 0
+2023-02-24T23:27:38.348311Z INFO    - CM_XimeaXiq::_SetRuntimeParameters() End 0 1 exp: 1003 fr: 15 0 bl.off: 50 AG: 2.8 DG: 1.1662 0 0
+2023-02-24T23:27:38.348312Z DEBUG   - _AcquisitionLoop (2262) - Update of parameters finished
+2023-02-24T23:27:38.348584Z DEBUG   - _AcquisitionLoop (2178) - Waiting for image...
+2023-02-24T23:27:38.413981Z DEBUG   - nframe: 17; acq_nframe: 18; Previous acq_nframe: 17; Acq. time: 2023-02-24T23:27:38.413954Z; crnt. burst counter: 0; burst frames: 1
+2023-02-24T23:27:38.414402Z WARNING - [virtual double ihspt::drivers::CM_XimeaXiq::_GetTemperature()] xiSetParamInt (_device, XI_PRM_TEMP_SELECTOR, XI_TEMP_IMAGE_SENSOR_DIE) : Not supported
+2023-02-24T23:27:38.414824Z DEBUG   - _AcquisitionLoop (2257) - Entering update of parameters...
+2023-02-24T23:27:38.414845Z INFO    - CM_XimeaXiq::_SetRuntimeParameters() Start 0 1 exp: 1003 fr: 15 0 bl.off: 50 0 0
+2023-02-24T23:27:38.414851Z INFO    - CM_XimeaXiq::_SetRuntimeParameters() End 0 1 exp: 1003 fr: 15 0 bl.off: 50 AG: 2.8 DG: 1.1662 0 0
+2023-02-24T23:27:38.414853Z DEBUG   - _AcquisitionLoop (2262) - Update of parameters finished
+2023-02-24T23:27:38.415127Z DEBUG   - _AcquisitionLoop (2178) - Waiting for image...
+2023-02-24T23:27:38.480050Z DEBUG   - nframe: 18; acq_nframe: 19; Previous acq_nframe: 18; Acq. time: 2023-02-24T23:27:38.480022Z; crnt. burst counter: 0; burst frames: 1
+2023-02-24T23:27:38.480482Z WARNING - [virtual double ihspt::drivers::CM_XimeaXiq::_GetTemperature()] xiSetParamInt (_device, XI_PRM_TEMP_SELECTOR, XI_TEMP_IMAGE_SENSOR_DIE) : Not supported
+2023-02-24T23:27:38.480896Z DEBUG   - _AcquisitionLoop (2257) - Entering update of parameters...
+2023-02-24T23:27:38.480916Z INFO    - CM_XimeaXiq::_SetRuntimeParameters() Start 0 1 exp: 1003 fr: 15 0 bl.off: 50 0 0
+2023-02-24T23:27:38.480922Z INFO    - CM_XimeaXiq::_SetRuntimeParameters() End 0 1 exp: 1003 fr: 15 0 bl.off: 50 AG: 2.8 DG: 1.1662 0 0
+2023-02-24T23:27:38.480924Z DEBUG   - _AcquisitionLoop (2262) - Update of parameters finished
+2023-02-24T23:27:38.481198Z DEBUG   - _AcquisitionLoop (2178) - Waiting for image...
+2023-02-24T23:27:38.546347Z DEBUG   - nframe: 19; acq_nframe: 20; Previous acq_nframe: 19; Acq. time: 2023-02-24T23:27:38.546319Z; crnt. burst counter: 0; burst frames: 1
+2023-02-24T23:27:38.546768Z WARNING - [virtual double ihspt::drivers::CM_XimeaXiq::_GetTemperature()] xiSetParamInt (_device, XI_PRM_TEMP_SELECTOR, XI_TEMP_IMAGE_SENSOR_DIE) : Not supported
+2023-02-24T23:27:38.547138Z DEBUG   - _AcquisitionLoop (2257) - Entering update of parameters...
+2023-02-24T23:27:38.547156Z INFO    - CM_XimeaXiq::_SetRuntimeParameters() Start 0 1 exp: 1003 fr: 15 0 bl.off: 50 0 0
+2023-02-24T23:27:38.547163Z INFO    - CM_XimeaXiq::_SetRuntimeParameters() End 0 1 exp: 1003 fr: 15 0 bl.off: 50 AG: 2.8 DG: 1.1662 0 0
+2023-02-24T23:27:38.547164Z DEBUG   - _AcquisitionLoop (2262) - Update of parameters finished
+2023-02-24T23:27:38.547447Z DEBUG   - _AcquisitionLoop (2178) - Waiting for image...
+2023-02-24T23:27:38.612659Z DEBUG   - nframe: 20; acq_nframe: 21; Previous acq_nframe: 20; Acq. time: 2023-02-24T23:27:38.612630Z; crnt. burst counter: 0; burst frames: 1
+2023-02-24T23:27:38.613101Z WARNING - [virtual double ihspt::drivers::CM_XimeaXiq::_GetTemperature()] xiSetParamInt (_device, XI_PRM_TEMP_SELECTOR, XI_TEMP_IMAGE_SENSOR_DIE) : Not supported
+2023-02-24T23:27:38.613514Z DEBUG   - _AcquisitionLoop (2257) - Entering update of parameters...
+2023-02-24T23:27:38.613534Z INFO    - CM_XimeaXiq::_SetRuntimeParameters() Start 0 1 exp: 1003 fr: 15 0 bl.off: 50 0 0
+2023-02-24T23:27:38.613541Z INFO    - CM_XimeaXiq::_SetRuntimeParameters() End 0 1 exp: 1003 fr: 15 0 bl.off: 50 AG: 2.8 DG: 1.1662 0 0
+2023-02-24T23:27:38.613542Z DEBUG   - _AcquisitionLoop (2262) - Update of parameters finished
+2023-02-24T23:27:38.613818Z DEBUG   - _AcquisitionLoop (2178) - Waiting for image...
+2023-02-24T23:27:38.679018Z DEBUG   - nframe: 21; acq_nframe: 22; Previous acq_nframe: 21; Acq. time: 2023-02-24T23:27:38.678990Z; crnt. burst counter: 0; burst frames: 1
+2023-02-24T23:27:38.679464Z WARNING - [virtual double ihspt::drivers::CM_XimeaXiq::_GetTemperature()] xiSetParamInt (_device, XI_PRM_TEMP_SELECTOR, XI_TEMP_IMAGE_SENSOR_DIE) : Not supported
+2023-02-24T23:27:38.679886Z DEBUG   - _AcquisitionLoop (2257) - Entering update of parameters...
+2023-02-24T23:27:38.679908Z INFO    - CM_XimeaXiq::_SetRuntimeParameters() Start 0 1 exp: 1003 fr: 15 0 bl.off: 50 0 0
+2023-02-24T23:27:38.679914Z INFO    - CM_XimeaXiq::_SetRuntimeParameters() End 0 1 exp: 1003 fr: 15 0 bl.off: 50 AG: 2.8 DG: 1.1662 0 0
+2023-02-24T23:27:38.679916Z DEBUG   - _AcquisitionLoop (2262) - Update of parameters finished
+2023-02-24T23:27:38.680185Z DEBUG   - _AcquisitionLoop (2178) - Waiting for image...
+2023-02-24T23:27:38.745212Z DEBUG   - nframe: 22; acq_nframe: 23; Previous acq_nframe: 22; Acq. time: 2023-02-24T23:27:38.745196Z; crnt. burst counter: 0; burst frames: 1
+2023-02-24T23:27:38.745631Z WARNING - [virtual double ihspt::drivers::CM_XimeaXiq::_GetTemperature()] xiSetParamInt (_device, XI_PRM_TEMP_SELECTOR, XI_TEMP_IMAGE_SENSOR_DIE) : Not supported
+2023-02-24T23:27:38.745973Z DEBUG   - _AcquisitionLoop (2257) - Entering update of parameters...
+2023-02-24T23:27:38.745988Z INFO    - CM_XimeaXiq::_SetRuntimeParameters() Start 0 1 exp: 1003 fr: 15 0 bl.off: 50 0 0
+2023-02-24T23:27:38.745995Z INFO    - CM_XimeaXiq::_SetRuntimeParameters() End 0 1 exp: 1003 fr: 15 0 bl.off: 50 AG: 2.8 DG: 1.1662 0 0
+2023-02-24T23:27:38.745998Z DEBUG   - _AcquisitionLoop (2262) - Update of parameters finished
+2023-02-24T23:27:38.746297Z DEBUG   - _AcquisitionLoop (2178) - Waiting for image...
+2023-02-24T23:27:38.811569Z DEBUG   - nframe: 23; acq_nframe: 24; Previous acq_nframe: 23; Acq. time: 2023-02-24T23:27:38.811547Z; crnt. burst counter: 0; burst frames: 1
+2023-02-24T23:27:38.811996Z WARNING - [virtual double ihspt::drivers::CM_XimeaXiq::_GetTemperature()] xiSetParamInt (_device, XI_PRM_TEMP_SELECTOR, XI_TEMP_IMAGE_SENSOR_DIE) : Not supported
+2023-02-24T23:27:38.812298Z DEBUG   - _AcquisitionLoop (2257) - Entering update of parameters...
+2023-02-24T23:27:38.812314Z INFO    - CM_XimeaXiq::_SetRuntimeParameters() Start 0 1 exp: 1003 fr: 15 0 bl.off: 50 0 0
+2023-02-24T23:27:38.812320Z INFO    - CM_XimeaXiq::_SetRuntimeParameters() End 0 1 exp: 1003 fr: 15 0 bl.off: 50 AG: 2.8 DG: 1.1662 0 0
+2023-02-24T23:27:38.812322Z DEBUG   - _AcquisitionLoop (2262) - Update of parameters finished
+2023-02-24T23:27:38.812599Z DEBUG   - _AcquisitionLoop (2178) - Waiting for image...
+2023-02-24T23:27:38.878308Z DEBUG   - nframe: 24; acq_nframe: 25; Previous acq_nframe: 24; Acq. time: 2023-02-24T23:27:38.878286Z; crnt. burst counter: 0; burst frames: 1
+2023-02-24T23:27:38.879022Z WARNING - [virtual double ihspt::drivers::CM_XimeaXiq::_GetTemperature()] xiSetParamInt (_device, XI_PRM_TEMP_SELECTOR, XI_TEMP_IMAGE_SENSOR_DIE) : Not supported
+2023-02-24T23:27:38.879390Z DEBUG   - _AcquisitionLoop (2257) - Entering update of parameters...
+2023-02-24T23:27:38.879417Z INFO    - CM_XimeaXiq::_SetRuntimeParameters() Start 0 1 exp: 1003 fr: 15 0 bl.off: 50 0 0
+2023-02-24T23:27:38.879428Z INFO    - CM_XimeaXiq::_SetRuntimeParameters() End 0 1 exp: 1003 fr: 15 0 bl.off: 50 AG: 2.8 DG: 1.1662 0 0
+2023-02-24T23:27:38.879431Z DEBUG   - _AcquisitionLoop (2262) - Update of parameters finished
+2023-02-24T23:27:38.879803Z DEBUG   - _AcquisitionLoop (2178) - Waiting for image...
+2023-02-24T23:27:38.944534Z DEBUG   - nframe: 25; acq_nframe: 26; Previous acq_nframe: 25; Acq. time: 2023-02-24T23:27:38.944505Z; crnt. burst counter: 0; burst frames: 1
+2023-02-24T23:27:38.945001Z WARNING - [virtual double ihspt::drivers::CM_XimeaXiq::_GetTemperature()] xiSetParamInt (_device, XI_PRM_TEMP_SELECTOR, XI_TEMP_IMAGE_SENSOR_DIE) : Not supported
+2023-02-24T23:27:38.945310Z DEBUG   - _AcquisitionLoop (2257) - Entering update of parameters...
+2023-02-24T23:27:38.945328Z INFO    - CM_XimeaXiq::_SetRuntimeParameters() Start 0 1 exp: 1003 fr: 15 0 bl.off: 50 0 0
+2023-02-24T23:27:38.945334Z INFO    - CM_XimeaXiq::_SetRuntimeParameters() End 0 1 exp: 1003 fr: 15 0 bl.off: 50 AG: 2.8 DG: 1.1662 0 0
+2023-02-24T23:27:38.945337Z DEBUG   - _AcquisitionLoop (2262) - Update of parameters finished
+2023-02-24T23:27:38.945616Z DEBUG   - _AcquisitionLoop (2178) - Waiting for image...
+2023-02-24T23:27:39.010440Z DEBUG   - nframe: 26; acq_nframe: 27; Previous acq_nframe: 26; Acq. time: 2023-02-24T23:27:39.010421Z; crnt. burst counter: 0; burst frames: 1
+2023-02-24T23:27:39.010871Z WARNING - [virtual double ihspt::drivers::CM_XimeaXiq::_GetTemperature()] xiSetParamInt (_device, XI_PRM_TEMP_SELECTOR, XI_TEMP_IMAGE_SENSOR_DIE) : Not supported
+2023-02-24T23:27:39.011236Z DEBUG   - _AcquisitionLoop (2257) - Entering update of parameters...
+2023-02-24T23:27:39.011253Z INFO    - CM_XimeaXiq::_SetRuntimeParameters() Start 0 1 exp: 1003 fr: 15 0 bl.off: 50 0 0
+2023-02-24T23:27:39.011261Z INFO    - CM_XimeaXiq::_SetRuntimeParameters() End 0 1 exp: 1003 fr: 15 0 bl.off: 50 AG: 2.8 DG: 1.1662 0 0
+2023-02-24T23:27:39.011263Z DEBUG   - _AcquisitionLoop (2262) - Update of parameters finished
+2023-02-24T23:27:39.011533Z DEBUG   - _AcquisitionLoop (2178) - Waiting for image...
+2023-02-24T23:27:39.076995Z DEBUG   - nframe: 27; acq_nframe: 28; Previous acq_nframe: 27; Acq. time: 2023-02-24T23:27:39.076960Z; crnt. burst counter: 0; burst frames: 1
+2023-02-24T23:27:39.077601Z WARNING - [virtual double ihspt::drivers::CM_XimeaXiq::_GetTemperature()] xiSetParamInt (_device, XI_PRM_TEMP_SELECTOR, XI_TEMP_IMAGE_SENSOR_DIE) : Not supported
+2023-02-24T23:27:39.077996Z DEBUG   - _AcquisitionLoop (2257) - Entering update of parameters...
+2023-02-24T23:27:39.078020Z INFO    - CM_XimeaXiq::_SetRuntimeParameters() Start 0 1 exp: 1003 fr: 15 0 bl.off: 50 0 0
+2023-02-24T23:27:39.078027Z INFO    - CM_XimeaXiq::_SetRuntimeParameters() End 0 1 exp: 1003 fr: 15 0 bl.off: 50 AG: 2.8 DG: 1.1662 0 0
+2023-02-24T23:27:39.078029Z DEBUG   - _AcquisitionLoop (2262) - Update of parameters finished
+2023-02-24T23:27:39.078434Z DEBUG   - _AcquisitionLoop (2178) - Waiting for image...
+2023-02-24T23:27:39.142302Z DEBUG   - nframe: 28; acq_nframe: 29; Previous acq_nframe: 28; Acq. time: 2023-02-24T23:27:39.142274Z; crnt. burst counter: 0; burst frames: 1
+2023-02-24T23:27:39.142761Z WARNING - [virtual double ihspt::drivers::CM_XimeaXiq::_GetTemperature()] xiSetParamInt (_device, XI_PRM_TEMP_SELECTOR, XI_TEMP_IMAGE_SENSOR_DIE) : Not supported
+2023-02-24T23:27:39.143126Z DEBUG   - _AcquisitionLoop (2257) - Entering update of parameters...
+2023-02-24T23:27:39.143147Z INFO    - CM_XimeaXiq::_SetRuntimeParameters() Start 0 1 exp: 1003 fr: 15 0 bl.off: 50 0 0
+2023-02-24T23:27:39.143154Z INFO    - CM_XimeaXiq::_SetRuntimeParameters() End 0 1 exp: 1003 fr: 15 0 bl.off: 50 AG: 2.8 DG: 1.1662 0 0
+2023-02-24T23:27:39.143156Z DEBUG   - _AcquisitionLoop (2262) - Update of parameters finished
+2023-02-24T23:27:39.143432Z DEBUG   - _AcquisitionLoop (2178) - Waiting for image...
+2023-02-24T23:27:39.208355Z DEBUG   - nframe: 29; acq_nframe: 30; Previous acq_nframe: 29; Acq. time: 2023-02-24T23:27:39.208326Z; crnt. burst counter: 0; burst frames: 1
+2023-02-24T23:27:39.208822Z WARNING - [virtual double ihspt::drivers::CM_XimeaXiq::_GetTemperature()] xiSetParamInt (_device, XI_PRM_TEMP_SELECTOR, XI_TEMP_IMAGE_SENSOR_DIE) : Not supported
+2023-02-24T23:27:39.209185Z DEBUG   - _AcquisitionLoop (2257) - Entering update of parameters...
+2023-02-24T23:27:39.209210Z INFO    - CM_XimeaXiq::_SetRuntimeParameters() Start 0 1 exp: 1003 fr: 15 0 bl.off: 50 0 0
+2023-02-24T23:27:39.209217Z INFO    - CM_XimeaXiq::_SetRuntimeParameters() End 0 1 exp: 1003 fr: 15 0 bl.off: 50 AG: 2.8 DG: 1.1662 0 0
+2023-02-24T23:27:39.209219Z DEBUG   - _AcquisitionLoop (2262) - Update of parameters finished
+2023-02-24T23:27:39.209510Z DEBUG   - _AcquisitionLoop (2178) - Waiting for image...
+2023-02-24T23:27:39.274871Z DEBUG   - nframe: 30; acq_nframe: 31; Previous acq_nframe: 30; Acq. time: 2023-02-24T23:27:39.274842Z; crnt. burst counter: 0; burst frames: 1
+2023-02-24T23:27:39.275376Z WARNING - [virtual double ihspt::drivers::CM_XimeaXiq::_GetTemperature()] xiSetParamInt (_device, XI_PRM_TEMP_SELECTOR, XI_TEMP_IMAGE_SENSOR_DIE) : Not supported
+2023-02-24T23:27:39.275720Z DEBUG   - _AcquisitionLoop (2257) - Entering update of parameters...
+2023-02-24T23:27:39.275743Z INFO    - CM_XimeaXiq::_SetRuntimeParameters() Start 0 1 exp: 1003 fr: 15 0 bl.off: 50 0 0
+2023-02-24T23:27:39.275750Z INFO    - CM_XimeaXiq::_SetRuntimeParameters() End 0 1 exp: 1003 fr: 15 0 bl.off: 50 AG: 2.8 DG: 1.1662 0 0
+2023-02-24T23:27:39.275753Z DEBUG   - _AcquisitionLoop (2262) - Update of parameters finished
+2023-02-24T23:27:39.276041Z DEBUG   - _AcquisitionLoop (2178) - Waiting for image...
+2023-02-24T23:27:39.341892Z DEBUG   - nframe: 31; acq_nframe: 32; Previous acq_nframe: 31; Acq. time: 2023-02-24T23:27:39.341866Z; crnt. burst counter: 0; burst frames: 1
+2023-02-24T23:27:39.342348Z WARNING - [virtual double ihspt::drivers::CM_XimeaXiq::_GetTemperature()] xiSetParamInt (_device, XI_PRM_TEMP_SELECTOR, XI_TEMP_IMAGE_SENSOR_DIE) : Not supported
+2023-02-24T23:27:39.342772Z DEBUG   - _AcquisitionLoop (2257) - Entering update of parameters...
+2023-02-24T23:27:39.342806Z INFO    - CM_XimeaXiq::_SetRuntimeParameters() Start 0 1 exp: 1003 fr: 15 0 bl.off: 50 0 0
+2023-02-24T23:27:39.342813Z INFO    - CM_XimeaXiq::_SetRuntimeParameters() End 0 1 exp: 1003 fr: 15 0 bl.off: 50 AG: 2.8 DG: 1.1662 0 0
+2023-02-24T23:27:39.342814Z DEBUG   - _AcquisitionLoop (2262) - Update of parameters finished
+2023-02-24T23:27:39.343125Z DEBUG   - _AcquisitionLoop (2178) - Waiting for image...
+2023-02-24T23:27:39.407416Z DEBUG   - nframe: 32; acq_nframe: 33; Previous acq_nframe: 32; Acq. time: 2023-02-24T23:27:39.407387Z; crnt. burst counter: 0; burst frames: 1
+2023-02-24T23:27:39.407918Z WARNING - [virtual double ihspt::drivers::CM_XimeaXiq::_GetTemperature()] xiSetParamInt (_device, XI_PRM_TEMP_SELECTOR, XI_TEMP_IMAGE_SENSOR_DIE) : Not supported
+2023-02-24T23:27:39.408248Z DEBUG   - _AcquisitionLoop (2257) - Entering update of parameters...
+2023-02-24T23:27:39.408272Z INFO    - CM_XimeaXiq::_SetRuntimeParameters() Start 0 1 exp: 1003 fr: 15 0 bl.off: 50 0 0
+2023-02-24T23:27:39.408279Z INFO    - CM_XimeaXiq::_SetRuntimeParameters() End 0 1 exp: 1003 fr: 15 0 bl.off: 50 AG: 2.8 DG: 1.1662 0 0
+2023-02-24T23:27:39.408281Z DEBUG   - _AcquisitionLoop (2262) - Update of parameters finished
+2023-02-24T23:27:39.408570Z DEBUG   - _AcquisitionLoop (2178) - Waiting for image...
+2023-02-24T23:27:39.474020Z DEBUG   - nframe: 33; acq_nframe: 34; Previous acq_nframe: 33; Acq. time: 2023-02-24T23:27:39.473990Z; crnt. burst counter: 0; burst frames: 1
+2023-02-24T23:27:39.474491Z WARNING - [virtual double ihspt::drivers::CM_XimeaXiq::_GetTemperature()] xiSetParamInt (_device, XI_PRM_TEMP_SELECTOR, XI_TEMP_IMAGE_SENSOR_DIE) : Not supported
+2023-02-24T23:27:39.474889Z DEBUG   - _AcquisitionLoop (2257) - Entering update of parameters...
+2023-02-24T23:27:39.474911Z INFO    - CM_XimeaXiq::_SetRuntimeParameters() Start 0 1 exp: 1003 fr: 15 0 bl.off: 50 0 0
+2023-02-24T23:27:39.474918Z INFO    - CM_XimeaXiq::_SetRuntimeParameters() End 0 1 exp: 1003 fr: 15 0 bl.off: 50 AG: 2.8 DG: 1.1662 0 0
+2023-02-24T23:27:39.474920Z DEBUG   - _AcquisitionLoop (2262) - Update of parameters finished
+2023-02-24T23:27:39.475203Z DEBUG   - _AcquisitionLoop (2178) - Waiting for image...
+2023-02-24T23:27:39.539879Z DEBUG   - nframe: 34; acq_nframe: 35; Previous acq_nframe: 34; Acq. time: 2023-02-24T23:27:39.539850Z; crnt. burst counter: 0; burst frames: 1
+2023-02-24T23:27:39.540370Z WARNING - [virtual double ihspt::drivers::CM_XimeaXiq::_GetTemperature()] xiSetParamInt (_device, XI_PRM_TEMP_SELECTOR, XI_TEMP_IMAGE_SENSOR_DIE) : Not supported
+2023-02-24T23:27:39.540716Z DEBUG   - _AcquisitionLoop (2257) - Entering update of parameters...
+2023-02-24T23:27:39.540742Z INFO    - CM_XimeaXiq::_SetRuntimeParameters() Start 0 1 exp: 1003 fr: 15 0 bl.off: 50 0 0
+2023-02-24T23:27:39.540749Z INFO    - CM_XimeaXiq::_SetRuntimeParameters() End 0 1 exp: 1003 fr: 15 0 bl.off: 50 AG: 2.8 DG: 1.1662 0 0
+2023-02-24T23:27:39.540751Z DEBUG   - _AcquisitionLoop (2262) - Update of parameters finished
+2023-02-24T23:27:39.541053Z DEBUG   - _AcquisitionLoop (2178) - Waiting for image...
+2023-02-24T23:27:39.606293Z DEBUG   - nframe: 35; acq_nframe: 36; Previous acq_nframe: 35; Acq. time: 2023-02-24T23:27:39.606262Z; crnt. burst counter: 0; burst frames: 1
+2023-02-24T23:27:39.606812Z WARNING - [virtual double ihspt::drivers::CM_XimeaXiq::_GetTemperature()] xiSetParamInt (_device, XI_PRM_TEMP_SELECTOR, XI_TEMP_IMAGE_SENSOR_DIE) : Not supported
+2023-02-24T23:27:39.607230Z DEBUG   - _AcquisitionLoop (2257) - Entering update of parameters...
+2023-02-24T23:27:39.607250Z INFO    - CM_XimeaXiq::_SetRuntimeParameters() Start 0 1 exp: 1003 fr: 15 0 bl.off: 50 0 0
+2023-02-24T23:27:39.607270Z INFO    - CM_XimeaXiq::_SetRuntimeParameters() End 0 1 exp: 1003 fr: 15 0 bl.off: 50 AG: 2.8 DG: 1.1662 0 0
+2023-02-24T23:27:39.607272Z DEBUG   - _AcquisitionLoop (2262) - Update of parameters finished
+2023-02-24T23:27:39.607560Z DEBUG   - _AcquisitionLoop (2178) - Waiting for image...
+2023-02-24T23:27:39.672589Z DEBUG   - nframe: 36; acq_nframe: 37; Previous acq_nframe: 36; Acq. time: 2023-02-24T23:27:39.672563Z; crnt. burst counter: 0; burst frames: 1
+2023-02-24T23:27:39.673037Z WARNING - [virtual double ihspt::drivers::CM_XimeaXiq::_GetTemperature()] xiSetParamInt (_device, XI_PRM_TEMP_SELECTOR, XI_TEMP_IMAGE_SENSOR_DIE) : Not supported
+2023-02-24T23:27:39.673404Z DEBUG   - _AcquisitionLoop (2257) - Entering update of parameters...
+2023-02-24T23:27:39.673439Z INFO    - CM_XimeaXiq::_SetRuntimeParameters() Start 0 1 exp: 1003 fr: 15 0 bl.off: 50 0 0
+2023-02-24T23:27:39.673445Z INFO    - CM_XimeaXiq::_SetRuntimeParameters() End 0 1 exp: 1003 fr: 15 0 bl.off: 50 AG: 2.8 DG: 1.1662 0 0
+2023-02-24T23:27:39.673447Z DEBUG   - _AcquisitionLoop (2262) - Update of parameters finished
+2023-02-24T23:27:39.673835Z DEBUG   - _AcquisitionLoop (2178) - Waiting for image...
+2023-02-24T23:27:39.738752Z DEBUG   - nframe: 37; acq_nframe: 38; Previous acq_nframe: 37; Acq. time: 2023-02-24T23:27:39.738724Z; crnt. burst counter: 0; burst frames: 1
+2023-02-24T23:27:39.739244Z WARNING - [virtual double ihspt::drivers::CM_XimeaXiq::_GetTemperature()] xiSetParamInt (_device, XI_PRM_TEMP_SELECTOR, XI_TEMP_IMAGE_SENSOR_DIE) : Not supported
+2023-02-24T23:27:39.739638Z DEBUG   - _AcquisitionLoop (2257) - Entering update of parameters...
+2023-02-24T23:27:39.739658Z INFO    - CM_XimeaXiq::_SetRuntimeParameters() Start 0 1 exp: 1003 fr: 15 0 bl.off: 50 0 0
+2023-02-24T23:27:39.739679Z INFO    - CM_XimeaXiq::_SetRuntimeParameters() End 0 1 exp: 1003 fr: 15 0 bl.off: 50 AG: 2.8 DG: 1.1662 0 0
+2023-02-24T23:27:39.739680Z DEBUG   - _AcquisitionLoop (2262) - Update of parameters finished
+2023-02-24T23:27:39.739959Z DEBUG   - _AcquisitionLoop (2178) - Waiting for image...
+2023-02-24T23:27:39.805261Z DEBUG   - nframe: 38; acq_nframe: 39; Previous acq_nframe: 38; Acq. time: 2023-02-24T23:27:39.805231Z; crnt. burst counter: 0; burst frames: 1
+2023-02-24T23:27:39.805749Z WARNING - [virtual double ihspt::drivers::CM_XimeaXiq::_GetTemperature()] xiSetParamInt (_device, XI_PRM_TEMP_SELECTOR, XI_TEMP_IMAGE_SENSOR_DIE) : Not supported
+2023-02-24T23:27:39.806129Z DEBUG   - _AcquisitionLoop (2257) - Entering update of parameters...
+2023-02-24T23:27:39.806152Z INFO    - CM_XimeaXiq::_SetRuntimeParameters() Start 0 1 exp: 1003 fr: 15 0 bl.off: 50 0 0
+2023-02-24T23:27:39.806160Z INFO    - CM_XimeaXiq::_SetRuntimeParameters() End 0 1 exp: 1003 fr: 15 0 bl.off: 50 AG: 2.8 DG: 1.1662 0 0
+2023-02-24T23:27:39.806162Z DEBUG   - _AcquisitionLoop (2262) - Update of parameters finished
+2023-02-24T23:27:39.806435Z DEBUG   - _AcquisitionLoop (2178) - Waiting for image...
+2023-02-24T23:27:39.871524Z DEBUG   - nframe: 39; acq_nframe: 40; Previous acq_nframe: 39; Acq. time: 2023-02-24T23:27:39.871495Z; crnt. burst counter: 0; burst frames: 1
+2023-02-24T23:27:39.872012Z WARNING - [virtual double ihspt::drivers::CM_XimeaXiq::_GetTemperature()] xiSetParamInt (_device, XI_PRM_TEMP_SELECTOR, XI_TEMP_IMAGE_SENSOR_DIE) : Not supported
+2023-02-24T23:27:39.872365Z DEBUG   - _AcquisitionLoop (2257) - Entering update of parameters...
+2023-02-24T23:27:39.872386Z INFO    - CM_XimeaXiq::_SetRuntimeParameters() Start 0 1 exp: 1003 fr: 15 0 bl.off: 50 0 0
+2023-02-24T23:27:39.872393Z INFO    - CM_XimeaXiq::_SetRuntimeParameters() End 0 1 exp: 1003 fr: 15 0 bl.off: 50 AG: 2.8 DG: 1.1662 0 0
+2023-02-24T23:27:39.872395Z DEBUG   - _AcquisitionLoop (2262) - Update of parameters finished
+2023-02-24T23:27:39.872683Z DEBUG   - _AcquisitionLoop (2178) - Waiting for image...
+2023-02-24T23:27:39.937683Z DEBUG   - nframe: 40; acq_nframe: 41; Previous acq_nframe: 40; Acq. time: 2023-02-24T23:27:39.937655Z; crnt. burst counter: 0; burst frames: 1
+2023-02-24T23:27:39.938209Z WARNING - [virtual double ihspt::drivers::CM_XimeaXiq::_GetTemperature()] xiSetParamInt (_device, XI_PRM_TEMP_SELECTOR, XI_TEMP_IMAGE_SENSOR_DIE) : Not supported
+2023-02-24T23:27:39.938636Z DEBUG   - _AcquisitionLoop (2257) - Entering update of parameters...
+2023-02-24T23:27:39.938658Z INFO    - CM_XimeaXiq::_SetRuntimeParameters() Start 0 1 exp: 1003 fr: 15 0 bl.off: 50 0 0
+2023-02-24T23:27:39.938664Z INFO    - CM_XimeaXiq::_SetRuntimeParameters() End 0 1 exp: 1003 fr: 15 0 bl.off: 50 AG: 2.8 DG: 1.1662 0 0
+2023-02-24T23:27:39.938667Z DEBUG   - _AcquisitionLoop (2262) - Update of parameters finished
+2023-02-24T23:27:39.939002Z DEBUG   - _AcquisitionLoop (2178) - Waiting for image...
+2023-02-24T23:27:40.004340Z DEBUG   - nframe: 41; acq_nframe: 42; Previous acq_nframe: 41; Acq. time: 2023-02-24T23:27:40.004307Z; crnt. burst counter: 0; burst frames: 1
+2023-02-24T23:27:40.004878Z WARNING - [virtual double ihspt::drivers::CM_XimeaXiq::_GetTemperature()] xiSetParamInt (_device, XI_PRM_TEMP_SELECTOR, XI_TEMP_IMAGE_SENSOR_DIE) : Not supported
+2023-02-24T23:27:40.005250Z DEBUG   - _AcquisitionLoop (2257) - Entering update of parameters...
+2023-02-24T23:27:40.005272Z INFO    - CM_XimeaXiq::_SetRuntimeParameters() Start 0 1 exp: 1003 fr: 15 0 bl.off: 50 0 0
+2023-02-24T23:27:40.005278Z INFO    - CM_XimeaXiq::_SetRuntimeParameters() End 0 1 exp: 1003 fr: 15 0 bl.off: 50 AG: 2.8 DG: 1.1662 0 0
+2023-02-24T23:27:40.005280Z DEBUG   - _AcquisitionLoop (2262) - Update of parameters finished
+2023-02-24T23:27:40.005583Z DEBUG   - _AcquisitionLoop (2178) - Waiting for image...
+2023-02-24T23:27:40.070417Z DEBUG   - nframe: 42; acq_nframe: 43; Previous acq_nframe: 42; Acq. time: 2023-02-24T23:27:40.070389Z; crnt. burst counter: 0; burst frames: 1
+2023-02-24T23:27:40.070877Z WARNING - [virtual double ihspt::drivers::CM_XimeaXiq::_GetTemperature()] xiSetParamInt (_device, XI_PRM_TEMP_SELECTOR, XI_TEMP_IMAGE_SENSOR_DIE) : Not supported
+2023-02-24T23:27:40.071240Z DEBUG   - _AcquisitionLoop (2257) - Entering update of parameters...
+2023-02-24T23:27:40.071263Z INFO    - CM_XimeaXiq::_SetRuntimeParameters() Start 0 1 exp: 1003 fr: 15 0 bl.off: 50 0 0
+2023-02-24T23:27:40.071269Z INFO    - CM_XimeaXiq::_SetRuntimeParameters() End 0 1 exp: 1003 fr: 15 0 bl.off: 50 AG: 2.8 DG: 1.1662 0 0
+2023-02-24T23:27:40.071272Z DEBUG   - _AcquisitionLoop (2262) - Update of parameters finished
+2023-02-24T23:27:40.071547Z DEBUG   - _AcquisitionLoop (2178) - Waiting for image...
+2023-02-24T23:27:40.140790Z DEBUG   - nframe: 43; acq_nframe: 44; Previous acq_nframe: 43; Acq. time: 2023-02-24T23:27:40.140761Z; crnt. burst counter: 0; burst frames: 1
+2023-02-24T23:27:40.141260Z WARNING - [virtual double ihspt::drivers::CM_XimeaXiq::_GetTemperature()] xiSetParamInt (_device, XI_PRM_TEMP_SELECTOR, XI_TEMP_IMAGE_SENSOR_DIE) : Not supported
+2023-02-24T23:27:40.141630Z DEBUG   - _AcquisitionLoop (2257) - Entering update of parameters...
+2023-02-24T23:27:40.141653Z INFO    - CM_XimeaXiq::_SetRuntimeParameters() Start 0 1 exp: 1003 fr: 15 0 bl.off: 50 0 0
+2023-02-24T23:27:40.141660Z INFO    - CM_XimeaXiq::_SetRuntimeParameters() End 0 1 exp: 1003 fr: 15 0 bl.off: 50 AG: 2.8 DG: 1.1662 0 0
+2023-02-24T23:27:40.141662Z DEBUG   - _AcquisitionLoop (2262) - Update of parameters finished
+2023-02-24T23:27:40.141941Z DEBUG   - _AcquisitionLoop (2178) - Waiting for image...
+2023-02-24T23:27:40.202955Z DEBUG   - nframe: 44; acq_nframe: 45; Previous acq_nframe: 44; Acq. time: 2023-02-24T23:27:40.202926Z; crnt. burst counter: 0; burst frames: 1
+2023-02-24T23:27:40.203421Z WARNING - [virtual double ihspt::drivers::CM_XimeaXiq::_GetTemperature()] xiSetParamInt (_device, XI_PRM_TEMP_SELECTOR, XI_TEMP_IMAGE_SENSOR_DIE) : Not supported
+2023-02-24T23:27:40.203821Z DEBUG   - _AcquisitionLoop (2257) - Entering update of parameters...
+2023-02-24T23:27:40.203843Z INFO    - CM_XimeaXiq::_SetRuntimeParameters() Start 0 1 exp: 1003 fr: 15 0 bl.off: 50 0 0
+2023-02-24T23:27:40.203849Z INFO    - CM_XimeaXiq::_SetRuntimeParameters() End 0 1 exp: 1003 fr: 15 0 bl.off: 50 AG: 2.8 DG: 1.1662 0 0
+2023-02-24T23:27:40.203851Z DEBUG   - _AcquisitionLoop (2262) - Update of parameters finished
+2023-02-24T23:27:40.204123Z DEBUG   - _AcquisitionLoop (2178) - Waiting for image...
+2023-02-24T23:27:40.269454Z DEBUG   - nframe: 45; acq_nframe: 46; Previous acq_nframe: 45; Acq. time: 2023-02-24T23:27:40.269424Z; crnt. burst counter: 0; burst frames: 1
+2023-02-24T23:27:40.269935Z WARNING - [virtual double ihspt::drivers::CM_XimeaXiq::_GetTemperature()] xiSetParamInt (_device, XI_PRM_TEMP_SELECTOR, XI_TEMP_IMAGE_SENSOR_DIE) : Not supported
+2023-02-24T23:27:40.270413Z DEBUG   - _AcquisitionLoop (2257) - Entering update of parameters...
+2023-02-24T23:27:40.270448Z INFO    - CM_XimeaXiq::_SetRuntimeParameters() Start 0 1 exp: 1003 fr: 15 0 bl.off: 50 0 0
+2023-02-24T23:27:40.270455Z INFO    - CM_XimeaXiq::_SetRuntimeParameters() End 0 1 exp: 1003 fr: 15 0 bl.off: 50 AG: 2.8 DG: 1.1662 0 0
+2023-02-24T23:27:40.270457Z DEBUG   - _AcquisitionLoop (2262) - Update of parameters finished
+2023-02-24T23:27:40.270744Z DEBUG   - _AcquisitionLoop (2178) - Waiting for image...
+2023-02-24T23:27:40.335565Z DEBUG   - nframe: 46; acq_nframe: 47; Previous acq_nframe: 46; Acq. time: 2023-02-24T23:27:40.335538Z; crnt. burst counter: 0; burst frames: 1
+2023-02-24T23:27:40.336028Z WARNING - [virtual double ihspt::drivers::CM_XimeaXiq::_GetTemperature()] xiSetParamInt (_device, XI_PRM_TEMP_SELECTOR, XI_TEMP_IMAGE_SENSOR_DIE) : Not supported
+2023-02-24T23:27:40.336354Z DEBUG   - _AcquisitionLoop (2257) - Entering update of parameters...
+2023-02-24T23:27:40.336371Z INFO    - CM_XimeaXiq::_SetRuntimeParameters() Start 0 1 exp: 1003 fr: 15 0 bl.off: 50 0 0
+2023-02-24T23:27:40.336378Z INFO    - CM_XimeaXiq::_SetRuntimeParameters() End 0 1 exp: 1003 fr: 15 0 bl.off: 50 AG: 2.8 DG: 1.1662 0 0
+2023-02-24T23:27:40.336380Z DEBUG   - _AcquisitionLoop (2262) - Update of parameters finished
+2023-02-24T23:27:40.336665Z DEBUG   - _AcquisitionLoop (2178) - Waiting for image...
+2023-02-24T23:27:40.401921Z DEBUG   - nframe: 47; acq_nframe: 48; Previous acq_nframe: 47; Acq. time: 2023-02-24T23:27:40.401892Z; crnt. burst counter: 0; burst frames: 1
+2023-02-24T23:27:40.402374Z WARNING - [virtual double ihspt::drivers::CM_XimeaXiq::_GetTemperature()] xiSetParamInt (_device, XI_PRM_TEMP_SELECTOR, XI_TEMP_IMAGE_SENSOR_DIE) : Not supported
+2023-02-24T23:27:40.402748Z DEBUG   - _AcquisitionLoop (2257) - Entering update of parameters...
+2023-02-24T23:27:40.402768Z INFO    - CM_XimeaXiq::_SetRuntimeParameters() Start 0 1 exp: 1003 fr: 15 0 bl.off: 50 0 0
+2023-02-24T23:27:40.402775Z INFO    - CM_XimeaXiq::_SetRuntimeParameters() End 0 1 exp: 1003 fr: 15 0 bl.off: 50 AG: 2.8 DG: 1.1662 0 0
+2023-02-24T23:27:40.402777Z DEBUG   - _AcquisitionLoop (2262) - Update of parameters finished
+2023-02-24T23:27:40.403049Z DEBUG   - _AcquisitionLoop (2178) - Waiting for image...
+2023-02-24T23:27:40.468132Z DEBUG   - nframe: 48; acq_nframe: 49; Previous acq_nframe: 48; Acq. time: 2023-02-24T23:27:40.468102Z; crnt. burst counter: 0; burst frames: 1
+2023-02-24T23:27:40.468579Z WARNING - [virtual double ihspt::drivers::CM_XimeaXiq::_GetTemperature()] xiSetParamInt (_device, XI_PRM_TEMP_SELECTOR, XI_TEMP_IMAGE_SENSOR_DIE) : Not supported
+2023-02-24T23:27:40.468969Z DEBUG   - _AcquisitionLoop (2257) - Entering update of parameters...
+2023-02-24T23:27:40.468991Z INFO    - CM_XimeaXiq::_SetRuntimeParameters() Start 0 1 exp: 1003 fr: 15 0 bl.off: 50 0 0
+2023-02-24T23:27:40.468998Z INFO    - CM_XimeaXiq::_SetRuntimeParameters() End 0 1 exp: 1003 fr: 15 0 bl.off: 50 AG: 2.8 DG: 1.1662 0 0
+2023-02-24T23:27:40.469000Z DEBUG   - _AcquisitionLoop (2262) - Update of parameters finished
+2023-02-24T23:27:40.469274Z DEBUG   - _AcquisitionLoop (2178) - Waiting for image...
+2023-02-24T23:27:40.534946Z DEBUG   - nframe: 49; acq_nframe: 50; Previous acq_nframe: 49; Acq. time: 2023-02-24T23:27:40.534917Z; crnt. burst counter: 0; burst frames: 1
+2023-02-24T23:27:40.535414Z WARNING - [virtual double ihspt::drivers::CM_XimeaXiq::_GetTemperature()] xiSetParamInt (_device, XI_PRM_TEMP_SELECTOR, XI_TEMP_IMAGE_SENSOR_DIE) : Not supported
+2023-02-24T23:27:40.535731Z DEBUG   - _AcquisitionLoop (2257) - Entering update of parameters...
+2023-02-24T23:27:40.535755Z INFO    - CM_XimeaXiq::_SetRuntimeParameters() Start 0 1 exp: 1003 fr: 15 0 bl.off: 50 0 0
+2023-02-24T23:27:40.535762Z INFO    - CM_XimeaXiq::_SetRuntimeParameters() End 0 1 exp: 1003 fr: 15 0 bl.off: 50 AG: 2.8 DG: 1.1662 0 0
+2023-02-24T23:27:40.535764Z DEBUG   - _AcquisitionLoop (2262) - Update of parameters finished
+2023-02-24T23:27:40.536050Z DEBUG   - _AcquisitionLoop (2178) - Waiting for image...
+2023-02-24T23:27:40.600785Z DEBUG   - nframe: 50; acq_nframe: 51; Previous acq_nframe: 50; Acq. time: 2023-02-24T23:27:40.600757Z; crnt. burst counter: 0; burst frames: 1
+2023-02-24T23:27:40.601240Z WARNING - [virtual double ihspt::drivers::CM_XimeaXiq::_GetTemperature()] xiSetParamInt (_device, XI_PRM_TEMP_SELECTOR, XI_TEMP_IMAGE_SENSOR_DIE) : Not supported
+2023-02-24T23:27:40.601626Z DEBUG   - _AcquisitionLoop (2257) - Entering update of parameters...
+2023-02-24T23:27:40.601647Z INFO    - CM_XimeaXiq::_SetRuntimeParameters() Start 0 1 exp: 1003 fr: 15 0 bl.off: 50 0 0
+2023-02-24T23:27:40.601653Z INFO    - CM_XimeaXiq::_SetRuntimeParameters() End 0 1 exp: 1003 fr: 15 0 bl.off: 50 AG: 2.8 DG: 1.1662 0 0
+2023-02-24T23:27:40.601655Z DEBUG   - _AcquisitionLoop (2262) - Update of parameters finished
+2023-02-24T23:27:40.601953Z DEBUG   - _AcquisitionLoop (2178) - Waiting for image...
+2023-02-24T23:27:40.667120Z DEBUG   - nframe: 51; acq_nframe: 52; Previous acq_nframe: 51; Acq. time: 2023-02-24T23:27:40.667092Z; crnt. burst counter: 0; burst frames: 1
+2023-02-24T23:27:40.667562Z WARNING - [virtual double ihspt::drivers::CM_XimeaXiq::_GetTemperature()] xiSetParamInt (_device, XI_PRM_TEMP_SELECTOR, XI_TEMP_IMAGE_SENSOR_DIE) : Not supported
+2023-02-24T23:27:40.667895Z DEBUG   - _AcquisitionLoop (2257) - Entering update of parameters...
+2023-02-24T23:27:40.667915Z INFO    - CM_XimeaXiq::_SetRuntimeParameters() Start 0 1 exp: 1003 fr: 15 0 bl.off: 50 0 0
+2023-02-24T23:27:40.667922Z INFO    - CM_XimeaXiq::_SetRuntimeParameters() End 0 1 exp: 1003 fr: 15 0 bl.off: 50 AG: 2.8 DG: 1.1662 0 0
+2023-02-24T23:27:40.667924Z DEBUG   - _AcquisitionLoop (2262) - Update of parameters finished
+2023-02-24T23:27:40.668199Z DEBUG   - _AcquisitionLoop (2178) - Waiting for image...
+2023-02-24T23:27:40.733427Z DEBUG   - nframe: 52; acq_nframe: 53; Previous acq_nframe: 52; Acq. time: 2023-02-24T23:27:40.733397Z; crnt. burst counter: 0; burst frames: 1
+2023-02-24T23:27:40.733876Z WARNING - [virtual double ihspt::drivers::CM_XimeaXiq::_GetTemperature()] xiSetParamInt (_device, XI_PRM_TEMP_SELECTOR, XI_TEMP_IMAGE_SENSOR_DIE) : Not supported
+2023-02-24T23:27:40.734287Z DEBUG   - _AcquisitionLoop (2257) - Entering update of parameters...
+2023-02-24T23:27:40.734308Z INFO    - CM_XimeaXiq::_SetRuntimeParameters() Start 0 1 exp: 1003 fr: 15 0 bl.off: 50 0 0
+2023-02-24T23:27:40.734314Z INFO    - CM_XimeaXiq::_SetRuntimeParameters() End 0 1 exp: 1003 fr: 15 0 bl.off: 50 AG: 2.8 DG: 1.1662 0 0
+2023-02-24T23:27:40.734316Z DEBUG   - _AcquisitionLoop (2262) - Update of parameters finished
+2023-02-24T23:27:40.734618Z DEBUG   - _AcquisitionLoop (2178) - Waiting for image...
+2023-02-24T23:27:40.799885Z DEBUG   - nframe: 53; acq_nframe: 54; Previous acq_nframe: 53; Acq. time: 2023-02-24T23:27:40.799856Z; crnt. burst counter: 0; burst frames: 1
+2023-02-24T23:27:40.800346Z WARNING - [virtual double ihspt::drivers::CM_XimeaXiq::_GetTemperature()] xiSetParamInt (_device, XI_PRM_TEMP_SELECTOR, XI_TEMP_IMAGE_SENSOR_DIE) : Not supported
+2023-02-24T23:27:40.800678Z DEBUG   - _AcquisitionLoop (2257) - Entering update of parameters...
+2023-02-24T23:27:40.800698Z INFO    - CM_XimeaXiq::_SetRuntimeParameters() Start 0 1 exp: 1003 fr: 15 0 bl.off: 50 0 0
+2023-02-24T23:27:40.800714Z INFO    - CM_XimeaXiq::_SetRuntimeParameters() End 0 1 exp: 1003 fr: 15 0 bl.off: 50 AG: 2.8 DG: 1.1662 0 0
+2023-02-24T23:27:40.800729Z DEBUG   - _AcquisitionLoop (2262) - Update of parameters finished
+2023-02-24T23:27:40.801019Z DEBUG   - _AcquisitionLoop (2178) - Waiting for image...
+2023-02-24T23:27:40.865988Z DEBUG   - nframe: 54; acq_nframe: 55; Previous acq_nframe: 54; Acq. time: 2023-02-24T23:27:40.865961Z; crnt. burst counter: 0; burst frames: 1
+2023-02-24T23:27:40.866425Z WARNING - [virtual double ihspt::drivers::CM_XimeaXiq::_GetTemperature()] xiSetParamInt (_device, XI_PRM_TEMP_SELECTOR, XI_TEMP_IMAGE_SENSOR_DIE) : Not supported
+2023-02-24T23:27:40.866771Z DEBUG   - _AcquisitionLoop (2257) - Entering update of parameters...
+2023-02-24T23:27:40.866792Z INFO    - CM_XimeaXiq::_SetRuntimeParameters() Start 0 1 exp: 1003 fr: 15 0 bl.off: 50 0 0
+2023-02-24T23:27:40.866799Z INFO    - CM_XimeaXiq::_SetRuntimeParameters() End 0 1 exp: 1003 fr: 15 0 bl.off: 50 AG: 2.8 DG: 1.1662 0 0
+2023-02-24T23:27:40.866801Z DEBUG   - _AcquisitionLoop (2262) - Update of parameters finished
+2023-02-24T23:27:40.867088Z DEBUG   - _AcquisitionLoop (2178) - Waiting for image...
+2023-02-24T23:27:40.932371Z DEBUG   - nframe: 55; acq_nframe: 56; Previous acq_nframe: 55; Acq. time: 2023-02-24T23:27:40.932343Z; crnt. burst counter: 0; burst frames: 1
+2023-02-24T23:27:40.932827Z WARNING - [virtual double ihspt::drivers::CM_XimeaXiq::_GetTemperature()] xiSetParamInt (_device, XI_PRM_TEMP_SELECTOR, XI_TEMP_IMAGE_SENSOR_DIE) : Not supported
+2023-02-24T23:27:40.933222Z DEBUG   - _AcquisitionLoop (2257) - Entering update of parameters...
+2023-02-24T23:27:40.933242Z INFO    - CM_XimeaXiq::_SetRuntimeParameters() Start 0 1 exp: 1003 fr: 15 0 bl.off: 50 0 0
+2023-02-24T23:27:40.933249Z INFO    - CM_XimeaXiq::_SetRuntimeParameters() End 0 1 exp: 1003 fr: 15 0 bl.off: 50 AG: 2.8 DG: 1.1662 0 0
+2023-02-24T23:27:40.933251Z DEBUG   - _AcquisitionLoop (2262) - Update of parameters finished
+2023-02-24T23:27:40.933523Z DEBUG   - _AcquisitionLoop (2178) - Waiting for image...
+2023-02-24T23:27:40.999206Z DEBUG   - nframe: 56; acq_nframe: 57; Previous acq_nframe: 56; Acq. time: 2023-02-24T23:27:40.999177Z; crnt. burst counter: 0; burst frames: 1
+2023-02-24T23:27:40.999690Z WARNING - [virtual double ihspt::drivers::CM_XimeaXiq::_GetTemperature()] xiSetParamInt (_device, XI_PRM_TEMP_SELECTOR, XI_TEMP_IMAGE_SENSOR_DIE) : Not supported
+2023-02-24T23:27:41.000041Z DEBUG   - _AcquisitionLoop (2257) - Entering update of parameters...
+2023-02-24T23:27:41.000059Z INFO    - CM_XimeaXiq::_SetRuntimeParameters() Start 0 1 exp: 1003 fr: 15 0 bl.off: 50 0 0
+2023-02-24T23:27:41.000066Z INFO    - CM_XimeaXiq::_SetRuntimeParameters() End 0 1 exp: 1003 fr: 15 0 bl.off: 50 AG: 2.8 DG: 1.1662 0 0
+2023-02-24T23:27:41.000068Z DEBUG   - _AcquisitionLoop (2262) - Update of parameters finished
+2023-02-24T23:27:41.000346Z DEBUG   - _AcquisitionLoop (2178) - Waiting for image...
+2023-02-24T23:27:41.066545Z DEBUG   - nframe: 57; acq_nframe: 58; Previous acq_nframe: 57; Acq. time: 2023-02-24T23:27:41.066504Z; crnt. burst counter: 0; burst frames: 1
+2023-02-24T23:27:41.067298Z WARNING - [virtual double ihspt::drivers::CM_XimeaXiq::_GetTemperature()] xiSetParamInt (_device, XI_PRM_TEMP_SELECTOR, XI_TEMP_IMAGE_SENSOR_DIE) : Not supported
+2023-02-24T23:27:41.067746Z DEBUG   - _AcquisitionLoop (2257) - Entering update of parameters...
+2023-02-24T23:27:41.067803Z INFO    - CM_XimeaXiq::_SetRuntimeParameters() Start 0 1 exp: 1003 fr: 15 0 bl.off: 50 0 0
+2023-02-24T23:27:41.067810Z INFO    - CM_XimeaXiq::_SetRuntimeParameters() End 0 1 exp: 1003 fr: 15 0 bl.off: 50 AG: 2.8 DG: 1.1662 0 0
+2023-02-24T23:27:41.067813Z DEBUG   - _AcquisitionLoop (2262) - Update of parameters finished
+2023-02-24T23:27:41.068138Z DEBUG   - _AcquisitionLoop (2178) - Waiting for image...
+2023-02-24T23:27:41.136721Z DEBUG   - nframe: 58; acq_nframe: 59; Previous acq_nframe: 58; Acq. time: 2023-02-24T23:27:41.136686Z; crnt. burst counter: 0; burst frames: 1
+2023-02-24T23:27:41.137148Z WARNING - [virtual double ihspt::drivers::CM_XimeaXiq::_GetTemperature()] xiSetParamInt (_device, XI_PRM_TEMP_SELECTOR, XI_TEMP_IMAGE_SENSOR_DIE) : Not supported
+2023-02-24T23:27:41.137582Z DEBUG   - _AcquisitionLoop (2257) - Entering update of parameters...
+2023-02-24T23:27:41.137602Z INFO    - CM_XimeaXiq::_SetRuntimeParameters() Start 0 1 exp: 1003 fr: 15 0 bl.off: 50 0 0
+2023-02-24T23:27:41.137609Z INFO    - CM_XimeaXiq::_SetRuntimeParameters() End 0 1 exp: 1003 fr: 15 0 bl.off: 50 AG: 2.8 DG: 1.1662 0 0
+2023-02-24T23:27:41.137612Z DEBUG   - _AcquisitionLoop (2262) - Update of parameters finished
+2023-02-24T23:27:41.137907Z DEBUG   - _AcquisitionLoop (2178) - Waiting for image...
+2023-02-24T23:27:41.199239Z DEBUG   - nframe: 59; acq_nframe: 60; Previous acq_nframe: 59; Acq. time: 2023-02-24T23:27:41.199210Z; crnt. burst counter: 0; burst frames: 1
+2023-02-24T23:27:41.199673Z WARNING - [virtual double ihspt::drivers::CM_XimeaXiq::_GetTemperature()] xiSetParamInt (_device, XI_PRM_TEMP_SELECTOR, XI_TEMP_IMAGE_SENSOR_DIE) : Not supported
+2023-02-24T23:27:41.200020Z DEBUG   - _AcquisitionLoop (2257) - Entering update of parameters...
+2023-02-24T23:27:41.200044Z INFO    - CM_XimeaXiq::_SetRuntimeParameters() Start 0 1 exp: 1003 fr: 15 0 bl.off: 50 0 0
+2023-02-24T23:27:41.200051Z INFO    - CM_XimeaXiq::_SetRuntimeParameters() End 0 1 exp: 1003 fr: 15 0 bl.off: 50 AG: 2.8 DG: 1.1662 0 0
+2023-02-24T23:27:41.200053Z DEBUG   - _AcquisitionLoop (2262) - Update of parameters finished
+2023-02-24T23:27:41.200330Z DEBUG   - _AcquisitionLoop (2178) - Waiting for image...
+2023-02-24T23:27:41.216378Z VERBOSE - Pause (504) - driver pauzing...
+2023-02-24T23:27:41.216380Z DEBUG   - unlocking driver
+2023-02-24T23:27:41.216380Z DEBUG   - driver unlocked
+2023-02-24T23:27:41.216381Z DEBUG   - ...trying to lock driver
+2023-02-24T23:27:41.266903Z DEBUG   - nframe: 60; acq_nframe: 61; Previous acq_nframe: 60; Acq. time: 2023-02-24T23:27:41.266847Z; crnt. burst counter: 0; burst frames: 1
+2023-02-24T23:27:41.267806Z WARNING - [virtual double ihspt::drivers::CM_XimeaXiq::_GetTemperature()] xiSetParamInt (_device, XI_PRM_TEMP_SELECTOR, XI_TEMP_IMAGE_SENSOR_DIE) : Not supported
+2023-02-24T23:27:41.268271Z DEBUG   - _AcquisitionLoop (2257) - Entering update of parameters...
+2023-02-24T23:27:41.268320Z INFO    - CM_XimeaXiq::_SetRuntimeParameters() Start 0 1 exp: 1003 fr: 15 0 bl.off: 50 0 0
+2023-02-24T23:27:41.268340Z INFO    - CM_XimeaXiq::_SetRuntimeParameters() End 0 1 exp: 1003 fr: 15 0 bl.off: 50 AG: 2.8 DG: 1.1662 0 0
+2023-02-24T23:27:41.268347Z DEBUG   - _AcquisitionLoop (2262) - Update of parameters finished
+2023-02-24T23:27:41.269199Z DEBUG   - ...driver unlocked
+2023-02-24T23:27:41.269210Z DEBUG   - ...wakeup condition called
+2023-02-24T23:27:41.269233Z VERBOSE - Pause (529) - driver pauzing finished
+2023-02-24T23:27:41.269316Z VERBOSE - driver stopping...
+2023-02-24T23:27:41.431572Z INFO    - [CM_XimeaXiq::_AcquisitionLoop] thread finished
+2023-02-24T23:27:41.431861Z VERBOSE - driver stopping finished
+2023-02-24T23:27:41.433101Z VERBOSE - driver forcing disconnect...
+2023-02-24T23:27:41.435031Z VERBOSE - driver forcing disconnect finished
+2023-02-24T23:27:41.435081Z VERBOSE - driver forcing disconnect...
+2023-02-24T23:27:41.435083Z DEBUG   - driver already disconnected
