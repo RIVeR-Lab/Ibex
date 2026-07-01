@@ -1,17 +1,17 @@
 repositories:
-  insta360_ros_driver:
-    type: git
-    url: git@github.com:jtukpah/insta360_ros_driver.git
-    version: ibex-fixes
-  ouster-ros:
-    type: git
-    url: https://github.com/ouster-lidar/ouster-ros.git
-    version: 69b8db3
   shared_link_bridge:
     type: git
-    url: https://github.com/jaffe-se/shared_link_bridge.git
-    version: 07d821b
+    url: git@github.com:RIVeR-Lab/shared_link_bridge.git
+    version: 85b8a24  
+  insta360_ros_driver:
+    type: git
+    url: git@github.com:RIVeR-Lab/insta360_ros_driver.git
+    version: ibex-fixes
   sick-basic:
     type: git
-    url: git@github.com:dbcometto/sick-basic.git
-    version: 1ed443a
+    url: git@github.com:RIVeR-Lab/sick-basic.git
+    version: 92af725
+  ouster-ros:
+    type: git
+    url: git@github.com:ouster-lidar/ouster-ros.git
+    version: 69b8db3
