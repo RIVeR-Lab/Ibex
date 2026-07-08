@@ -1,8 +1,8 @@
 # Third-party ROS packages (managed via .repos)
-src/insta360_ros_driver/
-src/ouster-ros/
-src/shared_link_bridge/
-src/sick-basic/
+# src/insta360_ros_driver/
+# src/ouster-ros/
+# src/shared_link_bridge/
+# src/sick-basic/
 
 
 # ROS 2 build artifacts
