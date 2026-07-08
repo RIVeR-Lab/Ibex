@@ -1,0 +1,20 @@
+License
+=======
+
+You (the “Customer”) agree to the following:
+
+Insofar as software and / or documentation is included in the scope of a delivery, the Customer shall be granted a non-exclusive right of its use. It shall be provided only for use on the product it was meant for. Use of the software on more than one system shall be prohibited.
+
+The Customer may only copy, modify or translate software or documentation or transfer software from object code into source code to the extent allowed by law. The Customer agrees not to remove manufacturer details - in particular, copyright notations - or to change them without Photonfocus’ prior approval.
+
+All other rights on the software and documentation including copies thereof shall remain with Photonfocus respectively the software-provider. The grant of sublicenses by Customer is prohibited.
+
+Third-party software which is supplied with Photonfocus products may only be used in conjunction with the intended camera models, frame grabbers or other Photonfocus products supplied.
+
+Software and documentation are provided by Photonfocus AG, Bahnhofplatz 10, 8853 Lachen, Switzerland (“Photonfocus”) with all existing defects and to the exclusion of any warranty (“as is”). In particular, Photonfocus does not warrant the functionality, performance or fitness for any particular purpose. Photonfocus also does not warrant that the software is free from third party rights.
+
+Except in the case of wilful misconduct or gross negligence and in the case of legal liability for personal injury or under statutory product liability, any liability of Photonfocus is excluded. In particular, liability for auxiliary persons, for indirect damage, consequential damage and for pure financial loss is excluded.
+
+All legal relations between Photonfocus and the Customer regarding the use of any software or documentation shall be governed exclusively by substantive Swiss Law, excluding the United Nations Convention on Contracts for the International Sale of Goods of April 11, 1980 (Vienna Convention).
+
+All disputes arising out of or in connection with software or documentation hereunder shall be exclusively resolved by the courts at Photonfocus' domicile (at present Lachen, Kanton Schwyz, Switzerland). Mandatory jurisdiction shall be reserved. Notwithstanding the foregoing, Photonfocus shall have the right to assert its rights at the domicile of Customer.

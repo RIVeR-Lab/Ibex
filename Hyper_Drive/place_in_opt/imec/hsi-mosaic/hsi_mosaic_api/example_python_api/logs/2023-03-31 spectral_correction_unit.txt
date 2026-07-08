@@ -1,0 +1,32 @@
+2023-03-31T14:11:57.761799Z INFO    - ProcessingUnit::_PropagateDataTypes()
+2023-03-31T14:11:57.761836Z INFO    - OutputPort: non_uniformity_pipeline.spectral_processing_group.spectral_correction_unit.out; Actual kind: AK_HYPERCUBE_BIP; Minimal kind: AK_BAND_STORAGE_BIP
+2023-03-31T14:11:57.761843Z INFO    - InputPort: non_uniformity_pipeline.spectral_processing_group.angularity_unit.in; Actual kind: AK_HYPERCUBE_BIP; Minimal kind: AK_ARRAY
+2023-03-31T14:11:58.076892Z INFO    - ProcessingUnit::Process
+2023-03-31T14:11:58.217554Z INFO    - ProcessingUnit::_PropagateDataTypes()
+2023-03-31T14:11:58.217585Z INFO    - OutputPort: reference_spectrum_pipeline.spectral_processing_group.spectral_correction_unit.out; Actual kind: AK_HYPERCUBE_BIP; Minimal kind: AK_BAND_STORAGE_BIP
+2023-03-31T14:11:58.217593Z INFO    - InputPort: reference_spectrum_pipeline.spectral_processing_group.angularity_unit.in; Actual kind: AK_HYPERCUBE_BIP; Minimal kind: AK_ARRAY
+2023-03-31T14:11:58.563822Z INFO    - ProcessingUnit::Process
+2023-03-31T14:11:58.694117Z INFO    - ProcessingUnit::_PropagateDataTypes()
+2023-03-31T14:11:58.694139Z INFO    - OutputPort: non_uniformity_pipeline.spectral_processing_group.spectral_correction_unit.out; Actual kind: AK_HYPERCUBE_BIP; Minimal kind: AK_BAND_STORAGE_BIP
+2023-03-31T14:11:58.694145Z INFO    - InputPort: non_uniformity_pipeline.spectral_processing_group.angularity_unit.in; Actual kind: AK_HYPERCUBE_BIP; Minimal kind: AK_ARRAY
+2023-03-31T14:11:59.045683Z INFO    - ProcessingUnit::Process
+2023-03-31T14:11:59.185136Z INFO    - ProcessingUnit::_PropagateDataTypes()
+2023-03-31T14:11:59.185168Z INFO    - OutputPort: reference_spectrum_pipeline.spectral_processing_group.spectral_correction_unit.out; Actual kind: AK_HYPERCUBE_BIP; Minimal kind: AK_BAND_STORAGE_BIP
+2023-03-31T14:11:59.185176Z INFO    - InputPort: reference_spectrum_pipeline.spectral_processing_group.angularity_unit.in; Actual kind: AK_HYPERCUBE_BIP; Minimal kind: AK_ARRAY
+2023-03-31T14:11:59.515368Z INFO    - ProcessingUnit::Process
+2023-03-31T14:14:58.460685Z INFO    - ProcessingUnit::_PropagateDataTypes()
+2023-03-31T14:14:58.460718Z INFO    - OutputPort: non_uniformity_pipeline.spectral_processing_group.spectral_correction_unit.out; Actual kind: AK_HYPERCUBE_BIP; Minimal kind: AK_BAND_STORAGE_BIP
+2023-03-31T14:14:58.460727Z INFO    - InputPort: non_uniformity_pipeline.spectral_processing_group.angularity_unit.in; Actual kind: AK_HYPERCUBE_BIP; Minimal kind: AK_ARRAY
+2023-03-31T14:14:58.792879Z INFO    - ProcessingUnit::Process
+2023-03-31T14:14:58.937256Z INFO    - ProcessingUnit::_PropagateDataTypes()
+2023-03-31T14:14:58.937290Z INFO    - OutputPort: reference_spectrum_pipeline.spectral_processing_group.spectral_correction_unit.out; Actual kind: AK_HYPERCUBE_BIP; Minimal kind: AK_BAND_STORAGE_BIP
+2023-03-31T14:14:58.937298Z INFO    - InputPort: reference_spectrum_pipeline.spectral_processing_group.angularity_unit.in; Actual kind: AK_HYPERCUBE_BIP; Minimal kind: AK_ARRAY
+2023-03-31T14:14:59.251317Z INFO    - ProcessingUnit::Process
+2023-03-31T14:14:59.426815Z INFO    - ProcessingUnit::_PropagateDataTypes()
+2023-03-31T14:14:59.426843Z INFO    - OutputPort: non_uniformity_pipeline.spectral_processing_group.spectral_correction_unit.out; Actual kind: AK_HYPERCUBE_BIP; Minimal kind: AK_BAND_STORAGE_BIP
+2023-03-31T14:14:59.426851Z INFO    - InputPort: non_uniformity_pipeline.spectral_processing_group.angularity_unit.in; Actual kind: AK_HYPERCUBE_BIP; Minimal kind: AK_ARRAY
+2023-03-31T14:14:59.793298Z INFO    - ProcessingUnit::Process
+2023-03-31T14:14:59.940595Z INFO    - ProcessingUnit::_PropagateDataTypes()
+2023-03-31T14:14:59.940625Z INFO    - OutputPort: reference_spectrum_pipeline.spectral_processing_group.spectral_correction_unit.out; Actual kind: AK_HYPERCUBE_BIP; Minimal kind: AK_BAND_STORAGE_BIP
+2023-03-31T14:14:59.940646Z INFO    - InputPort: reference_spectrum_pipeline.spectral_processing_group.angularity_unit.in; Actual kind: AK_HYPERCUBE_BIP; Minimal kind: AK_ARRAY
+2023-03-31T14:15:00.275171Z INFO    - ProcessingUnit::Process

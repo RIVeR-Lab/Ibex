@@ -1,0 +1,150 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="./">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Introduction &mdash; PolarizedSDK 1.1.5 documentation</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=e59714d7" />
+
+  
+      <script src="_static/jquery.js?v=5d32c60e"></script>
+      <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="_static/documentation_options.js?v=a48ae3df"></script>
+      <script src="_static/doctools.js?v=9bcbadda"></script>
+      <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Library files" href="Library.html" />
+    <link rel="prev" title="PolarizedSDK documentation" href="index.html" />
+    <link href="_static/style.css" rel="stylesheet" type="text/css">
+
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            PolarizedSDK
+              <img src="_static/PFlogo.png" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Modules</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Introduction</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="Library.html">Library files</a></li>
+<li class="toctree-l1"><a class="reference internal" href="C%2B%2BExamples.html">C++ Examples</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">PolarizedSDK</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Introduction</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/Introduction.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="introduction">
+<span id="id1"></span><h1>Introduction<a class="headerlink" href="#introduction" title="Link to this heading"></a></h1>
+<p>The PolarizedSDK contains C++ libraries and tools to operate with RAW images acquired with a Photonfocus mono or color polarized camera. This SDK contains examples to obtain relevant images such as DOLP or AOLP.</p>
+<section id="polarized-sensors">
+<h2>Polarized Sensors<a class="headerlink" href="#polarized-sensors" title="Link to this heading"></a></h2>
+<p>Polarized sensors used by Photonfocus are able to detect the intensity of light in 4 polarization angles (0, 45, 90 and 135 degrees). From this data, useful information can be extracted
+such as the Degree and Angle of Linear Polarization of the incident light (DoLP and AoLP). This data can be obtained with this SDK starting with a RAW image in various formats depending on the
+user needs. The SDK is also able to work with color polarized cameras and also provides a useful set of tools. These tools and information are briefly described in the next lines.</p>
+</section>
+<section id="for-mono-cameras">
+<h2>For mono cameras:<a class="headerlink" href="#for-mono-cameras" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p>Mono image of a specific polarization angle.</p></li>
+<li><p>2x2 image showing four subimages, one for each polarization angle.</p></li>
+<li><p>Degree of Linear Polarization: DoLP computes how linearly polarized the incident light is (from 0% to 100% or 0.0 to 1.0) and outputs a mono8 image. This parameter can be useful to characterize materials and illuminants, for example.</p></li>
+<li><p>Angle of Linear Polarization: AoLP computes the angle of this linearly polarized light with respect to the main camera axis (0 to 180 degrees) and outputs a mono8 image. Provides useful information to identify shapes and surface types, among others.</p></li>
+<li><p>AOLP - HSV: AoLP can also be represented in a visual HSV format, where hue represents the angle (0 and 180 degrees - Red, 60 deg - Blue, 120 deg - Green).</p></li>
+<li><p>AOLPDOLP - HSV: AoLP and DoLP are combined in a HSV image where hue represents the angle and color saturation is proportional to DoLP.</p></li>
+</ul>
+</section>
+<section id="for-color-cameras">
+<h2>For color cameras:<a class="headerlink" href="#for-color-cameras" title="Link to this heading"></a></h2>
+<p>Similar images can be obtained, but additional features are available:n
+- Color image of a polarization angle.n
+- DoLP, AoLP and HSV representations of a specific color.nn</p>
+</section>
+<section id="data-format">
+<h2>Data format<a class="headerlink" href="#data-format" title="Link to this heading"></a></h2>
+<p>For mono cameras, RAW image is simply stored in a buffer and then processed by the different available functions.</p>
+<p>For color cameras, a superimage is generated before processing the data.</p>
+<p>This superimage has the format pppp_colorimages[angle][color][row][col] where each angle and color has one associated buffer that stores a mono image.
+A second superimage pppp_monoimages[angle][color][row][col] (the only color here is MONO) is also generated where rgb data is merged into a mono image.</p>
+<p>From these superimages, the posterior funcions (DOLP, AOLP, DOLPAOLP, among others) are easily computable.</p>
+<div class="toctree-wrapper compound">
+</div>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="index.html" class="btn btn-neutral float-left" title="PolarizedSDK documentation" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="Library.html" class="btn btn-neutral float-right" title="Library files" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2021, PF.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

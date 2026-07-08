@@ -1,0 +1,16 @@
+2023-03-31T14:11:58.334295Z INFO    - ProcessingUnit::_PropagateDataTypes()
+2023-03-31T14:11:58.334316Z INFO    - OutputPort: reference_spectrum_pipeline.spectral_processing_group.non_uniformity_unit.out; Actual kind: AK_HYPERCUBE_BIP; Minimal kind: AK_ARRAY
+2023-03-31T14:11:58.334324Z INFO    - InputPort: reference_spectrum_pipeline.spectral_processing_group.spectral_processing_group_out.in; Actual kind: AK_HYPERCUBE_BIP; Minimal kind: AK_HYPERCUBE_BIP
+2023-03-31T14:11:58.578432Z INFO    - ProcessingUnit::Process
+2023-03-31T14:11:59.300403Z INFO    - ProcessingUnit::_PropagateDataTypes()
+2023-03-31T14:11:59.300431Z INFO    - OutputPort: reference_spectrum_pipeline.spectral_processing_group.non_uniformity_unit.out; Actual kind: AK_HYPERCUBE_BIP; Minimal kind: AK_ARRAY
+2023-03-31T14:11:59.300441Z INFO    - InputPort: reference_spectrum_pipeline.spectral_processing_group.spectrum_normalization_unit.in; Actual kind: AK_HYPERCUBE_BIP; Minimal kind: AK_ARRAY
+2023-03-31T14:11:59.536442Z INFO    - ProcessingUnit::Process
+2023-03-31T14:14:59.055608Z INFO    - ProcessingUnit::_PropagateDataTypes()
+2023-03-31T14:14:59.055664Z INFO    - OutputPort: reference_spectrum_pipeline.spectral_processing_group.non_uniformity_unit.out; Actual kind: AK_HYPERCUBE_BIP; Minimal kind: AK_ARRAY
+2023-03-31T14:14:59.055676Z INFO    - InputPort: reference_spectrum_pipeline.spectral_processing_group.spectral_processing_group_out.in; Actual kind: AK_HYPERCUBE_BIP; Minimal kind: AK_HYPERCUBE_BIP
+2023-03-31T14:14:59.270363Z INFO    - ProcessingUnit::Process
+2023-03-31T14:15:00.056094Z INFO    - ProcessingUnit::_PropagateDataTypes()
+2023-03-31T14:15:00.056125Z INFO    - OutputPort: reference_spectrum_pipeline.spectral_processing_group.non_uniformity_unit.out; Actual kind: AK_HYPERCUBE_BIP; Minimal kind: AK_ARRAY
+2023-03-31T14:15:00.056131Z INFO    - InputPort: reference_spectrum_pipeline.spectral_processing_group.spectrum_normalization_unit.in; Actual kind: AK_HYPERCUBE_BIP; Minimal kind: AK_ARRAY
+2023-03-31T14:15:00.297102Z INFO    - ProcessingUnit::Process

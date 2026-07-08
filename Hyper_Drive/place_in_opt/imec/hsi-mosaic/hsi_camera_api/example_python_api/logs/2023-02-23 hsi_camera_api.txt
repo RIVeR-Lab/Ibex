@@ -1,0 +1,31 @@
+2023-02-23T01:46:20.851585Z ERROR   - cameraOpenDevice: An error occurred - [virtual void ihspt::drivers::CM_XimeaXiq::_Connect()] xiOpenDeviceBy(XI_OPEN_BY_SN, _identification_string.c_str(), &_device) : Unknown hardware
+2023-02-23T01:49:30.648626Z INFO    - Module::Initialize -->
+2023-02-23T01:49:30.648630Z VERBOSE -    trying to initialize...
+2023-02-23T01:49:31.037303Z INFO    - Module::Initialize <--
+2023-02-23T01:49:31.083720Z INFO    - Module::Start -->
+2023-02-23T01:49:31.106396Z INFO    - Module::Start <--
+2023-02-23T01:49:31.136229Z INFO    - Module::Pauze -->
+2023-02-23T01:49:31.255212Z INFO    - Module::Pauze <--
+2023-02-23T01:49:31.255257Z INFO    - Module::Stop -->
+2023-02-23T01:49:31.308738Z INFO    - Module::Stop <--
+2023-02-23T01:49:31.308774Z INFO    - Module::Stop -->
+2023-02-23T01:49:36.557261Z INFO    - Module::Initialize -->
+2023-02-23T01:49:36.557264Z VERBOSE -    trying to initialize...
+2023-02-23T01:49:36.820188Z INFO    - Module::Initialize <--
+2023-02-23T01:49:36.858476Z INFO    - Module::Start -->
+2023-02-23T01:49:36.882961Z INFO    - Module::Start <--
+2023-02-23T01:49:36.883528Z INFO    - Module::Initialize -->
+2023-02-23T01:49:36.883531Z VERBOSE -    trying to initialize...
+2023-02-23T01:49:36.888976Z INFO    - Module::Initialize <--
+2023-02-23T01:49:36.896018Z INFO    - Module::Start -->
+2023-02-23T01:49:36.896036Z INFO    - Module::Start <--
+2023-02-23T01:49:41.475895Z INFO    - Module::Pauze -->
+2023-02-23T01:49:41.796931Z INFO    - Module::Pauze <--
+2023-02-23T01:49:41.796956Z INFO    - Module::Stop -->
+2023-02-23T01:49:41.849749Z INFO    - Module::Stop <--
+2023-02-23T01:49:41.849767Z INFO    - Module::Stop -->
+2023-02-23T01:49:41.960089Z INFO    - Module::Pauze -->
+2023-02-23T01:49:42.021049Z INFO    - Module::Pauze <--
+2023-02-23T01:49:42.021073Z INFO    - Module::Stop -->
+2023-02-23T01:49:42.021404Z INFO    - Module::Stop <--
+2023-02-23T01:49:42.021426Z INFO    - Module::Stop -->

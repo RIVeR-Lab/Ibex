@@ -1,0 +1,7 @@
+# Packages required to run the provided examples.
+# Not all packages are required for all examples.
+colorama
+numpy
+scikit-build
+opencv-python
+matplotlib

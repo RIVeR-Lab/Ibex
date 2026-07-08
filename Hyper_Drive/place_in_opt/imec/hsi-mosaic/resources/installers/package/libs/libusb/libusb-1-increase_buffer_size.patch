@@ -1,0 +1,11 @@
+--- libusb-1.0.21/libusb/os/linux_usbfs.h.orig	2017-08-08 20:05:06.566576078 +0200
++++ libusb-1.0.21/libusb/os/linux_usbfs.h	2017-08-08 20:06:22.855923472 +0200
+@@ -82,7 +82,7 @@
+ };
+ 
+ #define MAX_ISO_BUFFER_LENGTH		49152 * 128
+-#define MAX_BULK_BUFFER_LENGTH		16384
++#define MAX_BULK_BUFFER_LENGTH		1048576
+ #define MAX_CTRL_BUFFER_LENGTH		4096
+ 
+ struct usbfs_urb {

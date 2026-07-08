@@ -1,0 +1,57 @@
+.. _Introduction:
+
+Introduction
+============
+
+The PolarizedSDK contains C++ libraries and tools to operate with RAW images acquired with a Photonfocus mono or color polarized camera. This SDK contains examples to obtain relevant images such as DOLP or AOLP.
+
+Polarized Sensors
+-----------------
+
+Polarized sensors used by Photonfocus are able to detect the intensity of light in 4 polarization angles (0, 45, 90 and 135 degrees). From this data, useful information can be extracted
+such as the Degree and Angle of Linear Polarization of the incident light (DoLP and AoLP). This data can be obtained with this SDK starting with a RAW image in various formats depending on the 
+user needs. The SDK is also able to work with color polarized cameras and also provides a useful set of tools. These tools and information are briefly described in the next lines.
+
+For mono cameras:
+-----------------
+
+- Mono image of a specific polarization angle.
+- 2x2 image showing four subimages, one for each polarization angle.
+- Degree of Linear Polarization: DoLP computes how linearly polarized the incident light is (from 0% to 100% or 0.0 to 1.0) and outputs a mono8 image. This parameter can be useful to characterize materials and illuminants, for example.
+- Angle of Linear Polarization: AoLP computes the angle of this linearly polarized light with respect to the main camera axis (0 to 180 degrees) and outputs a mono8 image. Provides useful information to identify shapes and surface types, among others.
+- AOLP - HSV: AoLP can also be represented in a visual HSV format, where hue represents the angle (0 and 180 degrees - Red, 60 deg - Blue, 120 deg - Green).
+- AOLPDOLP - HSV: AoLP and DoLP are combined in a HSV image where hue represents the angle and color saturation is proportional to DoLP.
+
+
+For color cameras:
+--------------------
+
+Similar images can be obtained, but additional features are available:\n
+- Color image of a polarization angle.\n
+- DoLP, AoLP and HSV representations of a specific color.\n\n
+
+Data format
+-------------
+
+For mono cameras, RAW image is simply stored in a buffer and then processed by the different available functions.
+
+For color cameras, a superimage is generated before processing the data.
+
+This superimage has the format pppp_colorimages[angle][color][row][col] where each angle and color has one associated buffer that stores a mono image.
+A second superimage pppp_monoimages[angle][color][row][col] (the only color here is MONO) is also generated where rgb data is merged into a mono image.
+
+From these superimages, the posterior funcions (DOLP, AOLP, DOLPAOLP, among others) are easily computable.
+
+
+.. toctree::
+   :caption: Modules
+   :titlesonly:
+   :maxdepth: 1
+   :hidden:
+   
+   
+   
+
+   
+
+  

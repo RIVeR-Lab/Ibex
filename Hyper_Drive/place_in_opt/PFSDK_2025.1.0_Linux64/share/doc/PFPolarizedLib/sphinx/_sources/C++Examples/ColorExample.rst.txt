@@ -1,0 +1,31 @@
+.. _Color-Example:
+
+Color Example
+=============
+
+*GetColorPolarizedImages.cpp* 
+
+Very similar to GetMonoPolarizedImages, this example works for color RAW images and provides additional results. Here, the example starts computing a RGB superimage where 12 images are stored (Red, Green and Blue for each polarization angle {deg_0, deg_45, deg_90 and deg_135}) in format pppp_result[color][angle][row][col]. A mono superimage is also generated, containing 4 images (Mono for each polarization angle) again with format pppp_monoresult[color][angle][row][col].
+
+From these superimages, a lot of combinations are available. All the results that were obtained with the mono camera can be reproduced here using pppp_monoresult. However, the RGB camera gives the possibility to obtain color images for each polarization angle, but also mono images, DOLP, AOLP and AOLPDOLP, among others, of a certain polarization angle and color using pppp_result[color][angle]. Most part of these results are shown in this example.
+
+The available outputs are:
+	- RGB and mono images for each polarization angle
+	- Degree of Linear Polarization (DoLP) for each color (also available for merged mono data).
+	- Angle of Linear Polarization (AoLP) for each colour (or mono), also available in HSV format
+	- A combination of DoLP and AoLP in HSV format, where DoLP is the saturation, and AoLP the hue
+
+To get these images, only the RAW image from the camera is needed.
+
+Images are saved in BMP or RAW format. 
+
+:ref:`source-Code-Color`
+
+.. toctree::
+   :caption: Modules
+   :titlesonly:
+   :maxdepth: 1
+   :hidden:
+
+   SourceCodeColor/ColorExample
+   

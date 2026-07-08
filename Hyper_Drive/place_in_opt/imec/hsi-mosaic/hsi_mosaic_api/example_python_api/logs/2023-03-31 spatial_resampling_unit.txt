@@ -1,0 +1,32 @@
+2023-03-31T14:11:57.743572Z INFO    - ProcessingUnit::_PropagateDataTypes()
+2023-03-31T14:11:57.743613Z INFO    - OutputPort: non_uniformity_pipeline.spatial_processing_group.spatial_resampling_unit.out; Actual kind: AK_BAND_IMAGE_BSQ; Minimal kind: AK_ABSTRACT_BAND_IMAGE
+2023-03-31T14:11:57.743623Z INFO    - InputPort: non_uniformity_pipeline.spatial_processing_group.illumination_fall_off.in; Actual kind: AK_BAND_IMAGE_BSQ; Minimal kind: AK_ARRAY
+2023-03-31T14:11:57.985711Z INFO    - ProcessingUnit::Process
+2023-03-31T14:11:58.201467Z INFO    - ProcessingUnit::_PropagateDataTypes()
+2023-03-31T14:11:58.201498Z INFO    - OutputPort: reference_spectrum_pipeline.spatial_processing_group.spatial_resampling_unit.out; Actual kind: AK_BAND_IMAGE_BSQ; Minimal kind: AK_ABSTRACT_BAND_IMAGE
+2023-03-31T14:11:58.201505Z INFO    - InputPort: reference_spectrum_pipeline.spatial_processing_group.spatial_processing_group_out.in; Actual kind: AK_BAND_IMAGE_BSQ; Minimal kind: AK_BAND_IMAGE_BSQ
+2023-03-31T14:11:58.521977Z INFO    - ProcessingUnit::Process
+2023-03-31T14:11:58.690274Z INFO    - ProcessingUnit::_PropagateDataTypes()
+2023-03-31T14:11:58.690316Z INFO    - OutputPort: non_uniformity_pipeline.spatial_processing_group.spatial_resampling_unit.out; Actual kind: AK_BAND_IMAGE_BSQ; Minimal kind: AK_ABSTRACT_BAND_IMAGE
+2023-03-31T14:11:58.690327Z INFO    - InputPort: non_uniformity_pipeline.spatial_processing_group.illumination_fall_off.in; Actual kind: AK_BAND_IMAGE_BSQ; Minimal kind: AK_ARRAY
+2023-03-31T14:11:58.954285Z INFO    - ProcessingUnit::Process
+2023-03-31T14:11:59.168888Z INFO    - ProcessingUnit::_PropagateDataTypes()
+2023-03-31T14:11:59.168923Z INFO    - OutputPort: reference_spectrum_pipeline.spatial_processing_group.spatial_resampling_unit.out; Actual kind: AK_BAND_IMAGE_BSQ; Minimal kind: AK_ABSTRACT_BAND_IMAGE
+2023-03-31T14:11:59.168932Z INFO    - InputPort: reference_spectrum_pipeline.spatial_processing_group.spatial_processing_group_out.in; Actual kind: AK_BAND_IMAGE_BSQ; Minimal kind: AK_BAND_IMAGE_BSQ
+2023-03-31T14:11:59.463209Z INFO    - ProcessingUnit::Process
+2023-03-31T14:14:58.443902Z INFO    - ProcessingUnit::_PropagateDataTypes()
+2023-03-31T14:14:58.443938Z INFO    - OutputPort: non_uniformity_pipeline.spatial_processing_group.spatial_resampling_unit.out; Actual kind: AK_BAND_IMAGE_BSQ; Minimal kind: AK_ABSTRACT_BAND_IMAGE
+2023-03-31T14:14:58.443947Z INFO    - InputPort: non_uniformity_pipeline.spatial_processing_group.illumination_fall_off.in; Actual kind: AK_BAND_IMAGE_BSQ; Minimal kind: AK_ARRAY
+2023-03-31T14:14:58.695034Z INFO    - ProcessingUnit::Process
+2023-03-31T14:14:58.919226Z INFO    - ProcessingUnit::_PropagateDataTypes()
+2023-03-31T14:14:58.919280Z INFO    - OutputPort: reference_spectrum_pipeline.spatial_processing_group.spatial_resampling_unit.out; Actual kind: AK_BAND_IMAGE_BSQ; Minimal kind: AK_ABSTRACT_BAND_IMAGE
+2023-03-31T14:14:58.919287Z INFO    - InputPort: reference_spectrum_pipeline.spatial_processing_group.spatial_processing_group_out.in; Actual kind: AK_BAND_IMAGE_BSQ; Minimal kind: AK_BAND_IMAGE_BSQ
+2023-03-31T14:14:59.215301Z INFO    - ProcessingUnit::Process
+2023-03-31T14:14:59.422629Z INFO    - ProcessingUnit::_PropagateDataTypes()
+2023-03-31T14:14:59.422674Z INFO    - OutputPort: non_uniformity_pipeline.spatial_processing_group.spatial_resampling_unit.out; Actual kind: AK_BAND_IMAGE_BSQ; Minimal kind: AK_ABSTRACT_BAND_IMAGE
+2023-03-31T14:14:59.422683Z INFO    - InputPort: non_uniformity_pipeline.spatial_processing_group.illumination_fall_off.in; Actual kind: AK_BAND_IMAGE_BSQ; Minimal kind: AK_ARRAY
+2023-03-31T14:14:59.687786Z INFO    - ProcessingUnit::Process
+2023-03-31T14:14:59.924069Z INFO    - ProcessingUnit::_PropagateDataTypes()
+2023-03-31T14:14:59.924124Z INFO    - OutputPort: reference_spectrum_pipeline.spatial_processing_group.spatial_resampling_unit.out; Actual kind: AK_BAND_IMAGE_BSQ; Minimal kind: AK_ABSTRACT_BAND_IMAGE
+2023-03-31T14:14:59.924132Z INFO    - InputPort: reference_spectrum_pipeline.spatial_processing_group.spatial_processing_group_out.in; Actual kind: AK_BAND_IMAGE_BSQ; Minimal kind: AK_BAND_IMAGE_BSQ
+2023-03-31T14:15:00.225848Z INFO    - ProcessingUnit::Process

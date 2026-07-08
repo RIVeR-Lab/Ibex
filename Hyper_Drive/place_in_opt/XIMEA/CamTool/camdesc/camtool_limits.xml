@@ -1,0 +1,876 @@
+<resources>
+<limits>
+<limit><conditions>
+<condition type="os" value="*"/>
+<condition type="osbits" value="*"/>
+<condition type="operation" value="start_program"/>
+</conditions>
+<avail_memory_threshold_MB value="300"/>
+</limit>
+<limit><conditions>
+<condition type="os" value="*"/>
+<condition type="osbits" value="32"/>
+<condition type="operation" value="start_acquisition"/>
+<condition type="apipar" key="device_name" value="MT200MG"/>
+<condition type="apipar" key="imgdataformat" value="*"/>
+</conditions>
+<avail_memory_threshold_MB value="2000"/>
+</limit>
+<limit><conditions>
+<condition type="os" value="*"/>
+<condition type="osbits" value="32"/>
+<condition type="operation" value="start_acquisition"/>
+<condition type="apipar" key="device_name" value="MT200CG"/>
+<condition type="apipar" key="imgdataformat" value="*"/>
+</conditions>
+<avail_memory_threshold_MB value="2000"/>
+</limit>
+<limit><conditions>
+<condition type="os" value="*"/>
+<condition type="osbits" value="32"/>
+<condition type="operation" value="start_acquisition"/>
+<condition type="apipar" key="device_name" value="MT120MG"/>
+<condition type="apipar" key="imgdataformat" value="*"/>
+</conditions>
+<avail_memory_threshold_MB value="2000"/>
+</limit>
+<limit><conditions>
+<condition type="os" value="*"/>
+<condition type="osbits" value="32"/>
+<condition type="operation" value="start_acquisition"/>
+<condition type="apipar" key="device_name" value="MT120CG"/>
+<condition type="apipar" key="imgdataformat" value="*"/>
+</conditions>
+<avail_memory_threshold_MB value="2000"/>
+</limit>
+<limit><conditions>
+<condition type="os" value="*"/>
+<condition type="osbits" value="32"/>
+<condition type="operation" value="start_acquisition"/>
+<condition type="apipar" key="device_name" value="CB200CG"/>
+<condition type="apipar" key="imgdataformat" value="*"/>
+</conditions>
+<avail_memory_threshold_MB value="2000"/>
+</limit>
+<limit><conditions>
+<condition type="os" value="*"/>
+<condition type="osbits" value="32"/>
+<condition type="operation" value="start_acquisition"/>
+<condition type="apipar" key="device_name" value="MD120C"/>
+<condition type="apipar" key="imgdataformat" value="*"/>
+</conditions>
+<avail_memory_threshold_MB value="900"/>
+</limit>
+<limit><conditions>
+<condition type="os" value="*"/>
+<condition type="osbits" value="32"/>
+<condition type="operation" value="start_acquisition"/>
+<condition type="apipar" key="device_name" value="MQ042CG*"/>
+<condition type="apipar" key="imgdataformat" value="*"/>
+</conditions>
+<avail_memory_threshold_MB value="400"/>
+</limit>
+<limit><conditions>
+<condition type="os" value="*"/>
+<condition type="osbits" value="32"/>
+<condition type="operation" value="start_acquisition"/>
+<condition type="apipar" key="device_name" value="MQ042MG"/>
+<condition type="apipar" key="imgdataformat" value="*"/>
+</conditions>
+<avail_memory_threshold_MB value="400"/>
+</limit>
+<limit><conditions>
+<condition type="os" value="*"/>
+<condition type="osbits" value="64"/>
+<condition type="operation" value="start_acquisition"/>
+<condition type="apipar" key="device_name" value="MT200MG"/>
+<condition type="apipar" key="imgdataformat" value="*"/>
+</conditions>
+<avail_memory_threshold_MB value="1900"/>
+</limit>
+<limit><conditions>
+<condition type="os" value="*"/>
+<condition type="osbits" value="64"/>
+<condition type="operation" value="start_acquisition"/>
+<condition type="apipar" key="device_name" value="MT200CG"/>
+<condition type="apipar" key="imgdataformat" value="*"/>
+</conditions>
+<avail_memory_threshold_MB value="1900"/>
+</limit>
+<limit><conditions>
+<condition type="os" value="*"/>
+<condition type="osbits" value="64"/>
+<condition type="operation" value="start_acquisition"/>
+<condition type="apipar" key="device_name" value="MT120MG"/>
+<condition type="apipar" key="imgdataformat" value="*"/>
+</conditions>
+<avail_memory_threshold_MB value="1600"/>
+</limit>
+<limit><conditions>
+<condition type="os" value="*"/>
+<condition type="osbits" value="64"/>
+<condition type="operation" value="start_acquisition"/>
+<condition type="apipar" key="device_name" value="MT120CG"/>
+<condition type="apipar" key="imgdataformat" value="*"/>
+</conditions>
+<avail_memory_threshold_MB value="1600"/>
+</limit>
+<limit><conditions>
+<condition type="os" value="*"/>
+<condition type="osbits" value="64"/>
+<condition type="operation" value="start_acquisition"/>
+<condition type="apipar" key="device_name" value="CB200CG"/>
+<condition type="apipar" key="imgdataformat" value="*"/>
+</conditions>
+<avail_memory_threshold_MB value="1900"/>
+</limit>
+<limit><conditions>
+<condition type="os" value="*"/>
+<condition type="osbits" value="64"/>
+<condition type="operation" value="start_acquisition"/>
+<condition type="apipar" key="device_name" value="MD120C"/>
+<condition type="apipar" key="imgdataformat" value="*"/>
+</conditions>
+<avail_memory_threshold_MB value="900"/>
+</limit>
+<limit><conditions>
+<condition type="os" value="*"/>
+<condition type="osbits" value="64"/>
+<condition type="operation" value="start_acquisition"/>
+<condition type="apipar" key="device_name" value="MQ042CG*"/>
+<condition type="apipar" key="imgdataformat" value="*"/>
+</conditions>
+<avail_memory_threshold_MB value="400"/>
+</limit>
+<limit><conditions>
+<condition type="os" value="*"/>
+<condition type="osbits" value="64"/>
+<condition type="operation" value="start_acquisition"/>
+<condition type="apipar" key="device_name" value="MQ042MG"/>
+<condition type="apipar" key="imgdataformat" value="*"/>
+</conditions>
+<avail_memory_threshold_MB value="400"/>
+</limit>
+<limit><conditions>
+<condition type="os" value="*"/>
+<condition type="osbits" value="32"/>
+<condition type="operation" value="start_acquisition"/>
+<condition type="apipar" key="device_name" value="MT200MG"/>
+<condition type="apipar" key="imgdataformat" value="5"/>
+</conditions>
+<avail_memory_threshold_MB value="900"/>
+</limit>
+<limit><conditions>
+<condition type="os" value="*"/>
+<condition type="osbits" value="32"/>
+<condition type="operation" value="start_acquisition"/>
+<condition type="apipar" key="device_name" value="MT200CG"/>
+<condition type="apipar" key="imgdataformat" value="5"/>
+</conditions>
+<avail_memory_threshold_MB value="900"/>
+</limit>
+<limit><conditions>
+<condition type="os" value="*"/>
+<condition type="osbits" value="32"/>
+<condition type="operation" value="start_acquisition"/>
+<condition type="apipar" key="device_name" value="MT120MG"/>
+<condition type="apipar" key="imgdataformat" value="5"/>
+</conditions>
+<avail_memory_threshold_MB value="800"/>
+</limit>
+<limit><conditions>
+<condition type="os" value="*"/>
+<condition type="osbits" value="32"/>
+<condition type="operation" value="start_acquisition"/>
+<condition type="apipar" key="device_name" value="MT120CG"/>
+<condition type="apipar" key="imgdataformat" value="5"/>
+</conditions>
+<avail_memory_threshold_MB value="800"/>
+</limit>
+<limit><conditions>
+<condition type="os" value="*"/>
+<condition type="osbits" value="32"/>
+<condition type="operation" value="start_acquisition"/>
+<condition type="apipar" key="device_name" value="CB200CG"/>
+<condition type="apipar" key="imgdataformat" value="5"/>
+</conditions>
+<avail_memory_threshold_MB value="900"/>
+</limit>
+<limit><conditions>
+<condition type="os" value="*"/>
+<condition type="osbits" value="32"/>
+<condition type="operation" value="start_acquisition"/>
+<condition type="apipar" key="device_name" value="MD120C"/>
+<condition type="apipar" key="imgdataformat" value="5"/>
+</conditions>
+<avail_memory_threshold_MB value="600"/>
+</limit>
+<limit><conditions>
+<condition type="os" value="*"/>
+<condition type="osbits" value="32"/>
+<condition type="operation" value="start_acquisition"/>
+<condition type="apipar" key="device_name" value="MQ042CG*"/>
+<condition type="apipar" key="imgdataformat" value="5"/>
+</conditions>
+<avail_memory_threshold_MB value="300"/>
+</limit>
+<limit><conditions>
+<condition type="os" value="*"/>
+<condition type="osbits" value="32"/>
+<condition type="operation" value="start_acquisition"/>
+<condition type="apipar" key="device_name" value="MQ042MG"/>
+<condition type="apipar" key="imgdataformat" value="5"/>
+</conditions>
+<avail_memory_threshold_MB value="300"/>
+</limit>
+<limit><conditions>
+<condition type="os" value="*"/>
+<condition type="osbits" value="64"/>
+<condition type="operation" value="start_acquisition"/>
+<condition type="apipar" key="device_name" value="MT200MG"/>
+<condition type="apipar" key="imgdataformat" value="5"/>
+</conditions>
+<avail_memory_threshold_MB value="900"/>
+</limit>
+<limit><conditions>
+<condition type="os" value="*"/>
+<condition type="osbits" value="64"/>
+<condition type="operation" value="start_acquisition"/>
+<condition type="apipar" key="device_name" value="MT200CG"/>
+<condition type="apipar" key="imgdataformat" value="5"/>
+</conditions>
+<avail_memory_threshold_MB value="900"/>
+</limit>
+<limit><conditions>
+<condition type="os" value="*"/>
+<condition type="osbits" value="64"/>
+<condition type="operation" value="start_acquisition"/>
+<condition type="apipar" key="device_name" value="MT120MG"/>
+<condition type="apipar" key="imgdataformat" value="5"/>
+</conditions>
+<avail_memory_threshold_MB value="800"/>
+</limit>
+<limit><conditions>
+<condition type="os" value="*"/>
+<condition type="osbits" value="64"/>
+<condition type="operation" value="start_acquisition"/>
+<condition type="apipar" key="device_name" value="MT120CG"/>
+<condition type="apipar" key="imgdataformat" value="5"/>
+</conditions>
+<avail_memory_threshold_MB value="800"/>
+</limit>
+<limit><conditions>
+<condition type="os" value="*"/>
+<condition type="osbits" value="64"/>
+<condition type="operation" value="start_acquisition"/>
+<condition type="apipar" key="device_name" value="CB200CG"/>
+<condition type="apipar" key="imgdataformat" value="5"/>
+</conditions>
+<avail_memory_threshold_MB value="900"/>
+</limit>
+<limit><conditions>
+<condition type="os" value="*"/>
+<condition type="osbits" value="64"/>
+<condition type="operation" value="start_acquisition"/>
+<condition type="apipar" key="device_name" value="MD120C"/>
+<condition type="apipar" key="imgdataformat" value="5"/>
+</conditions>
+<avail_memory_threshold_MB value="600"/>
+</limit>
+<limit><conditions>
+<condition type="os" value="*"/>
+<condition type="osbits" value="64"/>
+<condition type="operation" value="start_acquisition"/>
+<condition type="apipar" key="device_name" value="MQ042CG*"/>
+<condition type="apipar" key="imgdataformat" value="5"/>
+</conditions>
+<avail_memory_threshold_MB value="300"/>
+
+</limit>
+<limit><conditions>
+<condition type="os" value="*"/>
+<condition type="osbits" value="64"/>
+<condition type="operation" value="start_acquisition"/>
+<condition type="apipar" key="device_name" value="MQ042MG"/>
+<condition type="apipar" key="imgdataformat" value="5"/>
+</conditions>
+<avail_memory_threshold_MB value="300"/>
+</limit>
+<limit><conditions>
+<condition type="os" value="*"/>
+<condition type="osbits" value="32"/>
+<condition type="operation" value="start_acquisition"/>
+<condition type="apipar" key="device_name" value="MT200MG"/>
+<condition type="apipar" key="imgdataformat" value="0"/>
+</conditions>
+<avail_memory_threshold_MB value="900"/>
+</limit>
+<limit><conditions>
+<condition type="os" value="*"/>
+<condition type="osbits" value="32"/>
+<condition type="operation" value="start_acquisition"/>
+<condition type="apipar" key="device_name" value="MT200CG"/>
+<condition type="apipar" key="imgdataformat" value="0"/>
+</conditions>
+<avail_memory_threshold_MB value="2000"/>
+</limit>
+<limit><conditions>
+<condition type="os" value="*"/>
+<condition type="osbits" value="32"/>
+<condition type="operation" value="start_acquisition"/>
+<condition type="apipar" key="device_name" value="MT120MG"/>
+<condition type="apipar" key="imgdataformat" value="0"/>
+</conditions>
+<avail_memory_threshold_MB value="800"/>
+</limit>
+<limit><conditions>
+<condition type="os" value="*"/>
+<condition type="osbits" value="32"/>
+<condition type="operation" value="start_acquisition"/>
+<condition type="apipar" key="device_name" value="MT120CG"/>
+<condition type="apipar" key="imgdataformat" value="0"/>
+</conditions>
+<avail_memory_threshold_MB value="1000"/>
+</limit>
+<limit><conditions>
+<condition type="os" value="*"/>
+<condition type="osbits" value="32"/>
+<condition type="operation" value="start_acquisition"/>
+<condition type="apipar" key="device_name" value="CB200CG"/>
+<condition type="apipar" key="imgdataformat" value="0"/>
+</conditions>
+<avail_memory_threshold_MB value="2000"/>
+</limit>
+<limit><conditions>
+<condition type="os" value="*"/>
+<condition type="osbits" value="32"/>
+<condition type="operation" value="start_acquisition"/>
+<condition type="apipar" key="device_name" value="MD120C"/>
+<condition type="apipar" key="imgdataformat" value="0"/>
+</conditions>
+<avail_memory_threshold_MB value="700"/>
+</limit>
+<limit><conditions>
+<condition type="os" value="*"/>
+<condition type="osbits" value="32"/>
+<condition type="operation" value="start_acquisition"/>
+<condition type="apipar" key="device_name" value="MQ042CG*"/>
+<condition type="apipar" key="imgdataformat" value="0"/>
+</conditions>
+<avail_memory_threshold_MB value="300"/>
+</limit>
+<limit><conditions>
+<condition type="os" value="*"/>
+<condition type="osbits" value="32"/>
+<condition type="operation" value="start_acquisition"/>
+<condition type="apipar" key="device_name" value="MQ042MG"/>
+<condition type="apipar" key="imgdataformat" value="0"/>
+</conditions>
+<avail_memory_threshold_MB value="300"/>
+</limit>
+<limit><conditions>
+<condition type="os" value="*"/>
+<condition type="osbits" value="64"/>
+<condition type="operation" value="start_acquisition"/>
+<condition type="apipar" key="device_name" value="MT200MG"/>
+<condition type="apipar" key="imgdataformat" value="0"/>
+</conditions>
+<avail_memory_threshold_MB value="900"/>
+</limit>
+<limit><conditions>
+<condition type="os" value="*"/>
+<condition type="osbits" value="64"/>
+<condition type="operation" value="start_acquisition"/>
+<condition type="apipar" key="device_name" value="MT200CG"/>
+<condition type="apipar" key="imgdataformat" value="0"/>
+</conditions>
+<avail_memory_threshold_MB value="1200"/>
+</limit>
+<limit><conditions>
+<condition type="os" value="*"/>
+<condition type="osbits" value="64"/>
+<condition type="operation" value="start_acquisition"/>
+<condition type="apipar" key="device_name" value="MT120MG"/>
+<condition type="apipar" key="imgdataformat" value="0"/>
+</conditions>
+<avail_memory_threshold_MB value="800"/>
+</limit>
+<limit><conditions>
+<condition type="os" value="*"/>
+<condition type="osbits" value="64"/>
+<condition type="operation" value="start_acquisition"/>
+<condition type="apipar" key="device_name" value="MT120CG"/>
+<condition type="apipar" key="imgdataformat" value="0"/>
+</conditions>
+<avail_memory_threshold_MB value="1000"/>
+</limit>
+<limit><conditions>
+<condition type="os" value="*"/>
+<condition type="osbits" value="64"/>
+<condition type="operation" value="start_acquisition"/>
+<condition type="apipar" key="device_name" value="CB200CG"/>
+<condition type="apipar" key="imgdataformat" value="0"/>
+</conditions>
+<avail_memory_threshold_MB value="1200"/>
+</limit>
+<limit><conditions>
+<condition type="os" value="*"/>
+<condition type="osbits" value="64"/>
+<condition type="operation" value="start_acquisition"/>
+<condition type="apipar" key="device_name" value="MD120C"/>
+<condition type="apipar" key="imgdataformat" value="0"/>
+</conditions>
+<avail_memory_threshold_MB value="700"/>
+</limit>
+<limit><conditions>
+<condition type="os" value="*"/>
+<condition type="osbits" value="64"/>
+<condition type="operation" value="start_acquisition"/>
+<condition type="apipar" key="device_name" value="MQ042CG*"/>
+<condition type="apipar" key="imgdataformat" value="0"/>
+</conditions>
+<avail_memory_threshold_MB value="300"/>
+</limit>
+<limit><conditions>
+<condition type="os" value="*"/>
+<condition type="osbits" value="64"/>
+<condition type="operation" value="start_acquisition"/>
+<condition type="apipar" key="device_name" value="MQ042MG"/>
+<condition type="apipar" key="imgdataformat" value="0"/>
+</conditions>
+<avail_memory_threshold_MB value="300"/>
+</limit>
+<limit><conditions>
+<condition type="os" value="*"/>
+<condition type="osbits" value="32"/>
+<condition type="operation" value="start_video_record"/>
+<condition type="apipar" key="device_name" value="MT200MG"/>
+<condition type="apipar" key="imgdataformat" value="3"/>
+</conditions>
+<avail_memory_threshold_MB value="2800"/>
+</limit>
+<limit><conditions>
+<condition type="os" value="*"/>
+<condition type="osbits" value="32"/>
+<condition type="operation" value="start_video_record"/>
+<condition type="apipar" key="device_name" value="MT200CG"/>
+<condition type="apipar" key="imgdataformat" value="3"/>
+</conditions>
+<avail_memory_threshold_MB value="2800"/>
+</limit>
+<limit><conditions>
+<condition type="os" value="*"/>
+<condition type="osbits" value="32"/>
+<condition type="operation" value="start_video_record"/>
+<condition type="apipar" key="device_name" value="MT120MG"/>
+<condition type="apipar" key="imgdataformat" value="3"/>
+</conditions>
+<avail_memory_threshold_MB value="2400"/>
+</limit>
+<limit><conditions>
+<condition type="os" value="*"/>
+<condition type="osbits" value="32"/>
+<condition type="operation" value="start_video_record"/>
+<condition type="apipar" key="device_name" value="MT120CG"/>
+<condition type="apipar" key="imgdataformat" value="3"/>
+</conditions>
+<avail_memory_threshold_MB value="2400"/>
+</limit>
+<limit><conditions>
+<condition type="os" value="*"/>
+<condition type="osbits" value="32"/>
+<condition type="operation" value="start_video_record"/>
+<condition type="apipar" key="device_name" value="CB200CG"/>
+<condition type="apipar" key="imgdataformat" value="3"/>
+</conditions>
+<avail_memory_threshold_MB value="2000"/>
+</limit>
+<limit><conditions>
+<condition type="os" value="*"/>
+<condition type="osbits" value="32"/>
+<condition type="operation" value="start_video_record"/>
+<condition type="apipar" key="device_name" value="MD120C"/>
+<condition type="apipar" key="imgdataformat" value="3"/>
+</conditions>
+<avail_memory_threshold_MB value="1400"/>
+</limit>
+<limit><conditions>
+<condition type="os" value="*"/>
+<condition type="osbits" value="32"/>
+<condition type="operation" value="start_video_record"/>
+<condition type="apipar" key="device_name" value="MQ042CG*"/>
+<condition type="apipar" key="imgdataformat" value="3"/>
+</conditions>
+<avail_memory_threshold_MB value="700"/>
+</limit>
+<limit><conditions>
+<condition type="os" value="*"/>
+<condition type="osbits" value="32"/>
+<condition type="operation" value="start_video_record"/>
+<condition type="apipar" key="device_name" value="MQ042MG"/>
+<condition type="apipar" key="imgdataformat" value="3"/>
+</conditions>
+<avail_memory_threshold_MB value="700"/>
+</limit>
+<limit><conditions>
+<condition type="os" value="*"/>
+<condition type="osbits" value="64"/>
+<condition type="operation" value="start_video_record"/>
+<condition type="apipar" key="device_name" value="MT200MG"/>
+<condition type="apipar" key="imgdataformat" value="3"/>
+</conditions>
+<avail_memory_threshold_MB value="2800"/>
+</limit>
+<limit><conditions>
+<condition type="os" value="*"/>
+<condition type="osbits" value="64"/>
+<condition type="operation" value="start_video_record"/>
+<condition type="apipar" key="device_name" value="MT200CG"/>
+<condition type="apipar" key="imgdataformat" value="3"/>
+</conditions>
+<avail_memory_threshold_MB value="2800"/>
+</limit>
+<limit><conditions>
+<condition type="os" value="*"/>
+<condition type="osbits" value="64"/>
+<condition type="operation" value="start_video_record"/>
+<condition type="apipar" key="device_name" value="MT120MG"/>
+<condition type="apipar" key="imgdataformat" value="3"/>
+</conditions>
+<avail_memory_threshold_MB value="2400"/>
+</limit>
+<limit><conditions>
+<condition type="os" value="*"/>
+<condition type="osbits" value="64"/>
+<condition type="operation" value="start_video_record"/>
+<condition type="apipar" key="device_name" value="MT120CG"/>
+<condition type="apipar" key="imgdataformat" value="3"/>
+</conditions>
+<avail_memory_threshold_MB value="2400"/>
+</limit>
+<limit><conditions>
+<condition type="os" value="*"/>
+<condition type="osbits" value="64"/>
+<condition type="operation" value="start_video_record"/>
+<condition type="apipar" key="device_name" value="CB200CG"/>
+<condition type="apipar" key="imgdataformat" value="3"/>
+</conditions>
+<avail_memory_threshold_MB value="2800"/>
+</limit>
+<limit><conditions>
+<condition type="os" value="*"/>
+<condition type="osbits" value="64"/>
+<condition type="operation" value="start_video_record"/>
+<condition type="apipar" key="device_name" value="MD120C"/>
+<condition type="apipar" key="imgdataformat" value="3"/>
+</conditions>
+<avail_memory_threshold_MB value="1400"/>
+</limit>
+<limit><conditions>
+<condition type="os" value="*"/>
+<condition type="osbits" value="64"/>
+<condition type="operation" value="start_video_record"/>
+<condition type="apipar" key="device_name" value="MQ042CG*"/>
+<condition type="apipar" key="imgdataformat" value="3"/>
+</conditions>
+<avail_memory_threshold_MB value="700"/>
+</limit>
+<limit><conditions>
+<condition type="os" value="*"/>
+<condition type="osbits" value="64"/>
+<condition type="operation" value="start_video_record"/>
+<condition type="apipar" key="device_name" value="MQ042MG"/>
+<condition type="apipar" key="imgdataformat" value="3"/>
+</conditions>
+<avail_memory_threshold_MB value="700"/>
+</limit>
+<limit><conditions>
+<condition type="os" value="*"/>
+<condition type="osbits" value="32"/>
+<condition type="operation" value="start_video_record"/>
+<condition type="apipar" key="device_name" value="MT200MG"/>
+<condition type="apipar" key="imgdataformat" value="5"/>
+</conditions>
+<avail_memory_threshold_MB value="1300"/>
+</limit>
+<limit><conditions>
+<condition type="os" value="*"/>
+<condition type="osbits" value="32"/>
+<condition type="operation" value="start_video_record"/>
+<condition type="apipar" key="device_name" value="MT200CG"/>
+<condition type="apipar" key="imgdataformat" value="5"/>
+</conditions>
+<avail_memory_threshold_MB value="1300"/>
+</limit>
+<limit><conditions>
+<condition type="os" value="*"/>
+<condition type="osbits" value="32"/>
+<condition type="operation" value="start_video_record"/>
+<condition type="apipar" key="device_name" value="MT120MG"/>
+<condition type="apipar" key="imgdataformat" value="5"/>
+</conditions>
+<avail_memory_threshold_MB value="1200"/>
+</limit>
+<limit><conditions>
+<condition type="os" value="*"/>
+<condition type="osbits" value="32"/>
+<condition type="operation" value="start_video_record"/>
+<condition type="apipar" key="device_name" value="MT120CG"/>
+<condition type="apipar" key="imgdataformat" value="5"/>
+</conditions>
+<avail_memory_threshold_MB value="1200"/>
+</limit>
+<limit><conditions>
+<condition type="os" value="*"/>
+<condition type="osbits" value="32"/>
+<condition type="operation" value="start_video_record"/>
+<condition type="apipar" key="device_name" value="CB200CG"/>
+<condition type="apipar" key="imgdataformat" value="5"/>
+</conditions>
+<avail_memory_threshold_MB value="1300"/>
+</limit>
+<limit><conditions>
+<condition type="os" value="*"/>
+<condition type="osbits" value="32"/>
+<condition type="operation" value="start_video_record"/>
+<condition type="apipar" key="device_name" value="MD120C"/>
+<condition type="apipar" key="imgdataformat" value="5"/>
+</conditions>
+<avail_memory_threshold_MB value="1000"/>
+</limit>
+<limit><conditions>
+<condition type="os" value="*"/>
+<condition type="osbits" value="32"/>
+<condition type="operation" value="start_video_record"/>
+<condition type="apipar" key="device_name" value="MQ042CG*"/>
+<condition type="apipar" key="imgdataformat" value="5"/>
+</conditions>
+<avail_memory_threshold_MB value="400"/>
+</limit>
+<limit><conditions>
+<condition type="os" value="*"/>
+<condition type="osbits" value="32"/>
+<condition type="operation" value="start_video_record"/>
+<condition type="apipar" key="device_name" value="MQ042MG"/>
+<condition type="apipar" key="imgdataformat" value="5"/>
+</conditions>
+<avail_memory_threshold_MB value="500"/>
+</limit>
+<limit><conditions>
+<condition type="os" value="*"/>
+<condition type="osbits" value="64"/>
+<condition type="operation" value="start_video_record"/>
+<condition type="apipar" key="device_name" value="MT200MG"/>
+<condition type="apipar" key="imgdataformat" value="5"/>
+</conditions>
+<avail_memory_threshold_MB value="1300"/>
+</limit>
+<limit><conditions>
+<condition type="os" value="*"/>
+<condition type="osbits" value="64"/>
+<condition type="operation" value="start_video_record"/>
+<condition type="apipar" key="device_name" value="MT200CG"/>
+<condition type="apipar" key="imgdataformat" value="5"/>
+</conditions>
+<avail_memory_threshold_MB value="1300"/>
+</limit>
+<limit><conditions>
+<condition type="os" value="*"/>
+<condition type="osbits" value="64"/>
+<condition type="operation" value="start_video_record"/>
+<condition type="apipar" key="device_name" value="MT120MG"/>
+<condition type="apipar" key="imgdataformat" value="5"/>
+</conditions>
+<avail_memory_threshold_MB value="1300"/>
+</limit>
+<limit><conditions>
+<condition type="os" value="*"/>
+<condition type="osbits" value="64"/>
+<condition type="operation" value="start_video_record"/>
+<condition type="apipar" key="device_name" value="MT120CG"/>
+<condition type="apipar" key="imgdataformat" value="5"/>
+</conditions>
+<avail_memory_threshold_MB value="1200"/>
+</limit>
+<limit><conditions>
+<condition type="os" value="*"/>
+<condition type="osbits" value="64"/>
+<condition type="operation" value="start_video_record"/>
+<condition type="apipar" key="device_name" value="CB200CG"/>
+<condition type="apipar" key="imgdataformat" value="5"/>
+</conditions>
+<avail_memory_threshold_MB value="1300"/>
+</limit>
+<limit><conditions>
+<condition type="os" value="*"/>
+<condition type="osbits" value="64"/>
+<condition type="operation" value="start_video_record"/>
+<condition type="apipar" key="device_name" value="MD120C"/>
+<condition type="apipar" key="imgdataformat" value="5"/>
+</conditions>
+<avail_memory_threshold_MB value="1000"/>
+</limit>
+<limit><conditions>
+<condition type="os" value="*"/>
+<condition type="osbits" value="64"/>
+<condition type="operation" value="start_video_record"/>
+<condition type="apipar" key="device_name" value="MQ042CG*"/>
+<condition type="apipar" key="imgdataformat" value="5"/>
+</conditions>
+<avail_memory_threshold_MB value="400"/>
+</limit>
+<limit><conditions>
+<condition type="os" value="*"/>
+<condition type="osbits" value="64"/>
+<condition type="operation" value="start_video_record"/>
+<condition type="apipar" key="device_name" value="MQ042MG"/>
+<condition type="apipar" key="imgdataformat" value="5"/>
+</conditions>
+<avail_memory_threshold_MB value="500"/>
+</limit>
+<limit><conditions>
+<condition type="os" value="*"/>
+<condition type="osbits" value="32"/>
+<condition type="operation" value="start_video_record"/>
+<condition type="apipar" key="device_name" value="MT200MG"/>
+<condition type="apipar" key="imgdataformat" value="0"/>
+</conditions>
+<avail_memory_threshold_MB value="1300"/>
+</limit>
+<limit><conditions>
+<condition type="os" value="*"/>
+<condition type="osbits" value="32"/>
+<condition type="operation" value="start_video_record"/>
+<condition type="apipar" key="device_name" value="MT200CG"/>
+<condition type="apipar" key="imgdataformat" value="0"/>
+</conditions>
+<avail_memory_threshold_MB value="2000"/>
+</limit>
+<limit><conditions>
+<condition type="os" value="*"/>
+<condition type="osbits" value="32"/>
+<condition type="operation" value="start_video_record"/>
+<condition type="apipar" key="device_name" value="MT120MG"/>
+<condition type="apipar" key="imgdataformat" value="0"/>
+</conditions>
+<avail_memory_threshold_MB value="1300"/>
+</limit>
+<limit><conditions>
+<condition type="os" value="*"/>
+<condition type="osbits" value="32"/>
+<condition type="operation" value="start_video_record"/>
+<condition type="apipar" key="device_name" value="MT120CG"/>
+<condition type="apipar" key="imgdataformat" value="0"/>
+</conditions>
+<avail_memory_threshold_MB value="1300"/>
+</limit>
+<limit><conditions>
+<condition type="os" value="*"/>
+<condition type="osbits" value="32"/>
+<condition type="operation" value="start_video_record"/>
+<condition type="apipar" key="device_name" value="CB200CG"/>
+<condition type="apipar" key="imgdataformat" value="0"/>
+</conditions>
+<avail_memory_threshold_MB value="2000"/>
+</limit>
+<limit><conditions>
+<condition type="os" value="*"/>
+<condition type="osbits" value="32"/>
+<condition type="operation" value="start_video_record"/>
+<condition type="apipar" key="device_name" value="MD120C"/>
+<condition type="apipar" key="imgdataformat" value="0"/>
+</conditions>
+<avail_memory_threshold_MB value="1000"/>
+</limit>
+<limit><conditions>
+<condition type="os" value="*"/>
+<condition type="osbits" value="32"/>
+<condition type="operation" value="start_video_record"/>
+<condition type="apipar" key="device_name" value="MQ042CG*"/>
+<condition type="apipar" key="imgdataformat" value="0"/>
+</conditions>
+<avail_memory_threshold_MB value="400"/>
+</limit>
+<limit><conditions>
+<condition type="os" value="*"/>
+<condition type="osbits" value="32"/>
+<condition type="operation" value="start_video_record"/>
+<condition type="apipar" key="device_name" value="MQ042MG"/>
+<condition type="apipar" key="imgdataformat" value="0"/>
+</conditions>
+<avail_memory_threshold_MB value="500"/>
+</limit>
+<limit><conditions>
+<condition type="os" value="*"/>
+<condition type="osbits" value="64"/>
+<condition type="operation" value="start_video_record"/>
+<condition type="apipar" key="device_name" value="MT200MG"/>
+<condition type="apipar" key="imgdataformat" value="0"/>
+</conditions>
+<avail_memory_threshold_MB value="1300"/>
+</limit>
+<limit><conditions>
+<condition type="os" value="*"/>
+<condition type="osbits" value="64"/>
+<condition type="operation" value="start_video_record"/>
+<condition type="apipar" key="device_name" value="MT200CG"/>
+<condition type="apipar" key="imgdataformat" value="0"/>
+</conditions>
+<avail_memory_threshold_MB value="1500"/>
+</limit>
+<limit><conditions>
+<condition type="os" value="*"/>
+<condition type="osbits" value="64"/>
+<condition type="operation" value="start_video_record"/>
+<condition type="apipar" key="device_name" value="MT120MG"/>
+<condition type="apipar" key="imgdataformat" value="0"/>
+</conditions>
+<avail_memory_threshold_MB value="1300"/>
+</limit>
+<limit><conditions>
+<condition type="os" value="*"/>
+<condition type="osbits" value="64"/>
+<condition type="operation" value="start_video_record"/>
+<condition type="apipar" key="device_name" value="MT120CG"/>
+<condition type="apipar" key="imgdataformat" value="0"/>
+</conditions>
+<avail_memory_threshold_MB value="1300"/>
+</limit>
+<limit><conditions>
+<condition type="os" value="*"/>
+<condition type="osbits" value="64"/>
+<condition type="operation" value="start_video_record"/>
+<condition type="apipar" key="device_name" value="CB200CG"/>
+<condition type="apipar" key="imgdataformat" value="0"/>
+</conditions>
+<avail_memory_threshold_MB value="1500"/>
+</limit>
+<limit><conditions>
+<condition type="os" value="*"/>
+<condition type="osbits" value="64"/>
+<condition type="operation" value="start_video_record"/>
+<condition type="apipar" key="device_name" value="MD120C"/>
+<condition type="apipar" key="imgdataformat" value="0"/>
+</conditions>
+<avail_memory_threshold_MB value="1000"/>
+</limit>
+<limit><conditions>
+<condition type="os" value="*"/>
+<condition type="osbits" value="64"/>
+<condition type="operation" value="start_video_record"/>
+<condition type="apipar" key="device_name" value="MQ042CG*"/>
+<condition type="apipar" key="imgdataformat" value="0"/>
+</conditions>
+<avail_memory_threshold_MB value="400"/>
+</limit>
+<limit><conditions>
+<condition type="os" value="*"/>
+<condition type="osbits" value="64"/>
+<condition type="operation" value="start_video_record"/>
+<condition type="apipar" key="device_name" value="MQ042MG"/>
+<condition type="apipar" key="imgdataformat" value="0"/>
+</conditions>
+<avail_memory_threshold_MB value="500"/>
+</limit>
+</limits>
+</resources>

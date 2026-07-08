@@ -1,0 +1,24 @@
+.. _C++-Examples:
+
+C++ Examples
+============
+ 
+Find here two sample codes for color and mono cameras.
+
+:ref:`Color-Example`
+
+:ref:`Mono-Example`
+
+
+
+.. toctree::
+   :caption: Modules
+   :titlesonly:
+   :maxdepth: 1
+   :hidden:
+   
+   C++Examples/MonoExample
+   C++Examples/ColorExample
+   
+
+  

@@ -1,0 +1,25 @@
+PolarizedSDK documentation
+========================================
+
+Indices and tables
+------------------
+
+* :ref:`genindex`
+* :ref:`search`
+* :ref:`Introduction`
+* :ref:`Library-Files`
+* :ref:`C++-Examples`
+
+.. toctree::
+   :titlesonly:
+   :maxdepth: 1
+   :hidden:
+   :caption: Modules
+
+   Introduction
+   Library
+   C++Examples
+   
+
+
+  

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<SystemConfiguration version="0">
+  <camera_type>ximea</camera_type>
+  <camera_identification_string>32270462</camera_identification_string>
+  <calibration_name>CMV2K-SSM5x5-665_975-13.7.8.4</calibration_name>
+</SystemConfiguration>
