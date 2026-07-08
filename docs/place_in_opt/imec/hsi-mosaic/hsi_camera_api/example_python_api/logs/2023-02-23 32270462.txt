@@ -1,0 +1,9 @@
+2023-02-23T01:46:19.526024Z INFO    - CM_XimeaXiq::_SetConfigurationParameters() 0 1 # 0 0 0 0 2.8 1.2
+2023-02-23T01:46:19.526153Z INFO    - CM_XimeaXiq::_SetConfigurationParameters() 0 1 # 10000 15 0 0 2.8 1.2
+2023-02-23T01:46:19.526168Z WARNING - _SetConnectionParameters (361) - Cannot cast to local parameters.
+2023-02-23T01:46:19.526170Z WARNING - Cannot cast to local parameters.
+2023-02-23T01:46:19.526234Z VERBOSE - driver connecting...
+2023-02-23T01:46:20.851452Z ERROR   - [virtual void ihspt::drivers::CM_XimeaXiq::_Connect()] xiOpenDeviceBy(XI_OPEN_BY_SN, _identification_string.c_str(), &_device) : Unknown hardware
+2023-02-23T01:46:20.851542Z WARNING - [virtual void ihspt::drivers::CM_XimeaXiq::_Disconnect()] xiCloseDevice (_device) : Unknown hardware
+2023-02-23T01:46:20.851561Z VERBOSE - driver forcing disconnect...
+2023-02-23T01:46:20.851564Z DEBUG   - driver already disconnected

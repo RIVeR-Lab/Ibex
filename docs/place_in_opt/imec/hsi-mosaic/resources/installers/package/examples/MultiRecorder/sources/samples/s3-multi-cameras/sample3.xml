@@ -1,0 +1,30 @@
+<RecordingSetup>
+<recordingStorages>
+    <!-- See sample1.xml for description. -->
+    <storage name="s1">
+        <folder>data_s3_f1</folder>  <!-- put even images to this data folder; we use relative folder names, usuauly this will be a full path -->
+        <folder>data_s3_f2</folder>  <!-- put odd images to this data folder, may improve performance when folders are on different drives -->
+    </storage>
+    <storage name="s2">
+        <folder>data_s3_f3</folder>  <!-- this storage uses only one data folder -->
+    </storage>
+</recordingStorages>
+<!-- There are 3 cameras connected to this computer. When you need to run cameras on different computers, use argument start-server there (see sample-remote.xml) -->
+<tasks>
+    <!-- We are opening cameras by the index. You can also define then using user ID (cameraUserID="???"),
+         serial number (cameraSn="???") or path (cameraInstPath="???" or cameraLocPath="???"). -->
+    <cameraTask cameraIdx="0" frameCount="10" recordingStorageName="s1" exportImageFormat="XI_RGB32" exportFolder="outputCam1">
+        <setCameraParam name="XI_PRM_EXPOSURE" value="10000"/>
+        <setCameraParam name="XI_PRM_WB_KR" value="1.5"/>
+        <setCameraParam name="XI_PRM_WB_KG" value="1.0"/>
+        <setCameraParam name="XI_PRM_WB_KB" value="2.0"/>
+        <setCameraParam name="XI_PRM_DOWNSAMPLING" value="XI_DWN_1x1"/>
+    </cameraTask>
+    <cameraTask cameraIdx="1" frameCount="10" recordingStorageName="s1" exportImageFormat="XI_MONO16" exportFolder="outputCam2">
+        <setCameraParam name="XI_PRM_EXPOSURE" value="10000"/>
+    </cameraTask>
+    <cameraTask cameraIdx="2" frameCount="10" recordingStorageName="s2" exportImageFormat="XI_MONO16" exportFolder="outputCam3">
+        <setCameraParam name="XI_PRM_EXPOSURE" value="10000"/>
+    </cameraTask>
+</tasks>
+</RecordingSetup>

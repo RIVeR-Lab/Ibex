@@ -1,0 +1,26 @@
+var class_pv_truesense_converter =
+[
+    [ "PvTruesenseConverter", "class_pv_truesense_converter.html#ae17b4e73e03cc7f5546c6bbe0ca5b5f3", null ],
+    [ "~PvTruesenseConverter", "class_pv_truesense_converter.html#ab16e036859db691034e6e1dda491e89c", null ],
+    [ "Convert", "class_pv_truesense_converter.html#a0567f55304d1aeea54bbd6e7b191f6bb", null ],
+    [ "GetBlueGain", "class_pv_truesense_converter.html#a72fc724a50bf2883c76684fa99caa7a8", null ],
+    [ "GetDarkfloor", "class_pv_truesense_converter.html#a315a9810539c78f372f205ad21a320d6", null ],
+    [ "GetGlobalGain", "class_pv_truesense_converter.html#a9839b6dd2bf36b0ccaf3f099b630d0ab", null ],
+    [ "GetGreenGain", "class_pv_truesense_converter.html#a3de8a0937766686f26fb6c21e7ec0ea0", null ],
+    [ "GetHighLumaNoise", "class_pv_truesense_converter.html#ac9bd62af5c1c377976d8a3b6c5d3fc3c", null ],
+    [ "GetLowLumaNoise", "class_pv_truesense_converter.html#ae4618f57e503882158a795433a4f0f1a", null ],
+    [ "GetMaxSharpen", "class_pv_truesense_converter.html#af669b14c9e6cfc8541822f87e872dada", null ],
+    [ "GetPanGain", "class_pv_truesense_converter.html#a062c39ebd14c0a1ee688f75892332b6f", null ],
+    [ "GetRedGain", "class_pv_truesense_converter.html#a1b24f721530627c49fc99d5c8f840352", null ],
+    [ "GetSharpenParam", "class_pv_truesense_converter.html#a84403542885acff2e7752b853ace8066", null ],
+    [ "SetBlueGain", "class_pv_truesense_converter.html#a17abaf57a05065e2f8f4b306369d828e", null ],
+    [ "SetDarkfloor", "class_pv_truesense_converter.html#a7b5b2d4afdfe9ebd11716593a8efca9c", null ],
+    [ "SetGlobalGain", "class_pv_truesense_converter.html#a810eb0db4785bb12039011cc39d4775f", null ],
+    [ "SetGreenGain", "class_pv_truesense_converter.html#af58a2a2aeb8cf433f07dbebca75cb7c6", null ],
+    [ "SetHighLumaNoise", "class_pv_truesense_converter.html#a1859c697d2fcadf4b1b358e9bef2d0ac", null ],
+    [ "SetLowLumaNoise", "class_pv_truesense_converter.html#a8cab8cd3a094cdb723003a7f775e8538", null ],
+    [ "SetMaxSharpen", "class_pv_truesense_converter.html#a983eab483d479af895a7a320c0cdc301", null ],
+    [ "SetPanGain", "class_pv_truesense_converter.html#a3395f5001b9befb6aaef6f06c95ad2f9", null ],
+    [ "SetRedGain", "class_pv_truesense_converter.html#acd2a6295058c1b6318c09b79f94da633", null ],
+    [ "SetSharpenParam", "class_pv_truesense_converter.html#a319a2dd8de028bbc5a9ea7d54df8909e", null ]
+];

@@ -1,0 +1,14 @@
+<RecordingSetup>
+<recordingStorages>
+    <!-- See sample1.xml for description. -->
+    <storage name="s4">
+        <folder>data_acq</folder>  <!-- data folder is on the server PC. -->
+    </storage>
+</recordingStorages> 
+<tasks>
+    <!-- Connect to the 1st camera connected on that server, acquire 10 frames to storage on server, and save the as RGB TIFFs to folder "outputSampleRemote" on server -->
+    <cameraTask connectToServer="localhost:8090" frameCount="10" recordingStorageName="s4" exportImageFormat="XI_RGB24" exportFolder="outputSample4">
+        <setCameraParam name="XI_PRM_EXPOSURE" value="200000"/>
+    </cameraTask>
+</tasks>
+</RecordingSetup>

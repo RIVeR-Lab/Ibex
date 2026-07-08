@@ -1,0 +1,816 @@
+2023-02-23T01:49:26.985745Z VERBOSE - _GetParameters (874) - Cannot cast to local parameters
+2023-02-23T01:49:26.985812Z VERBOSE - _SetInitializationParameters (417) - Cannot cast to local parameters
+2023-02-23T01:49:26.985813Z VERBOSE - Cannot cast to local parameters.
+2023-02-23T01:49:26.985935Z VERBOSE - _GetParameters (874) - Cannot cast to local parameters
+2023-02-23T01:49:26.985939Z VERBOSE - driver connecting...
+2023-02-23T01:49:26.985944Z VERBOSE - _Connect (1202) - Checking eBus driver availability
+2023-02-23T01:49:30.357838Z DEBUG   - _WriteByteStream (2135) - Sending Command to the camera.
+2023-02-23T01:49:30.360570Z DEBUG   - _WriteByteStream (2135) - Sending Command to the camera.
+2023-02-23T01:49:30.363305Z INFO    - _ParseVersionResponse (786) - Firmware version: V2
+2023-02-23T01:49:30.643002Z DEBUG   - _WriteByteStream (2135) - Sending Command to the camera.
+2023-02-23T01:49:30.646034Z INFO    - Operational command contents:
+2023-02-23T01:49:30.646042Z INFO    -    num_of_ch: 0
+2023-02-23T01:49:30.646044Z INFO    -    display_mode: 0
+2023-02-23T01:49:30.646045Z INFO    -    M_S_sync: 1
+2023-02-23T01:49:30.647813Z VERBOSE - driver connected
+2023-02-23T01:49:30.648143Z VERBOSE - _GetParameters (874) - Cannot cast to local parameters
+2023-02-23T01:49:30.648241Z VERBOSE - _GetParameters (874) - Cannot cast to local parameters
+2023-02-23T01:49:30.648249Z VERBOSE - _GetParameters (874) - Cannot cast to local parameters
+2023-02-23T01:49:30.648257Z VERBOSE - _SetInitializationParameters (417) - Cannot cast to local parameters
+2023-02-23T01:49:30.648637Z VERBOSE - driver initializing...
+2023-02-23T01:49:30.648637Z VERBOSE -    trying to initialize...
+2023-02-23T01:49:30.648649Z VERBOSE - _SendOperationalCommand (662) - Sending operational command...
+2023-02-23T01:49:30.648656Z DEBUG   - _WriteByteStream (2135) - Sending Command to the camera.
+2023-02-23T01:49:30.914369Z DEBUG   - _WriteByteStream (2135) - Sending Command to the camera.
+2023-02-23T01:49:30.920110Z VERBOSE - _SendOperationalCommand (662) - Sending operational command...
+2023-02-23T01:49:30.920116Z DEBUG   - _WriteByteStream (2135) - Sending Command to the camera.
+2023-02-23T01:49:30.922895Z ERROR   - _QueryMessage (1155) - The camera responded with the following error message(s):
+2023-02-23T01:49:30.922899Z ERROR   - _QueryMessage (1159) -    Com ID error
+2023-02-23T01:49:30.922953Z WARNING - _SendOperationalCommand (693) - An error occurred while trying to send the operiational command, attempt 0
+2023-02-23T01:49:30.956928Z DEBUG   - _WriteByteStream (2135) - Sending Command to the camera.
+2023-02-23T01:49:30.993683Z DEBUG   - _SetRuntimeParameters (599) - Sending operational command successful.
+2023-02-23T01:49:31.033172Z VERBOSE -    initalization successful...
+2023-02-23T01:49:31.033176Z VERBOSE - driver initialization finished
+2023-02-23T01:49:31.033189Z VERBOSE - _GetParameters (874) - Cannot cast to local parameters
+2023-02-23T01:49:31.037170Z VERBOSE - _GetParameters (874) - Cannot cast to local parameters
+2023-02-23T01:49:31.037183Z VERBOSE - _SetRuntimeParameters (493) - Cannot cast to local parameters
+2023-02-23T01:49:31.037371Z VERBOSE - _GetParameters (874) - Cannot cast to local parameters
+2023-02-23T01:49:31.037623Z VERBOSE - _GetParameters (874) - Cannot cast to local parameters
+2023-02-23T01:49:31.037632Z VERBOSE - _GetParameters (874) - Cannot cast to local parameters
+2023-02-23T01:49:31.037638Z VERBOSE - _SetRuntimeParameters (493) - Cannot cast to local parameters
+2023-02-23T01:49:31.037643Z VERBOSE - _GetParameters (874) - Cannot cast to local parameters
+2023-02-23T01:49:31.037647Z VERBOSE - _GetParameters (874) - Cannot cast to local parameters
+2023-02-23T01:49:31.037651Z VERBOSE - _SetRuntimeParameters (493) - Cannot cast to local parameters
+2023-02-23T01:49:31.083754Z VERBOSE - _GetParameters (874) - Cannot cast to local parameters
+2023-02-23T01:49:31.083760Z VERBOSE - _SetRuntimeParameters (493) - Cannot cast to local parameters
+2023-02-23T01:49:31.083765Z VERBOSE - driver starting...
+2023-02-23T01:49:31.083768Z VERBOSE - _Start (1561) - -->
+2023-02-23T01:49:31.083773Z DEBUG   - _WriteByteStream (2135) - Sending Command to the camera.
+2023-02-23T01:49:31.106383Z VERBOSE - driver starting finished
+2023-02-23T01:49:31.106466Z VERBOSE - Retrieving buffer from the camera.
+2023-02-23T01:49:31.106481Z DEBUG   - Trigger (1123) - Triggering camera
+2023-02-23T01:49:31.106489Z INFO    - Trigger (1136) - 0/1
+2023-02-23T01:49:31.106490Z VERBOSE - Sending trigger...
+2023-02-23T01:49:31.132014Z DEBUG   - _WriteByteStream (2135) - Sending Command to the camera.
+2023-02-23T01:49:31.135575Z DEBUG   - _HandleCallbacks (1113) - Entering update of parameters...
+2023-02-23T01:49:31.135581Z VERBOSE - _GetParameters (874) - Cannot cast to local parameters
+2023-02-23T01:49:31.135588Z VERBOSE - _SetRuntimeParameters (493) - Cannot cast to local parameters
+2023-02-23T01:49:31.135590Z DEBUG   - _HandleCallbacks (1118) - Update of parameters finished
+2023-02-23T01:49:31.135603Z DEBUG   - _HandleCallbacks (1121) - Calling callback...
+2023-02-23T01:49:31.135606Z WARNING - Handle (485) - frame does not have 'dm lost frames' property.
+2023-02-23T01:49:31.135680Z DEBUG   - _HandleCallbacks (1123) - Callback called
+2023-02-23T01:49:31.135681Z VERBOSE - Retrieving buffer from the camera.
+2023-02-23T01:49:31.135835Z VERBOSE - _GetParameters (874) - Cannot cast to local parameters
+2023-02-23T01:49:31.136268Z VERBOSE - Pause (504) - driver pauzing...
+2023-02-23T01:49:31.136269Z INFO    - Pausing the camera.
+2023-02-23T01:49:31.255130Z INFO    - Camera paused.
+2023-02-23T01:49:31.255170Z VERBOSE - Pause (529) - driver pauzing finished
+2023-02-23T01:49:31.255261Z VERBOSE - driver stopping...
+2023-02-23T01:49:31.308561Z VERBOSE - driver stopping finished
+2023-02-23T01:49:31.308783Z VERBOSE - driver forcing disconnect...
+2023-02-23T01:49:31.418874Z VERBOSE - driver forcing disconnect finished
+2023-02-23T01:49:31.418958Z VERBOSE - driver forcing disconnect...
+2023-02-23T01:49:31.418959Z DEBUG   - driver already disconnected
+2023-02-23T01:49:32.929806Z VERBOSE - _GetParameters (874) - Cannot cast to local parameters
+2023-02-23T01:49:32.929819Z VERBOSE - _SetInitializationParameters (417) - Cannot cast to local parameters
+2023-02-23T01:49:32.929822Z VERBOSE - Cannot cast to local parameters.
+2023-02-23T01:49:32.929873Z VERBOSE - _GetParameters (874) - Cannot cast to local parameters
+2023-02-23T01:49:32.929877Z VERBOSE - driver connecting...
+2023-02-23T01:49:32.929882Z VERBOSE - _Connect (1202) - Checking eBus driver availability
+2023-02-23T01:49:36.266260Z DEBUG   - _WriteByteStream (2135) - Sending Command to the camera.
+2023-02-23T01:49:36.269016Z DEBUG   - _WriteByteStream (2135) - Sending Command to the camera.
+2023-02-23T01:49:36.271735Z INFO    - _ParseVersionResponse (786) - Firmware version: V2
+2023-02-23T01:49:36.551850Z DEBUG   - _WriteByteStream (2135) - Sending Command to the camera.
+2023-02-23T01:49:36.555005Z INFO    - Operational command contents:
+2023-02-23T01:49:36.555018Z INFO    -    num_of_ch: 1
+2023-02-23T01:49:36.555021Z INFO    -    display_mode: 0
+2023-02-23T01:49:36.555024Z INFO    -    M_S_sync: 0
+2023-02-23T01:49:36.556890Z VERBOSE - driver connected
+2023-02-23T01:49:36.557272Z VERBOSE - driver initializing...
+2023-02-23T01:49:36.557272Z VERBOSE -    trying to initialize...
+2023-02-23T01:49:36.734361Z DEBUG   - _WriteByteStream (2135) - Sending Command to the camera.
+2023-02-23T01:49:36.740196Z VERBOSE - _SendOperationalCommand (662) - Sending operational command...
+2023-02-23T01:49:36.740202Z DEBUG   - _WriteByteStream (2135) - Sending Command to the camera.
+2023-02-23T01:49:36.776611Z DEBUG   - _SetRuntimeParameters (599) - Sending operational command successful.
+2023-02-23T01:49:36.815794Z VERBOSE -    initalization successful...
+2023-02-23T01:49:36.815802Z VERBOSE - driver initialization finished
+2023-02-23T01:49:36.815824Z VERBOSE - _GetParameters (874) - Cannot cast to local parameters
+2023-02-23T01:49:36.820095Z VERBOSE - _GetParameters (874) - Cannot cast to local parameters
+2023-02-23T01:49:36.820110Z VERBOSE - _SetRuntimeParameters (493) - Cannot cast to local parameters
+2023-02-23T01:49:36.820411Z VERBOSE - _GetParameters (874) - Cannot cast to local parameters
+2023-02-23T01:49:36.820430Z VERBOSE - _GetParameters (874) - Cannot cast to local parameters
+2023-02-23T01:49:36.820435Z VERBOSE - _GetParameters (874) - Cannot cast to local parameters
+2023-02-23T01:49:36.820441Z VERBOSE - _SetRuntimeParameters (493) - Cannot cast to local parameters
+2023-02-23T01:49:36.823738Z VERBOSE - _SendOperationalCommand (662) - Sending operational command...
+2023-02-23T01:49:36.823757Z DEBUG   - _WriteByteStream (2135) - Sending Command to the camera.
+2023-02-23T01:49:36.849194Z DEBUG   - _SetRuntimeParameters (599) - Sending operational command successful.
+2023-02-23T01:49:36.849218Z VERBOSE - _GetParameters (874) - Cannot cast to local parameters
+2023-02-23T01:49:36.849224Z VERBOSE - _GetParameters (874) - Cannot cast to local parameters
+2023-02-23T01:49:36.849231Z VERBOSE - _SetRuntimeParameters (493) - Cannot cast to local parameters
+2023-02-23T01:49:36.858508Z VERBOSE - _GetParameters (874) - Cannot cast to local parameters
+2023-02-23T01:49:36.858514Z VERBOSE - _SetRuntimeParameters (493) - Cannot cast to local parameters
+2023-02-23T01:49:36.858515Z VERBOSE - driver starting...
+2023-02-23T01:49:36.858517Z VERBOSE - _Start (1561) - -->
+2023-02-23T01:49:36.858521Z DEBUG   - _WriteByteStream (2135) - Sending Command to the camera.
+2023-02-23T01:49:36.882946Z VERBOSE - driver starting finished
+2023-02-23T01:49:36.887766Z VERBOSE - Retrieving buffer from the camera.
+2023-02-23T01:49:36.902347Z DEBUG   - _WriteByteStream (2135) - Sending Command to the camera.
+2023-02-23T01:49:36.904861Z DEBUG   - _HandleCallbacks (1113) - Entering update of parameters...
+2023-02-23T01:49:36.904867Z VERBOSE - _GetParameters (874) - Cannot cast to local parameters
+2023-02-23T01:49:36.904875Z VERBOSE - _SetRuntimeParameters (493) - Cannot cast to local parameters
+2023-02-23T01:49:36.904877Z DEBUG   - _HandleCallbacks (1118) - Update of parameters finished
+2023-02-23T01:49:36.904879Z DEBUG   - _HandleCallbacks (1121) - Calling callback...
+2023-02-23T01:49:36.904882Z WARNING - Handle (485) - frame does not have 'dm lost frames' property.
+2023-02-23T01:49:36.904957Z DEBUG   - _HandleCallbacks (1123) - Callback called
+2023-02-23T01:49:36.904959Z VERBOSE - Retrieving buffer from the camera.
+2023-02-23T01:49:36.905119Z VERBOSE - _GetParameters (874) - Cannot cast to local parameters
+2023-02-23T01:49:36.969442Z DEBUG   - _WriteByteStream (2135) - Sending Command to the camera.
+2023-02-23T01:49:36.972058Z DEBUG   - _HandleCallbacks (1113) - Entering update of parameters...
+2023-02-23T01:49:36.972064Z VERBOSE - _GetParameters (874) - Cannot cast to local parameters
+2023-02-23T01:49:36.972070Z VERBOSE - _SetRuntimeParameters (493) - Cannot cast to local parameters
+2023-02-23T01:49:36.972073Z DEBUG   - _HandleCallbacks (1118) - Update of parameters finished
+2023-02-23T01:49:36.972075Z DEBUG   - _HandleCallbacks (1121) - Calling callback...
+2023-02-23T01:49:36.972079Z WARNING - Handle (485) - frame does not have 'dm lost frames' property.
+2023-02-23T01:49:36.972183Z DEBUG   - _HandleCallbacks (1123) - Callback called
+2023-02-23T01:49:36.972185Z VERBOSE - Retrieving buffer from the camera.
+2023-02-23T01:49:36.972375Z VERBOSE - _GetParameters (874) - Cannot cast to local parameters
+2023-02-23T01:49:37.036540Z DEBUG   - _WriteByteStream (2135) - Sending Command to the camera.
+2023-02-23T01:49:37.039101Z DEBUG   - _HandleCallbacks (1113) - Entering update of parameters...
+2023-02-23T01:49:37.039105Z VERBOSE - _GetParameters (874) - Cannot cast to local parameters
+2023-02-23T01:49:37.039111Z VERBOSE - _SetRuntimeParameters (493) - Cannot cast to local parameters
+2023-02-23T01:49:37.039113Z DEBUG   - _HandleCallbacks (1118) - Update of parameters finished
+2023-02-23T01:49:37.039114Z DEBUG   - _HandleCallbacks (1121) - Calling callback...
+2023-02-23T01:49:37.039117Z WARNING - Handle (485) - frame does not have 'dm lost frames' property.
+2023-02-23T01:49:37.039172Z DEBUG   - _HandleCallbacks (1123) - Callback called
+2023-02-23T01:49:37.039177Z VERBOSE - Retrieving buffer from the camera.
+2023-02-23T01:49:37.039336Z VERBOSE - _GetParameters (874) - Cannot cast to local parameters
+2023-02-23T01:49:37.103714Z DEBUG   - _WriteByteStream (2135) - Sending Command to the camera.
+2023-02-23T01:49:37.106257Z DEBUG   - _HandleCallbacks (1113) - Entering update of parameters...
+2023-02-23T01:49:37.106262Z VERBOSE - _GetParameters (874) - Cannot cast to local parameters
+2023-02-23T01:49:37.106270Z VERBOSE - _SetRuntimeParameters (493) - Cannot cast to local parameters
+2023-02-23T01:49:37.106272Z DEBUG   - _HandleCallbacks (1118) - Update of parameters finished
+2023-02-23T01:49:37.106273Z DEBUG   - _HandleCallbacks (1121) - Calling callback...
+2023-02-23T01:49:37.106276Z WARNING - Handle (485) - frame does not have 'dm lost frames' property.
+2023-02-23T01:49:37.106341Z DEBUG   - _HandleCallbacks (1123) - Callback called
+2023-02-23T01:49:37.106343Z VERBOSE - Retrieving buffer from the camera.
+2023-02-23T01:49:37.106473Z VERBOSE - _GetParameters (874) - Cannot cast to local parameters
+2023-02-23T01:49:37.170663Z DEBUG   - _WriteByteStream (2135) - Sending Command to the camera.
+2023-02-23T01:49:37.173164Z DEBUG   - _HandleCallbacks (1113) - Entering update of parameters...
+2023-02-23T01:49:37.173171Z VERBOSE - _GetParameters (874) - Cannot cast to local parameters
+2023-02-23T01:49:37.173178Z VERBOSE - _SetRuntimeParameters (493) - Cannot cast to local parameters
+2023-02-23T01:49:37.173181Z DEBUG   - _HandleCallbacks (1118) - Update of parameters finished
+2023-02-23T01:49:37.173182Z DEBUG   - _HandleCallbacks (1121) - Calling callback...
+2023-02-23T01:49:37.173184Z WARNING - Handle (485) - frame does not have 'dm lost frames' property.
+2023-02-23T01:49:37.173247Z DEBUG   - _HandleCallbacks (1123) - Callback called
+2023-02-23T01:49:37.173248Z VERBOSE - Retrieving buffer from the camera.
+2023-02-23T01:49:37.173381Z VERBOSE - _GetParameters (874) - Cannot cast to local parameters
+2023-02-23T01:49:37.237791Z DEBUG   - _WriteByteStream (2135) - Sending Command to the camera.
+2023-02-23T01:49:37.240496Z DEBUG   - _HandleCallbacks (1113) - Entering update of parameters...
+2023-02-23T01:49:37.240501Z VERBOSE - _GetParameters (874) - Cannot cast to local parameters
+2023-02-23T01:49:37.240506Z VERBOSE - _SetRuntimeParameters (493) - Cannot cast to local parameters
+2023-02-23T01:49:37.240508Z DEBUG   - _HandleCallbacks (1118) - Update of parameters finished
+2023-02-23T01:49:37.240509Z DEBUG   - _HandleCallbacks (1121) - Calling callback...
+2023-02-23T01:49:37.240511Z WARNING - Handle (485) - frame does not have 'dm lost frames' property.
+2023-02-23T01:49:37.240583Z DEBUG   - _HandleCallbacks (1123) - Callback called
+2023-02-23T01:49:37.240584Z VERBOSE - Retrieving buffer from the camera.
+2023-02-23T01:49:37.240717Z VERBOSE - _GetParameters (874) - Cannot cast to local parameters
+2023-02-23T01:49:37.304915Z DEBUG   - _WriteByteStream (2135) - Sending Command to the camera.
+2023-02-23T01:49:37.307469Z DEBUG   - _HandleCallbacks (1113) - Entering update of parameters...
+2023-02-23T01:49:37.307473Z VERBOSE - _GetParameters (874) - Cannot cast to local parameters
+2023-02-23T01:49:37.307480Z VERBOSE - _SetRuntimeParameters (493) - Cannot cast to local parameters
+2023-02-23T01:49:37.307482Z DEBUG   - _HandleCallbacks (1118) - Update of parameters finished
+2023-02-23T01:49:37.307483Z DEBUG   - _HandleCallbacks (1121) - Calling callback...
+2023-02-23T01:49:37.307486Z WARNING - Handle (485) - frame does not have 'dm lost frames' property.
+2023-02-23T01:49:37.307547Z DEBUG   - _HandleCallbacks (1123) - Callback called
+2023-02-23T01:49:37.307549Z VERBOSE - Retrieving buffer from the camera.
+2023-02-23T01:49:37.307673Z VERBOSE - _GetParameters (874) - Cannot cast to local parameters
+2023-02-23T01:49:37.371975Z DEBUG   - _WriteByteStream (2135) - Sending Command to the camera.
+2023-02-23T01:49:37.374448Z DEBUG   - _HandleCallbacks (1113) - Entering update of parameters...
+2023-02-23T01:49:37.374452Z VERBOSE - _GetParameters (874) - Cannot cast to local parameters
+2023-02-23T01:49:37.374458Z VERBOSE - _SetRuntimeParameters (493) - Cannot cast to local parameters
+2023-02-23T01:49:37.374460Z DEBUG   - _HandleCallbacks (1118) - Update of parameters finished
+2023-02-23T01:49:37.374461Z DEBUG   - _HandleCallbacks (1121) - Calling callback...
+2023-02-23T01:49:37.374464Z WARNING - Handle (485) - frame does not have 'dm lost frames' property.
+2023-02-23T01:49:37.374524Z DEBUG   - _HandleCallbacks (1123) - Callback called
+2023-02-23T01:49:37.374525Z VERBOSE - Retrieving buffer from the camera.
+2023-02-23T01:49:37.374651Z VERBOSE - _GetParameters (874) - Cannot cast to local parameters
+2023-02-23T01:49:37.439053Z DEBUG   - _WriteByteStream (2135) - Sending Command to the camera.
+2023-02-23T01:49:37.442025Z DEBUG   - _HandleCallbacks (1113) - Entering update of parameters...
+2023-02-23T01:49:37.442028Z VERBOSE - _GetParameters (874) - Cannot cast to local parameters
+2023-02-23T01:49:37.442034Z VERBOSE - _SetRuntimeParameters (493) - Cannot cast to local parameters
+2023-02-23T01:49:37.442036Z DEBUG   - _HandleCallbacks (1118) - Update of parameters finished
+2023-02-23T01:49:37.442037Z DEBUG   - _HandleCallbacks (1121) - Calling callback...
+2023-02-23T01:49:37.442039Z WARNING - Handle (485) - frame does not have 'dm lost frames' property.
+2023-02-23T01:49:37.442095Z DEBUG   - _HandleCallbacks (1123) - Callback called
+2023-02-23T01:49:37.442096Z VERBOSE - Retrieving buffer from the camera.
+2023-02-23T01:49:37.442214Z VERBOSE - _GetParameters (874) - Cannot cast to local parameters
+2023-02-23T01:49:37.506274Z DEBUG   - _WriteByteStream (2135) - Sending Command to the camera.
+2023-02-23T01:49:37.508779Z DEBUG   - _HandleCallbacks (1113) - Entering update of parameters...
+2023-02-23T01:49:37.508784Z VERBOSE - _GetParameters (874) - Cannot cast to local parameters
+2023-02-23T01:49:37.508790Z VERBOSE - _SetRuntimeParameters (493) - Cannot cast to local parameters
+2023-02-23T01:49:37.508792Z DEBUG   - _HandleCallbacks (1118) - Update of parameters finished
+2023-02-23T01:49:37.508794Z DEBUG   - _HandleCallbacks (1121) - Calling callback...
+2023-02-23T01:49:37.508796Z WARNING - Handle (485) - frame does not have 'dm lost frames' property.
+2023-02-23T01:49:37.508857Z DEBUG   - _HandleCallbacks (1123) - Callback called
+2023-02-23T01:49:37.508858Z VERBOSE - Retrieving buffer from the camera.
+2023-02-23T01:49:37.509005Z VERBOSE - _GetParameters (874) - Cannot cast to local parameters
+2023-02-23T01:49:37.573241Z DEBUG   - _WriteByteStream (2135) - Sending Command to the camera.
+2023-02-23T01:49:37.575717Z DEBUG   - _HandleCallbacks (1113) - Entering update of parameters...
+2023-02-23T01:49:37.575722Z VERBOSE - _GetParameters (874) - Cannot cast to local parameters
+2023-02-23T01:49:37.575730Z VERBOSE - _SetRuntimeParameters (493) - Cannot cast to local parameters
+2023-02-23T01:49:37.575733Z DEBUG   - _HandleCallbacks (1118) - Update of parameters finished
+2023-02-23T01:49:37.575735Z DEBUG   - _HandleCallbacks (1121) - Calling callback...
+2023-02-23T01:49:37.575739Z WARNING - Handle (485) - frame does not have 'dm lost frames' property.
+2023-02-23T01:49:37.575814Z DEBUG   - _HandleCallbacks (1123) - Callback called
+2023-02-23T01:49:37.575816Z VERBOSE - Retrieving buffer from the camera.
+2023-02-23T01:49:37.575938Z VERBOSE - _GetParameters (874) - Cannot cast to local parameters
+2023-02-23T01:49:37.640314Z DEBUG   - _WriteByteStream (2135) - Sending Command to the camera.
+2023-02-23T01:49:37.642913Z DEBUG   - _HandleCallbacks (1113) - Entering update of parameters...
+2023-02-23T01:49:37.642920Z VERBOSE - _GetParameters (874) - Cannot cast to local parameters
+2023-02-23T01:49:37.642929Z VERBOSE - _SetRuntimeParameters (493) - Cannot cast to local parameters
+2023-02-23T01:49:37.642932Z DEBUG   - _HandleCallbacks (1118) - Update of parameters finished
+2023-02-23T01:49:37.642935Z DEBUG   - _HandleCallbacks (1121) - Calling callback...
+2023-02-23T01:49:37.642938Z WARNING - Handle (485) - frame does not have 'dm lost frames' property.
+2023-02-23T01:49:37.643009Z DEBUG   - _HandleCallbacks (1123) - Callback called
+2023-02-23T01:49:37.643010Z VERBOSE - Retrieving buffer from the camera.
+2023-02-23T01:49:37.643132Z VERBOSE - _GetParameters (874) - Cannot cast to local parameters
+2023-02-23T01:49:37.707467Z DEBUG   - _WriteByteStream (2135) - Sending Command to the camera.
+2023-02-23T01:49:37.710061Z DEBUG   - _HandleCallbacks (1113) - Entering update of parameters...
+2023-02-23T01:49:37.710065Z VERBOSE - _GetParameters (874) - Cannot cast to local parameters
+2023-02-23T01:49:37.710070Z VERBOSE - _SetRuntimeParameters (493) - Cannot cast to local parameters
+2023-02-23T01:49:37.710072Z DEBUG   - _HandleCallbacks (1118) - Update of parameters finished
+2023-02-23T01:49:37.710073Z DEBUG   - _HandleCallbacks (1121) - Calling callback...
+2023-02-23T01:49:37.710076Z WARNING - Handle (485) - frame does not have 'dm lost frames' property.
+2023-02-23T01:49:37.710147Z DEBUG   - _HandleCallbacks (1123) - Callback called
+2023-02-23T01:49:37.710148Z VERBOSE - Retrieving buffer from the camera.
+2023-02-23T01:49:37.710270Z VERBOSE - _GetParameters (874) - Cannot cast to local parameters
+2023-02-23T01:49:37.774541Z DEBUG   - _WriteByteStream (2135) - Sending Command to the camera.
+2023-02-23T01:49:37.777231Z DEBUG   - _HandleCallbacks (1113) - Entering update of parameters...
+2023-02-23T01:49:37.777237Z VERBOSE - _GetParameters (874) - Cannot cast to local parameters
+2023-02-23T01:49:37.777243Z VERBOSE - _SetRuntimeParameters (493) - Cannot cast to local parameters
+2023-02-23T01:49:37.777245Z DEBUG   - _HandleCallbacks (1118) - Update of parameters finished
+2023-02-23T01:49:37.777246Z DEBUG   - _HandleCallbacks (1121) - Calling callback...
+2023-02-23T01:49:37.777248Z WARNING - Handle (485) - frame does not have 'dm lost frames' property.
+2023-02-23T01:49:37.777307Z DEBUG   - _HandleCallbacks (1123) - Callback called
+2023-02-23T01:49:37.777308Z VERBOSE - Retrieving buffer from the camera.
+2023-02-23T01:49:37.777433Z VERBOSE - _GetParameters (874) - Cannot cast to local parameters
+2023-02-23T01:49:37.841598Z DEBUG   - _WriteByteStream (2135) - Sending Command to the camera.
+2023-02-23T01:49:37.844206Z DEBUG   - _HandleCallbacks (1113) - Entering update of parameters...
+2023-02-23T01:49:37.844212Z VERBOSE - _GetParameters (874) - Cannot cast to local parameters
+2023-02-23T01:49:37.844218Z VERBOSE - _SetRuntimeParameters (493) - Cannot cast to local parameters
+2023-02-23T01:49:37.844220Z DEBUG   - _HandleCallbacks (1118) - Update of parameters finished
+2023-02-23T01:49:37.844221Z DEBUG   - _HandleCallbacks (1121) - Calling callback...
+2023-02-23T01:49:37.844223Z WARNING - Handle (485) - frame does not have 'dm lost frames' property.
+2023-02-23T01:49:37.844280Z DEBUG   - _HandleCallbacks (1123) - Callback called
+2023-02-23T01:49:37.844282Z VERBOSE - Retrieving buffer from the camera.
+2023-02-23T01:49:37.844417Z VERBOSE - _GetParameters (874) - Cannot cast to local parameters
+2023-02-23T01:49:37.908687Z DEBUG   - _WriteByteStream (2135) - Sending Command to the camera.
+2023-02-23T01:49:37.911216Z DEBUG   - _HandleCallbacks (1113) - Entering update of parameters...
+2023-02-23T01:49:37.911222Z VERBOSE - _GetParameters (874) - Cannot cast to local parameters
+2023-02-23T01:49:37.911228Z VERBOSE - _SetRuntimeParameters (493) - Cannot cast to local parameters
+2023-02-23T01:49:37.911230Z DEBUG   - _HandleCallbacks (1118) - Update of parameters finished
+2023-02-23T01:49:37.911231Z DEBUG   - _HandleCallbacks (1121) - Calling callback...
+2023-02-23T01:49:37.911233Z WARNING - Handle (485) - frame does not have 'dm lost frames' property.
+2023-02-23T01:49:37.911290Z DEBUG   - _HandleCallbacks (1123) - Callback called
+2023-02-23T01:49:37.911292Z VERBOSE - Retrieving buffer from the camera.
+2023-02-23T01:49:37.911433Z VERBOSE - _GetParameters (874) - Cannot cast to local parameters
+2023-02-23T01:49:37.975704Z DEBUG   - _WriteByteStream (2135) - Sending Command to the camera.
+2023-02-23T01:49:37.978191Z DEBUG   - _HandleCallbacks (1113) - Entering update of parameters...
+2023-02-23T01:49:37.978196Z VERBOSE - _GetParameters (874) - Cannot cast to local parameters
+2023-02-23T01:49:37.978205Z VERBOSE - _SetRuntimeParameters (493) - Cannot cast to local parameters
+2023-02-23T01:49:37.978208Z DEBUG   - _HandleCallbacks (1118) - Update of parameters finished
+2023-02-23T01:49:37.978211Z DEBUG   - _HandleCallbacks (1121) - Calling callback...
+2023-02-23T01:49:37.978214Z WARNING - Handle (485) - frame does not have 'dm lost frames' property.
+2023-02-23T01:49:37.978280Z DEBUG   - _HandleCallbacks (1123) - Callback called
+2023-02-23T01:49:37.978281Z VERBOSE - Retrieving buffer from the camera.
+2023-02-23T01:49:37.978391Z VERBOSE - _GetParameters (874) - Cannot cast to local parameters
+2023-02-23T01:49:38.042888Z DEBUG   - _WriteByteStream (2135) - Sending Command to the camera.
+2023-02-23T01:49:38.045472Z DEBUG   - _HandleCallbacks (1113) - Entering update of parameters...
+2023-02-23T01:49:38.045477Z VERBOSE - _GetParameters (874) - Cannot cast to local parameters
+2023-02-23T01:49:38.045483Z VERBOSE - _SetRuntimeParameters (493) - Cannot cast to local parameters
+2023-02-23T01:49:38.045485Z DEBUG   - _HandleCallbacks (1118) - Update of parameters finished
+2023-02-23T01:49:38.045486Z DEBUG   - _HandleCallbacks (1121) - Calling callback...
+2023-02-23T01:49:38.045488Z WARNING - Handle (485) - frame does not have 'dm lost frames' property.
+2023-02-23T01:49:38.045547Z DEBUG   - _HandleCallbacks (1123) - Callback called
+2023-02-23T01:49:38.045548Z VERBOSE - Retrieving buffer from the camera.
+2023-02-23T01:49:38.045700Z VERBOSE - _GetParameters (874) - Cannot cast to local parameters
+2023-02-23T01:49:38.109993Z DEBUG   - _WriteByteStream (2135) - Sending Command to the camera.
+2023-02-23T01:49:38.112502Z DEBUG   - _HandleCallbacks (1113) - Entering update of parameters...
+2023-02-23T01:49:38.112505Z VERBOSE - _GetParameters (874) - Cannot cast to local parameters
+2023-02-23T01:49:38.112511Z VERBOSE - _SetRuntimeParameters (493) - Cannot cast to local parameters
+2023-02-23T01:49:38.112513Z DEBUG   - _HandleCallbacks (1118) - Update of parameters finished
+2023-02-23T01:49:38.112514Z DEBUG   - _HandleCallbacks (1121) - Calling callback...
+2023-02-23T01:49:38.112516Z WARNING - Handle (485) - frame does not have 'dm lost frames' property.
+2023-02-23T01:49:38.112575Z DEBUG   - _HandleCallbacks (1123) - Callback called
+2023-02-23T01:49:38.112576Z VERBOSE - Retrieving buffer from the camera.
+2023-02-23T01:49:38.112704Z VERBOSE - _GetParameters (874) - Cannot cast to local parameters
+2023-02-23T01:49:38.177095Z DEBUG   - _WriteByteStream (2135) - Sending Command to the camera.
+2023-02-23T01:49:38.179642Z DEBUG   - _HandleCallbacks (1113) - Entering update of parameters...
+2023-02-23T01:49:38.179648Z VERBOSE - _GetParameters (874) - Cannot cast to local parameters
+2023-02-23T01:49:38.179656Z VERBOSE - _SetRuntimeParameters (493) - Cannot cast to local parameters
+2023-02-23T01:49:38.179660Z DEBUG   - _HandleCallbacks (1118) - Update of parameters finished
+2023-02-23T01:49:38.179662Z DEBUG   - _HandleCallbacks (1121) - Calling callback...
+2023-02-23T01:49:38.179666Z WARNING - Handle (485) - frame does not have 'dm lost frames' property.
+2023-02-23T01:49:38.179740Z DEBUG   - _HandleCallbacks (1123) - Callback called
+2023-02-23T01:49:38.179741Z VERBOSE - Retrieving buffer from the camera.
+2023-02-23T01:49:38.179862Z VERBOSE - _GetParameters (874) - Cannot cast to local parameters
+2023-02-23T01:49:38.244143Z DEBUG   - _WriteByteStream (2135) - Sending Command to the camera.
+2023-02-23T01:49:38.246973Z DEBUG   - _HandleCallbacks (1113) - Entering update of parameters...
+2023-02-23T01:49:38.246979Z VERBOSE - _GetParameters (874) - Cannot cast to local parameters
+2023-02-23T01:49:38.246987Z VERBOSE - _SetRuntimeParameters (493) - Cannot cast to local parameters
+2023-02-23T01:49:38.246990Z DEBUG   - _HandleCallbacks (1118) - Update of parameters finished
+2023-02-23T01:49:38.246993Z DEBUG   - _HandleCallbacks (1121) - Calling callback...
+2023-02-23T01:49:38.246996Z WARNING - Handle (485) - frame does not have 'dm lost frames' property.
+2023-02-23T01:49:38.247071Z DEBUG   - _HandleCallbacks (1123) - Callback called
+2023-02-23T01:49:38.247072Z VERBOSE - Retrieving buffer from the camera.
+2023-02-23T01:49:38.247188Z VERBOSE - _GetParameters (874) - Cannot cast to local parameters
+2023-02-23T01:49:38.311359Z DEBUG   - _WriteByteStream (2135) - Sending Command to the camera.
+2023-02-23T01:49:38.313852Z DEBUG   - _HandleCallbacks (1113) - Entering update of parameters...
+2023-02-23T01:49:38.313858Z VERBOSE - _GetParameters (874) - Cannot cast to local parameters
+2023-02-23T01:49:38.313867Z VERBOSE - _SetRuntimeParameters (493) - Cannot cast to local parameters
+2023-02-23T01:49:38.313870Z DEBUG   - _HandleCallbacks (1118) - Update of parameters finished
+2023-02-23T01:49:38.313872Z DEBUG   - _HandleCallbacks (1121) - Calling callback...
+2023-02-23T01:49:38.313876Z WARNING - Handle (485) - frame does not have 'dm lost frames' property.
+2023-02-23T01:49:38.313952Z DEBUG   - _HandleCallbacks (1123) - Callback called
+2023-02-23T01:49:38.313953Z VERBOSE - Retrieving buffer from the camera.
+2023-02-23T01:49:38.314168Z VERBOSE - _GetParameters (874) - Cannot cast to local parameters
+2023-02-23T01:49:38.378375Z DEBUG   - _WriteByteStream (2135) - Sending Command to the camera.
+2023-02-23T01:49:38.380893Z DEBUG   - _HandleCallbacks (1113) - Entering update of parameters...
+2023-02-23T01:49:38.380901Z VERBOSE - _GetParameters (874) - Cannot cast to local parameters
+2023-02-23T01:49:38.380910Z VERBOSE - _SetRuntimeParameters (493) - Cannot cast to local parameters
+2023-02-23T01:49:38.380914Z DEBUG   - _HandleCallbacks (1118) - Update of parameters finished
+2023-02-23T01:49:38.380916Z DEBUG   - _HandleCallbacks (1121) - Calling callback...
+2023-02-23T01:49:38.380920Z WARNING - Handle (485) - frame does not have 'dm lost frames' property.
+2023-02-23T01:49:38.381016Z DEBUG   - _HandleCallbacks (1123) - Callback called
+2023-02-23T01:49:38.381017Z VERBOSE - Retrieving buffer from the camera.
+2023-02-23T01:49:38.381166Z VERBOSE - _GetParameters (874) - Cannot cast to local parameters
+2023-02-23T01:49:38.445527Z DEBUG   - _WriteByteStream (2135) - Sending Command to the camera.
+2023-02-23T01:49:38.447999Z DEBUG   - _HandleCallbacks (1113) - Entering update of parameters...
+2023-02-23T01:49:38.448005Z VERBOSE - _GetParameters (874) - Cannot cast to local parameters
+2023-02-23T01:49:38.448014Z VERBOSE - _SetRuntimeParameters (493) - Cannot cast to local parameters
+2023-02-23T01:49:38.448017Z DEBUG   - _HandleCallbacks (1118) - Update of parameters finished
+2023-02-23T01:49:38.448019Z DEBUG   - _HandleCallbacks (1121) - Calling callback...
+2023-02-23T01:49:38.448022Z WARNING - Handle (485) - frame does not have 'dm lost frames' property.
+2023-02-23T01:49:38.448107Z DEBUG   - _HandleCallbacks (1123) - Callback called
+2023-02-23T01:49:38.448108Z VERBOSE - Retrieving buffer from the camera.
+2023-02-23T01:49:38.448248Z VERBOSE - _GetParameters (874) - Cannot cast to local parameters
+2023-02-23T01:49:38.512632Z DEBUG   - _WriteByteStream (2135) - Sending Command to the camera.
+2023-02-23T01:49:38.515241Z DEBUG   - _HandleCallbacks (1113) - Entering update of parameters...
+2023-02-23T01:49:38.515249Z VERBOSE - _GetParameters (874) - Cannot cast to local parameters
+2023-02-23T01:49:38.515259Z VERBOSE - _SetRuntimeParameters (493) - Cannot cast to local parameters
+2023-02-23T01:49:38.515262Z DEBUG   - _HandleCallbacks (1118) - Update of parameters finished
+2023-02-23T01:49:38.515265Z DEBUG   - _HandleCallbacks (1121) - Calling callback...
+2023-02-23T01:49:38.515268Z WARNING - Handle (485) - frame does not have 'dm lost frames' property.
+2023-02-23T01:49:38.515355Z DEBUG   - _HandleCallbacks (1123) - Callback called
+2023-02-23T01:49:38.515357Z VERBOSE - Retrieving buffer from the camera.
+2023-02-23T01:49:38.515494Z VERBOSE - _GetParameters (874) - Cannot cast to local parameters
+2023-02-23T01:49:38.579646Z DEBUG   - _WriteByteStream (2135) - Sending Command to the camera.
+2023-02-23T01:49:38.582152Z DEBUG   - _HandleCallbacks (1113) - Entering update of parameters...
+2023-02-23T01:49:38.582160Z VERBOSE - _GetParameters (874) - Cannot cast to local parameters
+2023-02-23T01:49:38.582171Z VERBOSE - _SetRuntimeParameters (493) - Cannot cast to local parameters
+2023-02-23T01:49:38.582175Z DEBUG   - _HandleCallbacks (1118) - Update of parameters finished
+2023-02-23T01:49:38.582178Z DEBUG   - _HandleCallbacks (1121) - Calling callback...
+2023-02-23T01:49:38.582181Z WARNING - Handle (485) - frame does not have 'dm lost frames' property.
+2023-02-23T01:49:38.582260Z DEBUG   - _HandleCallbacks (1123) - Callback called
+2023-02-23T01:49:38.582262Z VERBOSE - Retrieving buffer from the camera.
+2023-02-23T01:49:38.582387Z VERBOSE - _GetParameters (874) - Cannot cast to local parameters
+2023-02-23T01:49:38.646713Z DEBUG   - _WriteByteStream (2135) - Sending Command to the camera.
+2023-02-23T01:49:38.649192Z DEBUG   - _HandleCallbacks (1113) - Entering update of parameters...
+2023-02-23T01:49:38.649197Z VERBOSE - _GetParameters (874) - Cannot cast to local parameters
+2023-02-23T01:49:38.649204Z VERBOSE - _SetRuntimeParameters (493) - Cannot cast to local parameters
+2023-02-23T01:49:38.649206Z DEBUG   - _HandleCallbacks (1118) - Update of parameters finished
+2023-02-23T01:49:38.649207Z DEBUG   - _HandleCallbacks (1121) - Calling callback...
+2023-02-23T01:49:38.649210Z WARNING - Handle (485) - frame does not have 'dm lost frames' property.
+2023-02-23T01:49:38.649268Z DEBUG   - _HandleCallbacks (1123) - Callback called
+2023-02-23T01:49:38.649269Z VERBOSE - Retrieving buffer from the camera.
+2023-02-23T01:49:38.649395Z VERBOSE - _GetParameters (874) - Cannot cast to local parameters
+2023-02-23T01:49:38.713980Z DEBUG   - _WriteByteStream (2135) - Sending Command to the camera.
+2023-02-23T01:49:38.716554Z DEBUG   - _HandleCallbacks (1113) - Entering update of parameters...
+2023-02-23T01:49:38.716562Z VERBOSE - _GetParameters (874) - Cannot cast to local parameters
+2023-02-23T01:49:38.716571Z VERBOSE - _SetRuntimeParameters (493) - Cannot cast to local parameters
+2023-02-23T01:49:38.716573Z DEBUG   - _HandleCallbacks (1118) - Update of parameters finished
+2023-02-23T01:49:38.716574Z DEBUG   - _HandleCallbacks (1121) - Calling callback...
+2023-02-23T01:49:38.716577Z WARNING - Handle (485) - frame does not have 'dm lost frames' property.
+2023-02-23T01:49:38.716641Z DEBUG   - _HandleCallbacks (1123) - Callback called
+2023-02-23T01:49:38.716642Z VERBOSE - Retrieving buffer from the camera.
+2023-02-23T01:49:38.716775Z VERBOSE - _GetParameters (874) - Cannot cast to local parameters
+2023-02-23T01:49:38.781048Z DEBUG   - _WriteByteStream (2135) - Sending Command to the camera.
+2023-02-23T01:49:38.783748Z DEBUG   - _HandleCallbacks (1113) - Entering update of parameters...
+2023-02-23T01:49:38.783755Z VERBOSE - _GetParameters (874) - Cannot cast to local parameters
+2023-02-23T01:49:38.783763Z VERBOSE - _SetRuntimeParameters (493) - Cannot cast to local parameters
+2023-02-23T01:49:38.783765Z DEBUG   - _HandleCallbacks (1118) - Update of parameters finished
+2023-02-23T01:49:38.783766Z DEBUG   - _HandleCallbacks (1121) - Calling callback...
+2023-02-23T01:49:38.783769Z WARNING - Handle (485) - frame does not have 'dm lost frames' property.
+2023-02-23T01:49:38.783836Z DEBUG   - _HandleCallbacks (1123) - Callback called
+2023-02-23T01:49:38.783837Z VERBOSE - Retrieving buffer from the camera.
+2023-02-23T01:49:38.783968Z VERBOSE - _GetParameters (874) - Cannot cast to local parameters
+2023-02-23T01:49:38.847984Z DEBUG   - _WriteByteStream (2135) - Sending Command to the camera.
+2023-02-23T01:49:38.850523Z DEBUG   - _HandleCallbacks (1113) - Entering update of parameters...
+2023-02-23T01:49:38.850533Z VERBOSE - _GetParameters (874) - Cannot cast to local parameters
+2023-02-23T01:49:38.850547Z VERBOSE - _SetRuntimeParameters (493) - Cannot cast to local parameters
+2023-02-23T01:49:38.850552Z DEBUG   - _HandleCallbacks (1118) - Update of parameters finished
+2023-02-23T01:49:38.850556Z DEBUG   - _HandleCallbacks (1121) - Calling callback...
+2023-02-23T01:49:38.850561Z WARNING - Handle (485) - frame does not have 'dm lost frames' property.
+2023-02-23T01:49:38.850721Z DEBUG   - _HandleCallbacks (1123) - Callback called
+2023-02-23T01:49:38.850722Z VERBOSE - Retrieving buffer from the camera.
+2023-02-23T01:49:38.851220Z VERBOSE - _GetParameters (874) - Cannot cast to local parameters
+2023-02-23T01:49:38.915170Z DEBUG   - _WriteByteStream (2135) - Sending Command to the camera.
+2023-02-23T01:49:38.917794Z DEBUG   - _HandleCallbacks (1113) - Entering update of parameters...
+2023-02-23T01:49:38.917800Z VERBOSE - _GetParameters (874) - Cannot cast to local parameters
+2023-02-23T01:49:38.917807Z VERBOSE - _SetRuntimeParameters (493) - Cannot cast to local parameters
+2023-02-23T01:49:38.917809Z DEBUG   - _HandleCallbacks (1118) - Update of parameters finished
+2023-02-23T01:49:38.917811Z DEBUG   - _HandleCallbacks (1121) - Calling callback...
+2023-02-23T01:49:38.917813Z WARNING - Handle (485) - frame does not have 'dm lost frames' property.
+2023-02-23T01:49:38.917882Z DEBUG   - _HandleCallbacks (1123) - Callback called
+2023-02-23T01:49:38.917883Z VERBOSE - Retrieving buffer from the camera.
+2023-02-23T01:49:38.918009Z VERBOSE - _GetParameters (874) - Cannot cast to local parameters
+2023-02-23T01:49:38.982163Z DEBUG   - _WriteByteStream (2135) - Sending Command to the camera.
+2023-02-23T01:49:38.984694Z DEBUG   - _HandleCallbacks (1113) - Entering update of parameters...
+2023-02-23T01:49:38.984701Z VERBOSE - _GetParameters (874) - Cannot cast to local parameters
+2023-02-23T01:49:38.984708Z VERBOSE - _SetRuntimeParameters (493) - Cannot cast to local parameters
+2023-02-23T01:49:38.984711Z DEBUG   - _HandleCallbacks (1118) - Update of parameters finished
+2023-02-23T01:49:38.984712Z DEBUG   - _HandleCallbacks (1121) - Calling callback...
+2023-02-23T01:49:38.984715Z WARNING - Handle (485) - frame does not have 'dm lost frames' property.
+2023-02-23T01:49:38.984779Z DEBUG   - _HandleCallbacks (1123) - Callback called
+2023-02-23T01:49:38.984780Z VERBOSE - Retrieving buffer from the camera.
+2023-02-23T01:49:38.984924Z VERBOSE - _GetParameters (874) - Cannot cast to local parameters
+2023-02-23T01:49:39.049274Z DEBUG   - _WriteByteStream (2135) - Sending Command to the camera.
+2023-02-23T01:49:39.051964Z DEBUG   - _HandleCallbacks (1113) - Entering update of parameters...
+2023-02-23T01:49:39.051971Z VERBOSE - _GetParameters (874) - Cannot cast to local parameters
+2023-02-23T01:49:39.051982Z VERBOSE - _SetRuntimeParameters (493) - Cannot cast to local parameters
+2023-02-23T01:49:39.051985Z DEBUG   - _HandleCallbacks (1118) - Update of parameters finished
+2023-02-23T01:49:39.051988Z DEBUG   - _HandleCallbacks (1121) - Calling callback...
+2023-02-23T01:49:39.051996Z WARNING - Handle (485) - frame does not have 'dm lost frames' property.
+2023-02-23T01:49:39.052087Z DEBUG   - _HandleCallbacks (1123) - Callback called
+2023-02-23T01:49:39.052088Z VERBOSE - Retrieving buffer from the camera.
+2023-02-23T01:49:39.052214Z VERBOSE - _GetParameters (874) - Cannot cast to local parameters
+2023-02-23T01:49:39.116501Z DEBUG   - _WriteByteStream (2135) - Sending Command to the camera.
+2023-02-23T01:49:39.119053Z DEBUG   - _HandleCallbacks (1113) - Entering update of parameters...
+2023-02-23T01:49:39.119059Z VERBOSE - _GetParameters (874) - Cannot cast to local parameters
+2023-02-23T01:49:39.119070Z VERBOSE - _SetRuntimeParameters (493) - Cannot cast to local parameters
+2023-02-23T01:49:39.119074Z DEBUG   - _HandleCallbacks (1118) - Update of parameters finished
+2023-02-23T01:49:39.119076Z DEBUG   - _HandleCallbacks (1121) - Calling callback...
+2023-02-23T01:49:39.119084Z WARNING - Handle (485) - frame does not have 'dm lost frames' property.
+2023-02-23T01:49:39.119175Z DEBUG   - _HandleCallbacks (1123) - Callback called
+2023-02-23T01:49:39.119176Z VERBOSE - Retrieving buffer from the camera.
+2023-02-23T01:49:39.119310Z VERBOSE - _GetParameters (874) - Cannot cast to local parameters
+2023-02-23T01:49:39.183609Z DEBUG   - _WriteByteStream (2135) - Sending Command to the camera.
+2023-02-23T01:49:39.186246Z DEBUG   - _HandleCallbacks (1113) - Entering update of parameters...
+2023-02-23T01:49:39.186253Z VERBOSE - _GetParameters (874) - Cannot cast to local parameters
+2023-02-23T01:49:39.186264Z VERBOSE - _SetRuntimeParameters (493) - Cannot cast to local parameters
+2023-02-23T01:49:39.186267Z DEBUG   - _HandleCallbacks (1118) - Update of parameters finished
+2023-02-23T01:49:39.186269Z DEBUG   - _HandleCallbacks (1121) - Calling callback...
+2023-02-23T01:49:39.186274Z WARNING - Handle (485) - frame does not have 'dm lost frames' property.
+2023-02-23T01:49:39.186348Z DEBUG   - _HandleCallbacks (1123) - Callback called
+2023-02-23T01:49:39.186350Z VERBOSE - Retrieving buffer from the camera.
+2023-02-23T01:49:39.186471Z VERBOSE - _GetParameters (874) - Cannot cast to local parameters
+2023-02-23T01:49:39.250622Z DEBUG   - _WriteByteStream (2135) - Sending Command to the camera.
+2023-02-23T01:49:39.253154Z DEBUG   - _HandleCallbacks (1113) - Entering update of parameters...
+2023-02-23T01:49:39.253161Z VERBOSE - _GetParameters (874) - Cannot cast to local parameters
+2023-02-23T01:49:39.253169Z VERBOSE - _SetRuntimeParameters (493) - Cannot cast to local parameters
+2023-02-23T01:49:39.253171Z DEBUG   - _HandleCallbacks (1118) - Update of parameters finished
+2023-02-23T01:49:39.253173Z DEBUG   - _HandleCallbacks (1121) - Calling callback...
+2023-02-23T01:49:39.253175Z WARNING - Handle (485) - frame does not have 'dm lost frames' property.
+2023-02-23T01:49:39.253263Z DEBUG   - _HandleCallbacks (1123) - Callback called
+2023-02-23T01:49:39.253264Z VERBOSE - Retrieving buffer from the camera.
+2023-02-23T01:49:39.253591Z VERBOSE - _GetParameters (874) - Cannot cast to local parameters
+2023-02-23T01:49:39.317687Z DEBUG   - _WriteByteStream (2135) - Sending Command to the camera.
+2023-02-23T01:49:39.320232Z DEBUG   - _HandleCallbacks (1113) - Entering update of parameters...
+2023-02-23T01:49:39.320239Z VERBOSE - _GetParameters (874) - Cannot cast to local parameters
+2023-02-23T01:49:39.320247Z VERBOSE - _SetRuntimeParameters (493) - Cannot cast to local parameters
+2023-02-23T01:49:39.320249Z DEBUG   - _HandleCallbacks (1118) - Update of parameters finished
+2023-02-23T01:49:39.320251Z DEBUG   - _HandleCallbacks (1121) - Calling callback...
+2023-02-23T01:49:39.320254Z WARNING - Handle (485) - frame does not have 'dm lost frames' property.
+2023-02-23T01:49:39.320324Z DEBUG   - _HandleCallbacks (1123) - Callback called
+2023-02-23T01:49:39.320325Z VERBOSE - Retrieving buffer from the camera.
+2023-02-23T01:49:39.320449Z VERBOSE - _GetParameters (874) - Cannot cast to local parameters
+2023-02-23T01:49:39.384832Z DEBUG   - _WriteByteStream (2135) - Sending Command to the camera.
+2023-02-23T01:49:39.387399Z DEBUG   - _HandleCallbacks (1113) - Entering update of parameters...
+2023-02-23T01:49:39.387405Z VERBOSE - _GetParameters (874) - Cannot cast to local parameters
+2023-02-23T01:49:39.387413Z VERBOSE - _SetRuntimeParameters (493) - Cannot cast to local parameters
+2023-02-23T01:49:39.387415Z DEBUG   - _HandleCallbacks (1118) - Update of parameters finished
+2023-02-23T01:49:39.387417Z DEBUG   - _HandleCallbacks (1121) - Calling callback...
+2023-02-23T01:49:39.387419Z WARNING - Handle (485) - frame does not have 'dm lost frames' property.
+2023-02-23T01:49:39.387488Z DEBUG   - _HandleCallbacks (1123) - Callback called
+2023-02-23T01:49:39.387489Z VERBOSE - Retrieving buffer from the camera.
+2023-02-23T01:49:39.387640Z VERBOSE - _GetParameters (874) - Cannot cast to local parameters
+2023-02-23T01:49:39.451962Z DEBUG   - _WriteByteStream (2135) - Sending Command to the camera.
+2023-02-23T01:49:39.454567Z DEBUG   - _HandleCallbacks (1113) - Entering update of parameters...
+2023-02-23T01:49:39.454572Z VERBOSE - _GetParameters (874) - Cannot cast to local parameters
+2023-02-23T01:49:39.454580Z VERBOSE - _SetRuntimeParameters (493) - Cannot cast to local parameters
+2023-02-23T01:49:39.454583Z DEBUG   - _HandleCallbacks (1118) - Update of parameters finished
+2023-02-23T01:49:39.454584Z DEBUG   - _HandleCallbacks (1121) - Calling callback...
+2023-02-23T01:49:39.454587Z WARNING - Handle (485) - frame does not have 'dm lost frames' property.
+2023-02-23T01:49:39.454655Z DEBUG   - _HandleCallbacks (1123) - Callback called
+2023-02-23T01:49:39.454656Z VERBOSE - Retrieving buffer from the camera.
+2023-02-23T01:49:39.454989Z VERBOSE - _GetParameters (874) - Cannot cast to local parameters
+2023-02-23T01:49:39.519033Z DEBUG   - _WriteByteStream (2135) - Sending Command to the camera.
+2023-02-23T01:49:39.521672Z DEBUG   - _HandleCallbacks (1113) - Entering update of parameters...
+2023-02-23T01:49:39.521678Z VERBOSE - _GetParameters (874) - Cannot cast to local parameters
+2023-02-23T01:49:39.521686Z VERBOSE - _SetRuntimeParameters (493) - Cannot cast to local parameters
+2023-02-23T01:49:39.521688Z DEBUG   - _HandleCallbacks (1118) - Update of parameters finished
+2023-02-23T01:49:39.521689Z DEBUG   - _HandleCallbacks (1121) - Calling callback...
+2023-02-23T01:49:39.521692Z WARNING - Handle (485) - frame does not have 'dm lost frames' property.
+2023-02-23T01:49:39.521757Z DEBUG   - _HandleCallbacks (1123) - Callback called
+2023-02-23T01:49:39.521759Z VERBOSE - Retrieving buffer from the camera.
+2023-02-23T01:49:39.521890Z VERBOSE - _GetParameters (874) - Cannot cast to local parameters
+2023-02-23T01:49:39.586040Z DEBUG   - _WriteByteStream (2135) - Sending Command to the camera.
+2023-02-23T01:49:39.588537Z DEBUG   - _HandleCallbacks (1113) - Entering update of parameters...
+2023-02-23T01:49:39.588546Z VERBOSE - _GetParameters (874) - Cannot cast to local parameters
+2023-02-23T01:49:39.588558Z VERBOSE - _SetRuntimeParameters (493) - Cannot cast to local parameters
+2023-02-23T01:49:39.588561Z DEBUG   - _HandleCallbacks (1118) - Update of parameters finished
+2023-02-23T01:49:39.588564Z DEBUG   - _HandleCallbacks (1121) - Calling callback...
+2023-02-23T01:49:39.588568Z WARNING - Handle (485) - frame does not have 'dm lost frames' property.
+2023-02-23T01:49:39.588657Z DEBUG   - _HandleCallbacks (1123) - Callback called
+2023-02-23T01:49:39.588659Z VERBOSE - Retrieving buffer from the camera.
+2023-02-23T01:49:39.588803Z VERBOSE - _GetParameters (874) - Cannot cast to local parameters
+2023-02-23T01:49:39.653241Z DEBUG   - _WriteByteStream (2135) - Sending Command to the camera.
+2023-02-23T01:49:39.655874Z DEBUG   - _HandleCallbacks (1113) - Entering update of parameters...
+2023-02-23T01:49:39.655882Z VERBOSE - _GetParameters (874) - Cannot cast to local parameters
+2023-02-23T01:49:39.655889Z VERBOSE - _SetRuntimeParameters (493) - Cannot cast to local parameters
+2023-02-23T01:49:39.655891Z DEBUG   - _HandleCallbacks (1118) - Update of parameters finished
+2023-02-23T01:49:39.655893Z DEBUG   - _HandleCallbacks (1121) - Calling callback...
+2023-02-23T01:49:39.655896Z WARNING - Handle (485) - frame does not have 'dm lost frames' property.
+2023-02-23T01:49:39.655964Z DEBUG   - _HandleCallbacks (1123) - Callback called
+2023-02-23T01:49:39.655965Z VERBOSE - Retrieving buffer from the camera.
+2023-02-23T01:49:39.656112Z VERBOSE - _GetParameters (874) - Cannot cast to local parameters
+2023-02-23T01:49:39.720459Z DEBUG   - _WriteByteStream (2135) - Sending Command to the camera.
+2023-02-23T01:49:39.723035Z DEBUG   - _HandleCallbacks (1113) - Entering update of parameters...
+2023-02-23T01:49:39.723044Z VERBOSE - _GetParameters (874) - Cannot cast to local parameters
+2023-02-23T01:49:39.723056Z VERBOSE - _SetRuntimeParameters (493) - Cannot cast to local parameters
+2023-02-23T01:49:39.723060Z DEBUG   - _HandleCallbacks (1118) - Update of parameters finished
+2023-02-23T01:49:39.723063Z DEBUG   - _HandleCallbacks (1121) - Calling callback...
+2023-02-23T01:49:39.723066Z WARNING - Handle (485) - frame does not have 'dm lost frames' property.
+2023-02-23T01:49:39.723162Z DEBUG   - _HandleCallbacks (1123) - Callback called
+2023-02-23T01:49:39.723164Z VERBOSE - Retrieving buffer from the camera.
+2023-02-23T01:49:39.723406Z VERBOSE - _GetParameters (874) - Cannot cast to local parameters
+2023-02-23T01:49:39.787308Z DEBUG   - _WriteByteStream (2135) - Sending Command to the camera.
+2023-02-23T01:49:39.789859Z DEBUG   - _HandleCallbacks (1113) - Entering update of parameters...
+2023-02-23T01:49:39.789864Z VERBOSE - _GetParameters (874) - Cannot cast to local parameters
+2023-02-23T01:49:39.789871Z VERBOSE - _SetRuntimeParameters (493) - Cannot cast to local parameters
+2023-02-23T01:49:39.789874Z DEBUG   - _HandleCallbacks (1118) - Update of parameters finished
+2023-02-23T01:49:39.789875Z DEBUG   - _HandleCallbacks (1121) - Calling callback...
+2023-02-23T01:49:39.789877Z WARNING - Handle (485) - frame does not have 'dm lost frames' property.
+2023-02-23T01:49:39.789951Z DEBUG   - _HandleCallbacks (1123) - Callback called
+2023-02-23T01:49:39.789952Z VERBOSE - Retrieving buffer from the camera.
+2023-02-23T01:49:39.790115Z VERBOSE - _GetParameters (874) - Cannot cast to local parameters
+2023-02-23T01:49:39.854405Z DEBUG   - _WriteByteStream (2135) - Sending Command to the camera.
+2023-02-23T01:49:39.856944Z DEBUG   - _HandleCallbacks (1113) - Entering update of parameters...
+2023-02-23T01:49:39.856949Z VERBOSE - _GetParameters (874) - Cannot cast to local parameters
+2023-02-23T01:49:39.856958Z VERBOSE - _SetRuntimeParameters (493) - Cannot cast to local parameters
+2023-02-23T01:49:39.856960Z DEBUG   - _HandleCallbacks (1118) - Update of parameters finished
+2023-02-23T01:49:39.856963Z DEBUG   - _HandleCallbacks (1121) - Calling callback...
+2023-02-23T01:49:39.856966Z WARNING - Handle (485) - frame does not have 'dm lost frames' property.
+2023-02-23T01:49:39.857054Z DEBUG   - _HandleCallbacks (1123) - Callback called
+2023-02-23T01:49:39.857055Z VERBOSE - Retrieving buffer from the camera.
+2023-02-23T01:49:39.857217Z VERBOSE - _GetParameters (874) - Cannot cast to local parameters
+2023-02-23T01:49:39.921592Z DEBUG   - _WriteByteStream (2135) - Sending Command to the camera.
+2023-02-23T01:49:39.924234Z DEBUG   - _HandleCallbacks (1113) - Entering update of parameters...
+2023-02-23T01:49:39.924242Z VERBOSE - _GetParameters (874) - Cannot cast to local parameters
+2023-02-23T01:49:39.924249Z VERBOSE - _SetRuntimeParameters (493) - Cannot cast to local parameters
+2023-02-23T01:49:39.924251Z DEBUG   - _HandleCallbacks (1118) - Update of parameters finished
+2023-02-23T01:49:39.924252Z DEBUG   - _HandleCallbacks (1121) - Calling callback...
+2023-02-23T01:49:39.924255Z WARNING - Handle (485) - frame does not have 'dm lost frames' property.
+2023-02-23T01:49:39.924319Z DEBUG   - _HandleCallbacks (1123) - Callback called
+2023-02-23T01:49:39.924320Z VERBOSE - Retrieving buffer from the camera.
+2023-02-23T01:49:39.924448Z VERBOSE - _GetParameters (874) - Cannot cast to local parameters
+2023-02-23T01:49:39.988622Z DEBUG   - _WriteByteStream (2135) - Sending Command to the camera.
+2023-02-23T01:49:39.991173Z DEBUG   - _HandleCallbacks (1113) - Entering update of parameters...
+2023-02-23T01:49:39.991183Z VERBOSE - _GetParameters (874) - Cannot cast to local parameters
+2023-02-23T01:49:39.991194Z VERBOSE - _SetRuntimeParameters (493) - Cannot cast to local parameters
+2023-02-23T01:49:39.991198Z DEBUG   - _HandleCallbacks (1118) - Update of parameters finished
+2023-02-23T01:49:39.991201Z DEBUG   - _HandleCallbacks (1121) - Calling callback...
+2023-02-23T01:49:39.991206Z WARNING - Handle (485) - frame does not have 'dm lost frames' property.
+2023-02-23T01:49:39.991344Z DEBUG   - _HandleCallbacks (1123) - Callback called
+2023-02-23T01:49:39.991346Z VERBOSE - Retrieving buffer from the camera.
+2023-02-23T01:49:39.991478Z VERBOSE - _GetParameters (874) - Cannot cast to local parameters
+2023-02-23T01:49:40.055710Z DEBUG   - _WriteByteStream (2135) - Sending Command to the camera.
+2023-02-23T01:49:40.058245Z DEBUG   - _HandleCallbacks (1113) - Entering update of parameters...
+2023-02-23T01:49:40.058255Z VERBOSE - _GetParameters (874) - Cannot cast to local parameters
+2023-02-23T01:49:40.058266Z VERBOSE - _SetRuntimeParameters (493) - Cannot cast to local parameters
+2023-02-23T01:49:40.058270Z DEBUG   - _HandleCallbacks (1118) - Update of parameters finished
+2023-02-23T01:49:40.058272Z DEBUG   - _HandleCallbacks (1121) - Calling callback...
+2023-02-23T01:49:40.058277Z WARNING - Handle (485) - frame does not have 'dm lost frames' property.
+2023-02-23T01:49:40.058376Z DEBUG   - _HandleCallbacks (1123) - Callback called
+2023-02-23T01:49:40.058377Z VERBOSE - Retrieving buffer from the camera.
+2023-02-23T01:49:40.058504Z VERBOSE - _GetParameters (874) - Cannot cast to local parameters
+2023-02-23T01:49:40.122793Z DEBUG   - _WriteByteStream (2135) - Sending Command to the camera.
+2023-02-23T01:49:40.125310Z DEBUG   - _HandleCallbacks (1113) - Entering update of parameters...
+2023-02-23T01:49:40.125319Z VERBOSE - _GetParameters (874) - Cannot cast to local parameters
+2023-02-23T01:49:40.125331Z VERBOSE - _SetRuntimeParameters (493) - Cannot cast to local parameters
+2023-02-23T01:49:40.125335Z DEBUG   - _HandleCallbacks (1118) - Update of parameters finished
+2023-02-23T01:49:40.125338Z DEBUG   - _HandleCallbacks (1121) - Calling callback...
+2023-02-23T01:49:40.125342Z WARNING - Handle (485) - frame does not have 'dm lost frames' property.
+2023-02-23T01:49:40.125446Z DEBUG   - _HandleCallbacks (1123) - Callback called
+2023-02-23T01:49:40.125447Z VERBOSE - Retrieving buffer from the camera.
+2023-02-23T01:49:40.125570Z VERBOSE - _GetParameters (874) - Cannot cast to local parameters
+2023-02-23T01:49:40.189883Z DEBUG   - _WriteByteStream (2135) - Sending Command to the camera.
+2023-02-23T01:49:40.192422Z DEBUG   - _HandleCallbacks (1113) - Entering update of parameters...
+2023-02-23T01:49:40.192429Z VERBOSE - _GetParameters (874) - Cannot cast to local parameters
+2023-02-23T01:49:40.192440Z VERBOSE - _SetRuntimeParameters (493) - Cannot cast to local parameters
+2023-02-23T01:49:40.192444Z DEBUG   - _HandleCallbacks (1118) - Update of parameters finished
+2023-02-23T01:49:40.192461Z DEBUG   - _HandleCallbacks (1121) - Calling callback...
+2023-02-23T01:49:40.192465Z WARNING - Handle (485) - frame does not have 'dm lost frames' property.
+2023-02-23T01:49:40.192554Z DEBUG   - _HandleCallbacks (1123) - Callback called
+2023-02-23T01:49:40.192556Z VERBOSE - Retrieving buffer from the camera.
+2023-02-23T01:49:40.192675Z VERBOSE - _GetParameters (874) - Cannot cast to local parameters
+2023-02-23T01:49:40.257019Z DEBUG   - _WriteByteStream (2135) - Sending Command to the camera.
+2023-02-23T01:49:40.259659Z DEBUG   - _HandleCallbacks (1113) - Entering update of parameters...
+2023-02-23T01:49:40.259668Z VERBOSE - _GetParameters (874) - Cannot cast to local parameters
+2023-02-23T01:49:40.259679Z VERBOSE - _SetRuntimeParameters (493) - Cannot cast to local parameters
+2023-02-23T01:49:40.259683Z DEBUG   - _HandleCallbacks (1118) - Update of parameters finished
+2023-02-23T01:49:40.259686Z DEBUG   - _HandleCallbacks (1121) - Calling callback...
+2023-02-23T01:49:40.259690Z WARNING - Handle (485) - frame does not have 'dm lost frames' property.
+2023-02-23T01:49:40.259811Z DEBUG   - _HandleCallbacks (1123) - Callback called
+2023-02-23T01:49:40.259813Z VERBOSE - Retrieving buffer from the camera.
+2023-02-23T01:49:40.259941Z VERBOSE - _GetParameters (874) - Cannot cast to local parameters
+2023-02-23T01:49:40.324070Z DEBUG   - _WriteByteStream (2135) - Sending Command to the camera.
+2023-02-23T01:49:40.326600Z DEBUG   - _HandleCallbacks (1113) - Entering update of parameters...
+2023-02-23T01:49:40.326606Z VERBOSE - _GetParameters (874) - Cannot cast to local parameters
+2023-02-23T01:49:40.326614Z VERBOSE - _SetRuntimeParameters (493) - Cannot cast to local parameters
+2023-02-23T01:49:40.326617Z DEBUG   - _HandleCallbacks (1118) - Update of parameters finished
+2023-02-23T01:49:40.326618Z DEBUG   - _HandleCallbacks (1121) - Calling callback...
+2023-02-23T01:49:40.326621Z WARNING - Handle (485) - frame does not have 'dm lost frames' property.
+2023-02-23T01:49:40.326697Z DEBUG   - _HandleCallbacks (1123) - Callback called
+2023-02-23T01:49:40.326698Z VERBOSE - Retrieving buffer from the camera.
+2023-02-23T01:49:40.326824Z VERBOSE - _GetParameters (874) - Cannot cast to local parameters
+2023-02-23T01:49:40.391177Z DEBUG   - _WriteByteStream (2135) - Sending Command to the camera.
+2023-02-23T01:49:40.393835Z DEBUG   - _HandleCallbacks (1113) - Entering update of parameters...
+2023-02-23T01:49:40.393843Z VERBOSE - _GetParameters (874) - Cannot cast to local parameters
+2023-02-23T01:49:40.393855Z VERBOSE - _SetRuntimeParameters (493) - Cannot cast to local parameters
+2023-02-23T01:49:40.393858Z DEBUG   - _HandleCallbacks (1118) - Update of parameters finished
+2023-02-23T01:49:40.393861Z DEBUG   - _HandleCallbacks (1121) - Calling callback...
+2023-02-23T01:49:40.393865Z WARNING - Handle (485) - frame does not have 'dm lost frames' property.
+2023-02-23T01:49:40.393954Z DEBUG   - _HandleCallbacks (1123) - Callback called
+2023-02-23T01:49:40.393956Z VERBOSE - Retrieving buffer from the camera.
+2023-02-23T01:49:40.394088Z VERBOSE - _GetParameters (874) - Cannot cast to local parameters
+2023-02-23T01:49:40.458242Z DEBUG   - _WriteByteStream (2135) - Sending Command to the camera.
+2023-02-23T01:49:40.460785Z DEBUG   - _HandleCallbacks (1113) - Entering update of parameters...
+2023-02-23T01:49:40.460792Z VERBOSE - _GetParameters (874) - Cannot cast to local parameters
+2023-02-23T01:49:40.460802Z VERBOSE - _SetRuntimeParameters (493) - Cannot cast to local parameters
+2023-02-23T01:49:40.460806Z DEBUG   - _HandleCallbacks (1118) - Update of parameters finished
+2023-02-23T01:49:40.460808Z DEBUG   - _HandleCallbacks (1121) - Calling callback...
+2023-02-23T01:49:40.460812Z WARNING - Handle (485) - frame does not have 'dm lost frames' property.
+2023-02-23T01:49:40.460898Z DEBUG   - _HandleCallbacks (1123) - Callback called
+2023-02-23T01:49:40.460900Z VERBOSE - Retrieving buffer from the camera.
+2023-02-23T01:49:40.461022Z VERBOSE - _GetParameters (874) - Cannot cast to local parameters
+2023-02-23T01:49:40.525473Z DEBUG   - _WriteByteStream (2135) - Sending Command to the camera.
+2023-02-23T01:49:40.527990Z DEBUG   - _HandleCallbacks (1113) - Entering update of parameters...
+2023-02-23T01:49:40.527996Z VERBOSE - _GetParameters (874) - Cannot cast to local parameters
+2023-02-23T01:49:40.528004Z VERBOSE - _SetRuntimeParameters (493) - Cannot cast to local parameters
+2023-02-23T01:49:40.528006Z DEBUG   - _HandleCallbacks (1118) - Update of parameters finished
+2023-02-23T01:49:40.528007Z DEBUG   - _HandleCallbacks (1121) - Calling callback...
+2023-02-23T01:49:40.528010Z WARNING - Handle (485) - frame does not have 'dm lost frames' property.
+2023-02-23T01:49:40.528077Z DEBUG   - _HandleCallbacks (1123) - Callback called
+2023-02-23T01:49:40.528078Z VERBOSE - Retrieving buffer from the camera.
+2023-02-23T01:49:40.528199Z VERBOSE - _GetParameters (874) - Cannot cast to local parameters
+2023-02-23T01:49:40.592562Z DEBUG   - _WriteByteStream (2135) - Sending Command to the camera.
+2023-02-23T01:49:40.595085Z DEBUG   - _HandleCallbacks (1113) - Entering update of parameters...
+2023-02-23T01:49:40.595091Z VERBOSE - _GetParameters (874) - Cannot cast to local parameters
+2023-02-23T01:49:40.595098Z VERBOSE - _SetRuntimeParameters (493) - Cannot cast to local parameters
+2023-02-23T01:49:40.595100Z DEBUG   - _HandleCallbacks (1118) - Update of parameters finished
+2023-02-23T01:49:40.595102Z DEBUG   - _HandleCallbacks (1121) - Calling callback...
+2023-02-23T01:49:40.595105Z WARNING - Handle (485) - frame does not have 'dm lost frames' property.
+2023-02-23T01:49:40.595169Z DEBUG   - _HandleCallbacks (1123) - Callback called
+2023-02-23T01:49:40.595171Z VERBOSE - Retrieving buffer from the camera.
+2023-02-23T01:49:40.595296Z VERBOSE - _GetParameters (874) - Cannot cast to local parameters
+2023-02-23T01:49:40.659634Z DEBUG   - _WriteByteStream (2135) - Sending Command to the camera.
+2023-02-23T01:49:40.662760Z DEBUG   - _HandleCallbacks (1113) - Entering update of parameters...
+2023-02-23T01:49:40.662772Z VERBOSE - _GetParameters (874) - Cannot cast to local parameters
+2023-02-23T01:49:40.662786Z VERBOSE - _SetRuntimeParameters (493) - Cannot cast to local parameters
+2023-02-23T01:49:40.662790Z DEBUG   - _HandleCallbacks (1118) - Update of parameters finished
+2023-02-23T01:49:40.662793Z DEBUG   - _HandleCallbacks (1121) - Calling callback...
+2023-02-23T01:49:40.662797Z WARNING - Handle (485) - frame does not have 'dm lost frames' property.
+2023-02-23T01:49:40.662959Z DEBUG   - _HandleCallbacks (1123) - Callback called
+2023-02-23T01:49:40.662962Z VERBOSE - Retrieving buffer from the camera.
+2023-02-23T01:49:40.663335Z VERBOSE - _GetParameters (874) - Cannot cast to local parameters
+2023-02-23T01:49:40.726611Z DEBUG   - _WriteByteStream (2135) - Sending Command to the camera.
+2023-02-23T01:49:40.729138Z DEBUG   - _HandleCallbacks (1113) - Entering update of parameters...
+2023-02-23T01:49:40.729144Z VERBOSE - _GetParameters (874) - Cannot cast to local parameters
+2023-02-23T01:49:40.729152Z VERBOSE - _SetRuntimeParameters (493) - Cannot cast to local parameters
+2023-02-23T01:49:40.729155Z DEBUG   - _HandleCallbacks (1118) - Update of parameters finished
+2023-02-23T01:49:40.729156Z DEBUG   - _HandleCallbacks (1121) - Calling callback...
+2023-02-23T01:49:40.729159Z WARNING - Handle (485) - frame does not have 'dm lost frames' property.
+2023-02-23T01:49:40.729230Z DEBUG   - _HandleCallbacks (1123) - Callback called
+2023-02-23T01:49:40.729232Z VERBOSE - Retrieving buffer from the camera.
+2023-02-23T01:49:40.729365Z VERBOSE - _GetParameters (874) - Cannot cast to local parameters
+2023-02-23T01:49:40.793682Z DEBUG   - _WriteByteStream (2135) - Sending Command to the camera.
+2023-02-23T01:49:40.796393Z DEBUG   - _HandleCallbacks (1113) - Entering update of parameters...
+2023-02-23T01:49:40.796402Z VERBOSE - _GetParameters (874) - Cannot cast to local parameters
+2023-02-23T01:49:40.796417Z VERBOSE - _SetRuntimeParameters (493) - Cannot cast to local parameters
+2023-02-23T01:49:40.796420Z DEBUG   - _HandleCallbacks (1118) - Update of parameters finished
+2023-02-23T01:49:40.796423Z DEBUG   - _HandleCallbacks (1121) - Calling callback...
+2023-02-23T01:49:40.796427Z WARNING - Handle (485) - frame does not have 'dm lost frames' property.
+2023-02-23T01:49:40.796546Z DEBUG   - _HandleCallbacks (1123) - Callback called
+2023-02-23T01:49:40.796548Z VERBOSE - Retrieving buffer from the camera.
+2023-02-23T01:49:40.796693Z VERBOSE - _GetParameters (874) - Cannot cast to local parameters
+2023-02-23T01:49:40.860726Z DEBUG   - _WriteByteStream (2135) - Sending Command to the camera.
+2023-02-23T01:49:40.863287Z DEBUG   - _HandleCallbacks (1113) - Entering update of parameters...
+2023-02-23T01:49:40.863294Z VERBOSE - _GetParameters (874) - Cannot cast to local parameters
+2023-02-23T01:49:40.863306Z VERBOSE - _SetRuntimeParameters (493) - Cannot cast to local parameters
+2023-02-23T01:49:40.863310Z DEBUG   - _HandleCallbacks (1118) - Update of parameters finished
+2023-02-23T01:49:40.863313Z DEBUG   - _HandleCallbacks (1121) - Calling callback...
+2023-02-23T01:49:40.863317Z WARNING - Handle (485) - frame does not have 'dm lost frames' property.
+2023-02-23T01:49:40.863438Z DEBUG   - _HandleCallbacks (1123) - Callback called
+2023-02-23T01:49:40.863439Z VERBOSE - Retrieving buffer from the camera.
+2023-02-23T01:49:40.863611Z VERBOSE - _GetParameters (874) - Cannot cast to local parameters
+2023-02-23T01:49:40.927765Z DEBUG   - _WriteByteStream (2135) - Sending Command to the camera.
+2023-02-23T01:49:40.930312Z DEBUG   - _HandleCallbacks (1113) - Entering update of parameters...
+2023-02-23T01:49:40.930319Z VERBOSE - _GetParameters (874) - Cannot cast to local parameters
+2023-02-23T01:49:40.930330Z VERBOSE - _SetRuntimeParameters (493) - Cannot cast to local parameters
+2023-02-23T01:49:40.930334Z DEBUG   - _HandleCallbacks (1118) - Update of parameters finished
+2023-02-23T01:49:40.930336Z DEBUG   - _HandleCallbacks (1121) - Calling callback...
+2023-02-23T01:49:40.930340Z WARNING - Handle (485) - frame does not have 'dm lost frames' property.
+2023-02-23T01:49:40.930424Z DEBUG   - _HandleCallbacks (1123) - Callback called
+2023-02-23T01:49:40.930426Z VERBOSE - Retrieving buffer from the camera.
+2023-02-23T01:49:40.930563Z VERBOSE - _GetParameters (874) - Cannot cast to local parameters
+2023-02-23T01:49:40.994878Z DEBUG   - _WriteByteStream (2135) - Sending Command to the camera.
+2023-02-23T01:49:40.997401Z DEBUG   - _HandleCallbacks (1113) - Entering update of parameters...
+2023-02-23T01:49:40.997409Z VERBOSE - _GetParameters (874) - Cannot cast to local parameters
+2023-02-23T01:49:40.997420Z VERBOSE - _SetRuntimeParameters (493) - Cannot cast to local parameters
+2023-02-23T01:49:40.997424Z DEBUG   - _HandleCallbacks (1118) - Update of parameters finished
+2023-02-23T01:49:40.997427Z DEBUG   - _HandleCallbacks (1121) - Calling callback...
+2023-02-23T01:49:40.997431Z WARNING - Handle (485) - frame does not have 'dm lost frames' property.
+2023-02-23T01:49:40.997517Z DEBUG   - _HandleCallbacks (1123) - Callback called
+2023-02-23T01:49:40.997518Z VERBOSE - Retrieving buffer from the camera.
+2023-02-23T01:49:40.997658Z VERBOSE - _GetParameters (874) - Cannot cast to local parameters
+2023-02-23T01:49:41.061944Z DEBUG   - _WriteByteStream (2135) - Sending Command to the camera.
+2023-02-23T01:49:41.064441Z DEBUG   - _HandleCallbacks (1113) - Entering update of parameters...
+2023-02-23T01:49:41.064446Z VERBOSE - _GetParameters (874) - Cannot cast to local parameters
+2023-02-23T01:49:41.064454Z VERBOSE - _SetRuntimeParameters (493) - Cannot cast to local parameters
+2023-02-23T01:49:41.064456Z DEBUG   - _HandleCallbacks (1118) - Update of parameters finished
+2023-02-23T01:49:41.064457Z DEBUG   - _HandleCallbacks (1121) - Calling callback...
+2023-02-23T01:49:41.064460Z WARNING - Handle (485) - frame does not have 'dm lost frames' property.
+2023-02-23T01:49:41.064524Z DEBUG   - _HandleCallbacks (1123) - Callback called
+2023-02-23T01:49:41.064525Z VERBOSE - Retrieving buffer from the camera.
+2023-02-23T01:49:41.064653Z VERBOSE - _GetParameters (874) - Cannot cast to local parameters
+2023-02-23T01:49:41.129286Z DEBUG   - _WriteByteStream (2135) - Sending Command to the camera.
+2023-02-23T01:49:41.131850Z DEBUG   - _HandleCallbacks (1113) - Entering update of parameters...
+2023-02-23T01:49:41.131858Z VERBOSE - _GetParameters (874) - Cannot cast to local parameters
+2023-02-23T01:49:41.131870Z VERBOSE - _SetRuntimeParameters (493) - Cannot cast to local parameters
+2023-02-23T01:49:41.131872Z DEBUG   - _HandleCallbacks (1118) - Update of parameters finished
+2023-02-23T01:49:41.131874Z DEBUG   - _HandleCallbacks (1121) - Calling callback...
+2023-02-23T01:49:41.131878Z WARNING - Handle (485) - frame does not have 'dm lost frames' property.
+2023-02-23T01:49:41.131946Z DEBUG   - _HandleCallbacks (1123) - Callback called
+2023-02-23T01:49:41.131948Z VERBOSE - Retrieving buffer from the camera.
+2023-02-23T01:49:41.132080Z VERBOSE - _GetParameters (874) - Cannot cast to local parameters
+2023-02-23T01:49:41.196276Z DEBUG   - _WriteByteStream (2135) - Sending Command to the camera.
+2023-02-23T01:49:41.198892Z DEBUG   - _HandleCallbacks (1113) - Entering update of parameters...
+2023-02-23T01:49:41.198899Z VERBOSE - _GetParameters (874) - Cannot cast to local parameters
+2023-02-23T01:49:41.198906Z VERBOSE - _SetRuntimeParameters (493) - Cannot cast to local parameters
+2023-02-23T01:49:41.198908Z DEBUG   - _HandleCallbacks (1118) - Update of parameters finished
+2023-02-23T01:49:41.198910Z DEBUG   - _HandleCallbacks (1121) - Calling callback...
+2023-02-23T01:49:41.198912Z WARNING - Handle (485) - frame does not have 'dm lost frames' property.
+2023-02-23T01:49:41.198976Z DEBUG   - _HandleCallbacks (1123) - Callback called
+2023-02-23T01:49:41.198978Z VERBOSE - Retrieving buffer from the camera.
+2023-02-23T01:49:41.199317Z VERBOSE - _GetParameters (874) - Cannot cast to local parameters
+2023-02-23T01:49:41.263251Z DEBUG   - _WriteByteStream (2135) - Sending Command to the camera.
+2023-02-23T01:49:41.265745Z DEBUG   - _HandleCallbacks (1113) - Entering update of parameters...
+2023-02-23T01:49:41.265750Z VERBOSE - _GetParameters (874) - Cannot cast to local parameters
+2023-02-23T01:49:41.265759Z VERBOSE - _SetRuntimeParameters (493) - Cannot cast to local parameters
+2023-02-23T01:49:41.265761Z DEBUG   - _HandleCallbacks (1118) - Update of parameters finished
+2023-02-23T01:49:41.265762Z DEBUG   - _HandleCallbacks (1121) - Calling callback...
+2023-02-23T01:49:41.265765Z WARNING - Handle (485) - frame does not have 'dm lost frames' property.
+2023-02-23T01:49:41.265831Z DEBUG   - _HandleCallbacks (1123) - Callback called
+2023-02-23T01:49:41.265832Z VERBOSE - Retrieving buffer from the camera.
+2023-02-23T01:49:41.265955Z VERBOSE - _GetParameters (874) - Cannot cast to local parameters
+2023-02-23T01:49:41.330325Z DEBUG   - _WriteByteStream (2135) - Sending Command to the camera.
+2023-02-23T01:49:41.332852Z DEBUG   - _HandleCallbacks (1113) - Entering update of parameters...
+2023-02-23T01:49:41.332861Z VERBOSE - _GetParameters (874) - Cannot cast to local parameters
+2023-02-23T01:49:41.332873Z VERBOSE - _SetRuntimeParameters (493) - Cannot cast to local parameters
+2023-02-23T01:49:41.332877Z DEBUG   - _HandleCallbacks (1118) - Update of parameters finished
+2023-02-23T01:49:41.332879Z DEBUG   - _HandleCallbacks (1121) - Calling callback...
+2023-02-23T01:49:41.332883Z WARNING - Handle (485) - frame does not have 'dm lost frames' property.
+2023-02-23T01:49:41.332989Z DEBUG   - _HandleCallbacks (1123) - Callback called
+2023-02-23T01:49:41.332991Z VERBOSE - Retrieving buffer from the camera.
+2023-02-23T01:49:41.333144Z VERBOSE - _GetParameters (874) - Cannot cast to local parameters
+2023-02-23T01:49:41.397393Z DEBUG   - _WriteByteStream (2135) - Sending Command to the camera.
+2023-02-23T01:49:41.399942Z DEBUG   - _HandleCallbacks (1113) - Entering update of parameters...
+2023-02-23T01:49:41.399949Z VERBOSE - _GetParameters (874) - Cannot cast to local parameters
+2023-02-23T01:49:41.399959Z VERBOSE - _SetRuntimeParameters (493) - Cannot cast to local parameters
+2023-02-23T01:49:41.399962Z DEBUG   - _HandleCallbacks (1118) - Update of parameters finished
+2023-02-23T01:49:41.399965Z DEBUG   - _HandleCallbacks (1121) - Calling callback...
+2023-02-23T01:49:41.399969Z WARNING - Handle (485) - frame does not have 'dm lost frames' property.
+2023-02-23T01:49:41.400057Z DEBUG   - _HandleCallbacks (1123) - Callback called
+2023-02-23T01:49:41.400059Z VERBOSE - Retrieving buffer from the camera.
+2023-02-23T01:49:41.400184Z VERBOSE - _GetParameters (874) - Cannot cast to local parameters
+2023-02-23T01:49:41.464557Z DEBUG   - _WriteByteStream (2135) - Sending Command to the camera.
+2023-02-23T01:49:41.467870Z DEBUG   - _HandleCallbacks (1113) - Entering update of parameters...
+2023-02-23T01:49:41.467878Z VERBOSE - _GetParameters (874) - Cannot cast to local parameters
+2023-02-23T01:49:41.467903Z VERBOSE - _SetRuntimeParameters (493) - Cannot cast to local parameters
+2023-02-23T01:49:41.467906Z DEBUG   - _HandleCallbacks (1118) - Update of parameters finished
+2023-02-23T01:49:41.467908Z DEBUG   - _HandleCallbacks (1121) - Calling callback...
+2023-02-23T01:49:41.467911Z WARNING - Handle (485) - frame does not have 'dm lost frames' property.
+2023-02-23T01:49:41.468003Z DEBUG   - _HandleCallbacks (1123) - Callback called
+2023-02-23T01:49:41.468005Z VERBOSE - Retrieving buffer from the camera.
+2023-02-23T01:49:41.468317Z VERBOSE - _GetParameters (874) - Cannot cast to local parameters
+2023-02-23T01:49:41.475934Z VERBOSE - Pause (504) - driver pauzing...
+2023-02-23T01:49:41.475936Z INFO    - Pausing the camera.
+2023-02-23T01:49:41.796895Z INFO    - Camera paused.
+2023-02-23T01:49:41.796917Z VERBOSE - Pause (529) - driver pauzing finished
+2023-02-23T01:49:41.796958Z VERBOSE - driver stopping...
+2023-02-23T01:49:41.849670Z VERBOSE - driver stopping finished
+2023-02-23T01:49:41.849769Z VERBOSE - driver forcing disconnect...
+2023-02-23T01:49:41.959869Z VERBOSE - driver forcing disconnect finished
+2023-02-23T01:49:41.959949Z VERBOSE - driver forcing disconnect...
+2023-02-23T01:49:41.959951Z DEBUG   - driver already disconnected

@@ -1,0 +1,16 @@
+2023-03-31T14:11:57.866165Z INFO    - ProcessingUnit::_PropagateDataTypes()
+2023-03-31T14:11:57.866173Z INFO    - OutputPort: non_uniformity_pipeline.spectral_processing_group.illuminant_compensation_unit.out; Actual kind: AK_HYPERCUBE_BIP; Minimal kind: AK_ARRAY
+2023-03-31T14:11:57.866177Z INFO    - InputPort: non_uniformity_pipeline.spectral_processing_group.spectral_processing_group_out.in; Actual kind: AK_HYPERCUBE_BIP; Minimal kind: AK_HYPERCUBE_BIP
+2023-03-31T14:11:58.094496Z INFO    - ProcessingUnit::Process
+2023-03-31T14:11:58.830634Z INFO    - ProcessingUnit::_PropagateDataTypes()
+2023-03-31T14:11:58.830643Z INFO    - OutputPort: non_uniformity_pipeline.spectral_processing_group.illuminant_compensation_unit.out; Actual kind: AK_HYPERCUBE_BIP; Minimal kind: AK_ARRAY
+2023-03-31T14:11:58.830650Z INFO    - InputPort: non_uniformity_pipeline.spectral_processing_group.spectral_processing_group_out.in; Actual kind: AK_HYPERCUBE_BIP; Minimal kind: AK_HYPERCUBE_BIP
+2023-03-31T14:11:59.058385Z INFO    - ProcessingUnit::Process
+2023-03-31T14:14:58.570373Z INFO    - ProcessingUnit::_PropagateDataTypes()
+2023-03-31T14:14:58.570386Z INFO    - OutputPort: non_uniformity_pipeline.spectral_processing_group.illuminant_compensation_unit.out; Actual kind: AK_HYPERCUBE_BIP; Minimal kind: AK_ARRAY
+2023-03-31T14:14:58.570393Z INFO    - InputPort: non_uniformity_pipeline.spectral_processing_group.spectral_processing_group_out.in; Actual kind: AK_HYPERCUBE_BIP; Minimal kind: AK_HYPERCUBE_BIP
+2023-03-31T14:14:58.807616Z INFO    - ProcessingUnit::Process
+2023-03-31T14:14:59.565309Z INFO    - ProcessingUnit::_PropagateDataTypes()
+2023-03-31T14:14:59.565317Z INFO    - OutputPort: non_uniformity_pipeline.spectral_processing_group.illuminant_compensation_unit.out; Actual kind: AK_HYPERCUBE_BIP; Minimal kind: AK_ARRAY
+2023-03-31T14:14:59.565323Z INFO    - InputPort: non_uniformity_pipeline.spectral_processing_group.spectral_processing_group_out.in; Actual kind: AK_HYPERCUBE_BIP; Minimal kind: AK_HYPERCUBE_BIP
+2023-03-31T14:14:59.811294Z INFO    - ProcessingUnit::Process

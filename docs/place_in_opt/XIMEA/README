@@ -1,0 +1,107 @@
+---------------------------------------------
+This is XIMEA API Software Package for Linux.
+---------------------------------------------
+
+1. Installation
+
+Start ./install from shell. It will use sudo to obtain super user privileges, so
+you will probably need to enter user password. Alternatively you can run it while
+logged in as root.
+
+$ ./install
+
+
+1a. Installation for PCIe camera (e.g. CB family)
+
+To enable installation of PCIe support you need to start installation
+script with option -pcie.
+
+$ ./install -pcie
+
+
+2. Architecture
+
+The camera interface has layered architecture. The topmost is the application
+layer, that calls functions of xiAPI (e.g. xiGetImage). All examples are stored
+in directory /opt/XIMEA/examples. Header files (*.h) are located in
+/opt/XIMEA/include.
+
+API layer consist of compiled library libm3api.so, GenTL provider libXIMEA_GenTL.cti
+and two additional dependencies (libusb and libraw1394). libm3api is installed to
+/usr/lib during the installation process to be available for all applications,
+libXIMEA_GenTL.cti is located in /opt/XIMEA/lib/.
+
+Kernel driver layer is represented by several kernel modules. Depending on camera type
+system uses:
+- ximea_cam_pcie.ko for all XIMEA PCIe cameras (e.g. CB120);
+- ehci-hcd.ko and xhci-hcd.ko for all XIMEA USB cameras (e.g. MU9P);
+- firewire_ohci.ko (old ohci1394.ko is unsupported) for all XIMEA Firewire cameras
+  (e.g. MR16000).
+The driver receives data from sensor and sends it to the API.
+
+-------------------------------------------------------------------------------
+|           |           Application [example: xiSample]                       |
+|           -------------------------------------------------------------------
+| Userspace |              API (xiAPI) [libm3api.so]                          |
+|           |                   -----------------------------------------------
+|           |                   |    libraw1394    |          libusb          |
+-------------------------------------------------------------------------------
+|  Kernel   | ximea_cam_pcie.ko | firewire_ohci.ko | ehci-hcd.ko, xhci-hcd.ko |
+-------------------------------------------------------------------------------
+| Hardware  |    PCIe camera    | Firewire camera  |        USB camera         |
+-------------------------------------------------------------------------------
+
+
+3. Example applications
+
+3a. xiSample
+
+This sample starts acquisition from sensor. Then captures 10 frames and finishes.
+To compile - run command make from shell:
+
+$ make
+
+
+3b. streamViewer
+
+streamViewer is a small application for displaying frames captured by camera sensor.
+It requires gstreamer for video output. To build - run make from shell:
+
+$ make
+
+
+4. Notes
+
+4a. Access to devices
+
+This package installs udev rules that allow access to XIMEA cameras by any user in
+plugdev group. Almost all current Linux distributions run udev daemon, so this should
+work universally. You need to replug all cameras (or reboot the computer) after API
+package installation for rules to apply to them.
+
+To check if current user is in plugdev group (empty output means failure):
+
+$ id|grep plugdev
+
+To add current user to plugdev group (relogin is needed for changes to take effect):
+
+$ sudo gpasswd -a $USER plugdev
+
+To create plugdev group if it doesn't exist:
+
+$ sudo groupadd plugdev
+
+
+4b. Supplied libraries
+
+This package includes required versions of two 3rd-party libraries. You can review them
+in libs directory. Installation script copies these libraries in /lib directory and tries
+to make sure that they are used in linking (see file /etc/ld.so.conf.d/000XIMEA.conf).
+
+libraw1394 is needed for Firewire camera support.
+
+libusb is required for USB camera support.
+
+
+--------------------------
+Read more at: http://www.ximea.com/support/wiki/apis/XIMEA_Linux_Software_Package

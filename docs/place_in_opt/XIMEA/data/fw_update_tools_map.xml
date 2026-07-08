@@ -1,0 +1,590 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 
+
+Originally created as: xicamupdate_setting.xml
+Used by xiCOP as main control of what firmware are programmed what way for which camera family.
+First definition of <serie> matching regex in <name> is used by xiCOP to update the camera firmware.
+
+-->
+<!-- 
+Descriptions for step tags
+
+Command line updater parameters:
+	command: select camera firmware type for updater
+	prod_model_file_tag: file tag of firmware definition in the prod_camera_models.xml file
+	xicamupdater_suffix: suffix parameter to be applied when xicamupdater is called
+	pub_file: short for identifying firmware type in PDB/Export in public firmware download server
+
+xiCOP firmware definitions:
+	xiapi_par: associated xiAPI parameter with xiCOP firmware type
+	updater_type: updater architecture selection: 'usb3' (FW_Updater_USB30) or 'fapi' (FW_Updater_FAPI) based on camera type
+	updater_cam_type: camera hardware architecture type: use value 1 for MC cameras, use value 4 for CX3 camerasdefault 0 for all others (update.hpp - ucam_type_e)
+	updater_par: firmware selection parameter, int value representing the FW_Updater::firmware_type_e enum (e.g. FIRMWARE_TYPE_CPU1)
+	updater_desc: decription that will be used during the update process in GUI/command line
+	updater_fname: default file name for updater to be used when downloading firmware files
+	xicop_par: xiCOP parameter name to be associated with the specific firmware version
+	u3v: for cameras supporting U3V this flag is set to 1 to show which firmware types are for U3V only, default is 0
+    fw_start: start address in camera eeprom for firmware update operation, in hexadecimal format
+    fw_stop: stop address in camera eeprom for firmware update operation, in hexadecimal format
+	ccd: flag to be used to define MJ cameras with CCD sensors
+	fw_upgrade: flag to be used when firmware upgrade process is run without using external files
+	assoc_fw_type: firmware version associated with specific uppdate
+	rp_file_backup_name: name of specific firmware file to be read from camera FFS and stored during restore point creation
+	rp_fw_type: define specific firmware type for backup/restore operation 0-default, 1-file (e.g. eeprom1), 2-flag (e.g. flag u3v), 3-skip (will be skipped from RP creation)
+-->
+<firmware_update_settings>
+	<serie>
+		<name>^MR.*</name>
+		<name>^MH.*</name>
+		<name>^MU9.*</name>
+		<updater_type>usb3</updater_type>
+		<programming_steps>
+			<step>
+				<xiapi_par>version_mcu1</xiapi_par>
+				<xicop_par>firmware CPU</xicop_par>
+			</step>
+			<step>
+				<xiapi_par>version_fpga1</xiapi_par>
+				<xicop_par>firmware FPGA</xicop_par>
+			</step>
+		</programming_steps>
+	</serie>
+	<serie>
+		<name>^MQ.*</name>
+		<cli_tools_path>MQ\tools</cli_tools_path>
+		<testing_firmware_path>\\FILES\testing\mq\firmware</testing_firmware_path>
+		<updater_type>usb3</updater_type>
+		<programming_steps>
+			<step>
+				<command>CPU1</command>
+				<prod_model_file_tag>cpu1_fw_file</prod_model_file_tag>
+				<xicamupdater_suffix> --plain_file </xicamupdater_suffix>
+				<pub_file>C1</pub_file>				
+				<updater_par>1</updater_par>
+				<updater_desc>MQ CPU</updater_desc>
+				<updater_fname>mq_cpu.bin</updater_fname>
+				<xicop_par>firmware CPU</xicop_par>
+				<u3v>0</u3v>
+			</step>
+			<step>
+				<command>FPGA1</command>
+				<prod_model_file_tag>fpga1_fw_file</prod_model_file_tag>
+				<xicamupdater_suffix>  --plain_file </xicamupdater_suffix>
+				<pub_file>F1</pub_file>
+				<updater_par>10</updater_par>
+				<updater_desc>MQ FPGA</updater_desc>
+				<updater_fname>mq_fpga.bin</updater_fname>
+				<xicop_par>firmware FPGA</xicop_par>
+				<u3v>0</u3v>
+			</step>
+			<step>
+				<updater_par>100</updater_par>
+				<xicop_par>unique id</xicop_par>
+				<rp_fw_type>3</rp_fw_type>
+				<u3v>0</u3v>
+			</step>
+			<step>
+				<command>FLAG_U3V</command>
+				<pub_file>U3V</pub_file>
+				<updater_par>50</updater_par>
+				<updater_desc>U3V Flag</updater_desc>
+				<xicop_par>u3v flag</xicop_par>
+				<rp_fw_type>2</rp_fw_type>
+				<u3v>0</u3v>
+			</step>
+			<step>
+				<command>CPU1</command>
+				<prod_model_file_tag>cpu1_fw_file</prod_model_file_tag>
+				<xicamupdater_suffix> --plain_file </xicamupdater_suffix>
+				<pub_file>C1</pub_file>
+				<updater_par>1</updater_par>
+				<updater_desc>MQ CPU</updater_desc>
+				<updater_fname>mq_cpu.bin</updater_fname>
+				<xicop_par>firmware CPU</xicop_par>
+				<u3v>1</u3v>
+			</step>
+			<step>
+				<command>FPGA2</command>
+				<prod_model_file_tag>fpga2_fw_file</prod_model_file_tag>
+				<xicamupdater_suffix>  --plain_file </xicamupdater_suffix>
+				<pub_file>F2</pub_file>
+				<updater_par>11</updater_par>
+				<updater_desc>MQ U3V FPGA</updater_desc>
+				<updater_fname>mq_u3v_f.bin</updater_fname>
+				<xicop_par>firmware FPGA2</xicop_par>
+				<u3v>1</u3v>
+			</step>
+			<step>
+				<command>XMLMAN</command>
+				<prod_model_file_tag>u3v_manifest</prod_model_file_tag>
+				<xicamupdater_suffix> --plain_file </xicamupdater_suffix>
+				<pub_file>X1</pub_file>
+				<updater_par>20</updater_par>
+				<updater_desc>MQ U3V XML</updater_desc>
+				<updater_fname>mq_u3v_xml.bin</updater_fname>
+				<xicop_par>manifest U3V</xicop_par>
+				<u3v>1</u3v>
+			</step>			
+			<step>
+				<updater_par>100</updater_par>
+				<xicop_par>unique id</xicop_par>
+				<rp_fw_type>3</rp_fw_type>
+				<u3v>1</u3v>
+			</step>
+			<step>
+				<command>FLAG_U3V</command>
+				<pub_file>U3V</pub_file>
+				<updater_par>50</updater_par>
+				<updater_desc>U3V Flag</updater_desc>
+				<xicop_par>u3v flag</xicop_par>
+				<rp_fw_type>2</rp_fw_type>
+				<u3v>1</u3v>
+			</step>
+		</programming_steps>
+	</serie>
+	<serie>
+		<name>^MD.*</name>
+		<cli_tools_path>MQ\tools</cli_tools_path>
+		<testing_firmware_path>\\FILES\testing\md\firmware</testing_firmware_path>
+		<updater_type>usb3</updater_type>
+		<programming_steps>
+			<step>
+				<command>CPU1</command>
+				<prod_model_file_tag>cpu1_fw_file</prod_model_file_tag>
+				<xicamupdater_suffix> --plain_file </xicamupdater_suffix>
+				<pub_file>C1</pub_file>
+				<xiapi_par>version_mcu1</xiapi_par>				
+				<updater_par>1</updater_par>
+				<updater_desc>MD CPU</updater_desc>
+				<updater_fname>md_cpu.bin</updater_fname>
+				<xicop_par>firmware CPU</xicop_par>
+			</step>
+			<step>
+				<command>CPU2</command>
+				<prod_model_file_tag>cpu2_fw_file</prod_model_file_tag>
+				<xicamupdater_suffix> --plain_file </xicamupdater_suffix>
+				<pub_file>C2</pub_file>
+				<xiapi_par>version_mcu2</xiapi_par>
+				<updater_par>2</updater_par>
+				<updater_desc>MD CPU2</updater_desc>
+				<updater_fname>md_cpu2.bin</updater_fname>
+				<xicop_par>firmware CPU2</xicop_par>
+			</step>
+			<step>
+				<command>FPGA1</command>
+				<prod_model_file_tag>fpga1_fw_file</prod_model_file_tag>
+				<xicamupdater_suffix>  --plain_file </xicamupdater_suffix>
+				<pub_file>F1</pub_file>
+				<xiapi_par>version_fpga1</xiapi_par>
+				<updater_par>10</updater_par>
+				<updater_desc>MD FPGA</updater_desc>
+				<updater_fname>md_fpga.bin</updater_fname>
+				<xicop_par>firmware FPGA</xicop_par>
+			</step>
+			<step>
+				<updater_par>100</updater_par>
+				<xicop_par>unique id</xicop_par>
+				<rp_fw_type>3</rp_fw_type>
+				<u3v>0</u3v>
+			</step>
+		</programming_steps>
+	</serie>
+	<serie>
+		<name>^MX510.G-GP*</name>
+		<cli_tools_path>CB\tools</cli_tools_path>
+		<testing_firmware_path>\\FILES\testing\cb\firmware</testing_firmware_path>
+		<require_camera_connected_before_programming>1</require_camera_connected_before_programming>
+		<updater_type>fapi</updater_type>
+		<programming_steps>
+			<step>
+				<command>UPDATE_DISABLED</command>
+				<prod_model_file_tag>fpga2_fw_file</prod_model_file_tag>
+				<xicamupdater_suffix> --xiapi --plain_file </xicamupdater_suffix>
+				<pub_file>UPDATE_DISABLED</pub_file>
+				<xiapi_par>version_fpga1</xiapi_par>
+				<updater_par>11</updater_par>
+				<updater_desc>PCIe FPGA2</updater_desc>
+				<updater_fname>pcie_fpga.bin</updater_fname>
+				<xicop_par>firmware FPGA2</xicop_par>
+			</step>
+			<step>
+				<command>UPDATE_DISABLED</command>
+				<prod_model_file_tag>cpu1_fw_file</prod_model_file_tag>
+				<xicamupdater_suffix> --xiapi --plain_file</xicamupdater_suffix>
+				<pub_file>UPDATE_DISABLED</pub_file>
+				<xiapi_par>version_mcu1</xiapi_par>
+				<updater_par>1</updater_par>
+				<updater_desc>MX CPU</updater_desc>
+				<updater_fname>mx_cpu.bin</updater_fname>
+				<xicop_par>firmware CPU</xicop_par>
+			</step>
+			<step>
+				<command>UPDATE_DISABLED</command>
+				<prod_model_file_tag>factory_presets_xml</prod_model_file_tag>
+				<xicamupdater_suffix> --xiapi --plain_file</xicamupdater_suffix>
+				<pub_file>UPDATE_DISABLED</pub_file>
+				<updater_par>200</updater_par>
+				<updater_desc>Factory Set</updater_desc>
+				<updater_fname>factory-set.xml</updater_fname>
+				<xicop_par>factory set</xicop_par>
+			</step>
+			<step>
+				<command>UPDATE_DISABLED</command>
+				<updater_par>15</updater_par>
+				<updater_desc>EEPROM1</updater_desc>
+				<pub_file>UPDATE_DISABLED</pub_file>
+				<fw_upgrade>1</fw_upgrade>
+				<assoc_fw_type>firmware CPU</assoc_fw_type>
+				<xicop_par>eeprom</xicop_par>
+				<updater_fname>mx_eeprom1.bin</updater_fname>
+				<rp_file_backup_name>File_EEPROM1</rp_file_backup_name>
+				<rp_fw_type>1</rp_fw_type>
+			</step>
+		</programming_steps>
+	</serie>
+	<serie>
+		<name>^MX377*</name>
+		<cli_tools_path>CB\tools</cli_tools_path>
+		<testing_firmware_path>\\FILES\testing\cb\firmware</testing_firmware_path>
+		<require_camera_connected_before_programming>1</require_camera_connected_before_programming>
+		<updater_type>fapi</updater_type>
+		<programming_steps>
+			<step>
+				<command>FPGA2</command>
+				<prod_model_file_tag>fpga2_fw_file</prod_model_file_tag>
+				<xicamupdater_suffix> --xiapi --plain_file </xicamupdater_suffix>
+				<pub_file>F2</pub_file>
+				<xiapi_par>version_fpga1</xiapi_par>
+				<updater_par>11</updater_par>
+				<updater_desc>PCIe FPGA2</updater_desc>
+				<updater_fname>pcie_fpga.bin</updater_fname>
+				<xicop_par>firmware FPGA2</xicop_par>
+			</step>
+			<step>
+				<command>CPU1</command>
+				<prod_model_file_tag>cpu1_fw_file</prod_model_file_tag>
+				<xicamupdater_suffix> --xiapi --plain_file</xicamupdater_suffix>
+				<pub_file>C1</pub_file>
+				<xiapi_par>version_mcu1</xiapi_par>
+				<updater_par>1</updater_par>
+				<updater_desc>MX CPU</updater_desc>
+				<updater_fname>mx_cpu.bin</updater_fname>
+				<xicop_par>firmware CPU</xicop_par>
+			</step>
+			<step>
+				<command>FACTORYSETS</command>
+				<prod_model_file_tag>factory_presets_xml</prod_model_file_tag>
+				<xicamupdater_suffix> --xiapi --plain_file</xicamupdater_suffix>
+				<pub_file>X2</pub_file>
+				<updater_par>200</updater_par>
+				<updater_desc>Factory Set</updater_desc>
+				<updater_fname>factory-set.xml</updater_fname>
+				<xicop_par>factory set</xicop_par>
+			</step>
+			<step>
+				<command>EEPROM1</command>
+				<updater_par>15</updater_par>
+				<updater_desc>EEPROM1</updater_desc>
+				<pub_file>EEP1</pub_file>
+				<fw_upgrade>1</fw_upgrade>
+				<assoc_fw_type>firmware CPU</assoc_fw_type>
+				<xicop_par>eeprom</xicop_par>
+				<updater_fname>mx_eeprom1.bin</updater_fname>
+				<rp_file_backup_name>File_EEPROM1</rp_file_backup_name>
+				<rp_fw_type>1</rp_fw_type>
+			</step>
+		</programming_steps>
+	</serie>
+	<serie>
+		<name>-VXL</name>
+		<!-- Firmware update is disabled -->
+		<updater_type>FPGA_UPDATE_DISABLED</updater_type>
+		<programming_steps>
+			<step>
+				<command>UPDATE_DISABLED</command>
+				<updater_par>0</updater_par>				
+				<xiapi_par>version_fpga1</xiapi_par>
+				<xicop_par>firmware FPGA2</xicop_par>
+				<updater_desc>FPGA_UPDATE_DISABLED</updater_desc>
+				<updater_fname>FPGA_UPDATE_DISABLED</updater_fname>
+			</step>
+		</programming_steps>
+	</serie>
+	<serie>
+		<name>^MX004TG-TD-X2G2-.*</name>
+		<cli_tools_path>CB\tools</cli_tools_path>
+		<testing_firmware_path>\\FILES\testing\cb\firmware</testing_firmware_path>
+		<require_camera_connected_before_programming>1</require_camera_connected_before_programming>
+		<updater_type>fapi</updater_type>
+		<programming_steps>
+			<step>
+				<command>FPGA2</command>
+				<prod_model_file_tag>fpga2_fw_file</prod_model_file_tag>
+				<xicamupdater_suffix> --xiapi --plain_file </xicamupdater_suffix>
+				<pub_file>F2</pub_file>
+				<xiapi_par>version_fpga1</xiapi_par>
+				<updater_par>11</updater_par>
+				<updater_desc>PCIe FPGA2</updater_desc>
+				<updater_fname>pcie_fpga.bin</updater_fname>
+				<xicop_par>firmware FPGA2</xicop_par>
+			</step>
+			<step>
+				<command>FACTORYSETS</command>
+				<prod_model_file_tag>factory_presets_xml</prod_model_file_tag>
+				<xicamupdater_suffix> --xiapi --plain_file</xicamupdater_suffix>
+				<pub_file>X2</pub_file>
+				<updater_par>200</updater_par>
+				<updater_desc>Factory Set</updater_desc>
+				<updater_fname>factory-set.xml</updater_fname>
+				<xicop_par>factory set</xicop_par>
+			</step>
+		</programming_steps>
+	</serie>
+	<serie>
+		<name>^CB.*</name>
+		<name>^MX.*</name>
+		<name>^MT.*</name>
+		<cli_tools_path>CB\tools</cli_tools_path>
+		<testing_firmware_path>\\FILES\testing\cb\firmware</testing_firmware_path>
+		<require_camera_connected_before_programming>1</require_camera_connected_before_programming>
+		<updater_type>fapi</updater_type>
+		<programming_steps>
+			<step>
+				<command>FPGA2</command>
+				<prod_model_file_tag>fpga2_fw_file</prod_model_file_tag>
+				<xicamupdater_suffix> --xiapi --plain_file </xicamupdater_suffix>
+				<pub_file>F2</pub_file>
+				<xiapi_par>version_fpga1</xiapi_par>
+				<updater_par>11</updater_par>
+				<updater_desc>PCIe FPGA2</updater_desc>
+				<updater_fname>pcie_fpga.bin</updater_fname>
+				<xicop_par>firmware FPGA2</xicop_par>
+			</step>
+		</programming_steps>
+	</serie>
+	<serie>
+		<name>^MC.*</name>
+		<cli_tools_path>MC\tools</cli_tools_path>
+		<testing_firmware_path>\\FILES\testing\mc\fwupdate\tools\fw</testing_firmware_path>
+		<updater_type>usb3</updater_type>
+		<programming_steps>
+			<step>
+				<command>CPU1</command>
+				<prod_model_file_tag>cpu1_fw_file</prod_model_file_tag>
+				<xicamupdater_suffix> --u3v_cam --plain_file </xicamupdater_suffix>
+				<pub_file>C1</pub_file>
+				<updater_cam_type>1</updater_cam_type>
+				<updater_par>1</updater_par>
+				<updater_desc>MC CPU</updater_desc>
+				<updater_fname>mc_cpu.bin</updater_fname>
+				<xiapi_par>version_mcu1</xiapi_par>
+				<xicop_par>firmware CPU</xicop_par>
+				<u3v>1</u3v>
+			</step>
+			<step>
+				<command>CPU5</command>
+				<prod_model_file_tag>cpu2_fw_file</prod_model_file_tag>
+				<xicamupdater_suffix> --u3v_cam --plain_file </xicamupdater_suffix>
+				<pub_file>C2</pub_file>
+				<updater_cam_type>1</updater_cam_type>
+				<updater_par>5</updater_par>
+				<updater_desc>MC CPU2</updater_desc>
+				<updater_fname>mc_cpu2.bin</updater_fname>
+				<xiapi_par>version_mcu2</xiapi_par>
+				<xicop_par>firmware CPU2</xicop_par>
+				<u3v>1</u3v>
+			</step>
+			<step>
+				<command>FPGA2</command>
+				<prod_model_file_tag>fpga1_fw_file</prod_model_file_tag>
+				<xicamupdater_suffix> --u3v_cam  --plain_file</xicamupdater_suffix>
+				<pub_file>F1</pub_file>
+				<updater_cam_type>1</updater_cam_type>
+				<updater_par>10</updater_par>
+				<updater_desc>MC FPGA</updater_desc>
+				<updater_fname>mc_fpga.bin</updater_fname>
+				<xiapi_par>version_fpga1</xiapi_par>
+				<xicop_par>firmware FPGA</xicop_par>
+				<u3v>1</u3v>
+			</step>
+			<step>
+				<command>XMLMAN</command>
+				<prod_model_file_tag>u3v_manifest</prod_model_file_tag>
+				<xicamupdater_suffix> --u3v_cam --plain_file </xicamupdater_suffix>
+				<pub_file>X1</pub_file>
+				<updater_cam_type>1</updater_cam_type>
+				<updater_par>20</updater_par>
+				<updater_desc>MC U3V XML</updater_desc>
+				<updater_fname>mc_u3v_xml.bin</updater_fname>
+				<xiapi_par>version_xmlman</xiapi_par>
+				<xicop_par>manifest U3V</xicop_par>
+				<u3v>1</u3v>
+			</step>
+			<step>
+				<updater_cam_type>1</updater_cam_type>
+				<updater_par>100</updater_par>
+				<xicop_par>unique id</xicop_par>
+				<rp_fw_type>3</rp_fw_type>
+				<u3v>1</u3v>
+			</step>
+		</programming_steps>
+	</serie>
+	<serie>
+		<name>^MU18.*</name>
+		<updater_type>usb3</updater_type>
+		<programming_steps>
+			<step>
+				<command>CPU1</command>
+				<prod_model_file_tag>cpu1_fw_file</prod_model_file_tag>
+				<xicamupdater_suffix>  --plain_file </xicamupdater_suffix>
+				<pub_file>C1</pub_file>
+				<updater_cam_type>3</updater_cam_type>
+				<updater_par>1</updater_par>
+				<updater_desc>MU CPU</updater_desc>
+				<updater_fname>mu_cpu.bin</updater_fname>
+				<xicop_par>firmware CPU</xicop_par>
+			</step>
+			<step>
+				<command>FPGA1</command>
+				<prod_model_file_tag>fpga1_fw_file</prod_model_file_tag>
+				<xicamupdater_suffix>  --plain_file </xicamupdater_suffix>
+				<pub_file>F1</pub_file>
+				<updater_cam_type>3</updater_cam_type>
+				<updater_par>10</updater_par>
+				<updater_desc>MU FPGA</updater_desc>
+				<updater_fname>mu_fpga.bin</updater_fname>
+				<xicop_par>firmware FPGA</xicop_par>
+			</step>
+		</programming_steps>
+	</serie>
+	<serie>
+		<!-- architecture CX3 (MCU only, no FPGA) -->
+		<name>^MU003.*</name>
+		<name>^MU05.*</name>
+		<name>^MU196.*</name>
+		<updater_type>usb3</updater_type>
+		<programming_steps>
+			<step>
+				<command>CPU1</command>
+				<prod_model_file_tag>cpu1_fw_file</prod_model_file_tag>
+				<xicamupdater_suffix>  --plain_file </xicamupdater_suffix>
+				<pub_file>C1</pub_file>
+				<updater_cam_type>4</updater_cam_type>
+				<updater_par>1</updater_par> <!-- FIRMWARE_TYPE_CPU1 -->
+				<updater_desc>MU CPU</updater_desc>
+				<updater_fname>mu_cpu.bin</updater_fname>
+				<xicop_par>firmware CPU</xicop_par>
+			</step>
+		</programming_steps>
+	</serie>
+	<serie>
+		<name>^MJ042.*</name>
+		<name>^MJ150.*</name>		
+		<updater_type>fapi</updater_type>
+		<cli_tools_path>MJ\tools</cli_tools_path>
+		<testing_firmware_path>\\FILES\testing\mc\fwupdate\tools\fw</testing_firmware_path>
+		<updater_type>fapi</updater_type>
+		<programming_steps>
+			<step>
+				<command>CPU1</command>
+				<prod_model_file_tag>cpu1_fw_file</prod_model_file_tag>
+				<xicamupdater_suffix> --xiapi --plain_file </xicamupdater_suffix>
+				<pub_file>C1</pub_file>
+				<xiapi_par>version_mcu1</xiapi_par>
+				<xicop_par>firmware CPU</xicop_par>
+				<updater_par>1</updater_par>
+				<updater_desc>MJ CPU</updater_desc>
+				<updater_fname>mj_cpu1.bin</updater_fname>
+			</step>
+			<step>
+				<command>FPGA1</command>
+				<prod_model_file_tag>fpga1_fw_file</prod_model_file_tag>
+				<xicamupdater_suffix> --xiapi --plain_file </xicamupdater_suffix>
+				<pub_file>F1</pub_file>
+				<xiapi_par>version_fpga1</xiapi_par>
+				<xicop_par>firmware FPGA</xicop_par>
+				<updater_par>10</updater_par>
+				<updater_desc>MJ FPGA</updater_desc>
+				<updater_fname>mj_fpga.bin</updater_fname>
+			</step>
+			<step>
+				<command>CPU2</command>
+				<prod_model_file_tag>cpu2_fw_file</prod_model_file_tag>
+				<xicamupdater_suffix> --xiapi --plain_file </xicamupdater_suffix>
+				<pub_file>C2</pub_file>
+				<xiapi_par>version_mcu2</xiapi_par>
+				<xicop_par>firmware CPU2</xicop_par>
+				<updater_par>2</updater_par>
+				<updater_desc>MJ CPU2</updater_desc>
+				<updater_fname>mj_cpu2.bin</updater_fname>
+			</step>
+			<step>
+				<command>FACTORYSETS</command>
+				<prod_model_file_tag>factory_presets_xml</prod_model_file_tag>
+				<xicamupdater_suffix> --xiapi --plain_file</xicamupdater_suffix>
+				<pub_file>X2</pub_file>
+				<xicop_par>factory set</xicop_par>
+				<updater_par>200</updater_par>
+				<updater_desc>Factory Set</updater_desc>
+				<updater_fname>factory-set.xml</updater_fname>
+			</step>
+			<step>
+				<command>EEPROM1</command>
+				<updater_par>15</updater_par>
+				<updater_desc>EEPROM1</updater_desc>
+				<pub_file>EEP1</pub_file>
+				<fw_upgrade>1</fw_upgrade>
+				<assoc_fw_type>firmware CPU2</assoc_fw_type>
+				<xicop_par>eeprom</xicop_par>
+				<updater_fname>mj_eeprom1.bin</updater_fname>
+				<rp_file_backup_name>File_EEPROM1</rp_file_backup_name>
+				<rp_fw_type>1</rp_fw_type>
+			</step>
+		</programming_steps>
+	</serie>
+	<serie>
+		<name>^MJ042.*P11</name>
+		<updater_type>fapi</updater_type>
+		<programming_steps>		
+			<step>
+				<command>UPDATE_DISABLED</command>
+				<prod_model_file_tag>UPDATE_DISABLED</prod_model_file_tag>
+				<pub_file>UPDATE_DISABLED</pub_file>
+				<xiapi_par>version_mcu1</xiapi_par>
+				<xicop_par>firmware CPU</xicop_par>
+				<updater_par>UPDATE_DISABLED</updater_par>
+				<updater_desc>UPDATE_DISABLED</updater_desc>
+				<updater_fname>UPDATE_DISABLED</updater_fname>
+			</step>
+			<step>
+				<command>UPDATE_DISABLED</command>
+				<prod_model_file_tag>UPDATE_DISABLED</prod_model_file_tag>
+				<pub_file>UPDATE_DISABLED</pub_file>
+				<xiapi_par>version_fpga1</xiapi_par>
+				<xicop_par>firmware FPGA</xicop_par>
+				<updater_par>UPDATE_DISABLED</updater_par>
+				<updater_desc>UPDATE_DISABLED</updater_desc>
+				<updater_fname>UPDATE_DISABLED</updater_fname>
+			</step>
+			<step>
+				<command>UPDATE_DISABLED</command>
+				<prod_model_file_tag>UPDATE_DISABLED</prod_model_file_tag>
+				<pub_file>UPDATE_DISABLED</pub_file>
+				<xiapi_par>version_mcu2</xiapi_par>
+				<xicop_par>firmware CPU2</xicop_par>
+				<updater_par>UPDATE_DISABLED</updater_par>
+				<updater_desc>UPDATE_DISABLED</updater_desc>
+				<updater_fname>UPDATE_DISABLED</updater_fname>		
+			</step>
+			<step>
+				<command>UPDATE_DISABLED</command>
+				<prod_model_file_tag>UPDATE_DISABLED</prod_model_file_tag>
+				<pub_file>UPDATE_DISABLED</pub_file>
+				<xicop_par>factory set</xicop_par>				
+				<updater_par>200</updater_par>
+				<updater_desc>UPDATE_DISABLED</updater_desc>
+				<updater_fname>UPDATE_DISABLED</updater_fname>
+			</step>
+		</programming_steps>
+	</serie>
+</firmware_update_settings>

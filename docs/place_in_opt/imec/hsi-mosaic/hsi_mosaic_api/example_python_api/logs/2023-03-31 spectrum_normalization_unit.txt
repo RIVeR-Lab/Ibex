@@ -1,0 +1,8 @@
+2023-03-31T14:11:59.309216Z INFO    - ProcessingUnit::_PropagateDataTypes()
+2023-03-31T14:11:59.309243Z INFO    - OutputPort: reference_spectrum_pipeline.spectral_processing_group.spectrum_normalization_unit.out; Actual kind: AK_HYPERCUBE_BIP; Minimal kind: AK_ARRAY
+2023-03-31T14:11:59.309250Z INFO    - InputPort: reference_spectrum_pipeline.spectral_processing_group.spectral_processing_group_out.in; Actual kind: AK_HYPERCUBE_BIP; Minimal kind: AK_HYPERCUBE_BIP
+2023-03-31T14:11:59.542871Z INFO    - ProcessingUnit::Process
+2023-03-31T14:15:00.064969Z INFO    - ProcessingUnit::_PropagateDataTypes()
+2023-03-31T14:15:00.065010Z INFO    - OutputPort: reference_spectrum_pipeline.spectral_processing_group.spectrum_normalization_unit.out; Actual kind: AK_HYPERCUBE_BIP; Minimal kind: AK_ARRAY
+2023-03-31T14:15:00.065017Z INFO    - InputPort: reference_spectrum_pipeline.spectral_processing_group.spectral_processing_group_out.in; Actual kind: AK_HYPERCUBE_BIP; Minimal kind: AK_HYPERCUBE_BIP
+2023-03-31T14:15:00.303662Z INFO    - ProcessingUnit::Process

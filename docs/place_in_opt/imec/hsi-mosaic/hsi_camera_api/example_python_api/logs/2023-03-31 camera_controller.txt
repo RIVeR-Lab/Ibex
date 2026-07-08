@@ -1,0 +1,325 @@
+2023-03-31T14:16:22.617475Z VERBOSE - driver connecting...
+2023-03-31T14:16:22.913926Z VERBOSE - driver connected
+2023-03-31T14:16:22.914298Z VERBOSE - driver initializing...
+2023-03-31T14:16:22.914299Z VERBOSE -    trying to initialize...
+2023-03-31T14:16:26.029685Z VERBOSE -    initalization successful...
+2023-03-31T14:16:26.029688Z VERBOSE - driver initialization finished
+2023-03-31T14:16:26.029715Z DEBUG   - _AcquisitionLoop (1648) - Starting wakeup condition
+2023-03-31T14:16:26.279606Z VERBOSE - driver starting...
+2023-03-31T14:16:26.285109Z VERBOSE - driver starting finished
+2023-03-31T14:16:26.285122Z DEBUG   - _AcquisitionLoop (1658) - Condition interrupted.
+2023-03-31T14:16:26.285173Z VERBOSE - Trigger (1172) - -->
+2023-03-31T14:16:26.285178Z VERBOSE - Trigger (1179) - <--
+2023-03-31T14:16:26.299691Z DEBUG   - _CameraParametersCallbackReceiver (907) - me index params: 0 hdr index params: 0
+2023-03-31T14:16:26.299726Z VERBOSE - _CallbackReceiver (1201) - Frame received
+2023-03-31T14:16:26.299729Z VERBOSE - _CallbackReceiver (1217) - Obtaining handle...
+2023-03-31T14:16:26.299753Z VERBOSE - _CallbackReceiver (1221) - Handle obtained
+2023-03-31T14:16:26.299757Z VERBOSE - _CallbackReceiver (1224) - Copying data...
+2023-03-31T14:16:26.299797Z VERBOSE - _CallbackReceiver (1254) - Data copied
+2023-03-31T14:16:26.299813Z DEBUG   - me frame index: 0 me index: 0 HDR frame index: 0 HDR index: 0
+2023-03-31T14:16:26.299814Z DEBUG   - [_CallbackReceiver] Notifying wakeup condition
+2023-03-31T14:16:26.300516Z VERBOSE - Pause (504) - driver pauzing...
+2023-03-31T14:16:26.300535Z DEBUG   - virtual void ihspt::drivers::CM_Controller::_Pause(std::unique_lock<std::mutex>&) (783) - -->
+2023-03-31T14:16:26.300554Z DEBUG   - _AcquisitionLoop (1648) - Starting wakeup condition
+2023-03-31T14:16:26.300574Z DEBUG   - _Pause (816) - Creating trigger lock
+2023-03-31T14:16:26.300590Z DEBUG   - _Pause (818) - Passed trigger lock
+2023-03-31T14:16:26.300612Z DEBUG   - pausing the camera
+2023-03-31T14:16:26.300741Z DEBUG   - camera paused
+2023-03-31T14:16:26.300760Z DEBUG   - virtual void ihspt::drivers::CM_Controller::_Pause(std::unique_lock<std::mutex>&) (833) - <--
+2023-03-31T14:16:26.300778Z VERBOSE - Pause (529) - driver pauzing finished
+2023-03-31T14:16:26.301056Z DEBUG   - _AcquisitionLoop (1658) - Condition interrupted.
+2023-03-31T14:16:26.301060Z DEBUG   - _AcquisitionLoop (1648) - Starting wakeup condition
+2023-03-31T14:16:26.461458Z VERBOSE - driver starting...
+2023-03-31T14:16:26.469100Z VERBOSE - driver starting finished
+2023-03-31T14:16:26.469121Z DEBUG   - _AcquisitionLoop (1658) - Condition interrupted.
+2023-03-31T14:16:26.469193Z VERBOSE - Trigger (1172) - -->
+2023-03-31T14:16:26.469198Z VERBOSE - Trigger (1179) - <--
+2023-03-31T14:16:26.483446Z DEBUG   - _CameraParametersCallbackReceiver (907) - me index params: 0 hdr index params: 0
+2023-03-31T14:16:26.483488Z VERBOSE - _CallbackReceiver (1201) - Frame received
+2023-03-31T14:16:26.483491Z VERBOSE - _CallbackReceiver (1217) - Obtaining handle...
+2023-03-31T14:16:26.483511Z VERBOSE - _CallbackReceiver (1221) - Handle obtained
+2023-03-31T14:16:26.483513Z VERBOSE - _CallbackReceiver (1224) - Copying data...
+2023-03-31T14:16:26.483553Z VERBOSE - _CallbackReceiver (1254) - Data copied
+2023-03-31T14:16:26.483567Z DEBUG   - me frame index: 0 me index: 0 HDR frame index: 0 HDR index: 0
+2023-03-31T14:16:26.483569Z DEBUG   - [_CallbackReceiver] Notifying wakeup condition
+2023-03-31T14:16:26.484240Z VERBOSE - Pause (504) - driver pauzing...
+2023-03-31T14:16:26.484244Z DEBUG   - virtual void ihspt::drivers::CM_Controller::_Pause(std::unique_lock<std::mutex>&) (783) - -->
+2023-03-31T14:16:26.484249Z DEBUG   - _AcquisitionLoop (1648) - Starting wakeup condition
+2023-03-31T14:16:26.484258Z DEBUG   - _Pause (816) - Creating trigger lock
+2023-03-31T14:16:26.484261Z DEBUG   - _Pause (818) - Passed trigger lock
+2023-03-31T14:16:26.484263Z DEBUG   - pausing the camera
+2023-03-31T14:16:26.484277Z DEBUG   - camera paused
+2023-03-31T14:16:26.484280Z DEBUG   - virtual void ihspt::drivers::CM_Controller::_Pause(std::unique_lock<std::mutex>&) (833) - <--
+2023-03-31T14:16:26.484284Z VERBOSE - Pause (529) - driver pauzing finished
+2023-03-31T14:16:26.484291Z VERBOSE - driver stopping...
+2023-03-31T14:16:26.800342Z DEBUG   - _AcquisitionLoop (1658) - Condition interrupted.
+2023-03-31T14:16:26.800348Z INFO    - [CameraController::_AcquisitionLoop] thread finished
+2023-03-31T14:16:26.800439Z VERBOSE - driver stopping finished
+2023-03-31T14:16:26.800506Z VERBOSE - driver forcing disconnect...
+2023-03-31T14:16:26.803234Z VERBOSE - driver forcing disconnect finished
+2023-03-31T14:16:40.501252Z VERBOSE - driver connecting...
+2023-03-31T14:16:40.810380Z VERBOSE - driver connected
+2023-03-31T14:16:40.810873Z VERBOSE - driver initializing...
+2023-03-31T14:16:40.810875Z VERBOSE -    trying to initialize...
+2023-03-31T14:16:43.933527Z VERBOSE -    initalization successful...
+2023-03-31T14:16:43.933528Z VERBOSE - driver initialization finished
+2023-03-31T14:16:43.933602Z DEBUG   - _AcquisitionLoop (1648) - Starting wakeup condition
+2023-03-31T14:16:44.183705Z VERBOSE - driver starting...
+2023-03-31T14:16:44.189061Z VERBOSE - driver starting finished
+2023-03-31T14:16:44.189079Z DEBUG   - _AcquisitionLoop (1658) - Condition interrupted.
+2023-03-31T14:16:44.189124Z VERBOSE - Trigger (1172) - -->
+2023-03-31T14:16:44.189129Z VERBOSE - Trigger (1179) - <--
+2023-03-31T14:16:44.203641Z DEBUG   - _CameraParametersCallbackReceiver (907) - me index params: 0 hdr index params: 0
+2023-03-31T14:16:44.203676Z VERBOSE - _CallbackReceiver (1201) - Frame received
+2023-03-31T14:16:44.203679Z VERBOSE - _CallbackReceiver (1217) - Obtaining handle...
+2023-03-31T14:16:44.203701Z VERBOSE - _CallbackReceiver (1221) - Handle obtained
+2023-03-31T14:16:44.203739Z VERBOSE - _CallbackReceiver (1224) - Copying data...
+2023-03-31T14:16:44.203788Z VERBOSE - _CallbackReceiver (1254) - Data copied
+2023-03-31T14:16:44.203806Z DEBUG   - me frame index: 0 me index: 0 HDR frame index: 0 HDR index: 0
+2023-03-31T14:16:44.203807Z DEBUG   - [_CallbackReceiver] Notifying wakeup condition
+2023-03-31T14:16:44.205604Z VERBOSE - Pause (504) - driver pauzing...
+2023-03-31T14:16:44.205624Z DEBUG   - virtual void ihspt::drivers::CM_Controller::_Pause(std::unique_lock<std::mutex>&) (783) - -->
+2023-03-31T14:16:44.205647Z DEBUG   - _AcquisitionLoop (1648) - Starting wakeup condition
+2023-03-31T14:16:44.205671Z DEBUG   - _Pause (816) - Creating trigger lock
+2023-03-31T14:16:44.205674Z DEBUG   - _Pause (818) - Passed trigger lock
+2023-03-31T14:16:44.205677Z DEBUG   - pausing the camera
+2023-03-31T14:16:44.205692Z DEBUG   - camera paused
+2023-03-31T14:16:44.205694Z DEBUG   - virtual void ihspt::drivers::CM_Controller::_Pause(std::unique_lock<std::mutex>&) (833) - <--
+2023-03-31T14:16:44.205696Z VERBOSE - Pause (529) - driver pauzing finished
+2023-03-31T14:16:44.205791Z DEBUG   - _AcquisitionLoop (1658) - Condition interrupted.
+2023-03-31T14:16:44.205810Z DEBUG   - _AcquisitionLoop (1648) - Starting wakeup condition
+2023-03-31T14:16:44.370841Z VERBOSE - driver starting...
+2023-03-31T14:16:44.376318Z VERBOSE - driver starting finished
+2023-03-31T14:16:44.376332Z DEBUG   - _AcquisitionLoop (1658) - Condition interrupted.
+2023-03-31T14:16:44.376395Z VERBOSE - Trigger (1172) - -->
+2023-03-31T14:16:44.376399Z VERBOSE - Trigger (1179) - <--
+2023-03-31T14:16:44.390731Z DEBUG   - _CameraParametersCallbackReceiver (907) - me index params: 0 hdr index params: 0
+2023-03-31T14:16:44.390781Z VERBOSE - _CallbackReceiver (1201) - Frame received
+2023-03-31T14:16:44.390784Z VERBOSE - _CallbackReceiver (1217) - Obtaining handle...
+2023-03-31T14:16:44.390809Z VERBOSE - _CallbackReceiver (1221) - Handle obtained
+2023-03-31T14:16:44.390812Z VERBOSE - _CallbackReceiver (1224) - Copying data...
+2023-03-31T14:16:44.390860Z VERBOSE - _CallbackReceiver (1254) - Data copied
+2023-03-31T14:16:44.390878Z DEBUG   - me frame index: 0 me index: 0 HDR frame index: 0 HDR index: 0
+2023-03-31T14:16:44.390881Z DEBUG   - [_CallbackReceiver] Notifying wakeup condition
+2023-03-31T14:16:44.391548Z VERBOSE - Pause (504) - driver pauzing...
+2023-03-31T14:16:44.391552Z DEBUG   - virtual void ihspt::drivers::CM_Controller::_Pause(std::unique_lock<std::mutex>&) (783) - -->
+2023-03-31T14:16:44.391560Z DEBUG   - _AcquisitionLoop (1648) - Starting wakeup condition
+2023-03-31T14:16:44.391570Z DEBUG   - _Pause (816) - Creating trigger lock
+2023-03-31T14:16:44.394228Z DEBUG   - _Pause (818) - Passed trigger lock
+2023-03-31T14:16:44.394233Z DEBUG   - pausing the camera
+2023-03-31T14:16:44.394250Z DEBUG   - camera paused
+2023-03-31T14:16:44.394254Z DEBUG   - virtual void ihspt::drivers::CM_Controller::_Pause(std::unique_lock<std::mutex>&) (833) - <--
+2023-03-31T14:16:44.394256Z VERBOSE - Pause (529) - driver pauzing finished
+2023-03-31T14:16:44.394274Z VERBOSE - driver stopping...
+2023-03-31T14:16:44.701947Z DEBUG   - _AcquisitionLoop (1658) - Condition interrupted.
+2023-03-31T14:16:44.701955Z INFO    - [CameraController::_AcquisitionLoop] thread finished
+2023-03-31T14:16:44.702057Z VERBOSE - driver stopping finished
+2023-03-31T14:16:44.702111Z VERBOSE - driver forcing disconnect...
+2023-03-31T14:16:44.704254Z VERBOSE - driver forcing disconnect finished
+2023-03-31T14:18:46.001206Z VERBOSE - driver connecting...
+2023-03-31T14:18:46.305334Z VERBOSE - driver connected
+2023-03-31T14:18:46.305744Z VERBOSE - driver initializing...
+2023-03-31T14:18:46.305745Z VERBOSE -    trying to initialize...
+2023-03-31T14:18:49.417716Z VERBOSE -    initalization successful...
+2023-03-31T14:18:49.417718Z VERBOSE - driver initialization finished
+2023-03-31T14:18:49.417740Z DEBUG   - _AcquisitionLoop (1648) - Starting wakeup condition
+2023-03-31T14:18:49.712469Z VERBOSE - driver starting...
+2023-03-31T14:18:49.717790Z VERBOSE - driver starting finished
+2023-03-31T14:18:49.717813Z DEBUG   - _AcquisitionLoop (1658) - Condition interrupted.
+2023-03-31T14:18:49.717896Z VERBOSE - Trigger (1172) - -->
+2023-03-31T14:18:49.717901Z VERBOSE - Trigger (1179) - <--
+2023-03-31T14:18:49.737427Z DEBUG   - _CameraParametersCallbackReceiver (907) - me index params: 0 hdr index params: 0
+2023-03-31T14:18:49.737459Z VERBOSE - _CallbackReceiver (1201) - Frame received
+2023-03-31T14:18:49.737461Z VERBOSE - _CallbackReceiver (1217) - Obtaining handle...
+2023-03-31T14:18:49.737482Z VERBOSE - _CallbackReceiver (1221) - Handle obtained
+2023-03-31T14:18:49.737484Z VERBOSE - _CallbackReceiver (1224) - Copying data...
+2023-03-31T14:18:49.737525Z VERBOSE - _CallbackReceiver (1254) - Data copied
+2023-03-31T14:18:49.737541Z DEBUG   - me frame index: 0 me index: 0 HDR frame index: 0 HDR index: 0
+2023-03-31T14:18:49.737541Z DEBUG   - [_CallbackReceiver] Notifying wakeup condition
+2023-03-31T14:18:49.738203Z VERBOSE - Pause (504) - driver pauzing...
+2023-03-31T14:18:49.738207Z DEBUG   - virtual void ihspt::drivers::CM_Controller::_Pause(std::unique_lock<std::mutex>&) (783) - -->
+2023-03-31T14:18:49.738215Z DEBUG   - _AcquisitionLoop (1648) - Starting wakeup condition
+2023-03-31T14:18:49.738223Z DEBUG   - _Pause (816) - Creating trigger lock
+2023-03-31T14:18:49.738226Z DEBUG   - _Pause (818) - Passed trigger lock
+2023-03-31T14:18:49.738228Z DEBUG   - pausing the camera
+2023-03-31T14:18:49.738247Z DEBUG   - camera paused
+2023-03-31T14:18:49.738250Z DEBUG   - virtual void ihspt::drivers::CM_Controller::_Pause(std::unique_lock<std::mutex>&) (833) - <--
+2023-03-31T14:18:49.738252Z VERBOSE - Pause (529) - driver pauzing finished
+2023-03-31T14:18:49.738573Z DEBUG   - _AcquisitionLoop (1658) - Condition interrupted.
+2023-03-31T14:18:49.738578Z DEBUG   - _AcquisitionLoop (1648) - Starting wakeup condition
+2023-03-31T14:18:49.902081Z VERBOSE - driver starting...
+2023-03-31T14:18:49.910107Z VERBOSE - driver starting finished
+2023-03-31T14:18:49.910129Z DEBUG   - _AcquisitionLoop (1658) - Condition interrupted.
+2023-03-31T14:18:49.910202Z VERBOSE - Trigger (1172) - -->
+2023-03-31T14:18:49.910206Z VERBOSE - Trigger (1179) - <--
+2023-03-31T14:18:49.938046Z DEBUG   - _CameraParametersCallbackReceiver (907) - me index params: 0 hdr index params: 0
+2023-03-31T14:18:49.938076Z VERBOSE - _CallbackReceiver (1201) - Frame received
+2023-03-31T14:18:49.938079Z VERBOSE - _CallbackReceiver (1217) - Obtaining handle...
+2023-03-31T14:18:49.938099Z VERBOSE - _CallbackReceiver (1221) - Handle obtained
+2023-03-31T14:18:49.938101Z VERBOSE - _CallbackReceiver (1224) - Copying data...
+2023-03-31T14:18:49.938149Z VERBOSE - _CallbackReceiver (1254) - Data copied
+2023-03-31T14:18:49.938165Z DEBUG   - me frame index: 0 me index: 0 HDR frame index: 0 HDR index: 0
+2023-03-31T14:18:49.938167Z DEBUG   - [_CallbackReceiver] Notifying wakeup condition
+2023-03-31T14:18:49.950868Z VERBOSE - Pause (504) - driver pauzing...
+2023-03-31T14:18:49.950875Z DEBUG   - virtual void ihspt::drivers::CM_Controller::_Pause(std::unique_lock<std::mutex>&) (783) - -->
+2023-03-31T14:18:49.950884Z DEBUG   - _AcquisitionLoop (1648) - Starting wakeup condition
+2023-03-31T14:18:49.950890Z DEBUG   - _Pause (816) - Creating trigger lock
+2023-03-31T14:18:49.950894Z DEBUG   - _Pause (818) - Passed trigger lock
+2023-03-31T14:18:49.950897Z DEBUG   - pausing the camera
+2023-03-31T14:18:49.951951Z DEBUG   - camera paused
+2023-03-31T14:18:49.951956Z DEBUG   - virtual void ihspt::drivers::CM_Controller::_Pause(std::unique_lock<std::mutex>&) (833) - <--
+2023-03-31T14:18:49.951959Z VERBOSE - Pause (529) - driver pauzing finished
+2023-03-31T14:18:49.951982Z VERBOSE - driver stopping...
+2023-03-31T14:18:50.245776Z DEBUG   - _AcquisitionLoop (1658) - Condition interrupted.
+2023-03-31T14:18:50.245780Z INFO    - [CameraController::_AcquisitionLoop] thread finished
+2023-03-31T14:18:50.245844Z VERBOSE - driver stopping finished
+2023-03-31T14:18:50.245876Z VERBOSE - driver forcing disconnect...
+2023-03-31T14:18:50.247067Z VERBOSE - driver forcing disconnect finished
+2023-03-31T14:19:28.569486Z VERBOSE - driver connecting...
+2023-03-31T14:19:28.868291Z VERBOSE - driver connected
+2023-03-31T14:19:28.868658Z VERBOSE - driver initializing...
+2023-03-31T14:19:28.868659Z VERBOSE -    trying to initialize...
+2023-03-31T14:19:31.997186Z VERBOSE -    initalization successful...
+2023-03-31T14:19:31.997188Z VERBOSE - driver initialization finished
+2023-03-31T14:19:31.997222Z DEBUG   - _AcquisitionLoop (1648) - Starting wakeup condition
+2023-03-31T14:19:32.066893Z VERBOSE - driver starting...
+2023-03-31T14:19:32.075070Z VERBOSE - driver starting finished
+2023-03-31T14:19:32.075205Z VERBOSE - Trigger (1172) - -->
+2023-03-31T14:19:32.075213Z VERBOSE - Trigger (1179) - <--
+2023-03-31T14:19:32.075234Z DEBUG   - _AcquisitionLoop (1658) - Condition interrupted.
+2023-03-31T14:19:32.127196Z DEBUG   - _CameraParametersCallbackReceiver (907) - me index params: 0 hdr index params: 0
+2023-03-31T14:19:32.127295Z VERBOSE - _CallbackReceiver (1201) - Frame received
+2023-03-31T14:19:32.127312Z VERBOSE - _CallbackReceiver (1217) - Obtaining handle...
+2023-03-31T14:19:32.127345Z VERBOSE - _CallbackReceiver (1221) - Handle obtained
+2023-03-31T14:19:32.127349Z VERBOSE - _CallbackReceiver (1224) - Copying data...
+2023-03-31T14:19:32.127391Z VERBOSE - _CallbackReceiver (1254) - Data copied
+2023-03-31T14:19:32.127410Z DEBUG   - me frame index: 0 me index: 0 HDR frame index: 0 HDR index: 0
+2023-03-31T14:19:32.127412Z DEBUG   - [_CallbackReceiver] Notifying wakeup condition
+2023-03-31T14:19:32.128155Z VERBOSE - Pause (504) - driver pauzing...
+2023-03-31T14:19:32.128176Z DEBUG   - virtual void ihspt::drivers::CM_Controller::_Pause(std::unique_lock<std::mutex>&) (783) - -->
+2023-03-31T14:19:32.128185Z DEBUG   - _AcquisitionLoop (1648) - Starting wakeup condition
+2023-03-31T14:19:32.128195Z DEBUG   - _Pause (816) - Creating trigger lock
+2023-03-31T14:19:32.128197Z DEBUG   - _Pause (818) - Passed trigger lock
+2023-03-31T14:19:32.128200Z DEBUG   - pausing the camera
+2023-03-31T14:19:32.160601Z DEBUG   - _CameraParametersCallbackReceiver (907) - me index params: 0 hdr index params: 0
+2023-03-31T14:19:32.160708Z VERBOSE - _CallbackReceiver (1201) - Frame received
+2023-03-31T14:19:32.160727Z VERBOSE - _CallbackReceiver (1217) - Obtaining handle...
+2023-03-31T14:19:32.160764Z VERBOSE - _CallbackReceiver (1221) - Handle obtained
+2023-03-31T14:19:32.160782Z VERBOSE - _CallbackReceiver (1224) - Copying data...
+2023-03-31T14:19:32.160854Z VERBOSE - _CallbackReceiver (1254) - Data copied
+2023-03-31T14:19:32.160891Z DEBUG   - me frame index: 0 me index: 0 HDR frame index: 0 HDR index: 0
+2023-03-31T14:19:32.160907Z DEBUG   - [_CallbackReceiver] Notifying wakeup condition
+2023-03-31T14:19:32.160983Z DEBUG   - camera paused
+2023-03-31T14:19:32.161006Z DEBUG   - virtual void ihspt::drivers::CM_Controller::_Pause(std::unique_lock<std::mutex>&) (833) - <--
+2023-03-31T14:19:32.161024Z VERBOSE - Pause (529) - driver pauzing finished
+2023-03-31T14:19:32.161063Z DEBUG   - _AcquisitionLoop (1658) - Condition interrupted.
+2023-03-31T14:19:32.161070Z DEBUG   - _AcquisitionLoop (1648) - Starting wakeup condition
+2023-03-31T14:19:32.291367Z VERBOSE - driver starting...
+2023-03-31T14:19:32.297340Z VERBOSE - driver starting finished
+2023-03-31T14:19:32.297361Z DEBUG   - _AcquisitionLoop (1658) - Condition interrupted.
+2023-03-31T14:19:32.297441Z VERBOSE - Trigger (1172) - -->
+2023-03-31T14:19:32.297446Z VERBOSE - Trigger (1179) - <--
+2023-03-31T14:19:32.298093Z DEBUG   - _CameraParametersCallbackReceiver (907) - me index params: 0 hdr index params: 0
+2023-03-31T14:19:32.298129Z VERBOSE - _CallbackReceiver (1201) - Frame received
+2023-03-31T14:19:32.298132Z VERBOSE - _CallbackReceiver (1217) - Obtaining handle...
+2023-03-31T14:19:32.298159Z VERBOSE - _CallbackReceiver (1221) - Handle obtained
+2023-03-31T14:19:32.298161Z VERBOSE - _CallbackReceiver (1224) - Copying data...
+2023-03-31T14:19:32.298234Z VERBOSE - _CallbackReceiver (1254) - Data copied
+2023-03-31T14:19:32.298256Z DEBUG   - me frame index: 0 me index: 0 HDR frame index: 0 HDR index: 0
+2023-03-31T14:19:32.298258Z DEBUG   - [_CallbackReceiver] Notifying wakeup condition
+2023-03-31T14:19:32.298847Z VERBOSE - Pause (504) - driver pauzing...
+2023-03-31T14:19:32.298853Z DEBUG   - virtual void ihspt::drivers::CM_Controller::_Pause(std::unique_lock<std::mutex>&) (783) - -->
+2023-03-31T14:19:32.298858Z DEBUG   - _AcquisitionLoop (1648) - Starting wakeup condition
+2023-03-31T14:19:32.298867Z DEBUG   - _Pause (816) - Creating trigger lock
+2023-03-31T14:19:32.298870Z DEBUG   - _Pause (818) - Passed trigger lock
+2023-03-31T14:19:32.298873Z DEBUG   - pausing the camera
+2023-03-31T14:19:32.304966Z DEBUG   - _CameraParametersCallbackReceiver (907) - me index params: 0 hdr index params: 0
+2023-03-31T14:19:32.305002Z VERBOSE - _CallbackReceiver (1201) - Frame received
+2023-03-31T14:19:32.305005Z VERBOSE - _CallbackReceiver (1217) - Obtaining handle...
+2023-03-31T14:19:32.305026Z VERBOSE - _CallbackReceiver (1221) - Handle obtained
+2023-03-31T14:19:32.305029Z VERBOSE - _CallbackReceiver (1224) - Copying data...
+2023-03-31T14:19:32.305075Z VERBOSE - _CallbackReceiver (1254) - Data copied
+2023-03-31T14:19:32.305093Z DEBUG   - me frame index: 0 me index: 0 HDR frame index: 0 HDR index: 0
+2023-03-31T14:19:32.305095Z DEBUG   - [_CallbackReceiver] Notifying wakeup condition
+2023-03-31T14:19:32.305115Z DEBUG   - camera paused
+2023-03-31T14:19:32.305122Z DEBUG   - virtual void ihspt::drivers::CM_Controller::_Pause(std::unique_lock<std::mutex>&) (833) - <--
+2023-03-31T14:19:32.305125Z VERBOSE - Pause (529) - driver pauzing finished
+2023-03-31T14:19:32.305160Z VERBOSE - driver stopping...
+2023-03-31T14:19:32.460079Z DEBUG   - _AcquisitionLoop (1658) - Condition interrupted.
+2023-03-31T14:19:32.460081Z INFO    - [CameraController::_AcquisitionLoop] thread finished
+2023-03-31T14:19:32.460115Z VERBOSE - driver stopping finished
+2023-03-31T14:19:32.460151Z VERBOSE - driver forcing disconnect...
+2023-03-31T14:19:32.461278Z VERBOSE - driver forcing disconnect finished
+2023-03-31T14:19:44.231951Z VERBOSE - driver connecting...
+2023-03-31T14:19:44.542387Z VERBOSE - driver connected
+2023-03-31T14:19:44.542766Z VERBOSE - driver initializing...
+2023-03-31T14:19:44.542767Z VERBOSE -    trying to initialize...
+2023-03-31T14:19:47.683855Z VERBOSE -    initalization successful...
+2023-03-31T14:19:47.683856Z VERBOSE - driver initialization finished
+2023-03-31T14:19:47.683903Z DEBUG   - _AcquisitionLoop (1648) - Starting wakeup condition
+2023-03-31T14:19:47.764808Z VERBOSE - driver starting...
+2023-03-31T14:19:47.770560Z VERBOSE - driver starting finished
+2023-03-31T14:19:47.770651Z DEBUG   - _AcquisitionLoop (1658) - Condition interrupted.
+2023-03-31T14:19:47.822483Z DEBUG   - _CameraParametersCallbackReceiver (907) - me index params: 0 hdr index params: 0
+2023-03-31T14:19:47.822519Z VERBOSE - _CallbackReceiver (1201) - Frame received
+2023-03-31T14:19:47.822521Z VERBOSE - _CallbackReceiver (1217) - Obtaining handle...
+2023-03-31T14:19:47.822544Z VERBOSE - _CallbackReceiver (1221) - Handle obtained
+2023-03-31T14:19:47.822546Z VERBOSE - _CallbackReceiver (1224) - Copying data...
+2023-03-31T14:19:47.822589Z VERBOSE - _CallbackReceiver (1254) - Data copied
+2023-03-31T14:19:47.822603Z DEBUG   - me frame index: 0 me index: 0 HDR frame index: 0 HDR index: 0
+2023-03-31T14:19:47.822605Z DEBUG   - [_CallbackReceiver] Notifying wakeup condition
+2023-03-31T14:19:47.823343Z VERBOSE - Pause (504) - driver pauzing...
+2023-03-31T14:19:47.823381Z DEBUG   - virtual void ihspt::drivers::CM_Controller::_Pause(std::unique_lock<std::mutex>&) (783) - -->
+2023-03-31T14:19:47.823418Z DEBUG   - _AcquisitionLoop (1648) - Starting wakeup condition
+2023-03-31T14:19:47.823464Z DEBUG   - _Pause (816) - Creating trigger lock
+2023-03-31T14:19:47.823467Z DEBUG   - _Pause (818) - Passed trigger lock
+2023-03-31T14:19:47.823470Z DEBUG   - pausing the camera
+2023-03-31T14:19:47.855747Z DEBUG   - _CameraParametersCallbackReceiver (907) - me index params: 0 hdr index params: 0
+2023-03-31T14:19:47.855773Z VERBOSE - _CallbackReceiver (1201) - Frame received
+2023-03-31T14:19:47.855775Z VERBOSE - _CallbackReceiver (1217) - Obtaining handle...
+2023-03-31T14:19:47.855791Z VERBOSE - _CallbackReceiver (1221) - Handle obtained
+2023-03-31T14:19:47.855793Z VERBOSE - _CallbackReceiver (1224) - Copying data...
+2023-03-31T14:19:47.855843Z VERBOSE - _CallbackReceiver (1254) - Data copied
+2023-03-31T14:19:47.855860Z DEBUG   - me frame index: 0 me index: 0 HDR frame index: 0 HDR index: 0
+2023-03-31T14:19:47.855862Z DEBUG   - [_CallbackReceiver] Notifying wakeup condition
+2023-03-31T14:19:47.855883Z DEBUG   - camera paused
+2023-03-31T14:19:47.855892Z DEBUG   - virtual void ihspt::drivers::CM_Controller::_Pause(std::unique_lock<std::mutex>&) (833) - <--
+2023-03-31T14:19:47.855895Z VERBOSE - Pause (529) - driver pauzing finished
+2023-03-31T14:19:47.855908Z DEBUG   - _AcquisitionLoop (1658) - Condition interrupted.
+2023-03-31T14:19:47.855912Z DEBUG   - _AcquisitionLoop (1648) - Starting wakeup condition
+2023-03-31T14:19:47.985510Z VERBOSE - driver starting...
+2023-03-31T14:19:47.990958Z VERBOSE - driver starting finished
+2023-03-31T14:19:47.990969Z DEBUG   - _AcquisitionLoop (1658) - Condition interrupted.
+2023-03-31T14:19:48.042852Z DEBUG   - _CameraParametersCallbackReceiver (907) - me index params: 0 hdr index params: 0
+2023-03-31T14:19:48.042874Z VERBOSE - _CallbackReceiver (1201) - Frame received
+2023-03-31T14:19:48.042876Z VERBOSE - _CallbackReceiver (1217) - Obtaining handle...
+2023-03-31T14:19:48.042891Z VERBOSE - _CallbackReceiver (1221) - Handle obtained
+2023-03-31T14:19:48.042893Z VERBOSE - _CallbackReceiver (1224) - Copying data...
+2023-03-31T14:19:48.042930Z VERBOSE - _CallbackReceiver (1254) - Data copied
+2023-03-31T14:19:48.042940Z DEBUG   - me frame index: 0 me index: 0 HDR frame index: 0 HDR index: 0
+2023-03-31T14:19:48.042941Z DEBUG   - [_CallbackReceiver] Notifying wakeup condition
+2023-03-31T14:19:48.043593Z VERBOSE - Pause (504) - driver pauzing...
+2023-03-31T14:19:48.043599Z DEBUG   - virtual void ihspt::drivers::CM_Controller::_Pause(std::unique_lock<std::mutex>&) (783) - -->
+2023-03-31T14:19:48.043608Z DEBUG   - _AcquisitionLoop (1648) - Starting wakeup condition
+2023-03-31T14:19:48.043616Z DEBUG   - _Pause (816) - Creating trigger lock
+2023-03-31T14:19:48.043619Z DEBUG   - _Pause (818) - Passed trigger lock
+2023-03-31T14:19:48.043623Z DEBUG   - pausing the camera
+2023-03-31T14:19:48.076347Z DEBUG   - _CameraParametersCallbackReceiver (907) - me index params: 0 hdr index params: 0
+2023-03-31T14:19:48.076380Z VERBOSE - _CallbackReceiver (1201) - Frame received
+2023-03-31T14:19:48.076382Z VERBOSE - _CallbackReceiver (1217) - Obtaining handle...
+2023-03-31T14:19:48.076405Z VERBOSE - _CallbackReceiver (1221) - Handle obtained
+2023-03-31T14:19:48.076408Z VERBOSE - _CallbackReceiver (1224) - Copying data...
+2023-03-31T14:19:48.076470Z VERBOSE - _CallbackReceiver (1254) - Data copied
+2023-03-31T14:19:48.076487Z DEBUG   - me frame index: 0 me index: 0 HDR frame index: 0 HDR index: 0
+2023-03-31T14:19:48.076490Z DEBUG   - [_CallbackReceiver] Notifying wakeup condition
+2023-03-31T14:19:48.076524Z DEBUG   - camera paused
+2023-03-31T14:19:48.076533Z DEBUG   - virtual void ihspt::drivers::CM_Controller::_Pause(std::unique_lock<std::mutex>&) (833) - <--
+2023-03-31T14:19:48.076535Z VERBOSE - Pause (529) - driver pauzing finished
+2023-03-31T14:19:48.076548Z DEBUG   - _AcquisitionLoop (1658) - Condition interrupted.
+2023-03-31T14:19:48.076552Z DEBUG   - _AcquisitionLoop (1648) - Starting wakeup condition
+2023-03-31T14:19:48.076569Z VERBOSE - driver stopping...
+2023-03-31T14:19:48.220200Z DEBUG   - _AcquisitionLoop (1658) - Condition interrupted.
+2023-03-31T14:19:48.220203Z INFO    - [CameraController::_AcquisitionLoop] thread finished
+2023-03-31T14:19:48.220247Z VERBOSE - driver stopping finished
+2023-03-31T14:19:48.220399Z VERBOSE - driver forcing disconnect...
+2023-03-31T14:19:48.221602Z VERBOSE - driver forcing disconnect finished

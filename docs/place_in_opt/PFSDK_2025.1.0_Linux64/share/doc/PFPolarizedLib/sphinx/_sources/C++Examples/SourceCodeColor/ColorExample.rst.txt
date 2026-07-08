@@ -1,0 +1,11 @@
+.. _source-Code-Color:
+
+Source Code
+===========
+ 
+.. literalinclude:: /../examples/C++/GetColorPolarizedImages/GetColorPolarizedImages.cpp
+   :language: c++
+   :linenos:
+
+
+  

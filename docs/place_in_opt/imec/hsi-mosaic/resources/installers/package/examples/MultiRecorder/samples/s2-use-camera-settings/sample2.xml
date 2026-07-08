@@ -1,0 +1,17 @@
+<RecordingSetup>
+<recordingStorages>
+    <storage name="sample2">
+        <folder>data_s2</folder>
+    </storage>
+</recordingStorages>
+<tasks>
+    <!-- Connect to the camera connected to this computer, acquire 10 frames to storage s1,
+         and save them as RGB TIFFs to folder "output" -->
+    <cameraTask frameCount="10" recordingStorageName="sample2" exportImageFormat="XI_RGB24" exportFolder="outputSample2">
+        <!-- Apply camera settings stored to file (*.xicamera) using xiCamTool (use menu at (i) toolbar button) -->
+        <applyXiCameraFile name="sample2.xicamera"/>
+        <!-- After this, set exposure parameter to 1 ms -->
+        <setCameraParam name="XI_PRM_EXPOSURE" value="1000"/>
+    </cameraTask>
+</tasks>
+</RecordingSetup>

@@ -1,0 +1,575 @@
+Photonfocus SDK changelog.
+
+## [2025.1.0] - 14/05/2025
+### Changed:
+- PFBase:
+	+ Support for Basler Cameras
+	+ Load/Save selectors in configuration file
+	+ Add Edge Sensing Debayer algorithm
+	+ Reduce Discovery interval
+
+- PFViewer:
+  	+ Support for new Debayer algorithms
+    + Streaming memory configuration
+	+ Reset Settings
+	+ Save images in 16bit formats
+	+ Display more than 8 bit pixel values when required
+    + File saving context messages
+    + Gradient improvements
+    + Right click on image	
+	
+### Fixed:
+- PFViewer:
+	+ Linescan window not closing
+
+## [2024.2.0] - 21/01/2025
+### Changed:
+- PFBase:
+	+ Support for 3D08 Cameras
+
+### Changed:
+- PFViewer:
+  	+ Migrated PFViewer Application to Ubuntu
+		
+### Fixed:
+- PFViewer:
+	+ Fix to Display defined Camera Feature Tooltip and Description 
+
+
+## [2024.1.0] - 29/07/2024
+### Changed:
+- PFBase:
+    + Upgrade Linux FilterDriver 
+	+ Minor changes in PFSDK Samples: Console_SoftwareTrigger_Asynchronous, ConfigAndGrab_Console_2Cameras_MT
+
+- PFViewer:
+  	+ Manage NIC Multiple IP Addresses: Adapt Dialogs DiscoveryDialog, ForceIP
+		
+### Fixed:
+- PFBase:
+	+ Add Public Copy constructor for PFCLRCameraInfoGEV
+
+
+## [2023.2.0] - 24/11/2023
+
+### Changed
+- PFBase:
+	+ New C++ Samples with multithread support
+	+ Add Message to C++ Samples about filter driver use
+	+ Support for.Net 6 
+	+ Support for Python versions: 10,11
+	+ Removed support for Python <3.8
+	+ New Bin Folder organization
+	+ Added MROI support for new 3D cameras
+
+### Fixed:
+- PFViewer:
+	+ Discovery Dialog: Refresh Connect Button status and list discovery contents after heartbeat timeout
+	+ Avoid saving empty images on timeout
+
+## [2023.1.2] - 26/09/2023
+### Fixed:
+- PFBase:
+	+ Fix connection with IP Linux 
+	+ Fix VC140 template  
+	+ Add more typecodes for 3D Cameras
+	+ CMake minimum version for sample updated to 3.15
+	+ Rename Mathparser and enable hide unwanted symbols (bug with Pleora Integration) 		
+	
+### Changed
+- PFViewer:
+	+ Sequence Viewer: Display file information for loaded images
+	+ Show warning message when filter driver is not enabled
+	+ Fix Crash in 3D Viewer 
+	+ FeatureBrowser: Fix various Bugs		
+
+## [2023.1.1] - 21/04/2023
+### Changed
+- PFBase:
+	+ Changed CLR support for .NET Framework from 4.5 to 4.8 
+	+ Python Samples: Configure by default FindMaxPacketSize when the Stream is opened.
+
+- PFViewer:
+	+ SequenceViewer: Show Crosshairs in PFViewer
+	+ FeatureBrowser: Search in Feature Browser
+
+### Fixed:
+- PFBase:
+ 	+ PFBufferReader3D Memory Leak
+	+ SetFeatureValueFromString() for 64 bits support
+
+- PFViewer:
+	+ Check valid frames received while camera is doing a timeout
+
+## [2023.1.0] - 24/01/2023
+### Changed
+- PFBase:
+	+ Update GenICam to Xml parser
+	+ Remove unused headers: IPFBufferReader.h
+	+ Add MAC Addresses 00:11:1C:00::XX:XX
+	+ Add typecodes for 3D06 Cameras
+	+ Compilation for 32 bits Windows Version: Update Conan libraries, binaries, Filter Driver, Windows Installer, etc.
+
+- PFViewer:
+	+ Compilation for 32 bits Windows Version
+	+ Histogram optimization
+	+ LineScan image viewer for 3D cameras
+	
+
+### Fixed:
+- PFBase:
+	+ <stropts.h> conditional include in Linux
+	+ Remove warnings in PFSDK samples
+	+ Conversion after unpacking
+	+ GetImageCopy() memory leak
+	+ SLA issues
+	+ Update state of features after grabbing has started (issue with isLocked)
+
+- PFViewer:
+	+ SequenceViewer: Prefetch memory exhaustion (with 32 bits Operating System can only use a maximum of 1.5 GB RAM)
+	+ Various issues in Histogram update and calculation
+	+ Grab error if filter driver is not installed
+ 	+ Refresh feature PacketSize after recalculating packet  
+	+ Images displayed, saved does not match issue		
+	+ Features WidthMax and HeightMax must match SensorWidth, SensorHeight
+	+ Image size calculation for 2D Combined to 2D mode selection
+	+ Slow capture with small rois
+	
+
+## [2022.2.1] - 11/03/2022
+- PFBase:
+	+ Packet resend extended to 16 bits
+	+ New filter driver version: 1.3.4
+
+## [2022.2.0] - 21/02/2022
+### Changed
+- PFViewer:
+	+ Histogram statistics: Average, StdDev and Mode.
+	+ Sequence Viewer: Removed memory limitation to 50%.
+	+ Display FPS computed as an exponential average of last 5 seconds.
+	+ Filter system files from list of DLL files.
+	+ Added packet size negotiation and packet size feedback.
+	+ Made save image path editable.
+
+### Fixed
+- PFViewer:
+	+ Disable options and application menu while heartbeat timeout is running.
+	+ Command exec feedback.
+	+ Sequence Viewer: Consider Frame Combine options when setting Items counter in Multiframe mode.
+	+ Sequence Viewer: Start to play first item, Configure Counter edition state. 
+	+ Feature browser: Details not updated when moving with arrow keys.
+	+ Feature browser: action button sometimes not properly rendered.
+	+ Display rate not reaching configured maximum even when there are enough processing resources. Scheduling of rendering operations is now adjusted dynamically.
+	+ Display rate burst in grab start in the first second not respecting setting.
+- PFBase:
+	+ Fixed message channel callback when grabbing from multiple cameras from different processes.
+	+ Fixed grab from more than one process in Linux.
+	+ Fixed type codes file.
+	+ Fixed firewall traversal for packet size negotiation.
+
+### Added
+- PFViewer:
+	+ Sequence viewer: playback speed is now configurable.
+- PFBase:
+	+ Standalone image processing functions with transform context. The context allows reusing resources required in image transformations.
+
+### Added
+
+## [2022.1.0] - 24/01/2022
+### Changed
+- Installer version scheme changed to YYYY.N.R (YYYY=Year, N=Release within year, R=Hotfix)
+- PFViewer:
+	+ Made "Preferences -> Stream -> Find maximum packet size" enabled by default (only for new installations)
+
+### Fixed
+- Installer
+	+ Uninstall driver on SDK uninstallation.
+	+ Uninstall old driver before installing new driver.
+- PFViewer
+	+ Discovery crashed viewer in some edge cases.
+	+ Display FPS not reaching configured max value.
+- PFBase
+	+ PFAsyncGrabber stream closed and image timeout messages on acquisition stop.
+	+ Grab without filter driver always reported 0 missing packets.
+	+ Firewall traversal for GVSP.
+	+ Cancel image wait on acquisition stop for faster freeze.
+	+ Filter driver bug loopback of packet resends on the receive path.
+	+ Bug where buffer SizeY was incorrect in some corrupted frames.
+	+ LoadConfigFromFile ignored all Gev**** features. The following features are now applied: "GevSCPD","GevMCRC","GevMCTT","GevHeartbeatTimeout","GevSCPSPacketSize","GevSCPSDoNotFragment","GevSCPSFireTestPacket"
+
+### Added
+- Installer
+	+ vcredist 2015 installer.
+- PFBase
+	+ Added PFStream::Control and PFCamera::Control to modify default behaviour to have finer grained control on grab process. See Console_Advanced_Asynchronous sample.
+	+ Added PFStream::LockParams, PFStream::UnlockParams, PFStream::ResetStatistics.
+	+ Added PFCamera::ResetTimestampCounter.
+	+ Console_Advanced_Asynchronous sample.
+	+ Console_SoftwareTrigger_Asynchronous sample.
+	+ Option to share buffers with driver to avoid copies. See PFStream::Control::shared_pool_mode.
+
+## [1.1.6] - 01/10/2021
+### Fixed
+- PFViewer:
+	+ BayerGB1X not displayed properly
+	+ Histogram range maximum off by 1
+	+ Histogram for images with size < 2048 incorrect
+	+ Histogram statistics wrong
+	+ Histogram statistics in RGB showed only for Blue channel
+	+ Histogram grid option menu showing incorrect status
+	+ Histogram with pixel type Mono 16 bits
+	+ Shortcuts fixed
+	+ Memory leak in point of clouds widget
+	+ Memory leak in 3D Viewer
+	+ New output indicator glitch after reset due to discovery
+	+ Analyzer graph with negative values
+	+ Analyzer graph and image mismatch on max zoom
+	+ Sequence viewer first image not autoloaded.
+	+ Sequence viewer error message displayed at aplication startup when multiframe is enabled
+	+ Sequence viewer multiframe missing frames even if there were no lost frames in stream
+	+ Find max packet size check error code
+	+ Feature browser hides after camera reconnect
+	+ Feature browser asynchronous status update after grab start/stop
+	+ Feature browser values in range validation
+	+ Feature browser values extend precision to 64 bits
+	+ Range Map update if height = nr of captured frames
+	+ Range Map multiframe validation check
+	+ Range Map color mode selection
+	+ Cloud of Points windows not closing
+	+ Save settings on stream preferences apply button
+	
+- PFBase 
+	+ Feature parameter Min -1 or -1.0 reported as 0.
+	+ BSOD when using filter driver and wireshark
+	+ Driver not working in Windows 10 with secure boot enabled
+	+ Reading feature params caused some feature values to be cached incorrectly (e.g. EnAcquistionFrameRate and AcquistionFrameRateMax)	
+	+ Find max packet socket closed issue
+	+ Fixed PFBufferRef and PFBuffer rvalue reference constructor and assignment operator.
+	
+### Added
+- PFViewer: 
+	+ Option to enable find max packet size
+	+ Option to enable packet resend
+	+ Option to stop acquistion after N timeouts.
+	+ Quickstart guide file
+	+ Changelog file
+- PFBase:
+	+ PFStream event sink (IPFEventStream) for Open and Close events
+	+ PFStream::SetBufferPoolTimeout to configure a wait for available buffer
+	+ Asynchronous frame grabbing with PFAsyncGrabber and IPFAsyncGrabHandler
+	+ ConfigAndGrab_Console_Asynchronous sample
+	+ PFResult added rvalue reference constructor and assignment operator.
+
+### Changed
+- PFViewer:
+	+ Autosave warning shown before grab starts.
+	+ Sequence viewer stop button icon changed to avoid confusion.
+	+ Removed firewall check in Windows 10 automatically triggers popup.
+- PFBase:
+	+ Microsoft Hardware Dev Center program signed driver for Windows 10
+	+ Improvements in GEV acquisition
+	+ Improved PFStream buffer pool handling.
+	
+## [1.1.5] - 15/06/2021
+### Fixed
+- Sequence Viewer: histogram update, load & save sequence image files, lock buttons and tabs, input frames check
+- Refresh feature browser after loading configuration from file  
+- Max string feature length increased
+
+### Changed
+- GUI icons and main application appearance
+- Sequence Viewer: apply progress bar in load & save sequence files
+- Caption title bar 
+
+## [1.1.4] - 13/05/2021
+### Fixed
+- Issue with synchronization of grab and feature state
+- Save raw image with 0 values
+- Histogram show grid 
+- Crosshairs size
+
+### Changed
+- 3D examples update to PFSDKBufferRef class
+
+### Added
+- PFSDK crash dump support
+- Option to disable MAC check in camera connection
+
+## [1.1.3] - 04/05/2021
+### Fixed
+- Maintain order of categories in Feature Browser when changing access levels
+- Save images for cameras in 3D mode
+
+### Changed
+- Improvements in Windows installer: folder structure, verification of installed files, etc
+
+### Added
+- Class PFBufferRef: Buffer management of shallowed buffer copies
+
+## [1.1.2] - 22/03/2021
+### Fixed
+- Same camera can be assigned with more than one NIC
+- SequenceViewer change camera parameters issues
+- Save RAW images with Double Rate Cameras
+
+### Changed
+- Improve 3D Viewer smoothness
+- GetCameraInfoGEV and GetCameraInfoU3V marked as deprecated
+
+### Added
+- Add help message on gradient dialog
+- Add default gradient color
+
+## [1.1.1] - 22/02/2021
+### Added
+- PF Polarized library
+
+## [0.9.0] - 05/02/2021
+### Fixed
+- Python wrapper RGB pixel format support
+- PFAnalyzer issues (zoom levels update, overlapping labels, render direction)
+- Default gradient
+
+### Changed
+- PFSDK samples migration to Python2
+
+## [0.8.2] - 29/01/2020
+### Fixed
+- Status indicators for 3D mode
+- Histogram updates for single and multi frames
+- dll copyright
+ 
+### Added
+- Range map with gradients
+- Waterfall mode
+- C++ 3D StatusLine sample
+
+## [0.8.2] - 10/12/2020
+### Fixed
+- Force IP: issue with MV4 camera, set IP for camera in multiple cards
+- IP address based on the network adapter settings 
+- Multiframe with 2D modes
+- Heartbeat timeout and Device Reset
+- Close features while camera is reconnecting
+- Load configuration issues
+- Feature command "UserSetLoad" issues
+- Visibility adjustments for docked features, scrollbar and sliders
+
+### Added
+- Added 3D toolkit:
+    - RangeMap
+    - 3D viewer
+    - Image viewer with peaks
+    - Support for 3D cameras
+- Added SequenceViewer for 2D 
+- GR pixel formats for color cameras
+- Increase zoom level range
+- Discovery dialog device search messages and refreshing icon
+- List of DLL loaded by PFViewer in About Dialog
+- Filter driver version LOG message
+- C++ Samples for double rate cameras: ConfigAndGrab_Console_Online_DR, Console_Offline_DR
+
+
+## [0.7.5] - 05/03/2020
+### Fixed
+- Fixes crash on zoom, when the pixel data has to appear
+- PFFeatureDigger doesn't release the control
+- Fixes minor bugs
+
+## [0.7.4] - 03/03/2020
+### Fixed
+- PFStream::GetNextBuffer(PFBuffer*& pfBuffer) initializes pfBuffer to nullptr to avoid unknown init
+- Minor bug fixes.
+
+### Changed
+- PFViewer.ini moved to C:\Users\<USER>\AppData\Roaming\Photonfocus\PFViewer
+- Examples of the PFSDK and Polarized SDK moved to C:\Users\Public\Documents\Photonfocus
+
+## [0.7.0] - 21/01/2020
+### Fixed
+- Minor bug fixes.
+
+### Changed
+- PFFeatureBrowser is now dockable
+
+### Added
+- Added Toolkits and Crosshairs to the PFViewer
+
+### Removed 
+- Removed queue functions: GetQueueItem, EmptyQueue, GetQueueSize
+
+##[0.6.0] - 10/09/2019
+### Fixed
+- Minor bug fixes.
+
+### Added
+- Added FilterDriver features to the SDK and PFViewer.
+- Add a new menu option to the PFViewer: Save camera features as HTML.
+- Increased zoom-out level of the PFViewer.
+
+## [0.5.0] - 31/07/2019
+### Fixed
+- HeightMax and WidthMax are now shown as ReadOnly
+- When camera device is reset by software (DeviceReset command), the camera remains connected to the PFViewer: solved.
+- Button which is streamlocked (for example CameraHeadFactoryReset) is still pushable while grabbing: solved.
+- Issues storing GevPersistentIPAddress and GevPersistentSubnetMask and GevPersistentDefaultGateway are solved.
+- Other disconnection issues solved.
+
+### Added 
+- Action Command features added to the SDK and PFViewer.
+- Improvements in the FeatureBrowser dialog.
+- A "red cross" is implemented in the FeatureBrowser to indicate if a feature has a wrong value.
+- Force IP dialog: A valid IP based on the network adapter settings is proposed.
+
+## [0.4.9] - 26/04/2019
+### Fixed
+- Issues with the PFImage::SaveToFile() method solved.
+- Negative integer values cannot be set using the PFFeatureBrowser: solved.
+- DeviceStreamChannelPacketSize is now calculated and updated after connection.
+- Issue when a camera is disconnected while grabbing with the PFViewer solved.
+
+### Changed
+- Improvements on the grabbing process.
+- Improvements in the Discovery dialog.
+
+### Added
+- Added debayer algorithms for pixels formats BayerGB12 and BayerRG12
+- Added new dialog for Display preferences.
+- Added scientific notation for float features in the Feature Browser dialog.
+
+## [0.4.6] - 14/06/2018
+### Fixed
+- Data Rate calculation for Packed formats issue.
+- X Axis Length in Histogram based on Number of bits in Pixel Format.
+- Stream/Image properties show dialog on top of Windows.
+
+### Added
+- Created new PFFeatureBrowser.dll. Integrate DLL in PFViewer. Created associated C++ Console sample.
+- Create a new PFHistogram.dll. Integrate DLL in PFViewer. Created associated C++ Console sample.
+- Create a new PFDiscoveryBrowser.dll. Integrate DLL in PFViewer. Created associated C++ Console sample.
+- Let the user change the height of the log window and PFViewer. Save and Restore last configuration.
+- HistogramDialog minimizable.
+
+## [0.4.5] - 17/04/2018
+### Fixed
+- Number of images for Multiframe mode.
+- Issue with ROI size changed and Zoom Level.
+- Message "Get Image Failed" error appears after camera Freezed. 
+- Histogram Zoom is disabled.
+
+### Changed
+- Show Lost Frames. This feature is readable from PFStream Class. Show in StatusBar. 
+- Add image and lost counter to class PFStream.
+- Move counter numberOfFrames to class PFStream.
+- Open Property Browser dialog in the last visibility Configuration.
+- Histogram is available also while not grabbing in order to show the results of the last captured image.
+- Stream Configuration dialog. 
+- Background Color in Image Window.
+
+## [0.4.4] - 27/03/2018
+### Added
+- Add support for PixelType Mono16.
+
+### Changed
+- Maintain state of visibility for Property Browser (Position and Level selected).
+- Slider Logarithmic for Exposure Time.
+- Image Zoom preserved when you modify the image ROI.
+- Histogram. Show Overlay info box (Show position on the histogram on mouse move). 
+
+## [0.4.3] - 14/03/2018
+### Fixed
+- Send grab error before get image.
+- Hide render timeout message.
+- Timer Accurancy for Display FPS.
+
+### Added
+- Add support to manage Stream corrupted frames.
+
+## [0.4.2] - 08/03/2018
+### Fixed
+- Color and DR Camera identification issue.
+
+### Added
+- Feature slider Left & Right keys.
+- Wait cursor on Connect camera.
+
+### Changed
+- For zoom level < 1 image is moved to the corner.
+
+## [0.3.12] - 29/11/2017
+### Fixed
+- Issue with Binnning read value.
+- Configure decimal point as separator in Feature doubles.
+- Issue with Packed formats conversion.
+
+### Changed
+- Disable Payload refresh Timer. Done after update invalidators.
+- Feature integer: Avoid update camera values on Up/Down buttons.
+- Feature slider double: Update only on Slider release.
+
+## [0.3.11] - 28/11/2017
+### Fixed
+- Mono12 with small roi issue.
+- Histogram enabled.
+- Configure enable saving image.
+- Binning configuration.
+- Filter Min,max in some features.
+
+## [0.3.10] - 24/11/2017
+### Fixed
+- Zoom In limited.
+- IP Address feature type.
+- Smooth image transform disabled.
+
+### Added
+- Zoom Level in status bar.
+
+### Changed
+- (PFSDK) Channel Parameter configuration done in connection (heartbeat issues).
+
+## [0.3.9] - 22/11/2017
+### Fixed
+- ForceIP Mask suggestion.
+- Discovery Camera Icon state.
+- Hidden grab errors and lost frames.
+
+## [0.3.8] - 16/11/2017
+### Fixed
+- Acquisition stop/Close stream issue.
+- Force IP disabled button when the Camera is connected.
+- Device Reset while grabbing.
+- Command Control Opened issue.
+
+### Changed
+- Include time in some messages
+
+## [0.3.7] - 14/11/2017
+### Fixed
+- Exit while grabbing crash.
+- Max Invalidator value for Slider.
+- Slider Steps adjusted to Max. Hidden control.
+
+### Added
+- Add new Supported Vendor Name.
+- Clear Log list.
+- Show IP Address in Discovery and StatusBar.
+
+### Changed
+- Hidden USB Interface.
+
+## [0.3.6] - 09/11/2017
+### Fixed
+- Lost focus issue on refresh features states (Clear list).
+- Removed float adjustment buttons.
+- Set decimals for double values.
+- Force IP Address dialog on top.
+- Alert dialogs on top.
+- Multiple NIC address (Wrong IP on Force IP dialog).
+- Refresh Property Browser issue for USB Cameras.
+- Wrong message error for USB Cameras.
+- Read only state for Property browser Command buttons.
+- Clear scene image before start grab.
+- Clear scene image before change roi.
+
+### Added
+- Add internal error description. Show messages with full description.

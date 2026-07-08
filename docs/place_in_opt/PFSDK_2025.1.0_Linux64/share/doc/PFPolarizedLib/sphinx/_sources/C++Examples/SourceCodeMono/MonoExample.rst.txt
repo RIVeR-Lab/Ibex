@@ -1,0 +1,8 @@
+.. _source-Code-Mono:
+
+Source Code
+===========
+ 
+.. literalinclude:: /../examples/C++/GetMonoPolarizedImages/GetMonoPolarizedImages.cpp
+   :language: c++
+   :linenos:

@@ -1,0 +1,10 @@
+<RCC>
+    <qresource prefix="/eBUSPlayer" >
+        <file alias="play.bmp">res/play.bmp</file>
+        <file alias="stop.bmp">res/stop.bmp</file>
+        <file alias="wheel.bmp">res/wheel.bmp</file>
+        <file alias="eBUSPlayer.ico">res/eBUSPlayer.ico</file>
+        <file alias="eBUSPlayer_about.bmp">res/eBUSPlayer_about.bmp</file>
+        <file alias="eBUSPlayer_splash.bmp">res/eBUSPlayer_splash.bmp</file>
+    </qresource>
+</RCC>

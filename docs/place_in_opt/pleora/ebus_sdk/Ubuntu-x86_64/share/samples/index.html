@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>eBUS SDK C++ Code Samples</title>
+    <link rel="stylesheet" href="../doc/images/normalize.css" type="text/css">
+    <link rel="stylesheet" href="../doc/images/styles.css" type="text/css">
+</head>
+<body>
+    
+    <header id="banner">
+        <div class="container">
+            <h1>eBUS SDK C++ Code Samples</h1>
+            <img src="../doc/images/ebus-monitor.png" alt="">
+        </div>
+    </header>
+    
+    <div class="category">
+        <div class="container">
+            
+            <h2>eBUS Demo Application</h2>
+            <p>Get started with eBUS Player, which is Pleora’s out-of-the-box demo application. It lets you connect to your GigE Vision or USB3 Vision device and learn about the device streaming and control functionality that is offered by the eBUS SDK.</p>
+            
+            <section class="subcategory dark-blue">
+                <div class="subcategory__list">
+                    <div class="sample">
+                        <div class="sample__icon gui"></div>
+                        <div class="sample__description">
+                            <a class="sample__link" target="_blank" href="eBUSPlayer" target="_blank">eBUS Player</a>: eBUS Player is a full-featured application that showcases the functionality of the eBUS Rx SDK, which is used to detect, connect, and configure GigE Vision and USB3 Vision devices, and display and stream images.<br>This sample provides advanced examples of the eBUS SDK classes and functions that are available and provides full source code.
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+        </div>
+    </div>
+    
+    <div class="category">
+        <div class="container">
+            
+            <h2>eBUS Rx Code Samples</h2>
+            <p>eBUS Rx allows developers to create applications to receive image from and control GigE Vision or USB3 Vision devices. This universal API provides the ability to work with GigE Vision or USB3 Vision devices from Pleora Technologies or any 3rd-party device vendor.</p>
+            
+            <section class="subcategory dark-blue">
+                <header class="subcategory__header">
+                    <div class="header__flex">
+                        <img class="header__icon" src="../doc/images/icon-power.png" alt="">
+                        <h3>Getting Started</h3>
+                    </div>
+                </header>
+                <div class="subcategory__list">
+                    <div class="sample">
+                        <div class="sample__icon command-line"></div>
+                        <div class="sample__description">
+                          <p><a class="sample__link" target="_blank" href="PvStreamSample">PvStreamSample</a>: This “Hello World” sample shows you how to connect to a GigE Vision or USB3 Vision device, receive an image stream, stop streaming, and disconnect from the device. </p>
+                          <p>&nbsp;</p>
+                        </div>
+                    </div>
+                    
+                </div>
+            </section>
+            
+            <section class="subcategory light-blue">
+                <header class="subcategory__header">
+                        <div class="header__flex">
+                            <img class="header__icon" src="../doc/images/icon-play.png" alt="">
+                            <h3>Image Streaming</h3>
+                        </div>
+                </header>
+                <div class="subcategory__list">
+                    <div class="sample">
+                        <div class="sample__icon command-line"></div>
+                        <div class="sample__description">
+                            <a class="sample__link" target="_blank" href="PvPipelineSample">PvPipelineSample</a>: This sample extends the "Hello World" PvStreamSample by showing how buffers are managed internally by the PvPipeline class. This removes some of the complexity of buffer management from the application when compared to the PvStream sample.
+                        </div>
+                    </div>
+                    <div class="sample">
+                        <div class="sample__icon command-line"></div>
+                        <div class="sample__description">
+                            <a class="sample__link" target="_blank" href="MultiSource">MultiSource</a>: This command line sample for GigE Vision devices shows you how to receive images from a GigE Vision device that has multiple streaming sources.
+                        </div>
+                    </div>
+                    <div class="sample">
+                        <div class="sample__icon gui"></div>
+                        <div class="sample__description">
+                            <a class="sample__link" target="_blank" href="DualSource">DualSource</a>: This GUI-based sample for GigE Vision devices extends the MultiSource sample by allowing you to view image streams from a GigE Vision device that has two streaming sources.
+                        </div>
+                    </div>
+                    <div class="sample">
+                        <div class="sample__icon command-line"></div>
+                        <div class="sample__description">
+                            <a class="sample__link" target="_blank" href="ImageProcessing">ImageProcessing</a>: This sample illustrates how to acquire an image and process it using an external buffer to interface with a non-Pleora library. This is useful when you want to interface the eBUS SDK to popular third-party SDKs for image processing or machine learning, such as OpenCV.
+                        </div>
+                    </div>
+                    <div class="sample">
+                        <div class="sample__icon command-line"></div>
+                        <div class="sample__description">
+                            <a class="sample__link" target="_blank" href="MulticastMaster">MulticastMaster</a>: This sample shows how to connect to a GigE Vision device and initiate a multicast stream to allow multiple slave devices to receive and process the image stream simultaneously.<br>This sample is used in conjunction with the MulticastSlave sample, which listens to the multicast stream.
+                        </div>
+                    </div>
+                    <div class="sample">
+                        <div class="sample__icon command-line"></div>
+                        <div class="sample__description">
+                            <a class="sample__link" target="_blank" href="MulticastSlave">MulticastSlave</a>: This sample shows how to configure the eBUS SDK to receive an image stream from a GigE Vision device that is configured for multicast mode.<br>This sample is used in conjunction with the MulticastMaster sample, which initiates the multicast stream.
+                        </div>
+                    </div>
+                    <div class="sample">
+                        <div class="sample__icon command-line"></div>
+                        <div class="sample__description">
+                            <a class="sample__link" target="_blank" href="TapReconstruction">TapReconstruction</a>: This sample generates synthetic images for each supported tap geometry*, applies a filter to reconstruct each image, and then saves the images as TIFF files for display. Tap reconstruction is used with multi-tap cameras, which may not send the pixels in order, depending on the camera's tap geometry.<br><em>*Tap geometries are defined by the GenICam Standard Features Naming Convention (SFNC).</em>
+                        </div>
+                    </div>
+                    
+                </div>
+            </section>
+            
+            <section class="subcategory dark-blue">
+                <header class="subcategory__header">
+                        <div class="header__flex">
+                            <img class="header__icon" src="../doc/images/icon-camera.png" alt="">
+                            <h3 style="font-size: 24px;">Discovery &amp; Connection</h3>
+                        </div>
+                </header>
+                <div class="subcategory__list">
+                    <div class="sample">
+                        <div class="sample__icon gui"></div>
+                        <div class="sample__description">
+                            <a class="sample__link" target="_blank" href="DeviceFinder">DeviceFinder</a>: This sample shows how to detect and enumerate GigE Vision and USB3 Vision devices on the network.
+                        </div>
+                    </div>
+                    <div class="sample">
+                        <div class="sample__icon command-line"></div>
+                        <div class="sample__description">
+                            <a class="sample__link" target="_blank" href="ConnectionRecovery">ConnectionRecovery</a>: This sample shows how to automatically recover from connectivity issues, such as accidental disconnects and power interruptions, to build more robustness into your eBUS SDK application.
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            <section class="subcategory light-blue">
+                <header class="subcategory__header">
+                        <div class="header__flex">
+                            <img class="header__icon" src="../doc/images/icon-gears.png" alt="">
+                            <h3 style="font-size: 21px;">Configuration &amp; Event Monitoring</h3>
+                        </div>
+                </header>
+                <div class="subcategory__list">
+                    <div class="sample">
+                        <div class="sample__icon command-line"></div>
+                        <div class="sample__description">
+                            <a class="sample__link" target="_blank" href="DeviceSerialPort">DeviceSerialPort</a>: This sample shows how to send commands to a camera or other device that accepts serial input commands through a compatible Pleora iPORT video interface using the Pleora device's General Purpose Input/Output (GPIO) signals, including UART or BULK.
+                        </div>
+                    </div>
+                    <div class="sample">
+                        <div class="sample__icon command-line"></div>
+                        <div class="sample__description">
+                            <a class="sample__link" target="_blank" href="CameraBridge">CameraBridge</a>: This sample shows how to control a Camera Link camera through a compatible Pleora iPORT CL Series External Frame Grabber using the following Camera Link protocols: CLProtocol and GenCP.
+                        </div>
+                    </div>
+                    <div class="sample">
+                        <div class="sample__icon command-line"></div>
+                        <div class="sample__description">
+                            <a class="sample__link" target="_blank" href="GenICamParameters">GenICamParameters</a>: This sample shows how to enumerate and display the GenICam features and settings of a GenICam-compatible device by discovering and accessing the features of the device's node map. The node map is built programmatically from the device’s GenICam XML file.
+                        </div>
+                    </div>
+                    <div class="sample">
+                        <div class="sample__icon command-line"></div>
+                        <div class="sample__description">
+                            <a class="sample__link" target="_blank" href="ConfigurationReader">ConfigurationReader</a>: This sample shows how to save the configuration state of your GigE Vision or USB3 Vision device, your eBUS SDK application preferences, and any custom strings and property lists to a file. It also illustrates how to open and restore this information.
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+        </div>
+    </div>
+    
+    <div class="category">
+        <div class="container">
+            
+            <h2>eBUS Tx Code Samples</h2>
+            <p>eBUS Tx allows developers to create GigE Vision-compliant devices that stream using the GigE Vision Streaming Protocol (GVSP) and are controlled using the GigE Vision Control Protocol (GVCP). Use this API to start building GigE Vision devices, such as smart cameras or sensors, that are compatible with existing GigE Vision software applications.</p>
+            
+            <section class="subcategory dark-blue">
+                <div class="subcategory__list">
+                    <div class="sample">
+                        <div class="sample__icon command-line"></div>
+                        <div class="sample__description">
+                            <a class="sample__link" target="_blank" href="SoftDeviceGEVSimple" target="_blank">SoftDeviceGEVSimple</a>: This sample shows how to use PvSoftDeviceGEV to create a basic software GigE Vision device with one streaming source and a single pixel type. A sample test pattern is generated as a streaming source.
+                        </div>
+                    </div>
+                    <div class="sample">
+                        <div class="sample__icon command-line"></div>
+                        <div class="sample__description">
+                            <a class="sample__link" target="_blank" href="SoftDeviceGEV" target="_blank">SoftDeviceGEV</a>: This sample shows how to use PvSoftDeviceGEV to create a fully functioning software GigE Vision device with multiple streaming sources and fixed width and height pixel types. A sample test pattern is generated as a streaming source. This sample also illustrates how to implement custom GenApi features and device registers, as well as how to access the GVCP messaging channel to send events and chunk data.
+                        </div>
+                    </div>
+                    <div class="sample">
+                        <div class="sample__icon command-line"></div>
+                        <div class="sample__description">
+                            <a class="sample__link" target="_blank" href="SoftDeviceGEVMultiPart" target="_blank">SoftDeviceGEVMultiPart</a>: This sample shows how to use PvSoftDeviceGEV to create a software GigE Vision multi-part transmitter device.
+                    </div>
+                    </div>
+                    <!-- <div class="sample">
+                        <div class="sample__icon command-line"></div>
+                        <div class="sample__description">
+                            <a class="sample__link" target="_blank" href="SoftDeviceGEV3d" target="_blank">SoftDeviceGEV3d</a>: This sample shows how to use PvSoftDeviceGEV to create a complex software GigE Vision 3D transmitter device.
+                        </div> -->
+                    </div>
+                </div>
+            </section>
+            
+        </div>
+    </div>
+    
+    <div class="category">
+        <div class="container">
+            
+            <h2>Deprecated Code Samples</h2>
+            <p>For developers who have worked with earlier releases of the eBUS SDK, please take note that the following code samples have been deprecated in eBUS SDK 6.0: TransmitChunkData, TransmitProcessedImage, and TransmitTestPattern. The eBUS Tx code samples are a suggested replacement.</p>
+        </div>
+    </div>
+        
+</body>
+</html>

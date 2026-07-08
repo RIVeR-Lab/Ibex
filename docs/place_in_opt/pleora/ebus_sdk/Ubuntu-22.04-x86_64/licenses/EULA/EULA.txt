@@ -1,0 +1,60 @@
+Pleora Technologies Inc. - End User License Agreement
+
+IMPORTANT: Buyer must accept this License Agreement before you can use the Product.
+The program(s), which may include one or more of device driver(s) and software library (libraries), operating
+system(s), firmware, application software collectively known as “software” in this package is (are) licensed
+to the Buyer. By installing all or a portion of this software, the Buyer indicates acceptance of this License
+Agreement.
+
+eBUS™, iPORT™, vDisplay™, Vaira™, eBUS Studio™, CoreGEV™, RapidPIX™, AutoGEV™ and AutoGen™ are trademarks 
+of Pleora Technologies Inc. (Pleora). Purchasing a Pleora solution grants the Buyer a license in the software, 
+subject to the following:
+
+USE: The software may only be used either as stand-alone software, or, in conjunction with Pleora’s
+Products and products provided by Pleora’s technology partners. Buyer may not reverse compile or disassemble
+the software.
+
+COPIES: Buyer may make copies of the software in machine readable form for archival and backup
+purposes. Buyer has no other right to copy. The copy must bear the copyright notice contained in or on the
+original.
+
+OWNERSHIP: Buyer agrees that Buyer does not have any title or ownership of the software, other than
+ownership of the physical dongle, if distributed via a dongle.
+
+TRANSFERABILITY: Buyer may not transfer or assign rights in the software to a third party independently
+of Pleora’s Products except with the express written consent of Pleora. Buyer may not sublicense the
+software or distribute copies or adaptations of the software to any third party independently of Pleora’s
+Products in physical media, by telecommunications or by any other means.
+
+TERMINATION: Pleora may terminate this license if Buyer fails to comply with any of the terms of this
+License Agreement. Upon a termination, Buyer shall return the software and all copies to Pleora.
+
+UPDATE, MAINTENANCE & SUPPORT: Buyer agrees that the software does not include updates,
+maintenance and support which may be available pursuant to a separate agreement.
+
+LIMITED WARRANTY: Pleora warrants that the USB dongle upon which the program is furnished will be, under
+normal use, free from defects in material and workmanship for a period of one (1) year from the purchase
+of the product. Pleora's entire liability, and Buyer's exclusive remedy under this warranty, will be the
+replacement of the defective USB dongle without charge. Except for the above express limited warranty, Pleora
+makes no warranties, express, implied or statutory and Pleora specifically disclaims any implied warranty
+of merchantability or fitness for a particular purpose. Pleora does not warrant that the operation of the
+program will be uninterrupted or error-free.
+
+LIMITATION OF LIABILITIES: The total liability of Pleora for any claim or damage arising out of the use or
+liability to use the software or otherwise related to this Agreement, and whether in contract or in tort, shall
+be limited to direct damages which shall not exceed the license fee (if any) paid by Buyer. In no event shall
+Pleora be liable for lost profits, lost data, and interruption of business or for any other incidental or
+consequential damages arising out of the use of the software or related to this Agreement, regardless of
+whether Pleora has notice of the potential for any such loss or damage.
+
+This software is not intended for use in life support appliances, devices, or systems where malfunction of
+these products can reasonably be expected to result in personal injury. Buyer using or selling these
+products for use in such applications do so at their own risk and agree to fully indemnify Pleora for any
+damages resulting from such improper use or sale.
+
+MISCELLANEOUS: This EULA may be modified or amended only by a writing signed by an authorized
+representative of Pleora. It is agreed that sales representatives and distributors of the software have no
+authority to alter this EULA. Any provision found by a tribunal of competent jurisdiction to be illegal or
+unenforceable shall be automatically conformed to the minimum requirements of law and all other
+provisions shall be in full force and effect. Waiver of any provision hereof in one instance shall not preclude
+enforcement of it in one instance. Headings are for reference only and have no substantive effect.

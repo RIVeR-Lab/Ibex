@@ -1,0 +1,13 @@
+cmake_minimum_required(VERSION 3.15)
+cmake_policy(SET CMP0074 NEW)
+project(PFCameraLib_ConfigAndGrab_Console_MT CXX)
+if(NOT TARGET Photonfocus::PFCameraLib)
+	find_package(PFBase CONFIG REQUIRED PATHS ${CMAKE_CURRENT_SOURCE_DIR}/../../../)
+endif()
+
+add_executable(PFCameraLib_ConfigAndGrab_Console_MT ConfigAndGrab_Console_MT.cpp MT_Queue.h)
+set_target_properties(PFCameraLib_ConfigAndGrab_Console_MT PROPERTIES FOLDER PFCameraLib/Examples/C++)
+target_link_libraries(PFCameraLib_ConfigAndGrab_Console_MT PRIVATE Photonfocus::PFCameraLib)
+if(UNIX)
+	target_link_libraries(PFCameraLib_ConfigAndGrab_Console_MT PRIVATE pthread)
+endif()

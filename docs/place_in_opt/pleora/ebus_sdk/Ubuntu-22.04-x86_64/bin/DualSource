@@ -1,0 +1,70 @@
+#!/bin/sh
+
+# Get the executable's absolute parent path
+CURRENT_SCRIPT="${BASH_SOURCE:-$0}"
+DIRNAME="$(dirname "$(dirname "$(readlink -f "$CURRENT_SCRIPT")" )" )"
+
+# Set env. vars
+export PUREGEV_ROOT=$DIRNAME
+export GENICAM_ROOT=$DIRNAME/lib/genicam
+export GENICAM_ROOT_V3_4=$GENICAM_ROOT
+export GENICAM_LOG_CONFIG=$DIRNAME/lib/genicam/log/config/DefaultLogging.properties
+export GENICAM_LOG_CONFIG_V3_4=$GENICAM_LOG_CONFIG
+export GENICAM_CACHE_V3_4=$HOME/.config/Pleora/genicam_cache_v3_4
+export GENICAM_CACHE=$GENICAM_CACHE_V3_4
+mkdir -p $GENICAM_CACHE
+
+# Add to the LD_LIBRARIES_PATH
+if ! echo ${LD_LIBRARY_PATH} | /bin/grep -q $PUREGEV_ROOT/lib; then
+   if [ "$LD_LIBRARY_PATH" = "" ]; then
+      LD_LIBRARY_PATH=$PUREGEV_ROOT/lib
+   else
+      LD_LIBRARY_PATH=$PUREGEV_ROOT/lib:${LD_LIBRARY_PATH}
+   fi
+fi
+
+if [ `uname -m` = "x86_64" ]; then
+  GENICAM_LIB_DIR=bin/Linux64_x64
+elif [ `uname -m` = "ppc" ]; then
+  GENICAM_LIB_DIR=bin/Linux32_PPC
+elif [ `uname -m` = "aarch64" ]; then
+  GENICAM_LIB_DIR=bin/Linux64_ARM
+else
+  GENICAM_LIB_DIR=bin/Linux32_i86
+fi
+
+if ! echo ${LD_LIBRARY_PATH} | /bin/grep -q $GENICAM_ROOT/$GENICAM_LIB_DIR; then
+   LD_LIBRARY_PATH=$GENICAM_ROOT/$GENICAM_LIB_DIR:${LD_LIBRARY_PATH}
+fi
+
+export LD_LIBRARY_PATH
+
+if ! echo ${PYTHONPATH} | grep -q ${PUREGEV_ROOT}/lib; then
+  PYTHONPATH=${PUREGEV_ROOT}/lib:${PYTHONPATH}
+fi
+
+export PYTHONPATH
+
+APP_TO_LAUNCH=DualSource.bin
+# Skip launching app if script is being sourced
+if [ "$_" = "$0" ] || [ "$0" = "$BASH_SOURCE" ] || [ -z "$BASH_SOURCE" ]
+  then
+  if [ ! -z "$APP_TO_LAUNCH" ]
+  then
+    APPPATH=$PUREGEV_ROOT/bin/$APP_TO_LAUNCH
+  else
+    if [ $# -gt 0 ]
+    then
+      APPPATH="$(readlink -f $1)" # Enable launching app from current folder without need of ./
+      shift # Remove $1 from $*
+    fi
+  fi
+
+  # Launch app
+  if [ -f "$APPPATH" ]; then
+      "$APPPATH" $*
+  else
+    [ ! -z "$APPPATH" ] && echo "Error $APPPATH is not a valid filename" >&2
+  fi
+
+fi

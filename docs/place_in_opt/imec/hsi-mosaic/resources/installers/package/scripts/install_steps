@@ -1,0 +1,559 @@
+#!/bin/bash
+
+echo "This is installation of package for platform $1"
+
+# defaults
+platform_bits=64 # platform bits can be 32 or 64 or arm32 or arm64
+mode_silent=0
+cam_usb30_enabled=0
+pcie_enabled=0
+h264_enabled=1
+udev_enabled=1
+gentl_enabled=1
+api_version=2
+this_is_x32=0
+this_is_x64=0
+this_is_arm=0
+
+function PrintUsage()
+{
+	echo "Usage: install_steps -x64|-arm32|-arm64 [-silent] [-cam_usb30] [-pcie] [-nonet] [-noudev]"
+}
+
+# parsing arguments
+parsed=0
+for arg in $*
+do
+	parsed=0
+	if [ "$arg" == "-x64" ]
+	then
+		platform_bits=64
+		this_is_x64=1
+		parsed=1
+	fi
+	if [ "$arg" == "-x32" ]
+	then
+		echo "x86/32-bit platform is not supported anymore, only 64-bit"
+		exit
+		platform_bits=32
+		this_is_x32=1
+		parsed=1
+	fi
+	if [ "$arg" == "-arm32" ]
+	then
+		platform_bits=arm32
+		this_is_arm=1
+		parsed=1
+	fi
+	if [ "$arg" == "-arm64" ]
+	then
+		platform_bits=arm64
+		this_is_arm=1
+		parsed=1
+	fi
+	if [ "$arg" == "-silent" ]
+	then
+		mode_silent=1
+		parsed=1
+	fi
+	if [ "$arg" == "-nonet" ]
+	then
+		h264_enabled=0
+		parsed=1
+	fi
+	if [ "$arg" == "-noudev" ]
+	then
+		udev_enabled=0
+		parsed=1
+	fi
+	if [ "$arg" == "-nogentl" ]
+	then
+		gentl_enabled=0
+		parsed=1
+	fi
+	if [ "$arg" == "-cam_usb30" ]
+	then
+		cam_usb30_enabled=1
+		parsed=1
+	fi
+	if [ "$arg" == "-pcie" ]
+	then
+		pcie_enabled=1
+		parsed=1
+	fi
+	if [ $parsed == 0 ]
+	then
+		echo "Invalid argument $arg"
+		PrintUsage
+		exit 1
+	fi
+done
+
+if [ $parsed == 0 ]
+then
+	PrintUsage
+	exit 1
+fi
+
+echo Checking if user is super user
+if [ $EUID == 0 ]
+then
+    echo OK
+else
+    echo Please run: sudo ./install_steps
+    exit 1
+fi
+
+function Check()
+{
+    if [ $? == 0 ]
+    then
+		echo OK
+    else
+		echo Error on previous command
+		exit 1
+    fi
+}
+
+optpath=/opt/XIMEA
+mkdir -p $optpath/bin $optpath/lib $optpath/src $optpath/CamTool $optpath/backup 2>/dev/null
+mkdir -p "$optpath/data"
+cp README* uninstall version_LINUX_SP.txt "$optpath"
+touch $optpath/backup/files.txt
+
+# -----------------------------------------------------------------------------
+
+if [ "$udev_enabled" == "1" ]
+then
+	echo Installing and reloading udev rules
+	groupadd -fr plugdev
+	Check
+	cp libs/libusb/99-ximea.rules /etc/udev/rules.d/
+	Check
+	udevadm control --reload
+	Check
+fi
+
+# -----------------------------------------------------------------------------
+
+if [ $pcie_enabled == 1 ]
+then
+	echo Building and installing PCIe driver
+	echo This requires compiler and kernel sources to be installed
+	cp -R src/ximea_cam_pcie $optpath/src/
+	pushd $optpath/src/ximea_cam_pcie
+	make clean
+	Check
+	make
+	Check
+	make install
+	Check
+	depmod
+	Check
+	echo Reloading kernel module, will fail if it is in use
+	rmmod ximea_cam_pcie 2>/dev/null
+	modprobe --first-time ximea_cam_pcie
+	Check
+	popd
+	echo Please note that after upgrading the kernel you need to rebuild PCIe kernel driver
+	echo To do that either re-run this installation script after booting into new kernel
+	echo or run the following commands from root account:
+	echo "$ cd $optpath/src/ximea_cam_pcie"
+	echo "$ make clean && make KERNEL=<new_kernel_version> && make KERNEL=<new_kernel_version> install"
+	echo "$ modprobe ximea_cam_pcie"
+	echo KERNEL= argument is needed when building for kernel version different from currently running
+fi
+
+# -----------------------------------------------------------------------------
+# install our versions of libusb and libraw1394 to /lib so they always get priority
+# -----------------------------------------------------------------------------
+
+# assume any AARCH64 system has new enough kernel
+libusbversion=vanilla
+
+install_libusb=y
+if libs/libusb/"$libusbversion"X$platform_bits/version_check
+then
+	install_libusb=n
+fi
+
+if [ "$platform_bits" != "arm64" ]
+then
+	KV=$(uname -r).
+	if [ "${KV:0:$(($(expr index $KV .)-1))}" -lt 3 ] || \
+		( [ "${KV:0:$(($(expr index $KV .)-1))}" -eq 3 ] && [ "${KV:$(expr index $KV .):$(($(expr index ${KV:$(expr index $KV .)} .)-1))}" -lt 6 ] )
+	then
+		if [ $cam_usb30_enabled == 1 ]
+		then
+			if [ "${KV:0:$(($(expr index $KV .)-1))}" -lt 3 ] || \
+				[ "${KV:$(expr index $KV .):$(($(expr index ${KV:$(expr index $KV .)} .)-1))}" -lt 4 ]
+			then
+				echo "-------------------------------------"
+				echo "CAUTION!!!"
+				echo "Your current Linux kernel version is too old for USB3 support!!!"
+				echo "Minimum required version is 3.4."
+				echo "If you proceed with installation, USB support will be broken system-wide until you upgrade the kernel!!!"
+				echo "Advised way of enabling USB3 support is upgrading kernel to version at least as new as 3.6."
+				echo "If you decide to do it in the future, rerun this installation script after rebooting into new kernel."
+				echo "-------------------------------------"
+				if [ $mode_silent == 0 ]
+				then
+					echo "Press Enter to continue or Ctrl-C to exit"
+					read
+				fi
+			else
+				echo "-------------------------------------"
+				echo "WARNING!!!"
+				echo "You have enabled experimental USB3 support! It may affect USB2 support too."
+				echo "DO NOT downgrade the kernel to versions older than 3.4!!!"
+				echo "Advised way of enabling USB3 support is upgrading kernel to version at least as new as 3.6."
+				echo "If you decide to do it in the future, rerun this installation script after rebooting into new kernel."
+				echo "-------------------------------------"
+				sleep 5
+			fi
+			libusbversion=
+		else
+			echo "-------------------------------------"
+			echo "USB3 support for kernels older than 3.6 is experimental and disabled by default."
+			echo "You have to request it explicitly by running installation script with -cam_usb30 option."
+			echo "Be aware that you will need kernel version not older than 3.4!"
+			echo "Advised way of enabling USB3 support is upgrading kernel to version at least as new as 3.6."
+			echo "-------------------------------------"
+		fi
+	fi
+fi
+
+modprobe configs &>/dev/null
+
+if [ "$this_is_arm" == "0" ]
+then
+	if [ "${KV:0:$(($(expr index "$KV" .)-1))}" -lt 4 ] || \
+		( [ "${KV:0:$(($(expr index "$KV" .)-1))}" -eq 4 ] && [ "${KV:$(expr index "$KV" .):$(($(expr index ${KV:$(expr index "$KV" .)} .)-1))}" -lt 6 ] )
+	then
+		echo "-------------------------------------"
+		echo "Your kernel is too old for USB zerocopy support."
+		echo "To benefit from lower latency and CPU usage while using USB cameras"
+		echo "upgrade to kernel version 4.6 or later with CONFIG_DMA_CMA option enabled"
+		echo "and add cma=300M parameter to kernel cmdline."
+		echo "-------------------------------------"
+	else
+		usbmem="$(grep CmaTotal /proc/meminfo|grep -o '[0-9]\+')"
+		if [ -z "$usbmem" ] || [ "$usbmem" -lt "$((150*1024))" ]
+		then
+			cma=n
+			if [ -e /proc/config.gz ]
+			then
+				cma="$(zgrep CONFIG_DMA_CMA= /proc/config.gz | cut -d= -f2)"
+			elif [ -e /lib/modules/"$(uname -r)"/build/.config ]
+			then
+				cma="$(grep CONFIG_DMA_CMA= /lib/modules/"$(uname -r)"/build/.config | cut -d= -f2)"
+			fi
+			echo "-------------------------------------"
+			echo "Your kernel is not configured for USB zerocopy support."
+			echo "To benefit from lower latency and CPU usage while using USB cameras"
+			if [ "$cma" != "y" ]
+			then
+				echo "enable CONFIG_DMA_CMA option in kernel config and"
+			fi
+			echo "add cma=300M parameter to kernel cmdline."
+			echo "-------------------------------------"
+		fi
+	fi
+fi
+
+if [ "$install_libusb" == "y" ]
+then
+	echo Installing libusb
+	pushd libs/libusb/"$libusbversion"X$platform_bits >/dev/null
+	for i in lib*.so*
+	do
+		if [ -f /lib/"$i" ] && ( [ ! -f $optpath/backup/"$i".md5sum ] || ! md5sum --status --check $optpath/backup/"$i".md5sum )
+		then
+			mv /lib/"$i" $optpath/backup/
+		fi
+		cp -d "$i" /lib/
+		Check
+		echo "$i" >> $optpath/backup/files.txt
+		Check
+	done
+	for i in lib*.so*
+	do
+		md5sum /lib/"$i" > $optpath/backup/"$i".md5sum
+		Check
+	done
+	popd >/dev/null
+else
+	echo Skipping installation of libusb since new enough version is available in the system
+fi
+
+# remove now unneeded and causing troubles workaround
+if grep -qs '^; workaround for kernels 3\.12 & 3\.13$' $optpath/config.ini
+then
+	sed -e '/^; workaround for kernels 3\.12 & 3\.13$/ d' -e '/^PPTB = 1008$/ d' -i $optpath/config.ini
+fi
+
+# -----------------------------------------------------------------------------
+
+if [ "$this_is_arm" == "0" ]
+then
+	install_libraw1394=y
+	if libs/libraw1394/X$platform_bits/version_check
+	then
+		install_libraw1394=n
+	fi
+else
+	install_libraw1394=n
+fi
+
+
+if [ "$install_libraw1394" == "y" ]
+then
+	echo Installing Firewire support - libraw1394
+	pushd libs/libraw1394/X$platform_bits >/dev/null
+	for i in lib*.so*
+	do
+		if [ -f /lib/"$i" ] && ( [ ! -f $optpath/backup/"$i".md5sum ] || ! md5sum --status --check $optpath/backup/"$i".md5sum )
+		then
+			mv /lib/"$i" $optpath/backup/
+		fi
+		cp -d "$i" /lib/
+		Check
+		echo "$i" >> $optpath/backup/files.txt
+		Check
+	done
+	for i in lib*.so*
+	do
+		md5sum /lib/"$i" > $optpath/backup/"$i".md5sum
+		Check
+	done
+	popd >/dev/null
+
+	echo Checking Firewire stack
+	juju=n
+	ieee=n
+	if [ -e /proc/config.gz ]
+	then
+		juju=$(zgrep CONFIG_FIREWIRE= /proc/config.gz | cut -d= -f2)
+		ieee=$(zgrep CONFIG_IEEE1394= /proc/config.gz | cut -d= -f2)
+	elif [ -e /lib/modules/$(uname -r)/build/.config ]
+	then
+		juju=$(grep CONFIG_FIREWIRE= /lib/modules/$(uname -r)/build/.config | cut -d= -f2)
+		ieee=$(grep CONFIG_IEEE1394= /lib/modules/$(uname -r)/build/.config | cut -d= -f2)
+	fi
+	if [ "$juju" != "y" ] && [ "$juju" != "m" ] || [ "$juju$ieee" == "my" ] || [ "$juju$ieee" == "mm" ]
+	then
+		echo "-------------------------------------"
+		echo Your current Linux configuration does not support XIMEA Firewire cameras
+		echo For Firewire cameras support you need to enable config option CONFIG_FIREWIRE in kernel.
+		echo Older kernels have another implementation of Firewire stack - CONFIG_IEEE1394, which is unsupported.
+		echo Make sure that the right one is used.
+		echo
+		echo More information about this can be found here:
+		echo http://www.ximea.com/support/wiki/apis/Linux_Firewire_Support
+		echo "-------------------------------------"
+		if [ $mode_silent == 0 ]
+		then
+			echo Press Enter to continue
+			read choice
+		fi
+	fi
+elif [ "$this_is_arm" == "0" ]
+then
+	echo Skipping installation of libraw1394 since new enough version is available in the system
+fi
+
+if ! ldconfig -p | grep -q '/libtiff.so.5$'
+then
+	if ldconfig -p | grep -q '/libtiff.so.6$'
+	then
+		echo "Installing libtiff.so.5 symlink"
+		ln -snf "$(ldconfig -p | grep '/libtiff.so.6$' | awk -F ' => ' '{print $2}')" "$optpath/lib/libtiff.so.5"
+		Check
+	else
+		echo "Required system library not found: libtiff! Please install it and re-run this script."
+		exit 1
+	fi
+fi
+
+echo
+echo Installing API library
+
+cp api/X$platform_bits/libm3api.so.2 /usr/lib/libm3api.so.2.0.0 && \
+ln -snf libm3api.so.$api_version /usr/lib/libm3api.so
+Check
+
+cp -R include $optpath/ && \
+cp -R examples $optpath/
+Check
+
+cp -R samples $optpath/
+Check
+
+ln -snf ../../opt/XIMEA/include /usr/include/m3api
+Check
+
+echo
+echo Rebuilding linker cache
+echo /lib > /etc/ld.so.conf.d/000XIMEA.conf
+echo /usr/lib >> /etc/ld.so.conf.d/000XIMEA.conf
+ldconfig
+
+if [ "$gentl_enabled" == "1" ]; then
+	echo Installing GenTL libraries
+	rm -f $optpath/lib/lib{XIMEA,xiFapi}_GenTL.cti
+	cp libs/gentl/X$platform_bits/*.cti $optpath/lib/
+	Check
+fi
+
+if [ -e libs/xiapi_dng_store/X$platform_bits ]
+then
+	echo Installing xiapi_dng_store library
+	cp libs/xiapi_dng_store/X$platform_bits/libxiapi_dng_store.so $optpath/lib/
+	Check
+fi
+
+for py in python python2 python3
+do
+	if type $py &>/dev/null
+	then
+		py_ver="$($py -c "import sys; pyver=sys.version_info[0]; print(pyver)")"
+		if [ "$py_ver" -gt 2 ]
+		then
+			py_site_dir="$($py -c 'import site; print(site.getsitepackages()[0])')"
+		else
+			py_site_dir="$($py -c 'from distutils.sysconfig import get_python_lib; print(get_python_lib())')"
+		fi
+		if [ -n "$py_site_dir" ]
+		then
+			rm -Rf "$py_site_dir"/ximea
+			if [ "$py_ver" -gt 2 ]
+			then
+				echo "Installing python package version 3.x to $py_site_dir"
+				cp -R api/Python/v3/ximea "$py_site_dir"
+			else
+				echo "Installing python package version 2.x to $py_site_dir"
+				cp -R api/Python/v2/ximea "$py_site_dir"
+			fi
+		fi
+	fi
+done
+
+
+echo Installing xiSample
+cp bin/xiSample.$platform_bits $optpath/bin/xiSample
+Check
+
+if [ -e "bin/xiCOP.$platform_bits" ]
+then
+	echo "Installing xiCOP"
+	cp "bin/xiCOP.$platform_bits" "$optpath/bin/xiCOP"
+	Check
+	cp "data/fw_update_tools_map.xml" "$optpath/data/"
+	Check
+fi
+
+if [ "$this_is_arm" == "0" ]
+then
+	echo Installing streamViewer
+	
+	# disabled copying in order to quick fix issue 14963
+	#cp bin/streamViewer.$platform_bits $optpath/bin/streamViewer
+	#Check
+
+	if [ -d "$(eval echo ~$SUDO_USER/Desktop)" ]
+	then
+		echo Creating desktop link for streamViewer
+		newlauncher="$(eval echo ~$SUDO_USER/Desktop/streamViewer.desktop)"
+		echo "[Desktop Entry]" >$newlauncher
+		echo "Version=1.0" >>$newlauncher
+		echo "Type=Application" >>$newlauncher
+		echo "Terminal=false" >>$newlauncher
+		echo "Name=streamViewer" >>$newlauncher
+		echo "Exec=$optpath/bin/streamViewer" >>$newlauncher
+		chmod a+x $newlauncher
+		chown "$SUDO_USER": "$newlauncher"
+	fi
+fi
+
+if [ -e CamTool.$platform_bits ]
+then
+	echo Installing CamTool
+	libh264=libopenh264-1.4.0-linux"$platform_bits".so
+	# Remove files from previous versions since they can cause CamTool crashes
+	find "$optpath"/CamTool -mindepth 1 \! -name "$libh264" -delete
+	Check
+	cp bin/xiCamTool $optpath/bin/
+	Check
+	cp -R CamTool.$platform_bits/* $optpath/CamTool
+	Check
+	if [ "$this_is_arm" == "0" -a "$h264_enabled" == "1" -a ! -e "$optpath"/CamTool/"$libh264" ]
+	then
+		echo Downloading OpenH264 library
+		if type curl &>/dev/null
+		then
+			curl -fLo "$optpath"/CamTool/"$libh264".bz2 http://ciscobinary.openh264.org/"$libh264".bz2
+		elif type wget &>/dev/null
+		then
+			wget -O "$optpath"/CamTool/"$libh264".bz2 http://ciscobinary.openh264.org/"$libh264".bz2
+		else
+			false
+		fi && \
+		bunzip2 "$optpath"/CamTool/"$libh264".bz2 || echo "Failed"
+	fi
+	if [ "$this_is_arm" == "0" -a ! -e "$optpath"/CamTool/"$libh264" ]
+	then
+		echo "-------------------------------------"
+		echo "For instructions on how to enable H264 encoding support in xiCamTool, please see the following link:"
+		echo "http://www.ximea.com/support/wiki/allprod/XIMEA_CamTool_OpenH264_Library"
+		echo "-------------------------------------"
+	fi
+
+	if [ -d "$(eval echo ~$SUDO_USER/Desktop)" ]
+	then
+		echo Creating desktop link for xiCamTool
+		newlauncher="$(eval echo ~$SUDO_USER/Desktop/xiCamTool.desktop)"
+		echo "[Desktop Entry]" >$newlauncher
+		echo "Version=1.0" >>$newlauncher
+		echo "Type=Application" >>$newlauncher
+		echo "Terminal=false" >>$newlauncher
+		echo "Icon=$optpath/CamTool/icon.png" >>$newlauncher
+		echo "Name=xiCamTool" >>$newlauncher
+		echo "Exec=$optpath/bin/xiCamTool" >>$newlauncher
+		chmod a+x $newlauncher
+		chown "$SUDO_USER": "$newlauncher"
+	fi
+fi
+
+if [ "$udev_enabled" == "1" ]
+then
+	echo "-------------------------------------"
+	echo Note:
+	echo You may need to reconnect your USB and/or Firewire cameras
+	echo Also check that you are in the \"plugdev\" group
+	echo
+	echo More info:
+	echo http://www.ximea.com/support/wiki/apis/Linux_USB20_Support
+	echo "-------------------------------------"
+	echo
+fi
+echo "-------------------------------------"
+echo "Warning:"
+echo "Default memory usage limits of Linux kernel USB stack"
+echo "is too low for some cases (especially with >1 camera)."
+echo "To avoid issues you have to raise or disable that limit -"
+echo "add the following line to /etc/rc.local or analogous file:"
+echo "echo 0 > /sys/module/usbcore/parameters/usbfs_memory_mb"
+echo "or run the following command by hand after each boot:"
+echo "echo 0|sudo tee /sys/module/usbcore/parameters/usbfs_memory_mb"
+echo "-------------------------------------"
+sleep 5
+
+echo "-------------------------------------"
+if [ "$this_is_arm" == "0" ]
+then
+	echo "For GeniCam - please add \"export GENICAM_GENTL"$platform_bits"_PATH=$optpath/lib/\" to your ~/.bashrc to enable GenTL"
+fi
+echo "Now applications can be started. E.g. $optpath/bin/xiSample"
+echo "-------------------------------------"
+
+echo Done OK

@@ -1,0 +1,851 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mono Camera Polarized Algorithms &mdash; PolarizedSDK 1.1.5 documentation</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=e59714d7" />
+
+  
+      <script src="../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../_static/documentation_options.js?v=a48ae3df"></script>
+      <script src="../_static/doctools.js?v=9bcbadda"></script>
+      <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="C++ Examples" href="../C%2B%2BExamples.html" />
+    <link rel="prev" title="Library files" href="../Library.html" />
+    <link href="../_static/style.css" rel="stylesheet" type="text/css">
+
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            PolarizedSDK
+              <img src="../_static/PFlogo.png" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Modules</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../Introduction.html">Introduction</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../Library.html">Library files</a><ul class="current">
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Mono Camera Polarized Algorithms</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#color-camera-polarized-algorithms">Color Camera Polarized Algorithms</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#errors-and-definitions">Errors and Definitions</a><ul class="simple">
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../C%2B%2BExamples.html">C++ Examples</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">PolarizedSDK</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../Library.html">Library files</a></li>
+      <li class="breadcrumb-item active">Mono Camera Polarized Algorithms</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/Library/Library.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="mono-camera-polarized-algorithms">
+<span id="mono-algorithms"></span><h1>Mono Camera Polarized Algorithms<a class="headerlink" href="#mono-camera-polarized-algorithms" title="Link to this heading"></a></h1>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-functions">Functions</p>
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv420pfcAllocateImage_u168uint16_t8uint16_t">
+<span id="_CPPv320pfcAllocateImage_u168uint16_t8uint16_t"></span><span id="_CPPv220pfcAllocateImage_u168uint16_t8uint16_t"></span><span id="pfcAllocateImage_u16__uint16_t.uint16_t"></span><span class="target" id="pfc_polarized_algorithms_8h_1a3e4a5f6ddd9952b31e55411e14c3894e"></span><span class="pre">PFPOLCLIB_EXPORT</span><span class="w"> </span><span class="n"><span class="pre">uint16_t</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">pfcAllocateImage_u16</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">uint16_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">m_originalImageWidth</span></span>, <span class="n"><span class="pre">uint16_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">m_originalImageHeight</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv420pfcAllocateImage_u168uint16_t8uint16_t" title="Link to this definition"></a><br /></dt>
+<dd><p>Allocates a buffer to store a raw polarized image of size m_originalImageWidth*m_originalImageHeight. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>m_originalImageWidth</strong> – <strong>[in]</strong> Width of the original image </p></li>
+<li><p><strong>m_originalImageHeight</strong> – <strong>[in]</strong> Height of the original image</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>Pointer to the allocated buffer </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv419pfcAllocateImage_u88uint16_t8uint16_t">
+<span id="_CPPv319pfcAllocateImage_u88uint16_t8uint16_t"></span><span id="_CPPv219pfcAllocateImage_u88uint16_t8uint16_t"></span><span id="pfcAllocateImage_u8__uint16_t.uint16_t"></span><span class="target" id="pfc_polarized_algorithms_8h_1a78ad9a675b468e8fb953c76d3fe30679"></span><span class="pre">PFPOLCLIB_EXPORT</span><span class="w"> </span><span class="n"><span class="pre">uint8_t</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">pfcAllocateImage_u8</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">uint16_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">m_originalImageWidth</span></span>, <span class="n"><span class="pre">uint16_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">m_originalImageHeight</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv419pfcAllocateImage_u88uint16_t8uint16_t" title="Link to this definition"></a><br /></dt>
+<dd><p>Allocates a buffer to store a raw polarized image of size m_originalImageWidth*m_originalImageHeight. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>m_originalImageWidth</strong> – <strong>[in]</strong> Width of the original image </p></li>
+<li><p><strong>m_originalImageHeight</strong> – <strong>[in]</strong> Height of the original image</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>Pointer to the allocated buffer </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv423pfcConvertAOLPDOLPToHSVPK8uint16_tPK8uint16_tP7uint8_t6size_t6size_t11pfPixelType18pfColorImageFormat">
+<span id="_CPPv323pfcConvertAOLPDOLPToHSVPK8uint16_tPK8uint16_tP7uint8_t6size_t6size_t11pfPixelType18pfColorImageFormat"></span><span id="_CPPv223pfcConvertAOLPDOLPToHSVPK8uint16_tPK8uint16_tP7uint8_t6size_t6size_t11pfPixelType18pfColorImageFormat"></span><span id="pfcConvertAOLPDOLPToHSV__uint16_tCP.uint16_tCP.uint8_tP.s.s.pfPixelType.pfColorImageFormat"></span><span class="target" id="pfc_polarized_algorithms_8h_1a762e30b33137e31f05d5ca3ff9c745d9"></span><span class="pre">PFPOLCLIB_EXPORT</span><span class="w"> </span><span class="n"><span class="pre">int32_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">pfcConvertAOLPDOLPToHSV</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">uint16_t</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">aolp</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">uint16_t</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">dolp</span></span>, <span class="n"><span class="pre">uint8_t</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">result</span></span>, <span class="n"><span class="pre">size_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">width</span></span>, <span class="n"><span class="pre">size_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">height</span></span>, <span class="n"><span class="pre">pfPixelType</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">pixelType</span></span>, <a class="reference internal" href="#_CPPv418pfColorImageFormat" title="pfColorImageFormat"><span class="n"><span class="pre">pfColorImageFormat</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">format</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="n"><span class="pre">BGR</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv423pfcConvertAOLPDOLPToHSVPK8uint16_tPK8uint16_tP7uint8_t6size_t6size_t11pfPixelType18pfColorImageFormat" title="Link to this definition"></a><br /></dt>
+<dd><p>Fuses an AOLP and DOLP image into its HSV representation. </p>
+<p>AOLP being the hue and DOLP being the saturation. in case DOLP is a nullptr, saturation is set to 1.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>aolp</strong> – <strong>[in]</strong> AOLP </p></li>
+<li><p><strong>dolp</strong> – <strong>[in]</strong> DOLP, may be null </p></li>
+<li><p><strong>result</strong> – <strong>[out]</strong> Output buffer containing the AOLP RGB image (width x height * 3) </p></li>
+<li><p><strong>width</strong> – <strong>[in]</strong> Width of the original image </p></li>
+<li><p><strong>height</strong> – <strong>[in]</strong> Height of the original image </p></li>
+<li><p><strong>pixelType</strong> – <strong>[in]</strong> Sets if pixel is MONO8, MONO10, MONO12 or MONO16 </p></li>
+<li><p><strong>format</strong> – <strong>[in]</strong> Color format of the output image </p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv416pfcFreeImage_u16P8uint16_t8uint16_t8uint16_t">
+<span id="_CPPv316pfcFreeImage_u16P8uint16_t8uint16_t8uint16_t"></span><span id="_CPPv216pfcFreeImage_u16P8uint16_t8uint16_t8uint16_t"></span><span id="pfcFreeImage_u16__uint16_tP.uint16_t.uint16_t"></span><span class="target" id="pfc_polarized_algorithms_8h_1ab23dca63084fb9959dbb236251fb9172"></span><span class="pre">PFPOLCLIB_EXPORT</span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">pfcFreeImage_u16</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">uint16_t</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">p</span></span>, <span class="n"><span class="pre">uint16_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">m_originalImageWidth</span></span>, <span class="n"><span class="pre">uint16_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">m_originalImageHeight</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv416pfcFreeImage_u16P8uint16_t8uint16_t8uint16_t" title="Link to this definition"></a><br /></dt>
+<dd><p>Deallocate a buffer previously allocated with pfcAllocateImage_u16. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>p</strong> – <strong>[in]</strong> Pointer of a buffer allocated with pfcAllocateImage_u16 </p></li>
+<li><p><strong>m_originalImageWidth</strong> – <strong>[in]</strong> Width of the original image </p></li>
+<li><p><strong>m_originalImageHeight</strong> – <strong>[in]</strong> Height of the original image </p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv415pfcFreeImage_u8P7uint8_t8uint16_t8uint16_t">
+<span id="_CPPv315pfcFreeImage_u8P7uint8_t8uint16_t8uint16_t"></span><span id="_CPPv215pfcFreeImage_u8P7uint8_t8uint16_t8uint16_t"></span><span id="pfcFreeImage_u8__uint8_tP.uint16_t.uint16_t"></span><span class="target" id="pfc_polarized_algorithms_8h_1adf1de724c5d93b1372bb85cf8b8fd1d7"></span><span class="pre">PFPOLCLIB_EXPORT</span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">pfcFreeImage_u8</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">uint8_t</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">p</span></span>, <span class="n"><span class="pre">uint16_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">m_originalImageWidth</span></span>, <span class="n"><span class="pre">uint16_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">m_originalImageHeight</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv415pfcFreeImage_u8P7uint8_t8uint16_t8uint16_t" title="Link to this definition"></a><br /></dt>
+<dd><p>Deallocate a buffer previously allocated with pfcAllocateImage_u8. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>p</strong> – <strong>[in]</strong> Pointer of a buffer allocated with pfcAllocateImage_u8 </p></li>
+<li><p><strong>m_originalImageWidth</strong> – <strong>[in]</strong> Width of the original image </p></li>
+<li><p><strong>m_originalImageHeight</strong> – <strong>[in]</strong> Height of the original image </p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv425pfcGenerateAngleImage_u16P8uint16_tP8uint16_t8uint16_t8uint16_t8uint16_t">
+<span id="_CPPv325pfcGenerateAngleImage_u16P8uint16_tP8uint16_t8uint16_t8uint16_t8uint16_t"></span><span id="_CPPv225pfcGenerateAngleImage_u16P8uint16_tP8uint16_t8uint16_t8uint16_t8uint16_t"></span><span id="pfcGenerateAngleImage_u16__uint16_tP.uint16_tP.uint16_t.uint16_t.uint16_t"></span><span class="target" id="pfc_polarized_algorithms_8h_1ab5e23fcbbfde57ad638c9a04904fb594"></span><span class="pre">PFPOLCLIB_EXPORT</span><span class="w"> </span><span class="n"><span class="pre">int32_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">pfcGenerateAngleImage_u16</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">uint16_t</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">target</span></span>, <span class="n"><span class="pre">uint16_t</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">result</span></span>, <span class="n"><span class="pre">uint16_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">m_originalImageWidth</span></span>, <span class="n"><span class="pre">uint16_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">m_originalImageHeight</span></span>, <span class="n"><span class="pre">uint16_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">angle</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv425pfcGenerateAngleImage_u16P8uint16_tP8uint16_t8uint16_t8uint16_t8uint16_t" title="Link to this definition"></a><br /></dt>
+<dd><p>Generates a (width x height) image of the selected angle for MONO camera. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>target</strong> – <strong>[in]</strong> Original image buffer with a 2x2 pattern containing 90_45_135_0 polarization angles </p></li>
+<li><p><strong>m_originalImageWidth</strong> – <strong>[in]</strong> Width of the original image </p></li>
+<li><p><strong>m_originalImageHeight</strong> – <strong>[in]</strong> Height of the original image </p></li>
+<li><p><strong>angle</strong> – <strong>[in]</strong> Selected angle {deg_0, deg_45, deg_90, deg_135}</p></li>
+<li><p><strong>result</strong> – <strong>[out]</strong> Buffer containing output image (width x height) </p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv425pfcGenerateAnglesGrid_u16P8uint16_tP8uint16_t8uint16_t8uint16_t">
+<span id="_CPPv325pfcGenerateAnglesGrid_u16P8uint16_tP8uint16_t8uint16_t8uint16_t"></span><span id="_CPPv225pfcGenerateAnglesGrid_u16P8uint16_tP8uint16_t8uint16_t8uint16_t"></span><span id="pfcGenerateAnglesGrid_u16__uint16_tP.uint16_tP.uint16_t.uint16_t"></span><span class="target" id="pfc_polarized_algorithms_8h_1af6171df11ca097ad628fee6f060eb9c4"></span><span class="pre">PFPOLCLIB_EXPORT</span><span class="w"> </span><span class="n"><span class="pre">int32_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">pfcGenerateAnglesGrid_u16</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">uint16_t</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">target</span></span>, <span class="n"><span class="pre">uint16_t</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">result</span></span>, <span class="n"><span class="pre">uint16_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">m_originalImageWidth</span></span>, <span class="n"><span class="pre">uint16_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">m_originalImageHeight</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv425pfcGenerateAnglesGrid_u16P8uint16_tP8uint16_t8uint16_t8uint16_t" title="Link to this definition"></a><br /></dt>
+<dd><p>Generates a (2*width x 2*height) image containing all the polarization angles (each angle is located in a corner of the image) for MONO camera. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>target</strong> – <strong>[in]</strong> Original image buffer with a 2x2 pattern containing 90_45_135_0 polarization angles </p></li>
+<li><p><strong>m_originalImageWidth</strong> – <strong>[in]</strong> Width of the original image </p></li>
+<li><p><strong>m_originalImageHeight</strong> – <strong>[in]</strong> Height of the original image</p></li>
+<li><p><strong>result</strong> – <strong>[out]</strong> Buffer containing output image (4*width x 4*height) </p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv427pfcGenerateAOLP_HSVImage_u8P8uint16_tP7uint8_t8uint16_t8uint16_t11pfPixelType">
+<span id="_CPPv327pfcGenerateAOLP_HSVImage_u8P8uint16_tP7uint8_t8uint16_t8uint16_t11pfPixelType"></span><span id="_CPPv227pfcGenerateAOLP_HSVImage_u8P8uint16_tP7uint8_t8uint16_t8uint16_t11pfPixelType"></span><span id="pfcGenerateAOLP_HSVImage_u8__uint16_tP.uint8_tP.uint16_t.uint16_t.pfPixelType"></span><span class="target" id="pfc_polarized_algorithms_8h_1ac767f58fdff21c8e8b8e713a4da9be19"></span><span class="pre">PFPOLCLIB_EXPORT</span><span class="w"> </span><span class="n"><span class="pre">int32_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">pfcGenerateAOLP_HSVImage_u8</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">uint16_t</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">target</span></span>, <span class="n"><span class="pre">uint8_t</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">result</span></span>, <span class="n"><span class="pre">uint16_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">m_originalImageWidth</span></span>, <span class="n"><span class="pre">uint16_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">m_originalImageHeight</span></span>, <span class="n"><span class="pre">pfPixelType</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">pixelType</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv427pfcGenerateAOLP_HSVImage_u8P8uint16_tP7uint8_t8uint16_t8uint16_t11pfPixelType" title="Link to this definition"></a><br /></dt>
+<dd><p>Computes a (width*height) RGB image that contains AOLP information for MONO camera. </p>
+<p>Generates an AOLP image and treats AOLP as hue.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>target</strong> – <strong>[in]</strong> Original image buffer with a 2x2 pattern containing 90_45_135_0 polarization angles </p></li>
+<li><p><strong>m_originalImageWidth</strong> – <strong>[in]</strong> Width of the original image </p></li>
+<li><p><strong>m_originalImageHeight</strong> – <strong>[in]</strong> Height of the original image</p></li>
+<li><p><strong>result</strong> – <strong>[out]</strong> Output buffer containing the AOLP RGB image (width x height * 3) </p></li>
+<li><p><strong>pixelType</strong> – <strong>[in]</strong> Sets if pixel is MONO8, MONO10, MONO12 or MONO16 </p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv427pfcGenerateAOLPDOLPImage_u8P8uint16_tP7uint8_t8uint16_t8uint16_t11pfPixelType">
+<span id="_CPPv327pfcGenerateAOLPDOLPImage_u8P8uint16_tP7uint8_t8uint16_t8uint16_t11pfPixelType"></span><span id="_CPPv227pfcGenerateAOLPDOLPImage_u8P8uint16_tP7uint8_t8uint16_t8uint16_t11pfPixelType"></span><span id="pfcGenerateAOLPDOLPImage_u8__uint16_tP.uint8_tP.uint16_t.uint16_t.pfPixelType"></span><span class="target" id="pfc_polarized_algorithms_8h_1aa8b44506ffe1755ea9dac7a75458d250"></span><span class="pre">PFPOLCLIB_EXPORT</span><span class="w"> </span><span class="n"><span class="pre">int32_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">pfcGenerateAOLPDOLPImage_u8</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">uint16_t</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">target</span></span>, <span class="n"><span class="pre">uint8_t</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">result</span></span>, <span class="n"><span class="pre">uint16_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">m_originalImageWidth</span></span>, <span class="n"><span class="pre">uint16_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">m_originalImageHeight</span></span>, <span class="n"><span class="pre">pfPixelType</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">pixelType</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv427pfcGenerateAOLPDOLPImage_u8P8uint16_tP7uint8_t8uint16_t8uint16_t11pfPixelType" title="Link to this definition"></a><br /></dt>
+<dd><p>Computes a (width*height) RGB image that contains both DOLP and AOLP information for MONO camera. </p>
+<p>Generates a DOLP and AOLP image and then treats AOLP as hue and DOLP as saturation.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>target</strong> – <strong>[in]</strong> Original image buffer with a 2x2 pattern containing 90_45_135_0 polarization angles </p></li>
+<li><p><strong>m_originalImageWidth</strong> – <strong>[in]</strong> Width of the original image </p></li>
+<li><p><strong>m_originalImageHeight</strong> – <strong>[in]</strong> Height of the original image </p></li>
+<li><p><strong>result</strong> – <strong>[out]</strong> Output buffer containing the DOLPAOLP RGB image (width x height * 3) </p></li>
+<li><p><strong>pixelType</strong> – <strong>[in]</strong> Sets if pixel is MONO8, MONO10, MONO12 or MONO16 </p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv424pfcGenerateAOLPImage_u16P8uint16_tP8uint16_t8uint16_t8uint16_t11pfPixelType">
+<span id="_CPPv324pfcGenerateAOLPImage_u16P8uint16_tP8uint16_t8uint16_t8uint16_t11pfPixelType"></span><span id="_CPPv224pfcGenerateAOLPImage_u16P8uint16_tP8uint16_t8uint16_t8uint16_t11pfPixelType"></span><span id="pfcGenerateAOLPImage_u16__uint16_tP.uint16_tP.uint16_t.uint16_t.pfPixelType"></span><span class="target" id="pfc_polarized_algorithms_8h_1ab36c458790b0c4742fb057cdfaf6576e"></span><span class="pre">PFPOLCLIB_EXPORT</span><span class="w"> </span><span class="n"><span class="pre">int32_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">pfcGenerateAOLPImage_u16</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">uint16_t</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">target</span></span>, <span class="n"><span class="pre">uint16_t</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">result</span></span>, <span class="n"><span class="pre">uint16_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">m_originalImageWidth</span></span>, <span class="n"><span class="pre">uint16_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">m_originalImageHeight</span></span>, <span class="n"><span class="pre">pfPixelType</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">pixelType</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv424pfcGenerateAOLPImage_u16P8uint16_tP8uint16_t8uint16_t8uint16_t11pfPixelType" title="Link to this definition"></a><br /></dt>
+<dd><p>Computes Angle of Linear Polarization (AOLP) of the input image based on the four polarization angles, and outputs an interpolated (width*height) image for MONO camera. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>target</strong> – <strong>[in]</strong> Original image buffer with a 2x2 pattern containing 90_45_135_0 polarization angles </p></li>
+<li><p><strong>m_originalImageWidth</strong> – <strong>[in]</strong> Width of the original image </p></li>
+<li><p><strong>m_originalImageHeight</strong> – <strong>[in]</strong> Height of the original image</p></li>
+<li><p><strong>result</strong> – <strong>[out]</strong> Output buffer containing the AOLP image (width x height) </p></li>
+<li><p><strong>pixelType</strong> – <strong>[in]</strong> Sets if pixel is MONO8, MONO10, MONO12 or MONO16 </p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv424pfcGenerateDOLPImage_u16P8uint16_tP8uint16_t8uint16_t8uint16_tff11pfPixelType">
+<span id="_CPPv324pfcGenerateDOLPImage_u16P8uint16_tP8uint16_t8uint16_t8uint16_tff11pfPixelType"></span><span id="_CPPv224pfcGenerateDOLPImage_u16P8uint16_tP8uint16_t8uint16_t8uint16_tff11pfPixelType"></span><span id="pfcGenerateDOLPImage_u16__uint16_tP.uint16_tP.uint16_t.uint16_t.float.float.pfPixelType"></span><span class="target" id="pfc_polarized_algorithms_8h_1a773a78b7aa6df7445c68fc749f90dadb"></span><span class="pre">PFPOLCLIB_EXPORT</span><span class="w"> </span><span class="n"><span class="pre">int32_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">pfcGenerateDOLPImage_u16</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">uint16_t</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">target</span></span>, <span class="n"><span class="pre">uint16_t</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">result</span></span>, <span class="n"><span class="pre">uint16_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">m_originalImageWidth</span></span>, <span class="n"><span class="pre">uint16_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">m_originalImageHeight</span></span>, <span class="kt"><span class="pre">float</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">start_range</span></span>, <span class="kt"><span class="pre">float</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">end_range</span></span>, <span class="n"><span class="pre">pfPixelType</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">pixelType</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv424pfcGenerateDOLPImage_u16P8uint16_tP8uint16_t8uint16_t8uint16_tff11pfPixelType" title="Link to this definition"></a><br /></dt>
+<dd><p>Computes Degree of Linear Polarization (DOLP) of the input image and outputs a (width*height) image for MONO camera. </p>
+<p>If DOLP is out of a certain range (defined by input parameters stard_range, end_range), its value is automatically set to format max value (for instance, for Mono8 images pixel is set to 255). Pixels out of range will then appear as white pixels.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>target</strong> – <strong>[in]</strong> Original image buffer with a 2x2 pattern containing 90_45_135_0 polarization angles </p></li>
+<li><p><strong>m_originalImageWidth</strong> – <strong>[in]</strong> Width of the original image </p></li>
+<li><p><strong>m_originalImageHeight</strong> – <strong>[in]</strong> Height of the original image </p></li>
+<li><p><strong>start_range</strong> – <strong>[in]</strong> Defines the beggining of the relative range of valid values (start_range*max_format_val). </p></li>
+<li><p><strong>end_range</strong> – <strong>[in]</strong> Defines the end of the relative range of valid values (end_range*max_format_val).</p></li>
+<li><p><strong>result</strong> – <strong>[out]</strong> Output buffer containing the DOLP image (width x height) </p></li>
+<li><p><strong>pixelType</strong> – <strong>[in]</strong> Sets if pixel is MONO8, MONO10, MONO12 or MONO16 </p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv432pfcGenerateVirtualAngleImage_u16P8uint16_tP8uint16_t8uint16_t8uint16_t8uint16_t">
+<span id="_CPPv332pfcGenerateVirtualAngleImage_u16P8uint16_tP8uint16_t8uint16_t8uint16_t8uint16_t"></span><span id="_CPPv232pfcGenerateVirtualAngleImage_u16P8uint16_tP8uint16_t8uint16_t8uint16_t8uint16_t"></span><span id="pfcGenerateVirtualAngleImage_u16__uint16_tP.uint16_tP.uint16_t.uint16_t.uint16_t"></span><span class="target" id="pfc_polarized_algorithms_8h_1adaa0202cc70f5eeabe6bd7e27858889a"></span><span class="pre">PFPOLCLIB_EXPORT</span><span class="w"> </span><span class="n"><span class="pre">int32_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">pfcGenerateVirtualAngleImage_u16</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">uint16_t</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">target</span></span>, <span class="n"><span class="pre">uint16_t</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">result</span></span>, <span class="n"><span class="pre">uint16_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">m_originalImageWidth</span></span>, <span class="n"><span class="pre">uint16_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">m_originalImageHeight</span></span>, <span class="n"><span class="pre">uint16_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">angledegree</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv432pfcGenerateVirtualAngleImage_u16P8uint16_tP8uint16_t8uint16_t8uint16_t8uint16_t" title="Link to this definition"></a><br /></dt>
+<dd><p>Generates a virtual angle mono image (0 - 180 degrees) for MONO camera. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>target</strong> – <strong>[in]</strong> Original image buffer with a 2x2 pattern containing 90_45_135_0 polarization angles </p></li>
+<li><p><strong>m_originalImageWidth</strong> – <strong>[in]</strong> Width of the original image </p></li>
+<li><p><strong>m_originalImageHeight</strong> – <strong>[in]</strong> Height of the original image </p></li>
+<li><p><strong>angledegree</strong> – <strong>[in]</strong> Angle of the desired virtual angle (0 - 180)</p></li>
+<li><p><strong>result</strong> – <strong>[out]</strong> Buffer containing the output image at an estimated virtual polarization angle </p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv415pfcReadRawImageP8uint16_tPKc8uint16_t8uint16_t11pfPixelType">
+<span id="_CPPv315pfcReadRawImageP8uint16_tPKc8uint16_t8uint16_t11pfPixelType"></span><span id="_CPPv215pfcReadRawImageP8uint16_tPKc8uint16_t8uint16_t11pfPixelType"></span><span id="pfcReadRawImage__uint16_tP.cCP.uint16_t.uint16_t.pfPixelType"></span><span class="target" id="pfc_polarized_algorithms_8h_1a1e5b6a2f6b60912e7835b08af3bcaf19"></span><span class="pre">PFPOLCLIB_EXPORT</span><span class="w"> </span><span class="n"><span class="pre">int32_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">pfcReadRawImage</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">uint16_t</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">target</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">char</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">fullpath</span></span>, <span class="n"><span class="pre">uint16_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">m_originalImageWidth</span></span>, <span class="n"><span class="pre">uint16_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">m_originalImageHeight</span></span>, <span class="n"><span class="pre">pfPixelType</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">m_pixelType</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv415pfcReadRawImageP8uint16_tPKc8uint16_t8uint16_t11pfPixelType" title="Link to this definition"></a><br /></dt>
+<dd><p>Reads .raw image from path and stores it in target buffer. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>fullpath</strong> – <strong>[in]</strong> Path to input raw image </p></li>
+<li><p><strong>m_originalImageWidth</strong> – <strong>[in]</strong> Width of the original image </p></li>
+<li><p><strong>m_originalImageHeight</strong> – <strong>[in]</strong> Height of the original image </p></li>
+<li><p><strong>m_pixelType</strong> – <strong>[in]</strong> Sets if pixel is MONO8, MONO10 or MONO12 (only MONO8 supported in this version)</p></li>
+<li><p><strong>target</strong> – <strong>[out]</strong> Buffer containing read image (width x height) </p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv429pfcSavePolarizedColorPngImageP7uint8_t8uint16_t8uint16_tPKcPKc">
+<span id="_CPPv329pfcSavePolarizedColorPngImageP7uint8_t8uint16_t8uint16_tPKcPKc"></span><span id="_CPPv229pfcSavePolarizedColorPngImageP7uint8_t8uint16_t8uint16_tPKcPKc"></span><span id="pfcSavePolarizedColorPngImage__uint8_tP.uint16_t.uint16_t.cCP.cCP"></span><span class="target" id="pfc_polarized_algorithms_8h_1ac9cac8fe919f9f84fb337bac3fd53408"></span><span class="pre">PFPOLCLIB_EXPORT</span><span class="w"> </span><span class="n"><span class="pre">int32_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">pfcSavePolarizedColorPngImage</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">uint8_t</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">inputRGBBuffer</span></span>, <span class="n"><span class="pre">uint16_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">m_angleWidth</span></span>, <span class="n"><span class="pre">uint16_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">m_angleHeight</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">char</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">path</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">char</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">filename</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv429pfcSavePolarizedColorPngImageP7uint8_t8uint16_t8uint16_tPKcPKc" title="Link to this definition"></a><br /></dt>
+<dd><p>Saves a color Png image in disk. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>inputRGBBuffer</strong> – <strong>[in]</strong> Buffer containing the RGB image to be written to disk </p></li>
+<li><p><strong>m_angleWidth</strong> – <strong>[in]</strong> Width of the output image </p></li>
+<li><p><strong>m_angleHeight</strong> – <strong>[in]</strong> Height of the output image </p></li>
+<li><p><strong>path</strong> – <strong>[in]</strong> Path to output destination </p></li>
+<li><p><strong>filename</strong> – <strong>[in]</strong> Output file name </p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv424pfcSavePolarizedPngImageP8uint16_t8uint16_t8uint16_tPKcPKc11pfPixelType">
+<span id="_CPPv324pfcSavePolarizedPngImageP8uint16_t8uint16_t8uint16_tPKcPKc11pfPixelType"></span><span id="_CPPv224pfcSavePolarizedPngImageP8uint16_t8uint16_t8uint16_tPKcPKc11pfPixelType"></span><span id="pfcSavePolarizedPngImage__uint16_tP.uint16_t.uint16_t.cCP.cCP.pfPixelType"></span><span class="target" id="pfc_polarized_algorithms_8h_1a63ad4e67d626e03606614825d7e80647"></span><span class="pre">PFPOLCLIB_EXPORT</span><span class="w"> </span><span class="n"><span class="pre">int32_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">pfcSavePolarizedPngImage</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">uint16_t</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">inputBuffer</span></span>, <span class="n"><span class="pre">uint16_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">m_angleWidth</span></span>, <span class="n"><span class="pre">uint16_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">m_angleHeight</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">char</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">path</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">char</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">filename</span></span>, <span class="n"><span class="pre">pfPixelType</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">m_pixelType</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv424pfcSavePolarizedPngImageP8uint16_t8uint16_t8uint16_tPKcPKc11pfPixelType" title="Link to this definition"></a><br /></dt>
+<dd><p>Saves Png image in disk. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>inputBuffer</strong> – <strong>[in]</strong> Buffer containing the image to be written to disk </p></li>
+<li><p><strong>m_angleWidth</strong> – <strong>[in]</strong> Width of the output image </p></li>
+<li><p><strong>m_angleHeight</strong> – <strong>[in]</strong> Height of the output image </p></li>
+<li><p><strong>path</strong> – <strong>[in]</strong> Path to output destination </p></li>
+<li><p><strong>filename</strong> – <strong>[in]</strong> Output file name </p></li>
+<li><p><strong>m_pixelType</strong> – <strong>[in]</strong> Sets if pixel is MONO8, MONO10, MONO12 or MONO16 </p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv424pfcSavePolarizedRawImageP8uint16_t8uint16_t8uint16_tPKcPKc11pfPixelType">
+<span id="_CPPv324pfcSavePolarizedRawImageP8uint16_t8uint16_t8uint16_tPKcPKc11pfPixelType"></span><span id="_CPPv224pfcSavePolarizedRawImageP8uint16_t8uint16_t8uint16_tPKcPKc11pfPixelType"></span><span id="pfcSavePolarizedRawImage__uint16_tP.uint16_t.uint16_t.cCP.cCP.pfPixelType"></span><span class="target" id="pfc_polarized_algorithms_8h_1a4673cb099c8b433c04df77d68f6018ab"></span><span class="pre">PFPOLCLIB_EXPORT</span><span class="w"> </span><span class="n"><span class="pre">int32_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">pfcSavePolarizedRawImage</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">uint16_t</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">inputBuffer</span></span>, <span class="n"><span class="pre">uint16_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">m_angleWidth</span></span>, <span class="n"><span class="pre">uint16_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">m_angleHeight</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">char</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">path</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">char</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">filename</span></span>, <span class="n"><span class="pre">pfPixelType</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">m_pixelType</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv424pfcSavePolarizedRawImageP8uint16_t8uint16_t8uint16_tPKcPKc11pfPixelType" title="Link to this definition"></a><br /></dt>
+<dd><p>Saves raw image in disk. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>inputBuffer</strong> – <strong>[in]</strong> Buffer containing the image to be written to disk </p></li>
+<li><p><strong>m_angleWidth</strong> – <strong>[in]</strong> Width of the output image </p></li>
+<li><p><strong>m_angleHeight</strong> – <strong>[in]</strong> Height of the output image </p></li>
+<li><p><strong>path</strong> – <strong>[in]</strong> Path to output destination </p></li>
+<li><p><strong>filename</strong> – <strong>[in]</strong> Output file name </p></li>
+<li><p><strong>m_pixelType</strong> – <strong>[in]</strong> Sets if pixel is MONO8, MONO10, MONO12 or MONO16 </p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+</section>
+<section id="color-camera-polarized-algorithms">
+<span id="color-algorithms"></span><h1>Color Camera Polarized Algorithms<a class="headerlink" href="#color-camera-polarized-algorithms" title="Link to this heading"></a></h1>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-functions">Functions</p>
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv425pfcAllocateColorImage_u168uint16_t8uint16_t">
+<span id="_CPPv325pfcAllocateColorImage_u168uint16_t8uint16_t"></span><span id="_CPPv225pfcAllocateColorImage_u168uint16_t8uint16_t"></span><span id="pfcAllocateColorImage_u16__uint16_t.uint16_t"></span><span class="target" id="pfc_polarized_color_algorithms_8h_1abf35d00ca116add1a544c755ae6d6eff"></span><span class="pre">PFPOLCLIB_EXPORT</span><span class="w"> </span><span class="n"><span class="pre">uint16_t</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">pfcAllocateColorImage_u16</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">uint16_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">m_originalImageWidth</span></span>, <span class="n"><span class="pre">uint16_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">m_originalImageHeight</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv425pfcAllocateColorImage_u168uint16_t8uint16_t" title="Link to this definition"></a><br /></dt>
+<dd><p>Allocates a buffer to store a raw polarized image of size m_originalImageWidth*m_originalImageHeight. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>m_originalImageWidth</strong> – <strong>[in]</strong> Width of the original image </p></li>
+<li><p><strong>m_originalImageHeight</strong> – <strong>[in]</strong> Height of the original image</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>Pointer to the allocated buffer </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv424pfcAllocateColorImage_u88uint16_t8uint16_t">
+<span id="_CPPv324pfcAllocateColorImage_u88uint16_t8uint16_t"></span><span id="_CPPv224pfcAllocateColorImage_u88uint16_t8uint16_t"></span><span id="pfcAllocateColorImage_u8__uint16_t.uint16_t"></span><span class="target" id="pfc_polarized_color_algorithms_8h_1a6af26aa02cf5a0ece04c3e8209c5a2c3"></span><span class="pre">PFPOLCLIB_EXPORT</span><span class="w"> </span><span class="n"><span class="pre">uint8_t</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">pfcAllocateColorImage_u8</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">uint16_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">m_originalImageWidth</span></span>, <span class="n"><span class="pre">uint16_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">m_originalImageHeight</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv424pfcAllocateColorImage_u88uint16_t8uint16_t" title="Link to this definition"></a><br /></dt>
+<dd><p>Allocates a buffer to store a raw polarized image of size m_originalImageWidth*m_originalImageHeight. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>m_originalImageWidth</strong> – <strong>[in]</strong> Width of the original image </p></li>
+<li><p><strong>m_originalImageHeight</strong> – <strong>[in]</strong> Height of the original image</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>Pointer to the allocated buffer </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv425pfcAllocatePolarizedImagePPPPP8uint16_t8uint16_t8uint16_t">
+<span id="_CPPv325pfcAllocatePolarizedImagePPPPP8uint16_t8uint16_t8uint16_t"></span><span id="_CPPv225pfcAllocatePolarizedImagePPPPP8uint16_t8uint16_t8uint16_t"></span><span id="pfcAllocatePolarizedImage__uint16_tPPPPP.uint16_t.uint16_t"></span><span class="target" id="pfc_polarized_color_algorithms_8h_1a79ae5a478076d37af4a1c5083256c4c4"></span><span class="pre">PFPOLCLIB_EXPORT</span><span class="w"> </span><span class="n"><span class="pre">int32_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">pfcAllocatePolarizedImage</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">uint16_t</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="p"><span class="pre">*</span></span><span class="p"><span class="pre">*</span></span><span class="p"><span class="pre">*</span></span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">o_ppppp</span></span>, <span class="n"><span class="pre">uint16_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">m_originalImageWidth</span></span>, <span class="n"><span class="pre">uint16_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">m_originalImageHeight</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv425pfcAllocatePolarizedImagePPPPP8uint16_t8uint16_t8uint16_t" title="Link to this definition"></a><br /></dt>
+<dd><p>Allocates a polarized image with format pppp_image[angle][color][row][col]. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>m_originalImageWidth</strong> – <strong>[in]</strong> Width of the original image </p></li>
+<li><p><strong>m_originalImageHeight</strong> – <strong>[in]</strong> Height of the original image</p></li>
+<li><p><strong>o_ppppp</strong> – <strong>[out]</strong> Pointer to polarized image </p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv421pfcFreeColorImage_u16P8uint16_t8uint16_t8uint16_t">
+<span id="_CPPv321pfcFreeColorImage_u16P8uint16_t8uint16_t8uint16_t"></span><span id="_CPPv221pfcFreeColorImage_u16P8uint16_t8uint16_t8uint16_t"></span><span id="pfcFreeColorImage_u16__uint16_tP.uint16_t.uint16_t"></span><span class="target" id="pfc_polarized_color_algorithms_8h_1a4ceebf045be14539531184f06be54f63"></span><span class="pre">PFPOLCLIB_EXPORT</span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">pfcFreeColorImage_u16</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">uint16_t</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">p</span></span>, <span class="n"><span class="pre">uint16_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">m_originalImageWidth</span></span>, <span class="n"><span class="pre">uint16_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">m_originalImageHeight</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv421pfcFreeColorImage_u16P8uint16_t8uint16_t8uint16_t" title="Link to this definition"></a><br /></dt>
+<dd><p>Deallocate a buffer previously allocated with pfcAllocateImage_u16. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>p</strong> – <strong>[in]</strong> Pointer of a buffer allocated with pfcAllocateColorImage_u8 </p></li>
+<li><p><strong>m_originalImageWidth</strong> – <strong>[in]</strong> Width of the original image </p></li>
+<li><p><strong>m_originalImageHeight</strong> – <strong>[in]</strong> Height of the original image </p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv420pfcFreeColorImage_u8P7uint8_t8uint16_t8uint16_t">
+<span id="_CPPv320pfcFreeColorImage_u8P7uint8_t8uint16_t8uint16_t"></span><span id="_CPPv220pfcFreeColorImage_u8P7uint8_t8uint16_t8uint16_t"></span><span id="pfcFreeColorImage_u8__uint8_tP.uint16_t.uint16_t"></span><span class="target" id="pfc_polarized_color_algorithms_8h_1aeda8e1801d78f4fa3771be054df1ad0a"></span><span class="pre">PFPOLCLIB_EXPORT</span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">pfcFreeColorImage_u8</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">uint8_t</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">p</span></span>, <span class="n"><span class="pre">uint16_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">m_originalImageWidth</span></span>, <span class="n"><span class="pre">uint16_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">m_originalImageHeight</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv420pfcFreeColorImage_u8P7uint8_t8uint16_t8uint16_t" title="Link to this definition"></a><br /></dt>
+<dd><p>Deallocate a buffer previously allocated with pfcAllocateImage_u8. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>p</strong> – <strong>[in]</strong> Pointer of a buffer allocated with pfcAllocateColorImage_u8 </p></li>
+<li><p><strong>m_originalImageWidth</strong> – <strong>[in]</strong> Width of the original image </p></li>
+<li><p><strong>m_originalImageHeight</strong> – <strong>[in]</strong> Height of the original image </p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv426pfcFreeColorPolarizedImagePPPP8uint16_t">
+<span id="_CPPv326pfcFreeColorPolarizedImagePPPP8uint16_t"></span><span id="_CPPv226pfcFreeColorPolarizedImagePPPP8uint16_t"></span><span id="pfcFreeColorPolarizedImage__uint16_tPPPP"></span><span class="target" id="pfc_polarized_color_algorithms_8h_1a6372a276562598110bba2a8fd77dd30a"></span><span class="pre">PFPOLCLIB_EXPORT</span><span class="w"> </span><span class="n"><span class="pre">int32_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">pfcFreeColorPolarizedImage</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">uint16_t</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="p"><span class="pre">*</span></span><span class="p"><span class="pre">*</span></span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">target</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv426pfcFreeColorPolarizedImagePPPP8uint16_t" title="Link to this definition"></a><br /></dt>
+<dd><p>For color polarized camera, frees the color image. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>target</strong> – <strong>[in]</strong> Color image with format target[angle][color] </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv432pfcGenerateAOLP_HSVColorImage_u8PPPP8uint16_tP7uint8_t8uint16_t8uint16_t8uint16_t11pfPixelType">
+<span id="_CPPv332pfcGenerateAOLP_HSVColorImage_u8PPPP8uint16_tP7uint8_t8uint16_t8uint16_t8uint16_t11pfPixelType"></span><span id="_CPPv232pfcGenerateAOLP_HSVColorImage_u8PPPP8uint16_tP7uint8_t8uint16_t8uint16_t8uint16_t11pfPixelType"></span><span id="pfcGenerateAOLP_HSVColorImage_u8__uint16_tPPPP.uint8_tP.uint16_t.uint16_t.uint16_t.pfPixelType"></span><span class="target" id="pfc_polarized_color_algorithms_8h_1a624fb2c47e4fbf01bb99539aac154598"></span><span class="pre">PFPOLCLIB_EXPORT</span><span class="w"> </span><span class="n"><span class="pre">int32_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">pfcGenerateAOLP_HSVColorImage_u8</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">uint16_t</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="p"><span class="pre">*</span></span><span class="p"><span class="pre">*</span></span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">target</span></span>, <span class="n"><span class="pre">uint8_t</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">result</span></span>, <span class="n"><span class="pre">uint16_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">m_originalImageWidth</span></span>, <span class="n"><span class="pre">uint16_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">m_originalImageHeight</span></span>, <span class="n"><span class="pre">uint16_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">color</span></span>, <span class="n"><span class="pre">pfPixelType</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">pixelType</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv432pfcGenerateAOLP_HSVColorImage_u8PPPP8uint16_tP7uint8_t8uint16_t8uint16_t8uint16_t11pfPixelType" title="Link to this definition"></a><br /></dt>
+<dd><p>Computes a (width*height) RGB image that contains AOLP information. </p>
+<p>Generates an AOLP image and treats AOLP as hue.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>target</strong> – <strong>[in]</strong> Pointer to hypercube containing all angles and colors target[angle][color] </p></li>
+<li><p><strong>m_originalImageWidth</strong> – <strong>[in]</strong> Width of the original image </p></li>
+<li><p><strong>m_originalImageHeight</strong> – <strong>[in]</strong> Height of the original image </p></li>
+<li><p><strong>color</strong> – <strong>[in]</strong> Selects the color to be used to compute AOLPDOLP. MonoHypercube can also be used in this function: color = {Red, Green, Blue, Mono} </p></li>
+<li><p><strong>pixelType</strong> – <strong>[in]</strong> Sets if pixel is MONO8, MONO10, MONO12 or MONO16</p></li>
+<li><p><strong>result</strong> – <strong>[out]</strong> Output buffer containing the AOLP RGB image (width x height * 3) </p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv429pfcGenerateAOLPColorImage_u16PPPP8uint16_tP8uint16_t8uint16_t8uint16_t8uint16_t11pfPixelType">
+<span id="_CPPv329pfcGenerateAOLPColorImage_u16PPPP8uint16_tP8uint16_t8uint16_t8uint16_t8uint16_t11pfPixelType"></span><span id="_CPPv229pfcGenerateAOLPColorImage_u16PPPP8uint16_tP8uint16_t8uint16_t8uint16_t8uint16_t11pfPixelType"></span><span id="pfcGenerateAOLPColorImage_u16__uint16_tPPPP.uint16_tP.uint16_t.uint16_t.uint16_t.pfPixelType"></span><span class="target" id="pfc_polarized_color_algorithms_8h_1a21abfdfcc220dd59b0365665607eaaf5"></span><span class="pre">PFPOLCLIB_EXPORT</span><span class="w"> </span><span class="n"><span class="pre">int32_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">pfcGenerateAOLPColorImage_u16</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">uint16_t</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="p"><span class="pre">*</span></span><span class="p"><span class="pre">*</span></span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">target</span></span>, <span class="n"><span class="pre">uint16_t</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">result</span></span>, <span class="n"><span class="pre">uint16_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">m_originalImageWidth</span></span>, <span class="n"><span class="pre">uint16_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">m_originalImageHeight</span></span>, <span class="n"><span class="pre">uint16_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">color</span></span>, <span class="n"><span class="pre">pfPixelType</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">pixelType</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv429pfcGenerateAOLPColorImage_u16PPPP8uint16_tP8uint16_t8uint16_t8uint16_t8uint16_t11pfPixelType" title="Link to this definition"></a><br /></dt>
+<dd><p>Computes Angle of Linear Polarization (AOLP) of the input image based on the four polarization angles, and outputs a (width*height) image using Nearest Neighbor. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>target</strong> – <strong>[in]</strong> Pointer to hypercube containing all angles and colors target[angle][color]. Mono hypercube is also usable. </p></li>
+<li><p><strong>m_originalImageWidth</strong> – <strong>[in]</strong> Width of the original image </p></li>
+<li><p><strong>m_originalImageHeight</strong> – <strong>[in]</strong> Height of the original image </p></li>
+<li><p><strong>color</strong> – <strong>[in]</strong> Selects the color to be used to compute AOLPDOLP. MonoHypercube can also be used in this function: color = {Red, Green, Blue, Mono} </p></li>
+<li><p><strong>pixelType</strong> – <strong>[in]</strong> Sets if pixel is MONO8, MONO10, MONO12 or MONO16</p></li>
+<li><p><strong>result</strong> – <strong>[out]</strong> Output buffer containing the AOLP image (width x height) </p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv432pfcGenerateAOLPDOLPColorImage_u8PPPP8uint16_tP7uint8_t8uint16_t8uint16_t8uint16_t11pfPixelType">
+<span id="_CPPv332pfcGenerateAOLPDOLPColorImage_u8PPPP8uint16_tP7uint8_t8uint16_t8uint16_t8uint16_t11pfPixelType"></span><span id="_CPPv232pfcGenerateAOLPDOLPColorImage_u8PPPP8uint16_tP7uint8_t8uint16_t8uint16_t8uint16_t11pfPixelType"></span><span id="pfcGenerateAOLPDOLPColorImage_u8__uint16_tPPPP.uint8_tP.uint16_t.uint16_t.uint16_t.pfPixelType"></span><span class="target" id="pfc_polarized_color_algorithms_8h_1a3c9f478f9cbd03bdb6a05a3be1a486ce"></span><span class="pre">PFPOLCLIB_EXPORT</span><span class="w"> </span><span class="n"><span class="pre">int32_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">pfcGenerateAOLPDOLPColorImage_u8</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">uint16_t</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="p"><span class="pre">*</span></span><span class="p"><span class="pre">*</span></span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">target</span></span>, <span class="n"><span class="pre">uint8_t</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">result</span></span>, <span class="n"><span class="pre">uint16_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">m_originalImageWidth</span></span>, <span class="n"><span class="pre">uint16_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">m_originalImageHeight</span></span>, <span class="n"><span class="pre">uint16_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">color</span></span>, <span class="n"><span class="pre">pfPixelType</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">pixelType</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv432pfcGenerateAOLPDOLPColorImage_u8PPPP8uint16_tP7uint8_t8uint16_t8uint16_t8uint16_t11pfPixelType" title="Link to this definition"></a><br /></dt>
+<dd><p>Computes a (width*height) RGB image that contains both DOLP and AOLP information. </p>
+<p>Generates a DOLP and AOLP image and then treats AOLP as hue and DOLP as saturation.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>target</strong> – <strong>[in]</strong> Pointer to hypercube containing all angles and colors target[angle][color]. Mono hypercube is also usable. </p></li>
+<li><p><strong>m_originalImageWidth</strong> – <strong>[in]</strong> Width of the original image </p></li>
+<li><p><strong>m_originalImageHeight</strong> – <strong>[in]</strong> Height of the original image </p></li>
+<li><p><strong>color</strong> – <strong>[in]</strong> Selects the color to be used to compute AOLPDOLP. MonoHypercube can also be used in this function: color = {Red, Green, Blue, Mono} </p></li>
+<li><p><strong>pixelType</strong> – <strong>[in]</strong> Sets if pixel is MONO8, MONO10, MONO12 or MONO16</p></li>
+<li><p><strong>result</strong> – <strong>[out]</strong> Output buffer containing the DOLPAOLP RGB image (width x height * 3) </p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv429pfcGenerateDOLPColorImage_u16PPPP8uint16_tP8uint16_t8uint16_t8uint16_tff8uint16_t11pfPixelType">
+<span id="_CPPv329pfcGenerateDOLPColorImage_u16PPPP8uint16_tP8uint16_t8uint16_t8uint16_tff8uint16_t11pfPixelType"></span><span id="_CPPv229pfcGenerateDOLPColorImage_u16PPPP8uint16_tP8uint16_t8uint16_t8uint16_tff8uint16_t11pfPixelType"></span><span id="pfcGenerateDOLPColorImage_u16__uint16_tPPPP.uint16_tP.uint16_t.uint16_t.float.float.uint16_t.pfPixelType"></span><span class="target" id="pfc_polarized_color_algorithms_8h_1a17d1ed2be7b375d411cf4ad33f9717cb"></span><span class="pre">PFPOLCLIB_EXPORT</span><span class="w"> </span><span class="n"><span class="pre">int32_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">pfcGenerateDOLPColorImage_u16</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">uint16_t</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="p"><span class="pre">*</span></span><span class="p"><span class="pre">*</span></span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">target</span></span>, <span class="n"><span class="pre">uint16_t</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">result</span></span>, <span class="n"><span class="pre">uint16_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">m_originalImageWidth</span></span>, <span class="n"><span class="pre">uint16_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">m_originalImageHeight</span></span>, <span class="kt"><span class="pre">float</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">start_range</span></span>, <span class="kt"><span class="pre">float</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">end_range</span></span>, <span class="n"><span class="pre">uint16_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">color</span></span>, <span class="n"><span class="pre">pfPixelType</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">pixelType</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv429pfcGenerateDOLPColorImage_u16PPPP8uint16_tP8uint16_t8uint16_t8uint16_tff8uint16_t11pfPixelType" title="Link to this definition"></a><br /></dt>
+<dd><p>Computes Degree of Linear Polarization (DOLP) of the input image based on the four polarization angles, and outputs a (m_originalImageWidth*m_originalImageHeight) image using bilinear interpolation. </p>
+<p>If DOLP is out of a certain range (defined by input parameters stard_range, end_range), its value is automatically set to 255 (white pixel).</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>target</strong> – <strong>[in]</strong> Pointer to hypercube containing all angles and colors target[angle][color]. Mono hypercube is also usable. </p></li>
+<li><p><strong>m_originalImageWidth</strong> – <strong>[in]</strong> Width of the original image </p></li>
+<li><p><strong>m_originalImageHeight</strong> – <strong>[in]</strong> Height of the original image </p></li>
+<li><p><strong>start_range</strong> – <strong>[in]</strong> Defines the beggining of the relative range of valid values (start_range*255). </p></li>
+<li><p><strong>end_range</strong> – <strong>[in]</strong> Defines the end of the relative range of valid values (end_range*255). </p></li>
+<li><p><strong>color</strong> – <strong>[in]</strong> Selects the color to be used to compute AOLPDOLP. MonoHypercube can also be used in this function: color = {Red, Green, Blue, Mono} </p></li>
+<li><p><strong>pixelType</strong> – <strong>[in]</strong> Sets if pixel is MONO8, MONO10, MONO12 or MONO16</p></li>
+<li><p><strong>result</strong> – <strong>[out]</strong> Output buffer containing the DOLP image (width x height) </p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv429pfcGeneratePolarizedMonoImagePPPPP8uint16_tPPPP8uint16_t8uint16_t8uint16_t8uint16_t8uint16_t">
+<span id="_CPPv329pfcGeneratePolarizedMonoImagePPPPP8uint16_tPPPP8uint16_t8uint16_t8uint16_t8uint16_t8uint16_t"></span><span id="_CPPv229pfcGeneratePolarizedMonoImagePPPPP8uint16_tPPPP8uint16_t8uint16_t8uint16_t8uint16_t8uint16_t"></span><span id="pfcGeneratePolarizedMonoImage__uint16_tPPPPP.uint16_tPPPP.uint16_t.uint16_t.uint16_t.uint16_t"></span><span class="target" id="pfc_polarized_color_algorithms_8h_1af8281cc618a73f26230e02207a7e09e0"></span><span class="pre">PFPOLCLIB_EXPORT</span><span class="w"> </span><span class="n"><span class="pre">int32_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">pfcGeneratePolarizedMonoImage</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">uint16_t</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="p"><span class="pre">*</span></span><span class="p"><span class="pre">*</span></span><span class="p"><span class="pre">*</span></span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">ppppp_monoresult</span></span>, <span class="n"><span class="pre">uint16_t</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="p"><span class="pre">*</span></span><span class="p"><span class="pre">*</span></span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">pppp_result</span></span>, <span class="n"><span class="pre">uint16_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">m_originalImageWidth</span></span>, <span class="n"><span class="pre">uint16_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">m_originalImageHeight</span></span>, <span class="n"><span class="pre">uint16_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">m_angleWidth</span></span>, <span class="n"><span class="pre">uint16_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">m_angleHeight</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv429pfcGeneratePolarizedMonoImagePPPPP8uint16_tPPPP8uint16_t8uint16_t8uint16_t8uint16_t8uint16_t" title="Link to this definition"></a><br /></dt>
+<dd><p>For color polarized camera only, uses the previously generated pppp_result hypercube to obtain mono images for each polarization angle. </p>
+<p>The formula for luminosity is 0.21 R + 0.72 G + 0.07 B (ITU-R BT.709)</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>pppp_result</strong> – <strong>[in]</strong> Polarized image containing Red, Green and Blue images for each polarization angle </p></li>
+<li><p><strong>m_originalImageWidth</strong> – <strong>[in]</strong> Width of the original image </p></li>
+<li><p><strong>m_originalImageHeight</strong> – <strong>[in]</strong> Height of the original image </p></li>
+<li><p><strong>m_angleWidth</strong> – <strong>[in]</strong> Width of the output hypercube (by default m_originalImageWidth/2) </p></li>
+<li><p><strong>m_angleHeight</strong> – <strong>[in]</strong> Height of the output hypercube (by default m_originalImageHeight/2)</p></li>
+<li><p><strong>ppppp_monoresult</strong> – <strong>[out]</strong> Polarized image containing mono images in fromat ppp_monoresult[angle][color] </p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv428pfcGenerateRGB_ColorImage_u8PPPP8uint16_tP7uint8_t8uint16_t8uint16_t8uint16_t11pfPixelType">
+<span id="_CPPv328pfcGenerateRGB_ColorImage_u8PPPP8uint16_tP7uint8_t8uint16_t8uint16_t8uint16_t11pfPixelType"></span><span id="_CPPv228pfcGenerateRGB_ColorImage_u8PPPP8uint16_tP7uint8_t8uint16_t8uint16_t8uint16_t11pfPixelType"></span><span id="pfcGenerateRGB_ColorImage_u8__uint16_tPPPP.uint8_tP.uint16_t.uint16_t.uint16_t.pfPixelType"></span><span class="target" id="pfc_polarized_color_algorithms_8h_1aca1a2a3822d4b3204c052689e9cdf9a1"></span><span class="pre">PFPOLCLIB_EXPORT</span><span class="w"> </span><span class="n"><span class="pre">int32_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">pfcGenerateRGB_ColorImage_u8</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">uint16_t</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="p"><span class="pre">*</span></span><span class="p"><span class="pre">*</span></span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">target</span></span>, <span class="n"><span class="pre">uint8_t</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">result</span></span>, <span class="n"><span class="pre">uint16_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">m_originalImageWidth</span></span>, <span class="n"><span class="pre">uint16_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">m_originalImageHeight</span></span>, <span class="n"><span class="pre">uint16_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">angle</span></span>, <span class="n"><span class="pre">pfPixelType</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">pixelType</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv428pfcGenerateRGB_ColorImage_u8PPPP8uint16_tP7uint8_t8uint16_t8uint16_t8uint16_t11pfPixelType" title="Link to this definition"></a><br /></dt>
+<dd><p>Generates a buffer containing RGB data of one angle. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>target</strong> – <strong>[in]</strong> Pointer to hypercube containing all angles and colors target[angle][color] </p></li>
+<li><p><strong>m_originalImageWidth</strong> – <strong>[in]</strong> Width of the original image </p></li>
+<li><p><strong>m_originalImageHeight</strong> – <strong>[in]</strong> Height of the original image </p></li>
+<li><p><strong>angle</strong> – <strong>[in]</strong> Selected angle {deg_0, deg_45, deg_90, deg_135} </p></li>
+<li><p><strong>pixelType</strong> – <strong>[in]</strong> Sets if pixel is MONO8, MONO10, MONO12 or MONO16</p></li>
+<li><p><strong>result</strong> – <strong>[out]</strong> Output buffer containing the RGB image (width x height * 3) </p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv435pfcGenerateRGB_VirtualColorImage_u8PPPP8uint16_tP7uint8_t8uint16_t8uint16_t8uint16_t11pfPixelType">
+<span id="_CPPv335pfcGenerateRGB_VirtualColorImage_u8PPPP8uint16_tP7uint8_t8uint16_t8uint16_t8uint16_t11pfPixelType"></span><span id="_CPPv235pfcGenerateRGB_VirtualColorImage_u8PPPP8uint16_tP7uint8_t8uint16_t8uint16_t8uint16_t11pfPixelType"></span><span id="pfcGenerateRGB_VirtualColorImage_u8__uint16_tPPPP.uint8_tP.uint16_t.uint16_t.uint16_t.pfPixelType"></span><span class="target" id="pfc_polarized_color_algorithms_8h_1a000e4e0060783288bf3a8c4356d3d4a9"></span><span class="pre">PFPOLCLIB_EXPORT</span><span class="w"> </span><span class="n"><span class="pre">int32_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">pfcGenerateRGB_VirtualColorImage_u8</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">uint16_t</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="p"><span class="pre">*</span></span><span class="p"><span class="pre">*</span></span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">target</span></span>, <span class="n"><span class="pre">uint8_t</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">result</span></span>, <span class="n"><span class="pre">uint16_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">m_originalImageWidth</span></span>, <span class="n"><span class="pre">uint16_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">m_originalImageHeight</span></span>, <span class="n"><span class="pre">uint16_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">angledegree</span></span>, <span class="n"><span class="pre">pfPixelType</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">pixelType</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv435pfcGenerateRGB_VirtualColorImage_u8PPPP8uint16_tP7uint8_t8uint16_t8uint16_t8uint16_t11pfPixelType" title="Link to this definition"></a><br /></dt>
+<dd><p>For color polarized camera, generates a RGB image of one virtual angle (0-180 degrees). </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>target</strong> – <strong>[in]</strong> Color Hypercube with format target[angle][color] </p></li>
+<li><p><strong>m_originalImageWidth</strong> – <strong>[in]</strong> Width of the original image </p></li>
+<li><p><strong>m_originalImageHeight</strong> – <strong>[in]</strong> Height of the original image </p></li>
+<li><p><strong>angledegree</strong> – <strong>[in]</strong> Angle of the desired virtual angle (0 - 180) </p></li>
+<li><p><strong>pixelType</strong> – <strong>[in]</strong> Sets if pixel is MONO8, MONO10, MONO12 or MONO16</p></li>
+<li><p><strong>result</strong> – <strong>[out]</strong> Output buffer containing the RGB image (width x height * 3) </p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv437pfcGenerateVirtualAngleColorImage_u16PPPP8uint16_tP8uint16_t8uint16_t8uint16_t8uint16_t16PFPolarizedColor11pfPixelType">
+<span id="_CPPv337pfcGenerateVirtualAngleColorImage_u16PPPP8uint16_tP8uint16_t8uint16_t8uint16_t8uint16_t16PFPolarizedColor11pfPixelType"></span><span id="_CPPv237pfcGenerateVirtualAngleColorImage_u16PPPP8uint16_tP8uint16_t8uint16_t8uint16_t8uint16_t16PFPolarizedColor11pfPixelType"></span><span id="pfcGenerateVirtualAngleColorImage_u16__uint16_tPPPP.uint16_tP.uint16_t.uint16_t.uint16_t.PFPolarizedColor.pfPixelType"></span><span class="target" id="pfc_polarized_color_algorithms_8h_1a2181eb763ef065bfc3c2bd0847dfcf30"></span><span class="pre">PFPOLCLIB_EXPORT</span><span class="w"> </span><span class="n"><span class="pre">int32_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">pfcGenerateVirtualAngleColorImage_u16</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">uint16_t</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="p"><span class="pre">*</span></span><span class="p"><span class="pre">*</span></span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">target</span></span>, <span class="n"><span class="pre">uint16_t</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">result</span></span>, <span class="n"><span class="pre">uint16_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">m_originalImageWidth</span></span>, <span class="n"><span class="pre">uint16_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">m_originalImageHeight</span></span>, <span class="n"><span class="pre">uint16_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">angledegree</span></span>, <a class="reference internal" href="#_CPPv416PFPolarizedColor" title="PFPolarizedColor"><span class="n"><span class="pre">PFPolarizedColor</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">color</span></span>, <span class="n"><span class="pre">pfPixelType</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">pixelType</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv437pfcGenerateVirtualAngleColorImage_u16PPPP8uint16_tP8uint16_t8uint16_t8uint16_t8uint16_t16PFPolarizedColor11pfPixelType" title="Link to this definition"></a><br /></dt>
+<dd><p>For color polarized camera, generate a virtual angle for one of the color channels. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>target</strong> – <strong>[in]</strong> Color Hypercube with format target[angle][color] </p></li>
+<li><p><strong>m_originalImageWidth</strong> – <strong>[in]</strong> Width of the original image </p></li>
+<li><p><strong>m_originalImageHeight</strong> – <strong>[in]</strong> Height of the original image </p></li>
+<li><p><strong>angledegree</strong> – <strong>[in]</strong> Angle of the desired virtual angle (0 - 180) </p></li>
+<li><p><strong>color</strong> – <strong>[in]</strong> Red, Green, Blue, Mono </p></li>
+<li><p><strong>pixelType</strong> – <strong>[in]</strong> Sets if pixel is MONO8, MONO10, MONO12 or MONO16</p></li>
+<li><p><strong>result</strong> – <strong>[out]</strong> Output buffer containing the virtual angle image (width x height) </p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv424pfcLoadPolarizedRGBImagePPPP8uint16_tP8uint16_t8uint16_t8uint16_t8uint16_t8uint16_t11pfPixelType">
+<span id="_CPPv324pfcLoadPolarizedRGBImagePPPP8uint16_tP8uint16_t8uint16_t8uint16_t8uint16_t8uint16_t11pfPixelType"></span><span id="_CPPv224pfcLoadPolarizedRGBImagePPPP8uint16_tP8uint16_t8uint16_t8uint16_t8uint16_t8uint16_t11pfPixelType"></span><span id="pfcLoadPolarizedRGBImage__uint16_tPPPP.uint16_tP.uint16_t.uint16_t.uint16_t.uint16_t.pfPixelType"></span><span class="target" id="pfc_polarized_color_algorithms_8h_1ab8b0d8947acce42bcc3d219394e67da7"></span><span class="pre">PFPOLCLIB_EXPORT</span><span class="w"> </span><span class="n"><span class="pre">int32_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">pfcLoadPolarizedRGBImage</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">uint16_t</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="p"><span class="pre">*</span></span><span class="p"><span class="pre">*</span></span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">pppp_result</span></span>, <span class="n"><span class="pre">uint16_t</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">bufferImage</span></span>, <span class="n"><span class="pre">uint16_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">m_originalImageWidth</span></span>, <span class="n"><span class="pre">uint16_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">m_originalImageHeight</span></span>, <span class="n"><span class="pre">uint16_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">m_angleWidth</span></span>, <span class="n"><span class="pre">uint16_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">m_angleHeight</span></span>, <span class="n"><span class="pre">pfPixelType</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">pixelType</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv424pfcLoadPolarizedRGBImagePPPP8uint16_tP8uint16_t8uint16_t8uint16_t8uint16_t8uint16_t11pfPixelType" title="Link to this definition"></a><br /></dt>
+<dd><p>For color polarized camera only, generates the polarized image with format pppp_image[angle][color][row][col], obtaining one m_angleWidth x m_angleHeight image for each angle and color. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>bufferImage</strong> – <strong>[in]</strong> Buffer with input image </p></li>
+<li><p><strong>m_originalImageWidth</strong> – <strong>[in]</strong> Width of the original image </p></li>
+<li><p><strong>m_originalImageHeight</strong> – <strong>[in]</strong> Height of the original image </p></li>
+<li><p><strong>m_angleWidth</strong> – <strong>[in]</strong> Width of the output hypercube (by default m_originalImageWidth/2) </p></li>
+<li><p><strong>m_angleHeight</strong> – <strong>[in]</strong> Height of the output hypercube (by default m_originalImageHeight/2) </p></li>
+<li><p><strong>pixelType</strong> – <strong>[in]</strong> Sets if pixel is MONO8, MONO10, MONO12 or MONO16</p></li>
+<li><p><strong>pppp_result</strong> – <strong>[out]</strong> Hypercube containing the images in fromat ppp_result[angle][color] </p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+</section>
+<section id="errors-and-definitions">
+<span id="errors-definitions"></span><h1>Errors and Definitions<a class="headerlink" href="#errors-and-definitions" title="Link to this heading"></a></h1>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-defines">Defines</p>
+<dl class="cpp macro">
+<dt class="sig sig-object cpp" id="c.PFPOLSDK_ERROR_ALLOCATE_POINTER">
+<span class="target" id="pfc_polarized_errors_8h_1a4f43d56761d4a5353760cc2e91033831"></span><span class="sig-name descname"><span class="n"><span class="pre">PFPOLSDK_ERROR_ALLOCATE_POINTER</span></span></span><a class="headerlink" href="#c.PFPOLSDK_ERROR_ALLOCATE_POINTER" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp macro">
+<dt class="sig sig-object cpp" id="c.PFPOLSDK_ERROR_CANNOT_OPEN_FILE">
+<span class="target" id="pfc_polarized_errors_8h_1a6d404ac2fe35c2f9ae1a8c213970acdd"></span><span class="sig-name descname"><span class="n"><span class="pre">PFPOLSDK_ERROR_CANNOT_OPEN_FILE</span></span></span><a class="headerlink" href="#c.PFPOLSDK_ERROR_CANNOT_OPEN_FILE" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp macro">
+<dt class="sig sig-object cpp" id="c.PFPOLSDK_ERROR_EMPTY_POINTER">
+<span class="target" id="pfc_polarized_errors_8h_1ab111de344d3a3eb190c4f933f57b65c8"></span><span class="sig-name descname"><span class="n"><span class="pre">PFPOLSDK_ERROR_EMPTY_POINTER</span></span></span><a class="headerlink" href="#c.PFPOLSDK_ERROR_EMPTY_POINTER" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp macro">
+<dt class="sig sig-object cpp" id="c.PFPOLSDK_ERROR_IMAGE_DIMENSIONS_OUT_OF_RANGE">
+<span class="target" id="pfc_polarized_errors_8h_1a0755de05762fb5a2667c21fc0fc8082a"></span><span class="sig-name descname"><span class="n"><span class="pre">PFPOLSDK_ERROR_IMAGE_DIMENSIONS_OUT_OF_RANGE</span></span></span><a class="headerlink" href="#c.PFPOLSDK_ERROR_IMAGE_DIMENSIONS_OUT_OF_RANGE" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp macro">
+<dt class="sig sig-object cpp" id="c.PFPOLSDK_ERROR_INPUT_VALUE_OUT_OF_BOUNDS">
+<span class="target" id="pfc_polarized_errors_8h_1a139ed751e5a02b885c6bf2a86096364c"></span><span class="sig-name descname"><span class="n"><span class="pre">PFPOLSDK_ERROR_INPUT_VALUE_OUT_OF_BOUNDS</span></span></span><a class="headerlink" href="#c.PFPOLSDK_ERROR_INPUT_VALUE_OUT_OF_BOUNDS" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp macro">
+<dt class="sig sig-object cpp" id="c.PFPOLSDK_ERROR_INVALID_ARGUMENT">
+<span class="target" id="pfc_polarized_errors_8h_1af200e302c398d5239f88e029630b0b4e"></span><span class="sig-name descname"><span class="n"><span class="pre">PFPOLSDK_ERROR_INVALID_ARGUMENT</span></span></span><a class="headerlink" href="#c.PFPOLSDK_ERROR_INVALID_ARGUMENT" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp macro">
+<dt class="sig sig-object cpp" id="c.PFPOLSDK_ERROR_READ_IMAGE_FROM_FILE">
+<span class="target" id="pfc_polarized_errors_8h_1a289a8961357098fa0fac6a00b09ccd33"></span><span class="sig-name descname"><span class="n"><span class="pre">PFPOLSDK_ERROR_READ_IMAGE_FROM_FILE</span></span></span><a class="headerlink" href="#c.PFPOLSDK_ERROR_READ_IMAGE_FROM_FILE" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp macro">
+<dt class="sig sig-object cpp" id="c.PFPOLSDK_ERROR_UNKNOWN">
+<span class="target" id="pfc_polarized_errors_8h_1a7d5786797aa570c7b11f499d6316e5d0"></span><span class="sig-name descname"><span class="n"><span class="pre">PFPOLSDK_ERROR_UNKNOWN</span></span></span><a class="headerlink" href="#c.PFPOLSDK_ERROR_UNKNOWN" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp macro">
+<dt class="sig sig-object cpp" id="c.PFPOLSDK_ERROR_WRITE_IMAGE_TO_FILE">
+<span class="target" id="pfc_polarized_errors_8h_1a9f0605e39851f46f14bdd6fd38d614a3"></span><span class="sig-name descname"><span class="n"><span class="pre">PFPOLSDK_ERROR_WRITE_IMAGE_TO_FILE</span></span></span><a class="headerlink" href="#c.PFPOLSDK_ERROR_WRITE_IMAGE_TO_FILE" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp macro">
+<dt class="sig sig-object cpp" id="c.PFPOLSDK_NOERROR">
+<span class="target" id="pfc_polarized_errors_8h_1af4c01f265993f0bcb8a9f70e3c741ae4"></span><span class="sig-name descname"><span class="n"><span class="pre">PFPOLSDK_NOERROR</span></span></span><a class="headerlink" href="#c.PFPOLSDK_NOERROR" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+</div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-functions">Functions</p>
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv416pfGetErrorString7int32_tPcPc">
+<span id="_CPPv316pfGetErrorString7int32_tPcPc"></span><span id="_CPPv216pfGetErrorString7int32_tPcPc"></span><span id="pfGetErrorString__int32_t.cP.cP"></span><span class="target" id="pfc_polarized_errors_8h_1a26eb84a72d9545f07815795a054b1001"></span><span class="pre">PFPOLCLIB_EXPORT</span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">pfGetErrorString</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">int32_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">nError</span></span>, <span class="kt"><span class="pre">char</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">pErrorStr</span></span>, <span class="kt"><span class="pre">char</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">pErrorDescription</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv416pfGetErrorString7int32_tPcPc" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+</div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-defines">Defines</p>
+<dl class="cpp macro">
+<dt class="sig sig-object cpp" id="c.ERROR_BUFFER_LEN">
+<span class="target" id="pfc_polarized_defs_8h_1a84d55e9f2244bd8e7b767b68b559af24"></span><span class="sig-name descname"><span class="n"><span class="pre">ERROR_BUFFER_LEN</span></span></span><a class="headerlink" href="#c.ERROR_BUFFER_LEN" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp macro">
+<dt class="sig sig-object cpp" id="c.PATH_BUFFER_LEN">
+<span class="target" id="pfc_polarized_defs_8h_1a41df704ab4989390deac97104d7c5bcb"></span><span class="sig-name descname"><span class="n"><span class="pre">PATH_BUFFER_LEN</span></span></span><a class="headerlink" href="#c.PATH_BUFFER_LEN" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+</div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-enums">Enums</p>
+<dl class="cpp enum">
+<dt class="sig sig-object cpp" id="_CPPv418pfColorImageFormat">
+<span id="_CPPv318pfColorImageFormat"></span><span id="_CPPv218pfColorImageFormat"></span><span class="target" id="pfc_polarized_defs_8h_1a99a97f4c6fc20a1b2a336946870153a6"></span><span class="k"><span class="pre">enum</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">pfColorImageFormat</span></span></span><a class="headerlink" href="#_CPPv418pfColorImageFormat" title="Link to this definition"></a><br /></dt>
+<dd><p><em>Values:</em></p>
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N18pfColorImageFormat3BGRE">
+<span id="_CPPv3N18pfColorImageFormat3BGRE"></span><span id="_CPPv2N18pfColorImageFormat3BGRE"></span><span class="target" id="pfc_polarized_defs_8h_1a99a97f4c6fc20a1b2a336946870153a6a4a19a93c929964c201e01c8352dc8b9c"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">BGR</span></span></span><a class="headerlink" href="#_CPPv4N18pfColorImageFormat3BGRE" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N18pfColorImageFormat9BGRPackedE">
+<span id="_CPPv3N18pfColorImageFormat9BGRPackedE"></span><span id="_CPPv2N18pfColorImageFormat9BGRPackedE"></span><span class="target" id="pfc_polarized_defs_8h_1a99a97f4c6fc20a1b2a336946870153a6ac8ebebf95f36085e49546de807fa8fe4"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">BGRPacked</span></span></span><a class="headerlink" href="#_CPPv4N18pfColorImageFormat9BGRPackedE" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N18pfColorImageFormat3RGBE">
+<span id="_CPPv3N18pfColorImageFormat3RGBE"></span><span id="_CPPv2N18pfColorImageFormat3RGBE"></span><span class="target" id="pfc_polarized_defs_8h_1a99a97f4c6fc20a1b2a336946870153a6a30447e9f6efa4afdd251f9afc1d5fb44"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">RGB</span></span></span><a class="headerlink" href="#_CPPv4N18pfColorImageFormat3RGBE" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N18pfColorImageFormat9RGBPackedE">
+<span id="_CPPv3N18pfColorImageFormat9RGBPackedE"></span><span id="_CPPv2N18pfColorImageFormat9RGBPackedE"></span><span class="target" id="pfc_polarized_defs_8h_1a99a97f4c6fc20a1b2a336946870153a6a17cbe326c70ce8da7bdebf815f4e2b1a"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">RGBPacked</span></span></span><a class="headerlink" href="#_CPPv4N18pfColorImageFormat9RGBPackedE" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="cpp enum">
+<dt class="sig sig-object cpp" id="_CPPv416PFPolarizedAngle">
+<span id="_CPPv316PFPolarizedAngle"></span><span id="_CPPv216PFPolarizedAngle"></span><span class="target" id="pfc_polarized_defs_8h_1a6a37d96597bfd248d93efac31228115f"></span><span class="k"><span class="pre">enum</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">PFPolarizedAngle</span></span></span><a class="headerlink" href="#_CPPv416PFPolarizedAngle" title="Link to this definition"></a><br /></dt>
+<dd><p><em>Values:</em></p>
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N16PFPolarizedAngle6deg_90E">
+<span id="_CPPv3N16PFPolarizedAngle6deg_90E"></span><span id="_CPPv2N16PFPolarizedAngle6deg_90E"></span><span class="target" id="pfc_polarized_defs_8h_1a6a37d96597bfd248d93efac31228115faff56acdc9c2fb2ad84b7b387679459a1"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">deg_90</span></span></span><a class="headerlink" href="#_CPPv4N16PFPolarizedAngle6deg_90E" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N16PFPolarizedAngle6deg_45E">
+<span id="_CPPv3N16PFPolarizedAngle6deg_45E"></span><span id="_CPPv2N16PFPolarizedAngle6deg_45E"></span><span class="target" id="pfc_polarized_defs_8h_1a6a37d96597bfd248d93efac31228115faf289dbbc0fb351336f680ce057ed25bf"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">deg_45</span></span></span><a class="headerlink" href="#_CPPv4N16PFPolarizedAngle6deg_45E" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N16PFPolarizedAngle7deg_135E">
+<span id="_CPPv3N16PFPolarizedAngle7deg_135E"></span><span id="_CPPv2N16PFPolarizedAngle7deg_135E"></span><span class="target" id="pfc_polarized_defs_8h_1a6a37d96597bfd248d93efac31228115fa8b5a97c3bb4f44da4689b342f653a874"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">deg_135</span></span></span><a class="headerlink" href="#_CPPv4N16PFPolarizedAngle7deg_135E" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N16PFPolarizedAngle5deg_0E">
+<span id="_CPPv3N16PFPolarizedAngle5deg_0E"></span><span id="_CPPv2N16PFPolarizedAngle5deg_0E"></span><span class="target" id="pfc_polarized_defs_8h_1a6a37d96597bfd248d93efac31228115faa2818a7260dd4b0caf040610fc8ee289"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">deg_0</span></span></span><a class="headerlink" href="#_CPPv4N16PFPolarizedAngle5deg_0E" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="cpp enum">
+<dt class="sig sig-object cpp" id="_CPPv416PFPolarizedColor">
+<span id="_CPPv316PFPolarizedColor"></span><span id="_CPPv216PFPolarizedColor"></span><span class="target" id="pfc_polarized_defs_8h_1ad54a16c354c3917473caeba37f7c2da3"></span><span class="k"><span class="pre">enum</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">PFPolarizedColor</span></span></span><a class="headerlink" href="#_CPPv416PFPolarizedColor" title="Link to this definition"></a><br /></dt>
+<dd><p><em>Values:</em></p>
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N16PFPolarizedColor3RedE">
+<span id="_CPPv3N16PFPolarizedColor3RedE"></span><span id="_CPPv2N16PFPolarizedColor3RedE"></span><span class="target" id="pfc_polarized_defs_8h_1ad54a16c354c3917473caeba37f7c2da3ad3163c1fcda01965b692ec2c3122b743"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">Red</span></span></span><a class="headerlink" href="#_CPPv4N16PFPolarizedColor3RedE" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N16PFPolarizedColor5GreenE">
+<span id="_CPPv3N16PFPolarizedColor5GreenE"></span><span id="_CPPv2N16PFPolarizedColor5GreenE"></span><span class="target" id="pfc_polarized_defs_8h_1ad54a16c354c3917473caeba37f7c2da3ad0784a3f969fe736e8b271a5a161d106"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">Green</span></span></span><a class="headerlink" href="#_CPPv4N16PFPolarizedColor5GreenE" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N16PFPolarizedColor4BlueE">
+<span id="_CPPv3N16PFPolarizedColor4BlueE"></span><span id="_CPPv2N16PFPolarizedColor4BlueE"></span><span class="target" id="pfc_polarized_defs_8h_1ad54a16c354c3917473caeba37f7c2da3af5e09dd1da4088464f264b7a3118bff8"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">Blue</span></span></span><a class="headerlink" href="#_CPPv4N16PFPolarizedColor4BlueE" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N16PFPolarizedColor4MonoE">
+<span id="_CPPv3N16PFPolarizedColor4MonoE"></span><span id="_CPPv2N16PFPolarizedColor4MonoE"></span><span class="target" id="pfc_polarized_defs_8h_1ad54a16c354c3917473caeba37f7c2da3a1b6b2929659177f6e04cdebdb6c80dab"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">Mono</span></span></span><a class="headerlink" href="#_CPPv4N16PFPolarizedColor4MonoE" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-variables">Variables</p>
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv410MAXVAL_u10">
+<span id="_CPPv310MAXVAL_u10"></span><span id="_CPPv210MAXVAL_u10"></span><span id="MAXVAL_u10__uint32_tC"></span><span class="target" id="pfc_polarized_defs_8h_1a3b4012118dac3481e5668840116fe021"></span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">uint32_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">MAXVAL_u10</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">1023</span></span><a class="headerlink" href="#_CPPv410MAXVAL_u10" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv410MAXVAL_u12">
+<span id="_CPPv310MAXVAL_u12"></span><span id="_CPPv210MAXVAL_u12"></span><span id="MAXVAL_u12__uint32_tC"></span><span class="target" id="pfc_polarized_defs_8h_1a2addecbf5ab96e4104320db361b02b42"></span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">uint32_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">MAXVAL_u12</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">4095</span></span><a class="headerlink" href="#_CPPv410MAXVAL_u12" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv410MAXVAL_u16">
+<span id="_CPPv310MAXVAL_u16"></span><span id="_CPPv210MAXVAL_u16"></span><span id="MAXVAL_u16__uint32_tC"></span><span class="target" id="pfc_polarized_defs_8h_1a88c8f94d9c18396d4e8b6411a2f12109"></span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">uint32_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">MAXVAL_u16</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">65535</span></span><a class="headerlink" href="#_CPPv410MAXVAL_u16" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv49MAXVAL_u8">
+<span id="_CPPv39MAXVAL_u8"></span><span id="_CPPv29MAXVAL_u8"></span><span id="MAXVAL_u8__uint32_tC"></span><span class="target" id="pfc_polarized_defs_8h_1a5d0b8fc7ed86db7a907ef9f00010f866"></span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">uint32_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">MAXVAL_u8</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">255</span></span><a class="headerlink" href="#_CPPv49MAXVAL_u8" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+</div>
+<div class="toctree-wrapper compound">
+</div>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="../Library.html" class="btn btn-neutral float-left" title="Library files" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../C%2B%2BExamples.html" class="btn btn-neutral float-right" title="C++ Examples" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2021, PF.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

@@ -1,0 +1,117 @@
+#!/bin/bash
+sudo bash -c '
+desktop1="$(eval echo "~$SUDO_USER/Desktop/streamViewer.desktop")"
+desktop2="$(eval echo "~$SUDO_USER/Desktop/xiCamTool.desktop")"
+python_ver="$(python -c "import sys; pyver=sys.version_info[0]; print(pyver)")"
+if [ "$python_ver" -gt 2 ]
+then
+	py_site_dir="$(python -c "import site; print(site.getsitepackages()[0])" 2>/dev/null)"
+else
+	py_site_dir="$(python -c "from distutils.sysconfig import get_python_lib; print(get_python_lib())" 2>/dev/null)"
+fi
+py2_site_dir="$(python2 -c "from distutils.sysconfig import get_python_lib; print(get_python_lib())" 2>/dev/null)"
+py3_site_dir="$(python3 -c "import site; print(site.getsitepackages()[0])" 2>/dev/null)"
+
+echo "This script will remove the following files and directories:"
+echo "/opt/XIMEA/"
+echo "/usr/lib/libm3api.so*"
+echo "/usr/include/m3api"
+echo "/lib/modules/*/extra/ximea_cam_pcie.ko"
+echo "/etc/udev/rules.d/99-ximea.rules"
+echo "/etc/ld.so.conf.d/000XIMEA.conf"
+if [ -n "$py_site_dir" ]
+then
+	echo "$py_site_dir/ximea"
+fi
+if [ -n "$py2_site_dir" -a "$py2_site_dir" != "$py_site_dir" ]
+then
+	echo "$py2_site_dir/ximea"
+fi
+if [ -n "$py3_site_dir" -a "$py3_site_dir" != "$py_site_dir" ]
+then
+	echo "$py3_site_dir/ximea"
+fi
+if [ -d /opt/XIMEA/backup ]
+then
+	sort /opt/XIMEA/backup/files.txt|uniq|while read i
+	do
+		echo "/lib/$i"
+	done
+fi
+if [ -f "$desktop1" ]
+then
+	echo "$desktop1"
+fi
+if [ -f "$desktop2" ]
+then
+	echo "$desktop2"
+fi
+read -n 1 -p "Proceed (y/n)? " answer
+echo
+if [ "$answer" != "y" ]
+then
+	exit 1
+fi
+
+rm -f \
+	/usr/lib/libm3api.so* \
+	/usr/include/m3api \
+	/etc/udev/rules.d/99-ximea.rules \
+	/etc/ld.so.conf.d/000XIMEA.conf \
+	"$desktop1" \
+	"$desktop2"
+if [ -n "$py_site_dir" ]
+then
+	rm -Rf "$py_site_dir/ximea"
+fi
+if [ -n "$py2_site_dir" ]
+then
+	rm -Rf "$py2_site_dir/ximea"
+fi
+if [ -n "$py3_site_dir" ]
+then
+	rm -Rf "$py3_site_dir/ximea"
+fi
+
+if [ -d /opt/XIMEA/backup ]
+then
+	sort /opt/XIMEA/backup/files.txt|uniq|while read i
+	do
+		if md5sum --status --check "/opt/XIMEA/backup/$i.md5sum"
+		then
+			rm -f "/lib/$i"
+			if [ -f "/opt/XIMEA/backup/$i" ]
+			then
+				mv "/opt/XIMEA/backup/$i" /lib/
+			fi
+		else
+			echo "Skipping $i since it was overwritten since install"
+		fi
+	done
+fi
+
+if [ -d /lib/modules ]
+then
+	pushd /lib/modules >/dev/null
+	rmmod ximea_cam_pcie 2>/dev/null
+	for i in *
+	do
+		if [ -d "$i" ]
+		then
+			pushd "$i" >/dev/null
+			if [ -f extra/ximea_cam_pcie.ko ]
+			then
+				rm -f extra/ximea_cam_pcie.ko
+				depmod "$i"
+			fi
+			popd >/dev/null
+		fi
+	done
+	popd >/dev/null
+fi
+
+rm -Rf /opt/XIMEA
+
+udevadm control --reload
+ldconfig
+'

@@ -1,0 +1,162 @@
+2024-08-30T15:16:03.535469Z INFO    - ProcessingUnit::_PropagateDataTypes()
+2024-08-30T15:16:03.535502Z INFO    - OutputPort: non_uniformity_pipeline.spatial_processing_group.spatial_resampling_unit.out; Actual kind: AK_BAND_IMAGE_BSQ; Minimal kind: AK_ABSTRACT_BAND_IMAGE
+2024-08-30T15:16:03.535509Z INFO    - InputPort: non_uniformity_pipeline.spatial_processing_group.illumination_fall_off.in; Actual kind: AK_BAND_IMAGE_BSQ; Minimal kind: AK_ARRAY
+2024-08-30T15:16:03.757753Z INFO    - ProcessingUnit::Process
+2024-08-30T15:16:03.957690Z INFO    - ProcessingUnit::_PropagateDataTypes()
+2024-08-30T15:16:03.957717Z INFO    - OutputPort: reference_spectrum_pipeline.spatial_processing_group.spatial_resampling_unit.out; Actual kind: AK_BAND_IMAGE_BSQ; Minimal kind: AK_ABSTRACT_BAND_IMAGE
+2024-08-30T15:16:03.957722Z INFO    - InputPort: reference_spectrum_pipeline.spatial_processing_group.spatial_processing_group_out.in; Actual kind: AK_BAND_IMAGE_BSQ; Minimal kind: AK_BAND_IMAGE_BSQ
+2024-08-30T15:16:04.544775Z INFO    - ProcessingUnit::Process
+2024-08-30T15:16:04.674646Z INFO    - ProcessingUnit::_PropagateDataTypes()
+2024-08-30T15:16:04.674679Z INFO    - OutputPort: non_uniformity_pipeline.spatial_processing_group.spatial_resampling_unit.out; Actual kind: AK_BAND_IMAGE_BSQ; Minimal kind: AK_ABSTRACT_BAND_IMAGE
+2024-08-30T15:16:04.674686Z INFO    - InputPort: non_uniformity_pipeline.spatial_processing_group.illumination_fall_off.in; Actual kind: AK_BAND_IMAGE_BSQ; Minimal kind: AK_ARRAY
+2024-08-30T15:16:04.879021Z INFO    - ProcessingUnit::Process
+2024-08-30T15:16:05.069660Z INFO    - ProcessingUnit::_PropagateDataTypes()
+2024-08-30T15:16:05.069683Z INFO    - OutputPort: reference_spectrum_pipeline.spatial_processing_group.spatial_resampling_unit.out; Actual kind: AK_BAND_IMAGE_BSQ; Minimal kind: AK_ABSTRACT_BAND_IMAGE
+2024-08-30T15:16:05.069689Z INFO    - InputPort: reference_spectrum_pipeline.spatial_processing_group.spatial_processing_group_out.in; Actual kind: AK_BAND_IMAGE_BSQ; Minimal kind: AK_BAND_IMAGE_BSQ
+2024-08-30T15:16:05.321294Z INFO    - ProcessingUnit::Process
+2024-08-30T15:19:34.922700Z INFO    - ProcessingUnit::_PropagateDataTypes()
+2024-08-30T15:19:34.922731Z INFO    - OutputPort: non_uniformity_pipeline.spatial_processing_group.spatial_resampling_unit.out; Actual kind: AK_BAND_IMAGE_BSQ; Minimal kind: AK_ABSTRACT_BAND_IMAGE
+2024-08-30T15:19:34.922736Z INFO    - InputPort: non_uniformity_pipeline.spatial_processing_group.illumination_fall_off.in; Actual kind: AK_BAND_IMAGE_BSQ; Minimal kind: AK_ARRAY
+2024-08-30T15:19:35.145609Z INFO    - ProcessingUnit::Process
+2024-08-30T15:19:35.343642Z INFO    - ProcessingUnit::_PropagateDataTypes()
+2024-08-30T15:19:35.343670Z INFO    - OutputPort: reference_spectrum_pipeline.spatial_processing_group.spatial_resampling_unit.out; Actual kind: AK_BAND_IMAGE_BSQ; Minimal kind: AK_ABSTRACT_BAND_IMAGE
+2024-08-30T15:19:35.343675Z INFO    - InputPort: reference_spectrum_pipeline.spatial_processing_group.spatial_processing_group_out.in; Actual kind: AK_BAND_IMAGE_BSQ; Minimal kind: AK_BAND_IMAGE_BSQ
+2024-08-30T15:19:35.588391Z INFO    - ProcessingUnit::Process
+2024-08-30T15:19:35.756529Z INFO    - ProcessingUnit::_PropagateDataTypes()
+2024-08-30T15:19:35.756552Z INFO    - OutputPort: non_uniformity_pipeline.spatial_processing_group.spatial_resampling_unit.out; Actual kind: AK_BAND_IMAGE_BSQ; Minimal kind: AK_ABSTRACT_BAND_IMAGE
+2024-08-30T15:19:35.756557Z INFO    - InputPort: non_uniformity_pipeline.spatial_processing_group.illumination_fall_off.in; Actual kind: AK_BAND_IMAGE_BSQ; Minimal kind: AK_ARRAY
+2024-08-30T15:19:35.959165Z INFO    - ProcessingUnit::Process
+2024-08-30T15:19:36.148834Z INFO    - ProcessingUnit::_PropagateDataTypes()
+2024-08-30T15:19:36.148857Z INFO    - OutputPort: reference_spectrum_pipeline.spatial_processing_group.spatial_resampling_unit.out; Actual kind: AK_BAND_IMAGE_BSQ; Minimal kind: AK_ABSTRACT_BAND_IMAGE
+2024-08-30T15:19:36.148862Z INFO    - InputPort: reference_spectrum_pipeline.spatial_processing_group.spatial_processing_group_out.in; Actual kind: AK_BAND_IMAGE_BSQ; Minimal kind: AK_BAND_IMAGE_BSQ
+2024-08-30T15:19:36.398251Z INFO    - ProcessingUnit::Process
+2024-08-30T15:19:36.554007Z INFO    - ProcessingUnit::Process
+2024-08-30T15:19:36.709571Z INFO    - ProcessingUnit::Process
+2024-08-30T15:19:36.865413Z INFO    - ProcessingUnit::Process
+2024-08-30T15:19:37.021743Z INFO    - ProcessingUnit::Process
+2024-08-30T15:19:37.176761Z INFO    - ProcessingUnit::Process
+2024-08-30T15:19:37.332524Z INFO    - ProcessingUnit::Process
+2024-08-30T15:19:37.488961Z INFO    - ProcessingUnit::Process
+2024-08-30T15:19:37.644980Z INFO    - ProcessingUnit::Process
+2024-08-30T15:19:37.800480Z INFO    - ProcessingUnit::Process
+2024-08-30T15:19:37.955970Z INFO    - ProcessingUnit::Process
+2024-08-30T15:19:38.112149Z INFO    - ProcessingUnit::Process
+2024-08-30T15:19:38.268537Z INFO    - ProcessingUnit::Process
+2024-08-30T15:19:38.424086Z INFO    - ProcessingUnit::Process
+2024-08-30T15:19:38.581228Z INFO    - ProcessingUnit::Process
+2024-08-30T15:19:38.736772Z INFO    - ProcessingUnit::Process
+2024-08-30T15:19:38.906171Z INFO    - ProcessingUnit::Process
+2024-08-30T15:19:39.062517Z INFO    - ProcessingUnit::Process
+2024-08-30T15:19:39.217708Z INFO    - ProcessingUnit::Process
+2024-08-30T15:19:39.375667Z INFO    - ProcessingUnit::Process
+2024-08-30T15:19:39.534904Z INFO    - ProcessingUnit::Process
+2024-08-30T15:19:39.690182Z INFO    - ProcessingUnit::Process
+2024-08-30T15:19:39.845175Z INFO    - ProcessingUnit::Process
+2024-08-30T15:19:40.002501Z INFO    - ProcessingUnit::Process
+2024-08-30T15:19:40.158412Z INFO    - ProcessingUnit::Process
+2024-08-30T15:19:40.313711Z INFO    - ProcessingUnit::Process
+2024-08-30T15:19:40.470462Z INFO    - ProcessingUnit::Process
+2024-08-30T15:19:40.629286Z INFO    - ProcessingUnit::Process
+2024-08-30T15:19:40.784175Z INFO    - ProcessingUnit::Process
+2024-08-30T15:19:40.940840Z INFO    - ProcessingUnit::Process
+2024-08-30T15:19:41.096962Z INFO    - ProcessingUnit::Process
+2024-08-30T15:19:41.254441Z INFO    - ProcessingUnit::Process
+2024-08-30T15:19:41.415094Z INFO    - ProcessingUnit::Process
+2024-08-30T15:19:41.571414Z INFO    - ProcessingUnit::Process
+2024-08-30T15:19:41.728299Z INFO    - ProcessingUnit::Process
+2024-08-30T15:19:41.884368Z INFO    - ProcessingUnit::Process
+2024-08-30T15:19:42.040403Z INFO    - ProcessingUnit::Process
+2024-08-30T15:19:42.196905Z INFO    - ProcessingUnit::Process
+2024-08-30T15:19:42.355606Z INFO    - ProcessingUnit::Process
+2024-08-30T15:19:42.511463Z INFO    - ProcessingUnit::Process
+2024-08-30T15:19:42.667710Z INFO    - ProcessingUnit::Process
+2024-08-30T15:19:42.824405Z INFO    - ProcessingUnit::Process
+2024-08-30T15:19:42.981288Z INFO    - ProcessingUnit::Process
+2024-08-30T15:19:43.141142Z INFO    - ProcessingUnit::Process
+2024-08-30T15:19:43.296731Z INFO    - ProcessingUnit::Process
+2024-08-30T15:19:43.453263Z INFO    - ProcessingUnit::Process
+2024-08-30T15:19:43.610438Z INFO    - ProcessingUnit::Process
+2024-08-30T15:19:43.765936Z INFO    - ProcessingUnit::Process
+2024-08-30T15:19:43.922165Z INFO    - ProcessingUnit::Process
+2024-08-30T15:19:44.086655Z INFO    - ProcessingUnit::Process
+2024-08-30T15:19:44.245057Z INFO    - ProcessingUnit::Process
+2024-08-30T15:19:44.403290Z INFO    - ProcessingUnit::Process
+2024-08-30T15:19:44.568687Z INFO    - ProcessingUnit::Process
+2024-08-30T15:19:44.727018Z INFO    - ProcessingUnit::Process
+2024-08-30T15:19:44.889839Z INFO    - ProcessingUnit::Process
+2024-08-30T15:19:45.049844Z INFO    - ProcessingUnit::Process
+2024-08-30T15:19:45.208598Z INFO    - ProcessingUnit::Process
+2024-08-30T15:19:45.365915Z INFO    - ProcessingUnit::Process
+2024-08-30T15:19:45.522386Z INFO    - ProcessingUnit::Process
+2024-08-30T15:19:45.683514Z INFO    - ProcessingUnit::Process
+2024-08-30T15:19:45.840101Z INFO    - ProcessingUnit::Process
+2024-08-30T15:19:45.998281Z INFO    - ProcessingUnit::Process
+2024-08-30T15:19:46.158872Z INFO    - ProcessingUnit::Process
+2024-08-30T15:19:46.314952Z INFO    - ProcessingUnit::Process
+2024-08-30T15:19:46.471935Z INFO    - ProcessingUnit::Process
+2024-08-30T15:19:46.628538Z INFO    - ProcessingUnit::Process
+2024-08-30T15:19:46.786178Z INFO    - ProcessingUnit::Process
+2024-08-30T15:19:46.942707Z INFO    - ProcessingUnit::Process
+2024-08-30T15:19:47.103473Z INFO    - ProcessingUnit::Process
+2024-08-30T15:19:47.261903Z INFO    - ProcessingUnit::Process
+2024-08-30T15:19:47.420413Z INFO    - ProcessingUnit::Process
+2024-08-30T15:19:47.577098Z INFO    - ProcessingUnit::Process
+2024-08-30T15:19:47.734358Z INFO    - ProcessingUnit::Process
+2024-08-30T15:19:47.891874Z INFO    - ProcessingUnit::Process
+2024-08-30T15:19:48.050514Z INFO    - ProcessingUnit::Process
+2024-08-30T15:19:48.208136Z INFO    - ProcessingUnit::Process
+2024-08-30T15:19:48.365213Z INFO    - ProcessingUnit::Process
+2024-08-30T15:19:48.525592Z INFO    - ProcessingUnit::Process
+2024-08-30T15:19:48.690535Z INFO    - ProcessingUnit::Process
+2024-08-30T15:19:48.845233Z INFO    - ProcessingUnit::Process
+2024-08-30T15:19:49.002103Z INFO    - ProcessingUnit::Process
+2024-08-30T15:19:49.157777Z INFO    - ProcessingUnit::Process
+2024-08-30T15:19:49.316722Z INFO    - ProcessingUnit::Process
+2024-08-30T15:19:49.478321Z INFO    - ProcessingUnit::Process
+2024-08-30T15:19:49.634170Z INFO    - ProcessingUnit::Process
+2024-08-30T15:19:49.790467Z INFO    - ProcessingUnit::Process
+2024-08-30T15:19:49.947012Z INFO    - ProcessingUnit::Process
+2024-08-30T15:19:50.102375Z INFO    - ProcessingUnit::Process
+2024-08-30T15:19:50.257671Z INFO    - ProcessingUnit::Process
+2024-08-30T15:19:50.413972Z INFO    - ProcessingUnit::Process
+2024-08-30T15:19:50.569559Z INFO    - ProcessingUnit::Process
+2024-08-30T15:19:50.725263Z INFO    - ProcessingUnit::Process
+2024-08-30T15:19:50.881758Z INFO    - ProcessingUnit::Process
+2024-08-30T15:19:51.038632Z INFO    - ProcessingUnit::Process
+2024-08-30T15:19:51.196215Z INFO    - ProcessingUnit::Process
+2024-08-30T15:19:51.352768Z INFO    - ProcessingUnit::Process
+2024-08-30T15:19:51.509796Z INFO    - ProcessingUnit::Process
+2024-08-30T15:19:51.669077Z INFO    - ProcessingUnit::Process
+2024-08-30T15:19:51.826109Z INFO    - ProcessingUnit::Process
+2024-08-30T15:19:51.987002Z INFO    - ProcessingUnit::Process
+2024-08-30T15:19:52.143025Z INFO    - ProcessingUnit::Process
+2024-08-30T15:19:52.304280Z INFO    - ProcessingUnit::Process
+2024-08-30T15:19:52.465715Z INFO    - ProcessingUnit::Process
+2024-08-30T15:19:52.622391Z INFO    - ProcessingUnit::Process
+2024-08-30T15:19:52.778967Z INFO    - ProcessingUnit::Process
+2024-08-30T15:19:52.936130Z INFO    - ProcessingUnit::Process
+2024-08-30T15:19:53.092374Z INFO    - ProcessingUnit::Process
+2024-08-30T15:19:53.250258Z INFO    - ProcessingUnit::Process
+2024-08-30T15:19:53.409210Z INFO    - ProcessingUnit::Process
+2024-08-30T15:19:53.566377Z INFO    - ProcessingUnit::Process
+2024-08-30T15:19:53.722385Z INFO    - ProcessingUnit::Process
+2024-08-30T15:19:53.878628Z INFO    - ProcessingUnit::Process
+2024-08-30T15:19:54.034948Z INFO    - ProcessingUnit::Process
+2024-08-30T15:19:54.190987Z INFO    - ProcessingUnit::Process
+2024-08-30T15:19:54.349795Z INFO    - ProcessingUnit::Process
+2024-08-30T15:19:54.510685Z INFO    - ProcessingUnit::Process
+2024-08-30T15:19:54.667008Z INFO    - ProcessingUnit::Process
+2024-08-30T15:19:54.823674Z INFO    - ProcessingUnit::Process
+2024-08-30T15:19:54.980885Z INFO    - ProcessingUnit::Process
+2024-08-30T15:19:55.136570Z INFO    - ProcessingUnit::Process
+2024-08-30T15:19:55.294471Z INFO    - ProcessingUnit::Process
+2024-08-30T15:19:55.450862Z INFO    - ProcessingUnit::Process
+2024-08-30T15:19:55.608116Z INFO    - ProcessingUnit::Process
+2024-08-30T15:19:55.768263Z INFO    - ProcessingUnit::Process
+2024-08-30T15:19:55.925980Z INFO    - ProcessingUnit::Process
+2024-08-30T15:19:56.083488Z INFO    - ProcessingUnit::Process
+2024-08-30T15:19:56.240728Z INFO    - ProcessingUnit::Process
+2024-08-30T15:19:56.396840Z INFO    - ProcessingUnit::Process
+2024-08-30T15:19:56.553292Z INFO    - ProcessingUnit::Process
+2024-08-30T15:19:56.710844Z INFO    - ProcessingUnit::Process
+2024-08-30T15:19:56.866638Z INFO    - ProcessingUnit::Process
