@@ -23,6 +23,7 @@ def generate_launch_description():
 
     return LaunchDescription([
         SetEnvironmentVariable('GENICAM_ROOT_V3_1', '/opt/pleora/ebus_sdk/Ubuntu-22.04-x86_64/lib/genicam'),
+        SetEnvironmentVariable('GENICAM_ROOT_V3_4', '/opt/pleora/ebus_sdk/Ubuntu-22.04-x86_64/lib/genicam'),
         SetEnvironmentVariable('LD_LIBRARY_PATH', ld_path),
 
         Node(
@@ -32,8 +33,8 @@ def generate_launch_description():
             emulate_tty=True,
             parameters=[{
                 'camera_model': 'imec',
-                'frame_rate': 10,
-                'integration_time': 70
+                'frame_rate': 15, #10
+                'integration_time': 60 #70
             }]
         ),
 
@@ -42,5 +43,5 @@ def generate_launch_description():
             executable='cube_visualizer',
             output='screen',
             emulate_tty=True,
-        )
+        ),
     ])

@@ -7,9 +7,10 @@ import traceback
 import numpy as np
 import threading
 from bs4 import BeautifulSoup
-from numba import jit, prange
+#from numba import jit, prange
 from pathlib import Path
 import matplotlib.pyplot as plt
+import time
 
 # Messages
 from std_msgs.msg import Header
@@ -89,6 +90,9 @@ class Publisher(Node):
         # Timer callback to run camera
         frame_period = 0.001
         self.timer = self.create_timer(frame_period, self.timer_callback)
+
+    def image_callback(self, msg: Image) -> None:
+        self.img = msg
 
     def initialize_camera(self) -> None:
         # Rate at which to generate composite data cubes
@@ -298,21 +302,31 @@ class Publisher(Node):
         '''
         Publish hyperspectral datacubes
         '''
-
+        t_a = time.time()
         self.undistort(cube)
-
         # Mark that we've received a new cube
         ros_cube = DataCube()
         # Create header
         h = Header()
         h.stamp = self.get_clock().now().to_msg()
         ros_cube.header = h
+        t_b = time.time()
+        t0 = time.time()
         ros_cube.data = cube.astype(np.float32).flatten().tolist()
+        t1 = time.time()
+        self.get_logger().info(
+            f'cube flatten={t1-t0:.6f}s'
+        )
+        t_c = time.time()
         ros_cube.width, ros_cube.height, ros_cube.lam = tuple(cube.shape)
         ros_cube.qe = self.QE
         ros_cube.fwhm_nm = self.fwhm
         ros_cube.central_wavelengths = self.central_wave
+        t_d = time.time()
         self.pub_cube.publish(ros_cube)
+        t_e = time.time()
+        self.get_logger().info(f'Undistort Cube:{t_b-t_a:.3f} convert to message:{t_c-t_b:.3f} metadata:{t_d-t_c:.3f} publish:{t_e-t_d:.3f}')
+
     
     def timer_callback(self):
         # run central processing loop for camera
@@ -321,18 +335,39 @@ class Publisher(Node):
             # Send a software Tigger to the camera and grab the Frame
             # HSI_CAMERA.Trigger(self.device)
             with self.lock:
+                t0 = time.time()
                 HSI_CAMERA.AcquireFrame(self.device, frame=self.frame)
-                tmp = HSI_COMMON.FrameAsArray(self.frame) # internally convert frame to numpy array
+                t1 = time.time()
+                # tmp = HSI_COMMON.FrameAsArray(self.frame) # internally convert frame to numpy array
                 # Publish raw image
-                self.publish_raw(tmp)
+                # self.publish_raw(tmp)
                 HSI_MOSAIC.PushFrame(self.pipeline, self.frame)
+                t2 = time.time()
                 HSI_MOSAIC.GetCube(self.pipeline, self.cube, timeout_ms=1000)
-                py_cube = HSI_COMMON.CubeAsArray(self.cube, BSQ=False)
+                t3 = time.time()
+                raw = HSI_COMMON.CubeAsArray(self.cube, BSQ=False)
+                py_cube = np.empty((168, 211, 9), dtype=np.float32)
+                np.copyto(py_cube, raw)
+                self.get_logger().info(
+                    f"OWNDATA={py_cube.flags.owndata}, "
+                    f"WRITEABLE={py_cube.flags.writeable}, "
+                    f"ALIGNED={py_cube.flags.aligned}"
+                )
+                self.get_logger().info(f'Cube dtype: {py_cube.dtype}, shape: {py_cube.shape}, contiguous: {py_cube.flags["C_CONTIGUOUS"]}')
+                self.get_logger().info(str(py_cube.flags))
+
                 self.publish_cube(py_cube)
+                t4 = time.time()
+                self.get_logger().info(f'Acquire:{t1-t0:.3f} Push:{t2-t1:.3f} GetCube:{t3-t2:.3f} Publish:{t4-t3:.3f}')
         except Exception as e:
             self.get_logger().error(traceback.print_exc())
             self.get_logger().error('Exception in main capture loop')
             self.restart_camera()
+
+        test_array = np.ones((168, 211, 9), dtype=np.float32)
+        t_test = time.time()
+        test_bytes = test_array.tobytes()
+        self.get_logger().info(f'Fresh array tobytes: {time.time()-t_test:.4f}s')
             
 
 def main(args=None):

@@ -7,9 +7,10 @@ import traceback
 import numpy as np
 import threading
 from bs4 import BeautifulSoup
-from numba import jit, prange
+#from numba import jit, prange
 from pathlib import Path
 import matplotlib.pyplot as plt
+import array
 
 # Messages
 from std_msgs.msg import Header
@@ -29,6 +30,7 @@ import ros2_numpy
 os.environ['PATH'] += os.pathsep + r'/opt/imec/hsi-mosaic/bin'
 # Also add them to the path
 sys.path.append('/opt/imec/hsi-mosaic/python_apis')
+
 # Import IMEC specific libraries
 import hsi_common as HSI_COMMON
 import hsi_camera as HSI_CAMERA
@@ -50,7 +52,7 @@ class DataCubesGenerator(Node):
         # Setup callback for data
         self.package_share_dir = get_package_share_directory('hyper_drive')
 
-        self.declare_parameter('sleep', 0.001)
+        self.declare_parameter('sleep', 0.001) #0.001
         self.sleep_time = self.get_parameter('sleep').get_parameter_value().double_value
 
         #ximea
@@ -77,8 +79,8 @@ class DataCubesGenerator(Node):
         # Create publisher to send datacubes on
         self.pub_cube = self.create_publisher(MultipleDataCubes, 'synchronous_cubes', 10)
         #subscribe to Vimba raw image
-        self.sub_img = self.create_subscription(Image, f'/camera/image_raw', self.image_callback)
-        self.raw_img = np.zeros((100,100,3),dtype=np.uint8)
+        self.sub_img = self.create_subscription(Image, f'/camera/image_raw', self.image_callback, 10)
+        self.raw_img = Image()
         
         # Load camera parameters
         self.parse_parameters('ximea')
@@ -104,7 +106,7 @@ class DataCubesGenerator(Node):
 
     #callback to handle vimba raw image
     def image_callback(self, msg: Image) -> None:
-        self.raw_img = ros2_numpy.numpify(msg)
+        self.raw_img = msg
 
     def initialize_camera(self, model) -> None:
         # Rate at which to generate composite data cubes
@@ -259,12 +261,14 @@ class DataCubesGenerator(Node):
         with open(param_path, 'r') as f:
             data = f.read()
             Bs_data = BeautifulSoup(data, "xml")
-            self.x_central_wave = []
-            self.i_central_wave = []
-            self.x_fwhm = []
-            self.i_fwhm = []
-            self.x_QE = []
-            self.i_QE = []
+            if model == 'ximea':
+                self.x_central_wave = []
+                self.x_fwhm = []
+                self.x_QE = []
+            elif model == 'imec':
+                self.i_central_wave = []
+                self.i_fwhm = []
+                self.i_QE = []
             for band in Bs_data.find_all("wavelength_nm"):
                 if model == 'ximea':
                     self.x_central_wave.append(float(band.getText()))
@@ -367,43 +371,71 @@ class DataCubesGenerator(Node):
         '''
         Publish hyperspectral datacubes
         '''
-
-        # self.undistort(x_cube, 'ximea')
-        # self.undistort(i_cube, 'imec')
-
+        t0 = time.time()
+        #self.undistort(x_cube, 'ximea')
+        #self.undistort(i_cube, 'imec')
+        t1 = time.time()
         # print(f'XIMEA: {x_cube.shape}')
         # print(f'IMEC: {i_cube.shape}')
         # print(f'VIMBA: {self.raw_img.shape}')
-        tcube = ((x_cube[:,:,0]) * (1/((x_cube[:,:,0].max())) * 255)).astype('uint8')
-        tcube = ((i_cube[:,:,0]) * (1/((i_cube[:,:,0].max())) * 255)).astype('uint8')
+        # tcube = ((x_cube[:,:,0]) * (1/((x_cube[:,:,0].max())) * 255)).astype('uint8') 
+        # tcube = ((i_cube[:,:,0]) * (1/((i_cube[:,:,0].max())) * 255)).astype('uint8')
         #Messages
         x_ros_cube = DataCube()
         i_ros_cube = DataCube()
         ros_cubes = MultipleDataCubes()
-        np.save('/home/river/x_cube.npy', x_cube)
-        np.save('/home/river/i_cube.npy', i_cube)
+        t2 = time.time()
+        # np.save('/home/river/x_cube.npy', x_cube)
+        # np.save('/home/river/i_cube.npy', i_cube)
         # Create header
         h = Header()
         h.stamp = self.get_clock().now().to_msg()
         
         x_ros_cube.header = h
-        x_ros_cube.data = x_cube.astype(np.float32).flatten().tolist()
+        t3 = time.time()
+        #x_ros_cube.data = x_cube.astype(np.float32).flatten().tolist()
+        x_ros_cube.data = array.array('f', np.ascontiguousarray(x_cube, dtype=np.float32).tobytes())
+        t4 = time.time()
+        # x_ros_cube.data = x_cube.astype(np.float32).flatten().tolist()
         x_ros_cube.width, x_ros_cube.height, x_ros_cube.lam = tuple(x_cube.shape)
         x_ros_cube.qe = self.x_QE
         x_ros_cube.fwhm_nm = self.x_fwhm
         x_ros_cube.central_wavelengths = self.x_central_wave
-        
+        t5 = time.time()
+
         i_ros_cube.header = h
-        i_ros_cube.data = i_cube.astype(np.float32).flatten().tolist()
+        t6 = time.time()
+        #i_ros_cube.data = i_cube.astype(np.float32).flatten().tolist()
+        i_ros_cube.data = array.array('f', np.ascontiguousarray(i_cube, dtype=np.float32).tobytes())
+        t7 = time.time()
+        # i_ros_cube.data = i_cube.astype(np.float32).flatten().tolist()
         i_ros_cube.width, i_ros_cube.height, i_ros_cube.lam = tuple(i_cube.shape)
         i_ros_cube.qe = self.i_QE
         i_ros_cube.fwhm_nm = self.i_fwhm
         i_ros_cube.central_wavelengths = self.i_central_wave
+        t8 = time.time()
         ros_cubes.cubes = [x_ros_cube, i_ros_cube]
+        t9 = time.time()
 
-        ros_cubes.im = ros2_numpy.msgify(Image, self.raw_img, encoding="32FC1")
+        ros_cubes.im = self.raw_img
         #ros_cubes.im = ros_numpy.msgify(Image, self.raw_img, encoding="8UC3")
+        t10 = time.time()
         self.pub_cube.publish(ros_cubes)
+        t11 = time.time()
+
+        self.get_logger().info(
+        f'Undistort:{t1-t0:.3f} '
+        f'MsgCreate:{t2-t1:.3f} '
+        f'Header:{t3-t2:.3f} '
+        f'XData:{t4-t3:.3f} '
+        f'XMeta:{t5-t4:.3f} '
+        f'IHeader:{t6-t5:.3f} '
+        f'IData:{t7-t6:.3f} '
+        f'IMeta:{t8-t7:.3f} '
+        f'CubeAssign:{t9-t8:.3f} '
+        f'ImAssign:{t10-t9:.3f} '
+        f'Publish:{t11-t10:.3f}'
+)
 
     def timer_callback(self):
         '''
@@ -417,27 +449,40 @@ class DataCubesGenerator(Node):
             if current_time > self.time_future:
                 self.time_future = current_time + self.time_wait
                 with self.lock:
-                    HSI_CAMERA.Trigger(self.x_device)
-                    HSI_CAMERA.Trigger(self.i_device)
-
-                    HSI_CAMERA.AcquireFrame(self.x_device, frame=self.x_frame)
-                    HSI_CAMERA.AcquireFrame(self.i_device, frame=self.i_frame)               
-
-                    HSI_MOSAIC.PushFrame(self.x_pipeline, self.x_frame)
-                    HSI_MOSAIC.PushFrame(self.i_pipeline, self.i_frame)
-
-                    HSI_MOSAIC.GetCube(self.x_pipeline, self.x_cube, timeout_ms=1000)
-                    HSI_MOSAIC.GetCube(self.i_pipeline, self.i_cube, timeout_ms=1000)
+                    #HSI_CAMERA.Trigger(self.x_device)
+                    #HSI_CAMERA.Trigger(self.i_device)
                     
+                    t0 = time.time()
+                    HSI_CAMERA.AcquireFrame(self.x_device, frame=self.x_frame)
+                    t0_x = time.time()
+                    HSI_CAMERA.AcquireFrame(self.i_device, frame=self.i_frame)
+                    t0_i = time.time()
+
+                    t1 = time.time()               
+                    HSI_MOSAIC.PushFrame(self.x_pipeline, self.x_frame)
+                    t1_x = time.time()
+                    HSI_MOSAIC.PushFrame(self.i_pipeline, self.i_frame)
+                    t1_i = time.time()
+                    
+                    t2 = time.time()
+                    HSI_MOSAIC.GetCube(self.x_pipeline, self.x_cube, timeout_ms=1000)
+                    t2_x = time.time()
+                    HSI_MOSAIC.GetCube(self.i_pipeline, self.i_cube, timeout_ms=1000)
+                    t2_i = time.time()
+                    
+                    t3 = time.time()
                     x_py_cube = HSI_COMMON.CubeAsArray(self.x_cube, BSQ=False)
                     i_py_cube = HSI_COMMON.CubeAsArray(self.i_cube, BSQ=False)
 
-                    self.get_logger().info(f'Cube shapes XIMEA: {x_py_cube.shape}, IMEC: {i_py_cube.shape}, VIMBA: {self.raw_img.shape}')
+                    self.get_logger().info(f'Cube shapes XIMEA: {x_py_cube.shape}, IMEC: {i_py_cube.shape}, VIMBA: {self.raw_img.width}x{self.raw_img.height}')
 
                     self.publish_cubes(x_py_cube, i_py_cube)
+                    
+                    t4 = time.time()
+                    self.get_logger().info(f'Acquire Ximea:{t0_x-t0:.3f} Acquire Imec:{t0_i-t0_x:.3f} Push Ximea:{t1_x-t1:.3f} Push Imec:{t1_i-t1_x:.3f} GetCube Ximea:{t2_x-t2:.3f} GetCube Imec:{t2_i-t2_x:.3f} Publish:{t4-t3:.3f}')
 
         except Exception as e:
-            self.get_logger().error(traceback.print_exc())
+            self.get_logger().error(traceback.format_exc())
             self.get_logger().error('Exception in main capture loop')
             self.restart_camera()
 

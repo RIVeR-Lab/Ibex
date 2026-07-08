@@ -59,7 +59,8 @@ setup(
             'combined_cube_data = hyper_drive.combined_cube_data:main',
             'hsi_hist = hyper_drive.hsi_hist:main',
             'cube_visualizer = hyper_drive.cube_visualizer:main',
-            'synchronous_cubes = hyper_drive.synchronous_cubes:main'
+            'synchronous_cubes = hyper_drive.synchronous_cubes:main',
+            'synchronous_cube_visualizer = hyper_drive.synchronous_cube_visualizer:main',
         ],
     },
 )

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<context_description version="1">
+  <meta_data version="1" kind="roi frame">
+    <data_format version="1" kind="roi_frame_data_format" byte_depth="4" data_type="float" saturation_value="7100.000000" max_value="8191.000000" no_data_value="0.000000" nr_cols="639" nr_rows="510">
+      <rois_sensor>
+        <roi version="1" nr_cols="639" nr_rows="510" offset_sensor_x="1" offset_sensor_y="1"/>
+      </rois_sensor>
+    </data_format>
+    <data_info version="1" kind="image_data_info" data_source="HSI Mosaic 2.11.10.0" system_id="iPORT-CL-U3-PT03-CL0UP04-128xU [28B702142385]"/>
+  </meta_data>
+</context_description>

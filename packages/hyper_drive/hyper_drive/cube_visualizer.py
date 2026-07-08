@@ -112,27 +112,30 @@ class CubeVisualizer(Node):
         Receive cube and publish all visualizations
         '''
         # Reshape flat data back into cube
-        cube = np.reshape(
-            np.array(msg.data),
+        cube = np.frombuffer(bytes(msg.data), dtype=np.float32).reshape(
             (msg.width, msg.height, msg.lam)
-        ).astype(np.float32)
+        )
+        # cube = np.reshape(
+        #     np.array(msg.data),
+        #     (msg.width, msg.height, msg.lam)
+        # ).astype(np.float32)
 
         num_bands = msg.lam
 
         # Create per-band publishers if not already created
-        if len(self.band_pubs) != num_bands:
-            self.band_pubs = []
-            for i in range(num_bands):
-                pub = self.create_publisher(Image, f'/visualizer/band_{i}', 10)
-                self.band_pubs.append(pub)
-            self.get_logger().info(f'Created publishers for {num_bands} bands')
+        # if len(self.band_pubs) != num_bands:
+        #     self.band_pubs = []
+        #     for i in range(num_bands):
+        #         pub = self.create_publisher(Image, f'/visualizer/band_{i}', 10)
+        #         self.band_pubs.append(pub)
+        #     self.get_logger().info(f'Created publishers for {num_bands} bands')
 
         # Publish each individual band
-        for i in range(num_bands):
-            self.publish_band(cube[:, :, i], self.band_pubs[i])
+        # for i in range(num_bands):
+        #     self.publish_band(cube[:, :, i], self.band_pubs[i])
 
         # Publish false color composite
-        self.publish_false_color(cube)
+        # self.publish_false_color(cube)
 
         # Publish band grid overview
         self.publish_band_grid(cube)
