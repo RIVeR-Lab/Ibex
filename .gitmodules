@@ -4,3 +4,5 @@
 [submodule "packages/insta360_ros_driver"]
 	path = packages/insta360_ros_driver
 	url = https://github.com/RIVeR-Lab/insta360_ros_driver.git
+[submodule "./shared_link_bridge/"]
+	url = https://github.com/RIVeR-Lab/shared_link_bridge.git
