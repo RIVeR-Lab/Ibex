@@ -30,4 +30,13 @@ def generate_launch_description():
     )
     ld.add_action(sensors_launch)
 
+    processing_launch = IncludeLaunchDescription(
+        PythonLaunchDescriptionSource(
+            PathJoinSubstitution(
+                [FindPackageShare("ibex_bringup"), "launch", "processing.launch.py"]
+            )
+        ),
+    )
+    ld.add_action(processing_launch)
+
     return ld
