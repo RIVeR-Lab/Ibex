@@ -6,3 +6,6 @@
 	url = https://github.com/RIVeR-Lab/insta360_ros_driver.git
 [submodule "./shared_link_bridge/"]
 	url = https://github.com/RIVeR-Lab/shared_link_bridge.git
+[submodule "packages/kiss-icp"]
+	path = packages/kiss-icp
+	url = https://github.com/PRBonn/kiss-icp.git
