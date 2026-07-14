@@ -21,14 +21,14 @@ ros2 launch ibex_bringup system_bringup.launch.py
 
 ### Launch ouster driver 
 
-First, make lidar IP
+If need to check lidar IP:
 ```bash
 avahi-browse -lrt _roger._tcp
 ```
 
 Next, run (takes a moment to come up)
 ```bash
-ros2 launch ouster_ros driver.launch.py params_file:=/home/river/ibex_ws/src/ibex/packages/ouster-ros/ouster-ros/config/ibex_ouster_sensor_config.yaml viz:=false
+ros2 launch ouster_ros driver.launch.py params_file:=/home/river/ibex_ws/src/ibex/packages/ibex_bringup/config/ibex_ouster_sensor_config.yaml viz:=false
 ```
 
 *no need to use this (gives metadata file at working directory)*
@@ -36,9 +36,10 @@ ros2 launch ouster_ros driver.launch.py params_file:=/home/river/ibex_ws/src/ibe
 ros2 launch ouster_ros sensor.launch.xml sensor_hostname:=169.254.105.158 viz:=false
 ```
 
-
-
-
+### Launch KISS-ICP (Odometry generation)
+```bash
+ros2 launch kiss_icp odometry.launch.py topic:=/ouster/points
+```
 
 ### Launch insta360
 ```bash
