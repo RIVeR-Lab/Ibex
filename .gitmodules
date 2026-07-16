@@ -9,3 +9,5 @@
 [submodule "packages/kiss-icp"]
 	path = packages/kiss-icp
 	url = https://github.com/PRBonn/kiss-icp.git
+[submodules "packages/ouster-ros"]
+	url = https://github.com/RIVeR-Lab/ouster-ros.git
