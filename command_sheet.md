@@ -1,5 +1,15 @@
 # Command Cheat Sheet
 
+## Headless ↔ Headed Mode Switching
+Via SSH from a remote computer → Enter Headless moded (Remove computer connection)
+```bash
+sudo systemctl disable --now gdm3 && sudo /etc/NX/nxserver --restart
+```
+
+Via SSH from a remote computer → Enter Headed moded (Perform with computer connection removed)
+```bash
+sudo systemctl enable --now gdm3
+```
 
 ## System Bringup
 Brings up the sensors and static transforms
