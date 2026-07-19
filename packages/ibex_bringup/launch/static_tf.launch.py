@@ -9,6 +9,21 @@ def generate_launch_description():
     #=========================# Static Transforms #=========================#
     # arguments are: x y z yaw pitch roll parent_frame child_frame
 
+    # base_link to front_bumper
+    base_to_bumper_tf = Node(
+        package="tf2_ros",
+        executable="static_transform_publisher",
+        name="base_to_bumper_static_tf",
+        arguments=[
+            "2.4638", "0.0", "0.5715",
+            "0.0", "0.0", "0.0",
+            "base_link",
+            "front_bumper",
+        ],
+        output="screen",
+    )
+    ld.add_action(base_to_bumper_tf)
+
     # front_bumper to sensor_rack
     ouster_tf = Node(
         package="tf2_ros",
@@ -28,10 +43,10 @@ def generate_launch_description():
     #=====# Ouster Lidar #=====#
 
     # sensor_rack to os_mount
-    insta360_tf = Node(
+    ouster_mount_tf = Node(
         package="tf2_ros",
         executable="static_transform_publisher",
-        name="insta360_static_tf",
+        name="ouster_mount_static_tf",
         arguments=[
             ".830", "0.0", "-0.11",
             "0.0", "0.436", "0.0",
@@ -40,13 +55,13 @@ def generate_launch_description():
         ],
         output="screen",
     )
-    ld.add_action(insta360_tf)
+    ld.add_action(ouster_mount_tf)
 
     # os_mount to os_lidar
-    insta360_tf = Node(
+    ouster_mount_to_lidar_tf = Node(
         package="tf2_ros",
         executable="static_transform_publisher",
-        name="insta360_static_tf",
+        name="ouster_mount_to_lidar_static_tf",
         arguments=[
             "0.0", "0.0", "0.0",
             "0.0", "0.0", "0.0",
@@ -55,7 +70,7 @@ def generate_launch_description():
         ],
         output="screen",
     )
-    ld.add_action(insta360_tf)
+    ld.add_action(ouster_mount_to_lidar_tf)
 
 
     #=====# Insta360 #=====#
@@ -76,10 +91,10 @@ def generate_launch_description():
     ld.add_action(insta360_tf)
 
     # insta_mount to insta_sensor
-    insta360_tf = Node(
+    insta360_to_sensor_tf = Node(
         package="tf2_ros",
         executable="static_transform_publisher",
-        name="insta360_static_tf",
+        name="insta360_to_sensor_static_tf",
         arguments=[
             "0.0", "0.0", "0.13",
             "-1.5708", "0.0", "-1.5708",
@@ -88,6 +103,6 @@ def generate_launch_description():
         ],
         output="screen",
     )
-    ld.add_action(insta360_tf)
+    ld.add_action(insta360_to_sensor_tf)
 
     return ld
