@@ -61,4 +61,15 @@ sudo chmod 777 /dev/bus/usb/XXX/XXX
 ros2 launch hyper_drive synchronous_cameras_launch.py
 ```
 
+### View Hyperspectral and RGB
+```bash
+ros2 run image_view image_view --ros-args -r image:=/visualizer/imec/false_color
+```
+```bash
+ros2 run image_view image_view --ros-args -r image:=/visualizer/ximea/false_color
+```
+```bash
+ros2 run image_view image_view --ros-args -r image:=/visualizer/
+```
+
 
