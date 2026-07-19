@@ -19,14 +19,6 @@ ros2 launch ibex_bringup system_bringup.launch.py
 
 
 
-
-
-
-
-
-
-
-
 ## Individual Launches
 
 ### Launch ouster driver 
