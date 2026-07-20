@@ -16,7 +16,7 @@ def generate_launch_description():
     #=========================# KISS-ICP Config #=========================#
 
     kiss_icp_topic = "/ouster/points"
-    kiss_icp_base_frame = "front_bumper"
+    kiss_icp_base_frame = "base_link"
     kiss_icp_odom_frame = "odom"
     visualize = "False"
 
