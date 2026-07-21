@@ -74,4 +74,16 @@ ros2 run image_view image_view --ros-args -r image:=/visualizer/ximea/false_colo
 ros2 run image_view image_view --ros-args -r image:=/visualizer/
 ```
 
+### Record ROS2 Bag with all topics and compressed data format
+```bash
+ros2 bag record -a -o /home/river/ibex_ws/rosbag_library/<fieldtestname-day-date-time> -s mcap
+```
+
+### Foxglove Data Visualization
+```bash
+foxglove-studio
+
+ros2 launch foxglove_bridge foxglove_bridge_launch.xml port:=8765
+```
+
 

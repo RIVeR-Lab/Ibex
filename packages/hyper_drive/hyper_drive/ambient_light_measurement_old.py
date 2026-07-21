@@ -6,8 +6,10 @@ from rclpy.node import Node
 from std_msgs.msg import Header
 from ament_index_python.packages import get_package_share_directory
 from hyper_drive_interfaces.msg import MultipleDataCubes, DataCube
-from spectrometer_interfaces.msg import Spectra
 #from spectrometer_drivers.msg import Spectra
+
+# Note: spectrometer_drivers.msg needs a ROS2 equivalent
+# from spectrometer_drivers.msg import Spectra
 
 class LightMeasure(Node):
     def __init__(self):
@@ -32,12 +34,12 @@ class LightMeasure(Node):
             10
         )
 
-        self.spectra_sub = self.create_subscription(
-            Spectra,
-            '/combined_spectra',
-            self.spectra_callback,
-            10
-        )
+        # self.spectra_sub = self.create_subscription(
+        #     Spectra,
+        #     '/combined_spectra',
+        #     self.spectra_callback,
+        #     10
+        # )
 
 
         # Publisher
@@ -126,7 +128,7 @@ class LightMeasure(Node):
         plt.plot(self.static_wavelengths_imec, self.S_dark_imec, label = "S_dark_imec")
         plt.plot(self.static_wavelengths_imec, self.S_white_imec, label= "S_white_imec")
         plt.legend()
-        #plt.show()
+        plt.show()
 
     def cubes_callback(self, msg):
         '''
@@ -160,10 +162,10 @@ class LightMeasure(Node):
         #calculating C_ref for ximea and publishing
         C_ref_ximea = np.divide((raw_ximea - self.C_dark_ximea), ((self.C_white_ximea * (self.C_integ_raw_ximea/self.C_integ_white_ximea)) - (self.C_dark_ximea * (self.C_integ_raw_ximea/self.C_integ_dark_ximea))), where=((self.C_white_ximea * (self.C_integ_raw_ximea/self.C_integ_white_ximea)) - (self.C_dark_ximea * (self.C_integ_raw_ximea/self.C_integ_dark_ximea)))!=0) * self.C_norm
         C_ref_ximea = np.reshape(C_ref_ximea, (msg.cubes[0].width, msg.cubes[0].height, msg.cubes[0].lam))
-        #z_axis = np.divide(C_ref_ximea[0][0][:], S_ref_ximea, where=S_ref_ximea!=0)
-        #C_ref_ximea[0][0][:] == z_axis
+        z_axis = np.divide(C_ref_ximea[0][0][:], S_ref_ximea, where=S_ref_ximea!=0)
+        C_ref_ximea[0][0][:] == z_axis
         C_ref_correct_ximea = C_ref_ximea
-        C_ref_correct_ximea = np.apply_along_axis(lambda x: x/S_ref_ximea, 2, C_ref_ximea)
+        # C_ref_correct_ximea = np.apply_along_axis(lambda x: x/S_ref_ximea, 2, C_ref_ximea)
             
         #calculating C_ref for imec and publishing
         C_ref_imec = (raw_imec - self.C_dark_imec)/((self.C_white_imec * (self.C_integ_raw_imec/self.C_integ_white_imec)) - (self.C_dark_imec * (self.C_integ_raw_imec/self.C_integ_dark_imec))) * self.C_norm
@@ -204,7 +206,7 @@ class LightMeasure(Node):
         #imec DataCube
         ros_imec.header = h
         ros_imec.data = imec_cube.flatten()
-        ros_imec.width, ros_imec.height, ros_imec.lam = tuple(imec_cube.shape)
+        ros_imec.width, ros_imec.height, ros_ximea.lam = tuple(imec_cube.shape)
         ros_imec.qe = imec_msg.qe
         ros_imec.fwhm_nm = imec_msg.fwhm_nm
         ros_imec.central_wavelengths = imec_msg.central_wavelengths

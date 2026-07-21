@@ -61,6 +61,8 @@ setup(
             'cube_visualizer = hyper_drive.cube_visualizer:main',
             'synchronous_cubes = hyper_drive.synchronous_cubes:main',
             'synchronous_cube_visualizer = hyper_drive.synchronous_cube_visualizer:main',
+            'ambient_light_measurement = hyper_drive.ambient_light_measurement:main',
+            'corrected_cube_visualizer = hyper_drive.corrected_cube_visualizer:main',
         ],
     },
 )
