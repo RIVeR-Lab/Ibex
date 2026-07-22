@@ -39,7 +39,7 @@ ibex/
 | `Packages/ibex_bringup` | in-repo | [TODO] top-level launch / system bringup | — |
 | `Packages/ibex_state` | in-repo | [TODO] platform state estimation / publishing | — |
 | `Packages/insta360_ros_drivers` | submodule (fork) | [TODO] Insta360 X4 360° camera driver | [TODO: fork + upstream URL] |
-| `Packages/kiss-icp` | submodule (fork) | [TODO] LiDAR odometry front-end | [TODO: fork + upstream URL] |
+| `Packages/kiss-icp` | submodule (upstream) | [TODO] LiDAR odometry front-end | [TODO: fork + upstream URL] |
 | `Packages/ouster-ros` | submodule (fork) | [TODO] Ouster OS1-64 LiDAR driver | [TODO: fork + upstream URL] |
 | `Packages/shared_link_bridge` | submodule (fork) | [TODO] | [TODO: fork + upstream URL] |
 | `Packages/spectrometer_drivers` | in-repo | Ibsen VNIR/NIR point spectrometer driver nodes | — |
