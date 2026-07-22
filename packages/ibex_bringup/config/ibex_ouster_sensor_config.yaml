@@ -71,7 +71,7 @@ ouster/os_driver:
     # use_system_default_qos[optional]: if false, data are published with sensor
     # data QoS. This is preferrable for production but default QoS is needed for
     # rosbag. See: https://github.com/ros2/rosbag2/issues/125
-    use_system_default_qos: false
+    use_system_default_qos: false  # changes reliability from BEST_EFFORT when false to RELIABLE (default CAO 22 Jul 26) when true)
     # point_type[optional]: choose from: {original, native, xyz, xyzi, o_xyzi, 
     #                                     yzir}
     # Here is a breif description of each option:
