@@ -21,6 +21,15 @@ ros2 launch ibex_bringup system_bringup.launch.py
 
 ## Individual Launches
 
+### Launch kairos controller (Shared_Link_Bridge)
+```bash
+ros2 launch shared_link_bridge bringup.launch.py
+```
+or you can launch directly from inside ibex_bring up
+```bash
+ros2 launch ibex_bringup control.launch.py
+```
+
 ### Launch ouster driver 
 
 If need to check lidar IP:
@@ -72,6 +81,13 @@ ros2 run image_view image_view --ros-args -r image:=/visualizer/ximea/false_colo
 ```
 ```bash
 ros2 run image_view image_view --ros-args -r image:=/visualizer/
+```
+
+### Launch and View Point Spectrometer
+```bash
+sudo chmod 777 /dev/bus/usb/XXX/XXX
+
+ros2 launch spectrometer_drivers ibsen_launch.py
 ```
 
 ### Record ROS2 Bag with all topics and compressed data format
