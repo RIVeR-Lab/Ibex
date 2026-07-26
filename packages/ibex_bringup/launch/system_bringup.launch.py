@@ -39,4 +39,13 @@ def generate_launch_description():
     )
     ld.add_action(processing_launch)
 
+    control_launch = IncludeLaunchDescription(
+        PythonLaunchDescriptionSource(
+            PathJoinSubstitution(
+                [FindPackageShare("ibex_bringup"), "launch", "control.launch.py"]
+            )
+        ),
+    )
+    ld.add_action(control_launch)
+
     return ld
