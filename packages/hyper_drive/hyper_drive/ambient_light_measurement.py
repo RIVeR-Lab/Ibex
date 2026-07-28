@@ -45,7 +45,7 @@ class LightMeasure(Node):
 
         # Load reference data
         pkg_path = get_package_share_directory('hyper_drive')
-        npy_path = os.path.join(pkg_path, 'Bag_Files', 'Numpy_Files')
+        npy_path = os.path.join(pkg_path, 'bag_files', 'numpy_files')
 
         #raw data
         # White reference

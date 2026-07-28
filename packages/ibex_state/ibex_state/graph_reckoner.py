@@ -1,11 +1,12 @@
 #!/usr/bin/env python3
 import rclpy
 from rclpy.node import Node
-
-from sensor_msgs.msg import Joy
-from ackermann_msgs.msg import AckermannDriveStamped
-
 from rclpy.executors import ExternalShutdownException
+
+# from geometry_msgs.msg import PoseWithCovarianceStamped
+# placeholder imports for lidar/imu/gps message types -- fill in once known
+
+from ibex_state.estimator.estimators import GraphReckoner
 
 
 class GraphReckoner(Node):
@@ -13,76 +14,135 @@ class GraphReckoner(Node):
     def __init__(self):
         super().__init__("graph_reckoner")
 
-        #==========# Parameters #==========# (controlled in sim/real.yaml)
+        #==========# Parameters #==========#
 
-        # self.n_vehicles = self.declare_parameter("n_vehicles", 0).get_parameter_value().integer_value
+        self.wheelbase = self.declare_parameter("wheelbase", 0.0).get_parameter_value().double_value
+        self.primary_period_s = self.declare_parameter("primary_period_s", 1.0/6.0).get_parameter_value().double_value
 
+        self.prior_noise_std = self.declare_parameter("prior_noise_std", 0.001).get_parameter_value().double_value
+        self.dyn_noise_std = self.declare_parameter("dyn_noise_std", [0.005, 0.005, 1.0, 1.0, 1.0, 0.001]).get_parameter_value().double_array_value
+        self.lidar_noise_std = self.declare_parameter("lidar_noise_std", [0.05, 0.05, 0.05, 0.02, 0.02, 0.02]).get_parameter_value().double_array_value
+        self.lidar_drift_prior_std = self.declare_parameter("lidar_drift_prior_std", [0.01, 0.01, 0.01, 0.005, 0.005, 0.005]).get_parameter_value().double_array_value
+        self.lidar_drift_process_noise_std = self.declare_parameter("lidar_drift_process_noise_std", [0.01, 0.01, 0.01, 0.005, 0.005, 0.005]).get_parameter_value().double_array_value
+        self.residual_prop_noise_std = self.declare_parameter("residual_prop_noise_std", [0.01, 0.01, 1.0, 1.0, 1.0, 0.01]).get_parameter_value().double_array_value
+        self.gps_prop_noise_std = self.declare_parameter("gps_prop_noise_std", [0.5, 0.5, 0.5, 0.5, 0.5, 0.5]).get_parameter_value().double_array_value
+        self.nhc_noise_std = self.declare_parameter("nhc_noise_std", [0.001, 0.001]).get_parameter_value().double_array_value
+        self.rate_prior_std = self.declare_parameter("rate_prior_std", [1.0, 1.0]).get_parameter_value().double_array_value
+        self.rate_process_noise_std = self.declare_parameter("rate_process_noise_std", [0.5, 0.5]).get_parameter_value().double_array_value
+        self.rate_tie_noise_std = self.declare_parameter("rate_tie_noise_std", [0.01, 0.01]).get_parameter_value().double_array_value
+        self.gps_noise_std = self.declare_parameter("gps_noise_std", [1.5, 1.5, 3.0]).get_parameter_value().double_array_value
+        self.lag_seconds = self.declare_parameter("lag_seconds", 5.0).get_parameter_value().double_value
+        self.init_velocity_noise_std = self.declare_parameter("init_velocity_noise_std", 1.0).get_parameter_value().double_value
+
+        self.enable_lidar = self.declare_parameter("enable_lidar", True).get_parameter_value().bool_value
+        self.enable_IMUs = self.declare_parameter("enable_IMUs", True).get_parameter_value().bool_value
+        self.enable_NHC = self.declare_parameter("enable_NHC", True).get_parameter_value().bool_value
+        self.enable_rate = self.declare_parameter("enable_rate", True).get_parameter_value().bool_value
+        self.enable_gps = self.declare_parameter("enable_gps", True).get_parameter_value().bool_value
+
+        self.imu_ouster_gyro_noise_std = self.declare_parameter("imu_ouster.gyro_noise_std", 0.01).get_parameter_value().double_value
+        self.imu_ouster_accel_noise_std = self.declare_parameter("imu_ouster.accel_noise_std", 0.05).get_parameter_value().double_value
+        self.imu_ouster_integration_noise_std = self.declare_parameter("imu_ouster.integration_noise_std", 1e-4).get_parameter_value().double_value
+        self.imu_ouster_gyro_bias_walk_std = self.declare_parameter("imu_ouster.gyro_bias_walk_std", 0.0005).get_parameter_value().double_value
+        self.imu_ouster_accel_bias_walk_std = self.declare_parameter("imu_ouster.accel_bias_walk_std", 0.001).get_parameter_value().double_value
+
+        self.imu_insta_gyro_noise_std = self.declare_parameter("imu_insta.gyro_noise_std", 0.01).get_parameter_value().double_value
+        self.imu_insta_accel_noise_std = self.declare_parameter("imu_insta.accel_noise_std", 0.05).get_parameter_value().double_value
+        self.imu_insta_integration_noise_std = self.declare_parameter("imu_insta.integration_noise_std", 1e-4).get_parameter_value().double_value
+        self.imu_insta_gyro_bias_walk_std = self.declare_parameter("imu_insta.gyro_bias_walk_std", 0.0005).get_parameter_value().double_value
+        self.imu_insta_accel_bias_walk_std = self.declare_parameter("imu_insta.accel_bias_walk_std", 0.001).get_parameter_value().double_value
+
+        self.imu_configs = {
+            "imu_ouster": {
+                "gyro_noise_std": self.imu_ouster_gyro_noise_std,
+                "accel_noise_std": self.imu_ouster_accel_noise_std,
+                "integration_noise_std": self.imu_ouster_integration_noise_std,
+                "gyro_bias_walk_std": self.imu_ouster_gyro_bias_walk_std,
+                "accel_bias_walk_std": self.imu_ouster_accel_bias_walk_std,
+            },
+            "imu_insta": {
+                "gyro_noise_std": self.imu_insta_gyro_noise_std,
+                "accel_noise_std": self.imu_insta_accel_noise_std,
+                "integration_noise_std": self.imu_insta_integration_noise_std,
+                "gyro_bias_walk_std": self.imu_insta_gyro_bias_walk_std,
+                "accel_bias_walk_std": self.imu_insta_accel_bias_walk_std,
+            },
+        }
+
+        #==========# Estimator #==========#
+
+        self.estimator = GraphReckoner(
+            wheelbase=self.wheelbase,
+            prior_noise_std=self.prior_noise_std,
+            init_velocity_noise_std=self.init_velocity_noise_std,
+            dyn_noise_std=tuple(self.dyn_noise_std),
+            lidar_noise_std=tuple(self.lidar_noise_std),
+            lidar_drift_prior_std=tuple(self.lidar_drift_prior_std),
+            lidar_drift_process_noise_std=tuple(self.lidar_drift_process_noise_std),
+            residual_prop_noise_std=tuple(self.residual_prop_noise_std),
+            gps_prop_noise_std=tuple(self.gps_prop_noise_std),
+            imu_configs=self.imu_configs,
+            nhc_noise_std=tuple(self.nhc_noise_std),
+            rate_prior_std=tuple(self.rate_prior_std),
+            rate_process_noise_std=tuple(self.rate_process_noise_std),
+            rate_tie_noise_std=tuple(self.rate_tie_noise_std),
+            gps_noise_std=tuple(self.gps_noise_std),
+            lag_seconds=self.lag_seconds,
+            enable_lidar=self.enable_lidar,
+            enable_IMUs=self.enable_IMUs,
+            enable_NHC=self.enable_NHC,
+            enable_rate=self.enable_rate,
+            enable_gps=self.enable_gps,
+        )
 
         #==========# Publishers & Subscribers #==========#
 
-        self.create_subscription(Joy, joy_topic, self.joy_cb, 1)
+        # self.pose_pub = self.create_publisher(PoseWithCovarianceStamped, pose_topic, 10)
 
-        self.joy_pubs = []
-        self.drive_pubs = []
-        for i in range(self.n_vehicles):
-            self.joy_pubs.append(self.create_publisher(Joy, f"/veh_{i}/{joy_topic}", 1))
-            self.drive_pubs.append(self.create_publisher(AckermannDriveStamped, f"/veh_{i}/{drive_topic}", 1))
+        # self.create_subscription(LidarMsgType, lidar_topic, self.lidar_cb, 10)
+        # self.create_subscription(ImuMsgType, ouster_imu_topic, self.ouster_imu_cb, 10)
+        # self.create_subscription(ImuMsgType, insta_imu_topic, self.insta_imu_cb, 10)
+        # self.create_subscription(GpsMsgType, gps_topic, self.gps_cb, 10)
+
+        self.primary_timer = self.create_timer(self.primary_period_s, self.primary_timer_cb)
 
         #==========# State #==========#
 
-        self.active_vehicle = 0
-        self.last_dpad_y = 0.0
-
-        # self.get_logger().info(f"Subscribing to joy topic: {joy_topic}")
-        # self.get_logger().info(f"n_vehicles: {self.n_vehicles}, selector_only_veh_0_joy: {self.selector_only_veh_0_joy}")
+        self.last_v = 0.0
+        self.last_delta = 0.0
 
 
-    def joy_cb(self, msg: Joy):
-        if len(msg.buttons) <= self.teleop_deadman_button:
-            return
- 
-        # Dpad up/down to cycle active vehicle
-        if len(msg.axes) > self.dpad_y_axis:
-            dpad_y = msg.axes[self.dpad_y_axis]
-            if dpad_y == 1.0 and self.last_dpad_y != 1.0:  # up: previous vehicle
-                self.active_vehicle = max(0, self.active_vehicle - 1)
-                self.get_logger().info(f"Active vehicle: veh_{self.active_vehicle}")
-            elif dpad_y == -1.0 and self.last_dpad_y != -1.0:  # down: next vehicle
-                self.active_vehicle = min(self.n_vehicles - 1, self.active_vehicle + 1)
-                self.get_logger().info(f"Active vehicle: veh_{self.active_vehicle}")
-            self.last_dpad_y = dpad_y
- 
-        # Publish raw joy
-        if self.selector_only_veh_0_joy: # always publish to /veh_0/joy (auto control) for deadman on all trail vehicles and publish to active vehicle (ekf)
-            self.joy_pubs[0].publish(msg)
-            if self.active_vehicle != 0:
-                self.joy_pubs[self.active_vehicle].publish(msg)
-        else: # publish to active vehicle's joy topic
-            self.joy_pubs[self.active_vehicle].publish(msg)
- 
-        # Gate drive commands behind LB
-        if not msg.buttons[self.teleop_deadman_button]:
-            return
- 
-        if len(msg.axes) <= max(self.joy_speed_axis, self.joy_steer_axis):
-            self.get_logger().warn("Joy message has fewer axes than expected")
-            return
- 
-        drive_msg = AckermannDriveStamped()
-        drive_msg.header.stamp = self.get_clock().now().to_msg()
-        drive_msg.drive.speed = max(0.0,msg.axes[self.joy_speed_axis] * self.joy_speed_scale) # clamped because Gym crashes :/
-        drive_msg.drive.steering_angle = msg.axes[self.joy_steer_axis] * self.joy_steer_scale
- 
-        if self.selector_only_veh_0_joy: # drive active vehicle, brake all others
-            brake_msg = AckermannDriveStamped()
-            brake_msg.header.stamp = self.get_clock().now().to_msg()
-            for i in range(self.n_vehicles):
-                if i == self.active_vehicle:
-                    self.drive_pubs[i].publish(drive_msg)
-                else:
-                    self.drive_pubs[i].publish(brake_msg)
-        else: # drive active vehicle only
-            self.drive_pubs[self.active_vehicle].publish(drive_msg)
+    #==========# Timer Callback #==========#
+
+    def primary_timer_cb(self):
+        t = self.get_clock().now().nanoseconds * 1e-9
+        state = self.estimator.add_primary(t, self.last_v, self.last_delta)
+
+        # TODO: publish PoseWithCovarianceStamped from state + marginal covariance
+        self.get_logger().info(f"Primary estimate: {state}")
+
+
+    #==========# Sensor Callbacks (placeholders) #==========#
+
+    def lidar_cb(self, msg):
+        # t_lidar, lidar_state_xyzrpy = ...  # extract from msg
+        # self.estimator.add_lidar(t_lidar, lidar_state_xyzrpy)
+        pass
+
+    def ouster_imu_cb(self, msg):
+        # omega, accel, dt = ...  # extract from msg
+        # self.estimator.add_imu("imu_ouster", omega, accel, dt)
+        pass
+
+    def insta_imu_cb(self, msg):
+        # omega, accel, dt = ...  # extract from msg
+        # self.estimator.add_imu("imu_insta", omega, accel, dt)
+        pass
+
+    def gps_cb(self, msg):
+        # t_gps, gps_xyz = ...  # extract from msg
+        # self.estimator.add_gps(t_gps, gps_xyz)
+        pass
 
 
 def main(args=None):

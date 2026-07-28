@@ -45,7 +45,7 @@ setup(
     #     (os.path.join('share', package_name, 'config'), glob('config/*.xml')),
     #     (os.path.join('share', package_name, 'launch'), glob('launch/*')),
     # ],
-    data_files=package_files(data_files, ['config/', 'launch/']),
+    data_files=package_files(data_files, ['config/', 'launch/', 'bag_files/numpy_files/']),
     install_requires=['setuptools'],
     zip_safe=True,
     maintainer='Aidan Reichenberg',
