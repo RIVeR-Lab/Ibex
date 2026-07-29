@@ -1,6 +1,6 @@
-graph_reckoner:
+graph_frontender:
   ros__parameters:
-    wheelbase: 1.2          # TODO: set to Ibex's actual wheelbase (m)
+    wheelbase: 1.2          # TODO: set to IBEX's actual wheelbase (m)
 
     primary_period_s: 0.167   # ~6 Hz backbone timer
 
@@ -9,6 +9,8 @@ graph_reckoner:
     enable_NHC: true
     enable_rate: true
     enable_gps: true
+
+    enable_debugging: false
 
     prior_noise_std: 0.001
     dyn_noise_std: [0.005, 0.005, 1.0, 1.0, 1.0, 0.001]
@@ -24,15 +26,16 @@ graph_reckoner:
     gps_noise_std: [1.5, 1.5, 3.0]
     lag_seconds: 5.0
     init_velocity_noise_std: 1.0
+    fallback_vel_noise_std: 5.0
 
-    imu_ouster.gyro_noise_std: 0.01
-    imu_ouster.accel_noise_std: 0.05
-    imu_ouster.integration_noise_std: 0.0001
-    imu_ouster.gyro_bias_walk_std: 0.0005
-    imu_ouster.accel_bias_walk_std: 0.001
+    imu_ouster_gyro_noise_std: 0.01
+    imu_ouster_accel_noise_std: 0.05
+    imu_ouster_integration_noise_std: 0.0001
+    imu_ouster_gyro_bias_walk_std: 0.0005
+    imu_ouster_accel_bias_walk_std: 0.001
 
-    imu_insta.gyro_noise_std: 0.01
-    imu_insta.accel_noise_std: 0.05
-    imu_insta.integration_noise_std: 0.0001
-    imu_insta.gyro_bias_walk_std: 0.0005
-    imu_insta.accel_bias_walk_std: 0.001
+    imu_insta_gyro_noise_std: 0.01
+    imu_insta_accel_noise_std: 0.05
+    imu_insta_integration_noise_std: 0.0001
+    imu_insta_gyro_bias_walk_std: 0.0005
+    imu_insta_accel_bias_walk_std: 0.001

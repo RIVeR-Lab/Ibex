@@ -25,7 +25,7 @@ setup(
     license='Apache-2.0',
     entry_points={
         'console_scripts': [
-            'graph_reckoner = ibex_state.graph_reckoner:main',
+            'graph_frontender = ibex_state.graph_frontender:main',
         ],
     },
 )

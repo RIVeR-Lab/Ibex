@@ -9,14 +9,14 @@ from rclpy.executors import ExternalShutdownException
 from ibex_state.estimator.estimators import GraphReckoner
 
 
-class GraphReckoner(Node):
+class GraphFrontender(Node):
 
     def __init__(self):
-        super().__init__("graph_reckoner")
+        super().__init__("graph_frontender")
 
         #==========# Parameters #==========#
 
-        self.wheelbase = self.declare_parameter("wheelbase", 0.0).get_parameter_value().double_value
+        self.wheelbase = self.declare_parameter("wheelbase", 1.2).get_parameter_value().double_value
         self.primary_period_s = self.declare_parameter("primary_period_s", 1.0/6.0).get_parameter_value().double_value
 
         self.prior_noise_std = self.declare_parameter("prior_noise_std", 0.001).get_parameter_value().double_value
@@ -33,24 +33,26 @@ class GraphReckoner(Node):
         self.gps_noise_std = self.declare_parameter("gps_noise_std", [1.5, 1.5, 3.0]).get_parameter_value().double_array_value
         self.lag_seconds = self.declare_parameter("lag_seconds", 5.0).get_parameter_value().double_value
         self.init_velocity_noise_std = self.declare_parameter("init_velocity_noise_std", 1.0).get_parameter_value().double_value
+        self.fallback_vel_noise_std = self.declare_parameter("fallback_vel_noise_std", 5.0).get_parameter_value().double_value
 
         self.enable_lidar = self.declare_parameter("enable_lidar", True).get_parameter_value().bool_value
         self.enable_IMUs = self.declare_parameter("enable_IMUs", True).get_parameter_value().bool_value
         self.enable_NHC = self.declare_parameter("enable_NHC", True).get_parameter_value().bool_value
         self.enable_rate = self.declare_parameter("enable_rate", True).get_parameter_value().bool_value
         self.enable_gps = self.declare_parameter("enable_gps", True).get_parameter_value().bool_value
+        self.enable_debugging = self.declare_parameter("enable_debugging", True).get_parameter_value().bool_value
 
-        self.imu_ouster_gyro_noise_std = self.declare_parameter("imu_ouster.gyro_noise_std", 0.01).get_parameter_value().double_value
-        self.imu_ouster_accel_noise_std = self.declare_parameter("imu_ouster.accel_noise_std", 0.05).get_parameter_value().double_value
-        self.imu_ouster_integration_noise_std = self.declare_parameter("imu_ouster.integration_noise_std", 1e-4).get_parameter_value().double_value
-        self.imu_ouster_gyro_bias_walk_std = self.declare_parameter("imu_ouster.gyro_bias_walk_std", 0.0005).get_parameter_value().double_value
-        self.imu_ouster_accel_bias_walk_std = self.declare_parameter("imu_ouster.accel_bias_walk_std", 0.001).get_parameter_value().double_value
+        self.imu_ouster_gyro_noise_std = self.declare_parameter("imu_ouster_gyro_noise_std", 0.01).get_parameter_value().double_value
+        self.imu_ouster_accel_noise_std = self.declare_parameter("imu_ouster_accel_noise_std", 0.05).get_parameter_value().double_value
+        self.imu_ouster_integration_noise_std = self.declare_parameter("imu_ouster_integration_noise_std", 1e-4).get_parameter_value().double_value
+        self.imu_ouster_gyro_bias_walk_std = self.declare_parameter("imu_ouster_gyro_bias_walk_std", 0.0005).get_parameter_value().double_value
+        self.imu_ouster_accel_bias_walk_std = self.declare_parameter("imu_ouster_accel_bias_walk_std", 0.001).get_parameter_value().double_value
 
-        self.imu_insta_gyro_noise_std = self.declare_parameter("imu_insta.gyro_noise_std", 0.01).get_parameter_value().double_value
-        self.imu_insta_accel_noise_std = self.declare_parameter("imu_insta.accel_noise_std", 0.05).get_parameter_value().double_value
-        self.imu_insta_integration_noise_std = self.declare_parameter("imu_insta.integration_noise_std", 1e-4).get_parameter_value().double_value
-        self.imu_insta_gyro_bias_walk_std = self.declare_parameter("imu_insta.gyro_bias_walk_std", 0.0005).get_parameter_value().double_value
-        self.imu_insta_accel_bias_walk_std = self.declare_parameter("imu_insta.accel_bias_walk_std", 0.001).get_parameter_value().double_value
+        self.imu_insta_gyro_noise_std = self.declare_parameter("imu_insta_gyro_noise_std", 0.01).get_parameter_value().double_value
+        self.imu_insta_accel_noise_std = self.declare_parameter("imu_insta_accel_noise_std", 0.05).get_parameter_value().double_value
+        self.imu_insta_integration_noise_std = self.declare_parameter("imu_insta_integration_noise_std", 1e-4).get_parameter_value().double_value
+        self.imu_insta_gyro_bias_walk_std = self.declare_parameter("imu_insta_gyro_bias_walk_std", 0.0005).get_parameter_value().double_value
+        self.imu_insta_accel_bias_walk_std = self.declare_parameter("imu_insta_accel_bias_walk_std", 0.001).get_parameter_value().double_value
 
         self.imu_configs = {
             "imu_ouster": {
@@ -71,8 +73,11 @@ class GraphReckoner(Node):
 
         #==========# Estimator #==========#
 
+        self._init_time = self.get_clock().now().nanoseconds * 1e-9
+
         self.estimator = GraphReckoner(
             wheelbase=self.wheelbase,
+            init_time=self._init_time,
             prior_noise_std=self.prior_noise_std,
             init_velocity_noise_std=self.init_velocity_noise_std,
             dyn_noise_std=tuple(self.dyn_noise_std),
@@ -86,6 +91,7 @@ class GraphReckoner(Node):
             rate_prior_std=tuple(self.rate_prior_std),
             rate_process_noise_std=tuple(self.rate_process_noise_std),
             rate_tie_noise_std=tuple(self.rate_tie_noise_std),
+            fallback_vel_noise_std=self.fallback_vel_noise_std,
             gps_noise_std=tuple(self.gps_noise_std),
             lag_seconds=self.lag_seconds,
             enable_lidar=self.enable_lidar,
@@ -93,6 +99,7 @@ class GraphReckoner(Node):
             enable_NHC=self.enable_NHC,
             enable_rate=self.enable_rate,
             enable_gps=self.enable_gps,
+            debugging=self.enable_debugging,
         )
 
         #==========# Publishers & Subscribers #==========#
@@ -116,6 +123,7 @@ class GraphReckoner(Node):
 
     def primary_timer_cb(self):
         t = self.get_clock().now().nanoseconds * 1e-9
+        self.get_logger().info(f"Callback")
         state = self.estimator.add_primary(t, self.last_v, self.last_delta)
 
         # TODO: publish PoseWithCovarianceStamped from state + marginal covariance
@@ -147,7 +155,7 @@ class GraphReckoner(Node):
 
 def main(args=None):
     rclpy.init(args=args)
-    node = GraphReckoner()
+    node = GraphFrontender()
 
     try:
         rclpy.spin(node)

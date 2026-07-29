@@ -26,7 +26,3 @@ __pycache__/
 *.bag
 *.db3
 *.mcap
-
-
-# Aidan, is this proper?
-packages/hyper_drive/bag_files

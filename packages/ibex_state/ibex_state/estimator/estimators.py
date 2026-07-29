@@ -9,8 +9,8 @@ import numpy as np
 import gtsam
 import gtsam_unstable
 
-from factors import make_nhc_factor, make_rate_tie_factor, make_rate_cv_factor, make_lidar_drift_factor
-import symbols as S
+from .factors import make_nhc_factor, make_rate_tie_factor, make_rate_cv_factor, make_lidar_drift_factor
+from . import symbols as S
 
 GRAVITY = 9.81
 
@@ -57,7 +57,8 @@ def _bias_noise_sigmas(gyro_bias_walk_std, accel_bias_walk_std, dt):
 
 
 class GraphReckoner:
-    def __init__(self, wheelbase,
+    def __init__(self, wheelbase = 1.2,
+                 init_time=0.0,
                  init_state=(0.0, 0.0, 0.0, 0.0, 0.0, 0.0),
                  prior_noise_std=0.001,
                  dyn_noise_std=(0.005, 0.005, 1.0, 1.0, 1.0, 0.001),
@@ -75,11 +76,15 @@ class GraphReckoner:
                  gps_noise_std=(1.5, 1.5, 3.0),
                  lag_seconds=5.0,
                  residual_prop_noise_std=(0.01, 0.01, 1.0, 1.0, 1.0, 0.01),
-                 gps_prop_noise_std=(0.5, 0.5, 0.5, 0.5, 0.5, 0.5)):
+                 gps_prop_noise_std=(0.5, 0.5, 0.5, 0.5, 0.5, 0.5),
+                 fallback_vel_noise_std=5.0,
+                 debugging=True,
+                ):
         """Implements a GTSAM-based factor graph for IBEX state estimation"""
 
         self.wheelbase = wheelbase
         self.gravity = gravity
+        self.last_primary_time = init_time
 
         self.enable_lidar = enable_lidar
         self.enable_IMUs = enable_IMUs
@@ -99,6 +104,9 @@ class GraphReckoner:
         self.lidar_drift_prior_noise = gtsam.noiseModel.Diagonal.Sigmas(_sigmas_xyzrpy_to_gtsam(lidar_drift_prior_std))
         self.lidar_drift_process_noise = gtsam.noiseModel.Diagonal.Sigmas(_sigmas_xyzrpy_to_gtsam(lidar_drift_process_noise_std))
         self._lidar_drift_process_noise_std = np.array(lidar_drift_process_noise_std)
+        self.fallback_vel_noise = gtsam.noiseModel.Isotropic.Sigma(3, fallback_vel_noise_std)
+
+        self.debugging = debugging
 
         # Set up based on enabled sensors
         if enable_IMUs:
@@ -148,7 +156,7 @@ class GraphReckoner:
         self.drift_index = 0
         self.lidar_res_index = 0
         self.gps_res_index = 0
-        self.last_primary_time = 0.0
+        self._lidar_drift_initialized = False
 
         self.pending_residuals = []  # list of (key, t, kind) awaiting a propagation link to the next primary
 
@@ -159,13 +167,6 @@ class GraphReckoner:
         self.graph.add(gtsam.PriorFactorPose3(key0, pose0, prior_noise))
         self.initial.insert(key0, pose0)
         self.timestamps.insert((key0, 0.0))
-
-        if enable_lidar:
-            d0_key = gtsam.symbol(S.LIDAR_DRIFT, 0)
-            d0 = gtsam.Pose3()
-            self.graph.add(gtsam.PriorFactorPose3(d0_key, d0, self.lidar_drift_prior_noise))
-            self.initial.insert(d0_key, d0)
-            self.timestamps.insert((d0_key, 0.0))
 
         if self.uses_velocity:
             vel0_key = gtsam.symbol(S.VELOCITY, 0)
@@ -198,6 +199,12 @@ class GraphReckoner:
 
 
 
+        
+        if self.debugging:
+            print("[__init__] Finished init")
+
+
+
 
     #------------------# Helpers #------------------#
 
@@ -209,9 +216,20 @@ class GraphReckoner:
         frequent small incremental updates.
         """
         self.smoother.update(self.graph, self.initial, self.timestamps)
+        if self.debugging:
+            print("[_push] Smoother updated")
+
         self.graph = gtsam.NonlinearFactorGraph()
+        if self.debugging:
+            print("[_push] New graph made")
+
         self.initial = gtsam.Values()
+        if self.debugging:
+            print("[_push] New values")
+
         self.timestamps = gtsam_unstable.FixedLagSmootherKeyTimestampMap()
+        if self.debugging:
+            print("[_push] New timestamps")
 
     def _predict_dynamics(self, v, delta, dt, vz=0.0, roll_rate=0.0, pitch_rate=0.0):
         """Bicycle relative-motion model (x, y, yaw), and z/roll/pitch use 
@@ -246,36 +264,50 @@ class GraphReckoner:
         if not self.enable_lidar:
             return
 
+        if t_lidar < self.last_primary_time:
+            return
+
         est = self.smoother.calculateEstimate()
 
         self.lidar_res_index += 1
         res_key = gtsam.symbol(S.LIDAR_RESIDUAL, self.lidar_res_index)
 
-        self.drift_index += 1
-        drift_prev_key = gtsam.symbol(S.LIDAR_DRIFT, self.drift_index - 1)
-        drift_curr_key = gtsam.symbol(S.LIDAR_DRIFT, self.drift_index)
-
         lidar_pose = _state_to_pose3(lidar_state_xyzrpy)
 
-        # dt since this drift chain last advanced -- approximated as
-        # time since last primary, since we don't separately track each
-        # drift step's own arrival time here. Fine as long as lidar
-        # arrives roughly once per primary window; revisit if lidar can
-        # fire multiple times between primaries with very different
-        # spacing, since that would make this dt approximation coarse.
-        dt_drift = max(t_lidar - self.last_primary_time, 1e-3)
-        drift_process_noise = gtsam.noiseModel.Diagonal.Sigmas(
-            _sigmas_xyzrpy_to_gtsam(self._lidar_drift_process_noise_std) * np.sqrt(dt_drift)
-        )
-        self.graph.add(gtsam.BetweenFactorPose3(drift_prev_key, drift_curr_key, gtsam.Pose3(), drift_process_noise))
+        if not self._lidar_drift_initialized:
+            # First real lidar reading -- create the drift chain's root
+            # node now (with its prior), rather than at __init__ time.
+            # Deliberately deferred: a drift node created at construction
+            # but never touched (e.g. lidar hasn't started publishing
+            # yet) sits as an isolated prior-only variable in the Bayes
+            # tree, which crashed gtsam's IncrementalFixedLagSmoother
+            # (segfault inside ISAM2::marginalizeLeaves) the first time
+            # it tried to marginalize with no other factor ever having
+            # touched it. Deferring creation to first real use avoids
+            # that isolated-node state ever existing.
+            drift_curr_key = gtsam.symbol(S.LIDAR_DRIFT, 0)
+            d0 = gtsam.Pose3()
+            self.graph.add(gtsam.PriorFactorPose3(drift_curr_key, d0, self.lidar_drift_prior_noise))
+            self.initial.insert(drift_curr_key, d0)
+            self.timestamps.insert((drift_curr_key, t_lidar))
+            self._lidar_drift_initialized = True
+        else:
+            self.drift_index += 1
+            drift_prev_key = gtsam.symbol(S.LIDAR_DRIFT, self.drift_index - 1)
+            drift_curr_key = gtsam.symbol(S.LIDAR_DRIFT, self.drift_index)
+
+            dt_drift = max(t_lidar - self.last_primary_time, 1e-3)
+            drift_process_noise = gtsam.noiseModel.Diagonal.Sigmas(
+                _sigmas_xyzrpy_to_gtsam(self._lidar_drift_process_noise_std) * np.sqrt(dt_drift)
+            )
+            self.graph.add(gtsam.BetweenFactorPose3(drift_prev_key, drift_curr_key, gtsam.Pose3(), drift_process_noise))
+            prev_drift_est = est.atPose3(drift_prev_key)
+            self.initial.insert(drift_curr_key, prev_drift_est)
+            self.timestamps.insert((drift_curr_key, t_lidar))
+
         self.graph.add(make_lidar_drift_factor(res_key, drift_curr_key, lidar_pose, self.lidar_measurement_noise))
-
-        self.initial.insert(res_key, lidar_pose)  # ignore drift for the initial guess -- assumed small
-        prev_drift_est = est.atPose3(drift_prev_key)
-        self.initial.insert(drift_curr_key, prev_drift_est)
-
+        self.initial.insert(res_key, lidar_pose)
         self.timestamps.insert((res_key, t_lidar))
-        self.timestamps.insert((drift_curr_key, t_lidar))
 
         self.pending_residuals.append((res_key, t_lidar, 'lidar'))
         self._push()
@@ -288,6 +320,10 @@ class GraphReckoner:
             return
 
         est = self.smoother.calculateEstimate()
+
+        if t_gps < self.last_primary_time:
+            # Stale reading
+            return
 
         self.gps_res_index += 1
         res_key = gtsam.symbol(S.GPS_RESIDUAL, self.gps_res_index)
@@ -342,11 +378,18 @@ class GraphReckoner:
         constant approximation across the whole window, since we don't
         track a full control-input history here.
         """
+
+        if self.debugging:
+            print("[add_primary] Starting add_primary")
+
         prev_key = gtsam.symbol(S.POSE, self.pose_index)
         prev_vel_key = gtsam.symbol(S.VELOCITY, self.pose_index) if self.uses_velocity else None
         self.pose_index += 1
         curr_key = gtsam.symbol(S.POSE, self.pose_index)
         curr_vel_key = gtsam.symbol(S.VELOCITY, self.pose_index) if self.uses_velocity else None
+
+        if self.debugging:
+            print("[add_primary] symbols made")
 
         dt = t - self.last_primary_time
         if dt <= 0:
@@ -360,6 +403,9 @@ class GraphReckoner:
         est = self.smoother.calculateEstimate()
         prev_pose = est.atPose3(prev_key)
 
+        if self.debugging:
+            print("[add_primary] Estimate made")
+
         if self.uses_velocity:
             v_world_prev = est.atVector(prev_vel_key)
             R_prev = prev_pose.rotation().matrix()
@@ -367,21 +413,45 @@ class GraphReckoner:
             vz_prev = v_body_prev[2]
         else:
             vz_prev = 0.0
+        if self.debugging:
+            print("[add_primary] Velocity")
 
         if self.enable_rate:
             r_prev_key_for_dyn = gtsam.symbol(S.RATE, self.pose_index - 1)  # matches prev_key's index
             roll_rate_prev, pitch_rate_prev = est.atVector(r_prev_key_for_dyn)
         else:
             roll_rate_prev, pitch_rate_prev = 0.0, 0.0
+        if self.debugging:
+            print("[add_primary] Rate")
 
         dx, dy, dz, droll, dpitch, dyaw = self._predict_dynamics(
             v, delta, dt, vz=vz_prev, roll_rate=roll_rate_prev, pitch_rate=pitch_rate_prev)
         dyn_pose = gtsam.Pose3(gtsam.Rot3.Ypr(dyaw, dpitch, droll), gtsam.Point3(dx, dy, dz))
         self.graph.add(gtsam.BetweenFactorPose3(prev_key, curr_key, dyn_pose, self.dyn_noise))
+        if self.debugging:
+            print("[add_primary] Dynamics")
 
+        imu_factor_added = False
         if self.enable_IMUs:
             for name in self.imu_names:
                 pim = self.imu_pim[name]
+
+                if pim.deltaTij() <= 0.0:
+                    prev_bias_key = gtsam.symbol(self.imu_bias_prefix[name], self.pose_index - 1)
+                    curr_bias_key = gtsam.symbol(self.imu_bias_prefix[name], self.pose_index)
+                    gyro_walk_std, accel_walk_std = self.imu_bias_walk_std[name]
+                    bias_noise = gtsam.noiseModel.Diagonal.Sigmas(_bias_noise_sigmas(gyro_walk_std, accel_walk_std, dt))
+                    self.graph.add(gtsam.BetweenFactorConstantBias(
+                        prev_bias_key, curr_bias_key, gtsam.imuBias.ConstantBias(), bias_noise))
+                    prev_bias_est = est.atConstantBias(prev_bias_key)
+                    self.initial.insert(curr_bias_key, prev_bias_est)
+                    self.timestamps.insert((curr_bias_key, t))
+                    if self.debugging:
+                        print("[add_primary] IMU excluded")
+                    continue
+
+                imu_factor_added = True
+
                 prev_bias_key = gtsam.symbol(self.imu_bias_prefix[name], self.pose_index - 1)
                 curr_bias_key = gtsam.symbol(self.imu_bias_prefix[name], self.pose_index)
                 self.graph.add(gtsam.ImuFactor(prev_key, prev_vel_key, curr_key, curr_vel_key, prev_bias_key, pim))
@@ -396,8 +466,23 @@ class GraphReckoner:
                 self.timestamps.insert((curr_bias_key, t))
                 pim.resetIntegrationAndSetBias(prev_bias_est)
 
+                if self.debugging:
+                    print("[add_primary] IMU added")
+        if self.debugging:
+            print("[add_primary] IMU")
+
+        if self.uses_velocity and not imu_factor_added:
+            # No real IMU factor this tick (either enable_IMUs is False, or
+            # every enabled IMU had zero data) -- add a loose fallback tie
+            # so prev_vel_key -> curr_vel_key stays well-posed.
+            self.graph.add(gtsam.BetweenFactorVector(prev_vel_key, curr_vel_key, np.zeros(3), self.fallback_vel_noise))
+            if self.debugging:
+                print("[add_primary] Fallback IMU")
+
         if self.enable_NHC:
             self.graph.add(make_nhc_factor(curr_key, curr_vel_key, self.nhc_noise))
+        if self.debugging:
+            print("[add_primary] NHC")
 
         if self.enable_rate:
             r_prev_key = gtsam.symbol(S.RATE, self.pose_index - 1)
@@ -408,6 +493,8 @@ class GraphReckoner:
             r_prev_est = est.atVector(r_prev_key)
             self.initial.insert(r_curr_key, r_prev_est)
             self.timestamps.insert((r_curr_key, t))
+        if self.debugging:
+            print("[add_primary] Rate 2")
 
         # Resolve pending lidar/gps residuals: connect each to curr_key
         # via its own dynamics-propagation factor over (t - t_residual).
@@ -421,11 +508,15 @@ class GraphReckoner:
             prop_noise = self.gps_prop_noise if kind == 'gps' else self.residual_prop_noise
             self.graph.add(gtsam.BetweenFactorPose3(res_key, curr_key, prop_pose, prop_noise))
         self.pending_residuals = []
+        if self.debugging:
+            print("[add_primary] Resolve")
 
         # Initial guesses for the new primary pose/velocity
         curr_pose_guess = prev_pose.compose(dyn_pose)
         self.initial.insert(curr_key, curr_pose_guess)
         self.timestamps.insert((curr_key, t))
+        if self.debugging:
+            print("[add_primary] Initial values")
 
         if self.uses_velocity:
             prev_vel = est.atVector(prev_vel_key)
@@ -435,13 +526,19 @@ class GraphReckoner:
             vel_guess = R_curr @ v_body
             self.initial.insert(curr_vel_key, vel_guess)
             self.timestamps.insert((curr_vel_key, t))
+        if self.debugging:
+            print("[add_primary] Velocity 2")
 
         self._push()
+        if self.debugging:
+            print("[add_primary] Push")
 
         est = self.smoother.calculateEstimate()
         self.state = _pose3_to_state(est.atPose3(curr_key))
         if self.uses_velocity:
             self.velocity = est.atVector(curr_vel_key)
+        if self.debugging:
+            print("[add_primary] Estimate completed")
 
         self.last_primary_time = t
         return self.state.copy()
