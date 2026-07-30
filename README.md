@@ -1,14 +1,13 @@
 # IBEX
 
-> [TODO: one-line description — e.g. "Autonomous off-road sensing and navigation platform built on a modified Yamaha Wolverine X4 850 R-Spec UTV."]
+Multi-modal control off-road hyperspectral sensing and navigation platform built on a modified Yamaha Wolverine X4 850 R-Spec UTV.
 
 <!-- Optional: badges, a photo of the platform, DEVCOM funding acknowledgment -->
 
 ## Overview
 
-[TODO: 2–4 sentences. What IBEX is, what this repo contains, who it's for.
-Mention the four subsystems if useful: platform, convoy HMI, terrain traversability,
-avatar evaluation.]
+This platform brings together various systems in the effort of deploying a multi-modal off road vehicle. IBEX through the utilization of the Kairos Pronto 4 Series 4 off the shelf autonomy stack allows for multi-modal control. The system combines the ability to control the throttle, brake, transmission and steering wheel, with sensing capabilities from the hyperspectral array mounted to the roof of the vehicle. This array includes two hyperspectral cameras, that cover the range of 450nm-1700 (visible near infrared to shortwave infrared), two point spectrometers covering 500nm-1700nm, a 3D lidar, as well as two high powered RGB cameras, one with a dual fisheye lens for visualizaiton in the front and the back.
+This repo contains all of the code required for operating the vehicle as well as maintianing the data stream from the vehicle.
 
 This is the **top-level IBEX repository**. It does not contain source code directly —
 instead, the ROS 2 packages that make up the system live under `Packages/`. Most are
@@ -34,14 +33,14 @@ ibex/
 
 | Package | Type | Purpose | Upstream |
 |---------|------|---------|----------|
-| `Packages/hyper_drive` | in-repo | [TODO] IMEC SWIR hyperspectral camera driver | [TODO: reference-package URL] |
-| `Packages/hyper_drive_interface` | in-repo | [TODO] message/service definitions for hyper_drive | [TODO: reference-package URL] |
-| `Packages/ibex_bringup` | in-repo | [TODO] top-level launch / system bringup | — |
-| `Packages/ibex_state` | in-repo | [TODO] platform state estimation / publishing | — |
-| `Packages/insta360_ros_drivers` | submodule (fork) | [TODO] Insta360 X4 360° camera driver | [TODO: fork + upstream URL] |
-| `Packages/kiss-icp` | submodule (upstream) | [TODO] LiDAR odometry front-end | [TODO: fork + upstream URL] |
-| `Packages/ouster-ros` | submodule (fork) | [TODO] Ouster OS1-64 LiDAR driver | [TODO: fork + upstream URL] |
-| `Packages/shared_link_bridge` | submodule (fork) | [TODO] | [TODO: fork + upstream URL] |
+| `Packages/hyper_drive` | in-repo | Hyperspectral camera driver | https://github.com/RIVeR-Lab/hyper_drive/tree/dev/ros2 |
+| `Packages/hyper_drive_interface` | in-repo | message/service definitions for hyper_drive | https://github.com/RIVeR-Lab/hyper_drive/tree/dev/ros2 |
+| `Packages/ibex_bringup` | in-repo | top-level launch / system bringup | — |
+| `Packages/ibex_state` | in-repo | platform state estimation / publishing | — |
+| `Packages/insta360_ros_drivers` | submodule (fork) | Insta360 X4 360° camera driver | https://github.com/RIVeR-Lab/insta360_ros_driver |
+| `Packages/kiss-icp` | submodule (upstream) | LiDAR odometry front-end | https://github.com/PRBonn/kiss-icp/tree/1ffa7d7512f10bfc8b1185095011fa31184019e3|
+| `Packages/ouster-ros` | submodule (fork) | Ouster OS1-64 LiDAR driver | https://github.com/RIVeR-Lab/ouster-ros |
+| `Packages/shared_link_bridge` | submodule (fork) | Kairos P4S4 driver | https://github.com/RIVeR-Lab/shared_link_bridge |
 | `Packages/spectrometer_drivers` | in-repo | Ibsen VNIR/NIR point spectrometer driver nodes | — |
 | `Packages/spectrometer_interfaces` | in-repo | Message/service definitions for spectrometer_drivers | — |
 
