@@ -123,7 +123,6 @@ class GraphFrontender(Node):
 
     def primary_timer_cb(self):
         t = self.get_clock().now().nanoseconds * 1e-9
-        self.get_logger().info(f"Callback")
         state = self.estimator.add_primary(t, self.last_v, self.last_delta)
 
         # TODO: publish PoseWithCovarianceStamped from state + marginal covariance

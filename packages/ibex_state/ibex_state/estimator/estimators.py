@@ -78,7 +78,7 @@ class GraphReckoner:
                  residual_prop_noise_std=(0.01, 0.01, 1.0, 1.0, 1.0, 0.01),
                  gps_prop_noise_std=(0.5, 0.5, 0.5, 0.5, 0.5, 0.5),
                  fallback_vel_noise_std=5.0,
-                 debugging=True,
+                 debugging=False,
                 ):
         """Implements a GTSAM-based factor graph for IBEX state estimation"""
 

@@ -1,25 +1,26 @@
 # Launch file for IBEX sensors
+import os
+import yaml
+
 from launch import LaunchDescription
-from launch.actions import DeclareLaunchArgument, IncludeLaunchDescription
+from launch.actions import IncludeLaunchDescription
 from launch.launch_description_sources import PythonLaunchDescriptionSource
-from launch.substitutions import LaunchConfiguration, PathJoinSubstitution
+from launch.substitutions import PathJoinSubstitution
 
 from launch_ros.substitutions import FindPackageShare
+from ament_index_python.packages import get_package_share_directory
 
 
 def generate_launch_description():
     ld = LaunchDescription()
 
+    #=========================# Configs #=========================#
 
-
-
-    #=========================# KISS-ICP Config #=========================#
-
-    kiss_icp_topic = "/ouster/points"
-    kiss_icp_base_frame = "base_link"
-    kiss_icp_odom_frame = "odom"
-    visualize = "False"
-
+    config_path = os.path.join(
+        get_package_share_directory("ibex_bringup"), "config", "kiss_icp_config.yaml"
+    )
+    with open(config_path, "r") as f:
+        kiss_icp_cfg = yaml.safe_load(f)["kiss_icp"]
 
     #=========================# Sub Launches #=========================#
 
@@ -30,14 +31,12 @@ def generate_launch_description():
             )
         ),
         launch_arguments={
-            "topic": kiss_icp_topic,
-            "base_frame": kiss_icp_base_frame,
-            "lidar_odom_frame": kiss_icp_odom_frame,
-            "visualize": visualize,
+            "topic": str(kiss_icp_cfg["topic"]),
+            "base_frame": str(kiss_icp_cfg["base_frame"]),
+            "lidar_odom_frame": str(kiss_icp_cfg["lidar_odom_frame"]),
+            "visualize": str(kiss_icp_cfg["visualize"]),
         }.items(),
     )
-
     ld.add_action(kiss_icp_launch)
-
 
     return ld
