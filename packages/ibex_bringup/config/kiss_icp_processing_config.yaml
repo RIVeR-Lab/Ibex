@@ -1,10 +1,5 @@
 kiss_icp_node:
   ros__parameters:
-    base_frame: base_link
-    lidar_odom_frame: odom
-    publish_odom_tf: true
-    invert_odom_tf: true
-    publish_debug_clouds: false
     data:
       deskew: false
       max_range: 100.0

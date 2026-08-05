@@ -264,8 +264,9 @@ class GraphReckoner:
         if not self.enable_lidar:
             return
 
-        if t_lidar < self.last_primary_time:
-            return
+        if self.debugging:
+            print(f"[add_lidar] accepted t_lidar={t_lidar:.3f}, pose={lidar_state_xyzrpy}", flush=True)
+
 
         est = self.smoother.calculateEstimate()
 
@@ -310,6 +311,8 @@ class GraphReckoner:
         self.timestamps.insert((res_key, t_lidar))
 
         self.pending_residuals.append((res_key, t_lidar, 'lidar'))
+        if self.debugging:
+            print(f"[add_lidar] residual node l{self.lidar_res_index} created, pending_residuals size={len(self.pending_residuals)}", flush=True)
         self._push()
 
     def add_gps(self, t_gps, gps_xyz):
@@ -551,3 +554,15 @@ class GraphReckoner:
 
     def get_estimate(self):
         return self.state.copy()
+
+    def get_covariance(self):
+        """Marginal covariance of the current primary pose, permuted from
+        gtsam's rotation-first tangent order (roll, pitch, yaw, x, y, z)
+        into our external (x, y, z, roll, pitch, yaw) convention, to match
+        self.state.
+        """
+        curr_key = gtsam.symbol(S.POSE, self.pose_index)
+        cov_gtsam = self.smoother.getISAM2().marginalCovariance(curr_key)
+
+        perm = [3, 4, 5, 0, 1, 2]
+        return cov_gtsam[np.ix_(perm, perm)]

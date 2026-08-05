@@ -2,9 +2,11 @@
 import rclpy
 from rclpy.node import Node
 from rclpy.executors import ExternalShutdownException
+import math
 
-# from geometry_msgs.msg import PoseWithCovarianceStamped
-# placeholder imports for lidar/imu/gps message types -- fill in once known
+from nav_msgs.msg import Odometry
+from geometry_msgs.msg import PoseWithCovarianceStamped
+
 
 from ibex_state.estimator.estimators import GraphReckoner
 
@@ -18,6 +20,12 @@ class GraphFrontender(Node):
 
         self.wheelbase = self.declare_parameter("wheelbase", 1.2).get_parameter_value().double_value
         self.primary_period_s = self.declare_parameter("primary_period_s", 1.0/6.0).get_parameter_value().double_value
+
+        self.output_topic = self.declare_parameter("output_topic", "/not_set").get_parameter_value().string_value
+        self.lidar_odom_topic = self.declare_parameter("lidar_odom_topic", "/not_set").get_parameter_value().string_value
+        # self.ouster_imu_topic = self.declare_parameter("ouster_imu_topic", "/not_set").get_parameter_value().string_value
+        # self.insta_imu_topic = self.declare_parameter("insta_imu_topic", "/not_set").get_parameter_value().string_value
+        # self.gps_topic = self.declare_parameter("gps_topic", "/not_set").get_parameter_value().string_value
 
         self.prior_noise_std = self.declare_parameter("prior_noise_std", 0.001).get_parameter_value().double_value
         self.dyn_noise_std = self.declare_parameter("dyn_noise_std", [0.005, 0.005, 1.0, 1.0, 1.0, 0.001]).get_parameter_value().double_array_value
@@ -104,14 +112,14 @@ class GraphFrontender(Node):
 
         #==========# Publishers & Subscribers #==========#
 
-        # self.pose_pub = self.create_publisher(PoseWithCovarianceStamped, pose_topic, 10)
-
-        # self.create_subscription(LidarMsgType, lidar_topic, self.lidar_cb, 10)
-        # self.create_subscription(ImuMsgType, ouster_imu_topic, self.ouster_imu_cb, 10)
-        # self.create_subscription(ImuMsgType, insta_imu_topic, self.insta_imu_cb, 10)
-        # self.create_subscription(GpsMsgType, gps_topic, self.gps_cb, 10)
-
         self.primary_timer = self.create_timer(self.primary_period_s, self.primary_timer_cb)
+
+        self.create_subscription(Odometry, self.lidar_odom_topic, self.lidar_cb, 10)
+        # self.create_subscription(ImuMsgType, self.ouster_imu_topic, self.ouster_imu_cb, 10)
+        # self.create_subscription(ImuMsgType, self.insta_imu_topic, self.insta_imu_cb, 10)
+        # self.create_subscription(GpsMsgType, self.gps_topic, self.gps_cb, 10)
+
+        self.pose_pub = self.create_publisher(PoseWithCovarianceStamped, self.output_topic, 10)
 
         #==========# State #==========#
 
@@ -124,17 +132,21 @@ class GraphFrontender(Node):
     def primary_timer_cb(self):
         t = self.get_clock().now().nanoseconds * 1e-9
         state = self.estimator.add_primary(t, self.last_v, self.last_delta)
-
-        # TODO: publish PoseWithCovarianceStamped from state + marginal covariance
-        self.get_logger().info(f"Primary estimate: {state}")
+        self._publish_estimate(t)
 
 
-    #==========# Sensor Callbacks (placeholders) #==========#
+    #==========# Sensor Callback #==========#
 
-    def lidar_cb(self, msg):
-        # t_lidar, lidar_state_xyzrpy = ...  # extract from msg
-        # self.estimator.add_lidar(t_lidar, lidar_state_xyzrpy)
-        pass
+    def lidar_cb(self, msg: Odometry):
+        t_lidar = msg.header.stamp.sec + msg.header.stamp.nanosec * 1e-9
+
+        p = msg.pose.pose.position
+        q = msg.pose.pose.orientation
+        roll, pitch, yaw = self._quat_to_euler(q.x, q.y, q.z, q.w)
+
+        lidar_state_xyzrpy = (p.x, p.y, p.z, roll, pitch, yaw)
+        self.estimator.add_lidar(t_lidar, lidar_state_xyzrpy)
+
 
     def ouster_imu_cb(self, msg):
         # omega, accel, dt = ...  # extract from msg
@@ -150,6 +162,66 @@ class GraphFrontender(Node):
         # t_gps, gps_xyz = ...  # extract from msg
         # self.estimator.add_gps(t_gps, gps_xyz)
         pass
+
+
+
+
+    #==========# Helpers #==========#
+
+    @staticmethod
+    def _quat_to_euler(x, y, z, w):
+        sinr_cosp = 2 * (w * x + y * z)
+        cosr_cosp = 1 - 2 * (x * x + y * y)
+        roll = math.atan2(sinr_cosp, cosr_cosp)
+
+        sinp = 2 * (w * y - z * x)
+        sinp = max(-1.0, min(1.0, sinp))
+        pitch = math.asin(sinp)
+
+        siny_cosp = 2 * (w * z + x * y)
+        cosy_cosp = 1 - 2 * (y * y + z * z)
+        yaw = math.atan2(siny_cosp, cosy_cosp)
+
+        return roll, pitch, yaw
+
+    @staticmethod
+    def _euler_to_quat(roll, pitch, yaw):
+        cr, sr = math.cos(roll * 0.5), math.sin(roll * 0.5)
+        cp, sp = math.cos(pitch * 0.5), math.sin(pitch * 0.5)
+        cy, sy = math.cos(yaw * 0.5), math.sin(yaw * 0.5)
+
+        qw = cr * cp * cy + sr * sp * sy
+        qx = sr * cp * cy - cr * sp * sy
+        qy = cr * sp * cy + sr * cp * sy
+        qz = cr * cp * sy - sr * sp * cy
+        return qx, qy, qz, qw
+
+    def _publish_estimate(self, t):
+        state = self.estimator.get_estimate()
+        cov = self.estimator.get_covariance()
+
+        x, y, z, roll, pitch, yaw = state
+        qx, qy, qz, qw = self._euler_to_quat(roll, pitch, yaw)
+
+        msg = PoseWithCovarianceStamped()
+        msg.header.stamp = self.get_clock().now().to_msg()
+        msg.header.frame_id = "odom"
+
+        msg.pose.pose.position.x = x
+        msg.pose.pose.position.y = y
+        msg.pose.pose.position.z = z
+        msg.pose.pose.orientation.x = qx
+        msg.pose.pose.orientation.y = qy
+        msg.pose.pose.orientation.z = qz
+        msg.pose.pose.orientation.w = qw
+
+        # ROS PoseWithCovariance order (x, y, z, rot_x, rot_y, rot_z) matches
+        # our (x, y, z, roll, pitch, yaw) convention -- no permutation needed
+        msg.pose.covariance = cov.flatten().tolist()
+
+        self.pose_pub.publish(msg)
+
+    
 
 
 def main(args=None):

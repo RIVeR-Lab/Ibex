@@ -12,9 +12,6 @@ def generate_launch_description():
 
     #=========================# Launch Args #=========================#
 
-    use_sim_time = LaunchConfiguration("use_sim_time") # For bag playback
-    ld.add_action(DeclareLaunchArgument("use_sim_time", default_value="false", choices=["true", "false"]))
-
 
 
     #=========================# Config #=========================#
@@ -30,9 +27,9 @@ def generate_launch_description():
         executable="graph_frontender",
         name="graph_frontender",
         output="screen",
+        emulate_tty="true",
         parameters=[
             graph_frontender_config,
-            {"use_sim_time": use_sim_time},
         ],
     )
     ld.add_action(graph_frontender_node)
