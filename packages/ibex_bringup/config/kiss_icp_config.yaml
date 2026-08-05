@@ -3,8 +3,3 @@ kiss_icp:
   base_frame: base_link
   lidar_odom_frame: odom
   visualize: false
-  position_covariance: 0.1
-  orientation_covariance: 0.1
-  publish_odom_tf: true
-  invert_odom_tf: true
-  deskew: false

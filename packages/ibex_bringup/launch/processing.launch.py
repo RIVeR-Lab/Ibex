@@ -22,6 +22,10 @@ def generate_launch_description():
     with open(config_path, "r") as f:
         kiss_icp_cfg = yaml.safe_load(f)["kiss_icp"]
 
+    pipeline_config_path = os.path.join(
+        get_package_share_directory("ibex_bringup"), "config", "kiss_icp_processing_config.yaml"
+    )
+
     #=========================# Sub Launches #=========================#
 
     kiss_icp_launch = IncludeLaunchDescription(
@@ -35,6 +39,7 @@ def generate_launch_description():
             "base_frame": str(kiss_icp_cfg["base_frame"]),
             "lidar_odom_frame": str(kiss_icp_cfg["lidar_odom_frame"]),
             "visualize": str(kiss_icp_cfg["visualize"]),
+            "config_file": pipeline_config_path,
         }.items(),
     )
     ld.add_action(kiss_icp_launch)
