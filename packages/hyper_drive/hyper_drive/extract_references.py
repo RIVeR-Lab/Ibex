@@ -29,7 +29,7 @@ Record a bag while imaging a white target, and another with the lens capped:
 
 Then:
     python3 extract_references.py --white-bag white_bag --dark-bag dark_bag \
-        --out ~/ibex_ws/src/hyper_drive/Bag_Files/Numpy_Files
+        --out ~/ibex_ws/src/hyper_drive/bag_files/numpy_files
 
 You can also run one at a time with just --white-bag or just --dark-bag.
 

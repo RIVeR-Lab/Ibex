@@ -195,7 +195,7 @@ class LightMeasure(Node):
 
         #ximea DataCube
         ros_ximea.header = h
-        ros_ximea.data = ximea_cube.flatten()
+        ros_ximea.data = np.nan_to_num(ximea_cube.flatten().astype(np.float32), nan=0.0, posinf=0.0, neginf=0.0)
         ros_ximea.width, ros_ximea.height, ros_ximea.lam = tuple(ximea_cube.shape)
         ros_ximea.qe = ximea_msg.qe 
         ros_ximea.fwhm_nm = ximea_msg.fwhm_nm
@@ -203,7 +203,7 @@ class LightMeasure(Node):
 
         #imec DataCube
         ros_imec.header = h
-        ros_imec.data = imec_cube.flatten()
+        ros_imec.data = np.nan_to_num(imec_cube.flatten().astype(np.float32), nan=0.0, posinf=0.0, neginf=0.0)
         ros_imec.width, ros_imec.height, ros_imec.lam = tuple(imec_cube.shape)
         ros_imec.qe = imec_msg.qe
         ros_imec.fwhm_nm = imec_msg.fwhm_nm
