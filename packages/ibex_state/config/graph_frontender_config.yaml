@@ -5,9 +5,10 @@ graph_frontender:
     primary_period_s: 0.167   # ~6 Hz backbone timer
 
     output_topic: "graph_pose"
+    frame_id: "odom"          # must match ibex_bringup's kiss_icp lidar_odom_frame
     lidar_odom_topic: "/kiss/odometry"
-    # ouster_imu_topic: "/ouster/imu"
-    # insta_imu_topic: "/insta360/imu"
+    ouster_imu_topic: "/ouster/imu"
+    insta_imu_topic: "/insta360/imu/data_raw"
     # gps_topic: "/gps/fix"
 
     enable_lidar: true

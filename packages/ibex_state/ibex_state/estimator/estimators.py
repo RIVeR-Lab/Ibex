@@ -132,6 +132,9 @@ class GraphReckoner:
                 params.setGyroscopeCovariance(np.eye(3) * cfg.get('gyro_noise_std', 0.01) ** 2)
                 params.setAccelerometerCovariance(np.eye(3) * cfg.get('accel_noise_std', 0.05) ** 2)
                 params.setIntegrationCovariance(np.eye(3) * cfg.get('integration_noise_std', 1e-4) ** 2)
+                body_P_sensor_xyzrpy = cfg.get('body_P_sensor_xyzrpy')
+                if body_P_sensor_xyzrpy is not None:
+                    params.setBodyPSensor(_state_to_pose3(body_P_sensor_xyzrpy))
                 self.imu_pim[name] = gtsam.PreintegratedImuMeasurements(params, gtsam.imuBias.ConstantBias())
                 self.imu_bias_prefix[name] = prefixes[name]
                 self.imu_bias_walk_std[name] = (
@@ -166,7 +169,7 @@ class GraphReckoner:
         prior_noise = gtsam.noiseModel.Diagonal.Sigmas(np.array([prior_noise_std] * 6))
         self.graph.add(gtsam.PriorFactorPose3(key0, pose0, prior_noise))
         self.initial.insert(key0, pose0)
-        self.timestamps.insert((key0, 0.0))
+        self.timestamps.insert((key0, init_time))
 
         if self.uses_velocity:
             vel0_key = gtsam.symbol(S.VELOCITY, 0)
@@ -174,7 +177,7 @@ class GraphReckoner:
             vel_prior_noise = gtsam.noiseModel.Isotropic.Sigma(3, init_velocity_noise_std)
             self.graph.add(gtsam.PriorFactorVector(vel0_key, vel0, vel_prior_noise))
             self.initial.insert(vel0_key, vel0)
-            self.timestamps.insert((vel0_key, 0.0))
+            self.timestamps.insert((vel0_key, init_time))
 
         if enable_IMUs:
             bias_prior_noise = gtsam.noiseModel.Isotropic.Sigma(6, 0.1)
@@ -182,14 +185,14 @@ class GraphReckoner:
                 bkey = gtsam.symbol(self.imu_bias_prefix[name], 0)
                 self.graph.add(gtsam.PriorFactorConstantBias(bkey, gtsam.imuBias.ConstantBias(), bias_prior_noise))
                 self.initial.insert(bkey, gtsam.imuBias.ConstantBias())
-                self.timestamps.insert((bkey, 0.0))
+                self.timestamps.insert((bkey, init_time))
 
         if enable_rate:
             r0_key = gtsam.symbol(S.RATE, 0)
             r0 = np.zeros(2)
             self.graph.add(gtsam.PriorFactorVector(r0_key, r0, self.rate_prior_noise))
             self.initial.insert(r0_key, r0)
-            self.timestamps.insert((r0_key, 0.0))
+            self.timestamps.insert((r0_key, init_time))
 
         self._push()
         est = self.smoother.calculateEstimate()

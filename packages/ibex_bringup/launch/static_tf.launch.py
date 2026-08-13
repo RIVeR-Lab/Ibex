@@ -105,4 +105,19 @@ def generate_launch_description():
     )
     ld.add_action(insta360_to_sensor_tf)
 
+    # insta_sensor to insta_imu (assumed collocated -- no measured offset yet)
+    insta360_imu_tf = Node(
+        package="tf2_ros",
+        executable="static_transform_publisher",
+        name="insta360_imu_static_tf",
+        arguments=[
+            "0.0", "0.0", "0.0",
+            "0.0", "0.0", "0.0",
+            "insta_sensor",
+            "insta_imu",
+        ],
+        output="screen",
+    )
+    ld.add_action(insta360_imu_tf)
+
     return ld

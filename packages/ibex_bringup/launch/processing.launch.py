@@ -44,4 +44,13 @@ def generate_launch_description():
     )
     ld.add_action(kiss_icp_launch)
 
+    graph_frontender_launch = IncludeLaunchDescription(
+        PythonLaunchDescriptionSource(
+            PathJoinSubstitution(
+                [FindPackageShare("ibex_state"), "launch", "graph_frontender.launch.py"]
+            )
+        ),
+    )
+    ld.add_action(graph_frontender_launch)
+
     return ld

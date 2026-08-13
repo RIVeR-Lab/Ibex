@@ -2,10 +2,17 @@
 import rclpy
 from rclpy.node import Node
 from rclpy.executors import ExternalShutdownException
+from rclpy.duration import Duration
+from rclpy.time import Time
+from rclpy.qos import qos_profile_sensor_data
 import math
+
+import numpy as np
+import tf2_ros
 
 from nav_msgs.msg import Odometry
 from geometry_msgs.msg import PoseWithCovarianceStamped
+from sensor_msgs.msg import Imu
 
 
 from ibex_state.estimator.estimators import GraphReckoner
@@ -22,10 +29,15 @@ class GraphFrontender(Node):
         self.primary_period_s = self.declare_parameter("primary_period_s", 1.0/6.0).get_parameter_value().double_value
 
         self.output_topic = self.declare_parameter("output_topic", "/not_set").get_parameter_value().string_value
+        self.frame_id = self.declare_parameter("frame_id", "odom").get_parameter_value().string_value
         self.lidar_odom_topic = self.declare_parameter("lidar_odom_topic", "/not_set").get_parameter_value().string_value
-        # self.ouster_imu_topic = self.declare_parameter("ouster_imu_topic", "/not_set").get_parameter_value().string_value
-        # self.insta_imu_topic = self.declare_parameter("insta_imu_topic", "/not_set").get_parameter_value().string_value
+        self.ouster_imu_topic = self.declare_parameter("ouster_imu_topic", "/not_set").get_parameter_value().string_value
+        self.insta_imu_topic = self.declare_parameter("insta_imu_topic", "/not_set").get_parameter_value().string_value
         # self.gps_topic = self.declare_parameter("gps_topic", "/not_set").get_parameter_value().string_value
+
+        self.base_frame = self.declare_parameter("base_frame", "base_link").get_parameter_value().string_value
+        self.imu_ouster_frame = self.declare_parameter("imu_ouster_frame", "os_imu").get_parameter_value().string_value
+        self.imu_insta_frame = self.declare_parameter("imu_insta_frame", "insta_imu").get_parameter_value().string_value
 
         self.prior_noise_std = self.declare_parameter("prior_noise_std", 0.001).get_parameter_value().double_value
         self.dyn_noise_std = self.declare_parameter("dyn_noise_std", [0.005, 0.005, 1.0, 1.0, 1.0, 0.001]).get_parameter_value().double_array_value
@@ -79,6 +91,15 @@ class GraphFrontender(Node):
             },
         }
 
+        #==========# Extrinsics #==========#
+
+        self.tf_buffer = tf2_ros.Buffer()
+        self.tf_listener = tf2_ros.TransformListener(self.tf_buffer, self)
+
+        if self.enable_IMUs:
+            self.imu_configs["imu_ouster"]["body_P_sensor_xyzrpy"] = self._lookup_body_p_sensor_xyzrpy(self.imu_ouster_frame)
+            self.imu_configs["imu_insta"]["body_P_sensor_xyzrpy"] = self._lookup_body_p_sensor_xyzrpy(self.imu_insta_frame)
+
         #==========# Estimator #==========#
 
         self._init_time = self.get_clock().now().nanoseconds * 1e-9
@@ -115,8 +136,8 @@ class GraphFrontender(Node):
         self.primary_timer = self.create_timer(self.primary_period_s, self.primary_timer_cb)
 
         self.create_subscription(Odometry, self.lidar_odom_topic, self.lidar_cb, 10)
-        # self.create_subscription(ImuMsgType, self.ouster_imu_topic, self.ouster_imu_cb, 10)
-        # self.create_subscription(ImuMsgType, self.insta_imu_topic, self.insta_imu_cb, 10)
+        self.create_subscription(Imu, self.ouster_imu_topic, self.ouster_imu_cb, qos_profile_sensor_data)
+        self.create_subscription(Imu, self.insta_imu_topic, self.insta_imu_cb, qos_profile_sensor_data)
         # self.create_subscription(GpsMsgType, self.gps_topic, self.gps_cb, 10)
 
         self.pose_pub = self.create_publisher(PoseWithCovarianceStamped, self.output_topic, 10)
@@ -125,6 +146,7 @@ class GraphFrontender(Node):
 
         self.last_v = 0.0
         self.last_delta = 0.0
+        self._last_imu_time = {}
 
 
     #==========# Timer Callback #==========#
@@ -138,6 +160,8 @@ class GraphFrontender(Node):
     #==========# Sensor Callback #==========#
 
     def lidar_cb(self, msg: Odometry):
+        # Assumes estimator's world frame is KISS-ICP's odom frame
+        # both start coincident at robot startup.
         t_lidar = msg.header.stamp.sec + msg.header.stamp.nanosec * 1e-9
 
         p = msg.pose.pose.position
@@ -148,15 +172,22 @@ class GraphFrontender(Node):
         self.estimator.add_lidar(t_lidar, lidar_state_xyzrpy)
 
 
-    def ouster_imu_cb(self, msg):
-        # omega, accel, dt = ...  # extract from msg
-        # self.estimator.add_imu("imu_ouster", omega, accel, dt)
-        pass
+    def ouster_imu_cb(self, msg: Imu):
+        self._imu_cb(msg, "imu_ouster")
 
-    def insta_imu_cb(self, msg):
-        # omega, accel, dt = ...  # extract from msg
-        # self.estimator.add_imu("imu_insta", omega, accel, dt)
-        pass
+    def insta_imu_cb(self, msg: Imu):
+        self._imu_cb(msg, "imu_insta")
+
+    def _imu_cb(self, msg: Imu, imu_name):
+        t = msg.header.stamp.sec + msg.header.stamp.nanosec * 1e-9
+        last_t = self._last_imu_time.get(imu_name)
+        self._last_imu_time[imu_name] = t
+        if last_t is None or t <= last_t:
+            return  # first sample for this IMU, or stale/out-of-order -- no valid dt yet
+        dt = t - last_t
+        omega = np.array([msg.angular_velocity.x, msg.angular_velocity.y, msg.angular_velocity.z])
+        accel = np.array([msg.linear_acceleration.x, msg.linear_acceleration.y, msg.linear_acceleration.z])
+        self.estimator.add_imu(imu_name, omega, accel, dt)
 
     def gps_cb(self, msg):
         # t_gps, gps_xyz = ...  # extract from msg
@@ -167,6 +198,28 @@ class GraphFrontender(Node):
 
 
     #==========# Helpers #==========#
+
+    def _lookup_body_p_sensor_xyzrpy(self, sensor_frame, log_period_s=10.0):
+        """Blocks (pumping the executor via spin_once) until the static
+        transform base_frame -> sensor_frame is available, then returns it
+        as (x, y, z, roll, pitch, yaw). Retries indefinitely rather than
+        timing out -- frames like os_imu only appear once their driver's
+        lifecycle node finishes activating, which can take well over a
+        minute depending on the sensor's hardware bring-up.
+        """
+        last_log = self.get_clock().now()
+        log_period = Duration(seconds=log_period_s)
+        while True:
+            try:
+                tf = self.tf_buffer.lookup_transform(self.base_frame, sensor_frame, Time())
+                t, q = tf.transform.translation, tf.transform.rotation
+                roll, pitch, yaw = self._quat_to_euler(q.x, q.y, q.z, q.w)
+                return (t.x, t.y, t.z, roll, pitch, yaw)
+            except tf2_ros.TransformException:
+                rclpy.spin_once(self, timeout_sec=1.0)
+                if self.get_clock().now() - last_log > log_period:
+                    self.get_logger().info(f"Waiting for static transform {self.base_frame} -> {sensor_frame}...")
+                    last_log = self.get_clock().now()
 
     @staticmethod
     def _quat_to_euler(x, y, z, w):
@@ -205,7 +258,7 @@ class GraphFrontender(Node):
 
         msg = PoseWithCovarianceStamped()
         msg.header.stamp = self.get_clock().now().to_msg()
-        msg.header.frame_id = "odom"
+        msg.header.frame_id = self.frame_id
 
         msg.pose.pose.position.x = x
         msg.pose.pose.position.y = y
