@@ -334,6 +334,7 @@ unicodedata2==14.0.0
 unique-identifier-msgs==2.2.1
 urllib3==1.26.5
 usb-creator==0.3.7
+utm==0.9.0
 vimbax-camera-events==1.0.0
 vimbax-camera-examples==1.0.0
 vimbax-camera-msgs==1.0.0

@@ -14,7 +14,7 @@ setup(
         (os.path.join('share', package_name, 'launch'), glob('launch/*.py')),
         (os.path.join('share', package_name, 'config'), glob('config/*')),
     ],
-    install_requires=['setuptools'],
+    install_requires=['setuptools', 'utm'],
     extras_require={
         'test': ['pytest', 'mock']  # Testing dependencies
     },

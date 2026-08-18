@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+import sys
 import rclpy
 from rclpy.node import Node
 from rclpy.executors import ExternalShutdownException
@@ -13,6 +14,7 @@ import tf2_ros
 from nav_msgs.msg import Odometry
 from geometry_msgs.msg import PoseWithCovarianceStamped
 from sensor_msgs.msg import Imu
+from shared_link_bridge.msg import GpsValues
 
 
 from ibex_state.estimator.estimators import GraphReckoner
@@ -29,11 +31,15 @@ class GraphFrontender(Node):
         self.primary_period_s = self.declare_parameter("primary_period_s", 1.0/6.0).get_parameter_value().double_value
 
         self.output_topic = self.declare_parameter("output_topic", "/not_set").get_parameter_value().string_value
-        self.frame_id = self.declare_parameter("frame_id", "odom").get_parameter_value().string_value
+        # aligned_odom, not odom: the published estimate is gravity-corrected
+        # (see estimators.py's gravity_align chain) -- raw odom (matching
+        # KISS-ICP's own lidar-odometry frame exactly) is internal-only.
+        self.frame_id = self.declare_parameter("frame_id", "aligned_odom").get_parameter_value().string_value
+        self.odom_offset_topic = self.declare_parameter("odom_offset_topic", "/not_set").get_parameter_value().string_value
         self.lidar_odom_topic = self.declare_parameter("lidar_odom_topic", "/not_set").get_parameter_value().string_value
         self.ouster_imu_topic = self.declare_parameter("ouster_imu_topic", "/not_set").get_parameter_value().string_value
         self.insta_imu_topic = self.declare_parameter("insta_imu_topic", "/not_set").get_parameter_value().string_value
-        # self.gps_topic = self.declare_parameter("gps_topic", "/not_set").get_parameter_value().string_value
+        self.gps_topic = self.declare_parameter("gps_topic", "/not_set").get_parameter_value().string_value
 
         self.base_frame = self.declare_parameter("base_frame", "base_link").get_parameter_value().string_value
         self.imu_ouster_frame = self.declare_parameter("imu_ouster_frame", "os_imu").get_parameter_value().string_value
@@ -50,10 +56,19 @@ class GraphFrontender(Node):
         self.rate_prior_std = self.declare_parameter("rate_prior_std", [1.0, 1.0]).get_parameter_value().double_array_value
         self.rate_process_noise_std = self.declare_parameter("rate_process_noise_std", [0.5, 0.5]).get_parameter_value().double_array_value
         self.rate_tie_noise_std = self.declare_parameter("rate_tie_noise_std", [0.01, 0.01]).get_parameter_value().double_array_value
-        self.gps_noise_std = self.declare_parameter("gps_noise_std", [1.5, 1.5, 3.0]).get_parameter_value().double_array_value
+        self.gps_sigma_at_best_quality = self.declare_parameter("gps_sigma_at_best_quality", 1.5).get_parameter_value().double_value
+        self.gps_sigma_at_worst_quality = self.declare_parameter("gps_sigma_at_worst_quality", 15.0).get_parameter_value().double_value
         self.lag_seconds = self.declare_parameter("lag_seconds", 5.0).get_parameter_value().double_value
         self.init_velocity_noise_std = self.declare_parameter("init_velocity_noise_std", 1.0).get_parameter_value().double_value
         self.fallback_vel_noise_std = self.declare_parameter("fallback_vel_noise_std", 5.0).get_parameter_value().double_value
+
+        self.odom_offset_prior_std = self.declare_parameter("odom_offset_prior_std", [50.0, 50.0, math.pi]).get_parameter_value().double_array_value
+        self.odom_offset_process_noise_std = self.declare_parameter("odom_offset_process_noise_std", [1e-4, 1e-4, 1e-4]).get_parameter_value().double_array_value
+        self.gravity_align_prior_std = self.declare_parameter("gravity_align_prior_std", [0.5, 0.5]).get_parameter_value().double_array_value
+        self.gravity_align_process_noise_std = self.declare_parameter("gravity_align_process_noise_std", [1e-4, 1e-4]).get_parameter_value().double_array_value
+        self.gravity_align_stationary_vel_thresh = self.declare_parameter("gravity_align_stationary_vel_thresh", 0.05).get_parameter_value().double_value
+        self.gravity_align_stationary_rate_thresh = self.declare_parameter("gravity_align_stationary_rate_thresh", 0.02).get_parameter_value().double_value
+        self.gravity_align_min_update_interval = self.declare_parameter("gravity_align_min_update_interval", 2.0).get_parameter_value().double_value
 
         self.enable_lidar = self.declare_parameter("enable_lidar", True).get_parameter_value().bool_value
         self.enable_IMUs = self.declare_parameter("enable_IMUs", True).get_parameter_value().bool_value
@@ -121,7 +136,15 @@ class GraphFrontender(Node):
             rate_process_noise_std=tuple(self.rate_process_noise_std),
             rate_tie_noise_std=tuple(self.rate_tie_noise_std),
             fallback_vel_noise_std=self.fallback_vel_noise_std,
-            gps_noise_std=tuple(self.gps_noise_std),
+            gps_sigma_at_best_quality=self.gps_sigma_at_best_quality,
+            gps_sigma_at_worst_quality=self.gps_sigma_at_worst_quality,
+            odom_offset_prior_std=tuple(self.odom_offset_prior_std),
+            odom_offset_process_noise_std=tuple(self.odom_offset_process_noise_std),
+            gravity_align_prior_std=tuple(self.gravity_align_prior_std),
+            gravity_align_process_noise_std=tuple(self.gravity_align_process_noise_std),
+            gravity_align_stationary_vel_thresh=self.gravity_align_stationary_vel_thresh,
+            gravity_align_stationary_rate_thresh=self.gravity_align_stationary_rate_thresh,
+            gravity_align_min_update_interval=self.gravity_align_min_update_interval,
             lag_seconds=self.lag_seconds,
             enable_lidar=self.enable_lidar,
             enable_IMUs=self.enable_IMUs,
@@ -138,9 +161,10 @@ class GraphFrontender(Node):
         self.create_subscription(Odometry, self.lidar_odom_topic, self.lidar_cb, 10)
         self.create_subscription(Imu, self.ouster_imu_topic, self.ouster_imu_cb, qos_profile_sensor_data)
         self.create_subscription(Imu, self.insta_imu_topic, self.insta_imu_cb, qos_profile_sensor_data)
-        # self.create_subscription(GpsMsgType, self.gps_topic, self.gps_cb, 10)
+        self.create_subscription(GpsValues, self.gps_topic, self.gps_cb, 10)
 
         self.pose_pub = self.create_publisher(PoseWithCovarianceStamped, self.output_topic, 10)
+        self.odom_offset_pub = self.create_publisher(PoseWithCovarianceStamped, self.odom_offset_topic, 10)
 
         #==========# State #==========#
 
@@ -155,6 +179,7 @@ class GraphFrontender(Node):
         t = self.get_clock().now().nanoseconds * 1e-9
         state = self.estimator.add_primary(t, self.last_v, self.last_delta)
         self._publish_estimate(t)
+        self._publish_odom_offset(t)
 
 
     #==========# Sensor Callback #==========#
@@ -189,10 +214,13 @@ class GraphFrontender(Node):
         accel = np.array([msg.linear_acceleration.x, msg.linear_acceleration.y, msg.linear_acceleration.z])
         self.estimator.add_imu(imu_name, omega, accel, dt)
 
-    def gps_cb(self, msg):
-        # t_gps, gps_xyz = ...  # extract from msg
-        # self.estimator.add_gps(t_gps, gps_xyz)
-        pass
+    def gps_cb(self, msg: GpsValues):
+        # auto_gps_stamp is unused -- header.stamp is the actual message
+        # timestamp, consistent with lidar_cb/_imu_cb.
+        t_gps = msg.header.stamp.sec + msg.header.stamp.nanosec * 1e-9
+        self.estimator.add_gps(
+            t_gps, msg.auto_gps_lat, msg.auto_gps_lon,
+            quality=msg.auto_gps_quality, sat_count=msg.auto_gps_references)
 
 
 
@@ -250,8 +278,9 @@ class GraphFrontender(Node):
         return qx, qy, qz, qw
 
     def _publish_estimate(self, t):
-        state = self.estimator.get_estimate()
-        cov = self.estimator.get_covariance()
+        # aligned_odom, not raw odom -- see frame_id's declaration comment.
+        state = self.estimator.get_aligned_state()
+        cov = self.estimator.get_aligned_covariance()
 
         x, y, z, roll, pitch, yaw = state
         qx, qy, qz, qw = self._euler_to_quat(roll, pitch, yaw)
@@ -274,10 +303,56 @@ class GraphFrontender(Node):
 
         self.pose_pub.publish(msg)
 
-    
+    def _publish_odom_offset(self, t):
+        """Publishes the odom_offset estimate: the odom origin's (easting,
+        northing, yaw) in UTM, as a PoseWithCovarianceStamped in the "utm"
+        frame. z/roll/pitch are meaningless here (odom_offset is SE(2) --
+        GPS has no altitude/heading, see estimators.py's add_gps), so
+        those covariance diagonal entries are set to a large placeholder
+        rather than 0, which would misleadingly read as "perfectly known".
+        Skipped entirely until the first real GPS reading initializes the
+        chain (see estimators.py's get_odom_offset).
+        """
+        offset = self.estimator.get_odom_offset()
+        if offset is None:
+            return
+        cov_offset = self.estimator.get_odom_offset_covariance()
+
+        x, y, yaw = offset
+        qx, qy, qz, qw = self._euler_to_quat(0.0, 0.0, yaw)
+
+        msg = PoseWithCovarianceStamped()
+        msg.header.stamp = self.get_clock().now().to_msg()
+        msg.header.frame_id = "utm"
+
+        msg.pose.pose.position.x = x
+        msg.pose.pose.position.y = y
+        msg.pose.pose.position.z = 0.0
+        msg.pose.pose.orientation.x = qx
+        msg.pose.pose.orientation.y = qy
+        msg.pose.pose.orientation.z = qz
+        msg.pose.pose.orientation.w = qw
+
+        cov = np.diag([1e6, 1e6, 1e6, 1e6, 1e6, 1e6])
+        cov[np.ix_([0, 1], [0, 1])] = cov_offset[np.ix_([0, 1], [0, 1])]
+        cov[5, 5] = cov_offset[2, 2]
+        cov[np.ix_([0, 1], [5])] = cov_offset[np.ix_([0, 1], [2])]
+        cov[np.ix_([5], [0, 1])] = cov_offset[np.ix_([2], [0, 1])]
+        msg.pose.covariance = cov.flatten().tolist()
+
+        self.odom_offset_pub.publish(msg)
+
+
 
 
 def main(args=None):
+    # ros2 launch pipes subprocess stdout (not a TTY), so Python fully
+    # block-buffers it by default. Debug prints (see estimators.py) then
+    # get flushed out of true chronological order relative to any that
+    # happen to carry an explicit flush=True, making the interleaved
+    # output misleading. Force line-buffering once, here, instead of
+    # scattering flush=True across every print call.
+    sys.stdout.reconfigure(line_buffering=True)
     rclpy.init(args=args)
     node = GraphFrontender()
 

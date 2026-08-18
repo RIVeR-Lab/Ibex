@@ -5,11 +5,16 @@ graph_frontender:
     primary_period_s: 0.167   # ~6 Hz backbone timer
 
     output_topic: "graph_pose"
-    frame_id: "odom"          # must match ibex_bringup's kiss_icp lidar_odom_frame
+    # aligned_odom, not odom: the published estimate is gravity-corrected
+    # (see estimators.py's gravity_align chain) -- raw odom (matching
+    # ibex_bringup's kiss_icp lidar_odom_frame exactly) is an internal-only
+    # backbone frame, never published directly.
+    frame_id: "aligned_odom"
+    odom_offset_topic: "odom_offset"
     lidar_odom_topic: "/kiss/odometry"
     ouster_imu_topic: "/ouster/imu"
     insta_imu_topic: "/insta360/imu/data_raw"
-    # gps_topic: "/gps/fix"
+    gps_topic: "/gps_values"
 
     enable_lidar: true
     enable_IMUs: true
@@ -17,7 +22,7 @@ graph_frontender:
     enable_rate: true
     enable_gps: true
 
-    enable_debugging: true
+    enable_debugging: false
 
     prior_noise_std: 0.001
     dyn_noise_std: [0.005, 0.005, 1.0, 1.0, 1.0, 0.001]
@@ -30,10 +35,22 @@ graph_frontender:
     rate_prior_std: [1.0, 1.0]
     rate_process_noise_std: [0.5, 0.5]
     rate_tie_noise_std: [0.01, 0.01]
-    gps_noise_std: [1.5, 1.5, 3.0]
+    # UNVALIDATED placeholder heuristic -- see _gps_position_noise's
+    # docstring -- needs the receiver's accuracy spec or logged
+    # stationary-scatter calibration data to replace with a real model.
+    gps_sigma_at_best_quality: 1.5
+    gps_sigma_at_worst_quality: 15.0
     lag_seconds: 5.0
     init_velocity_noise_std: 1.0
     fallback_vel_noise_std: 5.0
+
+    odom_offset_prior_std: [50.0, 50.0, 3.14159]
+    odom_offset_process_noise_std: [0.0001, 0.0001, 0.0001]
+    gravity_align_prior_std: [0.5, 0.5]
+    gravity_align_process_noise_std: [0.0001, 0.0001]
+    gravity_align_stationary_vel_thresh: 0.05   # m/s
+    gravity_align_stationary_rate_thresh: 0.02  # rad/s
+    gravity_align_min_update_interval: 2.0      # seconds -- rate-limits chain growth while parked
 
     imu_ouster_gyro_noise_std: 0.01
     imu_ouster_accel_noise_std: 0.05
