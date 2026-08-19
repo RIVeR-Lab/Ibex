@@ -1,1 +1,0 @@
-Fast Image Store library

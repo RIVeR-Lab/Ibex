@@ -61,9 +61,10 @@ is committed directly. -->
 - **ROS 2:** Humble
 - **Build tool:** colcon
 - Git (with submodule support — any modern Git)
-- [TODO: system packages / drivers not handled by rosdep — e.g. FTDI libft4222 for the
-  spectrometers, Ouster driver deps, CUDA/NVDEC for the Insta360. List per package or
-  link to the relevant Docs/ note.]
+- Installtion of hyperspectral dependencies mentioned below in installation dependencies 
+- Installtion of point spectrometer dependencies mentioned below in installation dependencies 
+
+## 
 
 ## Installation
 
@@ -96,6 +97,217 @@ git submodule update --init --recursive
 [TODO: system-level deps that rosdep won't cover — e.g. the spectrometer driver needs
 FTDI's libft4222 plus a udev rule. See Docs/<spectrometer note>.]
 
+#### Installing Required Libraries
+
+The following five libraries are required:
+
+| Library | Version |
+|---|---|
+| IMEC HSI Mosaic | 1.12.0.0 |
+| Ximea SDK | LTS v4.32.0.0 |
+| Pleora SDK | 6.5.3 |
+| Photon Focus SDK | 2025.1.0_Linux64 |
+| Vimba X SDK | 2026-1 |
+
+##### IMEC HSI Mosaic
+Go to the [/ibex/docs](https://github.com/RIVeR-Lab/ibex/tree/dev/docs) and copy the contents of the `/place_in_opt` folder into `/opt`. The `/place_in_opt` should contain `/imec`, `/pleora`, and `/PFSDK_2025.1.0_Linux64`.
+
+> **Note:** Copy the *contents* of the folder, not the folder itself. You will need superuser privileges to edit `/opt`. Run the following command to open the file explorer with superuser privileges:
+> ```bash
+> sudo nautilus
+> `
+
+##### Ximea SDK
+Download the Ximea SDK (LTS v4.32.0.0)
+- **URL:** https://www.ximea.com/software-downloads
+
+Place the downloaded `.tgz` installer inside `/opt/imec/hsi-mosaic/resources/installers`
+
+Follow the installation instructions on the website:
+```bash
+cd /opt/imec/hsi-mosaic/resources/installers
+tar -xzf XIMEA_Linux_sp.tgz
+cd package
+sudo ./install
+```
+
+Run the following command to increase the USB buffer size for current login session:
+```bash
+echo 0 | sudo tee /sys/module/usbcore/parameters/usbfs_memory_mb
+```
+
+The below command will make inscreased USB buffer size permanent for all restarts:
+```bash
+sudo bash -c 'cat > /etc/systemd/system/usbfs-memory.service << EOF
+[Unit]
+Description=Set USB memory limit for XIMEA cameras
+
+[Service]
+Type=oneshot
+ExecStart=/bin/sh -c "echo 0 > /sys/module/usbcore/parameters/usbfs_memory_mb"
+
+[Install]
+WantedBy=multi-user.target
+EOF'
+sudo systemctl enable usbfs-memory.service
+sudo systemctl start usbfs-memory.service
+```
+
+To verify the XIMEA camera is working first connect the camera and then run the below command:
+```bash
+/opt/XIMEA/bin/xiSample
+```
+
+##### Vimba X SDK
+Download the Vimba X SDK (VimbaX Setup-2026-2-Linux64.tar.gz) from:
+- **URL:** https://www.alliedvision.com/en/support/software-downloads/vimba-x-sdk/vimba-x
+
+Navigate to your Downloads and extract the file to `/opt`:
+```bash
+cd /Downloads
+sudo tar -xzf VimbaX_Setup-2026-2-Linux64.tar.gz -C /opt
+```
+
+Run the GenTL installation scripts:
+```bash
+cd /opt/VimbaX_2026-2/cti
+sudo ./Install_GenTL_Path.sh
+sudo ./Set_GenTL_Path.sh
+```
+
+Install the ROS2 driver. Download `ros-humble-vimbax-camera-driver-1.0.0-amd64.deb` from:
+- **URL:** https://github.com/alliedvision/vimbax_ros2_driver/releases/tag/v1.0.0
+```bash
+sudo apt install ./ros-humble-vimbax-camera-driver-1.0.0-amd64.deb
+```
+
+Verify the Vimba X SDK is working by opening the viewer:
+```bash
+/opt/VimbaX_2026-1/bin/VimbaXViewer
+```
+
+---
+
+After installation, verify that the following directories exist in `/opt`:
+```
+/opt/imec
+/opt/XIMEA
+/opt/pleora
+/opt/PFSDK_2025.1.0_Linux64
+/opt/VimbaX_2026-1
+```
+
+---
+
+##### OPTIONAL: Register IMEC Libraries with ldconfig
+
+Skip this step on initial setup and only perform it if HSI Mosaic can't find its needed shared object (`.so`) files as indicated by the log in terminal when launching the nodes. The most common error is a Python `OSError` referencing `libhsi_api.so`, `libEbTransportLayerLib.so`, or similar.
+
+The IMEC Python API uses `find_library()` which searches the ldconfig cache rather than `LD_LIBRARY_PATH`. The libraries must be registered with ldconfig for the API to load correctly:
+
+```bash
+sudo bash -c 'cat > /etc/ld.so.conf.d/imec.conf << EOF
+/opt/imec/hsi-mosaic/bin
+/opt/imec/hsi-mosaic/resources/installers/package/api/X64
+/opt/pleora/ebus_sdk/Ubuntu-22.04-x86_64/lib
+/opt/pleora/ebus_sdk/Ubuntu-22.04-x86_64/lib/genicam/bin/Linux64_x64
+/opt/XIMEA/CamTool
+/opt/PFSDK_2025.1.0_Linux64/lib
+/opt/VimbaX_2026-1/api/lib
+EOF'
+sudo ldconfig
+```
+
+Verify with:
+```bash
+ldconfig -p | grep hsi_api
+```
+You should see `libhsi_api.so.1.0` listed.
+
+#### Install Point Spectrometer Dependecies
+Each spectrometer connects over an **FTDI FT4222H USB-to-SPI bridge**
+(USB ID `0403:601c`). The driver talks to the Ibsen DISB board directly over
+SPI, so the Ibsen protocol is implemented in the driver itself — there is no
+separate "Ibsen SDK" to install. The only external library needed is FTDI's.
+
+The C++ streamer links against FTDI's `libft4222` (which has the D2XX driver
+built in on Linux — there is no separate `libftd2xx.so`).
+
+##### Download
+
+FTDI's direct download links expire, and `wget` against their CDN is often
+blocked with `403 Forbidden`. Download through a browser instead:
+
+1. Go to <https://ftdichip.com/software-examples/ft4222h-software-examples/>
+2. Under **Linux Examples**, download the Linux `.tgz`
+   (x86_64 / ARMv6-hf, includes C examples).
+3. It will come out as a `.zip` file so you will need to go to the directory you download it into and unzip it for the next steps.
+
+If you must use the command line, spoof a browser user-agent:
+
+```bash
+wget --user-agent="Mozilla/5.0 (X11; Linux x86_64)" \
+     --referer="https://ftdichip.com/software-examples/ft4222h-software-examples/" \
+     "<current-url-from-the-page>"
+```
+
+##### Install
+
+```bash
+tar zxvf libft4222-linux-*.tgz
+sudo ./install4222.sh
+sudo ldconfig
+```
+
+This places the library in `/usr/local/lib` and headers in
+`/usr/local/include`. Verify:
+
+```bash
+ls /usr/local/lib | grep -i ft4222      # libft4222.so -> libft4222.so.x.y.z.w
+ls /usr/local/include/libft4222.h /usr/local/include/ftd2xx.h
+```
+
+##### Make the library findable at runtime
+
+Building may succeed while running fails with
+`libft4222.so: cannot open shared object file`, because `/usr/local/lib` is not
+always on the dynamic loader's search path. Add it once:
+
+```bash
+echo "/usr/local/lib" | sudo tee /etc/ld.so.conf.d/ftdi.conf
+sudo ldconfig
+ldconfig -p | grep ft4222               # should now list libft4222.so
+```
+
+##### 3. USB permissions (udev rule)
+
+By default a normal user cannot open the raw FT4222 USB device, so the driver
+enumerates the devices but reads **blank descriptions** and reports
+`NUMBER OF DEVICES: 0`. Grant access with a udev rule instead of running as
+root:
+
+```bash
+echo 'SUBSYSTEM=="usb", ATTRS{idVendor}=="0403", ATTRS{idProduct}=="601c", MODE="0666", GROUP="dialout"' | \
+  sudo tee /etc/udev/rules.d/99-ftdi-ft4222.rules
+
+sudo udevadm control --reload-rules
+sudo udevadm trigger
+```
+
+Then **unplug and replug** the spectrometers so the new permissions apply.
+
+> A one-off `sudo chmod 666 /dev/bus/usb/<BUS>/<DEV>` also works but resets on
+> every replug/reboot — use the udev rule for a persistent fix.
+
+> **Note on `ftdi_sio`:** on some systems the kernel's `ftdi_sio` serial driver
+> claims the device and exposes it as `/dev/ttyUSB*`, which blocks D2XX access.
+> If `ls /dev/ttyUSB*` shows a device appearing when you plug in the
+> spectrometer, unbind or blacklist `ftdi_sio` for these devices. On this setup
+> `ftdi_sio` does **not** grab the FT4222, so no action was needed — check
+> before doing anything global, since unbinding affects all FTDI serial
+> devices.
+
+#### Install ROS 2 Dependencies
 Resolve ROS 2 package dependencies with rosdep:
 
 ```bash
