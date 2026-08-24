@@ -20,6 +20,7 @@ def generate_launch_description():
     ]
 
     ld_path = ':'.join(filter(None, lib_paths))
+    config_path = os.path.expanduser('~/allied_vision_config.xml')
 
     return LaunchDescription([
         SetEnvironmentVariable('GENICAM_ROOT_V3_1', '/opt/pleora/ebus_sdk/Ubuntu-22.04-x86_64/lib/genicam'),
@@ -38,7 +39,7 @@ def generate_launch_description():
             emulate_tty=True,
             parameters=[{
                 'camera_id': 'DEV_1AB22C025217',  # your camera GUID
-                'settings_file': '/home/river/allied_vision_config.xml',
+                'settings_file': config_path,
             }],
             remappings=[
                 ('/alvium/image_raw', '/camera/image_raw')  # remap to topic synchronous_cubes expects

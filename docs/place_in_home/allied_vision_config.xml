@@ -1,0 +1,1417 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<ModuleSettings>
+    <SettingsStruct>
+        <PersistType Description="Persist all features except LUTs" Value="2" />
+        <MaxIterations Description="How often implementation shall try to write values to specific feature (due to complex feature dependencies, multiple write operations are sometimes necessary)" Value="10" />
+        <LoggingLevel Description="All: all messages will be logged (Info, Error, Warning, Debug, Trace)" Value="4" />
+    </SettingsStruct>
+    <CameraInfo Id="DEV_1AB22C025217" Model="1800 U-507c">
+        <LocalDevice>
+            <Feature Name="DeviceDisplayName" Value="Allied Vision 1800 U-507c" Type="String" />
+            <Feature Name="DeviceID" Value="DEV_1AB22C025217" Type="String" />
+            <Feature Name="DeviceLocation" Value="//3/7/3" Type="String" />
+            <Feature Name="DeviceModelName" Value="1800 U-507c" Type="String" />
+            <Feature Name="DeviceType" Value="USB3" Type="Enum" />
+            <Feature Name="DeviceVendorName" Value="Allied Vision" Type="String" />
+            <Feature Name="StreamCount" Value="1" Type="Int" />
+            <SelectorGroup Name="StreamSelector" Type="Int" Value="0">
+                <Feature Name="StreamID" Value="DEV_1AB22C025217_DS_0x0" Type="String" />
+            </SelectorGroup>
+            <Feature Name="StreamSelector" Value="0" Type="Int" />
+        </LocalDevice>
+        <RemoteDevice>
+            <Feature Name="AcquisitionFrameRate" Value="3.19981" Type="Float" />
+            <Feature Name="AcquisitionFrameRateEnable" Value="1" Type="Bool" />
+            <Feature Name="AcquisitionFrameRateMode" Value="Basic" Type="Enum" />
+            <Feature Name="AcquisitionMode" Value="Continuous" Type="Enum" />
+            <SelectorGroup Name="AcquisitionStatusSelector" Type="Enum" Value="AcquisitionActive">
+                <Feature Name="AcquisitionStatus" Value="0" Type="Bool" />
+            </SelectorGroup>
+            <SelectorGroup Name="AcquisitionStatusSelector" Type="Enum" Value="AcquisitionTransfer">
+                <Feature Name="AcquisitionStatus" Value="0" Type="Bool" />
+            </SelectorGroup>
+            <Feature Name="AcquisitionStatusSelector" Value="AcquisitionActive" Type="Enum" />
+            <Feature Name="AdaptiveNoiseSuppressionFactor" Value="1" Type="Float" />
+            <SelectorGroup Name="AutoModeRegionSelector" Type="Enum" Value="AutoModeRegion1">
+                <Feature Name="AutoModeRegionWidth" Value="616" Type="Int" />
+                <Feature Name="AutoModeRegionHeight" Value="514" Type="Int" />
+                <Feature Name="AutoModeRegionOffsetX" Value="616" Type="Int" />
+                <Feature Name="AutoModeRegionOffsetY" Value="514" Type="Int" />
+            </SelectorGroup>
+            <Feature Name="AutoModeRegionSelector" Value="AutoModeRegion1" Type="Enum" />
+            <SelectorGroup Name="BalanceRatioSelector" Type="Enum" Value="Red">
+                <Feature Name="BalanceRatio" Value="2.35498" Type="Float" />
+            </SelectorGroup>
+            <SelectorGroup Name="BalanceRatioSelector" Type="Enum" Value="Blue">
+                <Feature Name="BalanceRatio" Value="2.100098" Type="Float" />
+            </SelectorGroup>
+            <Feature Name="BalanceRatioSelector" Value="Red" Type="Enum" />
+            <Feature Name="BalanceWhiteAuto" Value="Off" Type="Enum" />
+            <Feature Name="BalanceWhiteAutoRate" Value="100" Type="Float" />
+            <Feature Name="BalanceWhiteAutoTolerance" Value="5" Type="Float" />
+            <SelectorGroup Name="BinningSelector" Type="Enum" Value="Digital">
+                <Feature Name="BinningHorizontalMode" Value="Sum" Type="Enum" />
+                <Feature Name="BinningHorizontal" Value="1" Type="Int" />
+                <Feature Name="BinningVertical" Value="1" Type="Int" />
+                <Feature Name="BinningVerticalMode" Value="Sum" Type="Enum" />
+            </SelectorGroup>
+            <Feature Name="BinningSelector" Value="Digital" Type="Enum" />
+            <SelectorGroup Name="BlackLevelSelector" Type="Enum" Value="All">
+                <Feature Name="BlackLevel" Value="0" Type="Float" />
+            </SelectorGroup>
+            <Feature Name="BlackLevelSelector" Value="All" Type="Enum" />
+            <Feature Name="ChunkModeActive" Value="0" Type="Bool" />
+            <SelectorGroup Name="ChunkSelector" Type="Enum" Value="FrameID">
+                <Feature Name="ChunkEnable" Value="0" Type="Bool" />
+            </SelectorGroup>
+            <SelectorGroup Name="ChunkSelector" Type="Enum" Value="LineStatusAll">
+                <Feature Name="ChunkEnable" Value="0" Type="Bool" />
+            </SelectorGroup>
+            <SelectorGroup Name="ChunkSelector" Type="Enum" Value="Timestamp">
+                <Feature Name="ChunkEnable" Value="0" Type="Bool" />
+            </SelectorGroup>
+            <SelectorGroup Name="ChunkSelector" Type="Enum" Value="ExposureTime">
+                <Feature Name="ChunkEnable" Value="0" Type="Bool" />
+            </SelectorGroup>
+            <SelectorGroup Name="ChunkSelector" Type="Enum" Value="BalanceRatioBlue">
+                <Feature Name="ChunkEnable" Value="0" Type="Bool" />
+            </SelectorGroup>
+            <SelectorGroup Name="ChunkSelector" Type="Enum" Value="BalanceRatioRed">
+                <Feature Name="ChunkEnable" Value="0" Type="Bool" />
+            </SelectorGroup>
+            <SelectorGroup Name="ChunkSelector" Type="Enum" Value="Gain">
+                <Feature Name="ChunkEnable" Value="0" Type="Bool" />
+            </SelectorGroup>
+            <SelectorGroup Name="ChunkSelector" Type="Enum" Value="Height">
+                <Feature Name="ChunkEnable" Value="0" Type="Bool" />
+            </SelectorGroup>
+            <SelectorGroup Name="ChunkSelector" Type="Enum" Value="Width">
+                <Feature Name="ChunkEnable" Value="0" Type="Bool" />
+            </SelectorGroup>
+            <SelectorGroup Name="ChunkSelector" Type="Enum" Value="OffsetX">
+                <Feature Name="ChunkEnable" Value="0" Type="Bool" />
+            </SelectorGroup>
+            <SelectorGroup Name="ChunkSelector" Type="Enum" Value="OffsetY">
+                <Feature Name="ChunkEnable" Value="0" Type="Bool" />
+            </SelectorGroup>
+            <SelectorGroup Name="ChunkSelector" Type="Enum" Value="SequencerSetActive">
+                <Feature Name="ChunkEnable" Value="0" Type="Bool" />
+            </SelectorGroup>
+            <Feature Name="ChunkSelector" Value="SequencerSetActive" Type="Enum" />
+            <Feature Name="ColorInterpolation" Value="HighQualityLinear5X5" Type="Enum" />
+            <Feature Name="ColorTransformationEnable" Value="0" Type="Bool" />
+            <SelectorGroup Name="ColorTransformationValueSelector" Type="Enum" Value="Gain00">
+                <Feature Name="ColorTransformationValue" Value="1" Type="Float" />
+            </SelectorGroup>
+            <SelectorGroup Name="ColorTransformationValueSelector" Type="Enum" Value="Gain01">
+                <Feature Name="ColorTransformationValue" Value="0" Type="Float" />
+            </SelectorGroup>
+            <SelectorGroup Name="ColorTransformationValueSelector" Type="Enum" Value="Gain02">
+                <Feature Name="ColorTransformationValue" Value="0" Type="Float" />
+            </SelectorGroup>
+            <SelectorGroup Name="ColorTransformationValueSelector" Type="Enum" Value="Gain10">
+                <Feature Name="ColorTransformationValue" Value="0" Type="Float" />
+            </SelectorGroup>
+            <SelectorGroup Name="ColorTransformationValueSelector" Type="Enum" Value="Gain11">
+                <Feature Name="ColorTransformationValue" Value="1" Type="Float" />
+            </SelectorGroup>
+            <SelectorGroup Name="ColorTransformationValueSelector" Type="Enum" Value="Gain12">
+                <Feature Name="ColorTransformationValue" Value="0" Type="Float" />
+            </SelectorGroup>
+            <SelectorGroup Name="ColorTransformationValueSelector" Type="Enum" Value="Gain20">
+                <Feature Name="ColorTransformationValue" Value="0" Type="Float" />
+            </SelectorGroup>
+            <SelectorGroup Name="ColorTransformationValueSelector" Type="Enum" Value="Gain21">
+                <Feature Name="ColorTransformationValue" Value="0" Type="Float" />
+            </SelectorGroup>
+            <SelectorGroup Name="ColorTransformationValueSelector" Type="Enum" Value="Gain22">
+                <Feature Name="ColorTransformationValue" Value="1" Type="Float" />
+            </SelectorGroup>
+            <Feature Name="ColorTransformationValueSelector" Value="Gain00" Type="Enum" />
+            <Feature Name="ContrastBrightLimit" Value="255" Type="Int" />
+            <Feature Name="ContrastDarkLimit" Value="0" Type="Int" />
+            <Feature Name="ContrastEnable" Value="0" Type="Bool" />
+            <Feature Name="ContrastShape" Value="4" Type="Int" />
+            <Feature Name="ConvolutionMode" Value="Off" Type="Enum" />
+            <SelectorGroup Name="CorrectionSelector" Type="Enum" Value="DefectPixelCorrection">
+                <Feature Name="CorrectionMode" Value="On" Type="Enum" />
+                <Feature Name="CorrectionSet" Value="Preset" Type="Enum" />
+                <Feature Name="CorrectionSetDefault" Value="Preset" Type="Enum" />
+                <Feature Name="CorrectionDataSize" Value="9856" Type="Int" />
+                <Feature Name="CorrectionEntryType" Value="1" Type="Int" />
+            </SelectorGroup>
+            <SelectorGroup Name="CorrectionSelector" Type="Enum" Value="FixedPatternNoiseCorrection">
+                <Feature Name="CorrectionMode" Value="On" Type="Enum" />
+                <Feature Name="CorrectionSet" Value="Preset" Type="Enum" />
+                <Feature Name="CorrectionSetDefault" Value="Preset" Type="Enum" />
+                <Feature Name="CorrectionDataSize" Value="4096" Type="Int" />
+                <Feature Name="CorrectionEntryType" Value="2" Type="Int" />
+            </SelectorGroup>
+            <Feature Name="CorrectionSelector" Value="DefectPixelCorrection" Type="Enum" />
+            <SelectorGroup Name="CustomConvolutionValueSelector" Type="Enum" Value="Coefficient00">
+                <Feature Name="CustomConvolutionValue" Value="0" Type="Int" />
+            </SelectorGroup>
+            <SelectorGroup Name="CustomConvolutionValueSelector" Type="Enum" Value="Coefficient01">
+                <Feature Name="CustomConvolutionValue" Value="0" Type="Int" />
+            </SelectorGroup>
+            <SelectorGroup Name="CustomConvolutionValueSelector" Type="Enum" Value="Coefficient02">
+                <Feature Name="CustomConvolutionValue" Value="0" Type="Int" />
+            </SelectorGroup>
+            <SelectorGroup Name="CustomConvolutionValueSelector" Type="Enum" Value="Coefficient03">
+                <Feature Name="CustomConvolutionValue" Value="0" Type="Int" />
+            </SelectorGroup>
+            <SelectorGroup Name="CustomConvolutionValueSelector" Type="Enum" Value="Coefficient04">
+                <Feature Name="CustomConvolutionValue" Value="0" Type="Int" />
+            </SelectorGroup>
+            <SelectorGroup Name="CustomConvolutionValueSelector" Type="Enum" Value="Coefficient10">
+                <Feature Name="CustomConvolutionValue" Value="0" Type="Int" />
+            </SelectorGroup>
+            <SelectorGroup Name="CustomConvolutionValueSelector" Type="Enum" Value="Coefficient11">
+                <Feature Name="CustomConvolutionValue" Value="0" Type="Int" />
+            </SelectorGroup>
+            <SelectorGroup Name="CustomConvolutionValueSelector" Type="Enum" Value="Coefficient12">
+                <Feature Name="CustomConvolutionValue" Value="0" Type="Int" />
+            </SelectorGroup>
+            <SelectorGroup Name="CustomConvolutionValueSelector" Type="Enum" Value="Coefficient13">
+                <Feature Name="CustomConvolutionValue" Value="0" Type="Int" />
+            </SelectorGroup>
+            <SelectorGroup Name="CustomConvolutionValueSelector" Type="Enum" Value="Coefficient14">
+                <Feature Name="CustomConvolutionValue" Value="0" Type="Int" />
+            </SelectorGroup>
+            <SelectorGroup Name="CustomConvolutionValueSelector" Type="Enum" Value="Coefficient20">
+                <Feature Name="CustomConvolutionValue" Value="0" Type="Int" />
+            </SelectorGroup>
+            <SelectorGroup Name="CustomConvolutionValueSelector" Type="Enum" Value="Coefficient21">
+                <Feature Name="CustomConvolutionValue" Value="0" Type="Int" />
+            </SelectorGroup>
+            <SelectorGroup Name="CustomConvolutionValueSelector" Type="Enum" Value="Coefficient22">
+                <Feature Name="CustomConvolutionValue" Value="1" Type="Int" />
+            </SelectorGroup>
+            <SelectorGroup Name="CustomConvolutionValueSelector" Type="Enum" Value="Coefficient23">
+                <Feature Name="CustomConvolutionValue" Value="0" Type="Int" />
+            </SelectorGroup>
+            <SelectorGroup Name="CustomConvolutionValueSelector" Type="Enum" Value="Coefficient24">
+                <Feature Name="CustomConvolutionValue" Value="0" Type="Int" />
+            </SelectorGroup>
+            <SelectorGroup Name="CustomConvolutionValueSelector" Type="Enum" Value="Coefficient30">
+                <Feature Name="CustomConvolutionValue" Value="0" Type="Int" />
+            </SelectorGroup>
+            <SelectorGroup Name="CustomConvolutionValueSelector" Type="Enum" Value="Coefficient31">
+                <Feature Name="CustomConvolutionValue" Value="0" Type="Int" />
+            </SelectorGroup>
+            <SelectorGroup Name="CustomConvolutionValueSelector" Type="Enum" Value="Coefficient32">
+                <Feature Name="CustomConvolutionValue" Value="0" Type="Int" />
+            </SelectorGroup>
+            <SelectorGroup Name="CustomConvolutionValueSelector" Type="Enum" Value="Coefficient33">
+                <Feature Name="CustomConvolutionValue" Value="0" Type="Int" />
+            </SelectorGroup>
+            <SelectorGroup Name="CustomConvolutionValueSelector" Type="Enum" Value="Coefficient34">
+                <Feature Name="CustomConvolutionValue" Value="0" Type="Int" />
+            </SelectorGroup>
+            <SelectorGroup Name="CustomConvolutionValueSelector" Type="Enum" Value="Coefficient40">
+                <Feature Name="CustomConvolutionValue" Value="0" Type="Int" />
+            </SelectorGroup>
+            <SelectorGroup Name="CustomConvolutionValueSelector" Type="Enum" Value="Coefficient41">
+                <Feature Name="CustomConvolutionValue" Value="0" Type="Int" />
+            </SelectorGroup>
+            <SelectorGroup Name="CustomConvolutionValueSelector" Type="Enum" Value="Coefficient42">
+                <Feature Name="CustomConvolutionValue" Value="0" Type="Int" />
+            </SelectorGroup>
+            <SelectorGroup Name="CustomConvolutionValueSelector" Type="Enum" Value="Coefficient43">
+                <Feature Name="CustomConvolutionValue" Value="0" Type="Int" />
+            </SelectorGroup>
+            <SelectorGroup Name="CustomConvolutionValueSelector" Type="Enum" Value="Coefficient44">
+                <Feature Name="CustomConvolutionValue" Value="0" Type="Int" />
+            </SelectorGroup>
+            <Feature Name="CustomConvolutionValueSelector" Value="Coefficient44" Type="Enum" />
+            <Feature Name="DeviceFamilyName" Value="ALVIUM" Type="String" />
+            <SelectorGroup Name="DeviceFirmwareIDSelector" Type="Enum" Value="Current">
+                <Feature Name="DeviceFirmwareID" Value="44-0030102C" Type="String" />
+            </SelectorGroup>
+            <SelectorGroup Name="DeviceFirmwareIDSelector" Type="Enum" Value="Supported">
+                <Feature Name="DeviceFirmwareID" Value="44-0030102C" Type="String" />
+            </SelectorGroup>
+            <Feature Name="DeviceFirmwareIDSelector" Value="Current" Type="Enum" />
+            <Feature Name="DeviceFirmwareUploadType" Value="1" Type="Int" />
+            <SelectorGroup Name="DeviceFirmwareVersionSelector" Type="Enum" Value="Current">
+                <Feature Name="DeviceFirmwareVersion" Value="10.0.6C9062B1" Type="String" />
+            </SelectorGroup>
+            <SelectorGroup Name="DeviceFirmwareVersionSelector" Type="Enum" Value="Programmed">
+                <Feature Name="DeviceFirmwareVersion" Value="10.0.6C9062B1" Type="String" />
+            </SelectorGroup>
+            <Feature Name="DeviceFirmwareVersionSelector" Value="Current" Type="Enum" />
+            <Feature Name="DeviceGenCPVersionMajor" Value="1" Type="Int" />
+            <Feature Name="DeviceGenCPVersionMinor" Value="3" Type="Int" />
+            <Feature Name="DeviceIndicatorLuminance" Value="10" Type="Int" />
+            <Feature Name="DeviceIndicatorMode" Value="Active" Type="Enum" />
+            <Feature Name="DeviceLinkCommandTimeout" Value="300000" Type="Float" />
+            <Feature Name="DeviceLinkSpeed" Value="50000000" Type="Int" />
+            <Feature Name="DeviceLinkThroughputLimit" Value="50000000" Type="Int" />
+            <Feature Name="DeviceLinkThroughputLimitMode" Value="On" Type="Enum" />
+            <Feature Name="DeviceManufacturerInfo" Value="0-DA-0-459561-0-0" Type="String" />
+            <Feature Name="DeviceModelName" Value="1800 U-507c" Type="String" />
+            <Feature Name="DevicePowerSavingMode" Value="Disabled" Type="Enum" />
+            <Feature Name="DeviceSFNCVersionMajor" Value="2" Type="Int" />
+            <Feature Name="DeviceSFNCVersionMinor" Value="2" Type="Int" />
+            <Feature Name="DeviceSFNCVersionSubMinor" Value="0" Type="Int" />
+            <Feature Name="DeviceScanType" Value="Areascan" Type="Enum" />
+            <Feature Name="DeviceSerialNumber" Value="039CN" Type="String" />
+            <Feature Name="DeviceTLVersionMajor" Value="1" Type="Int" />
+            <Feature Name="DeviceTLVersionMinor" Value="1" Type="Int" />
+            <SelectorGroup Name="DeviceTemperatureSelector" Type="Enum" Value="Mainboard">
+                <Feature Name="DeviceTemperature" Value="51.7" Type="Float" />
+            </SelectorGroup>
+            <Feature Name="DeviceTemperatureSelector" Value="Mainboard" Type="Enum" />
+            <Feature Name="DeviceUserID" Value="" Type="String" />
+            <Feature Name="DeviceVendorName" Value="Allied Vision" Type="String" />
+            <Feature Name="DeviceVersion" Value="14637" Type="String" />
+            <Feature Name="ExposureActiveMode" Value="FlashWindow" Type="Enum" />
+            <Feature Name="ExposureAuto" Value="Off" Type="Enum" />
+            <Feature Name="ExposureAutoMax" Value="9000011" Type="Float" />
+            <Feature Name="ExposureAutoMin" Value="310.949" Type="Float" />
+            <Feature Name="ExposureMode" Value="Timed" Type="Enum" />
+            <Feature Name="ExposureTime" Value="4994.747" Type="Float" />
+            <Feature Name="FileProcessStatus" Value="None" Type="Enum" />
+            <SelectorGroup Name="FileSelector" Type="Enum" Value="Firmware">
+                <SelectorGroup Name="FileOperationSelector" Type="Enum" Value="Open">
+                    <Feature Name="FileOperationResult" Value="0" Type="Int" />
+                    <Feature Name="FileOperationStatus" Value="Success" Type="Enum" />
+                </SelectorGroup>
+                <SelectorGroup Name="FileOperationSelector" Type="Enum" Value="Close">
+                    <Feature Name="FileOperationResult" Value="0" Type="Int" />
+                    <Feature Name="FileOperationStatus" Value="Success" Type="Enum" />
+                </SelectorGroup>
+                <SelectorGroup Name="FileOperationSelector" Type="Enum" Value="Read">
+                    <Feature Name="FileOperationResult" Value="0" Type="Int" />
+                    <Feature Name="FileOperationStatus" Value="Success" Type="Enum" />
+                </SelectorGroup>
+                <SelectorGroup Name="FileOperationSelector" Type="Enum" Value="Write">
+                    <Feature Name="FileOperationResult" Value="0" Type="Int" />
+                    <Feature Name="FileOperationStatus" Value="Success" Type="Enum" />
+                </SelectorGroup>
+                <SelectorGroup Name="FileOperationSelector" Type="Enum" Value="Delete">
+                    <Feature Name="FileOperationResult" Value="0" Type="Int" />
+                    <Feature Name="FileOperationStatus" Value="Success" Type="Enum" />
+                </SelectorGroup>
+                <Feature Name="FileStatus" Value="Closed" Type="Enum" />
+            </SelectorGroup>
+            <SelectorGroup Name="FileSelector" Type="Enum" Value="UserData">
+                <SelectorGroup Name="FileOperationSelector" Type="Enum" Value="Open">
+                    <Feature Name="FileOperationResult" Value="0" Type="Int" />
+                    <Feature Name="FileOperationStatus" Value="Success" Type="Enum" />
+                </SelectorGroup>
+                <SelectorGroup Name="FileOperationSelector" Type="Enum" Value="Close">
+                    <Feature Name="FileOperationResult" Value="0" Type="Int" />
+                    <Feature Name="FileOperationStatus" Value="Success" Type="Enum" />
+                </SelectorGroup>
+                <SelectorGroup Name="FileOperationSelector" Type="Enum" Value="Read">
+                    <Feature Name="FileOperationResult" Value="0" Type="Int" />
+                    <Feature Name="FileOperationStatus" Value="Success" Type="Enum" />
+                </SelectorGroup>
+                <SelectorGroup Name="FileOperationSelector" Type="Enum" Value="Write">
+                    <Feature Name="FileOperationResult" Value="0" Type="Int" />
+                    <Feature Name="FileOperationStatus" Value="Success" Type="Enum" />
+                </SelectorGroup>
+                <SelectorGroup Name="FileOperationSelector" Type="Enum" Value="Delete">
+                    <Feature Name="FileOperationResult" Value="0" Type="Int" />
+                    <Feature Name="FileOperationStatus" Value="Success" Type="Enum" />
+                </SelectorGroup>
+                <Feature Name="FileStatus" Value="Closed" Type="Enum" />
+            </SelectorGroup>
+            <SelectorGroup Name="FileSelector" Type="Enum" Value="DefectPixelCorrectionPreset">
+                <SelectorGroup Name="FileOperationSelector" Type="Enum" Value="Open">
+                    <Feature Name="FileOperationResult" Value="0" Type="Int" />
+                    <Feature Name="FileOperationStatus" Value="Success" Type="Enum" />
+                </SelectorGroup>
+                <SelectorGroup Name="FileOperationSelector" Type="Enum" Value="Close">
+                    <Feature Name="FileOperationResult" Value="0" Type="Int" />
+                    <Feature Name="FileOperationStatus" Value="Success" Type="Enum" />
+                </SelectorGroup>
+                <SelectorGroup Name="FileOperationSelector" Type="Enum" Value="Read">
+                    <Feature Name="FileOperationResult" Value="0" Type="Int" />
+                    <Feature Name="FileOperationStatus" Value="Success" Type="Enum" />
+                </SelectorGroup>
+                <SelectorGroup Name="FileOperationSelector" Type="Enum" Value="Write">
+                    <Feature Name="FileOperationResult" Value="0" Type="Int" />
+                    <Feature Name="FileOperationStatus" Value="Success" Type="Enum" />
+                </SelectorGroup>
+                <SelectorGroup Name="FileOperationSelector" Type="Enum" Value="Delete">
+                    <Feature Name="FileOperationResult" Value="0" Type="Int" />
+                    <Feature Name="FileOperationStatus" Value="Success" Type="Enum" />
+                </SelectorGroup>
+                <Feature Name="FileStatus" Value="Closed" Type="Enum" />
+            </SelectorGroup>
+            <SelectorGroup Name="FileSelector" Type="Enum" Value="DefectPixelCorrectionUser">
+                <SelectorGroup Name="FileOperationSelector" Type="Enum" Value="Open">
+                    <Feature Name="FileOperationResult" Value="0" Type="Int" />
+                    <Feature Name="FileOperationStatus" Value="Success" Type="Enum" />
+                </SelectorGroup>
+                <SelectorGroup Name="FileOperationSelector" Type="Enum" Value="Close">
+                    <Feature Name="FileOperationResult" Value="0" Type="Int" />
+                    <Feature Name="FileOperationStatus" Value="Success" Type="Enum" />
+                </SelectorGroup>
+                <SelectorGroup Name="FileOperationSelector" Type="Enum" Value="Read">
+                    <Feature Name="FileOperationResult" Value="0" Type="Int" />
+                    <Feature Name="FileOperationStatus" Value="Success" Type="Enum" />
+                </SelectorGroup>
+                <SelectorGroup Name="FileOperationSelector" Type="Enum" Value="Write">
+                    <Feature Name="FileOperationResult" Value="0" Type="Int" />
+                    <Feature Name="FileOperationStatus" Value="Success" Type="Enum" />
+                </SelectorGroup>
+                <SelectorGroup Name="FileOperationSelector" Type="Enum" Value="Delete">
+                    <Feature Name="FileOperationResult" Value="0" Type="Int" />
+                    <Feature Name="FileOperationStatus" Value="Success" Type="Enum" />
+                </SelectorGroup>
+                <Feature Name="FileStatus" Value="Closed" Type="Enum" />
+            </SelectorGroup>
+            <SelectorGroup Name="FileSelector" Type="Enum" Value="FixedPatternNoiseCorrectionPreset">
+                <SelectorGroup Name="FileOperationSelector" Type="Enum" Value="Open">
+                    <Feature Name="FileOperationResult" Value="0" Type="Int" />
+                    <Feature Name="FileOperationStatus" Value="Success" Type="Enum" />
+                </SelectorGroup>
+                <SelectorGroup Name="FileOperationSelector" Type="Enum" Value="Close">
+                    <Feature Name="FileOperationResult" Value="0" Type="Int" />
+                    <Feature Name="FileOperationStatus" Value="Success" Type="Enum" />
+                </SelectorGroup>
+                <SelectorGroup Name="FileOperationSelector" Type="Enum" Value="Read">
+                    <Feature Name="FileOperationResult" Value="0" Type="Int" />
+                    <Feature Name="FileOperationStatus" Value="Success" Type="Enum" />
+                </SelectorGroup>
+                <SelectorGroup Name="FileOperationSelector" Type="Enum" Value="Write">
+                    <Feature Name="FileOperationResult" Value="0" Type="Int" />
+                    <Feature Name="FileOperationStatus" Value="Success" Type="Enum" />
+                </SelectorGroup>
+                <SelectorGroup Name="FileOperationSelector" Type="Enum" Value="Delete">
+                    <Feature Name="FileOperationResult" Value="0" Type="Int" />
+                    <Feature Name="FileOperationStatus" Value="Success" Type="Enum" />
+                </SelectorGroup>
+                <Feature Name="FileStatus" Value="Closed" Type="Enum" />
+            </SelectorGroup>
+            <SelectorGroup Name="FileSelector" Type="Enum" Value="FixedPatternNoiseCorrectionUser">
+                <SelectorGroup Name="FileOperationSelector" Type="Enum" Value="Open">
+                    <Feature Name="FileOperationResult" Value="0" Type="Int" />
+                    <Feature Name="FileOperationStatus" Value="Success" Type="Enum" />
+                </SelectorGroup>
+                <SelectorGroup Name="FileOperationSelector" Type="Enum" Value="Close">
+                    <Feature Name="FileOperationResult" Value="0" Type="Int" />
+                    <Feature Name="FileOperationStatus" Value="Success" Type="Enum" />
+                </SelectorGroup>
+                <SelectorGroup Name="FileOperationSelector" Type="Enum" Value="Read">
+                    <Feature Name="FileOperationResult" Value="0" Type="Int" />
+                    <Feature Name="FileOperationStatus" Value="Success" Type="Enum" />
+                </SelectorGroup>
+                <SelectorGroup Name="FileOperationSelector" Type="Enum" Value="Write">
+                    <Feature Name="FileOperationResult" Value="0" Type="Int" />
+                    <Feature Name="FileOperationStatus" Value="Success" Type="Enum" />
+                </SelectorGroup>
+                <SelectorGroup Name="FileOperationSelector" Type="Enum" Value="Delete">
+                    <Feature Name="FileOperationResult" Value="0" Type="Int" />
+                    <Feature Name="FileOperationStatus" Value="Success" Type="Enum" />
+                </SelectorGroup>
+                <Feature Name="FileStatus" Value="Closed" Type="Enum" />
+            </SelectorGroup>
+            <SelectorGroup Name="FileSelector" Type="Enum" Value="UserSet1">
+                <SelectorGroup Name="FileOperationSelector" Type="Enum" Value="Open">
+                    <Feature Name="FileOperationResult" Value="0" Type="Int" />
+                    <Feature Name="FileOperationStatus" Value="Success" Type="Enum" />
+                </SelectorGroup>
+                <SelectorGroup Name="FileOperationSelector" Type="Enum" Value="Close">
+                    <Feature Name="FileOperationResult" Value="0" Type="Int" />
+                    <Feature Name="FileOperationStatus" Value="Success" Type="Enum" />
+                </SelectorGroup>
+                <SelectorGroup Name="FileOperationSelector" Type="Enum" Value="Read">
+                    <Feature Name="FileOperationResult" Value="0" Type="Int" />
+                    <Feature Name="FileOperationStatus" Value="Success" Type="Enum" />
+                </SelectorGroup>
+                <SelectorGroup Name="FileOperationSelector" Type="Enum" Value="Write">
+                    <Feature Name="FileOperationResult" Value="0" Type="Int" />
+                    <Feature Name="FileOperationStatus" Value="Success" Type="Enum" />
+                </SelectorGroup>
+                <SelectorGroup Name="FileOperationSelector" Type="Enum" Value="Delete">
+                    <Feature Name="FileOperationResult" Value="0" Type="Int" />
+                    <Feature Name="FileOperationStatus" Value="Success" Type="Enum" />
+                </SelectorGroup>
+                <Feature Name="FileStatus" Value="Closed" Type="Enum" />
+            </SelectorGroup>
+            <SelectorGroup Name="FileSelector" Type="Enum" Value="UserSet2">
+                <SelectorGroup Name="FileOperationSelector" Type="Enum" Value="Open">
+                    <Feature Name="FileOperationResult" Value="0" Type="Int" />
+                    <Feature Name="FileOperationStatus" Value="Success" Type="Enum" />
+                </SelectorGroup>
+                <SelectorGroup Name="FileOperationSelector" Type="Enum" Value="Close">
+                    <Feature Name="FileOperationResult" Value="0" Type="Int" />
+                    <Feature Name="FileOperationStatus" Value="Success" Type="Enum" />
+                </SelectorGroup>
+                <SelectorGroup Name="FileOperationSelector" Type="Enum" Value="Read">
+                    <Feature Name="FileOperationResult" Value="0" Type="Int" />
+                    <Feature Name="FileOperationStatus" Value="Success" Type="Enum" />
+                </SelectorGroup>
+                <SelectorGroup Name="FileOperationSelector" Type="Enum" Value="Write">
+                    <Feature Name="FileOperationResult" Value="0" Type="Int" />
+                    <Feature Name="FileOperationStatus" Value="Success" Type="Enum" />
+                </SelectorGroup>
+                <SelectorGroup Name="FileOperationSelector" Type="Enum" Value="Delete">
+                    <Feature Name="FileOperationResult" Value="0" Type="Int" />
+                    <Feature Name="FileOperationStatus" Value="Success" Type="Enum" />
+                </SelectorGroup>
+                <Feature Name="FileStatus" Value="Closed" Type="Enum" />
+            </SelectorGroup>
+            <SelectorGroup Name="FileSelector" Type="Enum" Value="UserSet3">
+                <SelectorGroup Name="FileOperationSelector" Type="Enum" Value="Open">
+                    <Feature Name="FileOperationResult" Value="0" Type="Int" />
+                    <Feature Name="FileOperationStatus" Value="Success" Type="Enum" />
+                </SelectorGroup>
+                <SelectorGroup Name="FileOperationSelector" Type="Enum" Value="Close">
+                    <Feature Name="FileOperationResult" Value="0" Type="Int" />
+                    <Feature Name="FileOperationStatus" Value="Success" Type="Enum" />
+                </SelectorGroup>
+                <SelectorGroup Name="FileOperationSelector" Type="Enum" Value="Read">
+                    <Feature Name="FileOperationResult" Value="0" Type="Int" />
+                    <Feature Name="FileOperationStatus" Value="Success" Type="Enum" />
+                </SelectorGroup>
+                <SelectorGroup Name="FileOperationSelector" Type="Enum" Value="Write">
+                    <Feature Name="FileOperationResult" Value="0" Type="Int" />
+                    <Feature Name="FileOperationStatus" Value="Success" Type="Enum" />
+                </SelectorGroup>
+                <SelectorGroup Name="FileOperationSelector" Type="Enum" Value="Delete">
+                    <Feature Name="FileOperationResult" Value="0" Type="Int" />
+                    <Feature Name="FileOperationStatus" Value="Success" Type="Enum" />
+                </SelectorGroup>
+                <Feature Name="FileStatus" Value="Closed" Type="Enum" />
+            </SelectorGroup>
+            <SelectorGroup Name="FileSelector" Type="Enum" Value="UserSet4">
+                <SelectorGroup Name="FileOperationSelector" Type="Enum" Value="Open">
+                    <Feature Name="FileOperationResult" Value="0" Type="Int" />
+                    <Feature Name="FileOperationStatus" Value="Success" Type="Enum" />
+                </SelectorGroup>
+                <SelectorGroup Name="FileOperationSelector" Type="Enum" Value="Close">
+                    <Feature Name="FileOperationResult" Value="0" Type="Int" />
+                    <Feature Name="FileOperationStatus" Value="Success" Type="Enum" />
+                </SelectorGroup>
+                <SelectorGroup Name="FileOperationSelector" Type="Enum" Value="Read">
+                    <Feature Name="FileOperationResult" Value="0" Type="Int" />
+                    <Feature Name="FileOperationStatus" Value="Success" Type="Enum" />
+                </SelectorGroup>
+                <SelectorGroup Name="FileOperationSelector" Type="Enum" Value="Write">
+                    <Feature Name="FileOperationResult" Value="0" Type="Int" />
+                    <Feature Name="FileOperationStatus" Value="Success" Type="Enum" />
+                </SelectorGroup>
+                <SelectorGroup Name="FileOperationSelector" Type="Enum" Value="Delete">
+                    <Feature Name="FileOperationResult" Value="0" Type="Int" />
+                    <Feature Name="FileOperationStatus" Value="Success" Type="Enum" />
+                </SelectorGroup>
+                <Feature Name="FileStatus" Value="Closed" Type="Enum" />
+            </SelectorGroup>
+            <Feature Name="FileSelector" Value="UserData" Type="Enum" />
+            <Feature Name="GainAuto" Value="Off" Type="Enum" />
+            <Feature Name="GainAutoMax" Value="48" Type="Float" />
+            <Feature Name="GainAutoMin" Value="0" Type="Float" />
+            <SelectorGroup Name="GainSelector" Type="Enum" Value="All">
+                <Feature Name="Gain" Value="0" Type="Float" />
+            </SelectorGroup>
+            <Feature Name="GainSelector" Value="All" Type="Enum" />
+            <Feature Name="Gamma" Value="1" Type="Float" />
+            <Feature Name="Height" Value="1028" Type="Int" />
+            <Feature Name="HeightMax" Value="2056" Type="Int" />
+            <Feature Name="Hue" Value="0" Type="Float" />
+            <Feature Name="IntensityAutoPrecedence" Value="Minimizenoise" Type="Enum" />
+            <Feature Name="IntensityControllerRate" Value="100" Type="Int" />
+            <Feature Name="IntensityControllerRegion" Value="FullImage" Type="Enum" />
+            <SelectorGroup Name="IntensityControllerSelector" Type="Enum" Value="IntensityController1">
+                <Feature Name="IntensityControllerOutliersDark" Value="0" Type="Float" />
+                <Feature Name="IntensityControllerOutliersBright" Value="0" Type="Float" />
+                <Feature Name="IntensityControllerTolerance" Value="5" Type="Int" />
+                <Feature Name="IntensityControllerAlgorithm" Value="Mean" Type="Enum" />
+            </SelectorGroup>
+            <Feature Name="IntensityControllerSelector" Value="IntensityController1" Type="Enum" />
+            <Feature Name="IntensityControllerTarget" Value="50" Type="Float" />
+            <SelectorGroup Name="LUTSelector" Type="Enum" Value="Luminance" />
+            <SelectorGroup Name="LUTSelector" Type="Enum" Value="Red">
+                <Feature Name="LUTIndex" Value="0" Type="Int" />
+            </SelectorGroup>
+            <SelectorGroup Name="LUTSelector" Type="Enum" Value="Green">
+                <Feature Name="LUTIndex" Value="0" Type="Int" />
+            </SelectorGroup>
+            <SelectorGroup Name="LUTSelector" Type="Enum" Value="Blue">
+                <Feature Name="LUTIndex" Value="0" Type="Int" />
+            </SelectorGroup>
+            <Feature Name="LUTSelector" Value="Luminance" Type="Enum" />
+            <SelectorGroup Name="LineSelector" Type="Enum" Value="Line0">
+                <Feature Name="LineMode" Value="Input" Type="Enum" />
+                <Feature Name="LineStatus" Value="1" Type="Bool" />
+                <Feature Name="LineStatusAll" Value="15" Type="Int" />
+            </SelectorGroup>
+            <SelectorGroup Name="LineSelector" Type="Enum" Value="Line1">
+                <Feature Name="LineMode" Value="Input" Type="Enum" />
+                <Feature Name="LineStatus" Value="1" Type="Bool" />
+                <Feature Name="LineStatusAll" Value="15" Type="Int" />
+            </SelectorGroup>
+            <SelectorGroup Name="LineSelector" Type="Enum" Value="Line2">
+                <Feature Name="LineMode" Value="Input" Type="Enum" />
+                <Feature Name="LineSource" Value="Off" Type="Enum" />
+                <Feature Name="LineStatus" Value="1" Type="Bool" />
+                <Feature Name="LineStatusAll" Value="15" Type="Int" />
+            </SelectorGroup>
+            <SelectorGroup Name="LineSelector" Type="Enum" Value="Line3">
+                <Feature Name="LineMode" Value="Input" Type="Enum" />
+                <Feature Name="LineSource" Value="Off" Type="Enum" />
+                <Feature Name="LineStatus" Value="1" Type="Bool" />
+                <Feature Name="LineStatusAll" Value="15" Type="Int" />
+            </SelectorGroup>
+            <Feature Name="LineSelector" Value="Line0" Type="Enum" />
+            <Feature Name="OffsetX" Value="616" Type="Int" />
+            <Feature Name="OffsetY" Value="514" Type="Int" />
+            <Feature Name="PayloadSize" Value="3799488" Type="Int" />
+            <Feature Name="PixelFormat" Value="RGB8" Type="Enum" />
+            <Feature Name="PixelSize" Value="Bpp24" Type="Enum" />
+            <Feature Name="ReverseX" Value="0" Type="Bool" />
+            <Feature Name="ReverseY" Value="0" Type="Bool" />
+            <Feature Name="Saturation" Value="1" Type="Float" />
+            <Feature Name="SensorBitDepth" Value="Bpp12" Type="Enum" />
+            <Feature Name="SensorHeight" Value="2056" Type="Int" />
+            <Feature Name="SensorShutterMode" Value="GlobalShutter" Type="Enum" />
+            <Feature Name="SensorWidth" Value="2464" Type="Int" />
+            <Feature Name="SequencerConfigurationMode" Value="Off" Type="Enum" />
+            <SelectorGroup Name="SequencerFeatureSelector" Type="Enum" Value="Width">
+                <Feature Name="SequencerFeatureEnable" Value="0" Type="Bool" />
+            </SelectorGroup>
+            <SelectorGroup Name="SequencerFeatureSelector" Type="Enum" Value="Height">
+                <Feature Name="SequencerFeatureEnable" Value="0" Type="Bool" />
+            </SelectorGroup>
+            <SelectorGroup Name="SequencerFeatureSelector" Type="Enum" Value="OffsetX">
+                <Feature Name="SequencerFeatureEnable" Value="1" Type="Bool" />
+            </SelectorGroup>
+            <SelectorGroup Name="SequencerFeatureSelector" Type="Enum" Value="OffsetY">
+                <Feature Name="SequencerFeatureEnable" Value="1" Type="Bool" />
+            </SelectorGroup>
+            <SelectorGroup Name="SequencerFeatureSelector" Type="Enum" Value="BinningHorizontal">
+                <Feature Name="SequencerFeatureEnable" Value="0" Type="Bool" />
+            </SelectorGroup>
+            <SelectorGroup Name="SequencerFeatureSelector" Type="Enum" Value="BinningVertical">
+                <Feature Name="SequencerFeatureEnable" Value="0" Type="Bool" />
+            </SelectorGroup>
+            <SelectorGroup Name="SequencerFeatureSelector" Type="Enum" Value="ExposureTime">
+                <Feature Name="SequencerFeatureEnable" Value="1" Type="Bool" />
+            </SelectorGroup>
+            <SelectorGroup Name="SequencerFeatureSelector" Type="Enum" Value="AcquisitionFrameRate">
+                <Feature Name="SequencerFeatureEnable" Value="1" Type="Bool" />
+            </SelectorGroup>
+            <SelectorGroup Name="SequencerFeatureSelector" Type="Enum" Value="BalanceRatio">
+                <Feature Name="SequencerFeatureEnable" Value="1" Type="Bool" />
+            </SelectorGroup>
+            <SelectorGroup Name="SequencerFeatureSelector" Type="Enum" Value="Gamma">
+                <Feature Name="SequencerFeatureEnable" Value="1" Type="Bool" />
+            </SelectorGroup>
+            <SelectorGroup Name="SequencerFeatureSelector" Type="Enum" Value="Gain">
+                <Feature Name="SequencerFeatureEnable" Value="1" Type="Bool" />
+            </SelectorGroup>
+            <SelectorGroup Name="SequencerFeatureSelector" Type="Enum" Value="PixelFormat">
+                <Feature Name="SequencerFeatureEnable" Value="0" Type="Bool" />
+            </SelectorGroup>
+            <SelectorGroup Name="SequencerFeatureSelector" Type="Enum" Value="Hue">
+                <Feature Name="SequencerFeatureEnable" Value="1" Type="Bool" />
+            </SelectorGroup>
+            <SelectorGroup Name="SequencerFeatureSelector" Type="Enum" Value="Saturation">
+                <Feature Name="SequencerFeatureEnable" Value="1" Type="Bool" />
+            </SelectorGroup>
+            <SelectorGroup Name="SequencerFeatureSelector" Type="Enum" Value="ColorTransformationValue">
+                <Feature Name="SequencerFeatureEnable" Value="1" Type="Bool" />
+            </SelectorGroup>
+            <SelectorGroup Name="SequencerFeatureSelector" Type="Enum" Value="ColorTransformationEnable">
+                <Feature Name="SequencerFeatureEnable" Value="1" Type="Bool" />
+            </SelectorGroup>
+            <SelectorGroup Name="SequencerFeatureSelector" Type="Enum" Value="LUTEnable">
+                <Feature Name="SequencerFeatureEnable" Value="1" Type="Bool" />
+            </SelectorGroup>
+            <SelectorGroup Name="SequencerFeatureSelector" Type="Enum" Value="ChunkEnable">
+                <Feature Name="SequencerFeatureEnable" Value="1" Type="Bool" />
+            </SelectorGroup>
+            <SelectorGroup Name="SequencerFeatureSelector" Type="Enum" Value="ChunkModeActive">
+                <Feature Name="SequencerFeatureEnable" Value="1" Type="Bool" />
+            </SelectorGroup>
+            <Feature Name="SequencerFeatureSelector" Value="Width" Type="Enum" />
+            <Feature Name="SequencerMode" Value="Off" Type="Enum" />
+            <Feature Name="SequencerSetActive" Value="1" Type="Int" />
+            <SelectorGroup Name="SequencerSetSelector" Type="Enum" Value="Set0">
+                <SelectorGroup Name="SequencerPathSelector" Type="Enum" Value="Path0">
+                    <Feature Name="SequencerSetNext" Value="0" Type="Int" />
+                    <Feature Name="SequencerTriggerActivation" Value="RisingEdge" Type="Enum" />
+                    <Feature Name="SequencerTriggerSource" Value="Off" Type="Enum" />
+                </SelectorGroup>
+                <SelectorGroup Name="SequencerPathSelector" Type="Enum" Value="Path1">
+                    <Feature Name="SequencerSetNext" Value="0" Type="Int" />
+                    <Feature Name="SequencerTriggerActivation" Value="RisingEdge" Type="Enum" />
+                    <Feature Name="SequencerTriggerSource" Value="Off" Type="Enum" />
+                </SelectorGroup>
+                <SelectorGroup Name="SequencerPathSelector" Type="Enum" Value="Path2">
+                    <Feature Name="SequencerSetNext" Value="0" Type="Int" />
+                    <Feature Name="SequencerTriggerActivation" Value="RisingEdge" Type="Enum" />
+                    <Feature Name="SequencerTriggerSource" Value="Off" Type="Enum" />
+                </SelectorGroup>
+                <SelectorGroup Name="SequencerPathSelector" Type="Enum" Value="Path3">
+                    <Feature Name="SequencerSetNext" Value="0" Type="Int" />
+                    <Feature Name="SequencerTriggerActivation" Value="RisingEdge" Type="Enum" />
+                    <Feature Name="SequencerTriggerSource" Value="Off" Type="Enum" />
+                </SelectorGroup>
+                <SelectorGroup Name="SequencerPathSelector" Type="Enum" Value="Path4">
+                    <Feature Name="SequencerSetNext" Value="0" Type="Int" />
+                    <Feature Name="SequencerTriggerActivation" Value="RisingEdge" Type="Enum" />
+                    <Feature Name="SequencerTriggerSource" Value="Off" Type="Enum" />
+                </SelectorGroup>
+                <SelectorGroup Name="SequencerPathSelector" Type="Enum" Value="Path5">
+                    <Feature Name="SequencerSetNext" Value="0" Type="Int" />
+                    <Feature Name="SequencerTriggerActivation" Value="RisingEdge" Type="Enum" />
+                    <Feature Name="SequencerTriggerSource" Value="Off" Type="Enum" />
+                </SelectorGroup>
+                <SelectorGroup Name="SequencerPathSelector" Type="Enum" Value="Path6">
+                    <Feature Name="SequencerSetNext" Value="0" Type="Int" />
+                    <Feature Name="SequencerTriggerActivation" Value="RisingEdge" Type="Enum" />
+                    <Feature Name="SequencerTriggerSource" Value="Off" Type="Enum" />
+                </SelectorGroup>
+                <SelectorGroup Name="SequencerPathSelector" Type="Enum" Value="Path7">
+                    <Feature Name="SequencerSetNext" Value="0" Type="Int" />
+                    <Feature Name="SequencerTriggerActivation" Value="RisingEdge" Type="Enum" />
+                    <Feature Name="SequencerTriggerSource" Value="Off" Type="Enum" />
+                </SelectorGroup>
+            </SelectorGroup>
+            <SelectorGroup Name="SequencerSetSelector" Type="Enum" Value="Set1">
+                <SelectorGroup Name="SequencerPathSelector" Type="Enum" Value="Path0">
+                    <Feature Name="SequencerSetNext" Value="0" Type="Int" />
+                    <Feature Name="SequencerTriggerActivation" Value="RisingEdge" Type="Enum" />
+                    <Feature Name="SequencerTriggerSource" Value="Off" Type="Enum" />
+                </SelectorGroup>
+                <SelectorGroup Name="SequencerPathSelector" Type="Enum" Value="Path1">
+                    <Feature Name="SequencerSetNext" Value="0" Type="Int" />
+                    <Feature Name="SequencerTriggerActivation" Value="RisingEdge" Type="Enum" />
+                    <Feature Name="SequencerTriggerSource" Value="Off" Type="Enum" />
+                </SelectorGroup>
+                <SelectorGroup Name="SequencerPathSelector" Type="Enum" Value="Path2">
+                    <Feature Name="SequencerSetNext" Value="0" Type="Int" />
+                    <Feature Name="SequencerTriggerActivation" Value="RisingEdge" Type="Enum" />
+                    <Feature Name="SequencerTriggerSource" Value="Off" Type="Enum" />
+                </SelectorGroup>
+                <SelectorGroup Name="SequencerPathSelector" Type="Enum" Value="Path3">
+                    <Feature Name="SequencerSetNext" Value="0" Type="Int" />
+                    <Feature Name="SequencerTriggerActivation" Value="RisingEdge" Type="Enum" />
+                    <Feature Name="SequencerTriggerSource" Value="Off" Type="Enum" />
+                </SelectorGroup>
+                <SelectorGroup Name="SequencerPathSelector" Type="Enum" Value="Path4">
+                    <Feature Name="SequencerSetNext" Value="0" Type="Int" />
+                    <Feature Name="SequencerTriggerActivation" Value="RisingEdge" Type="Enum" />
+                    <Feature Name="SequencerTriggerSource" Value="Off" Type="Enum" />
+                </SelectorGroup>
+                <SelectorGroup Name="SequencerPathSelector" Type="Enum" Value="Path5">
+                    <Feature Name="SequencerSetNext" Value="0" Type="Int" />
+                    <Feature Name="SequencerTriggerActivation" Value="RisingEdge" Type="Enum" />
+                    <Feature Name="SequencerTriggerSource" Value="Off" Type="Enum" />
+                </SelectorGroup>
+                <SelectorGroup Name="SequencerPathSelector" Type="Enum" Value="Path6">
+                    <Feature Name="SequencerSetNext" Value="0" Type="Int" />
+                    <Feature Name="SequencerTriggerActivation" Value="RisingEdge" Type="Enum" />
+                    <Feature Name="SequencerTriggerSource" Value="Off" Type="Enum" />
+                </SelectorGroup>
+                <SelectorGroup Name="SequencerPathSelector" Type="Enum" Value="Path7">
+                    <Feature Name="SequencerSetNext" Value="0" Type="Int" />
+                    <Feature Name="SequencerTriggerActivation" Value="RisingEdge" Type="Enum" />
+                    <Feature Name="SequencerTriggerSource" Value="Off" Type="Enum" />
+                </SelectorGroup>
+            </SelectorGroup>
+            <SelectorGroup Name="SequencerSetSelector" Type="Enum" Value="Set2">
+                <SelectorGroup Name="SequencerPathSelector" Type="Enum" Value="Path0">
+                    <Feature Name="SequencerSetNext" Value="0" Type="Int" />
+                    <Feature Name="SequencerTriggerActivation" Value="RisingEdge" Type="Enum" />
+                    <Feature Name="SequencerTriggerSource" Value="Off" Type="Enum" />
+                </SelectorGroup>
+                <SelectorGroup Name="SequencerPathSelector" Type="Enum" Value="Path1">
+                    <Feature Name="SequencerSetNext" Value="0" Type="Int" />
+                    <Feature Name="SequencerTriggerActivation" Value="RisingEdge" Type="Enum" />
+                    <Feature Name="SequencerTriggerSource" Value="Off" Type="Enum" />
+                </SelectorGroup>
+                <SelectorGroup Name="SequencerPathSelector" Type="Enum" Value="Path2">
+                    <Feature Name="SequencerSetNext" Value="0" Type="Int" />
+                    <Feature Name="SequencerTriggerActivation" Value="RisingEdge" Type="Enum" />
+                    <Feature Name="SequencerTriggerSource" Value="Off" Type="Enum" />
+                </SelectorGroup>
+                <SelectorGroup Name="SequencerPathSelector" Type="Enum" Value="Path3">
+                    <Feature Name="SequencerSetNext" Value="0" Type="Int" />
+                    <Feature Name="SequencerTriggerActivation" Value="RisingEdge" Type="Enum" />
+                    <Feature Name="SequencerTriggerSource" Value="Off" Type="Enum" />
+                </SelectorGroup>
+                <SelectorGroup Name="SequencerPathSelector" Type="Enum" Value="Path4">
+                    <Feature Name="SequencerSetNext" Value="0" Type="Int" />
+                    <Feature Name="SequencerTriggerActivation" Value="RisingEdge" Type="Enum" />
+                    <Feature Name="SequencerTriggerSource" Value="Off" Type="Enum" />
+                </SelectorGroup>
+                <SelectorGroup Name="SequencerPathSelector" Type="Enum" Value="Path5">
+                    <Feature Name="SequencerSetNext" Value="0" Type="Int" />
+                    <Feature Name="SequencerTriggerActivation" Value="RisingEdge" Type="Enum" />
+                    <Feature Name="SequencerTriggerSource" Value="Off" Type="Enum" />
+                </SelectorGroup>
+                <SelectorGroup Name="SequencerPathSelector" Type="Enum" Value="Path6">
+                    <Feature Name="SequencerSetNext" Value="0" Type="Int" />
+                    <Feature Name="SequencerTriggerActivation" Value="RisingEdge" Type="Enum" />
+                    <Feature Name="SequencerTriggerSource" Value="Off" Type="Enum" />
+                </SelectorGroup>
+                <SelectorGroup Name="SequencerPathSelector" Type="Enum" Value="Path7">
+                    <Feature Name="SequencerSetNext" Value="0" Type="Int" />
+                    <Feature Name="SequencerTriggerActivation" Value="RisingEdge" Type="Enum" />
+                    <Feature Name="SequencerTriggerSource" Value="Off" Type="Enum" />
+                </SelectorGroup>
+            </SelectorGroup>
+            <SelectorGroup Name="SequencerSetSelector" Type="Enum" Value="Set3">
+                <SelectorGroup Name="SequencerPathSelector" Type="Enum" Value="Path0">
+                    <Feature Name="SequencerSetNext" Value="0" Type="Int" />
+                    <Feature Name="SequencerTriggerActivation" Value="RisingEdge" Type="Enum" />
+                    <Feature Name="SequencerTriggerSource" Value="Off" Type="Enum" />
+                </SelectorGroup>
+                <SelectorGroup Name="SequencerPathSelector" Type="Enum" Value="Path1">
+                    <Feature Name="SequencerSetNext" Value="0" Type="Int" />
+                    <Feature Name="SequencerTriggerActivation" Value="RisingEdge" Type="Enum" />
+                    <Feature Name="SequencerTriggerSource" Value="Off" Type="Enum" />
+                </SelectorGroup>
+                <SelectorGroup Name="SequencerPathSelector" Type="Enum" Value="Path2">
+                    <Feature Name="SequencerSetNext" Value="0" Type="Int" />
+                    <Feature Name="SequencerTriggerActivation" Value="RisingEdge" Type="Enum" />
+                    <Feature Name="SequencerTriggerSource" Value="Off" Type="Enum" />
+                </SelectorGroup>
+                <SelectorGroup Name="SequencerPathSelector" Type="Enum" Value="Path3">
+                    <Feature Name="SequencerSetNext" Value="0" Type="Int" />
+                    <Feature Name="SequencerTriggerActivation" Value="RisingEdge" Type="Enum" />
+                    <Feature Name="SequencerTriggerSource" Value="Off" Type="Enum" />
+                </SelectorGroup>
+                <SelectorGroup Name="SequencerPathSelector" Type="Enum" Value="Path4">
+                    <Feature Name="SequencerSetNext" Value="0" Type="Int" />
+                    <Feature Name="SequencerTriggerActivation" Value="RisingEdge" Type="Enum" />
+                    <Feature Name="SequencerTriggerSource" Value="Off" Type="Enum" />
+                </SelectorGroup>
+                <SelectorGroup Name="SequencerPathSelector" Type="Enum" Value="Path5">
+                    <Feature Name="SequencerSetNext" Value="0" Type="Int" />
+                    <Feature Name="SequencerTriggerActivation" Value="RisingEdge" Type="Enum" />
+                    <Feature Name="SequencerTriggerSource" Value="Off" Type="Enum" />
+                </SelectorGroup>
+                <SelectorGroup Name="SequencerPathSelector" Type="Enum" Value="Path6">
+                    <Feature Name="SequencerSetNext" Value="0" Type="Int" />
+                    <Feature Name="SequencerTriggerActivation" Value="RisingEdge" Type="Enum" />
+                    <Feature Name="SequencerTriggerSource" Value="Off" Type="Enum" />
+                </SelectorGroup>
+                <SelectorGroup Name="SequencerPathSelector" Type="Enum" Value="Path7">
+                    <Feature Name="SequencerSetNext" Value="0" Type="Int" />
+                    <Feature Name="SequencerTriggerActivation" Value="RisingEdge" Type="Enum" />
+                    <Feature Name="SequencerTriggerSource" Value="Off" Type="Enum" />
+                </SelectorGroup>
+            </SelectorGroup>
+            <SelectorGroup Name="SequencerSetSelector" Type="Enum" Value="Set4">
+                <SelectorGroup Name="SequencerPathSelector" Type="Enum" Value="Path0">
+                    <Feature Name="SequencerSetNext" Value="0" Type="Int" />
+                    <Feature Name="SequencerTriggerActivation" Value="RisingEdge" Type="Enum" />
+                    <Feature Name="SequencerTriggerSource" Value="Off" Type="Enum" />
+                </SelectorGroup>
+                <SelectorGroup Name="SequencerPathSelector" Type="Enum" Value="Path1">
+                    <Feature Name="SequencerSetNext" Value="0" Type="Int" />
+                    <Feature Name="SequencerTriggerActivation" Value="RisingEdge" Type="Enum" />
+                    <Feature Name="SequencerTriggerSource" Value="Off" Type="Enum" />
+                </SelectorGroup>
+                <SelectorGroup Name="SequencerPathSelector" Type="Enum" Value="Path2">
+                    <Feature Name="SequencerSetNext" Value="0" Type="Int" />
+                    <Feature Name="SequencerTriggerActivation" Value="RisingEdge" Type="Enum" />
+                    <Feature Name="SequencerTriggerSource" Value="Off" Type="Enum" />
+                </SelectorGroup>
+                <SelectorGroup Name="SequencerPathSelector" Type="Enum" Value="Path3">
+                    <Feature Name="SequencerSetNext" Value="0" Type="Int" />
+                    <Feature Name="SequencerTriggerActivation" Value="RisingEdge" Type="Enum" />
+                    <Feature Name="SequencerTriggerSource" Value="Off" Type="Enum" />
+                </SelectorGroup>
+                <SelectorGroup Name="SequencerPathSelector" Type="Enum" Value="Path4">
+                    <Feature Name="SequencerSetNext" Value="0" Type="Int" />
+                    <Feature Name="SequencerTriggerActivation" Value="RisingEdge" Type="Enum" />
+                    <Feature Name="SequencerTriggerSource" Value="Off" Type="Enum" />
+                </SelectorGroup>
+                <SelectorGroup Name="SequencerPathSelector" Type="Enum" Value="Path5">
+                    <Feature Name="SequencerSetNext" Value="0" Type="Int" />
+                    <Feature Name="SequencerTriggerActivation" Value="RisingEdge" Type="Enum" />
+                    <Feature Name="SequencerTriggerSource" Value="Off" Type="Enum" />
+                </SelectorGroup>
+                <SelectorGroup Name="SequencerPathSelector" Type="Enum" Value="Path6">
+                    <Feature Name="SequencerSetNext" Value="0" Type="Int" />
+                    <Feature Name="SequencerTriggerActivation" Value="RisingEdge" Type="Enum" />
+                    <Feature Name="SequencerTriggerSource" Value="Off" Type="Enum" />
+                </SelectorGroup>
+                <SelectorGroup Name="SequencerPathSelector" Type="Enum" Value="Path7">
+                    <Feature Name="SequencerSetNext" Value="0" Type="Int" />
+                    <Feature Name="SequencerTriggerActivation" Value="RisingEdge" Type="Enum" />
+                    <Feature Name="SequencerTriggerSource" Value="Off" Type="Enum" />
+                </SelectorGroup>
+            </SelectorGroup>
+            <SelectorGroup Name="SequencerSetSelector" Type="Enum" Value="Set5">
+                <SelectorGroup Name="SequencerPathSelector" Type="Enum" Value="Path0">
+                    <Feature Name="SequencerSetNext" Value="0" Type="Int" />
+                    <Feature Name="SequencerTriggerActivation" Value="RisingEdge" Type="Enum" />
+                    <Feature Name="SequencerTriggerSource" Value="Off" Type="Enum" />
+                </SelectorGroup>
+                <SelectorGroup Name="SequencerPathSelector" Type="Enum" Value="Path1">
+                    <Feature Name="SequencerSetNext" Value="0" Type="Int" />
+                    <Feature Name="SequencerTriggerActivation" Value="RisingEdge" Type="Enum" />
+                    <Feature Name="SequencerTriggerSource" Value="Off" Type="Enum" />
+                </SelectorGroup>
+                <SelectorGroup Name="SequencerPathSelector" Type="Enum" Value="Path2">
+                    <Feature Name="SequencerSetNext" Value="0" Type="Int" />
+                    <Feature Name="SequencerTriggerActivation" Value="RisingEdge" Type="Enum" />
+                    <Feature Name="SequencerTriggerSource" Value="Off" Type="Enum" />
+                </SelectorGroup>
+                <SelectorGroup Name="SequencerPathSelector" Type="Enum" Value="Path3">
+                    <Feature Name="SequencerSetNext" Value="0" Type="Int" />
+                    <Feature Name="SequencerTriggerActivation" Value="RisingEdge" Type="Enum" />
+                    <Feature Name="SequencerTriggerSource" Value="Off" Type="Enum" />
+                </SelectorGroup>
+                <SelectorGroup Name="SequencerPathSelector" Type="Enum" Value="Path4">
+                    <Feature Name="SequencerSetNext" Value="0" Type="Int" />
+                    <Feature Name="SequencerTriggerActivation" Value="RisingEdge" Type="Enum" />
+                    <Feature Name="SequencerTriggerSource" Value="Off" Type="Enum" />
+                </SelectorGroup>
+                <SelectorGroup Name="SequencerPathSelector" Type="Enum" Value="Path5">
+                    <Feature Name="SequencerSetNext" Value="0" Type="Int" />
+                    <Feature Name="SequencerTriggerActivation" Value="RisingEdge" Type="Enum" />
+                    <Feature Name="SequencerTriggerSource" Value="Off" Type="Enum" />
+                </SelectorGroup>
+                <SelectorGroup Name="SequencerPathSelector" Type="Enum" Value="Path6">
+                    <Feature Name="SequencerSetNext" Value="0" Type="Int" />
+                    <Feature Name="SequencerTriggerActivation" Value="RisingEdge" Type="Enum" />
+                    <Feature Name="SequencerTriggerSource" Value="Off" Type="Enum" />
+                </SelectorGroup>
+                <SelectorGroup Name="SequencerPathSelector" Type="Enum" Value="Path7">
+                    <Feature Name="SequencerSetNext" Value="0" Type="Int" />
+                    <Feature Name="SequencerTriggerActivation" Value="RisingEdge" Type="Enum" />
+                    <Feature Name="SequencerTriggerSource" Value="Off" Type="Enum" />
+                </SelectorGroup>
+            </SelectorGroup>
+            <SelectorGroup Name="SequencerSetSelector" Type="Enum" Value="Set6">
+                <SelectorGroup Name="SequencerPathSelector" Type="Enum" Value="Path0">
+                    <Feature Name="SequencerSetNext" Value="0" Type="Int" />
+                    <Feature Name="SequencerTriggerActivation" Value="RisingEdge" Type="Enum" />
+                    <Feature Name="SequencerTriggerSource" Value="Off" Type="Enum" />
+                </SelectorGroup>
+                <SelectorGroup Name="SequencerPathSelector" Type="Enum" Value="Path1">
+                    <Feature Name="SequencerSetNext" Value="0" Type="Int" />
+                    <Feature Name="SequencerTriggerActivation" Value="RisingEdge" Type="Enum" />
+                    <Feature Name="SequencerTriggerSource" Value="Off" Type="Enum" />
+                </SelectorGroup>
+                <SelectorGroup Name="SequencerPathSelector" Type="Enum" Value="Path2">
+                    <Feature Name="SequencerSetNext" Value="0" Type="Int" />
+                    <Feature Name="SequencerTriggerActivation" Value="RisingEdge" Type="Enum" />
+                    <Feature Name="SequencerTriggerSource" Value="Off" Type="Enum" />
+                </SelectorGroup>
+                <SelectorGroup Name="SequencerPathSelector" Type="Enum" Value="Path3">
+                    <Feature Name="SequencerSetNext" Value="0" Type="Int" />
+                    <Feature Name="SequencerTriggerActivation" Value="RisingEdge" Type="Enum" />
+                    <Feature Name="SequencerTriggerSource" Value="Off" Type="Enum" />
+                </SelectorGroup>
+                <SelectorGroup Name="SequencerPathSelector" Type="Enum" Value="Path4">
+                    <Feature Name="SequencerSetNext" Value="0" Type="Int" />
+                    <Feature Name="SequencerTriggerActivation" Value="RisingEdge" Type="Enum" />
+                    <Feature Name="SequencerTriggerSource" Value="Off" Type="Enum" />
+                </SelectorGroup>
+                <SelectorGroup Name="SequencerPathSelector" Type="Enum" Value="Path5">
+                    <Feature Name="SequencerSetNext" Value="0" Type="Int" />
+                    <Feature Name="SequencerTriggerActivation" Value="RisingEdge" Type="Enum" />
+                    <Feature Name="SequencerTriggerSource" Value="Off" Type="Enum" />
+                </SelectorGroup>
+                <SelectorGroup Name="SequencerPathSelector" Type="Enum" Value="Path6">
+                    <Feature Name="SequencerSetNext" Value="0" Type="Int" />
+                    <Feature Name="SequencerTriggerActivation" Value="RisingEdge" Type="Enum" />
+                    <Feature Name="SequencerTriggerSource" Value="Off" Type="Enum" />
+                </SelectorGroup>
+                <SelectorGroup Name="SequencerPathSelector" Type="Enum" Value="Path7">
+                    <Feature Name="SequencerSetNext" Value="0" Type="Int" />
+                    <Feature Name="SequencerTriggerActivation" Value="RisingEdge" Type="Enum" />
+                    <Feature Name="SequencerTriggerSource" Value="Off" Type="Enum" />
+                </SelectorGroup>
+            </SelectorGroup>
+            <SelectorGroup Name="SequencerSetSelector" Type="Enum" Value="Set7">
+                <SelectorGroup Name="SequencerPathSelector" Type="Enum" Value="Path0">
+                    <Feature Name="SequencerSetNext" Value="0" Type="Int" />
+                    <Feature Name="SequencerTriggerActivation" Value="RisingEdge" Type="Enum" />
+                    <Feature Name="SequencerTriggerSource" Value="Off" Type="Enum" />
+                </SelectorGroup>
+                <SelectorGroup Name="SequencerPathSelector" Type="Enum" Value="Path1">
+                    <Feature Name="SequencerSetNext" Value="0" Type="Int" />
+                    <Feature Name="SequencerTriggerActivation" Value="RisingEdge" Type="Enum" />
+                    <Feature Name="SequencerTriggerSource" Value="Off" Type="Enum" />
+                </SelectorGroup>
+                <SelectorGroup Name="SequencerPathSelector" Type="Enum" Value="Path2">
+                    <Feature Name="SequencerSetNext" Value="0" Type="Int" />
+                    <Feature Name="SequencerTriggerActivation" Value="RisingEdge" Type="Enum" />
+                    <Feature Name="SequencerTriggerSource" Value="Off" Type="Enum" />
+                </SelectorGroup>
+                <SelectorGroup Name="SequencerPathSelector" Type="Enum" Value="Path3">
+                    <Feature Name="SequencerSetNext" Value="0" Type="Int" />
+                    <Feature Name="SequencerTriggerActivation" Value="RisingEdge" Type="Enum" />
+                    <Feature Name="SequencerTriggerSource" Value="Off" Type="Enum" />
+                </SelectorGroup>
+                <SelectorGroup Name="SequencerPathSelector" Type="Enum" Value="Path4">
+                    <Feature Name="SequencerSetNext" Value="0" Type="Int" />
+                    <Feature Name="SequencerTriggerActivation" Value="RisingEdge" Type="Enum" />
+                    <Feature Name="SequencerTriggerSource" Value="Off" Type="Enum" />
+                </SelectorGroup>
+                <SelectorGroup Name="SequencerPathSelector" Type="Enum" Value="Path5">
+                    <Feature Name="SequencerSetNext" Value="0" Type="Int" />
+                    <Feature Name="SequencerTriggerActivation" Value="RisingEdge" Type="Enum" />
+                    <Feature Name="SequencerTriggerSource" Value="Off" Type="Enum" />
+                </SelectorGroup>
+                <SelectorGroup Name="SequencerPathSelector" Type="Enum" Value="Path6">
+                    <Feature Name="SequencerSetNext" Value="0" Type="Int" />
+                    <Feature Name="SequencerTriggerActivation" Value="RisingEdge" Type="Enum" />
+                    <Feature Name="SequencerTriggerSource" Value="Off" Type="Enum" />
+                </SelectorGroup>
+                <SelectorGroup Name="SequencerPathSelector" Type="Enum" Value="Path7">
+                    <Feature Name="SequencerSetNext" Value="0" Type="Int" />
+                    <Feature Name="SequencerTriggerActivation" Value="RisingEdge" Type="Enum" />
+                    <Feature Name="SequencerTriggerSource" Value="Off" Type="Enum" />
+                </SelectorGroup>
+            </SelectorGroup>
+            <SelectorGroup Name="SequencerSetSelector" Type="Enum" Value="Set8">
+                <SelectorGroup Name="SequencerPathSelector" Type="Enum" Value="Path0">
+                    <Feature Name="SequencerSetNext" Value="0" Type="Int" />
+                    <Feature Name="SequencerTriggerActivation" Value="RisingEdge" Type="Enum" />
+                    <Feature Name="SequencerTriggerSource" Value="Off" Type="Enum" />
+                </SelectorGroup>
+                <SelectorGroup Name="SequencerPathSelector" Type="Enum" Value="Path1">
+                    <Feature Name="SequencerSetNext" Value="0" Type="Int" />
+                    <Feature Name="SequencerTriggerActivation" Value="RisingEdge" Type="Enum" />
+                    <Feature Name="SequencerTriggerSource" Value="Off" Type="Enum" />
+                </SelectorGroup>
+                <SelectorGroup Name="SequencerPathSelector" Type="Enum" Value="Path2">
+                    <Feature Name="SequencerSetNext" Value="0" Type="Int" />
+                    <Feature Name="SequencerTriggerActivation" Value="RisingEdge" Type="Enum" />
+                    <Feature Name="SequencerTriggerSource" Value="Off" Type="Enum" />
+                </SelectorGroup>
+                <SelectorGroup Name="SequencerPathSelector" Type="Enum" Value="Path3">
+                    <Feature Name="SequencerSetNext" Value="0" Type="Int" />
+                    <Feature Name="SequencerTriggerActivation" Value="RisingEdge" Type="Enum" />
+                    <Feature Name="SequencerTriggerSource" Value="Off" Type="Enum" />
+                </SelectorGroup>
+                <SelectorGroup Name="SequencerPathSelector" Type="Enum" Value="Path4">
+                    <Feature Name="SequencerSetNext" Value="0" Type="Int" />
+                    <Feature Name="SequencerTriggerActivation" Value="RisingEdge" Type="Enum" />
+                    <Feature Name="SequencerTriggerSource" Value="Off" Type="Enum" />
+                </SelectorGroup>
+                <SelectorGroup Name="SequencerPathSelector" Type="Enum" Value="Path5">
+                    <Feature Name="SequencerSetNext" Value="0" Type="Int" />
+                    <Feature Name="SequencerTriggerActivation" Value="RisingEdge" Type="Enum" />
+                    <Feature Name="SequencerTriggerSource" Value="Off" Type="Enum" />
+                </SelectorGroup>
+                <SelectorGroup Name="SequencerPathSelector" Type="Enum" Value="Path6">
+                    <Feature Name="SequencerSetNext" Value="0" Type="Int" />
+                    <Feature Name="SequencerTriggerActivation" Value="RisingEdge" Type="Enum" />
+                    <Feature Name="SequencerTriggerSource" Value="Off" Type="Enum" />
+                </SelectorGroup>
+                <SelectorGroup Name="SequencerPathSelector" Type="Enum" Value="Path7">
+                    <Feature Name="SequencerSetNext" Value="0" Type="Int" />
+                    <Feature Name="SequencerTriggerActivation" Value="RisingEdge" Type="Enum" />
+                    <Feature Name="SequencerTriggerSource" Value="Off" Type="Enum" />
+                </SelectorGroup>
+            </SelectorGroup>
+            <SelectorGroup Name="SequencerSetSelector" Type="Enum" Value="Set9">
+                <SelectorGroup Name="SequencerPathSelector" Type="Enum" Value="Path0">
+                    <Feature Name="SequencerSetNext" Value="0" Type="Int" />
+                    <Feature Name="SequencerTriggerActivation" Value="RisingEdge" Type="Enum" />
+                    <Feature Name="SequencerTriggerSource" Value="Off" Type="Enum" />
+                </SelectorGroup>
+                <SelectorGroup Name="SequencerPathSelector" Type="Enum" Value="Path1">
+                    <Feature Name="SequencerSetNext" Value="0" Type="Int" />
+                    <Feature Name="SequencerTriggerActivation" Value="RisingEdge" Type="Enum" />
+                    <Feature Name="SequencerTriggerSource" Value="Off" Type="Enum" />
+                </SelectorGroup>
+                <SelectorGroup Name="SequencerPathSelector" Type="Enum" Value="Path2">
+                    <Feature Name="SequencerSetNext" Value="0" Type="Int" />
+                    <Feature Name="SequencerTriggerActivation" Value="RisingEdge" Type="Enum" />
+                    <Feature Name="SequencerTriggerSource" Value="Off" Type="Enum" />
+                </SelectorGroup>
+                <SelectorGroup Name="SequencerPathSelector" Type="Enum" Value="Path3">
+                    <Feature Name="SequencerSetNext" Value="0" Type="Int" />
+                    <Feature Name="SequencerTriggerActivation" Value="RisingEdge" Type="Enum" />
+                    <Feature Name="SequencerTriggerSource" Value="Off" Type="Enum" />
+                </SelectorGroup>
+                <SelectorGroup Name="SequencerPathSelector" Type="Enum" Value="Path4">
+                    <Feature Name="SequencerSetNext" Value="0" Type="Int" />
+                    <Feature Name="SequencerTriggerActivation" Value="RisingEdge" Type="Enum" />
+                    <Feature Name="SequencerTriggerSource" Value="Off" Type="Enum" />
+                </SelectorGroup>
+                <SelectorGroup Name="SequencerPathSelector" Type="Enum" Value="Path5">
+                    <Feature Name="SequencerSetNext" Value="0" Type="Int" />
+                    <Feature Name="SequencerTriggerActivation" Value="RisingEdge" Type="Enum" />
+                    <Feature Name="SequencerTriggerSource" Value="Off" Type="Enum" />
+                </SelectorGroup>
+                <SelectorGroup Name="SequencerPathSelector" Type="Enum" Value="Path6">
+                    <Feature Name="SequencerSetNext" Value="0" Type="Int" />
+                    <Feature Name="SequencerTriggerActivation" Value="RisingEdge" Type="Enum" />
+                    <Feature Name="SequencerTriggerSource" Value="Off" Type="Enum" />
+                </SelectorGroup>
+                <SelectorGroup Name="SequencerPathSelector" Type="Enum" Value="Path7">
+                    <Feature Name="SequencerSetNext" Value="0" Type="Int" />
+                    <Feature Name="SequencerTriggerActivation" Value="RisingEdge" Type="Enum" />
+                    <Feature Name="SequencerTriggerSource" Value="Off" Type="Enum" />
+                </SelectorGroup>
+            </SelectorGroup>
+            <SelectorGroup Name="SequencerSetSelector" Type="Enum" Value="Set10">
+                <SelectorGroup Name="SequencerPathSelector" Type="Enum" Value="Path0">
+                    <Feature Name="SequencerSetNext" Value="0" Type="Int" />
+                    <Feature Name="SequencerTriggerActivation" Value="RisingEdge" Type="Enum" />
+                    <Feature Name="SequencerTriggerSource" Value="Off" Type="Enum" />
+                </SelectorGroup>
+                <SelectorGroup Name="SequencerPathSelector" Type="Enum" Value="Path1">
+                    <Feature Name="SequencerSetNext" Value="0" Type="Int" />
+                    <Feature Name="SequencerTriggerActivation" Value="RisingEdge" Type="Enum" />
+                    <Feature Name="SequencerTriggerSource" Value="Off" Type="Enum" />
+                </SelectorGroup>
+                <SelectorGroup Name="SequencerPathSelector" Type="Enum" Value="Path2">
+                    <Feature Name="SequencerSetNext" Value="0" Type="Int" />
+                    <Feature Name="SequencerTriggerActivation" Value="RisingEdge" Type="Enum" />
+                    <Feature Name="SequencerTriggerSource" Value="Off" Type="Enum" />
+                </SelectorGroup>
+                <SelectorGroup Name="SequencerPathSelector" Type="Enum" Value="Path3">
+                    <Feature Name="SequencerSetNext" Value="0" Type="Int" />
+                    <Feature Name="SequencerTriggerActivation" Value="RisingEdge" Type="Enum" />
+                    <Feature Name="SequencerTriggerSource" Value="Off" Type="Enum" />
+                </SelectorGroup>
+                <SelectorGroup Name="SequencerPathSelector" Type="Enum" Value="Path4">
+                    <Feature Name="SequencerSetNext" Value="0" Type="Int" />
+                    <Feature Name="SequencerTriggerActivation" Value="RisingEdge" Type="Enum" />
+                    <Feature Name="SequencerTriggerSource" Value="Off" Type="Enum" />
+                </SelectorGroup>
+                <SelectorGroup Name="SequencerPathSelector" Type="Enum" Value="Path5">
+                    <Feature Name="SequencerSetNext" Value="0" Type="Int" />
+                    <Feature Name="SequencerTriggerActivation" Value="RisingEdge" Type="Enum" />
+                    <Feature Name="SequencerTriggerSource" Value="Off" Type="Enum" />
+                </SelectorGroup>
+                <SelectorGroup Name="SequencerPathSelector" Type="Enum" Value="Path6">
+                    <Feature Name="SequencerSetNext" Value="0" Type="Int" />
+                    <Feature Name="SequencerTriggerActivation" Value="RisingEdge" Type="Enum" />
+                    <Feature Name="SequencerTriggerSource" Value="Off" Type="Enum" />
+                </SelectorGroup>
+                <SelectorGroup Name="SequencerPathSelector" Type="Enum" Value="Path7">
+                    <Feature Name="SequencerSetNext" Value="0" Type="Int" />
+                    <Feature Name="SequencerTriggerActivation" Value="RisingEdge" Type="Enum" />
+                    <Feature Name="SequencerTriggerSource" Value="Off" Type="Enum" />
+                </SelectorGroup>
+            </SelectorGroup>
+            <SelectorGroup Name="SequencerSetSelector" Type="Enum" Value="Set11">
+                <SelectorGroup Name="SequencerPathSelector" Type="Enum" Value="Path0">
+                    <Feature Name="SequencerSetNext" Value="0" Type="Int" />
+                    <Feature Name="SequencerTriggerActivation" Value="RisingEdge" Type="Enum" />
+                    <Feature Name="SequencerTriggerSource" Value="Off" Type="Enum" />
+                </SelectorGroup>
+                <SelectorGroup Name="SequencerPathSelector" Type="Enum" Value="Path1">
+                    <Feature Name="SequencerSetNext" Value="0" Type="Int" />
+                    <Feature Name="SequencerTriggerActivation" Value="RisingEdge" Type="Enum" />
+                    <Feature Name="SequencerTriggerSource" Value="Off" Type="Enum" />
+                </SelectorGroup>
+                <SelectorGroup Name="SequencerPathSelector" Type="Enum" Value="Path2">
+                    <Feature Name="SequencerSetNext" Value="0" Type="Int" />
+                    <Feature Name="SequencerTriggerActivation" Value="RisingEdge" Type="Enum" />
+                    <Feature Name="SequencerTriggerSource" Value="Off" Type="Enum" />
+                </SelectorGroup>
+                <SelectorGroup Name="SequencerPathSelector" Type="Enum" Value="Path3">
+                    <Feature Name="SequencerSetNext" Value="0" Type="Int" />
+                    <Feature Name="SequencerTriggerActivation" Value="RisingEdge" Type="Enum" />
+                    <Feature Name="SequencerTriggerSource" Value="Off" Type="Enum" />
+                </SelectorGroup>
+                <SelectorGroup Name="SequencerPathSelector" Type="Enum" Value="Path4">
+                    <Feature Name="SequencerSetNext" Value="0" Type="Int" />
+                    <Feature Name="SequencerTriggerActivation" Value="RisingEdge" Type="Enum" />
+                    <Feature Name="SequencerTriggerSource" Value="Off" Type="Enum" />
+                </SelectorGroup>
+                <SelectorGroup Name="SequencerPathSelector" Type="Enum" Value="Path5">
+                    <Feature Name="SequencerSetNext" Value="0" Type="Int" />
+                    <Feature Name="SequencerTriggerActivation" Value="RisingEdge" Type="Enum" />
+                    <Feature Name="SequencerTriggerSource" Value="Off" Type="Enum" />
+                </SelectorGroup>
+                <SelectorGroup Name="SequencerPathSelector" Type="Enum" Value="Path6">
+                    <Feature Name="SequencerSetNext" Value="0" Type="Int" />
+                    <Feature Name="SequencerTriggerActivation" Value="RisingEdge" Type="Enum" />
+                    <Feature Name="SequencerTriggerSource" Value="Off" Type="Enum" />
+                </SelectorGroup>
+                <SelectorGroup Name="SequencerPathSelector" Type="Enum" Value="Path7">
+                    <Feature Name="SequencerSetNext" Value="0" Type="Int" />
+                    <Feature Name="SequencerTriggerActivation" Value="RisingEdge" Type="Enum" />
+                    <Feature Name="SequencerTriggerSource" Value="Off" Type="Enum" />
+                </SelectorGroup>
+            </SelectorGroup>
+            <SelectorGroup Name="SequencerSetSelector" Type="Enum" Value="Set12">
+                <SelectorGroup Name="SequencerPathSelector" Type="Enum" Value="Path0">
+                    <Feature Name="SequencerSetNext" Value="0" Type="Int" />
+                    <Feature Name="SequencerTriggerActivation" Value="RisingEdge" Type="Enum" />
+                    <Feature Name="SequencerTriggerSource" Value="Off" Type="Enum" />
+                </SelectorGroup>
+                <SelectorGroup Name="SequencerPathSelector" Type="Enum" Value="Path1">
+                    <Feature Name="SequencerSetNext" Value="0" Type="Int" />
+                    <Feature Name="SequencerTriggerActivation" Value="RisingEdge" Type="Enum" />
+                    <Feature Name="SequencerTriggerSource" Value="Off" Type="Enum" />
+                </SelectorGroup>
+                <SelectorGroup Name="SequencerPathSelector" Type="Enum" Value="Path2">
+                    <Feature Name="SequencerSetNext" Value="0" Type="Int" />
+                    <Feature Name="SequencerTriggerActivation" Value="RisingEdge" Type="Enum" />
+                    <Feature Name="SequencerTriggerSource" Value="Off" Type="Enum" />
+                </SelectorGroup>
+                <SelectorGroup Name="SequencerPathSelector" Type="Enum" Value="Path3">
+                    <Feature Name="SequencerSetNext" Value="0" Type="Int" />
+                    <Feature Name="SequencerTriggerActivation" Value="RisingEdge" Type="Enum" />
+                    <Feature Name="SequencerTriggerSource" Value="Off" Type="Enum" />
+                </SelectorGroup>
+                <SelectorGroup Name="SequencerPathSelector" Type="Enum" Value="Path4">
+                    <Feature Name="SequencerSetNext" Value="0" Type="Int" />
+                    <Feature Name="SequencerTriggerActivation" Value="RisingEdge" Type="Enum" />
+                    <Feature Name="SequencerTriggerSource" Value="Off" Type="Enum" />
+                </SelectorGroup>
+                <SelectorGroup Name="SequencerPathSelector" Type="Enum" Value="Path5">
+                    <Feature Name="SequencerSetNext" Value="0" Type="Int" />
+                    <Feature Name="SequencerTriggerActivation" Value="RisingEdge" Type="Enum" />
+                    <Feature Name="SequencerTriggerSource" Value="Off" Type="Enum" />
+                </SelectorGroup>
+                <SelectorGroup Name="SequencerPathSelector" Type="Enum" Value="Path6">
+                    <Feature Name="SequencerSetNext" Value="0" Type="Int" />
+                    <Feature Name="SequencerTriggerActivation" Value="RisingEdge" Type="Enum" />
+                    <Feature Name="SequencerTriggerSource" Value="Off" Type="Enum" />
+                </SelectorGroup>
+                <SelectorGroup Name="SequencerPathSelector" Type="Enum" Value="Path7">
+                    <Feature Name="SequencerSetNext" Value="0" Type="Int" />
+                    <Feature Name="SequencerTriggerActivation" Value="RisingEdge" Type="Enum" />
+                    <Feature Name="SequencerTriggerSource" Value="Off" Type="Enum" />
+                </SelectorGroup>
+            </SelectorGroup>
+            <SelectorGroup Name="SequencerSetSelector" Type="Enum" Value="Set13">
+                <SelectorGroup Name="SequencerPathSelector" Type="Enum" Value="Path0">
+                    <Feature Name="SequencerSetNext" Value="0" Type="Int" />
+                    <Feature Name="SequencerTriggerActivation" Value="RisingEdge" Type="Enum" />
+                    <Feature Name="SequencerTriggerSource" Value="Off" Type="Enum" />
+                </SelectorGroup>
+                <SelectorGroup Name="SequencerPathSelector" Type="Enum" Value="Path1">
+                    <Feature Name="SequencerSetNext" Value="0" Type="Int" />
+                    <Feature Name="SequencerTriggerActivation" Value="RisingEdge" Type="Enum" />
+                    <Feature Name="SequencerTriggerSource" Value="Off" Type="Enum" />
+                </SelectorGroup>
+                <SelectorGroup Name="SequencerPathSelector" Type="Enum" Value="Path2">
+                    <Feature Name="SequencerSetNext" Value="0" Type="Int" />
+                    <Feature Name="SequencerTriggerActivation" Value="RisingEdge" Type="Enum" />
+                    <Feature Name="SequencerTriggerSource" Value="Off" Type="Enum" />
+                </SelectorGroup>
+                <SelectorGroup Name="SequencerPathSelector" Type="Enum" Value="Path3">
+                    <Feature Name="SequencerSetNext" Value="0" Type="Int" />
+                    <Feature Name="SequencerTriggerActivation" Value="RisingEdge" Type="Enum" />
+                    <Feature Name="SequencerTriggerSource" Value="Off" Type="Enum" />
+                </SelectorGroup>
+                <SelectorGroup Name="SequencerPathSelector" Type="Enum" Value="Path4">
+                    <Feature Name="SequencerSetNext" Value="0" Type="Int" />
+                    <Feature Name="SequencerTriggerActivation" Value="RisingEdge" Type="Enum" />
+                    <Feature Name="SequencerTriggerSource" Value="Off" Type="Enum" />
+                </SelectorGroup>
+                <SelectorGroup Name="SequencerPathSelector" Type="Enum" Value="Path5">
+                    <Feature Name="SequencerSetNext" Value="0" Type="Int" />
+                    <Feature Name="SequencerTriggerActivation" Value="RisingEdge" Type="Enum" />
+                    <Feature Name="SequencerTriggerSource" Value="Off" Type="Enum" />
+                </SelectorGroup>
+                <SelectorGroup Name="SequencerPathSelector" Type="Enum" Value="Path6">
+                    <Feature Name="SequencerSetNext" Value="0" Type="Int" />
+                    <Feature Name="SequencerTriggerActivation" Value="RisingEdge" Type="Enum" />
+                    <Feature Name="SequencerTriggerSource" Value="Off" Type="Enum" />
+                </SelectorGroup>
+                <SelectorGroup Name="SequencerPathSelector" Type="Enum" Value="Path7">
+                    <Feature Name="SequencerSetNext" Value="0" Type="Int" />
+                    <Feature Name="SequencerTriggerActivation" Value="RisingEdge" Type="Enum" />
+                    <Feature Name="SequencerTriggerSource" Value="Off" Type="Enum" />
+                </SelectorGroup>
+            </SelectorGroup>
+            <SelectorGroup Name="SequencerSetSelector" Type="Enum" Value="Set14">
+                <SelectorGroup Name="SequencerPathSelector" Type="Enum" Value="Path0">
+                    <Feature Name="SequencerSetNext" Value="0" Type="Int" />
+                    <Feature Name="SequencerTriggerActivation" Value="RisingEdge" Type="Enum" />
+                    <Feature Name="SequencerTriggerSource" Value="Off" Type="Enum" />
+                </SelectorGroup>
+                <SelectorGroup Name="SequencerPathSelector" Type="Enum" Value="Path1">
+                    <Feature Name="SequencerSetNext" Value="0" Type="Int" />
+                    <Feature Name="SequencerTriggerActivation" Value="RisingEdge" Type="Enum" />
+                    <Feature Name="SequencerTriggerSource" Value="Off" Type="Enum" />
+                </SelectorGroup>
+                <SelectorGroup Name="SequencerPathSelector" Type="Enum" Value="Path2">
+                    <Feature Name="SequencerSetNext" Value="0" Type="Int" />
+                    <Feature Name="SequencerTriggerActivation" Value="RisingEdge" Type="Enum" />
+                    <Feature Name="SequencerTriggerSource" Value="Off" Type="Enum" />
+                </SelectorGroup>
+                <SelectorGroup Name="SequencerPathSelector" Type="Enum" Value="Path3">
+                    <Feature Name="SequencerSetNext" Value="0" Type="Int" />
+                    <Feature Name="SequencerTriggerActivation" Value="RisingEdge" Type="Enum" />
+                    <Feature Name="SequencerTriggerSource" Value="Off" Type="Enum" />
+                </SelectorGroup>
+                <SelectorGroup Name="SequencerPathSelector" Type="Enum" Value="Path4">
+                    <Feature Name="SequencerSetNext" Value="0" Type="Int" />
+                    <Feature Name="SequencerTriggerActivation" Value="RisingEdge" Type="Enum" />
+                    <Feature Name="SequencerTriggerSource" Value="Off" Type="Enum" />
+                </SelectorGroup>
+                <SelectorGroup Name="SequencerPathSelector" Type="Enum" Value="Path5">
+                    <Feature Name="SequencerSetNext" Value="0" Type="Int" />
+                    <Feature Name="SequencerTriggerActivation" Value="RisingEdge" Type="Enum" />
+                    <Feature Name="SequencerTriggerSource" Value="Off" Type="Enum" />
+                </SelectorGroup>
+                <SelectorGroup Name="SequencerPathSelector" Type="Enum" Value="Path6">
+                    <Feature Name="SequencerSetNext" Value="0" Type="Int" />
+                    <Feature Name="SequencerTriggerActivation" Value="RisingEdge" Type="Enum" />
+                    <Feature Name="SequencerTriggerSource" Value="Off" Type="Enum" />
+                </SelectorGroup>
+                <SelectorGroup Name="SequencerPathSelector" Type="Enum" Value="Path7">
+                    <Feature Name="SequencerSetNext" Value="0" Type="Int" />
+                    <Feature Name="SequencerTriggerActivation" Value="RisingEdge" Type="Enum" />
+                    <Feature Name="SequencerTriggerSource" Value="Off" Type="Enum" />
+                </SelectorGroup>
+            </SelectorGroup>
+            <SelectorGroup Name="SequencerSetSelector" Type="Enum" Value="Set15">
+                <SelectorGroup Name="SequencerPathSelector" Type="Enum" Value="Path0">
+                    <Feature Name="SequencerSetNext" Value="0" Type="Int" />
+                    <Feature Name="SequencerTriggerActivation" Value="RisingEdge" Type="Enum" />
+                    <Feature Name="SequencerTriggerSource" Value="Off" Type="Enum" />
+                </SelectorGroup>
+                <SelectorGroup Name="SequencerPathSelector" Type="Enum" Value="Path1">
+                    <Feature Name="SequencerSetNext" Value="0" Type="Int" />
+                    <Feature Name="SequencerTriggerActivation" Value="RisingEdge" Type="Enum" />
+                    <Feature Name="SequencerTriggerSource" Value="Off" Type="Enum" />
+                </SelectorGroup>
+                <SelectorGroup Name="SequencerPathSelector" Type="Enum" Value="Path2">
+                    <Feature Name="SequencerSetNext" Value="0" Type="Int" />
+                    <Feature Name="SequencerTriggerActivation" Value="RisingEdge" Type="Enum" />
+                    <Feature Name="SequencerTriggerSource" Value="Off" Type="Enum" />
+                </SelectorGroup>
+                <SelectorGroup Name="SequencerPathSelector" Type="Enum" Value="Path3">
+                    <Feature Name="SequencerSetNext" Value="0" Type="Int" />
+                    <Feature Name="SequencerTriggerActivation" Value="RisingEdge" Type="Enum" />
+                    <Feature Name="SequencerTriggerSource" Value="Off" Type="Enum" />
+                </SelectorGroup>
+                <SelectorGroup Name="SequencerPathSelector" Type="Enum" Value="Path4">
+                    <Feature Name="SequencerSetNext" Value="0" Type="Int" />
+                    <Feature Name="SequencerTriggerActivation" Value="RisingEdge" Type="Enum" />
+                    <Feature Name="SequencerTriggerSource" Value="Off" Type="Enum" />
+                </SelectorGroup>
+                <SelectorGroup Name="SequencerPathSelector" Type="Enum" Value="Path5">
+                    <Feature Name="SequencerSetNext" Value="0" Type="Int" />
+                    <Feature Name="SequencerTriggerActivation" Value="RisingEdge" Type="Enum" />
+                    <Feature Name="SequencerTriggerSource" Value="Off" Type="Enum" />
+                </SelectorGroup>
+                <SelectorGroup Name="SequencerPathSelector" Type="Enum" Value="Path6">
+                    <Feature Name="SequencerSetNext" Value="0" Type="Int" />
+                    <Feature Name="SequencerTriggerActivation" Value="RisingEdge" Type="Enum" />
+                    <Feature Name="SequencerTriggerSource" Value="Off" Type="Enum" />
+                </SelectorGroup>
+                <SelectorGroup Name="SequencerPathSelector" Type="Enum" Value="Path7">
+                    <Feature Name="SequencerSetNext" Value="0" Type="Int" />
+                    <Feature Name="SequencerTriggerActivation" Value="RisingEdge" Type="Enum" />
+                    <Feature Name="SequencerTriggerSource" Value="Off" Type="Enum" />
+                </SelectorGroup>
+            </SelectorGroup>
+            <Feature Name="SequencerSetSelector" Value="Set0" Type="Enum" />
+            <Feature Name="SequencerSetStart" Value="0" Type="Int" />
+            <Feature Name="SerialHubEnable" Value="0" Type="Bool" />
+            <Feature Name="Sharpness" Value="0" Type="Int" />
+            <Feature Name="SoftwareSignalSelector" Value="SoftwareSignal0" Type="Enum" />
+            <Feature Name="TLParamsLocked" Value="0" Type="Int" />
+            <Feature Name="TestPendingAck" Value="0" Type="Int" />
+            <SelectorGroup Name="TimerSelector" Type="Enum" Value="Timer0">
+                <Feature Name="TimerDuration" Value="0" Type="Float" />
+                <Feature Name="TimerDelay" Value="0" Type="Float" />
+                <Feature Name="TimerStatus" Value="TimerTriggerWait" Type="Enum" />
+                <Feature Name="TimerTriggerActivation" Value="RisingEdge" Type="Enum" />
+                <Feature Name="TimerTriggerSource" Value="Off" Type="Enum" />
+            </SelectorGroup>
+            <SelectorGroup Name="TimerSelector" Type="Enum" Value="Timer1">
+                <Feature Name="TimerDuration" Value="0" Type="Float" />
+                <Feature Name="TimerDelay" Value="0" Type="Float" />
+                <Feature Name="TimerStatus" Value="TimerTriggerWait" Type="Enum" />
+                <Feature Name="TimerTriggerActivation" Value="RisingEdge" Type="Enum" />
+                <Feature Name="TimerTriggerSource" Value="Off" Type="Enum" />
+            </SelectorGroup>
+            <Feature Name="TimerSelector" Value="Timer0" Type="Enum" />
+            <Feature Name="TimestampLatchValue" Value="0" Type="Int" />
+            <SelectorGroup Name="TriggerSelector" Type="Enum" Value="AcquisitionStart">
+                <Feature Name="TriggerMode" Value="Off" Type="Enum" />
+                <Feature Name="TriggerSource" Value="Software" Type="Enum" />
+                <Feature Name="TriggerActivation" Value="RisingEdge" Type="Enum" />
+            </SelectorGroup>
+            <SelectorGroup Name="TriggerSelector" Type="Enum" Value="AcquisitionEnd">
+                <Feature Name="TriggerMode" Value="Off" Type="Enum" />
+                <Feature Name="TriggerSource" Value="Software" Type="Enum" />
+                <Feature Name="TriggerActivation" Value="RisingEdge" Type="Enum" />
+            </SelectorGroup>
+            <SelectorGroup Name="TriggerSelector" Type="Enum" Value="AcquisitionActive">
+                <Feature Name="TriggerMode" Value="Off" Type="Enum" />
+                <Feature Name="TriggerSource" Value="Software" Type="Enum" />
+                <Feature Name="TriggerActivation" Value="RisingEdge" Type="Enum" />
+                <Feature Name="TriggerDelay" Value="0" Type="Float" />
+            </SelectorGroup>
+            <SelectorGroup Name="TriggerSelector" Type="Enum" Value="FrameStart">
+                <Feature Name="TriggerMode" Value="Off" Type="Enum" />
+                <Feature Name="TriggerSource" Value="Software" Type="Enum" />
+                <Feature Name="TriggerActivation" Value="RisingEdge" Type="Enum" />
+                <Feature Name="TriggerDelay" Value="0" Type="Float" />
+            </SelectorGroup>
+            <SelectorGroup Name="TriggerSelector" Type="Enum" Value="ExposureStart">
+                <Feature Name="TriggerMode" Value="Off" Type="Enum" />
+                <Feature Name="TriggerSource" Value="Software" Type="Enum" />
+                <Feature Name="TriggerActivation" Value="RisingEdge" Type="Enum" />
+            </SelectorGroup>
+            <SelectorGroup Name="TriggerSelector" Type="Enum" Value="ExposureEnd">
+                <Feature Name="TriggerMode" Value="Off" Type="Enum" />
+                <Feature Name="TriggerSource" Value="Software" Type="Enum" />
+                <Feature Name="TriggerActivation" Value="RisingEdge" Type="Enum" />
+            </SelectorGroup>
+            <SelectorGroup Name="TriggerSelector" Type="Enum" Value="ExposureActive">
+                <Feature Name="TriggerMode" Value="Off" Type="Enum" />
+                <Feature Name="TriggerSource" Value="Software" Type="Enum" />
+                <Feature Name="TriggerActivation" Value="RisingEdge" Type="Enum" />
+            </SelectorGroup>
+            <Feature Name="TriggerSelector" Value="FrameStart" Type="Enum" />
+            <Feature Name="UserSetDefault" Value="Default" Type="Enum" />
+            <Feature Name="UserSetSelector" Value="Default" Type="Enum" />
+            <Feature Name="Width" Value="1232" Type="Int" />
+            <Feature Name="WidthMax" Value="2464" Type="Int" />
+            <IgnoredFeature Name="AcquisitionStart" Type="Command" />
+            <IgnoredFeature Name="AcquisitionStop" Type="Command" />
+            <IgnoredFeature Name="ChunkImage" Type="Raw" />
+            <IgnoredFeature Name="DeviceReset" Type="Command" />
+            <IgnoredFeature Name="FileAccessBuffer" Type="Raw" />
+            <IgnoredFeature Name="FileOperationExecute" Type="Command" />
+            <IgnoredFeature Name="LUTEnable" Type="Bool" />
+            <IgnoredFeature Name="LUTValue" Type="Int" />
+            <IgnoredFeature Name="SequencerSetLoad" Type="Command" />
+            <IgnoredFeature Name="SequencerSetSave" Type="Command" />
+            <IgnoredFeature Name="SerialRxData" Type="Raw" />
+            <IgnoredFeature Name="SerialTxData" Type="Raw" />
+            <IgnoredFeature Name="SoftwareSignalPulse" Type="Command" />
+            <IgnoredFeature Name="TimerReset" Type="Command" />
+            <IgnoredFeature Name="TimestampLatch" Type="Command" />
+            <IgnoredFeature Name="TimestampReset" Type="Command" />
+            <IgnoredFeature Name="TriggerSoftware" Type="Command" />
+            <IgnoredFeature Name="UserSetLoad" Type="Command" />
+            <IgnoredFeature Name="UserSetSave" Type="Command" />
+        </RemoteDevice>
+    </CameraInfo>
+    <Stream Id="DEV_1AB22C025217_DS_0x0" Index="0">
+        <SelectorGroup Name="EventSelector" Type="Enum" Value="Test">
+            <Feature Name="EventNotification" Value="Off" Type="Enum" />
+        </SelectorGroup>
+        <SelectorGroup Name="EventSelector" Type="Enum" Value="FrameLeaderReceived">
+            <Feature Name="EventNotification" Value="Off" Type="Enum" />
+        </SelectorGroup>
+        <SelectorGroup Name="EventSelector" Type="Enum" Value="FrameTrailerReceived">
+            <Feature Name="EventNotification" Value="Off" Type="Enum" />
+        </SelectorGroup>
+        <Feature Name="EventSelector" Value="Test" Type="Enum" />
+        <Feature Name="MaxDriverBuffersCount" Value="64" Type="Int" />
+        <Feature Name="StreamAcquisitionModeSelector" Value="Default" Type="Enum" />
+        <Feature Name="StreamAnnounceBufferMinimum" Value="0" Type="Int" />
+        <Feature Name="StreamAnnouncedBufferCount" Value="0" Type="Int" />
+        <Feature Name="StreamBufferHandlingMode" Value="Default" Type="Enum" />
+        <Feature Name="StreamID" Value="DEV_1AB22C025217_DS_0x0" Type="String" />
+        <Feature Name="StreamIsGrabbing" Value="0" Type="Bool" />
+        <Feature Name="StreamPayloadSizeAlignment" Value="1024" Type="Int" />
+        <Feature Name="StreamPayloadSizeMode" Value="Auto" Type="Enum" />
+        <Feature Name="StreamStopTimeout" Value="200" Type="Int" />
+        <Feature Name="StreamType" Value="USB3" Type="Enum" />
+        <IgnoredFeature Name="TestEventGenerate" Type="Command" />
+    </Stream>
+</ModuleSettings>
