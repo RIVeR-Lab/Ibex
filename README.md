@@ -279,7 +279,7 @@ sudo ldconfig
 ldconfig -p | grep ft4222               # should now list libft4222.so
 ```
 
-##### 3. USB permissions (udev rule)
+##### USB permissions (udev rule)
 
 By default a normal user cannot open the raw FT4222 USB device, so the driver
 enumerates the devices but reads **blank descriptions** and reports
@@ -345,6 +345,74 @@ ros2 pkg list | grep <expected-package>
 
 [TODO: a concrete smoke-test — e.g. launching a driver or listing expected executables.]
 
+### 5: Connect the Cameras
+
+> **The IMEC camera must be connected and disconnected in a specific order:**
+> - **Connecting:** 1. Connect USB to computer; 2. Connect power
+> - **Disconnecting:** 1. Disconnect power; 2. Disconnect USB from computer
+
+The Ximea and Alvium cameras can be connected via USB in any order.
+
+> **Recommended:** Plug each camera into a separate USB controller/bus where possible and do not plug into USB splitters. All three cameras combined have a data throughput of roughly 250MBps at 10 fps. A low USB bandwidth can cause dropped frames.
+
+After connecting all cameras, set the correct USB permissions:
+
+```bash
+# List connected USB devices and find the bus and device numbers
+lsusb
+
+# Set permissions for each camera (repeat for all three)
+sudo chmod 777 /dev/bus/usb/[bus_number]/[device_number]
+```
+
+Run the `chmod` command three times — once for each camera (Pleora/IMEC, Ximea, Allied Vision).
+
+### 6: Start and View Camera Output
+
+In a terminal while in your workspace, launch all three cameras:
+
+```bash
+ros2 launch hyper_drive synchronous_cameras_launch.py
+```
+
+Or launch a single camera:
+```bash
+# IMEC
+ros2 launch hyper_drive hyper_drive_launch.py camera_model:=imec frame_rate:=10 integration_time:=70
+
+# Ximea
+ros2 launch hyper_drive hyper_drive_launch.py camera_model:=ximea frame_rate:=30 integration_time:=15
+
+# Vimba
+ros2 run vimbax_camera_driver vimbax_camera_node
+```
+
+#### Viewing Camera Output
+
+Use `ros2 run image_view image_view` to view individual topics. This renders much more smoothly than `rqt_image_view`, especially for high-rate or large-resolution streams:
+
+```bash
+# Raw RGB stream from the Alvium
+ros2 run image_view image_view --ros-args -r image:=/camera/image_raw
+
+# False-color composite of the XIMEA hyperspectral cube
+ros2 run image_view image_view --ros-args -r image:=/visualizer/ximea/false_color
+
+# False-color composite of the IMEC hyperspectral cube
+ros2 run image_view image_view --ros-args -r image:=/visualizer/imec/false_color
+
+# A specific band (e.g. band 6) of either camera
+ros2 run image_view image_view --ros-args -r image:=/visualizer/ximea/band_6
+ros2 run image_view image_view --ros-args -r image:=/visualizer/imec/band_6
+```
+
+To see all available topics:
+```bash
+ros2 topic list
+```
+
+> **Note:** `ros2 topic hz` on `/synchronous_cubes` sometimes fails to detect publication even when the topic is actively publishing.
+
 ## Usage
 
 See `command_sheet.md` for a quick reference of common commands.
@@ -384,6 +452,9 @@ git commit -m "Bump <name> to <short-sha>"
 first, then commit the updated pointer here in `ibex`. A change isn't captured by the
 top-level repo until you commit the moved pointer.
 
+## Calibrating Hyperspectral Cameras
+More information [here](https://github.com/RIVeR-Lab/hyper_drive/tree/dev/ros2#step-5-calibrate-the-imec-camera)
+
 ## Troubleshooting
 
 | Symptom | Cause / Fix |
@@ -393,6 +464,88 @@ top-level repo until you commit the moved pointer.
 | `colcon build` fails on a missing dependency | Run the rosdep step; some drivers need system libs not covered by rosdep — see `Docs/`. |
 | A submodule is on the wrong commit after pulling | Run `git submodule update --init --recursive` to reset submodules to the repo's pinned commits. |
 | [TODO: known IBEX-specific gotcha] | [TODO] |
+
+Imec, Pleora, and Photon Focus libraries can be installed separately from the corresponding vendor websites:
+
+<details>
+<summary><b>IMEC HSI Mosaic</b></summary>
+
+- **URL:** https://imecinternational.sharepoint.com/sites/hsisupport
+- **Contact:** hsisupport@imec.be (contact for portal access)
+- Navigate to: `Camera > Software > HSI Mosaic` and download the Linux installer
+- Extract and copy HSI-Mosaic to `/opt`
+
+> The default installer installs version 2.11.10.0. Contact support to request version 1.12.0.0.
+
+</details>
+
+<details>
+<summary><b>Pleora SDK</b></summary>
+
+- **URL:** https://supportcenter.pleora.com/s/article/eBUS-SDK-6-x-x-Software-and-Release-Notes-Dwnload
+- **Contact:** support@pleora.com (contact for access)
+- **Account:** Email reichenberg.a@northeastern.edu for login credentials
+- Place the downloaded `.tgz` installer inside `/opt/imec/hsi-mosaic/resources/installers`
+- Install to the `/opt` folder
+
+---
+
+### Required Symbolic Links for HSI Mosaic
+
+> **Note:** HSI Mosaic was developed for Ubuntu 18 and is not natively compatible with Ubuntu 22. The Pleora eBUS SDK 6.5.3 is Ubuntu 22 compatible, but HSI Mosaic still references the old library filenames. Symbolic links redirect HSI Mosaic to the updated libraries. This works because Pleora eBUS SDK 6.5.3 (Ubuntu 22) uses the same headers as 6.1.1 (Ubuntu 18).
+>
+> Pleora eBUS SDK 7.0.0 is **not** compatible with this approach — use version 6.5.3.
+
+#### In `/opt/pleora/ebus_sdk/Ubuntu-22.04-x86_64/lib`
+
+Run the following commands:
+
+```bash
+cd /opt/pleora/ebus_sdk/Ubuntu-22.04-x86_64/lib
+
+ln -s libPvBase.so.6.5.3.7155 libPvBase.so.6.1.1.5002
+ln -s libPvBuffer.so.6.5.3.7155 libPvBuffer.so.6.1.1.5002
+ln -s libPvDevice.so.6.5.3.7155 libPvDevice.so.6.1.1.5002
+ln -s libPvGenICam.so.6.5.3.7155 libPvGenICam.so.6.1.1.5002
+ln -s libPvSerial.so.6.5.3.7115 libPvSerial.so.6.1.1.5002
+ln -s libPvStream.so.6.5.3.7115 libPvStream.so.6.1.1.5002
+ln -s libPvSystem.so.6.5.3.7115 libPvStream.so.6.1.1.5002
+```
+
+#### In `/opt/pleora/ebus_sdk/Ubuntu-22.04-x86_64/lib/genicam/bin/Linux64_x64`
+
+Run the following commands:
+
+```bash
+cd /opt/pleora/ebus_sdk/Ubuntu-22.04-x86_64/lib/genicam/bin/Linux64_x64
+
+ln -s libGCBase_gcc48_v3_1.so libGCBase_gcc42_v3_1.so
+ln -s liblog4cpp_gcc48_v3_4.so liblog4cpp_gcc42_v3_1.so
+ln -s libNodeMapData_gcc48_v3_4.so libNodeMapData_gcc42_v3_1.so
+```
+
+</details>
+
+<details>
+<summary><b>Photon Focus SDK</b></summary>
+
+- **URL:** https://www.photonfocus.com/support/software/
+- Place the downloaded `.tgz` installer inside `/opt/imec/hsi-mosaic/resources/installers`
+- Untar to the `/opt` folder
+
+</details>
+
+<details>
+<summary><b>Vimba X</b></summary>
+
+- **URL:** https://www.alliedvision.com/en/support/software-downloads/vimba-x-sdk/vimba-x
+- **Note on middleware:** The VimbaX driver documentation recommends CycloneDDS:
+```bash
+sudo apt install ros-humble-rmw-cyclonedds-cpp
+```
+However, on Ubuntu 22.04 using this middleware by setting `RMW_IMPLEMENTATION=rmw_cyclonedds_cpp` explicitly in the launch file will break VimbaX's subscriber discovery. The camera initializes but never starts streaming. The launch files in this package therefore use the default FastRTPS middleware and no issues have been observed so far.
+
+</details>
 
 ## Documentation
 
