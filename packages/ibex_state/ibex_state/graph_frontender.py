@@ -168,7 +168,7 @@ class GraphFrontender(Node):
 
         #==========# State #==========#
 
-        self.last_v = 0.0
+        self.last_v = 0.0 # TODO: need to hook these up to steering
         self.last_delta = 0.0
         self._last_imu_time = {}
 
