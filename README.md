@@ -507,9 +507,9 @@ ln -s libPvBase.so.6.5.3.7155 libPvBase.so.6.1.1.5002
 ln -s libPvBuffer.so.6.5.3.7155 libPvBuffer.so.6.1.1.5002
 ln -s libPvDevice.so.6.5.3.7155 libPvDevice.so.6.1.1.5002
 ln -s libPvGenICam.so.6.5.3.7155 libPvGenICam.so.6.1.1.5002
-ln -s libPvSerial.so.6.5.3.7115 libPvSerial.so.6.1.1.5002
-ln -s libPvStream.so.6.5.3.7115 libPvStream.so.6.1.1.5002
-ln -s libPvSystem.so.6.5.3.7115 libPvStream.so.6.1.1.5002
+ln -s libPvSerial.so.6.5.3.7155 libPvSerial.so.6.1.1.5002
+ln -s libPvStream.so.6.5.3.7155 libPvStream.so.6.1.1.5002
+ln -s libPvSystem.so.6.5.3.7155 libPvSystem.so.6.1.1.5002
 ```
 
 #### In `/opt/pleora/ebus_sdk/Ubuntu-22.04-x86_64/lib/genicam/bin/Linux64_x64`
